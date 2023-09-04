@@ -1,0 +1,242 @@
+a {
+    text-decoration: none;
+}
+/* ! Общие классы */
+.container {
+    max-width: 1220px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+.title {
+    position: relative;
+
+    color: #01353e;
+    font-family: "Raleway", sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 56px;
+}
+.title::after {
+    content: " ";
+
+    position: absolute;
+
+    margin-top: 20px;
+    width: 48px;
+    height: 85px;
+
+    background-image: url("../images/title-line.svg");
+    background-repeat: no-repeat;
+}
+/* ! Начало страницы */
+body {
+    min-height: 100vh;
+
+    color: #242121;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0.6px;
+}
+/* ! Header */
+.header__position {
+    position: relative;
+
+    height: 100vh;
+    min-height: 500px;
+}
+.header__top-inner {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+}
+.header__logo {
+    margin-right: 185px;
+    flex-shrink: 0;
+}
+.menu {
+    align-self: center;
+}
+.menu__list {
+    display: flex;
+}
+.menu__list-item:not(:last-child) {
+    margin-right: 45px;
+}
+.menu__list-link {
+    padding: 0 2px 5px;
+
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    color: #ffffff;
+}
+.menu__list-link:hover {
+    border-bottom: 1px solid #00b2a0;
+}
+.header__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+
+    background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+}
+.header__content-inner {
+    height: 100vh;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 92px;
+}
+.header__title {
+    color: #0d302c;
+    font-family: "Raleway", sans-serif;
+    font-size: 200px;
+    font-weight: 700;
+    line-height: 235px;
+    margin-top: auto;
+}
+.header__subtitle {
+    color: #000;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: auto;
+}
+.school {
+    padding: 190px 0 200px;
+}
+.school__title {
+    margin-bottom: 100px;
+
+    text-align: center;
+}
+.school__items {
+    display: flex;
+    flex-direction: column;
+}
+.school__item {
+    display: flex;
+    margin-bottom: 30px;
+    gap: 120px;
+}
+.school__item p {
+    width: 480px;
+}
+.school__item:last-child {
+    margin-bottom: 0;
+}
+.advantages {
+    padding: 200px 0;
+    background-color: #f8f8f8;
+}
+.advantages__title {
+    margin-bottom: 100px;
+
+    text-align: center;
+}
+.advantages__inner {
+    display: flex;
+    flex-direction: column;
+}
+.advanteges__about {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+.advanteges__about-item {
+    width: 350px;
+}
+.advanteges__subtitle {
+    position: relative;
+
+    padding-left: 130px;
+    margin-bottom: 10px;
+
+    color: #242121;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.6px;
+}
+.advanteges__subtitle::before {
+    content: " ";
+
+    position: absolute;
+    left: 66px;
+    top: 0;
+    width: 50px;
+    height: 50px;
+}
+.advanteges__subtitle--life {
+    padding-top: 13px;
+    padding-bottom: 16px;
+}
+.advanteges__subtitle--life::before {
+    background-image: url("../images/life-icon.svg");
+}
+.advanteges__subtitle--plane::before {
+    background-image: url("../images/plane-icon.svg");
+}
+.advanteges__subtitle--study::before {
+    background-image: url("../images/study-icon.svg");
+}
+.advantages__progress {
+    display: flex;
+    justify-content: space-between;
+}
+.advantages__progressbar {
+    width: 350px;
+}
+.advantages__progressbar-percent:not(:last-child) {
+    margin-bottom: 10px;
+}
+.advantages__progressbar-percent span {
+    position: relative;
+    display: inline-block;
+
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.advantages__progress-text {
+    width: 600px;
+}
+.advantages__progress-text p:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+/* ! conquer */
+.conquer {
+    padding: 200px 0 350px;
+
+    background-image: url("../images/Conquer.jpg");
+    background-repeat: no-repeat;
+    background-size: 50% calc(100% - 200px);
+    background-position: right top;
+}
+.conquer__title {
+    margin-bottom: 100px;
+}
+.conquer__inner {
+    width: 510px;
+}
+.conquer__inner p:not(:last-child) {
+    margin-bottom: 30px;
+}
