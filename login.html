@@ -1,198 +1,225 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.min.css">
-    <title>Project</title>
-  </head>
-  <body> 
-    <div class="wrapper"> <header class="header">
-<div class="container">
-<div class="header__inner">
-<a class="logo" href="index.html">
-<img class="logo__img" src="/images/logo.png" alt="logo">
-</a>
-<nav class="menu">
-<ul class="menu__list">
-<li class="menu__list-item">
-<a class="menu__list-link menu__list-link--active" href="index.html">home</a>
-</li>
-<li class="menu__list-item">
-<a class="menu__list-link" href="shop.html">shop</a>
-</li>
-<li class="menu__list-item">
-<a class="menu__list-link" href="#">page</a>
-</li>
-<li class="menu__list-item">
-<a class="menu__list-link" href="#">blog</a>
-</li>
-<li class="menu__list-item">
-<a class="menu__list-link" href="#">contact</a>
-</li>
-</ul>
-</nav>
-<div class="user-nav">
-<a class="user-nav__link" href="login.html">
-<img class="user-nav__link-img" src="/images/icon/user.png " alt="user icon">
-</a>
-<a class="user-nav__link" href="#">
-<img class="user-nav__link-img" src="/images/icon/search.png " alt="search icon">
-</a>
-<a class="user-nav__link" href="#">
-<img class="user-nav__link-img" src="/images/icon/heart.png " alt="heart icon">
-<span class="user-nav__num">3</span>
-</a>
-<a class="user-nav__link" href="#">
-<img class="user-nav__link-img" src="/images/icon/cart.png " alt="cart icon">
-<span class="user-nav__num">7</span>
-</a>
-</div>
-</div>
-</div>
-</header>
-      <main class="main">
-        <section class="top">
-          <div class="top__container" style="background-image: url('images/top-bg.jpg');">
-            <div class="container"> 
-              <h2 class="title top__title">LOG IN</h2>
-              <div class="breadcrumbs">
-                <ul class="breadcrumbs__list">
-                  <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Home</a></li>
-                  <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Log in</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="modal">
-          <div class="container"> 
-            <div class="modal__links"> <a class="modal__link" href="#">REGISTER</a><a class="modal__link modal__link--active" href="#">LOGIN</a></div>
-            <form class="modal__form" action="#">
-              <label class="modal__label">Username or email address*
-                <input class="modal__input" type="text" required>
-              </label>
-              <label class="modal__label">Password*
-                <input class="modal__input" type="password" required>
-              </label>
-              <label class="modal__label">
-                <input type="checkbox">
-                Remember me 
-              </label>
-              <button class="modal__btn" type="submit">LOG IN</button><a class="modal__form-link" href="#">Lost your password?</a>
-            </form>
-          </div>
-        </section>
-      </main><footer class="footer">
-<div class="container">
-<div class="footer-top">
-<div class="footer-top__item footer-top__contact">
-<a class="logo footer-top__logo" href="#">
-<img class="logo__img" src="/images/logo.png" alt="logo">
-</a>
-<a class="footer-top__address" href="#"> No. 342 - London Oxford Street, 012 United States</a>
-<a class="footer-top__email" href="mailto:Youremail@gmail.com">Youremail@gmail.com</a>
-<a class="footer-top__phone" href="tel:+02838388393">+0283 838 8393</a>
-<ul class="footer-top__social-list">
-<li class="footer-top__social-item">
-<a class="footer-top__social-link" href="#">
-<svg xmlns="http://www.w3.org/2000/svg" width="9" height="18">
-<path d="M7.852 10.125l.398-3.258h-2.5V4.754c0-.89.348-1.762 1.469-1.762h1.136V.22S7.325 0 6.34 0C4.277 0 2.934 1.559 2.934 4.383v2.484H.644v3.258h2.29V18H5.75v-7.875zm0 0" />
-</svg>
-</a>
-</li>
-<li class="footer-top__social-item">
-<a class="footer-top__social-link" href="#">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
-<path d="M14.355 4.148c.012.125.012.25.012.375 0 3.793-3.3 8.16-9.332 8.16-1.86 0-3.582-.468-5.035-1.285.266.028.52.036.793.036 1.531 0 2.941-.454 4.07-1.227-1.441-.027-2.648-.852-3.066-1.988.203.023.406.043.621.043.293 0 .586-.035.86-.098-1.5-.266-2.63-1.422-2.63-2.816v-.035a3.64 3.64 0 001.485.363C1.25 5.16.672 4.28.672 3.286c0-.532.16-1.02.445-1.446 1.613 1.738 4.04 2.879 6.762 3a2.822 2.822 0 01-.082-.656c0-1.582 1.46-2.868 3.277-2.868.946 0 1.797.344 2.399.907a7.107 7.107 0 002.082-.696c-.246.668-.762 1.227-1.442 1.582A7.313 7.313 0 0016 2.664a6.596 6.596 0 01-1.645 1.484zm0 0" />
-</svg>
-</a>
-</li>
-<li class="footer-top__social-item">
-<a class="footer-top__social-link" href="#">
-<svg xmlns="http://www.w3.org/2000/svg" width="15" height="16">
-<path d="M3.36 14H.245V4.652H3.36zM1.8 3.379c-.995 0-1.8-.77-1.8-1.7C0 .755.805 0 1.8 0c.997 0 1.802.754 1.802 1.68 0 .93-.805 1.699-1.801 1.699zM14.997 14h-3.101V9.45c0-1.083-.024-2.473-1.618-2.473-1.617 0-1.867 1.175-1.867 2.394V14H5.305V4.652h2.984V5.93h.043c.414-.735 1.43-1.512 2.941-1.512 3.149 0 3.727 1.934 3.727 4.45V14zm0 0" />
-</svg>
-</a>
-</li>
-<li class="footer-top__social-item">
-<a class="footer-top__social-link" href="#">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-<path d="M16 8.18c0 4.422-3.176 7.57-7.867 7.57C3.633 15.75 0 12.29 0 8S3.633.25 8.133.25c2.187 0 4.031.766 5.449 2.027l-2.21 2.028C8.476 1.645 3.093 3.645 3.093 8c0 2.703 2.261 4.895 5.039 4.895 3.219 0 4.426-2.2 4.613-3.34H8.133V6.887h7.738c.078.398.129.777.129 1.293zm0 0" />
-</svg>
-</a>
-</li>
-<li class="footer-top__social-item">
-<a class="footer-top__social-link" href="#">
-<svg xmlns="http://www.w3.org/2000/svg" width="13" height="16">
-<path d="M6.906.203C3.434.203 0 2.34 0 5.801 0 8 1.34 9.25 2.152 9.25c.336 0 .528-.863.528-1.105 0-.293-.801-.91-.801-2.122 0-2.511 2.07-4.293 4.754-4.293 2.304 0 4.012 1.211 4.012 3.434 0 1.656-.723 4.77-3.06 4.77-.843 0-1.562-.563-1.562-1.368 0-1.183.895-2.324.895-3.543 0-2.07-3.18-1.695-3.18.805 0 .524.07 1.106.325 1.586-.47 1.856-1.422 4.621-1.422 6.531 0 .594.09 1.172.152 1.766.113.117.059.105.234.047 1.707-2.156 1.645-2.578 2.418-5.403.414.73 1.492 1.125 2.344 1.125C11.387 11.48 13 8.246 13 5.332 13 2.227 10.094.203 6.906.203zm0 0" />
-</svg>
-</a>
-</li>
-</ul>
-</div>
-<div class="footer-top__item footer-top__nav">
-<h6 class="footer-top__title">Useful Links</h6>
-<ul class="footer-top__list">
-<li class="footer-top__item">
-<a class="footer-top__link" href="#">About Us</a>
-</li>
-<li class="footer-top__item">
-<a class="footer-top__link" href="#">Privacy Policy</a>
-</li>
-<li class="footer-top__item">
-<a class="footer-top__link" href="#">Terms & Conditions</a>
-</li>
-<li class="footer-top__item">
-<a class="footer-top__link" href="#">Contact Us</a>
-</li>
-<li class="footer-top__item">
-<a class="footer-top__link" href="#">Help & Support</a>
-</li>
-</ul>
-</div>
-<div class="footer-top__item footer-top__nav">
-<h6 class="footer-top__title">My Account</h6>
-<ul class="footer-top__list">
-<li class="footer-top__item">
-<a class="footer-top__link" href="#"> My Account
-</a>
-</li>
-<li class="footer-top__item">
-<a class="footer-top__link" href="#">My Cart</a>
-</li>
-<li class="footer-top__item">
-<a class="footer-top__link" href="#">My WIshlist</a>
-</li>
-<li class="footer-top__item">
-<a class="footer-top__link" href="#">Registration</a>
-</li>
-<li class="footer-top__item">
-<a class="footer-top__link" href="#">Check Out</a>
-</li>
-</ul>
-</div>
-<div class="footer-top__item footer-top__item-form">
-<h6 class="footer-top__title">Subscribe Our Newsletter</h6>
-<p class="footer-top__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
-</p>
-<form class="footer-top__form" action="#">
-<input class="footer-top__form-input" type="email" placeholder="Your email address" required>
-<button class="footer-top__form-btn" type="submit">Subscribe</button>
-</form>
-</div>
-</div>
-<div class="footer-bottom">
-<p class="footer-bottom__copy"> © 2019 CodeAstrology. All Rights Reserved.
-</p>
-<div class="footer-bottom__accept">We Accept
-<img class="footer-bottom__accept-img" src="/images/icon/mastercard.png" alt="we accept mastercard">
-<img class="footer-bottom__accept-img" src="/images/icon/visa.png" alt="we accept visa">
-<img class="footer-bottom__accept-img" src="/images/icon/paypal.png" alt="we accept paypal">
-</div>
-</div>
-</div>
+
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<meta name="viewport" content="width=1200">
+
+	<link rel="stylesheet" href='/css/style.libs.min.css'>
+	<link rel="stylesheet" href='/css/style.local.min.css'>
+	<link rel="stylesheet" href='/css/style.media.min.css'>
+
+	<link rel="stylesheet" href='/css/style.min.css'>
+	<title>MyProject Gulp v2.0.0</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<a class="logo" href="index.html">
+						<img class="logo__img" src="/images/logo.png" alt="logo">
+					</a>
+					<nav class="menu">
+						<ul class="menu__list">
+							<li class="menu__list-item">
+								<a class="menu__list-link menu__list-link--active" href="index.html">home</a>
+							</li>
+							<li class="menu__list-item">
+								<a class="menu__list-link" href="shop.html">shop</a>
+							</li>
+							<li class="menu__list-item">
+								<a class="menu__list-link" href="#">page</a>
+							</li>
+							<li class="menu__list-item">
+								<a class="menu__list-link" href="#">blog</a>
+							</li>
+							<li class="menu__list-item">
+								<a class="menu__list-link" href="#">contact</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="user-nav">
+						<a class="user-nav__link" href="login.html">
+							<img class="user-nav__link-img" src="/images/icon/user.png " alt="user icon">
+						</a>
+						<a class="user-nav__link" href="#">
+							<img class="user-nav__link-img" src="/images/icon/search.png " alt="search icon">
+						</a>
+						<a class="user-nav__link" href="#">
+							<img class="user-nav__link-img" src="/images/icon/heart.png " alt="heart icon">
+							<span class="user-nav__num">3</span>
+						</a>
+						<a class="user-nav__link" href="#">
+							<img class="user-nav__link-img" src="/images/icon/cart.png " alt="cart icon">
+							<span class="user-nav__num">7</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+<main class="main">
+  <section class="top">
+    <div class="top__container" style="background-image: url('images/top-bg.jpg');">
+      <div class="container">
+        <h2 class="title top__title">LOG IN</h2>
+        <div class="breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Home</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Log in</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="modal">
+    <div class="container">
+      <div class="modal__links"> <a class="modal__link" href="#">REGISTER</a><a class="modal__link modal__link--active"
+          href="#">LOGIN</a></div>
+      <form class="modal__form" action="#">
+        <label class="modal__label">Username or email address*
+          <input class="modal__input" type="text" required>
+        </label>
+        <label class="modal__label">Password*
+          <input class="modal__input" type="password" required>
+        </label>
+        <label class="modal__label">
+          <input type="checkbox">
+          Remember me
+        </label>
+        <button class="modal__btn" type="submit">LOG IN</button><a class="modal__form-link" href="#">Lost your
+          password?</a>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+	<div class="container">
+		<div class="footer-top">
+			<div class="footer-top__item footer-top__contact">
+				<a class="logo footer-top__logo" href="#">
+					<img class="logo__img" src="/images/logo.png" alt="logo">
+				</a>
+				<a class="footer-top__address" href="#"> No. 342 - London Oxford Street, 012 United States</a>
+				<a class="footer-top__email" href="mailto:Youremail@gmail.com">Youremail@gmail.com</a>
+				<a class="footer-top__phone" href="tel:+02838388393">+0283 838 8393</a>
+				<ul class="footer-top__social-list">
+					<li class="footer-top__social-item">
+						<a class="footer-top__social-link" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="9" height="18">
+								<path
+									d="M7.852 10.125l.398-3.258h-2.5V4.754c0-.89.348-1.762 1.469-1.762h1.136V.22S7.325 0 6.34 0C4.277 0 2.934 1.559 2.934 4.383v2.484H.644v3.258h2.29V18H5.75v-7.875zm0 0" />
+							</svg>
+						</a>
+					</li>
+					<li class="footer-top__social-item">
+						<a class="footer-top__social-link" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+								<path
+									d="M14.355 4.148c.012.125.012.25.012.375 0 3.793-3.3 8.16-9.332 8.16-1.86 0-3.582-.468-5.035-1.285.266.028.52.036.793.036 1.531 0 2.941-.454 4.07-1.227-1.441-.027-2.648-.852-3.066-1.988.203.023.406.043.621.043.293 0 .586-.035.86-.098-1.5-.266-2.63-1.422-2.63-2.816v-.035a3.64 3.64 0 001.485.363C1.25 5.16.672 4.28.672 3.286c0-.532.16-1.02.445-1.446 1.613 1.738 4.04 2.879 6.762 3a2.822 2.822 0 01-.082-.656c0-1.582 1.46-2.868 3.277-2.868.946 0 1.797.344 2.399.907a7.107 7.107 0 002.082-.696c-.246.668-.762 1.227-1.442 1.582A7.313 7.313 0 0016 2.664a6.596 6.596 0 01-1.645 1.484zm0 0" />
+							</svg>
+						</a>
+					</li>
+					<li class="footer-top__social-item">
+						<a class="footer-top__social-link" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="15" height="16">
+								<path
+									d="M3.36 14H.245V4.652H3.36zM1.8 3.379c-.995 0-1.8-.77-1.8-1.7C0 .755.805 0 1.8 0c.997 0 1.802.754 1.802 1.68 0 .93-.805 1.699-1.801 1.699zM14.997 14h-3.101V9.45c0-1.083-.024-2.473-1.618-2.473-1.617 0-1.867 1.175-1.867 2.394V14H5.305V4.652h2.984V5.93h.043c.414-.735 1.43-1.512 2.941-1.512 3.149 0 3.727 1.934 3.727 4.45V14zm0 0" />
+							</svg>
+						</a>
+					</li>
+					<li class="footer-top__social-item">
+						<a class="footer-top__social-link" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+								<path
+									d="M16 8.18c0 4.422-3.176 7.57-7.867 7.57C3.633 15.75 0 12.29 0 8S3.633.25 8.133.25c2.187 0 4.031.766 5.449 2.027l-2.21 2.028C8.476 1.645 3.093 3.645 3.093 8c0 2.703 2.261 4.895 5.039 4.895 3.219 0 4.426-2.2 4.613-3.34H8.133V6.887h7.738c.078.398.129.777.129 1.293zm0 0" />
+							</svg>
+						</a>
+					</li>
+					<li class="footer-top__social-item">
+						<a class="footer-top__social-link" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="13" height="16">
+								<path
+									d="M6.906.203C3.434.203 0 2.34 0 5.801 0 8 1.34 9.25 2.152 9.25c.336 0 .528-.863.528-1.105 0-.293-.801-.91-.801-2.122 0-2.511 2.07-4.293 4.754-4.293 2.304 0 4.012 1.211 4.012 3.434 0 1.656-.723 4.77-3.06 4.77-.843 0-1.562-.563-1.562-1.368 0-1.183.895-2.324.895-3.543 0-2.07-3.18-1.695-3.18.805 0 .524.07 1.106.325 1.586-.47 1.856-1.422 4.621-1.422 6.531 0 .594.09 1.172.152 1.766.113.117.059.105.234.047 1.707-2.156 1.645-2.578 2.418-5.403.414.73 1.492 1.125 2.344 1.125C11.387 11.48 13 8.246 13 5.332 13 2.227 10.094.203 6.906.203zm0 0" />
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer-top__item footer-top__nav">
+				<h6 class="footer-top__title">Useful Links</h6>
+				<ul class="footer-top__list">
+					<li class="footer-top__item">
+						<a class="footer-top__link" href="#">About Us</a>
+					</li>
+					<li class="footer-top__item">
+						<a class="footer-top__link" href="#">Privacy Policy</a>
+					</li>
+					<li class="footer-top__item">
+						<a class="footer-top__link" href="#">Terms & Conditions</a>
+					</li>
+					<li class="footer-top__item">
+						<a class="footer-top__link" href="#">Contact Us</a>
+					</li>
+					<li class="footer-top__item">
+						<a class="footer-top__link" href="#">Help & Support</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer-top__item footer-top__nav">
+				<h6 class="footer-top__title">My Account</h6>
+				<ul class="footer-top__list">
+					<li class="footer-top__item">
+						<a class="footer-top__link" href="#"> My Account
+						</a>
+					</li>
+					<li class="footer-top__item">
+						<a class="footer-top__link" href="#">My Cart</a>
+					</li>
+					<li class="footer-top__item">
+						<a class="footer-top__link" href="#">My WIshlist</a>
+					</li>
+					<li class="footer-top__item">
+						<a class="footer-top__link" href="#">Registration</a>
+					</li>
+					<li class="footer-top__item">
+						<a class="footer-top__link" href="#">Check Out</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer-top__item footer-top__item-form">
+				<h6 class="footer-top__title">Subscribe Our Newsletter</h6>
+				<p class="footer-top__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+				</p>
+				<form class="footer-top__form" action="#">
+					<input class="footer-top__form-input" type="email" placeholder="Your email address" required>
+					<button class="footer-top__form-btn" type="submit">Subscribe</button>
+				</form>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<p class="footer-bottom__copy"> © 2019 CodeAstrology. All Rights Reserved.
+			</p>
+			<div class="footer-bottom__accept">We Accept
+				<img class="footer-bottom__accept-img" src="/images/icon/mastercard.png" alt="we accept mastercard">
+				<img class="footer-bottom__accept-img" src="/images/icon/visa.png" alt="we accept visa">
+				<img class="footer-bottom__accept-img" src="/images/icon/paypal.png" alt="we accept paypal">
+			</div>
+		</div>
+	</div>
 </footer>
-    </div><script src="/js/main.min.js"></script>
-  </body>
+
+</div>
+<script src="/js/main.libs.min.js"></script>
+
+<script src="/js/main.local.min.js"></script>
+
+<script src="/js/main.min.js"></script>
+
+</body>
+
 </html>
