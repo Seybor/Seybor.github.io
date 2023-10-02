@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href='/css/style.media.min.css'> -->
 
 	<link rel="stylesheet" href='/css/style.min.css'>
-	<title>MyProject v2.7.0 Gulp v2.0.0</title>
+	<title>MyProject v2.8.0 Gulp v2.0.0</title>
 </head>
 <body>
 	<div class="wrapper">
@@ -33,7 +33,7 @@
 								<a class="menu__list-link" href="#">page</a>
 							</li>
 							<li class="menu__list-item">
-								<a class="menu__list-link" href="#">blog</a>
+								<a class="menu__list-link" href="blog.html">blog</a>
 							</li>
 							<li class="menu__list-item">
 								<a class="menu__list-link" href="#">contact</a>
@@ -78,135 +78,129 @@
   <section class="shop">
     <div class="container">
       <div class="shop__inner">
+
         <div class="shop__filters filter">
           <div class="filter__item filter-search">
-            <h3 class="filter__title filter__title--mb">Search</h3>
-            <form class="filter-search__form">
-              <input class="filter-search__input" type="text" placeholder="Search your keyword....">
-              <button class="filter-search__btn" type="submit"></button>
-            </form>
+          	<h3 class="filter__title filter__title--mb">Search</h3>
+          	<form class="filter-search__form">
+          		<input class="filter-search__input" type="text" placeholder="Search your keyword....">
+          		<button class="filter-search__btn" type="submit"></button>
+          	</form>
           </div>
           <div class="filter__item filter-price">
-            <h3 class="filter__title">Price Filter</h3>
-            <form class="filter-price__form" action="#">
-              <input class="filter-price__input" type="text" data-min="0" data-max="999" data-from="200" data-to="800">
-              <label class="filter-price__label"><span>
-                  Price:
-                  $<span class="filter-price__from"></span> -
-                  $<span class="filter-price__to"></span></span>
-                <button class="filter-price__btn" type="submit">Filter</button>
-              </label>
-            </form>
+          	<h3 class="filter__title">Price Filter</h3>
+          	<form class="filter-price__form" action="#">
+          		<input class="filter-price__input" type="text" data-min="0" data-max="999" data-from="200" data-to="800">
+          		<label class="filter-price__label"><span>
+          				Price:
+          				$<span class="filter-price__from"></span> -
+          				$<span class="filter-price__to"></span></span>
+          			<button class="filter-price__btn" type="submit">Filter</button>
+          		</label>
+          	</form>
           </div>
           <div class="filter__item filter-color">
-            <h3 class="filter__title">Color Filter</h3>
-            <form class="filter-color__form" action="#">
-              <label class="filter-color__label"><span class="filter-color__text">Blue (15)</span><span
-                  class="filter-color__box">
-                  <input class="filter-color__checkbox filter-color__checkbox--blue" type="checkbox"></span></label>
-              <label class="filter-color__label"><span class="filter-color__text">Red (09)</span><span
-                  class="filter-color__box">
-                  <input class="filter-color__checkbox filter-color__checkbox--red" type="checkbox"></span></label>
-              <label class="filter-color__label"><span class="filter-color__text">Green (28)</span><span
-                  class="filter-color__box">
-                  <input class="filter-color__checkbox filter-color__checkbox--green" type="checkbox"></span></label>
-              <label class="filter-color__label"><span class="filter-color__text">Orange (11)</span><span
-                  class="filter-color__box">
-                  <input class="filter-color__checkbox filter-color__checkbox--orange" type="checkbox"></span></label>
-              <label class="filter-color__label"><span class="filter-color__text">Black (05)</span><span
-                  class="filter-color__box">
-                  <input class="filter-color__checkbox filter-color__checkbox--black" type="checkbox"></span></label>
-              <label class="filter-color__label"><span class="filter-color__text">Purple (21)</span><span
-                  class="filter-color__box">
-                  <input class="filter-color__checkbox filter-color__checkbox--purple" type="checkbox"></span></label>
-            </form>
+          	<h3 class="filter__title">Color Filter</h3>
+          	<form class="filter-color__form" action="#">
+          		<label class="filter-color__label"><span class="filter-color__text">Blue (15)</span><span class="filter-color__box">
+          				<input class="filter-color__checkbox filter-color__checkbox--blue" type="checkbox"></span></label>
+          		<label class="filter-color__label"><span class="filter-color__text">Red (09)</span><span class="filter-color__box">
+          				<input class="filter-color__checkbox filter-color__checkbox--red" type="checkbox"></span></label>
+          		<label class="filter-color__label"><span class="filter-color__text">Green (28)</span><span
+          				class="filter-color__box">
+          				<input class="filter-color__checkbox filter-color__checkbox--green" type="checkbox"></span></label>
+          		<label class="filter-color__label"><span class="filter-color__text">Orange (11)</span><span
+          				class="filter-color__box">
+          				<input class="filter-color__checkbox filter-color__checkbox--orange" type="checkbox"></span></label>
+          		<label class="filter-color__label"><span class="filter-color__text">Black (05)</span><span
+          				class="filter-color__box">
+          				<input class="filter-color__checkbox filter-color__checkbox--black" type="checkbox"></span></label>
+          		<label class="filter-color__label"><span class="filter-color__text">Purple (21)</span><span
+          				class="filter-color__box">
+          				<input class="filter-color__checkbox filter-color__checkbox--purple" type="checkbox"></span></label>
+          	</form>
           </div>
           <div class="filter__item filter-size">
-            <h3 class="filter__title">Size Filter</h3>
-            <form class="filter-size__form" action="#">
-              <label class="filter-size__label">
-                <input class="filter-size__input" type="checkbox"><span class="filter-size__text">X-small</span>
-              </label>
-              <label class="filter-size__label">
-                <input class="filter-size__input" type="checkbox"><span class="filter-size__text">Small</span>
-              </label>
-              <label class="filter-size__label">
-                <input class="filter-size__input" type="checkbox"><span class="filter-size__text">Medium</span>
-              </label>
-              <label class="filter-size__label">
-                <input class="filter-size__input" type="checkbox"><span class="filter-size__text">Large</span>
-              </label>
-              <label class="filter-size__label">
-                <input class="filter-size__input" type="checkbox"><span class="filter-size__text">XXL</span>
-              </label>
-            </form>
+          	<h3 class="filter__title">Size Filter</h3>
+          	<form class="filter-size__form" action="#">
+          		<label class="filter-size__label">
+          			<input class="filter-size__input" type="checkbox"><span class="filter-size__text">X-small</span>
+          		</label>
+          		<label class="filter-size__label">
+          			<input class="filter-size__input" type="checkbox"><span class="filter-size__text">Small</span>
+          		</label>
+          		<label class="filter-size__label">
+          			<input class="filter-size__input" type="checkbox"><span class="filter-size__text">Medium</span>
+          		</label>
+          		<label class="filter-size__label">
+          			<input class="filter-size__input" type="checkbox"><span class="filter-size__text">Large</span>
+          		</label>
+          		<label class="filter-size__label">
+          			<input class="filter-size__input" type="checkbox"><span class="filter-size__text">XXL</span>
+          		</label>
+          	</form>
           </div>
           <div class="filter__item filter-category">
-            <h3 class="filter__title">CATEGORY</h3>
-            <form class="filter-category__form" action="#">
-              <label class="filter-category__label">
-                <input class="filter-category__input visually-hidden" type="checkbox"><span
-                  class="filter-category__container"><span class="filter-category__for">Woman</span><span
-                    class="filter-category__value">48</span></span>
-              </label>
-              <label class="filter-category__label">
-                <input class="filter-category__input visually-hidden" type="checkbox"><span
-                  class="filter-category__container"><span class="filter-category__for">Man</span><span
-                    class="filter-category__value">30</span></span>
-              </label>
-              <label class="filter-category__label">
-                <input class="filter-category__input visually-hidden" type="checkbox"><span
-                  class="filter-category__container"><span class="filter-category__for">Sale Products</span><span
-                    class="filter-category__value">92</span></span>
-              </label>
-              <label class="filter-category__label">
-                <input class="filter-category__input visually-hidden" type="checkbox"><span
-                  class="filter-category__container"><span class="filter-category__for">Fashion</span><span
-                    class="filter-category__value">121</span></span>
-              </label>
-              <label class="filter-category__label">
-                <input class="filter-category__input visually-hidden" type="checkbox"><span
-                  class="filter-category__container"><span class="filter-category__for">Hot Dresses</span><span
-                    class="filter-category__value">52</span></span>
-              </label>
-              <label class="filter-category__label">
-                <input class="filter-category__input visually-hidden" type="checkbox"><span
-                  class="filter-category__container"><span class="filter-category__for">Accessories</span><span
-                    class="filter-category__value">88</span></span>
-              </label>
-            </form>
+          	<h3 class="filter__title">CATEGORY</h3>
+          	<form class="filter-category__form" action="#">
+          		<label class="filter-category__label">
+          			<input class="filter-category__input visually-hidden" type="checkbox"><span
+          				class="filter-category__container"><span class="filter-category__for">Woman</span><span
+          					class="filter-category__value">48</span></span>
+          		</label>
+          		<label class="filter-category__label">
+          			<input class="filter-category__input visually-hidden" type="checkbox"><span
+          				class="filter-category__container"><span class="filter-category__for">Man</span><span
+          					class="filter-category__value">30</span></span>
+          		</label>
+          		<label class="filter-category__label">
+          			<input class="filter-category__input visually-hidden" type="checkbox" checked><span
+          				class="filter-category__container"><span class="filter-category__for">Sale Products</span><span
+          					class="filter-category__value">92</span></span>
+          		</label>
+          		<label class="filter-category__label">
+          			<input class="filter-category__input visually-hidden" type="checkbox"><span
+          				class="filter-category__container"><span class="filter-category__for">Fashion</span><span
+          					class="filter-category__value">121</span></span>
+          		</label>
+          		<label class="filter-category__label">
+          			<input class="filter-category__input visually-hidden" type="checkbox"><span
+          				class="filter-category__container"><span class="filter-category__for">Hot Dresses</span><span
+          					class="filter-category__value">52</span></span>
+          		</label>
+          		<label class="filter-category__label">
+          			<input class="filter-category__input visually-hidden" type="checkbox"><span
+          				class="filter-category__container"><span class="filter-category__for">Accessories</span><span
+          					class="filter-category__value">88</span></span>
+          		</label>
+          	</form>
           </div>
           <div class="filter__item filter-tags">
-            <h3 class="filter__title">Popular Tags</h3>
-            <form class="filter-tags__form" action="#">
-              <label class="filter-tags__label">
-                <input class="filter-tags__input visually-hidden" type="checkbox"><span
-                  class="filter-tags__text">Sweetshirt</span>
-              </label>
-              <label class="filter-tags__label">
-                <input class="filter-tags__input visually-hidden" type="checkbox"><span class="filter-tags__text">Man
-                  Accessories</span>
-              </label>
-              <label class="filter-tags__label">
-                <input class="filter-tags__input visually-hidden" type="checkbox"><span
-                  class="filter-tags__text">Fashion</span>
-              </label>
-              <label class="filter-tags__label">
-                <input class="filter-tags__input visually-hidden" type="checkbox"><span
-                  class="filter-tags__text">Polo</span>
-              </label>
-              <label class="filter-tags__label">
-                <input class="filter-tags__input visually-hidden" type="checkbox"><span
-                  class="filter-tags__text">T-Shirt</span>
-              </label>
-              <label class="filter-tags__label">
-                <input class="filter-tags__input visually-hidden" type="checkbox"><span
-                  class="filter-tags__text">Jewellery</span>
-              </label>
-            </form>
+          	<h3 class="filter__title">Popular Tags</h3>
+          	<form class="filter-tags__form" action="#">
+          		<label class="filter-tags__label">
+          			<input class="filter-tags__input visually-hidden" type="checkbox"><span
+          				class="filter-tags__text">Sweetshirt</span>
+          		</label>
+          		<label class="filter-tags__label">
+          			<input class="filter-tags__input visually-hidden" type="checkbox"><span class="filter-tags__text">Man
+          				Accessories</span>
+          		</label>
+          		<label class="filter-tags__label">
+          			<input class="filter-tags__input visually-hidden" type="checkbox"><span class="filter-tags__text">Fashion</span>
+          		</label>
+          		<label class="filter-tags__label">
+          			<input class="filter-tags__input visually-hidden" type="checkbox"><span class="filter-tags__text">Polo</span>
+          		</label>
+          		<label class="filter-tags__label">
+          			<input class="filter-tags__input visually-hidden" type="checkbox"><span class="filter-tags__text">T-Shirt</span>
+          		</label>
+          		<label class="filter-tags__label">
+          			<input class="filter-tags__input visually-hidden" type="checkbox"><span class="filter-tags__text">Jewellery</span>
+          		</label>
+          	</form>
           </div>
         </div>
-
         <div class="shop-content">
           <div class="shop-content__filter">
             <div class="shop-content__filter-buttons">
@@ -623,7 +617,6 @@
           </div>
         </div>
 
-
       </div>
     </div>
   </section>
@@ -748,7 +741,6 @@
 
 </div>
 <!-- <script src="/js/main.libs.min.js"></script>
-
 <script src="/js/main.local.min.js"></script> -->
 
 <script src="/js/main.min.js"></script>
