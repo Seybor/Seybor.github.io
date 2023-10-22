@@ -1,16 +1,253 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>My projects</title>
+	<title>Gulp v.3.8.0</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@300;400;500;700;900&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href='/css/libs.min.css'>
+	<link rel="stylesheet" href='/css/style.min.css'>
 </head>
 
 <body>
-	<a href="Project-1">Проект 1</a>
-	<a href="Project-2">Проект 2</a>
-	<a href="Project-3">Проект 3</a>
+
+	<div class="wrapper">
+
+		<header class="header">
+
+			<div class="container">
+
+				<div class="header__inner">
+
+					<nav class="nav">
+
+						<button class="nav__btn" type="button">
+
+							<span></span>
+
+							<span></span>
+
+							<span></span>
+
+						</button>
+
+						<div class="logo header__logo">
+
+							<a class="logo__link" href="/index.html">
+
+								<img class="logo__img" src="/images/icon/logo.svg" alt="logo">
+
+							</a>
+
+						</div>
+
+						<ul class="menu header__menu" data-list-reset>
+
+							<li class="menu__item">
+
+								<a class="menu__link" href="#">Что нового</a>
+
+							</li>
+
+							<li class="menu__item">
+
+								<a class="menu__link" href="#">Цвет</a>
+
+							</li>
+
+							<li class="menu__item">
+
+								<a class="menu__link" href="#">Заказать</a>
+
+							</li>
+
+						</ul>
+
+						<a class="tel header__tel" href="tel:380504565656">+38 050-456-56-56</a>
+
+					</nav>
+
+				</div>
+
+			</div>
+
+		</header>
+
+<main class="main">
+	<section class="iphone">
+		<div class="container">
+			<div class="iphone__inner">
+				<h1 class="title iphone__title wow animate__bounceInUp">IPHONE 14 PRO</h1>
+				<div class="iphone__container wow animate__bounceInUp">
+					<picture class="iphone__picture">
+						<source type="image/avif" srcset="/images/Iphones14.avif">
+						<source type="image/webp" srcset="/images/Iphones14.webp">
+						<img class="iphone__img" src="/images/Iphones14.png" alt="Iphones 14pro">
+					</picture>
+				</div>
+				<a class="iphone__btn wow animate__bounceIn" href="#choose">ВЫБРАТЬ</a>
+			</div>
+		</div>
+	</section>
+	<section class="news">
+		<div class="container">
+			<h2 class="title news__title wow animate__fadeInUp" data-wow-duration="2s">
+				ЧТО НОВОГО
+			</h2>
+			<div class="news__inner clearfix">
+				<div class="news__preview wow animate__fadeInUp" data-wow-duration="2s">
+					<picture class="iphone__picture">
+						<source type="image/avif" srcset="/images/Iphone14Pro.avif">
+						<source type="image/webp" srcset="/images/Iphone14Pro.webp">
+						<img class="news__img" src="/images/Iphone14Pro.png" alt="Iphone 14pro">
+					</picture>
+				</div>
+				<div class="news__content">
+					<p class="news__text wow animate__fadeInUp" data-wow-duration="2s">
+						Все модели оснащены однокристальной системой A16 Bionic, 48-мегапиксельной основной камерой и экранами
+						ProMotion с защитой Ceramic Shield и частотным диапазоном 1 — 120 Гц, а также ускоренной памятью LPDDR5.
+						Дизайн линейки обновлен, на фронтальной панели смартфонов два выреза.
+					</p>
+					<p class="news__text wow animate__fadeInUp" data-wow-duration="2s">
+						Все iPhone 14 в США будут продаваться без лотка для SIM-карт: производитель заявляет, что улучшенная
+						технология eSIM позволит перенести старые электронные сим-карты на новые смартфоны.
+					</p>
+					<p class="news__text wow animate__fadeInUp" data-wow-duration="2s">
+						Обновлены фронтальная камера (она снабжена автофокусом и быстрее распознает пользователя
+						в условиях
+						недостаточной освещенности) и сенсор основной камеры.
+					</p>
+					<p class="news__text news__text--important wow animate__fadeInUp" data-wow-duration="2s">
+						iPhone 14 Pro вышел в новом дизайне — без фирменной «челки». Также в ассортименте появился новый цвет. В
+						смартфоне, в отличие от «обычных» 14-х айфонов, установлен процессор A16 Bionic, который может за секунду
+						производить 4 трлн операций с фото.
+					</p>
+				</div>
+			</div>
+		</div>
+	
+	</section>
+	<section class="choose" id="choose">
+		<div class="container">
+			<div class="choose__inner">
+				<form class="choose__form" action="#">
+					<h2 class="title choose__title wow animate__zoomIn" data-wow-duration="2s">
+						ВЫБЕРИ СВОЙ ЦВЕТ
+					</h2>
+					<div class="choose__items wow animate__fadeInUp" data-wow-duration="2s">
+						<div class="choose__item">
+							<label class="choose__label">
+								<input class="choose__input visually-hidden" type="radio" name="iphone" value="silver" required>
+								<picture class="choose__picture">
+									<source type="image/avif" srcset="/images/silver.avif">
+									<source type="image/webp" srcset="/images/silver.webp">
+									<img class="choose__img" src="/images/silver.jpg" alt="Iphone silver">
+								</picture>
+								<span class="choose__color choose__color--eng">Silver</span>
+								<span class="choose__color">Серебристый</span>
+							</label>
+						</div>
+						<div class="choose__item">
+							<label class="choose__label">
+								<input class="choose__input visually-hidden" type="radio" name="iphone" value="purple" required>
+								<picture class="choose__picture">
+									<source type="image/avif" srcset="/images/purple.avif">
+									<source type="image/webp" srcset="/images/purple.webp">
+									<img class="choose__img" src="/images/purple.jpg" alt="Iphone purple">
+								</picture>
+								<span class="choose__color choose__color--eng">Deep purple</span>
+								<span class="choose__color">Темно фиолетовый</span>
+							</label>
+						</div>
+						<div class="choose__item">
+							<label class="choose__label">
+								<input class="choose__input visually-hidden" type="radio" name="iphone" value="gold" required>
+								<picture class="choose__picture">
+									<source type="image/avif" srcset="/images/gold.avif">
+									<source type="image/webp" srcset="/images/gold.webp">
+									<img class="choose__img" src="/images/gold.jpg" alt="Iphone gold">
+								</picture>
+								<span class="choose__color choose__color--eng">Gold</span>
+								<span class="choose__color">Золотой</span>
+							</label>
+						</div>
+						<div class="choose__item">
+							<label class="choose__label">
+								<input class="choose__input visually-hidden" type="radio" name="iphone" value="black" required>
+								<picture class="choose__picture">
+									<source type="image/avif" srcset="/images/black.avif">
+									<source type="image/webp" srcset="/images/black.webp">
+									<img class="choose__img" src="/images/black.jpg" alt="Iphone black">
+								</picture>
+								<span class="choose__color choose__color--eng">Space Black</span>
+								<span class="choose__color">Космический черный</span>
+							</label>
+						</div>
+					</div>
+	
+					<div class="choose-form">
+						<div class="choose-form__left">
+							<h5 class="choose-form__title">
+								ХОЧЕШЬ IPHONE 14 PRO?
+							</h5>
+							<input class="choose-form__input" type="text" placeholder="Ваше имя" required>
+							<input class="choose-form__input" type="text" placeholder="Номер телефона" required>
+							<span class="choose-form__span">В ближайшее время наш менеджер свяжется с Вами</span>
+							<button class="choose-form__btn" type="submit">ЗАКАЗАТЬ</button>
+						</div>
+						<div class="choose-form__rigth" style="background-image: url(/images/IphoneForm.jpg);">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer class="footer">
+
+	<div class="container">
+
+		<div class="footer__inner">
+
+			<div class="logo footer__logo">
+
+				<a class="logo__link" href="/index.html">
+
+					<img class="logo__img" src="/images/icon/logo.svg" alt="logo">
+
+				</a>
+
+			</div>
+
+			<a class="footer__copy" href="#">
+
+				Политика конфиденциальности
+
+			</a>
+
+			<a class="tel footer__tel" href="tel:380504565656">+38 050-456-56-56</a>
+
+		</div>
+
+	</div>
+
+</footer>
+
+
+
+</div>
+<script src="/js/jquery.com_jquery-3.7.1.min.js"></script>
+<script src="/js/libs/wow.min.js"></script>
+<script src="/js/main.min.js"></script>
+
 </body>
 
 </html>
