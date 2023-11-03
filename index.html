@@ -1,253 +1,205 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Gulp v.3.8.0</title>
-
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@300;400;500;700;900&display=swap"
-		rel="stylesheet">
-
-	<link rel="stylesheet" href='/css/libs.min.css'>
-	<link rel="stylesheet" href='/css/style.min.css'>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Mono&subset=latin,cyrillic" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <title>Код и Магия</title>
 </head>
 
 <body>
+  <header>
+    <svg style="display: none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62
+        86">
+      <g id="wizard">
+        <g id="wizard-coat">
+          <polygon points="19 67 19 59 14 59 14 82 9 82 9 86 23 86 23 67 19 67" />
+          <polygon points="19 59 19 67 23 67 23 86 48 86 48 54 19 54 19 59" />
+        </g>
+        <g id="wizard-head">
+          <polygon points="48 86 53 86 53 15 58 15 58 10 62 10 62 5 58 5 58 10 48 10 48 5 43 5 43 10 48 10 48 14 48 86"
+            fill="#be3827" />
+          <polygon points="9 37 19 37 19 23 48 23 48 28 53 28 53 42 48 42 48 51 14 51 14 46 9 46 9 37" fill="#fbd868" />
+          <rect x="33" y="39" width="10" height="5" fill="#bec1c3" />
+          <rect x="14" y="37" width="5" height="9" fill="#bec1c3" />
+          <polygon
+            points="48 39 48 44.34 43 44.34 43 49.69 33 49.69 33 44.34 29 44.34 29 48.62 23 48.62 23 53.97 29 53.97 29 59.31 33 59.31 33 64.66 38 64.66 38 70 43 70 43 64.66 48 64.66 48 53.97 53 53.97 53 48.62 57 48.62 57 39 48 39"
+            fill="#bec1c3" />
+          <polygon
+            points="0 47 9 47 9 38 19 38 19 24 48 24 48 28 53 28 53 18 48 18 48 13 14 13 14 18 9 18 9 23 5 23 5 38 0 38 0 47"
+            fill="#bec1c3" />
+        </g>
+        <g id="wizard-eyes">
+          <rect x="28" y="33" width="5" height="5" />
+          <rect x="43" y="33" width="5" height="5" />
+        </g>
+        <g id="wizard-hands">
+          <polygon points="19 67 19 59 14 59 14 82 9 82 9 86 23 86
+          23 67 19 67" fill="#fff" opacity="0.2" />
+          <rect x="14" y="73" width="5" height="5" fill="#fbd868" />
+          <rect x="48" y="63" width="5" height="5" fill="#fbd868" />
+          <rect x="48" width="10" height="10" fill="#3aa2ca" />
+          <rect x="52" width="5" height="5" fill="#acd5fb" />
+        </g>
+      </g>
+    </svg>
+    <div class="header-clouds"></div>
+    <div class="header-fence"></div>
+    <div class="header-tree"></div>
 
-	<div class="wrapper">
+    <h1 class="header-title section-title">
+      Code&thinsp;and&thinsp;Magick
+      <img src="img/title-site.png" alt="Code and magick" />
+    </h1>
+    <p class="header-description">
+      Это игра, где главного героя, которым вам предстоит управлять и
+      изменять заклинаниями окружающий мир зовут Пендальф Синий.
+      Вместе с ним вас ждет увлекательное приключение&hellip;
+    </p>
 
-		<header class="header">
+    <div class="demo"></div>
 
-			<div class="container">
+    <div class="setup-open">
+      <img src="./img/user-1.jpg" class="setup-open-icon" />
+    </div>
+  </header>
 
-				<div class="header__inner">
+  <div class="overlay setup hidden">
+    <form class="setup-wizard-form" method="post" enctype="multipart/form-data" autocomplete="off">
+      <div class="setup-title">
+        <div class="setup-user">
+          <div class="upload">
+            <img class="setup-user-pic" src="./img/user-1.jpg" />
+            <input type="file" name="avatar" />
+          </div>
+          <label>
+            <input type="text" name="username" maxlength="25" required class="setup-user-name" value="Синий Пендальф" />
+          </label>
+        </div>
 
-					<nav class="nav">
+        <span class="setup-close">&times;</span>
+      </div>
 
-						<button class="nav__btn" type="button">
+      <div class="setup-artifacts-shop">
+        <div class="setup-artifacts-cell">
+          <img src="img/icon-star.png" alt="Star" width="65" height="50" draggable="true" />
+        </div>
+        <div class="setup-artifacts-cell"></div>
+        <div class="setup-artifacts-cell"></div>
+        <div class="setup-artifacts-cell"></div>
 
-							<span></span>
+        <div class="setup-artifacts-cell"></div>
+        <div class="setup-artifacts-cell"></div>
+        <div class="setup-artifacts-cell"></div>
+        <div class="setup-artifacts-cell"></div>
+      </div>
 
-							<span></span>
+      <div class="setup-player">
+        <div class="setup-wizard-appearance">
+          <div class="setup-wizard-wrap">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 86" class="setup-wizard">
+              <g class="wizard">
+                <use xlink:href="#wizard-coat" class="wizard-coat" style="fill: #6589a4"></use>
+                <use xlink:href="#wizard-head" class="wizard-head"></use>
+                <use xlink:href="#wizard-eyes" class="wizard-eyes"></use>
+                <use xlink:href="#wizard-hands" class="wizard-hands"></use>
+              </g>
+            </svg>
+          </div>
+          <input type="hidden" name="coat-color" value="rgb(101, 137, 164)" />
+          <input type="hidden" name="eyes-color" value="black" />
+        </div>
 
-							<span></span>
+        <div class="setup-fireball-wrap">
+          <div class="setup-fireball"></div>
+          <input type="hidden" name="fireball-color" value="#ee4830" />
+        </div>
 
-						</button>
+        <div class="setup-artifacts" dropzone="move">
+          <div class="setup-artifacts-cell"></div>
+          <div class="setup-artifacts-cell"></div>
+          <div class="setup-artifacts-cell"></div>
+          <div class="setup-artifacts-cell"></div>
 
-						<div class="logo header__logo">
+          <div class="setup-artifacts-cell"></div>
+          <div class="setup-artifacts-cell"></div>
+          <div class="setup-artifacts-cell"></div>
+          <div class="setup-artifacts-cell"></div>
 
-							<a class="logo__link" href="/index.html">
+          <div class="setup-artifacts-cell"></div>
+          <div class="setup-artifacts-cell"></div>
+          <div class="setup-artifacts-cell"></div>
+          <div class="setup-artifacts-cell"></div>
 
-								<img class="logo__img" src="/images/icon/logo.svg" alt="logo">
+          <div class="setup-artifacts-cell"></div>
+          <div class="setup-artifacts-cell"></div>
+          <div class="setup-artifacts-cell"></div>
+          <div class="setup-artifacts-cell"></div>
+        </div>
+      </div>
 
-							</a>
+      <div class="setup-footer">
+        <div class="setup-similar hidden">
+          <h4 class="setup-similar-title">Похожие персонажи</h4>
 
-						</div>
+          <div class="setup-similar-list">
+            <!--Список похожих персонажей-->
+          </div>
+        </div>
 
-						<ul class="menu header__menu" data-list-reset>
+        <button class="button setup-submit">Сохранить</button>
+      </div>
+    </form>
+  </div>
 
-							<li class="menu__item">
+  <footer>
+    <p>
+      <a href="http://htmlacademy.ru" class="footer-link"><img src="img/htmlacademy-logo.png" alt="HTML Academy"
+          width="130" />Сделано в HTML Academy</a>в 2017 году
+    </p>
+  </footer>
 
-								<a class="menu__link" href="#">Что нового</a>
+  <template id="similar-wizard-template" style="display: none">
+    <div class="setup-similar-item">
+      <div class="setup-similar-content">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 86" class="setup-similar-wizard">
+          <g class="wizard">
+            <use xlink:href="#wizard-coat" class="wizard-coat"></use>
+            <use xlink:href="#wizard-head" class="wizard-head"></use>
+            <use xlink:href="#wizard-eyes" class="wizard-eyes"></use>
+            <use xlink:href="#wizard-hands" class="wizard-hands"></use>
+          </g>
+        </svg>
+      </div>
+      <p class="setup-similar-label">Петр Петров</p>
+    </div>
+  </template>
 
-							</li>
-
-							<li class="menu__item">
-
-								<a class="menu__link" href="#">Цвет</a>
-
-							</li>
-
-							<li class="menu__item">
-
-								<a class="menu__link" href="#">Заказать</a>
-
-							</li>
-
-						</ul>
-
-						<a class="tel header__tel" href="tel:380504565656">+38 050-456-56-56</a>
-
-					</nav>
-
-				</div>
-
-			</div>
-
-		</header>
-
-<main class="main">
-	<section class="iphone">
-		<div class="container">
-			<div class="iphone__inner">
-				<h1 class="title iphone__title wow animate__bounceInUp">IPHONE 14 PRO</h1>
-				<div class="iphone__container wow animate__bounceInUp">
-					<picture class="iphone__picture">
-						<source type="image/avif" srcset="/images/Iphones14.avif">
-						<source type="image/webp" srcset="/images/Iphones14.webp">
-						<img class="iphone__img" src="/images/Iphones14.png" alt="Iphones 14pro">
-					</picture>
-				</div>
-				<a class="iphone__btn wow animate__bounceIn" href="#choose">ВЫБРАТЬ</a>
-			</div>
-		</div>
-	</section>
-	<section class="news">
-		<div class="container">
-			<h2 class="title news__title wow animate__fadeInUp" data-wow-duration="2s">
-				ЧТО НОВОГО
-			</h2>
-			<div class="news__inner clearfix">
-				<div class="news__preview wow animate__fadeInUp" data-wow-duration="2s">
-					<picture class="iphone__picture">
-						<source type="image/avif" srcset="/images/Iphone14Pro.avif">
-						<source type="image/webp" srcset="/images/Iphone14Pro.webp">
-						<img class="news__img" src="/images/Iphone14Pro.png" alt="Iphone 14pro">
-					</picture>
-				</div>
-				<div class="news__content">
-					<p class="news__text wow animate__fadeInUp" data-wow-duration="2s">
-						Все модели оснащены однокристальной системой A16 Bionic, 48-мегапиксельной основной камерой и экранами
-						ProMotion с защитой Ceramic Shield и частотным диапазоном 1 — 120 Гц, а также ускоренной памятью LPDDR5.
-						Дизайн линейки обновлен, на фронтальной панели смартфонов два выреза.
-					</p>
-					<p class="news__text wow animate__fadeInUp" data-wow-duration="2s">
-						Все iPhone 14 в США будут продаваться без лотка для SIM-карт: производитель заявляет, что улучшенная
-						технология eSIM позволит перенести старые электронные сим-карты на новые смартфоны.
-					</p>
-					<p class="news__text wow animate__fadeInUp" data-wow-duration="2s">
-						Обновлены фронтальная камера (она снабжена автофокусом и быстрее распознает пользователя
-						в условиях
-						недостаточной освещенности) и сенсор основной камеры.
-					</p>
-					<p class="news__text news__text--important wow animate__fadeInUp" data-wow-duration="2s">
-						iPhone 14 Pro вышел в новом дизайне — без фирменной «челки». Также в ассортименте появился новый цвет. В
-						смартфоне, в отличие от «обычных» 14-х айфонов, установлен процессор A16 Bionic, который может за секунду
-						производить 4 трлн операций с фото.
-					</p>
-				</div>
-			</div>
-		</div>
-	
-	</section>
-	<section class="choose" id="choose">
-		<div class="container">
-			<div class="choose__inner">
-				<form class="choose__form" action="#">
-					<h2 class="title choose__title wow animate__zoomIn" data-wow-duration="2s">
-						ВЫБЕРИ СВОЙ ЦВЕТ
-					</h2>
-					<div class="choose__items wow animate__fadeInUp" data-wow-duration="2s">
-						<div class="choose__item">
-							<label class="choose__label">
-								<input class="choose__input visually-hidden" type="radio" name="iphone" value="silver" required>
-								<picture class="choose__picture">
-									<source type="image/avif" srcset="/images/silver.avif">
-									<source type="image/webp" srcset="/images/silver.webp">
-									<img class="choose__img" src="/images/silver.jpg" alt="Iphone silver">
-								</picture>
-								<span class="choose__color choose__color--eng">Silver</span>
-								<span class="choose__color">Серебристый</span>
-							</label>
-						</div>
-						<div class="choose__item">
-							<label class="choose__label">
-								<input class="choose__input visually-hidden" type="radio" name="iphone" value="purple" required>
-								<picture class="choose__picture">
-									<source type="image/avif" srcset="/images/purple.avif">
-									<source type="image/webp" srcset="/images/purple.webp">
-									<img class="choose__img" src="/images/purple.jpg" alt="Iphone purple">
-								</picture>
-								<span class="choose__color choose__color--eng">Deep purple</span>
-								<span class="choose__color">Темно фиолетовый</span>
-							</label>
-						</div>
-						<div class="choose__item">
-							<label class="choose__label">
-								<input class="choose__input visually-hidden" type="radio" name="iphone" value="gold" required>
-								<picture class="choose__picture">
-									<source type="image/avif" srcset="/images/gold.avif">
-									<source type="image/webp" srcset="/images/gold.webp">
-									<img class="choose__img" src="/images/gold.jpg" alt="Iphone gold">
-								</picture>
-								<span class="choose__color choose__color--eng">Gold</span>
-								<span class="choose__color">Золотой</span>
-							</label>
-						</div>
-						<div class="choose__item">
-							<label class="choose__label">
-								<input class="choose__input visually-hidden" type="radio" name="iphone" value="black" required>
-								<picture class="choose__picture">
-									<source type="image/avif" srcset="/images/black.avif">
-									<source type="image/webp" srcset="/images/black.webp">
-									<img class="choose__img" src="/images/black.jpg" alt="Iphone black">
-								</picture>
-								<span class="choose__color choose__color--eng">Space Black</span>
-								<span class="choose__color">Космический черный</span>
-							</label>
-						</div>
-					</div>
-	
-					<div class="choose-form">
-						<div class="choose-form__left">
-							<h5 class="choose-form__title">
-								ХОЧЕШЬ IPHONE 14 PRO?
-							</h5>
-							<input class="choose-form__input" type="text" placeholder="Ваше имя" required>
-							<input class="choose-form__input" type="text" placeholder="Номер телефона" required>
-							<span class="choose-form__span">В ближайшее время наш менеджер свяжется с Вами</span>
-							<button class="choose-form__btn" type="submit">ЗАКАЗАТЬ</button>
-						</div>
-						<div class="choose-form__rigth" style="background-image: url(/images/IphoneForm.jpg);">
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-	</section>
-</main>
-
-<footer class="footer">
-
-	<div class="container">
-
-		<div class="footer__inner">
-
-			<div class="logo footer__logo">
-
-				<a class="logo__link" href="/index.html">
-
-					<img class="logo__img" src="/images/icon/logo.svg" alt="logo">
-
-				</a>
-
-			</div>
-
-			<a class="footer__copy" href="#">
-
-				Политика конфиденциальности
-
-			</a>
-
-			<a class="tel footer__tel" href="tel:380504565656">+38 050-456-56-56</a>
-
-		</div>
-
-	</div>
-
-</footer>
-
-
-
-</div>
-<script src="/js/jquery.com_jquery-3.7.1.min.js"></script>
-<script src="/js/libs/wow.min.js"></script>
-<script src="/js/main.min.js"></script>
-
+  <script>
+    var fireballSize = 22
+    var getFireballSpeed = (left) => {
+      if (left) {
+        return 5
+      }
+      if (!left) {
+        return 2
+      }
+    }
+    wizardSpeed = 3
+    wizardWidth = 70
+    getWizardHeight = () => {
+      return 1.337 * wizardWidth
+    }
+    getWizardX = (width) => {
+      return (width / 2 - wizardWidth / 2)
+    }
+    getWizardY = (height) => {
+      return (height / 3 * 2)
+    }
+  </script>
+  <script src="js/game.js"></script>
 </body>
 
 </html>
