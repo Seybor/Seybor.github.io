@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тесты</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,700" rel="stylesheet" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <nav class="menu header__menu">
+              <a class="logo header__logo" href="/index.html">
+                <img class="logo__img" src="/images/logo.svg" alt="logo" />
+              </a>
+              <ul class="menu__items">
+                <li class="menu__item">
+                  <a class="menu__link" href="#"></a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#"></a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#"></a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#"></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header> -->
+      <div class="main">
+        <section class="testing">
+          <div class="container">
+            <div class="testing__inner">
+              <h2 class="title testing__title">Проверь себя!</h2>
+              <span class="result"></span>
+              <form class="testing__form">
+                <div class="testing__choose">
+                  Укажите количество <br />
+                  <label class="testing__choose-label">
+                    5
+                    <input class="testing__choice" type="radio" name="choice" value="5" checked />
+                  </label>
+                  <label class="testing__choose-label">
+                    10
+                    <input class="testing__choice" type="radio" name="choice" value="10" />
+                  </label>
+                  <label class="testing__choose-label">
+                    15
+                    <input class="testing__choice" type="radio" name="choice" value="15" />
+                  </label>
+                  <button class="testing__start" id="testing__start" type="button">Начать</button>
+                </div>
+
+                <ol class="testing__items">
+                  <!-- - Сюда вставляются задания -->
+                </ol>
+
+                <button class="testing__btn" id="testing__btn" type="button">Проверить</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- <footer class="footer">
+        <div class="container">
+          <div class="footer__inner"></div>
+        </div>
+      </footer> -->
+
+      <template id="template-one">
+        <li class="testing__item">
+          <span class="testing__span">123</span>
+          <span class="check"></span>
+          <input class="testing__input" type="text" placeholder="answer*" required />
+        </li>
+      </template>
+
+      <script src="js/script.js"></script>
+    </div>
+  </body>
+</html>
