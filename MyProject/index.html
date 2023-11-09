@@ -3,89 +3,129 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Тесты</title>
+    <meta name="description" content="my site gulp build v23.10.31" />
+    <meta name="keywords" content="test, hello" />
+    <meta name="Author" content="Seybor" />
+    <meta name="Copyright" content="Seybor" />
+    <meta name="Address" content="Planet Earth" />
+    <meta name="application-name" content="My Project" />
 
+    <title>Тесты v1.0.0</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,700" rel="stylesheet" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
   </head>
-  <body>
-    <div class="wrapper">
-      <!-- <header class="header">
-        <div class="container">
-          <div class="header__inner">
-            <nav class="menu header__menu">
-              <a class="logo header__logo" href="/index.html">
-                <img class="logo__img" src="/images/logo.svg" alt="logo" />
-              </a>
-              <ul class="menu__items">
-                <li class="menu__item">
-                  <a class="menu__link" href="#"></a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="#"></a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="#"></a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="#"></a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+</html>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <nav class="menu header__menu">
+            <ul class="menu__items">
+              <li class="menu__item">
+                <a class="menu__link" href="#"></a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#"></a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#"></a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#"></a>
+              </li>
+            </ul>
+          </nav>
         </div>
-      </header> -->
-      <div class="main">
-        <section class="testing">
-          <div class="container">
-            <div class="testing__inner">
-              <h2 class="title testing__title">Проверь себя!</h2>
-              <span class="result"></span>
-              <form class="testing__form">
-                <div class="testing__choose">
-                  Укажите количество <br />
-                  <label class="testing__choose-label">
-                    5
-                    <input class="testing__choice" type="radio" name="choice" value="5" checked />
-                  </label>
-                  <label class="testing__choose-label">
-                    10
-                    <input class="testing__choice" type="radio" name="choice" value="10" />
-                  </label>
-                  <label class="testing__choose-label">
-                    15
-                    <input class="testing__choice" type="radio" name="choice" value="15" />
-                  </label>
-                  <button class="testing__start" id="testing__start" type="button">Начать</button>
-                </div>
-
-                <ol class="testing__items">
-                  <!-- - Сюда вставляются задания -->
-                </ol>
-
-                <button class="testing__btn" id="testing__btn" type="button">Проверить</button>
-              </form>
-            </div>
-          </div>
-        </section>
       </div>
-      <!-- <footer class="footer">
-        <div class="container">
-          <div class="footer__inner"></div>
-        </div>
-      </footer> -->
+    </header>
 
-      <template id="template-one">
-        <li class="testing__item">
-          <span class="testing__span">123</span>
-          <span class="check"></span>
-          <input class="testing__input" type="text" placeholder="answer*" required />
-        </li>
-      </template>
-
-      <script src="js/script.js"></script>
+<main class="main">
+  <section class="testing">
+    <div class="container">
+      <div class="testing__inner">
+        <h2 class="title testing__title">Проверь себя!</h2>
+        <span class="result"></span>
+        <form class="testing__form">
+          <div class="testing__choose">
+            Укажите количество предложений для теста <br />
+            <label class="testing__choose-label" id="label-5">
+              <input class="testing__choice visually-hidden" type="radio" name="choice" value="5" checked />
+              <span>5</span>
+            </label>
+            <label class="testing__choose-label" id="label-10">
+              <input class="testing__choice visually-hidden" type="radio" name="choice" value="10" />
+              <span>10</span>
+            </label>
+            <label class="testing__choose-label" id="label-15">
+              <input class="testing__choice visually-hidden" type="radio" name="choice" value="15" />
+              <span>15</span>
+            </label>
+            <label class="testing__choose-label" id="label-20">
+              <input class="testing__choice visually-hidden" type="radio" name="choice" value="20" />
+              <span>20</span>
+            </label>
+            <label class="testing__choose-label" id="label-25">
+              <input class="testing__choice visually-hidden" type="radio" name="choice" value="25" />
+              <span>25</span>
+            </label>
+  
+            <br> Укажите вариант предложений <br />
+            <label class="testing__choose-label" id="label-en">
+              <input class="testing__languages visually-hidden" type="radio" name="languages" value="en" checked />
+              <span>en</span>
+            </label>
+            <label class="testing__choose-label" id="label-ru">
+              <input class="testing__languages visually-hidden" type="radio" name="languages" value="ru" />
+              <span>ru</span>
+            </label>
+            <label class="testing__choose-label" id="label-all">
+              <input class="testing__languages visually-hidden" type="radio" name="languages" value="all" />
+              <span>ru/en</span>
+            </label>
+            <button class="testing__start" id="testing__start" type="button">Начать</button>
+          </div>
+  
+          <ol class="testing__items">
+            <!-- - Сюда вставляются задания -->
+          </ol>
+  
+          <button class="testing__btn visually-hidden" id="testing__btn" type="button">Проверить</button>
+        </form>
+      </div>
     </div>
-  </body>
+  </section>
+  <template id="template-one">
+    <li class="testing__item">
+      <span class="testing__span">123</span>
+      <span class="check"></span>
+      <input class="testing__input" type="text" placeholder="answer*" required />
+    </li>
+  </template>
+  
+  <!--include _section.html  -->
+  <!--include _section.html  -->
+  <!--include _section.html  -->
+</main>
+
+<footer class="footer">
+
+	<div class="container">
+
+		<div class="footer__inner">
+
+
+
+		</div>
+
+	</div>
+
+</footer>
+</div>
+
+<script src="/js/main.min.js"></script>
+
+</body>
+
 </html>
