@@ -1,7 +1,7 @@
 'use strict';
 
 var userDialog = document.querySelector('.setup');
-userDialog.classList.remove('hidden');
+// userDialog.classList.remove('hidden');
 
 var wizardsTemplate = document.querySelector('#similar-wizard-template').content.querySelector('.setup-similar-item');
 var wizardsContent = userDialog.querySelector('.setup-similar-list');
@@ -76,3 +76,83 @@ for (var i = 0; i < wizards.length; i++) {
 wizardsContent.appendChild(fragment);
 
 userDialog.querySelector('.setup-similar').classList.remove('hidden');
+
+// ! task 4
+
+var ENTER_KEYCODE = 13;
+var ESC_KEYCODE = 27;
+const userOpen = document.querySelector('.setup-open');
+const userClose = userDialog.querySelector('.setup-close');
+const userSetup = userDialog.querySelector('.setup-user-name');
+
+userOpen.querySelector('.setup-open-icon').setAttribute('tabindex', '0');
+userDialog.setAttribute('tabindex', '0');
+userDialog.querySelector('.setup-wizard-form').setAttribute('action', 'https://js.dump.academy/code-and-magick');
+userClose.setAttribute('tabindex', '0');
+userSetup.setAttribute('tabindex', '0');
+userSetup.setAttribute('minlength', '2');
+userSetup.setAttribute('maxlength', '25');
+
+userOpen.addEventListener('click', () => {
+  userDialog.classList.remove('hidden');
+  userDialog.focus();
+});
+userOpen.addEventListener('keydown', (evt) => {
+  if (evt.keyCode === ENTER_KEYCODE) {
+    userDialog.classList.remove('hidden');
+    userDialog.focus();
+  }
+});
+
+userClose.addEventListener('click', () => {
+  userDialog.classList.add('hidden');
+});
+userClose.addEventListener('keydown', (evt) => {
+  if (evt.keyCode === ESC_KEYCODE || evt.keyCode === ENTER_KEYCODE) {
+    userDialog.classList.add('hidden');
+  }
+});
+userDialog.addEventListener(
+  'keydown',
+  (evt) => {
+    if (evt.keyCode === ESC_KEYCODE) {
+      userDialog.classList.add('hidden');
+    }
+  },
+  true
+);
+userSetup.addEventListener('keydown', (evt) => {
+  if (evt.keyCode === ESC_KEYCODE) {
+    userDialog.classList.remove('hidden');
+  }
+});
+
+const userCoat = userDialog.querySelector('.setup-wizard .wizard-coat');
+const userCoatInput = userDialog.querySelector('input[name="coat-color"]');
+
+const userEyes = userDialog.querySelector('.setup-wizard .wizard-eyes');
+const userEyesInput = userDialog.querySelector('input[name="eyes-color"]');
+
+const userFireball = userDialog.querySelector('.setup-fireball-wrap');
+const userFireballInput = userDialog.querySelector('input[name="fireball-color"]');
+
+const WIZARD_FIREBALLS = ['#ee4830', '#30a8ee', '#5ce6c0', '#e848d5', '#e6e848'];
+
+let getRandomColor = (min = 0, max = 1) => {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
+userCoat.addEventListener('click', () => {
+  let newColor = WIZARD_COLOR[getRandomColor(0, WIZARD_COLOR.length - 1)];
+  userCoat.style = `fill: ${newColor};`;
+  userCoatInput.value = newColor;
+});
+userEyes.addEventListener('click', () => {
+  let newColor = WIZARD_EYES[getRandomColor(0, WIZARD_EYES.length - 1)];
+  userEyes.style = `fill: ${newColor};`;
+  userEyesInput.value = newColor;
+});
+userFireball.addEventListener('click', () => {
+  let newColor = WIZARD_FIREBALLS[getRandomColor(0, WIZARD_FIREBALLS.length - 1)];
+  userFireball.style = `background: ${newColor};`;
+  userFireballInput.value = newColor;
+});
