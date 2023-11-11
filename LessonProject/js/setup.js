@@ -138,21 +138,39 @@ const userFireballInput = userDialog.querySelector('input[name="fireball-color"]
 
 const WIZARD_FIREBALLS = ['#ee4830', '#30a8ee', '#5ce6c0', '#e848d5', '#e6e848'];
 
-let getRandomColor = (min = 0, max = 1) => {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-};
 userCoat.addEventListener('click', () => {
-  let newColor = WIZARD_COLOR[getRandomColor(0, WIZARD_COLOR.length - 1)];
+  let newColor;
+  let arrLenght = WIZARD_COLOR.findIndex((currentValue) => currentValue == userCoatInput.value);
+  if (arrLenght < WIZARD_COLOR.length - 1) {
+    arrLenght = arrLenght + 1;
+  } else {
+    arrLenght = 0;
+  }
+  newColor = WIZARD_COLOR[arrLenght];
   userCoat.style = `fill: ${newColor};`;
   userCoatInput.value = newColor;
 });
 userEyes.addEventListener('click', () => {
-  let newColor = WIZARD_EYES[getRandomColor(0, WIZARD_EYES.length - 1)];
+  let newColor;
+  let arrLenght = WIZARD_EYES.findIndex((currentValue) => currentValue == userEyesInput.value);
+  if (arrLenght < WIZARD_EYES.length - 1) {
+    arrLenght = arrLenght + 1;
+  } else {
+    arrLenght = 0;
+  }
+  newColor = WIZARD_EYES[arrLenght];
   userEyes.style = `fill: ${newColor};`;
   userEyesInput.value = newColor;
 });
 userFireball.addEventListener('click', () => {
-  let newColor = WIZARD_FIREBALLS[getRandomColor(0, WIZARD_FIREBALLS.length - 1)];
+  let newColor;
+  let arrLenght = WIZARD_FIREBALLS.findIndex((currentValue) => currentValue == userFireballInput.value);
+  if (arrLenght < WIZARD_FIREBALLS.length - 1) {
+    arrLenght = arrLenght + 1;
+  } else {
+    arrLenght = 0;
+  }
+  newColor = WIZARD_FIREBALLS[arrLenght];
   userFireball.style = `background: ${newColor};`;
   userFireballInput.value = newColor;
 });
