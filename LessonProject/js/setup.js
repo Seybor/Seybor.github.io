@@ -1,14 +1,13 @@
 'use strict';
 
-var userDialog = document.querySelector('.setup');
-// userDialog.classList.remove('hidden');
+const userDialog = document.querySelector('.setup');
 
-var wizardsTemplate = document.querySelector('#similar-wizard-template').content.querySelector('.setup-similar-item');
-var wizardsContent = userDialog.querySelector('.setup-similar-list');
+const wizardsTemplate = document.querySelector('#similar-wizard-template').content.querySelector('.setup-similar-item');
+const wizardsContent = userDialog.querySelector('.setup-similar-list');
 
-var WIZARD_NAMES = ['Иван', 'Хуан Себастьян', 'Мария', 'Кристоф', 'Виктор', 'Юлия', 'Люпита', 'Вашингтон'];
-var WIZARD_SURNAME = ['да Марья', 'Верон', 'Мирабелла', 'Вальц', 'Онопко', 'Топольницкая', 'Нионго', 'Ирвинг'];
-var WIZARD_COLOR = [
+const WIZARD_NAMES = ['Иван', 'Хуан Себастьян', 'Мария', 'Кристоф', 'Виктор', 'Юлия', 'Люпита', 'Вашингтон'];
+const WIZARD_SURNAME = ['да Марья', 'Верон', 'Мирабелла', 'Вальц', 'Онопко', 'Топольницкая', 'Нионго', 'Ирвинг'];
+const WIZARD_COLOR = [
   'rgb(101, 137, 164)',
   'rgb(241, 43, 107)',
   'rgb(146, 100, 161)',
@@ -16,23 +15,23 @@ var WIZARD_COLOR = [
   'rgb(215, 210, 55)',
   'rgb(0, 0, 0)',
 ];
-var WIZARD_EYES = ['black', 'red', 'blue', 'yellow', 'green'];
+const WIZARD_EYES = ['black', 'red', 'blue', 'yellow', 'green'];
 
-var wizardNames = [];
-var wizardSurname = [];
-var wizardColor = [];
-var wizardEyes = [];
+const wizardNames = [];
+const wizardSurname = [];
+const wizardColor = [];
+const wizardEyes = [];
 
-var randomNumber = (myArray, bigArray) => {
-  var checkNumber = true;
+const randomNumber = (myArray, bigArray) => {
+  let checkNumber = true;
   do {
-    end: for (var i = 0; i < 4; i++) {
+    end: for (let i = 0; i < 4; i++) {
       myArray[i] = Math.floor(Math.random() * (bigArray.length - 1 - 0 + 1) + 0);
 
       if (i === 3) {
         checkNumber = true;
-        for (var j = 0; j < 4; j++) {
-          for (var k = j + 1; k < 4; k++) {
+        for (let j = 0; j < 4; j++) {
+          for (let k = j + 1; k < 4; k++) {
             if (myArray[j] === myArray[k]) {
               checkNumber = false;
               break end;
@@ -49,9 +48,9 @@ randomNumber(wizardSurname, WIZARD_SURNAME);
 randomNumber(wizardColor, WIZARD_COLOR);
 randomNumber(wizardEyes, WIZARD_EYES);
 
-var wizards = [];
+const wizards = [];
 
-for (var i = 0; i < 4; i++) {
+for (let i = 0; i < 4; i++) {
   wizards[i] = {
     name: WIZARD_NAMES[wizardNames[i]] + ' ' + WIZARD_SURNAME[wizardSurname[i]],
     coatColor: WIZARD_COLOR[wizardColor[i]],
@@ -59,8 +58,8 @@ for (var i = 0; i < 4; i++) {
   };
 }
 
-var renderWizard = function (value) {
-  var wizardElement = wizardsTemplate.cloneNode(true);
+const renderWizard = function (value) {
+  let wizardElement = wizardsTemplate.cloneNode(true);
 
   wizardElement.querySelector('.setup-similar-label').textContent = value.name;
   wizardElement.querySelector('.wizard-coat').style.fill = value.coatColor;
@@ -69,108 +68,10 @@ var renderWizard = function (value) {
   return wizardElement;
 };
 
-var fragment = document.createDocumentFragment();
-for (var i = 0; i < wizards.length; i++) {
+const fragment = document.createDocumentFragment();
+for (let i = 0; i < wizards.length; i++) {
   fragment.appendChild(renderWizard(wizards[i]));
 }
 wizardsContent.appendChild(fragment);
 
 userDialog.querySelector('.setup-similar').classList.remove('hidden');
-
-// ! task 4
-
-var ENTER_KEYCODE = 13;
-var ESC_KEYCODE = 27;
-const userOpen = document.querySelector('.setup-open');
-const userClose = userDialog.querySelector('.setup-close');
-const userSetup = userDialog.querySelector('.setup-user-name');
-
-userOpen.querySelector('.setup-open-icon').setAttribute('tabindex', '0');
-userDialog.setAttribute('tabindex', '0');
-userDialog.querySelector('.setup-wizard-form').setAttribute('action', 'https://js.dump.academy/code-and-magick');
-userClose.setAttribute('tabindex', '0');
-userSetup.setAttribute('tabindex', '0');
-userSetup.setAttribute('minlength', '2');
-userSetup.setAttribute('maxlength', '25');
-
-userOpen.addEventListener('click', () => {
-  userDialog.classList.remove('hidden');
-  userDialog.focus();
-});
-userOpen.addEventListener('keydown', (evt) => {
-  if (evt.keyCode === ENTER_KEYCODE) {
-    userDialog.classList.remove('hidden');
-    userDialog.focus();
-  }
-});
-
-userClose.addEventListener('click', () => {
-  userDialog.classList.add('hidden');
-});
-userClose.addEventListener('keydown', (evt) => {
-  if (evt.keyCode === ESC_KEYCODE || evt.keyCode === ENTER_KEYCODE) {
-    userDialog.classList.add('hidden');
-  }
-});
-userDialog.addEventListener(
-  'keydown',
-  (evt) => {
-    if (evt.keyCode === ESC_KEYCODE) {
-      userDialog.classList.add('hidden');
-    }
-  },
-  true
-);
-userSetup.addEventListener('keydown', (evt) => {
-  if (evt.keyCode === ESC_KEYCODE) {
-    userDialog.classList.remove('hidden');
-  }
-});
-
-const userCoat = userDialog.querySelector('.setup-wizard .wizard-coat');
-const userCoatInput = userDialog.querySelector('input[name="coat-color"]');
-
-const userEyes = userDialog.querySelector('.setup-wizard .wizard-eyes');
-const userEyesInput = userDialog.querySelector('input[name="eyes-color"]');
-
-const userFireball = userDialog.querySelector('.setup-fireball-wrap');
-const userFireballInput = userDialog.querySelector('input[name="fireball-color"]');
-
-const WIZARD_FIREBALLS = ['#ee4830', '#30a8ee', '#5ce6c0', '#e848d5', '#e6e848'];
-
-userCoat.addEventListener('click', () => {
-  let newColor;
-  let arrLenght = WIZARD_COLOR.findIndex((currentValue) => currentValue == userCoatInput.value);
-  if (arrLenght < WIZARD_COLOR.length - 1) {
-    arrLenght = arrLenght + 1;
-  } else {
-    arrLenght = 0;
-  }
-  newColor = WIZARD_COLOR[arrLenght];
-  userCoat.style = `fill: ${newColor};`;
-  userCoatInput.value = newColor;
-});
-userEyes.addEventListener('click', () => {
-  let newColor;
-  let arrLenght = WIZARD_EYES.findIndex((currentValue) => currentValue == userEyesInput.value);
-  if (arrLenght < WIZARD_EYES.length - 1) {
-    arrLenght = arrLenght + 1;
-  } else {
-    arrLenght = 0;
-  }
-  newColor = WIZARD_EYES[arrLenght];
-  userEyes.style = `fill: ${newColor};`;
-  userEyesInput.value = newColor;
-});
-userFireball.addEventListener('click', () => {
-  let newColor;
-  let arrLenght = WIZARD_FIREBALLS.findIndex((currentValue) => currentValue == userFireballInput.value);
-  if (arrLenght < WIZARD_FIREBALLS.length - 1) {
-    arrLenght = arrLenght + 1;
-  } else {
-    arrLenght = 0;
-  }
-  newColor = WIZARD_FIREBALLS[arrLenght];
-  userFireball.style = `background: ${newColor};`;
-  userFireballInput.value = newColor;
-});
