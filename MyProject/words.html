@@ -11,7 +11,7 @@
   <meta name="Address" content="Planet Earth" />
   <meta name="application-name" content="My Project" />
 
-  <title>Разное v2.0.0</title>
+  <title>Разное v3.0.0</title>
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,700" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
@@ -25,10 +25,10 @@
           <nav class="menu header__menu">
             <ul class="menu__items">
               <li class="menu__item">
-                <a class="menu__link" href="index.html">Главная</a>
+                <a class="menu__link" href="index.html">Тест на перевод предложений А0</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="words.html">Тест на проверку слов</a>
+                <a class="menu__link" href="words.html">Тест на проверку слов А0</a>
               </li>
               <li class="menu__item">
                 <a class="menu__link" href="guru-quotes.html">Цитаты Гуру</a>
@@ -43,11 +43,11 @@
 	<section class="words">
 		<div class="container">
 			<div class="words__inner">
-				<h2 class="title words__title">Проверь себя!</h2>
+				<h2 class="title words__title">Слова А0 для самопроверки</h2>
 				<span class="result"></span>
 				<form class="words__form">
 					<div class="words__choose">
-						Укажите количество предложений для теста <br />
+						Укажите количество слов для проверки<br />
 						<label class="words__choose-label" id="label-5">
 							<input class="words__choice visually-hidden" type="radio" name="choice" value="5" checked />
 							<span>5</span>
@@ -69,7 +69,7 @@
 							<span>25</span>
 						</label>
 
-						<br> Укажите вариант предложений <br />
+						<br> Выберите вариант перевода слов <br />
 						<label class="words__choose-label" id="label-en">
 							<input class="words__languages visually-hidden" type="radio" name="languages" value="en" checked />
 							<span>en</span>
@@ -94,6 +94,28 @@
 			</div>
 		</div>
 	</section>
+
+	<template id="template-words">
+		<li class="words__item">
+			<span class="words__guess"></span>
+			<label class="words__label">
+				<input class="words__input visually-hidden" type="radio" placeholder="word" name="" required />
+				<span></span>
+			</label>
+			<label class="words__label">
+				<input class="words__input visually-hidden" type="radio" placeholder="word" name="" required />
+				<span></span>
+			</label>
+			<label class="words__label">
+				<input class="words__input visually-hidden" type="radio" placeholder="word" name="" required />
+				<span></span>
+			</label>
+			<label class="words__label">
+				<input class="words__input visually-hidden" type="radio" placeholder="word" name="" required />
+				<span></span>
+			</label>
+		</li>
+	</template>
 
 </main>
 <footer class="footer">
