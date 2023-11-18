@@ -1,6 +1,9 @@
 'use strict';
 
 const userDialog = document.querySelector('.setup');
+const userSubmit = userDialog.querySelector('.setup-submit');
+userSubmit.setAttribute('type', 'submit');
+const userForm = userDialog.querySelector('.setup-wizard-form');
 
 const wizardsTemplate = document.querySelector('#similar-wizard-template').content.querySelector('.setup-similar-item');
 const wizardsContent = userDialog.querySelector('.setup-similar-list');
@@ -22,56 +25,56 @@ const wizardSurname = [];
 const wizardColor = [];
 const wizardEyes = [];
 
-const randomNumber = (myArray, bigArray) => {
-  let checkNumber = true;
-  do {
-    end: for (let i = 0; i < 4; i++) {
-      myArray[i] = Math.floor(Math.random() * (bigArray.length - 1 - 0 + 1) + 0);
+// const randomNumber = (myArray, bigArray) => {
+//   let checkNumber = true;
+//   do {
+//     end: for (let i = 0; i < 4; i++) {
+//       myArray[i] = Math.floor(Math.random() * (bigArray.length - 1 - 0 + 1) + 0);
 
-      if (i === 3) {
-        checkNumber = true;
-        for (let j = 0; j < 4; j++) {
-          for (let k = j + 1; k < 4; k++) {
-            if (myArray[j] === myArray[k]) {
-              checkNumber = false;
-              break end;
-            }
-          }
-        }
-      }
-    }
-  } while (checkNumber === false);
-};
+//       if (i === 3) {
+//         checkNumber = true;
+//         for (let j = 0; j < 4; j++) {
+//           for (let k = j + 1; k < 4; k++) {
+//             if (myArray[j] === myArray[k]) {
+//               checkNumber = false;
+//               break end;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   } while (checkNumber === false);
+// };
 
-randomNumber(wizardNames, WIZARD_NAMES);
-randomNumber(wizardSurname, WIZARD_SURNAME);
-randomNumber(wizardColor, WIZARD_COLOR);
-randomNumber(wizardEyes, WIZARD_EYES);
+// randomNumber(wizardNames, WIZARD_NAMES);
+// randomNumber(wizardSurname, WIZARD_SURNAME);
+// randomNumber(wizardColor, WIZARD_COLOR);
+// randomNumber(wizardEyes, WIZARD_EYES);
 
-const wizards = [];
+// const wizards = [];
 
-for (let i = 0; i < 4; i++) {
-  wizards[i] = {
-    name: WIZARD_NAMES[wizardNames[i]] + ' ' + WIZARD_SURNAME[wizardSurname[i]],
-    coatColor: WIZARD_COLOR[wizardColor[i]],
-    eyesColor: WIZARD_EYES[wizardEyes[i]],
-  };
-}
+// for (let i = 0; i < 4; i++) {
+//   wizards[i] = {
+//     name: WIZARD_NAMES[wizardNames[i]] + ' ' + WIZARD_SURNAME[wizardSurname[i]],
+//     coatColor: WIZARD_COLOR[wizardColor[i]],
+//     eyesColor: WIZARD_EYES[wizardEyes[i]],
+//   };
+// }
 
-const renderWizard = function (value) {
-  let wizardElement = wizardsTemplate.cloneNode(true);
+// const renderWizard = function (value) {
+//   let wizardElement = wizardsTemplate.cloneNode(true);
 
-  wizardElement.querySelector('.setup-similar-label').textContent = value.name;
-  wizardElement.querySelector('.wizard-coat').style.fill = value.coatColor;
-  wizardElement.querySelector('.wizard-eyes').style.fill = value.eyesColor;
+//   wizardElement.querySelector('.setup-similar-label').textContent = value.name;
+//   wizardElement.querySelector('.wizard-coat').style.fill = value.coatColor;
+//   wizardElement.querySelector('.wizard-eyes').style.fill = value.eyesColor;
 
-  return wizardElement;
-};
+//   return wizardElement;
+// };
 
-const fragment = document.createDocumentFragment();
-for (let i = 0; i < wizards.length; i++) {
-  fragment.appendChild(renderWizard(wizards[i]));
-}
-wizardsContent.appendChild(fragment);
+// const fragment = document.createDocumentFragment();
+// for (let i = 0; i < wizards.length; i++) {
+//   fragment.appendChild(renderWizard(wizards[i]));
+// }
+// wizardsContent.appendChild(fragment);
 
 userDialog.querySelector('.setup-similar').classList.remove('hidden');

@@ -10,7 +10,9 @@ const userSetup = userDialog.querySelector('.setup-user-name');
 
 userOpen.querySelector('.setup-open-icon').setAttribute('tabindex', '0');
 userDialog.setAttribute('tabindex', '0');
-userDialog.querySelector('.setup-wizard-form').setAttribute('action', 'https://js.dump.academy/code-and-magick');
+userDialog
+  .querySelector('.setup-wizard-form')
+  .setAttribute('action', 'https://24.javascript.pages.academy/code-and-magick');
 userClose.setAttribute('tabindex', '0');
 userSetup.setAttribute('minlength', '2');
 userSetup.setAttribute('maxlength', '25');
