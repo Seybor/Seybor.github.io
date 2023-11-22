@@ -4,11 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Мои проекты</title>
+	<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .wrapper {
+      margin: 0 auto;
+      min-height: 100vh;
+      width: 100%;
+      max-width: 1200px;
+      min-width: 280px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    a {
+	  display: block;
+	  margin-bottom: 12px;
+	  padding: 10px 20px;
+	  text-decoration: none;
+      font-size: clamp(30px, 10vw, 80px);
+      font-weight: 900;
+	  border: 1px solid black;
+    }
+	a:last-child {
+	  margin-bottom: 0;
+	{
+  </style>
   </head>
   <body>
-    <a href="LessonProject/">Учебный проект</a> <br />
-    <a href="PersonalProject-Inst/">Inst</a> <br />
-    <a href="PersonalProject-Book/">Booking</a> <br />
-	<a href="MyProject/">MyProject</a> <br />
+  <div class="wrapper">
+    <div class="items">
+		<a href="LessonProject/">Учебный проект</a> 
+		<a href="PersonalProject-Inst/">Inst</a> 
+		<a href="PersonalProject-Book/">Booking</a> 
+		<a href="MyProject/">MyProject</a> 
+		<a href="Timer/">Timer</a> 
+    </div>
+  </div>
   </body>
 </html>
