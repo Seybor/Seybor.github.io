@@ -5,6 +5,7 @@ const ENTER_KEYCODE = 13;
 const ESC_KEYCODE = 27;
 
 const editingForm = document.querySelector('.img-upload__overlay');
+const FORM_ALL = document.querySelector('.img-upload__form');
 editingForm.setAttribute('tabindex', '0');
 const uploadFile = document.querySelector('#upload-file');
 const uploadCancel = editingForm.querySelector('#upload-cancel');
@@ -100,41 +101,6 @@ scaleBigger.addEventListener('click', () => {
 
 const effectsInputs = effects.querySelectorAll('input[name="effect"]');
 
-// const changeEffectInput = () => {
-//   let value = effectEnabledSettings[0];
-
-//   switch (value) {
-//     case 'chrome':
-//       ImgPreview.style.filter = 'grayscale(1)';
-//       break;
-//     case 'sepia':
-//       ImgPreview.style.filter = 'sepia(1)';
-//       break;
-//     case 'marvin':
-//       ImgPreview.style.filter = 'invert(1)';
-//       break;
-//     case 'phobos':
-//       ImgPreview.style.filter = 'blur(5px)';
-//       break;
-//     case 'heat':
-//       ImgPreview.style.filter = 'brightness(3)';
-//       break;
-//     default:
-//       ImgPreview.style.filter = null;
-//   }
-// };
-
-// let effectEnabledSettings = [];
-// effectsInputs.forEach(function (radio) {
-//   radio.addEventListener('change', function () {
-//     effectEnabledSettings = Array.from(effectsInputs)
-//       .filter((i) => i.checked)
-//       .map((i) => i.value);
-//     effectsInput = effects.querySelector('input:checked');
-//     changeEffectInput();
-//   });
-// });
-
 const pictures = document.querySelectorAll('.picture__img');
 gallery.setAttribute('tabindex', '0');
 const galleryPhoto = gallery.querySelector('.big-picture__img > img');
@@ -198,7 +164,7 @@ galleryCancel.addEventListener('click', () => {
 const mainForm = document.querySelector('#upload-select-image');
 const uploadSubmit = editingForm.querySelector('.img-upload__submit');
 
-uploadSubmit.addEventListener('click', () => {
+FORM_ALL.addEventListener('submit', () => {
   formHashtag.setCustomValidity('');
   let check = formHashtag.value.split(' ');
   let newCheck = formHashtag.value.split(' ');
