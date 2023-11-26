@@ -92,7 +92,7 @@ if (document.querySelector('#template-one') !== null) {
     },
     {
       ru: 'Я думаю, она не сдаст этот тест',
-      en: 'I think, she will not pass this test',
+      en: 'I think she will not pass this test',
     },
     {
       ru: 'Ты пойдёшь за покупками сейчас?',
@@ -1426,7 +1426,7 @@ if (document.querySelector('#template-words') !== null) {
       ru: 'чемпионат',
     },
     {
-      en: 'comeptition',
+      en: 'competition',
       ru: 'соревнование',
     },
     {
@@ -1740,8 +1740,13 @@ if (document.querySelector('#template-words') !== null) {
   
   function getResult() {
     let check = wordsContent.querySelectorAll('.words__input:checked');
+    let noCheck = wordsContent.querySelectorAll('.words__input:not(:checked)');
     let resultNumber = 0;
     const choice = document.querySelector('.words__choice:checked');
+  
+    noCheck.forEach((el) => {
+      el.dataset.result = '';
+    });
   
     numbers.forEach((el, id) => {
       console.log(el + ' ' + check[id].value);
@@ -1821,6 +1826,641 @@ if (document.querySelector('#template-words') !== null) {
   
   btn.addEventListener('click', () => {
     getResult();
+  });
+  
+}
+
+if (document.querySelector('#template-transcription') !== null) {
+  try {
+    document.querySelector('.menu__link[href="transcription.html"]').dataset.current = 'true';
+  } catch {
+    console.log('.menu__link[href="transcription.html"] - не найдено');
+  }
+
+  'use strick';
+
+  
+
+  const TRANSCRIPTION_ARRAY = [
+
+    {
+
+      en: 'cap',
+
+      tr: '[kæp]',
+
+      ru: 'шапка, кепка',
+
+    },
+
+    {
+
+      en: 'coat',
+
+      tr: '[kəʊt]',
+
+      ru: 'пальто',
+
+    },
+
+    {
+
+      en: 'skirt',
+
+      tr: '[skɜ:t] ',
+
+      ru: 'юбка',
+
+    },
+
+    {
+
+      en: 'boots',
+
+      tr: '[bu:ts]',
+
+      ru: 'ботинки',
+
+    },
+
+    {
+
+      en: 'trousers',
+
+      tr: "['traʊzəz]",
+
+      ru: 'брюки(мн.число)',
+
+    },
+
+    {
+
+      en: 'trainers',
+
+      tr: '[ˈtreɪnəz]',
+
+      ru: 'кроссовки(мн.число)',
+
+    },
+
+    {
+
+      en: 'shoes',
+
+      tr: '[ʃuː]',
+
+      ru: 'обувь, туфли(мн.число)',
+
+    },
+
+    {
+
+      en: 'honey',
+
+      tr: '[ˈhʌnɪ]',
+
+      ru: 'мёд(милый, милая)',
+
+    },
+
+    {
+
+      en: 'cup',
+
+      tr: '[kʌp]',
+
+      ru: 'чашка, кубок, кружка',
+
+    },
+
+    {
+
+      en: 'glass',
+
+      tr: '[glɑːs]',
+
+      ru: 'стакан, стекло',
+
+    },
+
+    {
+
+      en: 'pleasure',
+
+      tr: '[ˈpleʒə]',
+
+      ru: 'удовольствие',
+
+    },
+
+    {
+
+      en: 'opportunity',
+
+      tr: '[ɒpəˈtjuːnɪtɪ]',
+
+      ru: 'возможность',
+
+    },
+
+    {
+
+      en: 'village',
+
+      tr: '[ˈvɪlɪʤ]',
+
+      ru: 'деревня',
+
+    },
+
+    {
+
+      en: 'miracle',
+
+      tr: '[ˈmɪrəkl]',
+
+      ru: 'чудо',
+
+    },
+
+    {
+
+      en: 'gym',
+
+      tr: '[ʤɪm]',
+
+      ru: 'спортзал, тренажёрный зал',
+
+    },
+
+    {
+
+      en: 'camel',
+
+      tr: '[ˈkæməl]',
+
+      ru: 'верблюд',
+
+    },
+
+    {
+
+      en: 'wallet',
+
+      tr: '[ˈwɒlɪt]',
+
+      ru: 'бумажник',
+
+    },
+
+    {
+
+      en: 'lawyer',
+
+      tr: '[ˈlɔːjə]',
+
+      ru: 'юрист, адвокат',
+
+    },
+
+    {
+
+      en: 'law',
+
+      tr: '[lɔː]',
+
+      ru: 'закон',
+
+    },
+
+    {
+
+      en: 'studies',
+
+      tr: '[ˈstʌdiz]',
+
+      ru: 'учёба',
+
+    },
+
+    {
+
+      en: 'garden',
+
+      tr: '[gɑːdn]',
+
+      ru: 'сад',
+
+    },
+
+    {
+
+      en: 'corner',
+
+      tr: '[ˈkɔːnə]',
+
+      ru: 'угол',
+
+    },
+
+    {
+
+      en: 'yard',
+
+      tr: '[jɑːd]',
+
+      ru: 'двор',
+
+    },
+
+    {
+
+      en: 'fence',
+
+      tr: '[fens]',
+
+      ru: 'забор',
+
+    },
+
+    {
+
+      en: 'meeting',
+
+      tr: '[ˈmiːtɪŋ]',
+
+      ru: 'встреча',
+
+    },
+
+    {
+
+      en: 'pie',
+
+      tr: '[paɪ]',
+
+      ru: 'пирог',
+
+    },
+
+    {
+
+      en: 'parcel',
+
+      tr: '[pɑːsl]',
+
+      ru: 'посылка',
+
+    },
+
+    {
+
+      en: 'kindness',
+
+      tr: '[ˈkaɪndnɪs]',
+
+      ru: 'доброта',
+
+    },
+
+    {
+
+      en: 'bill',
+
+      tr: '[bɪl]',
+
+      ru: 'счёт',
+
+    },
+
+    {
+
+      en: 'accident',
+
+      tr: '[ˈæksɪdənt]',
+
+      ru: 'происшествие, авария, несчастный случай',
+
+    },
+
+    {
+
+      en: 'criminal',
+
+      tr: '[ˈkrɪmɪnl]',
+
+      ru: 'преступник',
+
+    },
+
+    {
+
+      en: 'view',
+
+      tr: '[vjuː]',
+
+      ru: 'вид, зрение',
+
+    },
+
+    {
+
+      en: 'donkey',
+
+      tr: '[ˈdɒŋkɪ]',
+
+      ru: 'осёл',
+
+    },
+
+    {
+
+      en: 'knowledge',
+
+      tr: '[ˈnɒlɪʤ]',
+
+      ru: 'знания',
+
+    },
+
+    {
+
+      en: 'circus',
+
+      tr: '[ˈsɜːkəs]',
+
+      ru: 'цирк',
+
+    },
+
+    {
+
+      en: 'such',
+
+      tr: '[sʌʧ]',
+
+      ru: 'такой',
+
+    },
+
+    {
+
+      en: 'careful',
+
+      tr: '[ˈkeəf(ə)l]',
+
+      ru: 'осторожный',
+
+    },
+
+    {
+
+      en: 'upset',
+
+      tr: '[ʌpˈset]',
+
+      ru: 'расстроенный',
+
+    },
+
+    {
+
+      en: 'unhappy',
+
+      tr: '[ʌnˈhæpɪ]',
+
+      ru: 'несчатный',
+
+    },
+
+    {
+
+      en: 'foreign',
+
+      tr: '[ˈfɒrɪn]',
+
+      ru: 'иностранный',
+
+    },
+
+    {
+
+      en: 'homemade',
+
+      tr: '[ˈhəʊmeɪd]',
+
+      ru: 'домашний, домашнего изготовления',
+
+    },
+
+    {
+
+      en: 'urgently',
+
+      tr: '[ˈɜːʤəntlɪ]',
+
+      ru: 'срочно',
+
+    },
+
+    {
+
+      en: 'suddenly',
+
+      tr: '[ˈsʌdnlɪ]',
+
+      ru: 'вдруг, внезапно',
+
+    },
+
+    {
+
+      en: 'fluently',
+
+      tr: '[ˈfluːəntlɪ]',
+
+      ru: 'свободно, бегло',
+
+    },
+
+    {
+
+      en: 'mostly',
+
+      tr: '[ˈməʊstlɪ]',
+
+      ru: 'в основном',
+
+    },
+
+    {
+
+      en: 'worse',
+
+      tr: '[wɜːs]',
+
+      ru: 'хуже',
+
+    },
+
+    {
+
+      en: 'behind',
+
+      tr: '[bɪˈhaɪnd]',
+
+      ru: 'позади, за',
+
+    },
+
+    {
+
+      en: 'sooner',
+
+      tr: '[suːn]',
+
+      ru: 'скорее',
+
+    },
+
+    {
+
+      en: 'some',
+
+      tr: '[sʌm]',
+
+      ru: 'некоторые, несколько, немного',
+
+    },
+
+    {
+
+      en: 'several',
+
+      tr: '[ˈsevrəl]',
+
+      ru: 'несколько',
+
+    },
+
+  ];
+
+  
+
+  console.log(TRANSCRIPTION_ARRAY.length);
+
+  
+  const template = document.querySelector('#template-transcription').content.querySelector('.transcription__item');
+  const transcriptionContent = document.querySelector('.transcription__items');
+  const btn = document.querySelector('#transcription__btn');
+  const result = document.querySelector('.result');
+  const start = document.querySelector('#transcription__start');
+  
+  const renderTranscription = function (question, length) {
+    let transcriptionElement = template.cloneNode(true);
+    console.log(question);
+  
+    transcriptionElement.querySelector('.transcription__span').textContent = question;
+    transcriptionElement.querySelector('.transcription__input').setAttribute('maxlength', `${length}`);
+    return transcriptionElement;
+  };
+  
+  const renderStart = (value) => {
+    let fragment = document.createDocumentFragment();
+  
+    for (let i = 0; i < value; i++) {
+      fragment.append(
+        renderTranscription(TRANSCRIPTION_ARRAY[randomNumberArr[i]].tr, TRANSCRIPTION_ARRAY[randomNumberArr[i]].en.length)
+      );
+    }
+  
+    transcriptionContent.append(fragment);
+  };
+  
+  function getResult(value) {
+    let check = transcriptionContent.querySelectorAll('.check');
+    let checkEmpty = 0;
+    let newCheck = [];
+    let resultNumber = value;
+    let str;
+    let checkTransription;
+  
+    for (let i = 0; i < value; i++) {
+      str = input[i].value;
+      if (str == null || str.length == 0) {
+        checkEmpty++;
+        newCheck.push(i);
+      }
+    }
+    if (checkEmpty > 0) {
+      do {
+        checkEmpty--;
+        input[newCheck[checkEmpty]].dataset.result = 'empty';
+        input[newCheck[checkEmpty]].placeholder = 'Поле пустое, введите значение';
+      } while (checkEmpty);
+      return newCheck;
+    }
+  
+    for (let i = 0; i < value; i++) {
+      str = input[i].value;
+  
+      checkTransription = TRANSCRIPTION_ARRAY[randomNumberArr[i]].en;
+      if (checkTransription === str) {
+        input[i].dataset.result = 'correctly';
+        check[i].textContent = '+ : ' + checkTransription + ' - ' + TRANSCRIPTION_ARRAY[randomNumberArr[i]].ru;
+      }
+      if (checkTransription !== str) {
+        input[i].dataset.result = 'mistake';
+        check[i].textContent = '- : ' + checkTransription + ' - ' + TRANSCRIPTION_ARRAY[randomNumberArr[i]].ru;
+        resultNumber--;
+      }
+    }
+  
+    result.textContent = 'Ваш результат: ' + resultNumber + ' из ' + choice.value;
+  }
+  
+  const randomNumberArr = [];
+  
+  const generateRandomNumbers = (min, max, count) => {
+    if (max - min + 1 < count) {
+      min = 0;
+      max = 1;
+      count = 1;
+    }
+  
+    while (randomNumberArr.length < count) {
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      if (!randomNumberArr.includes(randomNumber)) {
+        randomNumberArr.push(randomNumber);
+      }
+    }
+  
+    console.log(randomNumberArr);
+    return randomNumberArr;
+  };
+  
+  let choice;
+  let span;
+  let input;
+  
+  start.addEventListener('click', () => {
+    let transcription = document.querySelector('.transcription__choose');
+    choice = document.querySelector('.transcription__choice:checked');
+  
+    generateRandomNumbers(0, TRANSCRIPTION_ARRAY.length - 1, choice.value);
+    renderStart(choice.value);
+  
+    transcription.classList.add('visually-hidden');
+    btn.classList.remove('visually-hidden');
+  
+    span = transcriptionContent.querySelectorAll('.transcription__span');
+    input = transcriptionContent.querySelectorAll('.transcription__input');
+  
+    return choice;
+  });
+  
+  btn.addEventListener('click', () => {
+    getResult(choice.value);
   });
   
 }
@@ -2730,7 +3370,8 @@ if (document.querySelector('#template-quotes') !== null) {
   
     return newArray;
   };
- 
+  
+  
   
   const renderQuotes = function (quotesNew) {
     var quotesElement = template.cloneNode(true);

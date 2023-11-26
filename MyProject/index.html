@@ -31,6 +31,9 @@
                 <a class="menu__link" href="words.html" data-current>Words</a>
               </li>
               <li class="menu__item">
+                <a class="menu__link" href="transcription.html" data-current>Transcription</a>
+              </li>
+              <li class="menu__item">
                 <a class="menu__link" href="guru-quotes.html" data-current>Quotes</a>
               </li>
             </ul>
@@ -43,11 +46,11 @@
   <section class="testing">
     <div class="container">
       <div class="testing__inner">
-        <h2 class="title testing__title">Проверь себя!</h2>
+        <h2 class="title testing__title">Предложения А0 для самопроверки</h2>
         <span class="result"></span>
         <form class="testing__form">
           <div class="testing__choose">
-            Укажите количество предложений для теста <br />
+            Количество <br />
             <label class="testing__choose-label" id="label-5">
               <input class="testing__choice visually-hidden" type="radio" name="choice" value="5" checked />
               <span>5</span>
@@ -68,8 +71,8 @@
               <input class="testing__choice visually-hidden" type="radio" name="choice" value="25" />
               <span>25</span>
             </label>
-  
-            <br> Укажите вариант предложений <br />
+
+            <br> Вариант перевода <br />
             <label class="testing__choose-label" id="label-en">
               <input class="testing__languages visually-hidden" type="radio" name="languages" value="en" checked />
               <span>en</span>
@@ -84,16 +87,17 @@
             </label>
             <button class="testing__start" id="testing__start" type="button">Начать</button>
           </div>
-  
+
           <ol class="testing__items">
             <!-- - Сюда вставляются задания -->
           </ol>
-  
+
           <button class="testing__btn visually-hidden" id="testing__btn" type="button">Проверить</button>
         </form>
       </div>
     </div>
   </section>
+
   <template id="template-one">
     <li class="testing__item">
       <span class="testing__span">123</span>
@@ -101,9 +105,7 @@
       <input class="testing__input" type="text" placeholder="answer*" required data-result />
     </li>
   </template>
-  <!--include _section.html  -->
-  <!--include _section.html  -->
-  <!--include _section.html  -->
+
 </main>
 
 <footer class="footer">
