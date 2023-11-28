@@ -47,53 +47,72 @@
         </div>
       </div>
     </header>
+
 <main class="main">
-
-	<section class="quotes">
+	<section class="antonyms">
 		<div class="container">
-			<div class="quotes__inner">
-				<h2 class="title quotes__title">Цитаты Гуру</h2>
-				<label class="quotes__label">
-					<input class="quotes__radio visually-hidden" type="radio" name="quotes" value="1" checked>
-					<span>1</span>
-				</label>
-				<label class="quotes__label">
-					<input class="quotes__radio visually-hidden" type="radio" name="quotes" value="5">
-					<span>5</span>
-				</label>
-				<label class="quotes__label">
-					<input class="quotes__radio visually-hidden" type="radio" name="quotes" value="10">
-					<span>10</span>
-				</label>
-				<label class="quotes__label">
-					<input class="quotes__radio visually-hidden" type="radio" name="quotes" value="15">
-					<span>15</span>
-				</label>
-				<label class="quotes__label">
-					<input class="quotes__radio visually-hidden" type="radio" name="quotes" value="20">
-					<span>20</span>
-				</label>
-				<button class="quotes__start" id="quotes__start" type="button">Показать</button>
+			<div class="antonyms__inner">
+				<h2 class="title antonyms__title">Антонимы</h2>
+				<span class="result"></span>
+				<form class="antonyms__form">
+					<div class="antonyms__choose">
+						Количество <br />
+						<label class="antonyms__choose-label" id="label-5">
+							<input class="antonyms__choice visually-hidden" type="radio" name="choice" value="5" checked />
+							<span>5</span>
+						</label>
+						<label class="antonyms__choose-label" id="label-10">
+							<input class="antonyms__choice visually-hidden" type="radio" name="choice" value="10" />
+							<span>10</span>
+						</label>
+						<label class="antonyms__choose-label" id="label-15">
+							<input class="antonyms__choice visually-hidden" type="radio" name="choice" value="15" />
+							<span>15</span>
+						</label>
+						<label class="antonyms__choose-label" id="label-20">
+							<input class="antonyms__choice visually-hidden" type="radio" name="choice" value="20" />
+							<span>20</span>
+						</label>
+						<label class="antonyms__choose-label" id="label-25">
+							<input class="antonyms__choice visually-hidden" type="radio" name="choice" value="25" />
+							<span>25</span>
+						</label>
 
-				<ol class="quotes__items">
-					<!-- - Сюда вставляются цитаты -->
-				</ol>
+						<button class="antonyms__start" id="antonyms__start" type="button">Начать</button>
+					</div>
+
+					<ol class="antonyms__items">
+						<!-- - Сюда вставляются задания -->
+					</ol>
+
+					<button class="antonyms__btn visually-hidden" id="antonyms__btn" type="button">Проверить</button>
+				</form>
 			</div>
 		</div>
 	</section>
 
-	<template id="template-quotes">
-		<li class="quotes__item">
+	<template id="template-antonyms">
+		<li class="antonyms__item">
+			<span class="antonyms__span"></span>
+			<span class="check"></span>
+			<input class="antonyms__input" type="text" placeholder="ответ" required data-result />
 		</li>
 	</template>
 
 </main>
+
 <footer class="footer">
+
 	<div class="container">
+
 		<div class="footer__inner">
 
+
+
 		</div>
+
 	</div>
+
 </footer>
 </div>
 

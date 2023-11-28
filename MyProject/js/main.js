@@ -1136,700 +1136,6 @@ if (document.querySelector('#template-one') !== null) {
   
 }
 
-if (document.querySelector('#template-words') !== null) {
-  try {
-    document.querySelector('.menu__link[href="words.html"]').dataset.current = 'true';
-  } catch {
-    console.log('.menu__link[href="words.html"] - не найдено');
-  }
-  'use strick';
-  
-  const WORDS__ARRAY = [
-    {
-      en: 'which',
-      ru: 'который, какой',
-    },
-    {
-      en: 'some',
-      ru: 'некоторые, несколько, немного',
-    },
-    {
-      en: 'because',
-      ru: 'потому что',
-    },
-    {
-      en: 'such',
-      ru: 'такой',
-    },
-    {
-      en: 'each',
-      ru: 'каждый',
-    },
-    {
-      en: 'less',
-      ru: 'меньше',
-    },
-    {
-      en: 'once',
-      ru: 'однажды, один раз',
-    },
-    {
-      en: 'enough',
-      ru: 'достаточно',
-    },
-    {
-      en: 'sure',
-      ru: 'уверенный',
-    },
-    {
-      en: 'several',
-      ru: 'несколько',
-    },
-    {
-      en: 'letter',
-      ru: 'письмо',
-    },
-    {
-      en: 'subject',
-      ru: 'тема, предмет',
-    },
-    {
-      en: 'near',
-      ru: 'рядом (с), близко(с), около',
-    },
-    {
-      en: 'difficult',
-      ru: 'сложно, трудно, сложный, трудный',
-    },
-    {
-      en: 'opportunity',
-      ru: 'возможность',
-    },
-    {
-      en: 'single',
-      ru: 'холост, одиночный, единичный',
-    },
-    {
-      en: 'society',
-      ru: 'общество',
-    },
-    {
-      en: 'wrong',
-      ru: 'неправильный, неверный, ложный',
-    },
-    {
-      en: 'poor',
-      ru: ' бедный',
-    },
-    {
-      en: 'article',
-      ru: 'статья, артикль',
-    },
-    {
-      en: 'necessary',
-      ru: 'необходимый, необходимо',
-    },
-    {
-      en: 'modern',
-      ru: 'современный',
-    },
-    {
-      en: 'village',
-      ru: 'деревня',
-    },
-    {
-      en: 'successful',
-      ru: 'успешный',
-    },
-    {
-      en: 'app(application)',
-      ru: 'приложение',
-    },
-    {
-      en: 'exercise',
-      ru: 'упражнение',
-    },
-    {
-      en: 'useful',
-      ru: 'полезный',
-    },
-    {
-      en: 'afternoon',
-      ru: 'днём',
-    },
-    {
-      en: 'pound',
-      ru: 'фунт',
-    },
-    {
-      en: 'suddenly',
-      ru: 'вдруг, внезапно',
-    },
-    {
-      en: 'advice',
-      ru: 'совет',
-    },
-    {
-      en: 'wonderful',
-      ru: 'прекрасный, замечательный, удивительный, чудесный',
-    },
-    {
-      en: 'absolutely',
-      ru: 'абсолютно, совершенно, совсем, полностью',
-    },
-    {
-      en: 'pleasure',
-      ru: 'удовольствие',
-    },
-    {
-      en: 'tonigth',
-      ru: 'сегодня вечером ',
-    },
-    {
-      en: 'forest',
-      ru: 'лес, лесной',
-    },
-    {
-      en: 'careful',
-      ru: 'осторожный ',
-    },
-    {
-      en: 'sad',
-      ru: 'грустный, печальный',
-    },
-    {
-      en: 'abroad',
-      ru: 'за границей',
-    },
-    {
-      en: 'upset',
-      ru: 'расстроенный',
-    },
-    {
-      en: 'singer',
-      ru: 'певец',
-    },
-    {
-      en: 'alright(all right)',
-      ru: 'в порядке ',
-    },
-    {
-      en: 'correctly',
-      ru: 'правильно, корректно',
-    },
-    {
-      en: 'fluently',
-      ru: 'свободно, бегло',
-    },
-    {
-      en: 'pet',
-      ru: 'домашнее животное',
-    },
-    {
-      en: 'miracle',
-      ru: 'чудо',
-    },
-    {
-      en: 'toy',
-      ru: 'игрушка',
-    },
-    {
-      en: 'hard-working(hardworking)',
-      ru: 'трудолюбивый ',
-    },
-    {
-      en: 'unhappy',
-      ru: 'несчатный',
-    },
-    {
-      en: 'trousers',
-      ru: 'брюки',
-    },
-    {
-      en: 'worse',
-      ru: 'хуже',
-    },
-    {
-      en: 'fat',
-      ru: 'толстый, жирный',
-    },
-    {
-      en: 'nowadays',
-      ru: 'в наши дни, в наше время',
-    },
-    {
-      en: 'casual',
-      ru: 'повседневный',
-    },
-    {
-      en: 'informal',
-      ru: 'неформальный',
-    },
-    {
-      en: 'against',
-      ru: 'против',
-    },
-    {
-      en: 'urgently',
-      ru: 'срочно',
-    },
-    {
-      en: `Let's`,
-      ru: 'давай',
-    },
-    {
-      en: 'goods',
-      ru: 'товар, товары',
-    },
-    {
-      en: 'listening',
-      ru: 'аудирование',
-    },
-    {
-      en: 'speaking',
-      ru: 'разговорная речь',
-    },
-    {
-      en: 'sandwich',
-      ru: 'сэндвич, бутерброд',
-    },
-    {
-      en: 'gym',
-      ru: 'спортзал, тренажёрный зал',
-    },
-    {
-      en: 'surname(family name, last name)',
-      ru: 'фамилия',
-    },
-    {
-      en: 'camel',
-      ru: 'верблюд',
-    },
-    {
-      en: 'perfect',
-      ru: 'идеальный',
-    },
-    {
-      en: 'perfectly',
-      ru: 'идеально',
-    },
-    {
-      en: 'loud',
-      ru: 'громкий',
-    },
-    {
-      en: 'loudly',
-      ru: 'громко',
-    },
-    {
-      en: 'championship',
-      ru: 'чемпионат',
-    },
-    {
-      en: 'competition',
-      ru: 'соревнование',
-    },
-    {
-      en: 'bridge',
-      ru: 'мост',
-    },
-    {
-      en: 'wallet',
-      ru: 'бумажник',
-    },
-    {
-      en: 'bag',
-      ru: 'сумка',
-    },
-    {
-      en: 'quiet',
-      ru: 'тихий',
-    },
-    {
-      en: 'quietly',
-      ru: 'тихо',
-    },
-    {
-      en: 'lawyer',
-      ru: 'юрист, адвокат',
-    },
-    {
-      en: 'law',
-      ru: 'закон',
-    },
-    {
-      en: 'desk',
-      ru: 'письменный стол',
-    },
-    {
-      en: 'studies',
-      ru: 'учёба',
-    },
-    {
-      en: 'ill',
-      ru: 'больной',
-    },
-    {
-      en: 'special',
-      ru: 'особый, специальный',
-    },
-    {
-      en: 'terrible',
-      ru: 'ужасный',
-    },
-    {
-      en: 'terribly',
-      ru: 'ужасно',
-    },
-    {
-      en: 'away',
-      ru: 'прочь',
-    },
-    {
-      en: 'worst',
-      ru: 'наихудший',
-    },
-    {
-      en: 'floor',
-      ru: 'этаж, пол',
-    },
-    {
-      en: 'tree',
-      ru: 'дерево',
-    },
-    {
-      en: 'foreign',
-      ru: 'иностранный',
-    },
-    {
-      en: 'only',
-      ru: 'только, лишь',
-    },
-    {
-      en: 'pocket',
-      ru: 'карман',
-    },
-    {
-      en: 'alone',
-      ru: 'один, одинокий',
-    },
-    {
-      en: 'garden',
-      ru: 'сад',
-    },
-    {
-      en: 'corner',
-      ru: 'угол',
-    },
-    {
-      en: 'incorrect',
-      ru: 'неправильный',
-    },
-    {
-      en: 'behind',
-      ru: 'позади, за',
-    },
-    {
-      en: 'yard',
-      ru: 'двор',
-    },
-    {
-      en: 'unusual',
-      ru: 'необычный',
-    },
-    {
-      en: 'motivating',
-      ru: 'мотивирующий',
-    },
-    {
-      en: 'lonely',
-      ru: 'одинокий',
-    },
-    {
-      en: 'fence',
-      ru: 'забор',
-    },
-    {
-      en: 'homemade',
-      ru: 'домашний, домашнего изготовления',
-    },
-    {
-      en: 'sooner',
-      ru: 'скорее',
-    },
-    {
-      en: 'meeting',
-      ru: 'встреча',
-    },
-    {
-      en: 'by',
-      ru: 'по, у, к, мимо, на',
-    },
-    {
-      en: 'topic',
-      ru: 'тема',
-    },
-    {
-      en: 'a bit',
-      ru: 'немного, чуть-чуть',
-    },
-    {
-      en: 'ground',
-      ru: 'земля(под ногами)',
-    },
-    {
-      en: 'pie',
-      ru: 'пирог',
-    },
-    {
-      en: 'parcel',
-      ru: 'посылка',
-    },
-    {
-      en: 'kindness',
-      ru: 'доброта',
-    },
-    {
-      en: 'happiness',
-      ru: 'счастье',
-    },
-    {
-      en: 'bill',
-      ru: 'счёт',
-    },
-    {
-      en: 'chance',
-      ru: 'шанс',
-    },
-    {
-      en: 'accident',
-      ru: 'происшествие, авария',
-    },
-    {
-      en: 'criminal',
-      ru: 'преступник',
-    },
-    {
-      en: 'view',
-      ru: 'вид, зрение',
-    },
-    {
-      en: 'donkey',
-      ru: 'осёл',
-    },
-    {
-      en: 'knowledge',
-      ru: 'знания',
-    },
-    {
-      en: 'several',
-      ru: 'несколько',
-    },
-    {
-      en: 'circus',
-      ru: 'цирк',
-    },
-    {
-      en: 'tasty',
-      ru: 'вкусный',
-    },
-    {
-      en: 'delicious',
-      ru: 'очень вкусный, восхитительный',
-    },
-    {
-      en: 'mostly(mainly)',
-      ru: 'в основном',
-    },
-    {
-      en: 'fashinable',
-      ru: 'модный',
-    },
-    {
-      en: 'speech',
-      ru: 'речь',
-    },
-    {
-      en: 'between',
-      ru: 'между',
-    },
-    {
-      en: 'just',
-      ru: 'просто, лишь, справедливый',
-    },
-  ];
-  
-  console.log('WORDS__ARRAY ' + WORDS__ARRAY.length);
-  
-  const template = document.querySelector('#template-words').content.querySelector('.words__item');
-  const wordsContent = document.querySelector('.words__items');
-  const btn = document.querySelector('#words__btn');
-  const result = document.querySelector('.result');
-  const start = document.querySelector('#words__start');
-  
-  const renderWords = function (words, id, lang) {
-    let wordsElement = template.cloneNode(true);
-    let wordsSpan = wordsElement.querySelectorAll('.words__label > span');
-    let wordsInputs = wordsElement.querySelectorAll('.words__input');
-  
-    let howSort = Math.floor(Math.random() * (1 - 0 + 1) + 0);
-  
-    // console.log('howsort ' + howSort);
-    // console.log('lang ' + lang);
-  
-    wordsElement.querySelector('.words__guess').textContent = words;
-  
-    randomNumberSmall(0, WORDS__ARRAY.length - 1, 3, id);
-  
-    numbersSmall.push(id);
-    if (howSort === 0) {
-      numbersSmall.sort((a, b) => a - b);
-    }
-    if (howSort === 1) {
-      numbersSmall.sort((a, b) => b - a);
-    }
-    // console.log(numbersSmall);
-  
-    if (lang === 'en') {
-      for (let i = 0; i < 4; i++) {
-        wordsInputs[i].name = WORDS__ARRAY[id].en;
-        wordsInputs[i].value = numbersSmall[i];
-      }
-      for (let i = 0; i < 4; i++) {
-        wordsSpan[i].textContent = WORDS__ARRAY[numbersSmall[i]].ru;
-      }
-    }
-    if (lang === 'ru') {
-      for (let i = 0; i < 4; i++) {
-        wordsInputs[i].name = WORDS__ARRAY[id].ru;
-        wordsInputs[i].value = numbersSmall[i];
-      }
-      for (let i = 0; i < 4; i++) {
-        wordsSpan[i].textContent = WORDS__ARRAY[numbersSmall[i]].en;
-      }
-    }
-  
-    return wordsElement;
-  };
-  
-  const renderStart = (value, lang) => {
-    let fragment = document.createDocumentFragment();
-    if (lang === 'en') {
-      for (let i = 0; i < value; i++) {
-        fragment.appendChild(renderWords(WORDS__ARRAY[numbers[i]].en, numbers[i], 'en'));
-      }
-    }
-    if (lang === 'ru') {
-      for (let i = 0; i < value; i++) {
-        fragment.appendChild(renderWords(WORDS__ARRAY[numbers[i]].ru, numbers[i], 'ru'));
-      }
-    }
-    if (lang === 'all') {
-      for (let i = 0; i < value; i++) {
-        if (i % 2 === 0) {
-          fragment.appendChild(renderWords(WORDS__ARRAY[numbers[i]].ru, numbers[i], 'ru'));
-        }
-        if (i % 2 === 1) {
-          fragment.appendChild(renderWords(WORDS__ARRAY[numbers[i]].en, numbers[i], 'en'));
-        }
-      }
-    }
-  
-    wordsContent.appendChild(fragment);
-  };
-  
-  function getResult() {
-    let check = wordsContent.querySelectorAll('.words__input:checked');
-    let noCheck = wordsContent.querySelectorAll('.words__input:not(:checked)');
-    let resultNumber = 0;
-    const choice = document.querySelector('.words__choice:checked');
-  
-    noCheck.forEach((el) => {
-      el.dataset.result = '';
-    });
-  
-    numbers.forEach((el, id) => {
-      console.log(el + ' ' + check[id].value);
-      if (el == check[id].value) {
-        resultNumber++;
-        check[id].dataset.result = 'correctly';
-      } else {
-        check[id].dataset.result = 'mistake';
-      }
-    });
-  
-    result.textContent = 'Ваш результат: ' + resultNumber + ' из ' + choice.value;
-  }
-  
-  const numbers = [];
-  
-  const randomNumberBig = (min, max, count) => {
-    if (max - min + 1 < count) {
-      min = 0;
-      max = 1;
-      count = 1;
-    }
-  
-    while (numbers.length < count) {
-      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-      if (!numbers.includes(randomNumber)) {
-        numbers.push(randomNumber);
-      }
-    }
-    console.log('numbers ' + numbers);
-    return numbers;
-  };
-  
-  let numbersSmall = [];
-  const randomNumberSmall = (min, max, count, currentValue) => {
-    numbersSmall = [];
-    if (max - min + 1 < count) {
-      min = 0;
-      max = 1;
-      count = 1;
-    }
-  
-    // console.log('currentValue ' + currentValue);
-    while (numbersSmall.length < count) {
-      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-      if (randomNumber === currentValue) {
-        console.log(randomNumber + '!!!!!!!!!!!' + currentValue);
-        continue;
-      }
-      if (!numbersSmall.includes(randomNumber)) {
-        numbersSmall.push(randomNumber);
-      }
-    }
-    // console.log('45 words-random.js numbersSmall ' + numbersSmall);
-    return numbersSmall;
-  };
-  
-  let span;
-  let itemArr;
-  
-  start.addEventListener('click', () => {
-    const testing = document.querySelector('.words__choose');
-    const choice = document.querySelector('.words__choice:checked');
-    const language = document.querySelector('.words__languages:checked');
-  
-    randomNumberBig(0, WORDS__ARRAY.length - 1, choice.value);
-    renderStart(choice.value, language.value, numbers);
-  
-    testing.classList.add('visually-hidden');
-    btn.classList.remove('visually-hidden');
-  
-    span = wordsContent.querySelectorAll('.words__guess');
-    itemArr = wordsContent.querySelectorAll('.words__item');
-  
-    return choice;
-  });
-  
-  btn.addEventListener('click', () => {
-    getResult();
-  });
-  
-}
-
 if (document.querySelector('#template-transcription') !== null) {
   try {
     document.querySelector('.menu__link[href="transcription.html"]').dataset.current = 'true';
@@ -2762,7 +2068,7 @@ if (document.querySelector('#template-homophone') !== null) {
 
       ruOne: 'неделя',
 
-      enTwo: 'weak ',
+      enTwo: 'weak',
 
       ruTwo: 'слабый',
 
@@ -2776,7 +2082,7 @@ if (document.querySelector('#template-homophone') !== null) {
 
       ruOne: 'дорога',
 
-      enTwo: 'rode ',
+      enTwo: 'rode',
 
       ruTwo: 'ехал',
 
@@ -2874,7 +2180,7 @@ if (document.querySelector('#template-homophone') !== null) {
 
       ruOne: 'новый',
 
-      enTwo: 'knew ',
+      enTwo: 'knew',
 
       ruTwo: 'знал',
 
@@ -3053,6 +2359,1369 @@ if (document.querySelector('#template-homophone') !== null) {
   
   btn.addEventListener('click', () => {
     getResult(choice.value);
+  });
+  
+}
+
+if (document.querySelector('#template-antonyms') !== null) {
+  try {
+    document.querySelector('.menu__link[href="antonyms.html"]').dataset.current = 'true';
+  } catch {
+    console.log('.menu__link[href="antonyms.html"] - не найдено');
+  }
+
+  const ANTONYMS_ARRAY = [
+
+    {
+
+      enOne: 'wide',
+
+      enTwo: 'narrow',
+
+      ruOne: 'широкий',
+
+      ruTwo: 'узкий',
+
+    },
+
+    {
+
+      enOne: 'Remember',
+
+      enTwo: 'Forget',
+
+      ruOne: 'запомнить',
+
+      ruTwo: 'забыть',
+
+    },
+
+    {
+
+      enOne: 'healthy',
+
+      enTwo: 'ill',
+
+      ruOne: 'здоровый',
+
+      ruTwo: 'больной',
+
+    },
+
+    {
+
+      enOne: 'poor',
+
+      enTwo: 'rich',
+
+      ruOne: 'бедный',
+
+      ruTwo: 'богатый',
+
+    },
+
+    {
+
+      enOne: 'optimist',
+
+      enTwo: 'essimist',
+
+      ruOne: 'оптимист',
+
+      ruTwo: 'пессимист',
+
+    },
+
+    {
+
+      enOne: 'expensive',
+
+      enTwo: 'cheap',
+
+      ruOne: 'дорого',
+
+      ruTwo: 'дешево',
+
+    },
+
+    {
+
+      enOne: 'empty',
+
+      enTwo: 'full',
+
+      ruOne: 'пустой',
+
+      ruTwo: 'полный',
+
+    },
+
+    {
+
+      enOne: 'difficult, hard',
+
+      enTwo: 'easy',
+
+      ruOne: 'трудный',
+
+      ruTwo: 'легкий',
+
+    },
+
+    {
+
+      enOne: 'different',
+
+      enTwo: 'similar',
+
+      ruOne: 'разный',
+
+      ruTwo: 'схожий',
+
+    },
+
+    {
+
+      enOne: 'fast, quick',
+
+      enTwo: 'slow',
+
+      ruOne: 'быстрый',
+
+      ruTwo: 'медленный',
+
+    },
+
+    {
+
+      enOne: 'clever, smart',
+
+      enTwo: 'stupid',
+
+      ruOne: 'умный',
+
+      ruTwo: 'глупый, тупой',
+
+    },
+
+    {
+
+      enOne: 'correct',
+
+      enTwo: 'incorrect, wrong',
+
+      ruOne: 'правильный',
+
+      ruTwo: 'неправильный',
+
+    },
+
+    {
+
+      enOne: 'deep',
+
+      enTwo: 'shallow',
+
+      ruOne: 'глубокий',
+
+      ruTwo: 'мелкий',
+
+    },
+
+    {
+
+      enOne: 'crazy',
+
+      enTwo: 'reasonable, sensible',
+
+      ruOne: 'сумасшедший',
+
+      ruTwo: 'разумный, здравый',
+
+    },
+
+    {
+
+      enOne: 'exact, precise',
+
+      enTwo: 'inaccurate, inexact',
+
+      ruOne: 'точный',
+
+      ruTwo: 'неточный',
+
+    },
+
+    {
+
+      enOne: 'dry',
+
+      enTwo: 'wet',
+
+      ruOne: 'сухой',
+
+      ruTwo: 'мокрый',
+
+    },
+
+    {
+
+      enOne: 'frequent',
+
+      enTwo: 'rare',
+
+      ruOne: 'частый',
+
+      ruTwo: 'редкий',
+
+    },
+
+    {
+
+      enOne: 'first',
+
+      enTwo: 'last',
+
+      ruOne: 'первый',
+
+      ruTwo: 'последний',
+
+    },
+
+    {
+
+      enOne: 'funny',
+
+      enTwo: 'serious',
+
+      ruOne: 'смешной, забавный',
+
+      ruTwo: 'серьезный',
+
+    },
+
+    {
+
+      enOne: 'accurate',
+
+      enTwo: 'inaccurate',
+
+      ruOne: 'точный',
+
+      ruTwo: 'неточный',
+
+    },
+
+    {
+
+      enOne: 'busy',
+
+      enTwo: 'free',
+
+      ruOne: 'занятый',
+
+      ruTwo: 'свободный',
+
+    },
+
+    {
+
+      enOne: 'calm, quiet',
+
+      enTwo: 'noisy, excited',
+
+      ruOne: 'спокойный, тихий ',
+
+      ruTwo: 'шумный, взволнованный',
+
+    },
+
+    {
+
+      enOne: 'cold, cool',
+
+      enTwo: 'hot, warm',
+
+      ruOne: 'холодный, прохладный',
+
+      ruTwo: 'горячий, теплый',
+
+    },
+
+    {
+
+      enOne: 'early',
+
+      enTwo: 'late',
+
+      ruOne: 'ранний',
+
+      ruTwo: 'поздний',
+
+    },
+
+    {
+
+      enOne: 'dead',
+
+      enTwo: 'alive',
+
+      ruOne: 'мертвый',
+
+      ruTwo: 'живой',
+
+    },
+
+    {
+
+      enOne: 'front',
+
+      enTwo: 'back',
+
+      ruOne: 'передний',
+
+      ruTwo: 'задний',
+
+    },
+
+    {
+
+      enOne: 'active',
+
+      enTwo: 'inactive, passive',
+
+      ruOne: 'активный',
+
+      ruTwo: 'пассивный, бездействующий',
+
+    },
+
+    {
+
+      enOne: 'big, large',
+
+      enTwo: 'little, small',
+
+      ruOne: 'большой',
+
+      ruTwo: 'маленький',
+
+    },
+
+    {
+
+      enOne: 'clean',
+
+      enTwo: 'dirty',
+
+      ruOne: 'чистый',
+
+      ruTwo: 'грязный',
+
+    },
+
+    {
+
+      enOne: 'attentive',
+
+      enTwo: 'inattentive',
+
+      ruOne: 'внимательный',
+
+      ruTwo: 'невнимательный',
+
+    },
+
+    {
+
+      enOne: 'brave',
+
+      enTwo: 'cowardly',
+
+      ruOne: 'храбрый',
+
+      ruTwo: 'трусливый',
+
+    },
+
+    {
+
+      enOne: 'terrible',
+
+      enTwo: 'excellent',
+
+      ruOne: 'ужасный',
+
+      ruTwo: 'отличный',
+
+    },
+
+    {
+
+      enOne: 'comfortable',
+
+      enTwo: 'uncomfortable',
+
+      ruOne: 'удобный',
+
+      ruTwo: 'неудобный',
+
+    },
+
+    {
+
+      enOne: 'best',
+
+      enTwo: 'worst',
+
+      ruOne: 'лучший',
+
+      ruTwo: 'худший',
+
+    },
+
+    {
+
+      enOne: 'tasty',
+
+      enTwo: 'tasteless',
+
+      ruOne: 'вкусный',
+
+      ruTwo: 'безвкусный',
+
+    },
+
+    {
+
+      enOne: 'educated',
+
+      enTwo: 'uneducated',
+
+      ruOne: 'образованный',
+
+      ruTwo: 'необразованный',
+
+    },
+
+    {
+
+      enOne: 'careful',
+
+      enTwo: 'careless',
+
+      ruOne: 'осторожный',
+
+      ruTwo: 'беспечный',
+
+    },
+
+    {
+
+      enOne: 'cruel',
+
+      enTwo: 'kind',
+
+      ruOne: 'жестокий',
+
+      ruTwo: 'добрый',
+
+    },
+
+    {
+
+      enOne: 'dangerous',
+
+      enTwo: 'safe',
+
+      ruOne: 'опасный',
+
+      ruTwo: 'безопасный',
+
+    },
+
+    {
+
+      enOne: 'beautiful',
+
+      enTwo: 'ugly',
+
+      ruOne: 'красивый',
+
+      ruTwo: 'безобразный',
+
+    },
+
+    {
+
+      enOne: 'cheerful',
+
+      enTwo: 'gloomy',
+
+      ruOne: 'радостный',
+
+      ruTwo: 'мрачный',
+
+    },
+
+    {
+
+      enOne: 'fresh',
+
+      enTwo: 'stale',
+
+      ruOne: 'свежий',
+
+      ruTwo: 'несвежий',
+
+    },
+
+    {
+
+      enOne: 'friendly',
+
+      enTwo: 'unfriendly',
+
+      ruOne: 'дружелюбный',
+
+      ruTwo: 'недружелюбный',
+
+    },
+
+    {
+
+      enOne: 'foreign',
+
+      enTwo: 'domestic, local',
+
+      ruOne: 'иностранный',
+
+      ruTwo: 'отечественный, местный',
+
+    },
+
+    {
+
+      enOne: 'fair, just',
+
+      enTwo: 'unfair, unjust',
+
+      ruOne: 'справедливый',
+
+      ruTwo: 'несправедливый',
+
+    },
+
+    {
+
+      enOne: 'far',
+
+      enTwo: 'near',
+
+      ruOne: 'далекий',
+
+      ruTwo: 'близкий',
+
+    },
+
+    {
+
+      enOne: 'even',
+
+      enTwo: 'uneven',
+
+      ruOne: 'ровный',
+
+      ruTwo: 'неровный',
+
+    },
+
+    {
+
+      enOne: 'stable',
+
+      enTwo: 'unstable',
+
+      ruOne: 'устойчивый',
+
+      ruTwo: 'неустойчивый',
+
+    },
+
+    {
+
+      enOne: 'decent',
+
+      enTwo: 'indecent',
+
+      ruOne: 'приличный',
+
+      ruTwo: 'неприличный',
+
+    },
+
+    {
+
+      enOne: 'faithful',
+
+      enTwo: 'unfaithful',
+
+      ruOne: 'верный',
+
+      ruTwo: 'неверный',
+
+    },
+
+  ];
+
+  
+
+  console.log(ANTONYMS_ARRAY.length);
+
+  
+  const template = document.querySelector('#template-antonyms').content.querySelector('.antonyms__item');
+  const antonymsContent = document.querySelector('.antonyms__items');
+  const btn = document.querySelector('#antonyms__btn');
+  const result = document.querySelector('.result');
+  const start = document.querySelector('#antonyms__start');
+  
+  const render = function (question, length) {
+    let Element = template.cloneNode(true);
+    console.log(question);
+  
+    Element.querySelector('.antonyms__span').textContent = question;
+    Element.querySelector('.antonyms__input').setAttribute('maxlength', `${length}`);
+    return Element;
+  };
+  
+  const renderStart = (value) => {
+    let fragment = document.createDocumentFragment();
+  
+    for (let i = 0; i < value; i++) {
+      fragment.append(render(ANTONYMS_ARRAY[[i]].enOne, ANTONYMS_ARRAY[[i]].enTwo.length));
+    }
+  
+    antonymsContent.append(fragment);
+  };
+  
+  //includes antonyms/antonyms-getresult.js
+  //includes antonyms/antonyms-random.js
+  let choice;
+  let span;
+  let input;
+  
+  start.addEventListener('click', () => {
+    let antonyms = document.querySelector('.antonyms__choose');
+    choice = document.querySelector('.antonyms__choice:checked');
+  
+    // generateRandomNumbers(0, HOMOPHONE_ARRAY.length - 1, choice.value);
+    renderStart(choice.value);
+  
+    antonyms.classList.add('visually-hidden');
+    btn.classList.remove('visually-hidden');
+  
+    span = antonymsContent.querySelectorAll('.antonyms__span');
+    input = antonymsContent.querySelectorAll('.antonyms__input');
+  
+    return choice;
+  });
+  
+  btn.addEventListener('click', () => {
+    getResult(choice.value);
+  });
+  
+}
+
+if (document.querySelector('#template-words') !== null) {
+  try {
+    document.querySelector('.menu__link[href="words.html"]').dataset.current = 'true';
+  } catch {
+    console.log('.menu__link[href="words.html"] - не найдено');
+  }
+  'use strick';
+  
+  const WORDS__ARRAY = [
+    {
+      en: 'which',
+      ru: 'который, какой',
+    },
+    {
+      en: 'some',
+      ru: 'некоторые, несколько, немного',
+    },
+    {
+      en: 'because',
+      ru: 'потому что',
+    },
+    {
+      en: 'such',
+      ru: 'такой',
+    },
+    {
+      en: 'each',
+      ru: 'каждый',
+    },
+    {
+      en: 'less',
+      ru: 'меньше',
+    },
+    {
+      en: 'once',
+      ru: 'однажды, один раз',
+    },
+    {
+      en: 'enough',
+      ru: 'достаточно',
+    },
+    {
+      en: 'sure',
+      ru: 'уверенный',
+    },
+    {
+      en: 'several',
+      ru: 'несколько',
+    },
+    {
+      en: 'letter',
+      ru: 'письмо',
+    },
+    {
+      en: 'subject',
+      ru: 'тема, предмет',
+    },
+    {
+      en: 'near',
+      ru: 'рядом (с), близко(с), около',
+    },
+    {
+      en: 'difficult',
+      ru: 'сложно, трудно, сложный, трудный',
+    },
+    {
+      en: 'opportunity',
+      ru: 'возможность',
+    },
+    {
+      en: 'single',
+      ru: 'холост, одиночный, единичный',
+    },
+    {
+      en: 'society',
+      ru: 'общество',
+    },
+    {
+      en: 'wrong',
+      ru: 'неправильный, неверный, ложный',
+    },
+    {
+      en: 'poor',
+      ru: ' бедный',
+    },
+    {
+      en: 'article',
+      ru: 'статья, артикль',
+    },
+    {
+      en: 'necessary',
+      ru: 'необходимый, необходимо',
+    },
+    {
+      en: 'modern',
+      ru: 'современный',
+    },
+    {
+      en: 'village',
+      ru: 'деревня',
+    },
+    {
+      en: 'successful',
+      ru: 'успешный',
+    },
+    {
+      en: 'app(application)',
+      ru: 'приложение',
+    },
+    {
+      en: 'exercise',
+      ru: 'упражнение',
+    },
+    {
+      en: 'useful',
+      ru: 'полезный',
+    },
+    {
+      en: 'afternoon',
+      ru: 'днём',
+    },
+    {
+      en: 'pound',
+      ru: 'фунт',
+    },
+    {
+      en: 'suddenly',
+      ru: 'вдруг, внезапно',
+    },
+    {
+      en: 'advice',
+      ru: 'совет',
+    },
+    {
+      en: 'wonderful',
+      ru: 'прекрасный, замечательный, удивительный, чудесный',
+    },
+    {
+      en: 'absolutely',
+      ru: 'абсолютно, совершенно, совсем, полностью',
+    },
+    {
+      en: 'pleasure',
+      ru: 'удовольствие',
+    },
+    {
+      en: 'tonigth',
+      ru: 'сегодня вечером ',
+    },
+    {
+      en: 'forest',
+      ru: 'лес, лесной',
+    },
+    {
+      en: 'careful',
+      ru: 'осторожный ',
+    },
+    {
+      en: 'sad',
+      ru: 'грустный, печальный',
+    },
+    {
+      en: 'abroad',
+      ru: 'за границей',
+    },
+    {
+      en: 'upset',
+      ru: 'расстроенный',
+    },
+    {
+      en: 'singer',
+      ru: 'певец',
+    },
+    {
+      en: 'alright(all right)',
+      ru: 'в порядке ',
+    },
+    {
+      en: 'correctly',
+      ru: 'правильно, корректно',
+    },
+    {
+      en: 'fluently',
+      ru: 'свободно, бегло',
+    },
+    {
+      en: 'pet',
+      ru: 'домашнее животное',
+    },
+    {
+      en: 'miracle',
+      ru: 'чудо',
+    },
+    {
+      en: 'toy',
+      ru: 'игрушка',
+    },
+    {
+      en: 'hard-working(hardworking)',
+      ru: 'трудолюбивый ',
+    },
+    {
+      en: 'unhappy',
+      ru: 'несчатный',
+    },
+    {
+      en: 'trousers',
+      ru: 'брюки',
+    },
+    {
+      en: 'worse',
+      ru: 'хуже',
+    },
+    {
+      en: 'fat',
+      ru: 'толстый, жирный',
+    },
+    {
+      en: 'nowadays',
+      ru: 'в наши дни, в наше время',
+    },
+    {
+      en: 'casual',
+      ru: 'повседневный',
+    },
+    {
+      en: 'informal',
+      ru: 'неформальный',
+    },
+    {
+      en: 'against',
+      ru: 'против',
+    },
+    {
+      en: 'urgently',
+      ru: 'срочно',
+    },
+    {
+      en: `Let's`,
+      ru: 'давай',
+    },
+    {
+      en: 'goods',
+      ru: 'товар, товары',
+    },
+    {
+      en: 'listening',
+      ru: 'аудирование',
+    },
+    {
+      en: 'speaking',
+      ru: 'разговорная речь',
+    },
+    {
+      en: 'sandwich',
+      ru: 'сэндвич, бутерброд',
+    },
+    {
+      en: 'gym',
+      ru: 'спортзал, тренажёрный зал',
+    },
+    {
+      en: 'surname(family name, last name)',
+      ru: 'фамилия',
+    },
+    {
+      en: 'camel',
+      ru: 'верблюд',
+    },
+    {
+      en: 'perfect',
+      ru: 'идеальный',
+    },
+    {
+      en: 'perfectly',
+      ru: 'идеально',
+    },
+    {
+      en: 'loud',
+      ru: 'громкий',
+    },
+    {
+      en: 'loudly',
+      ru: 'громко',
+    },
+    {
+      en: 'championship',
+      ru: 'чемпионат',
+    },
+    {
+      en: 'competition',
+      ru: 'соревнование',
+    },
+    {
+      en: 'bridge',
+      ru: 'мост',
+    },
+    {
+      en: 'wallet',
+      ru: 'бумажник',
+    },
+    {
+      en: 'bag',
+      ru: 'сумка',
+    },
+    {
+      en: 'quiet',
+      ru: 'тихий',
+    },
+    {
+      en: 'quietly',
+      ru: 'тихо',
+    },
+    {
+      en: 'lawyer',
+      ru: 'юрист, адвокат',
+    },
+    {
+      en: 'law',
+      ru: 'закон',
+    },
+    {
+      en: 'desk',
+      ru: 'письменный стол',
+    },
+    {
+      en: 'studies',
+      ru: 'учёба',
+    },
+    {
+      en: 'ill',
+      ru: 'больной',
+    },
+    {
+      en: 'special',
+      ru: 'особый, специальный',
+    },
+    {
+      en: 'terrible',
+      ru: 'ужасный',
+    },
+    {
+      en: 'terribly',
+      ru: 'ужасно',
+    },
+    {
+      en: 'away',
+      ru: 'прочь',
+    },
+    {
+      en: 'worst',
+      ru: 'наихудший',
+    },
+    {
+      en: 'floor',
+      ru: 'этаж, пол',
+    },
+    {
+      en: 'tree',
+      ru: 'дерево',
+    },
+    {
+      en: 'foreign',
+      ru: 'иностранный',
+    },
+    {
+      en: 'only',
+      ru: 'только, лишь',
+    },
+    {
+      en: 'pocket',
+      ru: 'карман',
+    },
+    {
+      en: 'alone',
+      ru: 'один, одинокий',
+    },
+    {
+      en: 'garden',
+      ru: 'сад',
+    },
+    {
+      en: 'corner',
+      ru: 'угол',
+    },
+    {
+      en: 'incorrect',
+      ru: 'неправильный',
+    },
+    {
+      en: 'behind',
+      ru: 'позади, за',
+    },
+    {
+      en: 'yard',
+      ru: 'двор',
+    },
+    {
+      en: 'unusual',
+      ru: 'необычный',
+    },
+    {
+      en: 'motivating',
+      ru: 'мотивирующий',
+    },
+    {
+      en: 'lonely',
+      ru: 'одинокий',
+    },
+    {
+      en: 'fence',
+      ru: 'забор',
+    },
+    {
+      en: 'homemade',
+      ru: 'домашний, домашнего изготовления',
+    },
+    {
+      en: 'sooner',
+      ru: 'скорее',
+    },
+    {
+      en: 'meeting',
+      ru: 'встреча',
+    },
+    {
+      en: 'by',
+      ru: 'по, у, к, мимо, на',
+    },
+    {
+      en: 'topic',
+      ru: 'тема',
+    },
+    {
+      en: 'a bit',
+      ru: 'немного, чуть-чуть',
+    },
+    {
+      en: 'ground',
+      ru: 'земля(под ногами)',
+    },
+    {
+      en: 'pie',
+      ru: 'пирог',
+    },
+    {
+      en: 'parcel',
+      ru: 'посылка',
+    },
+    {
+      en: 'kindness',
+      ru: 'доброта',
+    },
+    {
+      en: 'happiness',
+      ru: 'счастье',
+    },
+    {
+      en: 'bill',
+      ru: 'счёт',
+    },
+    {
+      en: 'chance',
+      ru: 'шанс',
+    },
+    {
+      en: 'accident',
+      ru: 'происшествие, авария',
+    },
+    {
+      en: 'criminal',
+      ru: 'преступник',
+    },
+    {
+      en: 'view',
+      ru: 'вид, зрение',
+    },
+    {
+      en: 'donkey',
+      ru: 'осёл',
+    },
+    {
+      en: 'knowledge',
+      ru: 'знания',
+    },
+    {
+      en: 'several',
+      ru: 'несколько',
+    },
+    {
+      en: 'circus',
+      ru: 'цирк',
+    },
+    {
+      en: 'tasty',
+      ru: 'вкусный',
+    },
+    {
+      en: 'delicious',
+      ru: 'очень вкусный, восхитительный',
+    },
+    {
+      en: 'mostly(mainly)',
+      ru: 'в основном',
+    },
+    {
+      en: 'fashinable',
+      ru: 'модный',
+    },
+    {
+      en: 'speech',
+      ru: 'речь',
+    },
+    {
+      en: 'between',
+      ru: 'между',
+    },
+    {
+      en: 'just',
+      ru: 'просто, лишь, справедливый',
+    },
+  ];
+  
+  console.log('WORDS__ARRAY ' + WORDS__ARRAY.length);
+  
+  const template = document.querySelector('#template-words').content.querySelector('.words__item');
+  const wordsContent = document.querySelector('.words__items');
+  const btn = document.querySelector('#words__btn');
+  const result = document.querySelector('.result');
+  const start = document.querySelector('#words__start');
+  
+  const renderWords = function (words, id, lang) {
+    let wordsElement = template.cloneNode(true);
+    let wordsSpan = wordsElement.querySelectorAll('.words__label > span');
+    let wordsInputs = wordsElement.querySelectorAll('.words__input');
+  
+    let howSort = Math.floor(Math.random() * (1 - 0 + 1) + 0);
+  
+    // console.log('howsort ' + howSort);
+    // console.log('lang ' + lang);
+  
+    wordsElement.querySelector('.words__guess').textContent = words;
+  
+    randomNumberSmall(0, WORDS__ARRAY.length - 1, 3, id);
+  
+    numbersSmall.push(id);
+    if (howSort === 0) {
+      numbersSmall.sort((a, b) => a - b);
+    }
+    if (howSort === 1) {
+      numbersSmall.sort((a, b) => b - a);
+    }
+    // console.log(numbersSmall);
+  
+    if (lang === 'en') {
+      for (let i = 0; i < 4; i++) {
+        wordsInputs[i].name = WORDS__ARRAY[id].en;
+        wordsInputs[i].value = numbersSmall[i];
+      }
+      for (let i = 0; i < 4; i++) {
+        wordsSpan[i].textContent = WORDS__ARRAY[numbersSmall[i]].ru;
+      }
+    }
+    if (lang === 'ru') {
+      for (let i = 0; i < 4; i++) {
+        wordsInputs[i].name = WORDS__ARRAY[id].ru;
+        wordsInputs[i].value = numbersSmall[i];
+      }
+      for (let i = 0; i < 4; i++) {
+        wordsSpan[i].textContent = WORDS__ARRAY[numbersSmall[i]].en;
+      }
+    }
+  
+    return wordsElement;
+  };
+  
+  const renderStart = (value, lang) => {
+    let fragment = document.createDocumentFragment();
+    if (lang === 'en') {
+      for (let i = 0; i < value; i++) {
+        fragment.appendChild(renderWords(WORDS__ARRAY[numbers[i]].en, numbers[i], 'en'));
+      }
+    }
+    if (lang === 'ru') {
+      for (let i = 0; i < value; i++) {
+        fragment.appendChild(renderWords(WORDS__ARRAY[numbers[i]].ru, numbers[i], 'ru'));
+      }
+    }
+    if (lang === 'all') {
+      for (let i = 0; i < value; i++) {
+        if (i % 2 === 0) {
+          fragment.appendChild(renderWords(WORDS__ARRAY[numbers[i]].ru, numbers[i], 'ru'));
+        }
+        if (i % 2 === 1) {
+          fragment.appendChild(renderWords(WORDS__ARRAY[numbers[i]].en, numbers[i], 'en'));
+        }
+      }
+    }
+  
+    wordsContent.appendChild(fragment);
+  };
+  
+  function getResult() {
+    let check = wordsContent.querySelectorAll('.words__input:checked');
+    let noCheck = wordsContent.querySelectorAll('.words__input:not(:checked)');
+    let resultNumber = 0;
+    const choice = document.querySelector('.words__choice:checked');
+  
+    noCheck.forEach((el) => {
+      el.dataset.result = '';
+    });
+  
+    numbers.forEach((el, id) => {
+      console.log(el + ' ' + check[id].value);
+      if (el == check[id].value) {
+        resultNumber++;
+        check[id].dataset.result = 'correctly';
+      } else {
+        check[id].dataset.result = 'mistake';
+      }
+    });
+  
+    result.textContent = 'Ваш результат: ' + resultNumber + ' из ' + choice.value;
+  }
+  
+  const numbers = [];
+  
+  const randomNumberBig = (min, max, count) => {
+    if (max - min + 1 < count) {
+      min = 0;
+      max = 1;
+      count = 1;
+    }
+  
+    while (numbers.length < count) {
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      if (!numbers.includes(randomNumber)) {
+        numbers.push(randomNumber);
+      }
+    }
+    console.log('numbers ' + numbers);
+    return numbers;
+  };
+  
+  let numbersSmall = [];
+  const randomNumberSmall = (min, max, count, currentValue) => {
+    numbersSmall = [];
+    if (max - min + 1 < count) {
+      min = 0;
+      max = 1;
+      count = 1;
+    }
+  
+    // console.log('currentValue ' + currentValue);
+    while (numbersSmall.length < count) {
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      if (randomNumber === currentValue) {
+        console.log(randomNumber + '!!!!!!!!!!!' + currentValue);
+        continue;
+      }
+      if (!numbersSmall.includes(randomNumber)) {
+        numbersSmall.push(randomNumber);
+      }
+    }
+    // console.log('45 words-random.js numbersSmall ' + numbersSmall);
+    return numbersSmall;
+  };
+  
+  let span;
+  let itemArr;
+  
+  start.addEventListener('click', () => {
+    const testing = document.querySelector('.words__choose');
+    const choice = document.querySelector('.words__choice:checked');
+    const language = document.querySelector('.words__languages:checked');
+  
+    randomNumberBig(0, WORDS__ARRAY.length - 1, choice.value);
+    renderStart(choice.value, language.value, numbers);
+  
+    testing.classList.add('visually-hidden');
+    btn.classList.remove('visually-hidden');
+  
+    span = wordsContent.querySelectorAll('.words__guess');
+    itemArr = wordsContent.querySelectorAll('.words__item');
+  
+    return choice;
+  });
+  
+  btn.addEventListener('click', () => {
+    getResult();
   });
   
 }
