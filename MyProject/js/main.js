@@ -2465,6 +2465,598 @@ if (document.querySelector('#template-transcription') !== null) {
   
 }
 
+if (document.querySelector('#template-homophone') !== null) {
+  try {
+    document.querySelector('.menu__link[href="homophone.html"]').dataset.current = 'true';
+  } catch {
+    console.log('.menu__link[href="homophone.html"] - не найдено');
+  }
+
+  const HOMOPHONE_ARRAY = [
+
+    {
+
+      enTr: '[biː]',
+
+      enOne: 'be',
+
+      ruOne: 'быть',
+
+      enTwo: 'bee',
+
+      ruTwo: 'пчела',
+
+    },
+
+    {
+
+      enTr: '[miːt]',
+
+      enOne: 'meat',
+
+      ruOne: 'мясо',
+
+      enTwo: 'meet',
+
+      ruTwo: 'встречать',
+
+    },
+
+    {
+
+      enTr: '[teɪl]',
+
+      enOne: 'tail',
+
+      ruOne: 'хвост',
+
+      enTwo: 'tale',
+
+      ruTwo: 'сказка',
+
+    },
+
+    {
+
+      enTr: '[fiːt]',
+
+      enOne: 'feat',
+
+      ruOne: 'подвиг',
+
+      enTwo: 'feet',
+
+      ruTwo: 'нога',
+
+    },
+
+    {
+
+      enTr: '[rɪˈsiːt]',
+
+      enOne: 'receipt',
+
+      ruOne: 'получение',
+
+      enTwo: 'reseat',
+
+      ruTwo: 'ряды',
+
+    },
+
+    {
+
+      enTr: '[aɪ]',
+
+      enOne: 'eye',
+
+      ruOne: 'глаз',
+
+      enTwo: 'I',
+
+      ruTwo: 'я',
+
+    },
+
+    {
+
+      enTr: '[pleɪn]',
+
+      enOne: 'plain',
+
+      ruOne: 'обычный',
+
+      enTwo: 'plane',
+
+      ruTwo: 'самолет',
+
+    },
+
+    {
+
+      enTr: '[ðeə]',
+
+      enOne: 'their',
+
+      ruOne: 'их',
+
+      enTwo: 'there',
+
+      ruTwo: 'там',
+
+    },
+
+    {
+
+      enTr: '[faɪnd]',
+
+      enOne: 'find',
+
+      ruOne: 'найти',
+
+      enTwo: 'fined',
+
+      ruTwo: 'оштрафованный',
+
+    },
+
+    {
+
+      enTr: '[səʊl]',
+
+      enOne: 'sole',
+
+      ruOne: 'подошва',
+
+      enTwo: 'soul',
+
+      ruTwo: 'душа',
+
+    },
+
+    {
+
+      enTr: '[biːn]',
+
+      enOne: 'bean',
+
+      ruOne: 'фасоль',
+
+      enTwo: 'been',
+
+      ruTwo: 'быть',
+
+    },
+
+    {
+
+      enTr: '[rɪŋ]',
+
+      enOne: 'ring',
+
+      ruOne: 'кольцо',
+
+      enTwo: 'wring',
+
+      ruTwo: 'выжимать',
+
+    },
+
+    {
+
+      enTr: '[tuː]',
+
+      enOne: 'to',
+
+      ruOne: 'к',
+
+      enTwo: 'two',
+
+      ruTwo: 'два',
+
+    },
+
+    {
+
+      enTr: '[heə]',
+
+      enOne: 'hair',
+
+      ruOne: 'волосы',
+
+      enTwo: 'hare',
+
+      ruTwo: 'заяц',
+
+    },
+
+    {
+
+      enTr: '[steə]',
+
+      enOne: 'stair',
+
+      ruOne: 'лестницы',
+
+      enTwo: 'stare',
+
+      ruTwo: 'пялиться',
+
+    },
+
+    {
+
+      enTr: '[baɪ]',
+
+      enOne: 'buy',
+
+      ruOne: 'покупать',
+
+      enTwo: 'by',
+
+      ruTwo: 'по',
+
+    },
+
+    {
+
+      enTr: '[raɪt]',
+
+      enOne: 'right',
+
+      ruOne: 'право',
+
+      enTwo: 'write',
+
+      ruTwo: 'писать',
+
+    },
+
+    {
+
+      enTr: '[weə]',
+
+      enOne: 'wear',
+
+      ruOne: 'носить',
+
+      enTwo: 'where',
+
+      ruTwo: 'где',
+
+    },
+
+    {
+
+      enTr: '[həʊl]',
+
+      enOne: 'hole',
+
+      ruOne: 'дыра',
+
+      enTwo: 'whole',
+
+      ruTwo: 'весь',
+
+    },
+
+    {
+
+      enTr: '[reɪn]',
+
+      enOne: 'reign',
+
+      ruOne: 'правление',
+
+      enTwo: 'rein',
+
+      ruTwo: 'сдерживать',
+
+    },
+
+    {
+
+      enTr: '[wiːk]',
+
+      enOne: 'week',
+
+      ruOne: 'неделя',
+
+      enTwo: 'weak ',
+
+      ruTwo: 'слабый',
+
+    },
+
+    {
+
+      enTr: '[rəʊd]',
+
+      enOne: 'road',
+
+      ruOne: 'дорога',
+
+      enTwo: 'rode ',
+
+      ruTwo: 'ехал',
+
+    },
+
+    {
+
+      enTr: '[wʊd]',
+
+      enOne: 'wood',
+
+      ruOne: 'древесина',
+
+      enTwo: 'would',
+
+      ruTwo: 'бы',
+
+    },
+
+    {
+
+      enTr: '[meɪd]',
+
+      enOne: 'made',
+
+      ruOne: 'сделал',
+
+      enTwo: 'maid',
+
+      ruTwo: 'горничная',
+
+    },
+
+    {
+
+      enTr: '[θrəʊn]',
+
+      enOne: 'throne',
+
+      ruOne: 'трон',
+
+      enTwo: 'thrown',
+
+      ruTwo: 'кинуть',
+
+    },
+
+    {
+
+      enTr: '[hɪə]',
+
+      enOne: 'hear',
+
+      ruOne: 'слышать',
+
+      enTwo: 'here',
+
+      ruTwo: 'здесь',
+
+    },
+
+    {
+
+      enTr: '[seɪl]',
+
+      enOne: 'sail',
+
+      ruOne: 'парус',
+
+      enTwo: 'sale',
+
+      ruTwo: 'продажа',
+
+    },
+
+    {
+
+      enTr: '[nɪt]',
+
+      enOne: 'knit',
+
+      ruOne: 'вязать',
+
+      enTwo: 'nit',
+
+      ruTwo: 'гнида',
+
+    },
+
+    {
+
+      enTr: '[njuː]',
+
+      enOne: 'new',
+
+      ruOne: 'новый',
+
+      enTwo: 'knew ',
+
+      ruTwo: 'знал',
+
+    },
+
+    {
+
+      enTr: '[weɪ]',
+
+      enOne: 'way',
+
+      ruOne: 'путь',
+
+      enTwo: 'weigh',
+
+      ruTwo: 'взвесить',
+
+    },
+
+  ];
+
+  
+
+  console.log(HOMOPHONE_ARRAY.length);
+
+  
+  const template = document.querySelector('#template-homophone').content.querySelector('.homophone__item');
+  const homophoneContent = document.querySelector('.homophone__items');
+  const btn = document.querySelector('#homophone__btn');
+  const result = document.querySelector('.result');
+  const start = document.querySelector('#homophone__start');
+  
+  const render = function (question, lengthOne, lengthTwo) {
+    let Element = template.cloneNode(true);
+    console.log(question);
+  
+    Element.querySelector('.homophone__span').textContent = question;
+    Element.querySelector('.homophone__input--one').setAttribute('maxlength', `${lengthOne}`);
+    Element.querySelector('.homophone__input--two').setAttribute('maxlength', `${lengthTwo}`);
+    return Element;
+  };
+  
+  const renderStart = (value) => {
+    let fragment = document.createDocumentFragment();
+  
+    for (let i = 0; i < value; i++) {
+      fragment.append(
+        render(
+          HOMOPHONE_ARRAY[randomNumberArr[i]].enTr,
+          HOMOPHONE_ARRAY[randomNumberArr[i]].enOne.length,
+          HOMOPHONE_ARRAY[randomNumberArr[i]].enTwo.length
+        )
+      );
+    }
+  
+    homophoneContent.append(fragment);
+  };
+  
+  function getResult(value) {
+    let checkOne = homophoneContent.querySelectorAll('.check--one');
+    let checkTwo = homophoneContent.querySelectorAll('.check--two');
+    let checkEmptyOne = 0;
+    let checkEmptyTwo = 0;
+    let finalEmpty = 0;
+    let newCheckOne = [];
+    let newCheckTwo = [];
+    let resultNumber = value;
+    let strOne;
+    let strTwo;
+    let enWordOne;
+    let enWordTwo;
+  
+    for (let i = 0; i < value; i++) {
+      strOne = inputOne[i].value;
+      strTwo = inputTwo[i].value;
+      if (strOne == null || strOne.length == 0) {
+        checkEmptyOne++;
+        newCheckOne.push(i);
+      }
+      if (strTwo == null || strTwo.length == 0) {
+        checkEmptyTwo++;
+        newCheckTwo.push(i);
+      }
+    }
+    if (checkEmptyOne > 0) {
+      do {
+        checkEmptyOne--;
+        finalEmpty++;
+        inputOne[newCheckOne[checkEmptyOne]].dataset.result = 'empty';
+        inputOne[newCheckOne[checkEmptyOne]].placeholder = 'Поле пустое, введите значение';
+      } while (checkEmptyOne);
+    }
+    if (checkEmptyTwo > 0) {
+      do {
+        checkEmptyTwo--;
+        finalEmpty++;
+        inputTwo[newCheckTwo[checkEmptyTwo]].dataset.result = 'empty';
+        inputTwo[newCheckTwo[checkEmptyTwo]].placeholder = 'Поле пустое, введите значение';
+      } while (checkEmptyTwo);
+    }
+    if (finalEmpty > 0) {
+      return console.log(finalEmpty);
+    }
+  
+    for (let i = 0; i < value; i++) {
+      strOne = inputOne[i].value;
+      strTwo = inputTwo[i].value;
+  
+      enWordOne = HOMOPHONE_ARRAY[randomNumberArr[i]].enOne;
+      enWordTwo = HOMOPHONE_ARRAY[randomNumberArr[i]].enTwo;
+      if (enWordOne === strOne) {
+        inputOne[i].dataset.result = 'correctly';
+        checkOne[i].textContent = '+ : ' + enWordOne + ' - ' + HOMOPHONE_ARRAY[randomNumberArr[i]].ruOne;
+      }
+      if (enWordTwo === strTwo) {
+        inputTwo[i].dataset.result = 'correctly';
+        checkTwo[i].textContent = '+ : ' + enWordTwo + ' - ' + HOMOPHONE_ARRAY[randomNumberArr[i]].ruTwo;
+      }
+      if (enWordOne !== strOne) {
+        inputOne[i].dataset.result = 'mistake';
+        checkOne[i].textContent = '- : ' + enWordOne + ' - ' + HOMOPHONE_ARRAY[randomNumberArr[i]].ruOne;
+      }
+      if (enWordTwo !== strTwo) {
+        inputTwo[i].dataset.result = 'mistake';
+        checkTwo[i].textContent = '- : ' + enWordTwo + ' - ' + HOMOPHONE_ARRAY[randomNumberArr[i]].ruTwo;
+      }
+      if ((enWordOne !== strOne && enWordTwo !== strTwo) || enWordOne !== strOne || enWordTwo !== strTwo) {
+        resultNumber--;
+      }
+    }
+  
+    result.textContent = 'Ваш результат: ' + resultNumber + ' из ' + choice.value;
+  }
+  
+  const randomNumberArr = [];
+  
+  const generateRandomNumbers = (min, max, count) => {
+    if (max - min + 1 < count) {
+      min = 0;
+      max = 1;
+      count = 1;
+    }
+  
+    while (randomNumberArr.length < count) {
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      if (!randomNumberArr.includes(randomNumber)) {
+        randomNumberArr.push(randomNumber);
+      }
+    }
+  
+    console.log(randomNumberArr);
+    return randomNumberArr;
+  };
+  
+  let choice;
+  let span;
+  let inputOne;
+  let inputTwo;
+  
+  start.addEventListener('click', () => {
+    let homophone = document.querySelector('.homophone__choose');
+    choice = document.querySelector('.homophone__choice:checked');
+  
+    generateRandomNumbers(0, HOMOPHONE_ARRAY.length - 1, choice.value);
+    renderStart(choice.value);
+  
+    homophone.classList.add('visually-hidden');
+    btn.classList.remove('visually-hidden');
+  
+    span = homophoneContent.querySelectorAll('.homophone__span');
+    inputOne = homophoneContent.querySelectorAll('.homophone__input--one');
+    inputTwo = homophoneContent.querySelectorAll('.homophone__input--two');
+  
+    return choice;
+  });
+  
+  btn.addEventListener('click', () => {
+    getResult(choice.value);
+  });
+  
+}
+
 if (document.querySelector('#template-quotes') !== null) {
   try {
     document.querySelector('.menu__link[href="guru-quotes.html"]').dataset.current = 'true';

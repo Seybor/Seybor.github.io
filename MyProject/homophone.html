@@ -44,64 +44,73 @@
         </div>
       </div>
     </header>
-<main class="main">
 
-	<section class="transcription">
+<main class="main">
+	<section class="homophone">
 		<div class="container">
-			<div class="transcription__inner">
-				<h2 class="title transcription__title">Транскрипция слов А0 для самопроверки</h2>
+			<div class="homophone__inner">
+				<h2 class="title homophone__title">Омофоны</h2>
 				<span class="result"></span>
-				<form class="transcription__form">
-					<div class="transcription__choose">
-						Количество<br />
-						<label class="transcription__choose-label" id="label-5">
-							<input class="transcription__choice visually-hidden" type="radio" name="choice" value="5" checked />
-							<span>5</span>
+				<form class="homophone__form">
+					<div class="homophone__choose">
+						Количество <br />
+						<label class="homophone__choose-label">
+							<input class="homophone__choice visually-hidden" type="radio" name="choice" value="2" checked />
+							<span>2</span>
 						</label>
-						<label class="transcription__choose-label" id="label-10">
-							<input class="transcription__choice visually-hidden" type="radio" name="choice" value="10" />
+						<label class="homophone__choose-label">
+							<input class="homophone__choice visually-hidden" type="radio" name="choice" value="4" />
+							<span>4</span>
+						</label>
+						<label class="homophone__choose-label">
+							<input class="homophone__choice visually-hidden" type="radio" name="choice" value="6" />
+							<span>6</span>
+						</label>
+						<label class="homophone__choose-label">
+							<input class="homophone__choice visually-hidden" type="radio" name="choice" value="8" />
+							<span>8</span>
+						</label>
+						<label class="homophone__choose-label">
+							<input class="homophone__choice visually-hidden" type="radio" name="choice" value="10" />
 							<span>10</span>
 						</label>
-						<label class="transcription__choose-label" id="label-15">
-							<input class="transcription__choice visually-hidden" type="radio" name="choice" value="15" />
-							<span>15</span>
-						</label>
-						<label class="transcription__choose-label" id="label-20">
-							<input class="transcription__choice visually-hidden" type="radio" name="choice" value="20" />
-							<span>20</span>
-						</label>
-						<label class="transcription__choose-label" id="label-25">
-							<input class="transcription__choice visually-hidden" type="radio" name="choice" value="25" />
-							<span>25</span>
-						</label>
-						<button class="transcription__start" id="transcription__start" type="button">Начать</button>
+						<button class="homophone__start" id="homophone__start" type="button">Начать</button>
 					</div>
 
-					<ol class="transcription__items">
+					<ol class="homophone__items">
 						<!-- - Сюда вставляются задания -->
 					</ol>
 
-					<button class="transcription__btn visually-hidden" id="transcription__btn" type="button">Проверить</button>
+					<button class="homophone__btn visually-hidden" id="homophone__btn" type="button">Проверить</button>
 				</form>
 			</div>
 		</div>
 	</section>
 
-	<template id="template-transcription">
-		<li class="transcription__item">
-			<span class="transcription__span"></span>
-			<span class="check"></span>
-			<input class="transcription__input" type="text" placeholder="ответ" data-result />
+	<template id="template-homophone">
+		<li class="homophone__item">
+			<span class="homophone__span"></span>
+			<span class="check check--one"></span>
+			<span class="check check--two"></span>
+			<input class="homophone__input homophone__input--one" type="text" placeholder="слово 1" data-result />
+			<input class="homophone__input homophone__input--two" type="text" placeholder="слово 2" data-result />
 		</li>
 	</template>
 
 </main>
+
 <footer class="footer">
+
 	<div class="container">
+
 		<div class="footer__inner">
 
+
+
 		</div>
+
 	</div>
+
 </footer>
 </div>
 
