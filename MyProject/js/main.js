@@ -2998,14 +2998,72 @@ if (document.querySelector('#template-antonyms') !== null) {
     let fragment = document.createDocumentFragment();
   
     for (let i = 0; i < value; i++) {
-      fragment.append(render(ANTONYMS_ARRAY[[i]].enOne, ANTONYMS_ARRAY[[i]].enTwo.length));
+      fragment.append(render(ANTONYMS_ARRAY[randomNumberArr[i]].enOne, ANTONYMS_ARRAY[randomNumberArr[i]].enTwo.length));
     }
   
     antonymsContent.append(fragment);
   };
   
-  //includes antonyms/antonyms-getresult.js
-  //includes antonyms/antonyms-random.js
+  function getResult(value) {
+    var check = antonymsContent.querySelectorAll('.check');
+    var str;
+    let j = 0;
+    let newCheck = [];
+    let resultNumber = value;
+    let currentValue;
+    for (let i = 0; i < value; i++) {
+      str = input[i].value;
+      currentValue = ANTONYMS_ARRAY[randomNumberArr[i]].enTwo;
+      if (str == null || str.length == 0) {
+        j++;
+        newCheck.push(i);
+      }
+    }
+    if (j > 0) {
+      do {
+        j--;
+        input[newCheck[j]].dataset.result = 'empty';
+        input[newCheck[j]].placeholder = 'Поле пустое, введите значение';
+      } while (j);
+      return newCheck;
+    }
+    for (let i = 0; i < value; i++) {
+      str = input[i].value;
+      currentValue = ANTONYMS_ARRAY[randomNumberArr[i]].enTwo;
+  
+      if (currentValue === str) {
+        input[i].dataset.result = 'correctly';
+        check[i].textContent = '+';
+      }
+      if (currentValue !== str) {
+        input[i].dataset.result = 'mistake';
+        check[i].textContent = '- : ' + currentValue;
+        resultNumber--;
+      }
+    }
+    result.textContent = 'Ваш результат: ' + resultNumber + ' из ' + value;
+  }
+  
+  const randomNumberArr = [];
+  
+  const generateRandomNumbers = (min, max, count) => {
+    if (max - min + 1 < count) {
+      min = 0;
+      max = 1;
+      count = 1;
+    }
+  
+    while (randomNumberArr.length < count) {
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      if (!randomNumberArr.includes(randomNumber)) {
+        randomNumberArr.push(randomNumber);
+      }
+    }
+  
+    console.log(randomNumberArr);
+    return randomNumberArr;
+  };
+  
   let choice;
   let span;
   let input;
@@ -3014,7 +3072,7 @@ if (document.querySelector('#template-antonyms') !== null) {
     let antonyms = document.querySelector('.antonyms__choose');
     choice = document.querySelector('.antonyms__choice:checked');
   
-    // generateRandomNumbers(0, HOMOPHONE_ARRAY.length - 1, choice.value);
+    generateRandomNumbers(0, ANTONYMS_ARRAY.length - 1, choice.value);
     renderStart(choice.value);
   
     antonyms.classList.add('visually-hidden');
