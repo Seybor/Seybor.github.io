@@ -17,7 +17,7 @@
 
 	<link rel="icon" href="favicon.ico">
 
-	<link rel="stylesheet" href='css/style.css'>
+	<link rel="stylesheet" href='/css/style.css'>
 </head>
 <body>
 	<div class="wrapper">
@@ -52,7 +52,22 @@
 				<h2 class="title tests__title visually-hidden">Математический тест</h2>
 				<div class="tests__content">
 					<form class="tests__form" action="#">
-						<p class="tests__description">Даётся 1 минута. Наберите как можно больше баллов</p>
+						<fieldset class="tests__type">
+							<legend class="tests__type-legend">Тип теста</legend>
+							<label class="tests__type-label">
+								<input class="tests__type-input visually-hidden" value="1" name="type" type="radio" checked>
+								<span data-type="minute">Одна минута</span>
+							</label>
+							<label class="tests__type-label">
+								<input class="tests__type-input visually-hidden" value="2" name="type" type="radio">
+								<span data-type="life">Три жизни</span>
+							</label>
+							<label class="tests__type-label">
+								<input class="tests__type-input visually-hidden" value="3" name="type" type="radio">
+								<span data-type="loose">До первого луза</span>
+							</label>
+						</fieldset>
+	
 						<fieldset class="tests__fieldset">
 							<legend class="tests__legend">Сложность</legend>
 							<label class="tests__label">
@@ -75,6 +90,9 @@
 						</div>
 						<div class="tests__scores">
 							Набранные баллы: <span>0</span>
+						</div>
+						<div class="tests__lifes">
+							Количество жизней: <span>0</span>
 						</div>
 	
 						<ul class="tests__items">
@@ -138,6 +156,14 @@
 
 			</label>
 
+			<label class="tests__item-label">
+
+				<input class="tests__item-input visually-hidden" type="radio" name="question" value="">
+
+				<span></span>
+
+			</label>
+
 		</li>
 
 	</template>
@@ -153,7 +179,7 @@
 		<div class="footer__inner">
 
 
-			<h1 class="title">29.11.2023</h1>
+			<h1 class="title">30.11.2023</h1>
 
 
 		</div>
@@ -165,7 +191,7 @@
 </footer>
 </div>
 
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 
 </body>
 

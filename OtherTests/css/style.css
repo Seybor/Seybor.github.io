@@ -302,12 +302,12 @@ body {
 .tests legend {
   padding: 0;
 }
-.tests__fieldset {
+.tests__fieldset, .tests__type {
   margin: 0;
   padding: 0;
   margin-bottom: 24px;
 }
-.tests__label {
+.tests__label, .tests__type-label {
   display: inline-block;
   margin-right: 6px;
   font-size: 18px;
@@ -315,10 +315,10 @@ body {
   text-transform: uppercase;
   border: 1px solid black;
 }
-.tests__label:last-child {
+.tests__label:last-child, .tests__type-label:last-child {
   margin-right: 0;
 }
-.tests__label span {
+.tests__label span, .tests__type-label span {
   display: inline-block;
   padding: 6px;
 }
@@ -331,7 +331,16 @@ body {
 .tests__difficult:checked + span[data-difficult=hard] {
   background-color: red;
 }
-.tests__timer, .tests__scores {
+.tests__type-input:checked + span[data-type=minute] {
+  background-color: rgb(13, 0, 128);
+}
+.tests__type-input:checked + span[data-type=life] {
+  background-color: rgb(0, 255, 221);
+}
+.tests__type-input:checked + span[data-type=loose] {
+  background-color: rgb(255, 0, 234);
+}
+.tests__timer, .tests__scores, .tests__lifes {
   display: none;
 }
 .tests__item-question {
