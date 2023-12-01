@@ -279,10 +279,6 @@ if (document.querySelector('#template-one') !== null) {
       en: 'How much money did you earn there?',
     },
     {
-      ru: 'Мне казалось, что я был прав?',
-      en: 'It seemed to me that I was right',
-    },
-    {
       ru: 'Мы часто звонили друг другу',
       en: 'We often called each other',
     },
