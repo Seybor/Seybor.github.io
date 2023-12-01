@@ -6,16 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<style>
-		.trash {
+		#responseField {
 			border: 1px solid #929292;
-			background-image: url('trash.jpg');
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center;
 
-			min-height: 200px;
+			min-height: 50px;
 			padding: 10px;
-			text-align: center;
+			text-align: left;
 			margin-bottom: 1rem;
 		}
 
@@ -30,35 +26,37 @@
 			text-align: center;
 		}
 
-		.one {
+		/* .one {
 			.one__title {
 				color: red;
 			}
+		} */
+		p {
+			display: inline-block;
+			padding: 6px;
+			margin-right: 4px;
+
+			color: black;
+			border: 1px solid gray;
 		}
 	</style>
 </head>
 
 <body>
 
-	<p>Переместите картинку в прямоугольник.</p>
-	<div class="trash" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-	<img
-		src="https://sun9-77.userapi.com/impg/-ImPonC5KLl8YuBq1ryQo-bWSAV6-IigbQuT0A/6GNiFhOEm6Y.jpg?size=1280x800&quality=95&sign=ebaa7739ab42639945195e7d80b78c15&type=album"
-		draggable="true" alt="" ondragstart="drag(event)" id="photo1">
-	<img
-		src="https://sun4-22.userapi.com/impg/N1BjtYC-21YoZ9LAc_MItGLdBatBa04bKrttHQ/Al-ezxwhp70.jpg?size=819x1024&quality=96&sign=3a7b23f36c7299e2afcde300df75bd00&type=album"
-		draggable="true" alt="" ondragstart="drag(event)" id="photo2">
-	<img
-		src="https://sun4-17.userapi.com/impf/fkldlrpdYySX_2CItJKO0J6vSJIvVMo50Rh8qA/ibGjepAExVs.jpg?size=363x543&quality=96&sign=bbd0b51d3f1a9b751fd6ae1d923bdd75&type=album"
-		draggable="true" alt="" ondragstart="drag(event)" id="photo3">
+	<div id="question">
 
-	<img
-		src="https://sun9-6.userapi.com/impf/89hTuSlKL_CFTrSzhO54SAYgDHF83f-8LPbdbg/TJnsCb7vLEw.jpg?size=577x894&quality=96&sign=048830a41b27333d2c3ae7dad401950b&type=album"
-		draggable="true" alt="" ondragstart="drag(event)" id="photo4">
+	</div>
+	<div id="responseField" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<button id="btn-result">Проверить</button>
+	<div id="items">
 
-	<img
-		src="https://sun9-4.userapi.com/impf/uPKgMxjwffTI2iPV8X4GUC1FU2TLV4I-aMTJ2w/xrfmhU-8yEQ.jpg?size=704x1080&quality=96&sign=9c7a8391fa0df2a3580fd2ae80951356&type=album"
-		draggable="true" alt="" ondragstart="drag(event)" id="photo5">
+	</div>
+	<template id="template">
+		<p class="word-text" draggable="true" ondragstart="drag(event)" id="one">
+
+		</p>
+	</template>
 
 	<script src="script.js"></script>
 </body>
