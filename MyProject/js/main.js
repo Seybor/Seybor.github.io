@@ -1132,6 +1132,1454 @@ if (document.querySelector('#template-one') !== null) {
   
 }
 
+if (document.querySelector('#template-offers__one') !== null) {
+  try {
+    document.querySelector('.menu__link[href="offers1.html"]').dataset.current = 'true';
+  } catch {
+    console.log('.menu__link[href="offers1.html"] - не найдено');
+  }
+
+  const OFFERS_A1_51_57 = [
+
+    {
+
+      ru: 'Я обожаю читать книги вечером',
+
+      en: 'I enjoy reading books in the evenin',
+
+    },
+
+    {
+
+      ru: 'Мне действительно нравится кататься на велосипеде',
+
+      en: 'I really like cycling',
+
+    },
+
+    {
+
+      ru: 'Это стоит два миллиона фунтов',
+
+      en: 'It costs two million pounds',
+
+    },
+
+    {
+
+      ru: 'У меня есть много миллионов долларов',
+
+      en: 'I have many millions of dollars',
+
+    },
+
+    {
+
+      ru: 'Я могу сделать это в начале',
+
+      en: 'I can do it in the beginning',
+
+    },
+
+    {
+
+      ru: 'Я могу сделать это в начале этого дня',
+
+      en: 'I can do it at the beginning of this day',
+
+    },
+
+    {
+
+      ru: 'Мне нужен опыт работы вначале',
+
+      en: 'I need work experience in the beginning',
+
+    },
+
+    {
+
+      ru: 'Мне нужен некоторый опыт работы в первую очередь',
+
+      en: 'I need some work experience first of all',
+
+    },
+
+    {
+
+      ru: 'Я предпочитаю делать это в свободное время',
+
+      en: 'I prefer to do it in my free time',
+
+    },
+
+    {
+
+      ru: 'Он прекрасно понимает это',
+
+      en: 'He perfectly understands it',
+
+    },
+
+    {
+
+      ru: 'Я тебя прекрасно понимаю',
+
+      en: 'I perfectly understand you',
+
+    },
+
+    {
+
+      ru: 'Я прекрасно понимаю как это работает',
+
+      en: 'I perfectly understand how it works',
+
+    },
+
+    {
+
+      ru: 'Я прекрасно понимаю твою точку зрения',
+
+      en: 'I perfectly understand your point of view',
+
+    },
+
+    {
+
+      ru: 'Я хочу свободно говорить по-английски',
+
+      en: 'I want to speak English fluently',
+
+    },
+
+    {
+
+      ru: 'Она хочет улучшить свой словарный запас в первую очередь',
+
+      en: 'She wants to improve her vocabulary first of all',
+
+    },
+
+    {
+
+      ru: 'Я вижу, ты часто ездишь за границу',
+
+      en: 'I see you often go abroad',
+
+    },
+
+    {
+
+      ru: 'Он говорит по-английски без акцента',
+
+      en: 'He speaks English without an accent',
+
+    },
+
+    {
+
+      ru: 'Это случается время от времени',
+
+      en: 'It happens from time to time',
+
+    },
+
+    {
+
+      ru: 'Эта вещь случается время от времени',
+
+      en: 'It happens from time to time',
+
+    },
+
+    {
+
+      ru: 'Он работает в другом отделе',
+
+      en: 'He works in another department',
+
+    },
+
+    {
+
+      ru: 'Ей нравится классическая музыка',
+
+      en: 'She really likes classical music',
+
+    },
+
+    {
+
+      ru: 'Я хожу на плавание дважды в неделю',
+
+      en: 'I go swimming twice a week',
+
+    },
+
+    {
+
+      ru: 'Я хожу на плавание два раза в неделю',
+
+      en: 'I go swimming two times a week',
+
+    },
+
+    {
+
+      ru: 'Я занимаюсь плаванием два или три раза в неделю',
+
+      en: 'I go swimming two or three times a week',
+
+    },
+
+    {
+
+      ru: 'Она работает продавцом магазина',
+
+      en: 'She works as a shop assistant',
+
+    },
+
+    {
+
+      ru: 'Она часто летает в Соединенённые Штаты',
+
+      en: 'She often flies to the United States',
+
+    },
+
+    {
+
+      ru: 'Я хожу в бассейн каждый день',
+
+      en: 'I go to the swimming pool every day',
+
+    },
+
+    {
+
+      ru: 'У него большая семья',
+
+      en: 'He has a large family',
+
+    },
+
+    {
+
+      ru: 'Я живу в большом городе',
+
+      en: 'I live in a big city',
+
+    },
+
+    {
+
+      ru: 'У него финансовые проблемы',
+
+      en: 'He has financial problems',
+
+    },
+
+    {
+
+      ru: 'Я вижу реальный прогресс',
+
+      en: 'I see real progress',
+
+    },
+
+    {
+
+      ru: 'У него есть другая идея',
+
+      en: 'He has another idea',
+
+    },
+
+    {
+
+      ru: 'У него есть странный вопрос',
+
+      en: 'He has a strange question',
+
+    },
+
+    {
+
+      ru: 'Мы учим основные правила в начале',
+
+      en: 'We learn basic rules in the beginning',
+
+    },
+
+    {
+
+      ru: 'Он хочет иметь средний уровень для начала',
+
+      en: 'He wants to have an intermediate level for a start',
+
+    },
+
+    {
+
+      ru: 'У неё очень приятная улыбка',
+
+      en: 'She has a very pleasant smile',
+
+    },
+
+    {
+
+      ru: 'Они гостеприимные люди',
+
+      en: 'They are hospitable people',
+
+    },
+
+    {
+
+      ru: 'Она умная',
+
+      en: 'She is smart',
+
+    },
+
+    {
+
+      ru: 'Она умная девушка',
+
+      en: 'She is a smart girl',
+
+    },
+
+    {
+
+      ru: 'Это долгий процесс',
+
+      en: 'It is long process',
+
+    },
+
+    {
+
+      ru: 'Это наше лучшее достижение',
+
+      en: 'It is our best achievement',
+
+    },
+
+    {
+
+      ru: 'Я думаю, это реальное достижение для нас',
+
+      en: 'I think it is a real achievement for us',
+
+    },
+
+    {
+
+      ru: 'Он умный парень',
+
+      en: 'He is smart guy',
+
+    },
+
+    {
+
+      ru: 'Ты такой щедрый',
+
+      en: 'You ire so generous',
+
+    },
+
+    {
+
+      ru: 'Он очень щедрый человек',
+
+      en: 'He is a very generous person',
+
+    },
+
+    {
+
+      ru: 'Это очень важная деталь',
+
+      en: 'It is a very important detail',
+
+    },
+
+    {
+
+      ru: 'Это удивительный результат',
+
+      en: 'It is an amazing result',
+
+    },
+
+    {
+
+      ru: 'У неё потрясающий голос',
+
+      en: 'She has an amazing voice',
+
+    },
+
+    {
+
+      ru: 'Я прекрасно понимаю, что это уникальная возможность',
+
+      en: 'I perfectly understand that it is a unique opportunity',
+
+    },
+
+    {
+
+      ru: 'Это очень смешное видео',
+
+      en: 'It is very funny video',
+
+    },
+
+    {
+
+      ru: 'Это очень большое число',
+
+      en: 'It is a very large number',
+
+    },
+
+    {
+
+      ru: 'Он очень добр к нам',
+
+      en: 'He is very kind to us',
+
+    },
+
+    {
+
+      ru: 'Я счастлив быть здесь',
+
+      en: 'I am happy to be here',
+
+    },
+
+    {
+
+      ru: 'Они из разных стран',
+
+      en: 'They are from different countries',
+
+    },
+
+    {
+
+      ru: 'Он думает иначе',
+
+      en: 'He thinks differently',
+
+    },
+
+    {
+
+      ru: 'У тебя хорошая работа',
+
+      en: 'You have a good job',
+
+    },
+
+    {
+
+      ru: 'Он боится этого',
+
+      en: 'He is afraid of it',
+
+    },
+
+    {
+
+      ru: 'Она родом из Лос-Анджелеса',
+
+      en: 'She comes from Los Angeles',
+
+    },
+
+    {
+
+      ru: 'Он родом из Нью Йорка',
+
+      en: 'He comes from New York',
+
+    },
+
+    {
+
+      ru: 'Она такая уставшая',
+
+      en: 'She is so tired',
+
+    },
+
+    {
+
+      ru: 'Я здесь в данный момент',
+
+      en: 'I am here at the moment',
+
+    },
+
+    {
+
+      ru: 'Она живёт в прекрасном месте',
+
+      en: 'She lives in a lovely place',
+
+    },
+
+    {
+
+      ru: 'Это прекрасное место',
+
+      en: 'It is a lovely place',
+
+    },
+
+    {
+
+      ru: 'Это чрезвычайно важная вещь',
+
+      en: 'It is an extremely important think',
+
+    },
+
+    {
+
+      ru: 'Это чрезвычайно сложная вещь',
+
+      en: 'It is an extremely difficult think',
+
+    },
+
+    {
+
+      ru: 'Это чрезвычайно важно',
+
+      en: 'It is extremely important',
+
+    },
+
+    {
+
+      ru: 'Он говорит, что это чрезвычайно важно для всех нас',
+
+      en: 'He says that it is extremely important for all of us',
+
+    },
+
+    {
+
+      ru: 'Это кажется лучшим решением этой проблемы',
+
+      en: 'It seems the best solution to this problem',
+
+    },
+
+    {
+
+      ru: 'Мне нужно найти решение это проблемы',
+
+      en: 'I need to find a solution to this problem',
+
+    },
+
+    {
+
+      ru: 'Это кажется лучшим решением',
+
+      en: 'It seems the best decision',
+
+    },
+
+    {
+
+      ru: 'Это типичная ошибка изучающих английский язык',
+
+      en: 'It is a typical mistake of English learners',
+
+    },
+
+    {
+
+      ru: 'Это самая типичная ошибка изучающих английский язык',
+
+      en: 'It is the most typical mistake of English learners',
+
+    },
+
+    {
+
+      ru: 'Это самая распространённая ошибка изучающих английский язык',
+
+      en: 'It is the most common mistake of English learners',
+
+    },
+
+    {
+
+      ru: 'Это лежит на крыше',
+
+      en: 'It lies on the roof',
+
+    },
+
+    {
+
+      ru: 'Я думаю, это пустая трата времени',
+
+      en: 'I think it is a waste of time',
+
+    },
+
+    {
+
+      ru: 'Это кажется пустой тратой времени для меня',
+
+      en: 'It seems a waste of time for me',
+
+    },
+
+    {
+
+      ru: 'Я думаю, это действительно ужасно',
+
+      en: 'I think it is really terrible',
+
+    },
+
+    {
+
+      ru: 'Мы можем видеть это в официальном документе',
+
+      en: 'We can see it in the official document',
+
+    },
+
+    {
+
+      ru: 'Та игра кажется такой интересной',
+
+      en: 'That game seems so interesting',
+
+    },
+
+    {
+
+      ru: 'Эти мужчины выглядят очень слабыми',
+
+      en: 'This men look very weak',
+
+    },
+
+    {
+
+      ru: 'Эта вещь очень сильно мотивирует меня',
+
+      en: 'This thing motivates me greatly',
+
+    },
+
+    {
+
+      ru: 'Моему брату нравится эта музыка тоже',
+
+      en: 'My brother likes this music, too',
+
+    },
+
+    {
+
+      ru: 'Моя сестра работает ветеринаром',
+
+      en: 'My sister work as a vet',
+
+    },
+
+    {
+
+      ru: 'У его сестры есть парень',
+
+      en: 'His sister has a boyfriend',
+
+    },
+
+    {
+
+      ru: 'Этот год кажется очень сложным нам',
+
+      en: 'This year seems very difficult for us',
+
+    },
+
+    {
+
+      ru: 'Мой брат работает фрилансером',
+
+      en: 'My brother works as a freelancer',
+
+    },
+
+    {
+
+      ru: 'Мои друзья часто говорят мне эти вещи',
+
+      en: 'My friends oftern tell me these things',
+
+    },
+
+    {
+
+      ru: 'Эти женщины выглядят так красиво',
+
+      en: 'These women look so beautiful',
+
+    },
+
+    {
+
+      ru: 'Наша жизнь кажется очень короткой',
+
+      en: 'Our life seems very short',
+
+    },
+
+    {
+
+      ru: 'Тот путь кажется короче',
+
+      en: 'That way seems shorter',
+
+    },
+
+    {
+
+      ru: 'Мой отец работает менеджером по продажам',
+
+      en: 'My father works as a sales manager',
+
+    },
+
+    {
+
+      ru: 'Две картины висят на стене',
+
+      en: 'Two pictures hand on the wall',
+
+    },
+
+    {
+
+      ru: 'Тот проект приносит им слишком мало денег',
+
+      en: 'That project brings them too little money',
+
+    },
+
+    {
+
+      ru: 'Моя мама выходит в отпуск несколько раз в год',
+
+      en: 'My mother go on holiday several times a year',
+
+    },
+
+    {
+
+      ru: 'Этот человек пытается найти новую работу',
+
+      en: 'This person tries to find a new job',
+
+    },
+
+    {
+
+      ru: 'Некоторые картины висят на стене',
+
+      en: 'Some pictures hand on the wall',
+
+    },
+
+    {
+
+      ru: 'Я вижу, что время действительно летит',
+
+      en: 'I see that time really flies',
+
+    },
+
+    {
+
+      ru: 'Этот интернет-магазин принимает кредитные карты',
+
+      en: 'This online store/shop takes credit cards',
+
+    },
+
+    {
+
+      ru: 'Этот онлайн-магазин работает двадцать четыре часа в сутки',
+
+      en: 'This online store/shop works twenty four hours a day',
+
+    },
+
+    {
+
+      ru: 'Мой друг пытается водить очень осторожно',
+
+      en: 'My friends tries to drive very carefully',
+
+    },
+
+    {
+
+      ru: 'Такие вещи часто случаются',
+
+      en: 'Such things often happen',
+
+    },
+
+    {
+
+      ru: 'Мой младший брат думает так',
+
+      en: 'My younger brother thinks so',
+
+    },
+
+    {
+
+      ru: 'Эта фраза означает следующее',
+
+      en: 'This phrase means the following',
+
+    },
+
+    {
+
+      ru: 'Мой отец обычно ездит в отпуск дважды в год',
+
+      en: 'My father usually goes on holiday twice a year',
+
+    },
+
+    {
+
+      ru: 'Тот плакат висит на стене',
+
+      en: 'That poster hangs on the wall',
+
+    },
+
+    {
+
+      ru: 'Эти часы стоят триста долларов',
+
+      en: 'This watch costs three hundred dollars',
+
+    },
+
+    {
+
+      ru: 'Моей сестре действительно нравятся эти туфли',
+
+      en: 'My sister really likes these shoes',
+
+    },
+
+    {
+
+      ru: 'У этого костюма хорошая цена',
+
+      en: 'This suit has a good price',
+
+    },
+
+    {
+
+      ru: 'Это очень модный костюм',
+
+      en: 'It is a very fashionable suit',
+
+    },
+
+    {
+
+      ru: 'Вся эта одежда по распродаже',
+
+      en: 'All these clothes are on sale',
+
+    },
+
+    {
+
+      ru: 'Её муж бухгалтер',
+
+      en: 'Her husband is an accountant',
+
+    },
+
+    {
+
+      ru: 'Эта женщина медсестра',
+
+      en: 'This woman is a nurse',
+
+    },
+
+    {
+
+      ru: 'Эти лекции такие скучные',
+
+      en: 'These lectures are so boring',
+
+    },
+
+    {
+
+      ru: 'Эти мужчины очень разочарованы',
+
+      en: 'This men are disappointed',
+
+    },
+
+    {
+
+      ru: 'Этот комментарий такой длинный',
+
+      en: 'This comment is so long',
+
+    },
+
+    {
+
+      ru: 'Эти женщины коллеги',
+
+      en: 'These women are colleagues',
+
+    },
+
+    {
+
+      ru: 'Эта лампа такая яркая',
+
+      en: 'This lamp is so bright',
+
+    },
+
+    {
+
+      ru: 'Я думаю, этот мальчик реальный гений',
+
+      en: 'I think this boy is a real genius',
+
+    },
+
+    {
+
+      ru: 'Моё главное хобби это изучёние иностранных языков',
+
+      en: 'My main hobby is learning foreign languages',
+
+    },
+
+    {
+
+      ru: 'Английский язык это моё основное хобби',
+
+      en: 'English is my main hobby',
+
+    },
+
+    {
+
+      ru: 'Эти выражения являются новыми для нас',
+
+      en: 'These expressions are new for us',
+
+    },
+
+    {
+
+      ru: 'Эта коробка действительно тяжёлая',
+
+      en: 'This box is really heavy',
+
+    },
+
+    {
+
+      ru: 'Моё полотенце в ванной',
+
+      en: 'My towel is in the bathroom',
+
+    },
+
+    {
+
+      ru: 'Эта игрушка в спальне',
+
+      en: 'This toy is in the badroom',
+
+    },
+
+    {
+
+      ru: 'Её основное хобби это садоводство',
+
+      en: 'Her main hobby is gardening',
+
+    },
+
+    {
+
+      ru: 'Ребёнок в школе',
+
+      en: 'The child is at school',
+
+    },
+
+    {
+
+      ru: 'Я думаю, что настоящее счастье намного больше, чем просто деньги',
+
+      en: 'I think that real happiness is much more than just money',
+
+    },
+
+    {
+
+      ru: 'У тебя блестящие идеи как всегда',
+
+      en: 'You have brilliant ideas as always',
+
+    },
+
+    {
+
+      ru: 'Многие люди говорят, что здоровье важнее денег',
+
+      en: 'Many people say that health is more important than money',
+
+    },
+
+    {
+
+      ru: 'Я вижу, ты полон энтузиазма',
+
+      en: 'I see you are full of enthusiasm',
+
+    },
+
+    {
+
+      ru: 'Это неинформативное видое',
+
+      en: 'It is an uninformative video',
+
+    },
+
+    {
+
+      ru: 'Это видео неинформативное',
+
+      en: 'This video is uninformative',
+
+    },
+
+    {
+
+      ru: 'Это информативное видое',
+
+      en: 'It is an informative video',
+
+    },
+
+    {
+
+      ru: 'Это видео информативное',
+
+      en: 'This video is informative',
+
+    },
+
+    {
+
+      ru: 'Работа полна ошибок',
+
+      en: 'The work is full of mistakes',
+
+    },
+
+    {
+
+      ru: 'Эти документы полны ошибок',
+
+      en: 'These documents are full of mistakes',
+
+    },
+
+    {
+
+      ru: 'Это солнечный день',
+
+      en: 'It is a sunny day',
+
+    },
+
+    {
+
+      ru: 'Студент очень амбициозный',
+
+      en: 'The student is very ambitious',
+
+    },
+
+    {
+
+      ru: 'Он очень амбициозный студент',
+
+      en: 'He is a very ambitious student',
+
+    },
+
+    {
+
+      ru: 'Женщина очень стройная',
+
+      en: 'The woman is very slim',
+
+    },
+
+    {
+
+      ru: 'Она очень стройная девушка',
+
+      en: 'She is a very slim girl',
+
+    },
+
+    {
+
+      ru: 'Шутка очень смешная',
+
+      en: 'The joke is very funny',
+
+    },
+
+    {
+
+      ru: 'Это дождливый день',
+
+      en: 'It is a rainy day',
+
+    },
+
+    {
+
+      ru: 'Видео такое неинформативное',
+
+      en: 'The video is so uninformative',
+
+    },
+
+    {
+
+      ru: 'Это очень красивая церковь',
+
+      en: 'It is a very beautiful church',
+
+    },
+
+    {
+
+      ru: 'Церковь очень красивя',
+
+      en: 'The church is very beautiful',
+
+    },
+
+    {
+
+      ru: 'Он очень опытный учитель',
+
+      en: 'He is a very experienced teacher',
+
+    },
+
+    {
+
+      ru: 'Дорога пустая',
+
+      en: 'The road is empty',
+
+    },
+
+    {
+
+      ru: 'Это очень узкая улица',
+
+      en: 'It is a very narrow street',
+
+    },
+
+    {
+
+      ru: 'Дети в кровати',
+
+      en: 'The children are in bed',
+
+    },
+
+    {
+
+      ru: 'Малыш в кровати',
+
+      en: 'The baby is in bed',
+
+    },
+
+    {
+
+      ru: 'Земля круглая',
+
+      en: 'The Earch is round',
+
+    },
+
+    {
+
+      ru: 'Я вижу солнце',
+
+      en: 'I see the sun',
+
+    },
+
+    {
+
+      ru: 'Я вижу луну',
+
+      en: 'I see the moon',
+
+    },
+
+    {
+
+      ru: 'Она очень опытный врач',
+
+      en: 'She is a very experienced doctor',
+
+    },
+
+    {
+
+      ru: 'Это пустая бутылка',
+
+      en: 'It is an empty bottle',
+
+    },
+
+    {
+
+      ru: 'Это полная бутылка',
+
+      en: 'It is a full bottle',
+
+    },
+
+    {
+
+      ru: 'Полиция там',
+
+      en: 'The police are there',
+
+    },
+
+    {
+
+      ru: 'Текст сложный для понимания',
+
+      en: 'The text is difficult for understanding',
+
+    },
+
+    {
+
+      ru: 'Ответ очевиден',
+
+      en: 'The answer is obvious',
+
+    },
+
+  ];
+
+  
+
+  console.log(OFFERS_A1_51_57.length);
+
+  
+  const findChoose = document.querySelector('.offers1__choose');
+  
+  const findBtnStart = document.querySelector('#offers1__start');
+  
+  const findContainerForContent = document.querySelector('.offers1__content-container');
+  const findQuestion = findContainerForContent.querySelector('.offers1__question');
+  const findRightAnswer = findContainerForContent.querySelector('.offers1__right-answer');
+  const findResponseField = findContainerForContent.querySelector('.offers1__responsefield');
+  const findAnswerArr = findContainerForContent.querySelector('.offers1__answer-arr');
+  
+  const findScore = findContainerForContent.querySelector('.offers1__score');
+  const findScoreTotal = findScore.querySelector('#offers1__score-total');
+  const findScoreValue = findScore.querySelector('#offers1__score-value');
+  
+  const findBtnResult = findContainerForContent.querySelector('#offers1__btn-check');
+  const findBtnNext = findContainerForContent.querySelector('#offers1__btn-next');
+  
+  const findTemplate = document.querySelector('#template-offers__one').content.querySelector('.offers1__word');
+  
+  const renderOffer = (word) => {
+    let currentElement = findTemplate.cloneNode(true);
+  
+    currentElement.textContent = word;
+    currentElement.id = word;
+  
+    return currentElement;
+  };
+  
+  const renderOfferStart = (numberOfQuestions, valueOfLanguage, offersArray) => {
+    let fragment = document.createDocumentFragment();
+    let offer = OFFERS_A1_51_57[offersArray[0]].ru.split(' ');
+    console.log(offer);
+    let mistakes = OFFERS_A1_51_57[offersArray[1]].ru.split(' ').concat(OFFERS_A1_51_57[offersArray[2]].ru.split(' '));
+    console.log(mistakes);
+    let arrOfferMistakes = offer.concat(mistakes);
+    console.log(arrOfferMistakes);
+  
+    for (let i = arrOfferMistakes.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      let t = arrOfferMistakes[i];
+      arrOfferMistakes[i] = arrOfferMistakes[j];
+      arrOfferMistakes[j] = t;
+    }
+    console.log(arrOfferMistakes);
+  
+    for (let i = 0; i < arrOfferMistakes.length; i++) {
+      fragment.append(renderOffer(arrOfferMistakes[i]));
+    }
+  
+    findAnswerArr.textContent = '';
+    findResponseField.textContent = '';
+    findRightAnswer.textContent = '';
+  
+    findAnswerArr.append(fragment);
+    findQuestion.textContent = OFFERS_A1_51_57[offersArray[0]].en;
+  };
+  
+  //includes offers1/offers1-getresult.js
+  const generateRandomNumbers = (count, arr) => {
+    let min = 0;
+    let max = arr.length - 1;
+    if (max - min + 1 < count) {
+      throw new Error('Невозможно сгенерировать указанное количество уникальных чисел');
+    }
+  
+    const numbers = [];
+    while (numbers.length < count) {
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      if (!numbers.includes(randomNumber)) {
+        numbers.push(randomNumber);
+      }
+    }
+    return numbers;
+  };
+  
+  let valueOfQuestions;
+  let scoreValue = 0;
+  let valueArr = [];
+  let offersArray;
+  
+  findBtnStart.addEventListener('click', () => {
+    const findValueOfQuestions = findChoose.querySelector('.offers1__choice:checked');
+    const findValueOfLanguage = findChoose.querySelector('.offers1__languages:checked');
+  
+    console.log(findValueOfQuestions.value + ' ' + findValueOfLanguage.value);
+    findChoose.style.display = 'none';
+    findContainerForContent.style.display = 'block';
+  
+    findBtnResult.classList.remove('visually-hidden');
+  
+    valueOfQuestions = findValueOfQuestions.value;
+  
+    offersArray = generateRandomNumbers(findValueOfQuestions.value, OFFERS_A1_51_57);
+    console.log(offersArray);
+    renderOfferStart(findValueOfQuestions.value, findValueOfLanguage.value, offersArray);
+  });
+  
+  findResponseField.addEventListener('click', (evt) => {
+    console.log(evt.target.id);
+    if (evt.target.id !== 'responsefield') {
+      findAnswerArr.append(evt.target);
+      const index = valueArr.indexOf(evt.target.textContent);
+      if (index > -1) {
+        valueArr.splice(index, 1);
+      }
+      console.log(valueArr);
+    }
+  });
+  
+  findAnswerArr.addEventListener('click', (evt) => {
+    console.log(evt.target.id);
+    if (evt.target.id !== 'answers') {
+      findResponseField.append(evt.target);
+      valueArr.push(evt.target.textContent);
+      console.log(valueArr);
+    }
+  });
+  
+  findBtnResult.addEventListener('click', (evt) => {
+    evt.preventDefault();
+  
+    const result = valueArr.join(' ');
+    console.log(result);
+    findScore.style.display = 'block';
+  
+    if (result === OFFERS_A1_51_57[offersArray[0]].ru) {
+      console.log('ДА');
+      findResponseField.style.backgroundColor = 'green';
+      scoreValue++;
+      findScoreValue.textContent = scoreValue;
+    } else {
+      console.log('НЕТ');
+      findResponseField.style.backgroundColor = 'red';
+      findRightAnswer.textContent = OFFERS_A1_51_57[offersArray[0]].ru;
+      findScoreValue.textContent = scoreValue;
+    }
+  
+    // if (valueOfQuestions > 1) {
+    //   valueOfQuestions--;
+    //   findBtnResult.classList.add('visually-hidden');
+    //   findBtnNext.classList.remove('visually-hidden');
+    // } else {
+    //   valueOfQuestions--;
+    //   findScore.style.display = 'block';
+    //   findScoreTotal.textContent = valueOfQuestions;
+    //   findScoreValue.textContent = scoreValue;
+    // }
+    // console.log(valueOfQuestions);
+  });
+  
+}
+
 if (document.querySelector('#template-transcription') !== null) {
   try {
     document.querySelector('.menu__link[href="transcription.html"]').dataset.current = 'true';
