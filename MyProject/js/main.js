@@ -1815,7 +1815,7 @@ if (document.querySelector('#template-offers__one') !== null) {
 
     {
 
-      ru: 'Этот год кажется очень сложным нам',
+      ru: 'Этот год кажется нам очень сложным',
 
       en: 'This year seems very difficult for us',
 
@@ -2438,7 +2438,10 @@ if (document.querySelector('#template-offers__one') !== null) {
   const findResponseField = findContainerForContent.querySelector('.offers1__responsefield');
   const findAnswerArr = findContainerForContent.querySelector('.offers1__answer-arr');
   
-  const findScore = findContainerForContent.querySelector('.offers1__score');
+  const findResults = document.querySelector('.offers1__results');
+  const findBtnAgain = findResults.querySelector('#offers1__btn-again');
+  
+  const findScore = document.querySelector('.offers1__score');
   const findScoreTotal = findScore.querySelector('#offers1__score-total');
   const findScoreValue = findScore.querySelector('#offers1__score-value');
   
@@ -2456,14 +2459,19 @@ if (document.querySelector('#template-offers__one') !== null) {
     return currentElement;
   };
   
-  const renderOfferStart = (numberOfQuestions, valueOfLanguage, offersArray) => {
+  const renderOfferStart = (numberOfQuestions, valueOfLanguage, offersArray, offersArrayMistakes) => {
     let fragment = document.createDocumentFragment();
-    let offer = OFFERS_A1_51_57[offersArray[0]].ru.split(' ');
-    console.log(offer);
-    let mistakes = OFFERS_A1_51_57[offersArray[1]].ru.split(' ').concat(OFFERS_A1_51_57[offersArray[2]].ru.split(' '));
-    console.log(mistakes);
+    let offer = OFFERS_A1_51_57[offersArray[renderСounters]].ru.split(' ');
+    findQuestion.textContent = OFFERS_A1_51_57[offersArray[renderСounters]].en;
+  
+    console.log('offer ' + offer);
+    let mistakes = OFFERS_A1_51_57[offersArrayMistakes[renderMistakesCounter]].ru
+      .split(' ')
+      .concat(OFFERS_A1_51_57[offersArrayMistakes[renderMistakesCounter + 1]].ru.split(' '));
+    console.log('mistakes ' + mistakes);
+    renderMistakesCounter += 2;
     let arrOfferMistakes = offer.concat(mistakes);
-    console.log(arrOfferMistakes);
+    console.log('arrOfferMistakes ' + arrOfferMistakes);
   
     for (let i = arrOfferMistakes.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
@@ -2482,7 +2490,6 @@ if (document.querySelector('#template-offers__one') !== null) {
     findRightAnswer.textContent = '';
   
     findAnswerArr.append(fragment);
-    findQuestion.textContent = OFFERS_A1_51_57[offersArray[0]].en;
   };
   
   //includes offers1/offers1-getresult.js
@@ -2503,10 +2510,33 @@ if (document.querySelector('#template-offers__one') !== null) {
     return numbers;
   };
   
-  let valueOfQuestions;
+  const generateRandomMistakes = (count, arr, generatedArr) => {
+    count = count * 3;
+    let min = 0;
+    let max = arr.length - 1;
+    if (max - min + 1 < count) {
+      throw new Error('Невозможно сгенерировать указанное количество уникальных чисел');
+    }
+  
+    const numbers = [];
+    while (numbers.length < count) {
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      if (!numbers.includes(randomNumber) && !generatedArr.includes(randomNumber)) {
+        numbers.push(randomNumber);
+      }
+    }
+    return numbers;
+  };
+  
+  let valueOfQuestions = 0;
+  let valueOfQuestionsAll = 0;
+  let valueOfLanguage;
   let scoreValue = 0;
   let valueArr = [];
   let offersArray;
+  let offersArrayMistakes;
+  let renderСounters = 0;
+  let renderMistakesCounter = 0;
   
   findBtnStart.addEventListener('click', () => {
     const findValueOfQuestions = findChoose.querySelector('.offers1__choice:checked');
@@ -2519,10 +2549,14 @@ if (document.querySelector('#template-offers__one') !== null) {
     findBtnResult.classList.remove('visually-hidden');
   
     valueOfQuestions = findValueOfQuestions.value;
+    valueOfQuestionsAll = findValueOfQuestions.value;
+    valueOfLanguage = findValueOfLanguage.value;
   
     offersArray = generateRandomNumbers(findValueOfQuestions.value, OFFERS_A1_51_57);
-    console.log(offersArray);
-    renderOfferStart(findValueOfQuestions.value, findValueOfLanguage.value, offersArray);
+    console.log('offersArray ' + offersArray);
+    offersArrayMistakes = generateRandomMistakes(findValueOfQuestions.value, OFFERS_A1_51_57, offersArray);
+    console.log('offersArrayMistakes ' + offersArrayMistakes);
+    renderOfferStart(findValueOfQuestions.value, findValueOfLanguage.value, offersArray, offersArrayMistakes);
   });
   
   findResponseField.addEventListener('click', (evt) => {
@@ -2550,32 +2584,55 @@ if (document.querySelector('#template-offers__one') !== null) {
     evt.preventDefault();
   
     const result = valueArr.join(' ');
+    valueArr = [];
     console.log(result);
-    findScore.style.display = 'block';
   
-    if (result === OFFERS_A1_51_57[offersArray[0]].ru) {
+    if (result === OFFERS_A1_51_57[offersArray[renderСounters]].ru) {
       console.log('ДА');
       findResponseField.style.backgroundColor = 'green';
       scoreValue++;
-      findScoreValue.textContent = scoreValue;
     } else {
       console.log('НЕТ');
       findResponseField.style.backgroundColor = 'red';
-      findRightAnswer.textContent = OFFERS_A1_51_57[offersArray[0]].ru;
+      findRightAnswer.textContent = OFFERS_A1_51_57[offersArray[renderСounters]].ru;
+    }
+  
+    if (valueOfQuestions > 1) {
+      valueOfQuestions--;
+      findBtnResult.classList.add('visually-hidden');
+      findBtnNext.classList.remove('visually-hidden');
+    } else {
+      valueOfQuestions--;
+      findResults.style.display = 'block';
+      findContainerForContent.style.display = 'none';
+      findScoreTotal.textContent = valueOfQuestionsAll;
       findScoreValue.textContent = scoreValue;
     }
   
-    // if (valueOfQuestions > 1) {
-    //   valueOfQuestions--;
-    //   findBtnResult.classList.add('visually-hidden');
-    //   findBtnNext.classList.remove('visually-hidden');
-    // } else {
-    //   valueOfQuestions--;
-    //   findScore.style.display = 'block';
-    //   findScoreTotal.textContent = valueOfQuestions;
-    //   findScoreValue.textContent = scoreValue;
-    // }
-    // console.log(valueOfQuestions);
+    renderСounters++;
+    console.log(valueOfQuestions);
+  });
+  
+  findBtnNext.addEventListener('click', (evt) => {
+    evt.preventDefault();
+  
+    renderOfferStart(valueOfQuestions, valueOfLanguage, offersArray, offersArrayMistakes);
+  
+    findBtnResult.classList.remove('visually-hidden');
+    findBtnNext.classList.add('visually-hidden');
+  
+    findResponseField.style.backgroundColor = '#fff';
+  });
+  
+  findBtnAgain.addEventListener('click', () => {
+    findChoose.style.display = 'block';
+    findContainerForContent.style.display = 'none';
+    findResults.style.display = 'none';
+  
+    valueOfQuestions = 0;
+    scoreValue = 0;
+    renderСounters = 0;
+    renderMistakesCounter = 0;
   });
   
 }
