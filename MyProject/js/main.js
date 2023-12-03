@@ -1289,7 +1289,7 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       ru: 'Эта вещь случается время от времени',
 
-      en: 'It happens from time to time',
+      en: 'This thing happens from time to time',
 
     },
 
@@ -1489,7 +1489,7 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       ru: 'Ты такой щедрый',
 
-      en: 'You ire so generous',
+      en: 'You are so generous',
 
     },
 
@@ -1537,7 +1537,7 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       ru: 'Это очень смешное видео',
 
-      en: 'It is very funny video',
+      en: 'It is a very funny video',
 
     },
 
@@ -2199,7 +2199,7 @@ if (document.querySelector('#template-offers__one') !== null) {
 
     {
 
-      ru: 'Это информативное видое',
+      ru: 'Это информативное видео',
 
       en: 'It is an informative video',
 
@@ -2437,6 +2437,7 @@ if (document.querySelector('#template-offers__one') !== null) {
   const findRightAnswer = findContainerForContent.querySelector('.offers1__right-answer');
   const findResponseField = findContainerForContent.querySelector('.offers1__responsefield');
   const findAnswerArr = findContainerForContent.querySelector('.offers1__answer-arr');
+  const findContainerBottomWrapper = findContainerForContent.querySelector('.content-container__bottom-wrapper');
   
   const findResults = document.querySelector('.offers1__results');
   const findBtnAgain = findResults.querySelector('#offers1__btn-again');
@@ -2459,15 +2460,38 @@ if (document.querySelector('#template-offers__one') !== null) {
     return currentElement;
   };
   
-  const renderOfferStart = (numberOfQuestions, valueOfLanguage, offersArray, offersArrayMistakes) => {
+  const renderOfferStart = (valueOfLanguage, offersArray, offersArrayMistakes) => {
     let fragment = document.createDocumentFragment();
-    let offer = OFFERS_A1_51_57[offersArray[renderСounters]].ru.split(' ');
-    findQuestion.textContent = OFFERS_A1_51_57[offersArray[renderСounters]].en;
+    console.log('render.js - renderOfferStart - valueOfLanguage: ' + valueOfLanguage);
   
+    switch (valueOfLanguage) {
+      case 'en':
+        languageQuestion = 'en';
+        languageAnswer = 'ru';
+        break;
+      case 'ru':
+        languageQuestion = 'ru';
+        languageAnswer = 'en';
+        break;
+      case 'all':
+        if (valueOfQuestions % 2 != 0) {
+          languageQuestion = 'ru';
+          languageAnswer = 'en';
+        } else {
+          languageQuestion = 'en';
+          languageAnswer = 'ru';
+        }
+        break;
+      default:
+        languageQuestion = 'en';
+    }
+  
+    let offer = OFFERS_A1_51_57[offersArray[renderСounters]][languageAnswer].split(' ');
+    findQuestion.textContent = OFFERS_A1_51_57[offersArray[renderСounters]][languageQuestion];
     console.log('offer ' + offer);
-    let mistakes = OFFERS_A1_51_57[offersArrayMistakes[renderMistakesCounter]].ru
+    let mistakes = OFFERS_A1_51_57[offersArrayMistakes[renderMistakesCounter]][languageAnswer]
       .split(' ')
-      .concat(OFFERS_A1_51_57[offersArrayMistakes[renderMistakesCounter + 1]].ru.split(' '));
+      .concat(OFFERS_A1_51_57[offersArrayMistakes[renderMistakesCounter + 1]][languageAnswer].split(' '));
     console.log('mistakes ' + mistakes);
     renderMistakesCounter += 2;
     let arrOfferMistakes = offer.concat(mistakes);
@@ -2479,6 +2503,7 @@ if (document.querySelector('#template-offers__one') !== null) {
       arrOfferMistakes[i] = arrOfferMistakes[j];
       arrOfferMistakes[j] = t;
     }
+  
     console.log(arrOfferMistakes);
   
     for (let i = 0; i < arrOfferMistakes.length; i++) {
@@ -2511,7 +2536,7 @@ if (document.querySelector('#template-offers__one') !== null) {
   };
   
   const generateRandomMistakes = (count, arr, generatedArr) => {
-    count = count * 3;
+    count = count * 2;
     let min = 0;
     let max = arr.length - 1;
     if (max - min + 1 < count) {
@@ -2537,14 +2562,18 @@ if (document.querySelector('#template-offers__one') !== null) {
   let offersArrayMistakes;
   let renderСounters = 0;
   let renderMistakesCounter = 0;
+  let languageQuestion;
+  let languageAnswer;
   
   findBtnStart.addEventListener('click', () => {
+    findResponseField.style.backgroundColor = '#fff';
     const findValueOfQuestions = findChoose.querySelector('.offers1__choice:checked');
     const findValueOfLanguage = findChoose.querySelector('.offers1__languages:checked');
   
     console.log(findValueOfQuestions.value + ' ' + findValueOfLanguage.value);
     findChoose.style.display = 'none';
     findContainerForContent.style.display = 'block';
+    findContainerBottomWrapper.style.display = 'block';
   
     findBtnResult.classList.remove('visually-hidden');
   
@@ -2556,7 +2585,7 @@ if (document.querySelector('#template-offers__one') !== null) {
     console.log('offersArray ' + offersArray);
     offersArrayMistakes = generateRandomMistakes(findValueOfQuestions.value, OFFERS_A1_51_57, offersArray);
     console.log('offersArrayMistakes ' + offersArrayMistakes);
-    renderOfferStart(findValueOfQuestions.value, findValueOfLanguage.value, offersArray, offersArrayMistakes);
+    renderOfferStart(findValueOfLanguage.value, offersArray, offersArrayMistakes);
   });
   
   findResponseField.addEventListener('click', (evt) => {
@@ -2587,14 +2616,14 @@ if (document.querySelector('#template-offers__one') !== null) {
     valueArr = [];
     console.log(result);
   
-    if (result === OFFERS_A1_51_57[offersArray[renderСounters]].ru) {
+    if (result === OFFERS_A1_51_57[offersArray[renderСounters]][languageAnswer]) {
       console.log('ДА');
       findResponseField.style.backgroundColor = 'green';
       scoreValue++;
     } else {
       console.log('НЕТ');
       findResponseField.style.backgroundColor = 'red';
-      findRightAnswer.textContent = OFFERS_A1_51_57[offersArray[renderСounters]].ru;
+      findRightAnswer.textContent = OFFERS_A1_51_57[offersArray[renderСounters]][languageAnswer];
     }
   
     if (valueOfQuestions > 1) {
@@ -2603,8 +2632,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       findBtnNext.classList.remove('visually-hidden');
     } else {
       valueOfQuestions--;
+      findContainerBottomWrapper.style.display = 'none';
       findResults.style.display = 'block';
-      findContainerForContent.style.display = 'none';
       findScoreTotal.textContent = valueOfQuestionsAll;
       findScoreValue.textContent = scoreValue;
     }
@@ -2616,7 +2645,7 @@ if (document.querySelector('#template-offers__one') !== null) {
   findBtnNext.addEventListener('click', (evt) => {
     evt.preventDefault();
   
-    renderOfferStart(valueOfQuestions, valueOfLanguage, offersArray, offersArrayMistakes);
+    renderOfferStart(valueOfLanguage, offersArray, offersArrayMistakes);
   
     findBtnResult.classList.remove('visually-hidden');
     findBtnNext.classList.add('visually-hidden');
