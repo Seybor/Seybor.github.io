@@ -1145,7 +1145,9 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       ru: 'Я обожаю читать книги вечером',
 
-      en: 'I enjoy reading books in the evenin',
+      en: 'I enjoy reading books in the evening',
+
+      tr: '[aɪ] [ɪnˈʤɔɪ] [ˈriːdɪŋ] [bʊks] [ɪn] [ði] [ˈiːvnɪŋ]',
 
     },
 
@@ -1155,6 +1157,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'I really like cycling',
 
+      tr: '[aɪ] [ˈrɪəli] [laɪk] [ˈsaɪklɪŋ]',
+
     },
 
     {
@@ -1162,6 +1166,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Это стоит два миллиона фунтов',
 
       en: 'It costs two million pounds',
+
+      tr: '[ɪt] [kɒsts] [tuː] [ˈmɪljən] [paʊndz]',
 
     },
 
@@ -1171,6 +1177,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'I have many millions of dollars',
 
+      tr: '[aɪ] [hæv] [ˈmɛni] [ˈmɪljənz] [ɒv] [ˈdɒləz]',
+
     },
 
     {
@@ -1178,6 +1186,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Я могу сделать это в начале',
 
       en: 'I can do it in the beginning',
+
+      tr: '[aɪ] [kæn] [duː] [ɪt] [ɪn] [ðə] [bɪˈɡɪnɪŋ]',
 
     },
 
@@ -1187,6 +1197,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'I can do it at the beginning of this day',
 
+      tr: '[aɪ] [kæn] [duː] [ɪt] [æt] [ðə] [bɪˈɡɪnɪŋ] [ɒv] [ðɪs] [deɪ]',
+
     },
 
     {
@@ -1194,6 +1206,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Мне нужен опыт работы вначале',
 
       en: 'I need work experience in the beginning',
+
+      tr: '[aɪ] [niːd] [wɜːk] [ɪkˈspɪəriəns] [ɪn] [ðə] [bɪˈɡɪnɪŋ]',
 
     },
 
@@ -1203,6 +1217,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'I need some work experience first of all',
 
+      tr: '[aɪ] [niːd] [sʌm] [wɜːk] [ɪkˈspɪəriəns] [fɜːst] [ɒv] [ɔːl]',
+
     },
 
     {
@@ -1210,6 +1226,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Я предпочитаю делать это в свободное время',
 
       en: 'I prefer to do it in my free time',
+
+      tr: '[aɪ] [priˈfɜː] [tuː] [duː] [ɪt] [ɪn] [maɪ] [friː] [taɪm]',
 
     },
 
@@ -1219,6 +1237,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'He perfectly understands it',
 
+      tr: '[hiː] [ˈpɜːfɪktli] [ˌʌndəˈstændz] [ɪt]',
+
     },
 
     {
@@ -1226,6 +1246,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Я тебя прекрасно понимаю',
 
       en: 'I perfectly understand you',
+
+      tr: '[aɪ] [ˈpɜːfɪktli] [ˌʌndəˈstænd] [juː]',
 
     },
 
@@ -1235,6 +1257,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'I perfectly understand how it works',
 
+      tr: '[aɪ] [ˈpɜːfɪktli] [ˌʌndəˈstænd] [haʊ] [ɪt] [wɜːks]',
+
     },
 
     {
@@ -1242,6 +1266,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Я прекрасно понимаю твою точку зрения',
 
       en: 'I perfectly understand your point of view',
+
+      tr: '[aɪ] [ˈpɜːfɪktli] [ˌʌndəˈstænd] [jɔː] [pɔɪnt] [ɒv] [vjuː]',
 
     },
 
@@ -1251,6 +1277,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'I want to speak English fluently',
 
+      tr: '[aɪ] [wɒnt] [tuː] [spiːk] [ˈɪŋɡlɪʃ] [ˈfluːəntli]',
+
     },
 
     {
@@ -1258,6 +1286,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Она хочет улучшить свой словарный запас в первую очередь',
 
       en: 'She wants to improve her vocabulary first of all',
+
+      tr: '[ʃiː] [wɒnts] [tuː] [ɪmˈpruːv] [hɜː] [vəˈkæbjəlᵊri] [fɜːst] [ɒv] [ɔːl]',
 
     },
 
@@ -1267,6 +1297,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'I see you often go abroad',
 
+      tr: '[aɪ] [siː] [juː] [ˈɒfᵊn] [ɡəʊ] [əˈbrɔːd]',
+
     },
 
     {
@@ -1274,6 +1306,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Он говорит по-английски без акцента',
 
       en: 'He speaks English without an accent',
+
+      tr: '[hiː] [spiːks] [ˈɪŋɡlɪʃ] [wɪˈðaʊt] [ən] [ˈæksᵊnt]',
 
     },
 
@@ -1283,6 +1317,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'It happens from time to time',
 
+      tr: '[ɪt] [ˈhæpᵊnz] [frɒm] [taɪm] [tuː] [taɪm]',
+
     },
 
     {
@@ -1290,6 +1326,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Эта вещь случается время от времени',
 
       en: 'This thing happens from time to time',
+
+      tr: '[ðɪs] [θɪŋ] [ˈhæpᵊnz] [frɒm] [taɪm] [tuː] [taɪm]',
 
     },
 
@@ -1299,6 +1337,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'He works in another department',
 
+      tr: '[hiː] [wɜːks] [ɪn] [əˈnʌðə] [dɪˈpɑːtmənt]',
+
     },
 
     {
@@ -1306,6 +1346,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Ей нравится классическая музыка',
 
       en: 'She really likes classical music',
+
+      tr: '[ʃiː] [ˈrɪəli] [laɪks] [ˈklæsɪkᵊl] [ˈmjuːzɪk]',
 
     },
 
@@ -1315,6 +1357,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'I go swimming twice a week',
 
+      tr: '[aɪ] [ɡəʊ] [ˈswɪmɪŋ] [twaɪs] [ə] [wiːk]',
+
     },
 
     {
@@ -1322,6 +1366,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Я хожу на плавание два раза в неделю',
 
       en: 'I go swimming two times a week',
+
+      tr: '[aɪ] [ɡəʊ] [ˈswɪmɪŋ] [tuː] [taɪmz] [ə] [wiːk]',
 
     },
 
@@ -1331,6 +1377,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'I go swimming two or three times a week',
 
+      tr: '[aɪ] [ɡəʊ] [ˈswɪmɪŋ] [tuː] [ɔː] [θriː] [taɪmz] [ə] [wiːk]',
+
     },
 
     {
@@ -1338,6 +1386,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Она работает продавцом магазина',
 
       en: 'She works as a shop assistant',
+
+      tr: '[ʃiː] [wɜːks] [æz] [ə] [ʃɒp] [əˈsɪstᵊnt]',
 
     },
 
@@ -1347,6 +1397,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'She often flies to the United States',
 
+      tr: '[ʃiː] [ˈɒfᵊn] [flaɪz] [tuː] [ðə] [juːˈnaɪtɪd] [steɪts]',
+
     },
 
     {
@@ -1354,6 +1406,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Я хожу в бассейн каждый день',
 
       en: 'I go to the swimming pool every day',
+
+      tr: '[aɪ] [ɡəʊ] [tuː] [ðə] [ˈswɪmɪŋ] [puːl] [ˈɛvri] [deɪ]',
 
     },
 
@@ -1363,6 +1417,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'He has a large family',
 
+      tr: '[hiː] [hæz] [ə] [lɑːʤ] [ˈfæmɪli]',
+
     },
 
     {
@@ -1370,6 +1426,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Я живу в большом городе',
 
       en: 'I live in a big city',
+
+      tr: '[aɪ] [lɪv] [ɪn] [ə] [bɪɡ] [ˈsɪti]',
 
     },
 
@@ -1379,6 +1437,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'He has financial problems',
 
+      tr: '[hiː] [hæz] [faɪˈnænʃᵊl] [ˈprɒbləmz]',
+
     },
 
     {
@@ -1386,6 +1446,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Я вижу реальный прогресс',
 
       en: 'I see real progress',
+
+      tr: '[aɪ] [siː] [rɪəl] [ˈprəʊɡrɛs]',
 
     },
 
@@ -1395,6 +1457,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'He has another idea',
 
+      tr: '[hiː] [hæz] [əˈnʌðər] [aɪˈdɪə]',
+
     },
 
     {
@@ -1402,6 +1466,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'У него есть странный вопрос',
 
       en: 'He has a strange question',
+
+      tr: '[hiː] [hæz] [ə] [streɪnʤ] [ˈkwɛsʧən]',
 
     },
 
@@ -1411,6 +1477,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'We learn basic rules in the beginning',
 
+      tr: '[wiː] [lɜːn] [ˈbeɪsɪk] [ruːlz] [ɪn] [ðə] [bɪˈɡɪnɪŋ]',
+
     },
 
     {
@@ -1418,6 +1486,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Он хочет иметь средний уровень для начала',
 
       en: 'He wants to have an intermediate level for a start',
+
+      tr: '[hiː] [wɒnts] [tuː] [hæv] [ən] [ˌɪntəˈmiːdiət] [ˈlɛvᵊl] [fɔːr] [ə] [stɑːt]',
 
     },
 
@@ -1427,6 +1497,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'She has a very pleasant smile',
 
+      tr: '[ʃiː] [hæz] [ə] [ˈvɛri] [ˈplɛzᵊnt] [smaɪl]',
+
     },
 
     {
@@ -1434,6 +1506,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Они гостеприимные люди',
 
       en: 'They are hospitable people',
+
+      tr: '[ðeɪ] [ɑː] [hɒˈspɪtəbᵊl] [ˈpiːpᵊl]',
 
     },
 
@@ -1443,6 +1517,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'She is smart',
 
+      tr: '[ʃiː] [ɪz] [smɑːt]',
+
     },
 
     {
@@ -1450,6 +1526,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Она умная девушка',
 
       en: 'She is a smart girl',
+
+      tr: '[ʃiː] [ɪz] [ə] [smɑːt] [ɡɜːl]',
 
     },
 
@@ -1459,6 +1537,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'It is long process',
 
+      tr: '[ɪt] [ɪz] [lɒŋ] [ˈprəʊsɛs]',
+
     },
 
     {
@@ -1466,6 +1546,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Это наше лучшее достижение',
 
       en: 'It is our best achievement',
+
+      tr: '[ɪt] [ɪz] [ˈaʊə] [bɛst] [əˈʧiːvmənt]',
 
     },
 
@@ -1475,6 +1557,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'I think it is a real achievement for us',
 
+      tr: '[aɪ] [θɪŋk] [ɪt] [ɪz] [ə] [rɪəl] [əˈʧiːvmənt] [fɔːr] [ʌs]',
+
     },
 
     {
@@ -1482,6 +1566,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Он умный парень',
 
       en: 'He is smart guy',
+
+      tr: '[hiː] [ɪz] [smɑːt] [ɡaɪ]',
 
     },
 
@@ -1491,6 +1577,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'You are so generous',
 
+      tr: '[juː] [ɑː] [səʊ] [ˈʤɛnᵊrəs]',
+
     },
 
     {
@@ -1498,6 +1586,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Он очень щедрый человек',
 
       en: 'He is a very generous person',
+
+      tr: '[hiː] [ɪz] [ə] [ˈvɛri] [ˈʤɛnᵊrəs] [ˈpɜːsᵊn]',
 
     },
 
@@ -1507,6 +1597,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'It is a very important detail',
 
+      tr: '[ɪt] [ɪz] [ə] [ˈvɛri] [ɪmˈpɔːtᵊnt] [ˈdiːteɪl]',
+
     },
 
     {
@@ -1514,6 +1606,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Это удивительный результат',
 
       en: 'It is an amazing result',
+
+      tr: '[ɪt] [ɪz] [ən] [əˈmeɪzɪŋ] [rɪˈzʌlt]',
 
     },
 
@@ -1523,6 +1617,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'She has an amazing voice',
 
+      tr: '[ʃiː] [hæz] [ən] [əˈmeɪzɪŋ] [vɔɪs]',
+
     },
 
     {
@@ -1530,6 +1626,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Я прекрасно понимаю, что это уникальная возможность',
 
       en: 'I perfectly understand that it is a unique opportunity',
+
+      tr: '[aɪ] [ˈpɜːfɪktli] [ˌʌndəˈstænd] [ðæt] [ɪt] [ɪz] [ə] [juːˈniːk] [ˌɒpəˈʧuːnəti]',
 
     },
 
@@ -1539,6 +1637,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'It is a very funny video',
 
+      tr: '[ɪt] [ɪz] [ə] [ˈvɛri] [ˈfʌni] [ˈvɪdiəʊ]',
+
     },
 
     {
@@ -1546,6 +1646,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Это очень большое число',
 
       en: 'It is a very large number',
+
+      tr: '[ɪt] [ɪz] [ə] [ˈvɛri] [lɑːʤ] [ˈnʌmbə]',
 
     },
 
@@ -1555,6 +1657,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'He is very kind to us',
 
+      tr: '[hiː] [ɪz] [ˈvɛri] [kaɪnd] [tuː] [ʌs]',
+
     },
 
     {
@@ -1562,6 +1666,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Я счастлив быть здесь',
 
       en: 'I am happy to be here',
+
+      tr: '[aɪ] [æm] [ˈhæpi] [tuː] [biː] [hɪə]',
 
     },
 
@@ -1571,6 +1677,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'They are from different countries',
 
+      tr: '[ðeɪ] [ɑː] [frɒm] [ˈdɪfᵊrᵊnt] [ˈkʌntriz]',
+
     },
 
     {
@@ -1578,6 +1686,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Он думает иначе',
 
       en: 'He thinks differently',
+
+      tr: '[hiː] [θɪŋks] [ˈdɪfᵊrᵊntli]',
 
     },
 
@@ -1587,6 +1697,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'You have a good job',
 
+      tr: '[juː] [hæv] [ə] [ɡʊd] [ʤɒb]',
+
     },
 
     {
@@ -1594,6 +1706,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Он боится этого',
 
       en: 'He is afraid of it',
+
+      tr: '[hiː] [ɪz] [əˈfreɪd] [ɒv] [ɪt]',
 
     },
 
@@ -1603,6 +1717,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'She comes from Los Angeles',
 
+      tr: '[ʃiː] [kʌmz] [frɒm] [lɒs] [ˈeɪnʤᵊlz]',
+
     },
 
     {
@@ -1610,6 +1726,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Он родом из Нью Йорка',
 
       en: 'He comes from New York',
+
+      tr: '[hiː] [kʌmz] [frɒm] [njuː] [jɔːk]',
 
     },
 
@@ -1619,6 +1737,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'She is so tired',
 
+      tr: '[ʃiː] [ɪz] [səʊ] [taɪəd]',
+
     },
 
     {
@@ -1626,6 +1746,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Я здесь в данный момент',
 
       en: 'I am here at the moment',
+
+      tr: '[aɪ] [æm] [hɪər] [æt] [ðə] [ˈməʊmənt]',
 
     },
 
@@ -1635,6 +1757,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'She lives in a lovely place',
 
+      tr: '[ʃiː] [lɪvz] [ɪn] [ə] [ˈlʌvli] [pleɪs]',
+
     },
 
     {
@@ -1642,6 +1766,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Это прекрасное место',
 
       en: 'It is a lovely place',
+
+      tr: '[ɪt] [ɪz] [ə] [ˈlʌvli] [pleɪs]',
 
     },
 
@@ -1651,6 +1777,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'It is an extremely important think',
 
+      tr: '[ɪt] [ɪz] [ən] [ɪkˈstriːmli] [ɪmˈpɔːtᵊnt] [θɪŋk]',
+
     },
 
     {
@@ -1658,6 +1786,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Это чрезвычайно сложная вещь',
 
       en: 'It is an extremely difficult think',
+
+      tr: '[ɪt] [ɪz] [ən] [ɪkˈstriːmli] [ˈdɪfɪkᵊlt] [θɪŋk]',
 
     },
 
@@ -1667,6 +1797,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'It is extremely important',
 
+      tr: '[ɪt] [ɪz] [ɪkˈstriːmli] [ɪmˈpɔːtᵊnt]',
+
     },
 
     {
@@ -1674,6 +1806,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Он говорит, что это чрезвычайно важно для всех нас',
 
       en: 'He says that it is extremely important for all of us',
+
+      tr: '[hiː] [sɛz] [ðæt] [ɪt] [ɪz] [ɪkˈstriːmli] [ɪmˈpɔːtᵊnt] [fɔːr] [ɔːl] [ɒv] [ʌs]',
 
     },
 
@@ -1683,6 +1817,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'It seems the best solution to this problem',
 
+      tr: '[ɪt] [siːmz] [ðə] [bɛst] [səˈluːʃᵊn] [tuː] [ðɪs] [ˈprɒbləm]',
+
     },
 
     {
@@ -1690,6 +1826,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Мне нужно найти решение это проблемы',
 
       en: 'I need to find a solution to this problem',
+
+      tr: '[aɪ] [niːd] [tuː] [faɪnd] [ə] [səˈluːʃᵊn] [tuː] [ðɪs] [ˈprɒbləm]',
 
     },
 
@@ -1699,6 +1837,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'It seems the best decision',
 
+      tr: '[ɪt] [siːmz] [ðə] [bɛst] [dɪˈsɪʒᵊn]',
+
     },
 
     {
@@ -1706,6 +1846,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Это типичная ошибка изучающих английский язык',
 
       en: 'It is a typical mistake of English learners',
+
+      tr: '[ɪt] [ɪz] [ə] [ˈtɪpɪkᵊl] [mɪˈsteɪk] [ɒv] [ˈɪŋɡlɪʃ] [ˈlɜːnəz]',
 
     },
 
@@ -1715,6 +1857,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'It is the most typical mistake of English learners',
 
+      tr: '[ɪt] [ɪz] [ðə] [məʊst] [ˈtɪpɪkᵊl] [mɪˈsteɪk] [ɒv] [ˈɪŋɡlɪʃ] [ˈlɜːnəz]',
+
     },
 
     {
@@ -1722,6 +1866,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Это самая распространённая ошибка изучающих английский язык',
 
       en: 'It is the most common mistake of English learners',
+
+      tr: '[ɪt] [ɪz] [ðə] [məʊst] [ˈkɒmən] [mɪˈsteɪk] [ɒv] [ˈɪŋɡlɪʃ] [ˈlɜːnəz]',
 
     },
 
@@ -1731,6 +1877,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'It lies on the roof',
 
+      tr: '[ɪt] [laɪz] [ɒn] [ðə] [ruːf]',
+
     },
 
     {
@@ -1738,6 +1886,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Я думаю, это пустая трата времени',
 
       en: 'I think it is a waste of time',
+
+      tr: '[aɪ] [θɪŋk] [ɪt] [ɪz] [ə] [weɪst] [ɒv] [taɪm]',
 
     },
 
@@ -1747,6 +1897,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'It seems a waste of time for me',
 
+      tr: '[ɪt] [siːmz] [ə] [weɪst] [ɒv] [taɪm] [fɔː] [miː]',
+
     },
 
     {
@@ -1754,6 +1906,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Я думаю, это действительно ужасно',
 
       en: 'I think it is really terrible',
+
+      tr: '[aɪ] [θɪŋk] [ɪt] [ɪz] [ˈrɪəli] [ˈtɛrəbᵊl]',
 
     },
 
@@ -1763,6 +1917,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'We can see it in the official document',
 
+      tr: '[wiː] [kæn] [siː] [ɪt] [ɪn] [ði] [əˈfɪʃᵊl] [ˈdɒkjəmənt]',
+
     },
 
     {
@@ -1770,6 +1926,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Та игра кажется такой интересной',
 
       en: 'That game seems so interesting',
+
+      tr: '[ðæt] [ɡeɪm] [siːmz] [səʊ] [ˈɪntrɛstɪŋ]',
 
     },
 
@@ -1779,6 +1937,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'This men look very weak',
 
+      tr: '[ðɪs] [mɛn] [lʊk] [ˈvɛri] [wiːk]',
+
     },
 
     {
@@ -1786,6 +1946,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Эта вещь очень сильно мотивирует меня',
 
       en: 'This thing motivates me greatly',
+
+      tr: '[ðɪs] [θɪŋ] [ˈməʊtɪveɪts] [miː] [ˈɡreɪtli]',
 
     },
 
@@ -1795,6 +1957,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'My brother likes this music, too',
 
+      tr: '[maɪ] [ˈbrʌðə] [laɪks] [ðɪs] [ˈmjuːzɪk], [tuː]',
+
     },
 
     {
@@ -1802,6 +1966,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Моя сестра работает ветеринаром',
 
       en: 'My sister work as a vet',
+
+      tr: '[maɪ] [ˈsɪstə] [wɜːk] [æz] [ə] [vɛt]',
 
     },
 
@@ -1811,6 +1977,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'His sister has a boyfriend',
 
+      tr: '[hɪz] [ˈsɪstə] [hæz] [ə] [ˈbɔɪˌfrɛnd]',
+
     },
 
     {
@@ -1818,6 +1986,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Этот год кажется нам очень сложным',
 
       en: 'This year seems very difficult for us',
+
+      tr: '[ðɪs] [jɪə] [siːmz] [ˈvɛri] [ˈdɪfɪkᵊlt] [fɔːr] [ʌs]',
 
     },
 
@@ -1827,13 +1997,17 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'My brother works as a freelancer',
 
+      tr: '[maɪ] [ˈbrʌðə] [wɜːks] [æz] [ə] [ˈfriːˌlɑːnsə]',
+
     },
 
     {
 
       ru: 'Мои друзья часто говорят мне эти вещи',
 
-      en: 'My friends oftern tell me these things',
+      en: 'My friends often tell me these things',
+
+      tr: '[maɪ] [frɛndz] [ˈɒfᵊn] [tɛl] [miː] [ðiːz] [θɪŋz]',
 
     },
 
@@ -1843,6 +2017,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'These women look so beautiful',
 
+      tr: '[ðiːz] [ˈwɪmɪn] [lʊk] [səʊ] [ˈbjuːtɪfᵊl]',
+
     },
 
     {
@@ -1850,6 +2026,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Наша жизнь кажется очень короткой',
 
       en: 'Our life seems very short',
+
+      tr: '[ˈaʊə] [laɪf] [siːmz] [ˈvɛri] [ʃɔːt]',
 
     },
 
@@ -1859,6 +2037,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'That way seems shorter',
 
+      tr: '[ðæt] [weɪ] [siːmz] [ˈʃɔːtə]',
+
     },
 
     {
@@ -1866,6 +2046,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Мой отец работает менеджером по продажам',
 
       en: 'My father works as a sales manager',
+
+      tr: '[maɪ] [ˈfɑːðə] [wɜːks] [æz] [ə] [seɪlz] [ˈmænɪʤə]',
 
     },
 
@@ -1875,6 +2057,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'Two pictures hand on the wall',
 
+      tr: '[tuː] [ˈpɪkʧəz] [hænd] [ɒn] [ðə] [wɔːl]',
+
     },
 
     {
@@ -1882,6 +2066,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Тот проект приносит им слишком мало денег',
 
       en: 'That project brings them too little money',
+
+      tr: '[ðæt] [ˈprɒʤɛkt] [brɪŋz] [ðɛm] [tuː] [ˈlɪtᵊl] [ˈmʌni]',
 
     },
 
@@ -1891,6 +2077,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'My mother go on holiday several times a year',
 
+      tr: '[maɪ] [ˈmʌðə] [ɡəʊ] [ɒn] [ˈhɒlədeɪ] [ˈsɛvᵊrᵊl] [taɪmz] [ə] [jɪə]',
+
     },
 
     {
@@ -1898,6 +2086,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Этот человек пытается найти новую работу',
 
       en: 'This person tries to find a new job',
+
+      tr: '[ðɪs] [ˈpɜːsᵊn] [traɪz] [tuː] [faɪnd] [ə] [njuː] [ʤɒb]',
 
     },
 
@@ -1907,6 +2097,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'Some pictures hand on the wall',
 
+      tr: '[sʌm] [ˈpɪkʧəz] [hænd] [ɒn] [ðə] [wɔːl]',
+
     },
 
     {
@@ -1914,6 +2106,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Я вижу, что время действительно летит',
 
       en: 'I see that time really flies',
+
+      tr: '[aɪ] [siː] [ðæt] [taɪm] [ˈrɪəli] [flaɪz]',
 
     },
 
@@ -1923,6 +2117,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'This online store/shop takes credit cards',
 
+      tr: '[ðɪs] [ˈɒnˌlaɪn] [stɔː]/[ʃɒp] [teɪks] [ˈkrɛdɪt] [kɑːdz]',
+
     },
 
     {
@@ -1930,6 +2126,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Этот онлайн-магазин работает двадцать четыре часа в сутки',
 
       en: 'This online store/shop works twenty four hours a day',
+
+      tr: '[ðɪs] [ˈɒnˌlaɪn] [stɔː]/[ʃɒp] [wɜːks] [ˈtwɛnti] [fɔːr] [aʊəz] [ə] [deɪ]',
 
     },
 
@@ -1939,6 +2137,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'My friends tries to drive very carefully',
 
+      tr: '[maɪ] [frɛndz] [traɪz] [tuː] [draɪv] [ˈvɛri] [ˈkeəfᵊli]',
+
     },
 
     {
@@ -1946,6 +2146,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Такие вещи часто случаются',
 
       en: 'Such things often happen',
+
+      tr: '[sʌʧ] [θɪŋz] [ˈɒfᵊn] [ˈhæpᵊn]',
 
     },
 
@@ -1955,6 +2157,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'My younger brother thinks so',
 
+      tr: '[maɪ] [ˈjʌŋə] [ˈbrʌðə] [θɪŋks] [səʊ]',
+
     },
 
     {
@@ -1962,6 +2166,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Эта фраза означает следующее',
 
       en: 'This phrase means the following',
+
+      tr: '[ðɪs] [freɪz] [miːnz] [ðə] [ˈfɒləʊɪŋ]',
 
     },
 
@@ -1971,6 +2177,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'My father usually goes on holiday twice a year',
 
+      tr: '[maɪ] [ˈfɑːðə] [ˈjuːʒʊəli] [ɡəʊz] [ɒn] [ˈhɒlədeɪ] [twaɪs] [ə] [jɪə]',
+
     },
 
     {
@@ -1978,6 +2186,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Тот плакат висит на стене',
 
       en: 'That poster hangs on the wall',
+
+      tr: '[ðæt] [ˈpəʊstə] [hæŋz] [ɒn] [ðə] [wɔːl]',
 
     },
 
@@ -1987,6 +2197,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'This watch costs three hundred dollars',
 
+      tr: '[ðɪs] [wɒʧ] [kɒsts] [θriː] [ˈhʌndrəd] [ˈdɒləz]',
+
     },
 
     {
@@ -1994,6 +2206,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Моей сестре действительно нравятся эти туфли',
 
       en: 'My sister really likes these shoes',
+
+      tr: '[maɪ] [ˈsɪstə] [ˈrɪəli] [laɪks] [ðiːz] [ʃuːz]',
 
     },
 
@@ -2003,6 +2217,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'This suit has a good price',
 
+      tr: '[ðɪs] [suːt] [hæz] [ə] [ɡʊd] [praɪs]',
+
     },
 
     {
@@ -2010,6 +2226,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Это очень модный костюм',
 
       en: 'It is a very fashionable suit',
+
+      tr: '[ɪt] [ɪz] [ə] [ˈvɛri] [ˈfæʃᵊnəbᵊl] [suːt]',
 
     },
 
@@ -2019,6 +2237,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'All these clothes are on sale',
 
+      tr: '[ɔːl] [ðiːz] [kləʊðz] [ɑːr] [ɒn] [seɪl]',
+
     },
 
     {
@@ -2026,6 +2246,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Её муж бухгалтер',
 
       en: 'Her husband is an accountant',
+
+      tr: '[hɜː] [ˈhʌzbənd] [ɪz] [ən] [əˈkaʊntᵊnt]',
 
     },
 
@@ -2035,6 +2257,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'This woman is a nurse',
 
+      tr: '[ðɪs] [ˈwʊmən] [ɪz] [ə] [nɜːs]',
+
     },
 
     {
@@ -2042,6 +2266,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Эти лекции такие скучные',
 
       en: 'These lectures are so boring',
+
+      tr: '[ðiːz] [ˈlɛkʧəz] [ɑː] [səʊ] [ˈbɔːrɪŋ]',
 
     },
 
@@ -2051,6 +2277,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'This men are disappointed',
 
+      tr: '[ðɪs] [mɛn] [ɑː] [ˌdɪsəˈpɔɪntɪd]',
+
     },
 
     {
@@ -2058,6 +2286,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Этот комментарий такой длинный',
 
       en: 'This comment is so long',
+
+      tr: '[ðɪs] [ˈkɒmɛnt] [ɪz] [səʊ] [lɒŋ]',
 
     },
 
@@ -2067,6 +2297,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'These women are colleagues',
 
+      tr: '[ðiːz] [ˈwɪmɪn] [ɑː] [ˈkɒliːɡz]',
+
     },
 
     {
@@ -2074,6 +2306,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Эта лампа такая яркая',
 
       en: 'This lamp is so bright',
+
+      tr: '[ðɪs] [læmp] [ɪz] [səʊ] [braɪt]',
 
     },
 
@@ -2083,6 +2317,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'I think this boy is a real genius',
 
+      tr: '[aɪ] [θɪŋk] [ðɪs] [bɔɪ] [ɪz] [ə] [rɪəl] [ˈʤiːniəs]',
+
     },
 
     {
@@ -2090,6 +2326,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Моё главное хобби это изучёние иностранных языков',
 
       en: 'My main hobby is learning foreign languages',
+
+      tr: '',
 
     },
 
@@ -2099,6 +2337,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'English is my main hobby',
 
+      tr: '[ˈɪŋɡlɪʃ] [ɪz] [maɪ] [meɪn] [ˈhɒbi]',
+
     },
 
     {
@@ -2106,6 +2346,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Эти выражения являются новыми для нас',
 
       en: 'These expressions are new for us',
+
+      tr: '[ðiːz] [ɪkˈsprɛʃᵊnz] [ɑː] [njuː] [fɔːr] [ʌs]',
 
     },
 
@@ -2115,6 +2357,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'This box is really heavy',
 
+      tr: '[ðɪs] [bɒks] [ɪz] [ˈrɪəli] [ˈhɛvi]',
+
     },
 
     {
@@ -2123,13 +2367,17 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'My towel is in the bathroom',
 
+      tr: '[maɪ] [taʊəl] [ɪz] [ɪn] [ðə] [ˈbɑːθruːm]',
+
     },
 
     {
 
       ru: 'Эта игрушка в спальне',
 
-      en: 'This toy is in the badroom',
+      en: 'This toy is in the bedroom',
+
+      tr: '[ðɪs] [tɔɪ] [ɪz] [ɪn] [ðə] [ˈbɛdruːm]',
 
     },
 
@@ -2139,6 +2387,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'Her main hobby is gardening',
 
+      tr: '[hɜː] [meɪn] [ˈhɒbi] [ɪz] [ˈɡɑːdnɪŋ]',
+
     },
 
     {
@@ -2146,6 +2396,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Ребёнок в школе',
 
       en: 'The child is at school',
+
+      tr: '[ðə] [ʧaɪld] [ɪz] [æt] [skuːl]',
 
     },
 
@@ -2155,6 +2407,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'I think that real happiness is much more than just money',
 
+      tr: '[aɪ] [θɪŋk] [ðæt] [rɪəl] [ˈhæpɪnəs] [ɪz] [mʌʧ] [mɔː] [ðæn] [ʤʌst] [ˈmʌni]',
+
     },
 
     {
@@ -2162,6 +2416,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'У тебя блестящие идеи как всегда',
 
       en: 'You have brilliant ideas as always',
+
+      tr: '[juː] [hæv] [ˈbrɪljənt] [aɪˈdɪəz] [æz] [ˈɔːlweɪz]',
 
     },
 
@@ -2171,6 +2427,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'Many people say that health is more important than money',
 
+      tr: '[ˈmɛni] [ˈpiːpᵊl] [seɪ] [ðæt] [hɛlθ] [ɪz] [mɔːr] [ɪmˈpɔːtᵊnt] [ðæn] [ˈmʌni]',
+
     },
 
     {
@@ -2178,6 +2436,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Я вижу, ты полон энтузиазма',
 
       en: 'I see you are full of enthusiasm',
+
+      tr: '[aɪ] [siː] [juː] [ɑː] [fʊl] [ɒv] [ɪnˈθjuːziæzᵊm]',
 
     },
 
@@ -2187,6 +2447,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'It is an uninformative video',
 
+      tr: '[ɪt] [ɪz] [ən] [ˌʌnɪnˈfɔːmətɪv] [ˈvɪdiəʊ]',
+
     },
 
     {
@@ -2194,6 +2456,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Это видео неинформативное',
 
       en: 'This video is uninformative',
+
+      tr: '[ðɪs] [ˈvɪdiəʊ] [ɪz] [ˌʌnɪnˈfɔːmətɪv]',
 
     },
 
@@ -2203,6 +2467,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'It is an informative video',
 
+      tr: '[ɪt] [ɪz] [ən] [ɪnˈfɔːmətɪv] [ˈvɪdiəʊ]',
+
     },
 
     {
@@ -2210,6 +2476,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Это видео информативное',
 
       en: 'This video is informative',
+
+      tr: '[ðɪs] [ˈvɪdiəʊ] [ɪz] [ɪnˈfɔːmətɪv]',
 
     },
 
@@ -2219,6 +2487,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'The work is full of mistakes',
 
+      tr: '[ðə] [wɜːk] [ɪz] [fʊl] [ɒv] [mɪˈsteɪks]',
+
     },
 
     {
@@ -2226,6 +2496,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Эти документы полны ошибок',
 
       en: 'These documents are full of mistakes',
+
+      tr: '[ðiːz] [ˈdɒkjəmənts] [ɑː] [fʊl] [ɒv] [mɪˈsteɪks]',
 
     },
 
@@ -2235,6 +2507,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'It is a sunny day',
 
+      tr: '[ɪt] [ɪz] [ə] [ˈsʌni] [deɪ]',
+
     },
 
     {
@@ -2242,6 +2516,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Студент очень амбициозный',
 
       en: 'The student is very ambitious',
+
+      tr: '[ðə] [ˈstjuːdᵊnt] [ɪz] [ˈvɛri] [æmˈbɪʃəs]',
 
     },
 
@@ -2251,6 +2527,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'He is a very ambitious student',
 
+      tr: '[hiː] [ɪz] [ə] [ˈvɛri] [æmˈbɪʃəs] [ˈstjuːdᵊnt]',
+
     },
 
     {
@@ -2258,6 +2536,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Женщина очень стройная',
 
       en: 'The woman is very slim',
+
+      tr: '[ðə] [ˈwʊmən] [ɪz] [ˈvɛri] [slɪm]',
 
     },
 
@@ -2267,6 +2547,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'She is a very slim girl',
 
+      tr: '[ʃiː] [ɪz] [ə] [ˈvɛri] [slɪm] [ɡɜːl]',
+
     },
 
     {
@@ -2274,6 +2556,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Шутка очень смешная',
 
       en: 'The joke is very funny',
+
+      tr: '[ðə] [ʤəʊk] [ɪz] [ˈvɛri] [ˈfʌni]',
 
     },
 
@@ -2283,6 +2567,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'It is a rainy day',
 
+      tr: '[ɪt] [ɪz] [ə] [ˈreɪni] [deɪ]',
+
     },
 
     {
@@ -2290,6 +2576,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Видео такое неинформативное',
 
       en: 'The video is so uninformative',
+
+      tr: '[ðə] [ˈvɪdiəʊ] [ɪz] [səʊ] [ˌʌnɪnˈfɔːmətɪv]',
 
     },
 
@@ -2299,6 +2587,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'It is a very beautiful church',
 
+      tr: '[ɪt] [ɪz] [ə] [ˈvɛri] [ˈbjuːtɪfᵊl] [ʧɜːʧ]',
+
     },
 
     {
@@ -2306,6 +2596,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Церковь очень красивя',
 
       en: 'The church is very beautiful',
+
+      tr: '[ðə] [ʧɜːʧ] [ɪz] [ˈvɛri] [ˈbjuːtɪfᵊl]',
 
     },
 
@@ -2315,6 +2607,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'He is a very experienced teacher',
 
+      tr: '[hiː] [ɪz] [ə] [ˈvɛri] [ɪkˈspɪəriənst] [ˈtiːʧə]',
+
     },
 
     {
@@ -2322,6 +2616,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Дорога пустая',
 
       en: 'The road is empty',
+
+      tr: '[ðə] [rəʊd] [ɪz] [ˈɛmpti]',
 
     },
 
@@ -2331,6 +2627,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'It is a very narrow street',
 
+      tr: '[ɪt] [ɪz] [ə] [ˈvɛri] [ˈnærəʊ] [striːt]',
+
     },
 
     {
@@ -2338,6 +2636,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Дети в кровати',
 
       en: 'The children are in bed',
+
+      tr: '[ðə] [ˈʧɪldrən] [ɑːr] [ɪn] [bɛd]',
 
     },
 
@@ -2347,13 +2647,17 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'The baby is in bed',
 
+      tr: '[ðə] [ˈbeɪbi] [ɪz] [ɪn] [bɛd]',
+
     },
 
     {
 
       ru: 'Земля круглая',
 
-      en: 'The Earch is round',
+      en: 'The Earth is round',
+
+      tr: '[ði] [ɜːθ] [ɪz] [raʊnd]',
 
     },
 
@@ -2363,6 +2667,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'I see the sun',
 
+      tr: '[aɪ] [siː] [ðə] [sʌn]',
+
     },
 
     {
@@ -2370,6 +2676,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Я вижу луну',
 
       en: 'I see the moon',
+
+      tr: '[aɪ] [siː] [ðə] [muːn]',
 
     },
 
@@ -2379,6 +2687,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'She is a very experienced doctor',
 
+      tr: '[ʃiː] [ɪz] [ə] [ˈvɛri] [ɪkˈspɪəriənst] [ˈdɒktə]',
+
     },
 
     {
@@ -2386,6 +2696,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Это пустая бутылка',
 
       en: 'It is an empty bottle',
+
+      tr: '[ɪt] [ɪz] [ən] [ˈɛmpti] [ˈbɒtᵊl]',
 
     },
 
@@ -2395,6 +2707,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'It is a full bottle',
 
+      tr: '[ɪt] [ɪz] [ə] [fʊl] [ˈbɒtᵊl]',
+
     },
 
     {
@@ -2402,6 +2716,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Полиция там',
 
       en: 'The police are there',
+
+      tr: '[ðə] [pəˈliːs] [ɑː] [ðeə]',
 
     },
 
@@ -2411,6 +2727,8 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       en: 'The text is difficult for understanding',
 
+      tr: '[ðə] [tɛkst] [ɪz] [ˈdɪfɪkᵊlt] [fɔːr] [ˌʌndəˈstændɪŋ]',
+
     },
 
     {
@@ -2418,6 +2736,8 @@ if (document.querySelector('#template-offers__one') !== null) {
       ru: 'Ответ очевиден',
 
       en: 'The answer is obvious',
+
+      tr: '[ði] [ˈɑːnsər] [ɪz] [ˈɒbviəs]',
 
     },
 
