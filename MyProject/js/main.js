@@ -2153,7 +2153,7 @@ if (document.querySelector('#template-offers__one') !== null) {
 
     {
 
-      ru: 'Мой младший брат думает так',
+      ru: 'Мой младший брат так думает',
 
       en: 'My younger brother thinks so',
 
@@ -2802,8 +2802,25 @@ if (document.querySelector('#template-offers__one') !== null) {
           languageAnswer = 'ru';
         }
         break;
+      case 'tr-en':
+        languageQuestion = 'tr';
+        languageAnswer = 'en';
+        break;
+      case 'en-tr':
+        languageQuestion = 'en';
+        languageAnswer = 'tr';
+        break;
+      case 'tr-ru':
+        languageQuestion = 'tr';
+        languageAnswer = 'ru';
+        break;
+      case 'ru-tr':
+        languageQuestion = 'ru';
+        languageAnswer = 'tr';
+        break;
       default:
         languageQuestion = 'en';
+        languageAnswer = 'ru';
     }
   
     let offer = OFFERS_A1_51_57[offersArray[renderСounters]][languageAnswer].split(' ');
