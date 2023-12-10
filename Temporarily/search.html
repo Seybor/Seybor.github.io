@@ -30,19 +30,42 @@
 			border: 1px solid red;
 		}
 
-		a {
-			font-size: clamp(24px, 10vw, 48px);
+		.input {
+			width: 200px;
+			padding: 12px;
 		}
 
+		.find {
+			display: block;
+
+			padding: 6px;
+		}
+
+		.similar {
+			padding: 12px 24px;
+			border: 1px solid red;
+		}
+
+		.result {
+			padding: 6px;
+			border: 1px solid green;
+		}
 	</style>
 </head>
 
 <body>
 	<div class="wrapper">
-		<a href="code.html">Code</a>
-		<a href="search.html">Search</a>
+		<ul class="similar">
+
+		</ul>
+		<input class="input" type="text" placeholder="Введите текст">
+		<button class="find">Найти</button>
+		<span class="result">Результат</span>
 	</div>
 
+
 </body>
+
+<script src="scripts/search.js"></script>
 
 </html>

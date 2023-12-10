@@ -30,19 +30,31 @@
 			border: 1px solid red;
 		}
 
-		a {
-			font-size: clamp(24px, 10vw, 48px);
+		.input {
+			width: 200px;
+			padding: 12px;
 		}
 
+		.check {
+			display: block;
+
+			padding: 6px;
+		}
 	</style>
 </head>
 
 <body>
 	<div class="wrapper">
-		<a href="code.html">Code</a>
-		<a href="search.html">Search</a>
+		<input class="input" type="text" placeholder="Введите текст" maxlength="20">
+		<button class="check">Зашифровать</button>
+		<span class="code">Зашифрованное слово</span>
+		<span class="number">Числовое представление</span>
+		<span class="again">Проверка</span>
 	</div>
 
+
 </body>
+
+<script src="scripts/main.js"></script>
 
 </html>
