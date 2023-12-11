@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let start = new Date()
+
+let number = Math.floor(Math.random() * (100 - 1 + 1) + 1)
+console.log(number)
+
+let i = 0;
+let min = 1;
+let max = 100;
+const tryGess = (num, min, max) => {
+
+  let guess = +prompt(`${min} - ${max}`)
+  
+  if (guess - guess !== 0) {
+    return null;
+  }
+  
+  if ( (guess > max) || (guess < min) ){
+    alert('Числа вне диапазона поиска')
+    return tryGess (num, min, max)
+  }
+  
+  if (guess > number) {
+    alert('Много')
+    max = guess
+    i++
+    tryGess(num, min, max)
+  }
+  if (guess < number) {
+    alert('Мало')
+    min = guess
+    i++
+    tryGess(num, min, max)
+  }
+  if (guess === number) {
+    i++
+    return alert(`Угадал с ${i} попытки`)
+  }
+}
+
+
+tryGess(number, min, max)
+
+let end = new Date();
+
+alert(`${end - start} миллисекунд`);
+  </script>
+</body>
+</html>
+
