@@ -79,3 +79,9 @@
 
   border: 1px solid pink;
 }
+
+
+.item--three,
+.extension--three {
+  order: 1;
+}
