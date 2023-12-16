@@ -1,7 +1,5 @@
 'use strict';
 
-'use strick';
-
 const WORDS__ARRAY = [
   {
     en: 'which',
