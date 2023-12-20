@@ -2275,9 +2275,9 @@ if (document.querySelector('#template-offers__one') !== null) {
 
       ru: 'Эти мужчины очень разочарованы',
 
-      en: 'This men are disappointed',
+      en: 'These men are very disappointed',
 
-      tr: '[ðɪs] [mɛn] [ɑː] [ˌdɪsəˈpɔɪntɪd]',
+      tr: '[ðiːz] [men] [ɑː] [ˈveri] [ˌdɪsəˈpɔɪntɪd]',
 
     },
 
