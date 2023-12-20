@@ -3637,6 +3637,2290 @@ if (document.querySelector('#template-transcription') !== null) {
   
 }
 
+if (document.querySelector('#template-transcription__new') !== null) {
+  try {
+    document.querySelector('.menu__link[href="transcriptionNew.html"]').dataset.current = 'true';
+  } catch {
+    console.log('.menu__link[href="transcriptionNew.html"] - не найдено');
+  }
+
+  const TR_NEW_ONE_ARR = [
+
+    { en: 'is', tr: '[ɪz]' },
+
+    { en: 'are', tr: '[ɑː]' },
+
+    { en: 'am', tr: '[æm]' },
+
+    { en: 'a', tr: '[ə]' },
+
+    { en: 'an', tr: '[ən]' },
+
+    { en: 'his', tr: '[hɪz]' },
+
+    { en: 'me', tr: '[miː]' },
+
+    { en: 'you', tr: '[juː]' },
+
+    { en: 'your', tr: '[jɔː]' },
+
+    { en: 'has', tr: '[hæz]' },
+
+    { en: 'how', tr: '[haʊ]' },
+
+    { en: 'grade', tr: '[ɡreɪd]' },
+
+    { en: 'tribe', tr: '[traɪb]' },
+
+    { en: 'bite', tr: '[baɪt]' },
+
+    { en: 'slave', tr: '[sleɪv]' },
+
+    { en: 'ride', tr: '[raɪd]' },
+
+    { en: 'phrase', tr: '[freɪz]' },
+
+    { en: 'smoke', tr: '[sməʊk]' },
+
+    { en: 'mice', tr: '[maɪs]' },
+
+    { en: 'role', tr: '[rəʊl]' },
+
+    { en: 'white', tr: '[waɪt]' },
+
+    { en: 'fry', tr: '[fraɪ]' },
+
+    { en: 'clue', tr: '[kluː]' },
+
+    { en: 'base', tr: '[beɪs]' },
+
+    { en: 'stone', tr: '[stəʊn]' },
+
+    { en: 'twice', tr: '[twaɪs]' },
+
+    { en: 'trade', tr: '[treɪd]' },
+
+    { en: 'fuse', tr: '[fjuːz]' },
+
+    { en: 'cone', tr: '[kəʊn]' },
+
+    { en: 'plate', tr: '[pleɪt]' },
+
+    { en: 'tie', tr: '[taɪ]' },
+
+    { en: 'poke', tr: '[pəʊk]' },
+
+    { en: 'cradle', tr: '[kreɪdl]' },
+
+    { en: 'crane', tr: '[kreɪn]' },
+
+    { en: 'knife', tr: '[naɪf]' },
+
+    { en: 'try', tr: '[traɪ]' },
+
+    { en: 'frame', tr: '[freɪm]' },
+
+    { en: 'wake', tr: '[weɪk]' },
+
+    { en: 'gate', tr: '[ɡeɪt]' },
+
+    { en: 'snake', tr: '[sneɪk]' },
+
+    { en: 'huge', tr: '[hjuːʤ]' },
+
+    { en: 'rate', tr: '[reɪt]' },
+
+    { en: 'choke', tr: '[ʧəʊk]' },
+
+    { en: 'take', tr: '[teɪk]' },
+
+    { en: 'fame', tr: '[feɪm]' },
+
+    { en: 'pole', tr: '[pəʊl]' },
+
+    { en: 'spade', tr: '[speɪd]' },
+
+    { en: 'shame', tr: '[ʃeɪm]' },
+
+    { en: 'state', tr: '[steɪt]' },
+
+    { en: 'ace', tr: '[eɪs]' },
+
+    { en: 'like', tr: '[laɪk]' },
+
+    { en: 'broke', tr: '[brəʊk]' },
+
+    { en: 'phase', tr: '[feɪz]' },
+
+    { en: 'pile', tr: '[paɪl]' },
+
+    { en: 'tune', tr: '[tjuːn]' },
+
+    { en: 'bake', tr: '[beɪk]' },
+
+    { en: 'mate', tr: '[meɪt]' },
+
+    { en: 'note', tr: '[nəʊt]' },
+
+    { en: 'smile', tr: '[smaɪl]' },
+
+    { en: 'pie', tr: '[paɪ]' },
+
+    { en: 'pine', tr: '[paɪn]' },
+
+    { en: 'rule', tr: '[ruːl]' },
+
+    { en: 'grace', tr: '[ɡreɪs]' },
+
+    { en: 'game', tr: '[ɡeɪm]' },
+
+    { en: 'June', tr: '[ʤuːn]' },
+
+    { en: 'fate', tr: '[feɪt]' },
+
+    { en: 'rope', tr: '[rəʊp]' },
+
+    { en: 'lane', tr: '[leɪn]' },
+
+    { en: 'cape', tr: '[keɪp]' },
+
+    { en: 'dine', tr: '[daɪn]' },
+
+    { en: 'grave', tr: '[ɡreɪv]' },
+
+    { en: 'rice', tr: '[raɪs]' },
+
+    { en: 'cave', tr: '[keɪv]' },
+
+    { en: 'save', tr: '[seɪv]' },
+
+    { en: 'make', tr: '[meɪk]' },
+
+    { en: 'tale', tr: '[teɪl]' },
+
+    { en: 'gaze', tr: '[ɡeɪz]' },
+
+    { en: 'sole', tr: '[səʊl]' },
+
+    { en: 'no', tr: '[nəʊ]' },
+
+    { en: 'gale', tr: '[ɡeɪl]' },
+
+    { en: 'race', tr: '[reɪs]' },
+
+    { en: 'change', tr: '[ʧeɪnʤ]' },
+
+    { en: 'cute', tr: '[kjuːt]' },
+
+    { en: 'true', tr: '[truː]' },
+
+    { en: 'rise', tr: '[raɪz]' },
+
+    { en: 'due', tr: '[djuː]' },
+
+    { en: 'joke', tr: '[ʤəʊk]' },
+
+    { en: 'chose', tr: '[ʧəʊz]' },
+
+    { en: 'nine', tr: '[naɪn]' },
+
+    { en: 'dome', tr: '[dəʊm]' },
+
+    { en: 'wave', tr: '[weɪv]' },
+
+    { en: 'brake', tr: '[breɪk]' },
+
+    { en: 'blue', tr: '[bluː]' },
+
+    { en: 'size', tr: '[saɪz]' },
+
+    { en: 'Pete', tr: '[piːt]' },
+
+    { en: 'flame', tr: '[fleɪm]' },
+
+    { en: 'grape', tr: '[ɡreɪp]' },
+
+    { en: 'sly', tr: '[slaɪ]' },
+
+    { en: 'toe', tr: '[təʊ]' },
+
+    { en: 'price', tr: '[praɪs]' },
+
+    { en: 'nose', tr: '[nəʊz]' },
+
+    { en: 'ice', tr: '[aɪs]' },
+
+    { en: 'slice', tr: '[slaɪs]' },
+
+    { en: 'bye', tr: '[baɪ]' },
+
+    { en: 'lie', tr: '[laɪ]' },
+
+    { en: 'date', tr: '[deɪt]' },
+
+    { en: 'she', tr: '[ʃiː]' },
+
+    { en: 'pike', tr: '[paɪk]' },
+
+    { en: 'taste', tr: '[teɪst]' },
+
+    { en: 'zone', tr: '[zəʊn]' },
+
+    { en: 'sue', tr: '[sjuː]' },
+
+    { en: 'prone', tr: '[prəʊn]' },
+
+    { en: 'hide', tr: '[haɪd]' },
+
+    { en: 'slide', tr: '[slaɪd]' },
+
+    { en: 'blade', tr: '[bleɪd]' },
+
+    { en: 'line', tr: '[laɪn]' },
+
+    { en: 'slope', tr: '[sləʊp]' },
+
+    { en: 'die', tr: '[daɪ]' },
+
+    { en: 'safe', tr: '[seɪf]' },
+
+    { en: 'pose', tr: '[pəʊz]' },
+
+    { en: 'case', tr: '[keɪs]' },
+
+    { en: 'drive', tr: '[draɪv]' },
+
+    { en: 'prime', tr: '[praɪm]' },
+
+    { en: 'globe', tr: '[ɡləʊb]' },
+
+    { en: 'shade', tr: '[ʃeɪd]' },
+
+    { en: 'space', tr: '[speɪs]' },
+
+    { en: 'shine', tr: '[ʃaɪn]' },
+
+    { en: 'bike', tr: '[baɪk]' },
+
+    { en: 'me', tr: '[miː]' },
+
+    { en: 'shoe', tr: '[ʃuː]' },
+
+    { en: 'fine', tr: '[faɪn]' },
+
+    { en: 'grove', tr: '[ɡrəʊv]' },
+
+    { en: 'nice', tr: '[naɪs]' },
+
+    { en: 'title', tr: '[taɪtl]' },
+
+    { en: 'lake', tr: '[leɪk]' },
+
+    { en: 'sake', tr: '[seɪk]' },
+
+    { en: 'lime', tr: '[laɪm]' },
+
+    { en: 'smoke', tr: '[sməʊk]' },
+
+    { en: 'save', tr: '[seɪv]' },
+
+    { en: 'hope', tr: '[həʊp]' },
+
+    { en: 'place', tr: '[pleɪs]' },
+
+    { en: 'be', tr: '[biː]' },
+
+    { en: 'ale', tr: '[eɪl]' },
+
+    { en: 'go', tr: '[ɡəʊ]' },
+
+    { en: 'cite', tr: '[saɪt]' },
+
+    { en: 'same', tr: '[seɪm]' },
+
+    { en: 'tone', tr: '[təʊn]' },
+
+    { en: 'pipe', tr: '[paɪp]' },
+
+    { en: 'lame', tr: '[leɪm]' },
+
+    { en: 'wipe', tr: '[waɪp]' },
+
+    { en: 'sky', tr: '[skaɪ]' },
+
+    { en: 'wise', tr: '[waɪz]' },
+
+    { en: 'stale', tr: '[steɪl]' },
+
+    { en: 'dry', tr: '[draɪ]' },
+
+    { en: 'stroke', tr: '[strəʊk]' },
+
+    { en: 'bride', tr: '[braɪd]' },
+
+    { en: 'dime', tr: '[daɪm]' },
+
+    { en: 'he', tr: '[hiː]' },
+
+    { en: 'dame', tr: '[deɪm]' },
+
+    { en: 'site', tr: '[saɪt]' },
+
+    { en: 'cage', tr: '[keɪʤ]' },
+
+    { en: 'mine', tr: '[maɪn]' },
+
+    { en: 'tape', tr: '[teɪp]' },
+
+    { en: 'dice', tr: '[daɪs]' },
+
+    { en: 'waste', tr: '[weɪst]' },
+
+    { en: 'time', tr: '[taɪm]' },
+
+    { en: 'cake', tr: '[keɪk]' },
+
+    { en: 'code', tr: '[kəʊd]' },
+
+    { en: 'drove', tr: '[drəʊv]' },
+
+    { en: 'radio', tr: '[ˈreɪdiəʊ]' },
+
+    { en: 'file', tr: '[faɪl]' },
+
+    { en: 'stable', tr: '[steɪbl]' },
+
+    { en: 'rode', tr: '[rəʊd]' },
+
+    { en: 'use', tr: '[juːz]' },
+
+    { en: 'shake', tr: '[ʃeɪk]' },
+
+    { en: 'I', tr: '[aɪ]' },
+
+    { en: 'face', tr: '[feɪs]' },
+
+    { en: 'glue', tr: '[ɡluː]' },
+
+    { en: 'cry', tr: '[kraɪ]' },
+
+    { en: 'dope', tr: '[dəʊp]' },
+
+    { en: 'kite', tr: '[kaɪt]' },
+
+    { en: 'ripe', tr: '[raɪp]' },
+
+    { en: 'fly', tr: '[flaɪ]' },
+
+    { en: 'fade', tr: '[feɪd]' },
+
+    { en: 'mole', tr: '[məʊl]' },
+
+    { en: 'pale', tr: '[peɪl]' },
+
+    { en: 'Steve', tr: '[stiːv]' },
+
+    { en: 'side', tr: '[saɪd]' },
+
+    { en: 'cycle', tr: '[saɪkl]' },
+
+    { en: 'wife', tr: '[waɪf]' },
+
+    { en: 'spine', tr: '[spaɪn]' },
+
+    { en: 'robe', tr: '[rəʊb]' },
+
+    { en: 'brave', tr: '[breɪv]' },
+
+    { en: 'hose', tr: '[həʊz]' },
+
+    { en: 'those', tr: '[ðəʊz]' },
+
+    { en: 'tide', tr: '[taɪd]' },
+
+    { en: 'rose', tr: '[rəʊz]' },
+
+    { en: 'stole', tr: '[stəʊl]' },
+
+    { en: 'puke', tr: '[pjuːk]' },
+
+    { en: 'fake', tr: '[feɪk]' },
+
+    { en: 'hi', tr: '[haɪ]' },
+
+    { en: 'name', tr: '[neɪm]' },
+
+    { en: 'stove', tr: '[stəʊv]' },
+
+    { en: 'vibe', tr: '[vaɪb]' },
+
+    { en: 'range', tr: '[reɪnʤ]' },
+
+    { en: 'dye', tr: '[daɪ]' },
+
+    { en: 'shy', tr: '[ʃaɪ]' },
+
+    { en: 'bone', tr: '[bəʊn]' },
+
+    { en: 'lace', tr: '[leɪs]' },
+
+    { en: 'pace', tr: '[peɪs]' },
+
+    { en: 'cue', tr: '[kjuː]' },
+
+    { en: 'lone', tr: '[ləʊn]' },
+
+    { en: 'phone', tr: '[fəʊn]' },
+
+    { en: 'mile', tr: '[maɪl]' },
+
+    { en: 'hike', tr: '[haɪk]' },
+
+    { en: 'late', tr: '[leɪt]' },
+
+    { en: 'cope', tr: '[kəʊp]' },
+
+    { en: 'home', tr: '[həʊm]' },
+
+    { en: 'table', tr: '[teɪbl]' },
+
+    { en: 'sane', tr: '[seɪn]' },
+
+    { en: 'hate', tr: '[heɪt]' },
+
+    { en: 'wide', tr: '[waɪd]' },
+
+    { en: 'noble', tr: '[nəʊbl]' },
+
+    { en: 'swine', tr: '[swaɪn]' },
+
+    { en: 'tube', tr: '[tjuːb]' },
+
+    { en: 'dose', tr: '[dəʊs]' },
+
+    { en: 'wine', tr: '[waɪn]' },
+
+    { en: 'able', tr: '[eɪbl]' },
+
+    { en: 'maze', tr: '[meɪz]' },
+
+    { en: 'slap', tr: '[slæp]' },
+
+    { en: 'dam', tr: '[dæm]' },
+
+    { en: 'flat', tr: '[flæt]' },
+
+    { en: 'rag', tr: '[ræɡ]' },
+
+    { en: 'tax', tr: '[tæks]' },
+
+    { en: 'fact', tr: '[fækt]' },
+
+    { en: 'than', tr: '[ðæn]' },
+
+    { en: 'crack', tr: '[kræk]' },
+
+    { en: 'slam', tr: '[slæm]' },
+
+    { en: 'cat', tr: '[kæt]' },
+
+    { en: 'stand', tr: '[stænd]' },
+
+    { en: 'plan', tr: '[plæn]' },
+
+    { en: 'can', tr: '[kæn]' },
+
+    { en: 'lap', tr: '[læp]' },
+
+    { en: 'ban', tr: '[bæn]' },
+
+    { en: 'patch', tr: '[pæʧ]' },
+
+    { en: 'camp', tr: '[kæmp]' },
+
+    { en: 'trap', tr: '[træp]' },
+
+    { en: 'drag', tr: '[dræɡ]' },
+
+    { en: 'crash', tr: '[kræʃ]' },
+
+    { en: 'Sam', tr: '[sæm]' },
+
+    { en: 'flash', tr: '[flæʃ]' },
+
+    { en: 'hat', tr: '[hæt]' },
+
+    { en: 'land', tr: '[lænd]' },
+
+    { en: 'fan', tr: '[fæn]' },
+
+    { en: 'fun', tr: '[fʌn]' },
+
+    { en: 'pack', tr: '[pæk]' },
+
+    { en: 'ant', tr: '[ænt]' },
+
+    { en: 'mad', tr: '[mæd]' },
+
+    { en: 'that', tr: '[ðæt]' },
+
+    { en: 'tag', tr: '[tæɡ]' },
+
+    { en: 'sack', tr: '[sæk]' },
+
+    { en: 'lab', tr: '[læb]' },
+
+    { en: 'gas', tr: '[ɡæs]' },
+
+    { en: 'cab', tr: '[kæb]' },
+
+    { en: 'cap', tr: '[kæp]' },
+
+    { en: 'at', tr: '[æt]' },
+
+    { en: 'dad', tr: '[dæd]' },
+
+    { en: 'hand', tr: '[hænd]' },
+
+    { en: 'pat', tr: '[pæt]' },
+
+    { en: 'lack', tr: '[læk]' },
+
+    { en: 'thank', tr: '[θæŋk]' },
+
+    { en: 'bat', tr: '[bæt]' },
+
+    { en: 'van', tr: '[væn]' },
+
+    { en: 'ad', tr: '[æd]' },
+
+    { en: 'Pam', tr: '[pæm]' },
+
+    { en: 'act', tr: '[ækt]' },
+
+    { en: 'back', tr: '[bæk]' },
+
+    { en: 'tap', tr: '[tæp]' },
+
+    { en: 'flag', tr: '[flæɡ]' },
+
+    { en: 'pan', tr: '[pæn]' },
+
+    { en: 'glad', tr: '[ɡlæd]' },
+
+    { en: 'ban', tr: '[bæn]' },
+
+    { en: 'cash', tr: '[kæʃ]' },
+
+    { en: 'tank', tr: '[tæŋk]' },
+
+    { en: 'bank', tr: '[bæŋk]' },
+
+    { en: 'sad', tr: '[sæd]' },
+
+    { en: 'and', tr: '[ænd]' },
+
+    { en: 'sand', tr: '[sænd]' },
+
+    { en: 'lamp', tr: '[læmp]' },
+
+    { en: 'map', tr: '[mæp]' },
+
+    { en: 'snap', tr: '[snæp]' },
+
+    { en: 'pack', tr: '[pæk]' },
+
+    { en: 'rank', tr: '[ræŋk]' },
+
+    { en: 'leg', tr: '[leɡ]' },
+
+    { en: 'text', tr: '[tekst]' },
+
+    { en: 'tell', tr: '[tel]' },
+
+    { en: 'bend', tr: '[bend]' },
+
+    { en: 'bet', tr: '[bet]' },
+
+    { en: 'chest', tr: '[ʧest]' },
+
+    { en: 'desk', tr: '[desk]' },
+
+    { en: 'end', tr: '[end]' },
+
+    { en: 'send', tr: '[send]' },
+
+    { en: 'let', tr: '[let]' },
+
+    { en: 'well', tr: '[wel]' },
+
+    { en: 'get', tr: '[ɡet]' },
+
+    { en: 'ten', tr: '[ten]' },
+
+    { en: 'help', tr: '[help]' },
+
+    { en: 'rest', tr: '[rest]' },
+
+    { en: 'red', tr: '[red]' },
+
+    { en: 'west', tr: '[west]' },
+
+    { en: 'net', tr: '[net]' },
+
+    { en: 'them', tr: '[ðem]' },
+
+    { en: 'blend', tr: '[blend]' },
+
+    { en: 'trend', tr: '[trend]' },
+
+    { en: 'shed', tr: '[ʃed]' },
+
+    { en: 'belt', tr: '[belt]' },
+
+    { en: 'left', tr: '[left]' },
+
+    { en: 'fresh', tr: '[freʃ]' },
+
+    { en: 'chess', tr: '[ʧes]' },
+
+    { en: 'pen', tr: '[pen]' },
+
+    { en: 'next', tr: '[nekst]' },
+
+    { en: 'web', tr: '[web]' },
+
+    { en: 'sent', tr: '[sent]' },
+
+    { en: 'shelf', tr: '[ʃelf]' },
+
+    { en: 'test', tr: '[test]' },
+
+    { en: 'wet', tr: '[wet]' },
+
+    { en: 'then', tr: '[ðen]' },
+
+    { en: 'rent', tr: '[rent]' },
+
+    { en: 'when', tr: '[wen]' },
+
+    { en: 'spend', tr: '[spend]' },
+
+    { en: 'hell', tr: '[hel]' },
+
+    { en: 'self', tr: '[self]' },
+
+    { en: 'set', tr: '[set]' },
+
+    { en: 'Ben', tr: '[ben]' },
+
+    { en: 'tend', tr: '[tend]' },
+
+    { en: 'lend', tr: '[lend]' },
+
+    { en: 'check', tr: '[ʧek]' },
+
+    { en: 'sell', tr: '[sel]' },
+
+    { en: 'deck', tr: '[dek]' },
+
+    { en: 'pet', tr: '[pet]' },
+
+    { en: 'flesh', tr: '[fleʃ]' },
+
+    { en: 'best', tr: '[best]' },
+
+    { en: 'nest', tr: '[nest]' },
+
+    { en: 'step', tr: '[step]' },
+
+    { en: 'jet', tr: '[ʤet]' },
+
+    { en: 'stop', tr: '[stɒp]' },
+
+    { en: 'dog', tr: '[dɒɡ]' },
+
+    { en: 'pop', tr: '[pɒp]' },
+
+    { en: 'lost', tr: '[lɒst]' },
+
+    { en: 'slot', tr: '[slɒt]' },
+
+    { en: 'crop', tr: '[krɒp]' },
+
+    { en: 'hot', tr: '[hɒt]' },
+
+    { en: 'on', tr: '[ɒn]' },
+
+    { en: 'pot', tr: '[pɒt]' },
+
+    { en: 'dot', tr: '[dɒt]' },
+
+    { en: 'brush', tr: '[brʌʃ]' },
+
+    { en: 'bug', tr: '[bʌɡ]' },
+
+    { en: 'bus', tr: '[bʌs]' },
+
+    { en: 'club', tr: '[klʌb]' },
+
+    { en: 'drug', tr: '[drʌɡ]' },
+
+    { en: 'gut', tr: '[ɡʌt]' },
+
+    { en: 'lump', tr: '[lʌmp]' },
+
+    { en: 'plus', tr: '[plʌs]' },
+
+    { en: 'pump', tr: '[pʌmp]' },
+
+    { en: 'shut', tr: '[ʃʌt]' },
+
+    { en: 'please', tr: '[pliːz]' },
+
+    { en: 'beach', tr: '[biːʧ]' },
+
+    { en: 'bitch', tr: '[bɪʧ]' },
+
+    { en: 'bean', tr: '[biːn]' },
+
+    { en: 'bin', tr: '[bɪn]' },
+
+    { en: 'peak', tr: '[piːk]' },
+
+    { en: 'pick', tr: '[pɪk]' },
+
+    { en: 'ease', tr: '[iːz]' },
+
+    { en: 'been', tr: '[biːn]' },
+
+    { en: 'bin', tr: '[bɪn]' },
+
+    { en: 'seek', tr: '[siːk]' },
+
+    { en: 'sick', tr: '[sɪk]' },
+
+    { en: 'green', tr: '[ɡriːn]' },
+
+    { en: 'grin', tr: '[ɡrɪn]' },
+
+    { en: 'deep', tr: '[diːp]' },
+
+    { en: 'dip', tr: '[dɪp]' },
+
+    { en: 'teen', tr: '[tiːn]' },
+
+    { en: 'tin', tr: '[tɪn]' },
+
+    { en: 'sheep', tr: '[ʃiːp]' },
+
+    { en: 'ship', tr: '[ʃɪp]' },
+
+    { en: 'sin', tr: '[sɪn]' },
+
+    { en: 'seen', tr: '[siːn]' },
+
+    { en: 'least', tr: '[liːst]' },
+
+    { en: 'list', tr: '[lɪst]' },
+
+    { en: 'lead', tr: '[liːd]' },
+
+    { en: 'lid', tr: '[lɪd]' },
+
+    { en: 'reach', tr: '[riːʧ]' },
+
+    { en: 'rich', tr: '[rɪʧ]' },
+
+    { en: 'eat', tr: '[iːt]' },
+
+    { en: 'it', tr: '[ɪt]' },
+
+    { en: 'snake', tr: '[sneɪk]' },
+
+    { en: 'snack', tr: '[snæk]' },
+
+    { en: 'Jake', tr: '[ʤeɪk]' },
+
+    { en: 'Jack', tr: '[ʤæk]' },
+
+    { en: 'save', tr: '[seɪv]' },
+
+    { en: 'safe', tr: '[seɪf]' },
+
+    { en: 'rate', tr: '[reɪt]' },
+
+    { en: 'rat', tr: '[ræt]' },
+
+    { en: 'mate', tr: '[meɪt]' },
+
+    { en: 'mat', tr: '[mæt]' },
+
+    { en: 'plane', tr: '[pleɪn]' },
+
+    { en: 'plan', tr: '[plæn]' },
+
+    { en: 'tape', tr: '[teɪp]' },
+
+    { en: 'tap', tr: '[tæp]' },
+
+    { en: 'fate', tr: '[feɪt]' },
+
+    { en: 'fat', tr: '[fæt]' },
+
+    { en: 'sake', tr: '[seɪk]' },
+
+    { en: 'sack', tr: '[sæk]' },
+
+    { en: 'base', tr: '[beɪs]' },
+
+    { en: 'bus', tr: '[bʌs]' },
+
+    { en: 'made', tr: '[meɪd]' },
+
+    { en: 'mad', tr: '[mæd]' },
+
+    { en: 'Sam', tr: '[sæm]' },
+
+    { en: 'same', tr: '[seɪm]' },
+
+    { en: 'sand', tr: '[sænd]' },
+
+    { en: 'send', tr: '[send]' },
+
+    { en: 'pat', tr: '[pæt]' },
+
+    { en: 'pet', tr: '[pet]' },
+
+    { en: 'band', tr: '[bænd]' },
+
+    { en: 'bend', tr: '[bend]' },
+
+    { en: 'bad', tr: '[bæd]' },
+
+    { en: 'bed', tr: '[bed]' },
+
+    { en: 'mad', tr: '[mæd]' },
+
+    { en: 'made', tr: '[meɪd]' },
+
+    { en: 'pan', tr: '[pæn]' },
+
+    { en: 'pen', tr: '[pen]' },
+
+    { en: 'man', tr: '[mæn]' },
+
+    { en: 'men', tr: '[men]' },
+
+    { en: 'land', tr: '[lænd]' },
+
+    { en: 'lend', tr: '[lend]' },
+
+    { en: 'drank', tr: '[dræŋk]' },
+
+    { en: 'drunk', tr: '[drʌŋk]' },
+
+    { en: 'match', tr: '[mæʧ]' },
+
+    { en: 'much', tr: '[mʌʧ]' },
+
+    { en: 'huge', tr: '[hjuːʤ]' },
+
+    { en: 'hug', tr: '[hʌɡ]' },
+
+    { en: 'hard', tr: '[hɑːd]' },
+
+    { en: 'harm', tr: '[hɑːm]' },
+
+    { en: 'harsh', tr: '[hɑːʃ]' },
+
+    { en: 'mark', tr: '[mɑːk]' },
+
+    { en: 'park', tr: '[pɑːk]' },
+
+    { en: 'part', tr: '[pɑːt]' },
+
+    { en: 'shark', tr: '[ʃɑːk]' },
+
+    { en: 'smart', tr: '[smɑːt]' },
+
+    { en: 'spark', tr: '[spɑːk]' },
+
+    { en: 'star', tr: '[stɑː]' },
+
+    { en: 'start', tr: '[stɑːt]' },
+
+    { en: 'born', tr: '[bɔːn]' },
+
+    { en: 'corn', tr: '[kɔːn]' },
+
+    { en: 'for', tr: '[fɔː]' },
+
+    { en: 'form', tr: '[fɔːm]' },
+
+    { en: 'forth', tr: '[fɔːθ]' },
+
+    { en: 'nor', tr: '[nɔː]' },
+
+    { en: 'norm', tr: '[nɔːm]' },
+
+    { en: 'north', tr: '[nɔːθ]' },
+
+    { en: 'pork', tr: '[pɔːk]' },
+
+    { en: 'port', tr: '[pɔːt]' },
+
+    { en: 'short', tr: '[ʃɔːt]' },
+
+    { en: 'sort', tr: '[sɔːt]' },
+
+    { en: 'her', tr: '[hɜː]' },
+
+    { en: 'herb', tr: '[hɜːb]' },
+
+    { en: 'term', tr: '[tɜːm]' },
+
+    { en: 'burst', tr: '[bɜːst]' },
+
+    { en: 'turn', tr: '[tɜːn]' },
+
+    { en: 'hurt', tr: '[hɜːt]' },
+
+    { en: 'herd', tr: '[hɜːd]' },
+
+    { en: 'fur', tr: '[fɜː]' },
+
+    { en: 'girl', tr: '[ɡɜːl]' },
+
+    { en: 'bird', tr: '[bɜːd]' },
+
+    { en: 'birth', tr: '[bɜːθ]' },
+
+    { en: 'dirt', tr: '[dɜːt]' },
+
+    { en: 'firm', tr: '[fɜːm]' },
+
+    { en: 'first', tr: '[fɜːst]' },
+
+    { en: 'shirt', tr: '[ʃɜːt]' },
+
+    { en: 'sir', tr: '[sɜː]' },
+
+    { en: 'skirt', tr: '[skɜːt]' },
+
+    { en: 'third', tr: '[θɜːd]' },
+
+    { en: 'hare', tr: '[heə]' },
+
+    { en: 'care', tr: '[keə]' },
+
+    { en: 'share', tr: '[ʃeə]' },
+
+    { en: 'stare', tr: '[steə]' },
+
+    { en: 'rare', tr: '[reə]' },
+
+    { en: 'dare', tr: '[deə]' },
+
+    { en: 'fare', tr: '[feə]' },
+
+    { en: 'more', tr: '[mɔː]' },
+
+    { en: 'store', tr: '[stɔː]' },
+
+    { en: 'tore', tr: '[tɔː]' },
+
+    { en: 'here', tr: '[hɪə]' },
+
+    { en: 'mere', tr: '[mɪə]' },
+
+    { en: 'cure', tr: '[kjʊə]' },
+
+    { en: 'pure', tr: '[pjʊə]' },
+
+    { en: 'fire', tr: '[faɪə]' },
+
+    { en: 'wire', tr: '[waɪə]' },
+
+    { en: 'tire', tr: '[taɪə]' },
+
+    { en: 'hire', tr: '[haɪə]' },
+
+    { en: 'bench', tr: '[benʧ]' },
+
+    { en: 'bunch', tr: '[bʌnʧ]' },
+
+    { en: 'catch', tr: '[kæʧ]' },
+
+    { en: 'charm', tr: '[ʧɑːm]' },
+
+    { en: 'check', tr: '[ʧek]' },
+
+    { en: 'chest', tr: '[ʧest]' },
+
+    { en: 'chin', tr: '[ʧɪn]' },
+
+    { en: 'chop', tr: '[ʧɒp]' },
+
+    { en: 'chunk', tr: '[ʧʌŋk]' },
+
+    { en: 'French', tr: '[frenʧ]' },
+
+    { en: 'lunch', tr: '[lʌnʧ]' },
+
+    { en: 'march', tr: '[mɑːʧ]' },
+
+    { en: 'match', tr: '[mæʧ]' },
+
+    { en: 'much', tr: '[mʌʧ]' },
+
+    { en: 'patch', tr: '[pæʧ]' },
+
+    { en: 'pitch', tr: '[pɪʧ]' },
+
+    { en: 'porch', tr: '[pɔːʧ]' },
+
+    { en: 'rich', tr: '[rɪʧ]' },
+
+    { en: 'scratch', tr: '[skræʧ]' },
+
+    { en: 'stretch', tr: '[streʧ]' },
+
+    { en: 'such', tr: '[sʌʧ]' },
+
+    { en: 'switch', tr: '[swɪʧ]' },
+
+    { en: 'ash', tr: '[æʃ]' },
+
+    { en: 'brush', tr: '[brʌʃ]' },
+
+    { en: 'cash', tr: '[kæʃ]' },
+
+    { en: 'crash', tr: '[kræʃ]' },
+
+    { en: 'crush', tr: '[krʌʃ]' },
+
+    { en: 'dish', tr: '[dɪʃ]' },
+
+    { en: 'fish', tr: '[fɪʃ]' },
+
+    { en: 'flash', tr: '[flæʃ]' },
+
+    { en: 'flesh', tr: '[fleʃ]' },
+
+    { en: 'harsh', tr: '[hɑːʃ]' },
+
+    { en: 'rush', tr: '[rʌʃ]' },
+
+    { en: 'shake', tr: '[ʃeɪk]' },
+
+    { en: 'shame', tr: '[ʃeɪm]' },
+
+    { en: 'shape', tr: '[ʃeɪp]' },
+
+    { en: 'share', tr: '[ʃeə]' },
+
+    { en: 'shrimp', tr: '[ʃrɪmp]' },
+
+    { en: 'shrug', tr: '[ʃrʌɡ]' },
+
+    { en: 'sharp', tr: '[ʃɑːp]' },
+
+    { en: 'back', tr: '[bæk]' },
+
+    { en: 'black', tr: '[blæk]' },
+
+    { en: 'block', tr: '[blɒk]' },
+
+    { en: 'brick', tr: '[brɪk]' },
+
+    { en: 'buck', tr: '[bʌk]' },
+
+    { en: 'check', tr: '[ʧek]' },
+
+    { en: 'click', tr: '[klɪk]' },
+
+    { en: 'clock', tr: '[klɒk]' },
+
+    { en: 'crack', tr: '[kræk]' },
+
+    { en: 'deck', tr: '[dek]' },
+
+    { en: 'dock', tr: '[dɒk]' },
+
+    { en: 'duck', tr: '[dʌk]' },
+
+    { en: 'kick', tr: '[kɪk]' },
+
+    { en: 'lack', tr: '[læk]' },
+
+    { en: 'lock', tr: '[lɒk]' },
+
+    { en: 'luck', tr: '[lʌk]' },
+
+    { en: 'neck', tr: '[nek]' },
+
+    { en: 'pack', tr: '[pæk]' },
+
+    { en: 'pick', tr: '[pɪk]' },
+
+    { en: 'rock', tr: '[rɒk]' },
+
+    { en: 'sack', tr: '[sæk]' },
+
+    { en: 'shock', tr: '[ʃɒk]' },
+
+    { en: 'sick', tr: '[sɪk]' },
+
+    { en: 'sock', tr: '[sɒk]' },
+
+    { en: 'stack', tr: '[stæk]' },
+
+    { en: 'stick', tr: '[stɪk]' },
+
+    { en: 'stock', tr: '[stɒk]' },
+
+    { en: 'thick', tr: '[θɪk]' },
+
+    { en: 'track', tr: '[træk]' },
+
+    { en: 'trick', tr: '[trɪk]' },
+
+    { en: 'truck', tr: '[trʌk]' },
+
+    { en: 'tuck', tr: '[tʌk]' },
+
+    { en: 'whale', tr: '[weɪl]' },
+
+    { en: 'when', tr: '[wen]' },
+
+    { en: 'where', tr: '[weə]' },
+
+    { en: 'while', tr: '[waɪl]' },
+
+    { en: 'white', tr: '[waɪt]' },
+
+    { en: 'why', tr: '[waɪ]' },
+
+    { en: 'who', tr: '[huː]' },
+
+    { en: 'whose', tr: '[huːz]' },
+
+    { en: 'whom', tr: '[huːm]' },
+
+    { en: 'beef', tr: '[biːf]' },
+
+    { en: 'breeze', tr: '[briːz]' },
+
+    { en: 'cheek', tr: '[ʧiːk]' },
+
+    { en: 'cheese', tr: '[ʧiːz]' },
+
+    { en: 'deem', tr: '[diːm]' },
+
+    { en: 'deep', tr: '[diːp]' },
+
+    { en: 'fee', tr: '[fiː]' },
+
+    { en: 'feed', tr: '[fiːd]' },
+
+    { en: 'feel', tr: '[fiːl]' },
+
+    { en: 'flee', tr: '[fliː]' },
+
+    { en: 'fleet', tr: '[fliːt]' },
+
+    { en: 'free', tr: '[friː]' },
+
+    { en: 'freeze', tr: '[friːz]' },
+
+    { en: 'Greek', tr: '[ɡriːk]' },
+
+    { en: 'green', tr: '[ɡriːn]' },
+
+    { en: 'greet', tr: '[ɡriːt]' },
+
+    { en: 'heel', tr: '[hiːl]' },
+
+    { en: 'keep', tr: '[kiːp]' },
+
+    { en: 'meet', tr: '[miːt]' },
+
+    { en: 'need', tr: '[niːd]' },
+
+    { en: 'peel', tr: '[piːl]' },
+
+    { en: 'see', tr: '[siː]' },
+
+    { en: 'seed', tr: '[siːd]' },
+
+    { en: 'seek', tr: '[siːk]' },
+
+    { en: 'seem', tr: '[siːm]' },
+
+    { en: 'sheep', tr: '[ʃiːp]' },
+
+    { en: 'sheet', tr: '[ʃiːt]' },
+
+    { en: 'sleep', tr: '[sliːp]' },
+
+    { en: 'sleeve', tr: '[sliːv]' },
+
+    { en: 'speech', tr: '[spiːʧ]' },
+
+    { en: 'speed', tr: '[spiːd]' },
+
+    { en: 'street', tr: '[striːt]' },
+
+    { en: 'sweep', tr: '[swiːp]' },
+
+    { en: 'sweet', tr: '[swiːt]' },
+
+    { en: 'teen', tr: '[tiːn]' },
+
+    { en: 'three', tr: '[θriː]' },
+
+    { en: 'tree', tr: '[triː]' },
+
+    { en: 'weed', tr: '[wiːd]' },
+
+    { en: 'wheel', tr: '[wiːl]' },
+
+    { en: 'beach', tr: '[biːʧ]' },
+
+    { en: 'bean', tr: '[biːn]' },
+
+    { en: 'beast', tr: '[biːst]' },
+
+    { en: 'beat', tr: '[biːt]' },
+
+    { en: 'cheap', tr: '[ʧiːp]' },
+
+    { en: 'cheat', tr: '[ʧiːt]' },
+
+    { en: 'deal', tr: '[diːl]' },
+
+    { en: 'dream', tr: '[driːm]' },
+
+    { en: 'each', tr: '[iːʧ]' },
+
+    { en: 'ease', tr: '[iːz]' },
+
+    { en: 'eat', tr: '[iːt]' },
+
+    { en: 'heal', tr: '[hiːl]' },
+
+    { en: 'heat', tr: '[hiːt]' },
+
+    { en: 'lead', tr: '[liːd]' },
+
+    { en: 'leaf', tr: '[liːf]' },
+
+    { en: 'lean', tr: '[liːn]' },
+
+    { en: 'leap', tr: '[liːp]' },
+
+    { en: 'least', tr: '[liːst]' },
+
+    { en: 'leave', tr: '[liːv]' },
+
+    { en: 'meal', tr: '[miːl]' },
+
+    { en: 'mean', tr: '[miːn]' },
+
+    { en: 'neat', tr: '[niːt]' },
+
+    { en: 'peak', tr: '[piːk]' },
+
+    { en: 'plea', tr: '[pliː]' },
+
+    { en: 'plead', tr: '[pliːd]' },
+
+    { en: 'please', tr: '[pliːz]' },
+
+    { en: 'preach', tr: '[priːʧ]' },
+
+    { en: 'reach', tr: '[riːʧ]' },
+
+    { en: 'read', tr: '[riːd]' },
+
+    { en: 'seal', tr: '[siːl]' },
+
+    { en: 'seat', tr: '[siːt]' },
+
+    { en: 'speak', tr: '[spiːk]' },
+
+    { en: 'steam', tr: '[stiːm]' },
+
+    { en: 'stream', tr: '[striːm]' },
+
+    { en: 'tea', tr: '[tiː]' },
+
+    { en: 'teach', tr: '[tiːʧ]' },
+
+    { en: 'team', tr: '[tiːm]' },
+
+    { en: 'treat', tr: '[triːt]' },
+
+    { en: 'weak', tr: '[wiːk]' },
+
+    { en: 'weave', tr: '[wiːv]' },
+
+    { en: 'wheat', tr: '[wiːt]' },
+
+    { en: 'break', tr: '[breɪk]' },
+
+    { en: 'head', tr: '[hed]' },
+
+    { en: 'real', tr: '[rɪəl]' },
+
+    { en: 'boom', tr: '[buːm]' },
+
+    { en: 'boost', tr: '[buːst]' },
+
+    { en: 'boot', tr: '[buːt]' },
+
+    { en: 'booth', tr: '[buːð]' },
+
+    { en: 'cool', tr: '[kuːl]' },
+
+    { en: 'food', tr: '[fuːd]' },
+
+    { en: 'loop', tr: '[luːp]' },
+
+    { en: 'mood', tr: '[muːd]' },
+
+    { en: 'moon', tr: '[muːn]' },
+
+    { en: 'noon', tr: '[nuːn]' },
+
+    { en: 'pool', tr: '[puːl]' },
+
+    { en: 'proof', tr: '[pruːf]' },
+
+    { en: 'roof', tr: '[ruːf]' },
+
+    { en: 'room', tr: '[ruːm]' },
+
+    { en: 'root', tr: '[ruːt]' },
+
+    { en: 'shoot', tr: '[ʃuːt]' },
+
+    { en: 'smooth', tr: '[smuːð]' },
+
+    { en: 'soon', tr: '[suːn]' },
+
+    { en: 'spoon', tr: '[spuːn]' },
+
+    { en: 'too', tr: '[tuː]' },
+
+    { en: 'tooth', tr: '[tuːθ]' },
+
+    { en: 'troops', tr: '[truːps]' },
+
+    { en: 'book', tr: '[bʊk]' },
+
+    { en: 'cook', tr: '[kʊk]' },
+
+    { en: 'foot', tr: '[fʊt]' },
+
+    { en: 'good', tr: '[ɡʊd]' },
+
+    { en: 'hook', tr: '[hʊk]' },
+
+    { en: 'look', tr: '[lʊk]' },
+
+    { en: 'wood', tr: '[wʊd]' },
+
+    { en: 'bring', tr: '[brɪŋ]' },
+
+    { en: 'cling', tr: '[klɪŋ]' },
+
+    { en: 'hang', tr: '[hæŋ]' },
+
+    { en: 'king', tr: '[kɪŋ]' },
+
+    { en: 'long', tr: '[lɒŋ]' },
+
+    { en: 'ring', tr: '[rɪŋ]' },
+
+    { en: 'sing', tr: '[sɪŋ]' },
+
+    { en: 'song', tr: '[sɒŋ]' },
+
+    { en: 'spring', tr: '[sprɪŋ]' },
+
+    { en: 'string', tr: '[strɪŋ]' },
+
+    { en: 'strong', tr: '[strɒŋ]' },
+
+    { en: 'swim', tr: '[swɪm]' },
+
+    { en: 'thing', tr: '[θɪŋ]' },
+
+    { en: 'wrong', tr: '[rɒŋ]' },
+
+    { en: 'bright', tr: '[braɪt]' },
+
+    { en: 'eight', tr: '[eɪt]' },
+
+    { en: 'fight', tr: '[faɪt]' },
+
+    { en: 'high', tr: '[haɪ]' },
+
+    { en: 'light', tr: '[laɪt]' },
+
+    { en: 'might', tr: '[maɪt]' },
+
+    { en: 'night', tr: '[naɪt]' },
+
+    { en: 'right', tr: '[raɪt]' },
+
+    { en: 'sign', tr: '[saɪn]' },
+
+    { en: 'sight', tr: '[saɪt]' },
+
+    { en: 'slight', tr: '[slaɪt]' },
+
+    { en: 'tight', tr: '[taɪt]' },
+
+    { en: 'weigh', tr: '[weɪ]' },
+
+    { en: 'weight', tr: '[weɪt]' },
+
+    { en: 'cloud', tr: '[klaʊd]' },
+
+    { en: 'found', tr: '[faʊnd]' },
+
+    { en: 'ground', tr: '[ɡraʊnd]' },
+
+    { en: 'house', tr: '[haʊs]' },
+
+    { en: 'loud', tr: '[laʊd]' },
+
+    { en: 'mount', tr: '[maʊnt]' },
+
+    { en: 'mouse', tr: '[maʊs]' },
+
+    { en: 'mouth', tr: '[maʊθ]' },
+
+    { en: 'out', tr: '[aʊt]' },
+
+    { en: 'out', tr: '[aʊt]' },
+
+    { en: 'pound', tr: '[paʊnd]' },
+
+    { en: 'proud', tr: '[praʊd]' },
+
+    { en: 'round', tr: '[raʊnd]' },
+
+    { en: 'shout', tr: '[ʃaʊt]' },
+
+    { en: 'sound', tr: '[saʊnd]' },
+
+    { en: 'south', tr: '[saʊθ]' },
+
+    { en: 'boy', tr: '[bɔɪ]' },
+
+    { en: 'joy', tr: '[ʤɔɪ]' },
+
+    { en: 'oi', tr: '[ɔɪ]' },
+
+    { en: 'boil', tr: '[bɔɪl]' },
+
+    { en: 'choice', tr: '[ʧɔɪs]' },
+
+    { en: 'coin', tr: '[kɔɪn]' },
+
+    { en: 'join', tr: '[ʤɔɪn]' },
+
+    { en: 'noise', tr: '[nɔɪz]' },
+
+    { en: 'oil', tr: '[ɔɪl]' },
+
+    { en: 'point', tr: '[pɔɪnt]' },
+
+    { en: 'soil', tr: '[sɔɪl]' },
+
+    { en: 'bay', tr: '[beɪ]' },
+
+    { en: 'clay', tr: '[kleɪ]' },
+
+    { en: 'day', tr: '[deɪ]' },
+
+    { en: 'gray', tr: '[ɡreɪ]' },
+
+    { en: 'lay', tr: '[leɪ]' },
+
+    { en: 'may', tr: '[meɪ]' },
+
+    { en: 'pay', tr: '[peɪ]' },
+
+    { en: 'play', tr: '[pleɪ]' },
+
+    { en: 'pray', tr: '[preɪ]' },
+
+    { en: 'ray', tr: '[reɪ]' },
+
+    { en: 'say', tr: '[seɪ]' },
+
+    { en: 'spray', tr: '[spreɪ]' },
+
+    { en: 'stay', tr: '[steɪ]' },
+
+    { en: 'tray', tr: '[treɪ]' },
+
+    { en: 'way', tr: '[weɪ]' },
+
+    { en: 'jail', tr: '[ʤeɪl]' },
+
+    { en: 'jam', tr: '[ʤæm]' },
+
+    { en: 'jar', tr: '[ʤɑː]' },
+
+    { en: 'jazz', tr: '[ʤæz]' },
+
+    { en: 'jeans', tr: '[ʤiːnz]' },
+
+    { en: 'jet', tr: '[ʤet]' },
+
+    { en: 'jet', tr: '[ʤet]' },
+
+    { en: 'job', tr: '[ʤɒb]' },
+
+    { en: 'joint', tr: '[ʤɔɪnt]' },
+
+    { en: 'joke', tr: '[ʤəʊk]' },
+
+    { en: 'jump', tr: '[ʤʌmp]' },
+
+    { en: 'just', tr: '[ʤʌst]' },
+
+    { en: 'phone', tr: '[fəʊn]' },
+
+    { en: 'phrase', tr: '[freɪz]' },
+
+    { en: 'sphere', tr: '[sfɪə]' },
+
+    { en: 'all', tr: '[ɔːl]' },
+
+    { en: 'ball', tr: '[bɔːl]' },
+
+    { en: 'call', tr: '[kɔːl]' },
+
+    { en: 'fall', tr: '[fɔːl]' },
+
+    { en: 'hall', tr: '[hɔːl]' },
+
+    { en: 'mall', tr: '[mɔːl]' },
+
+    { en: 'small', tr: '[smɔːl]' },
+
+    { en: 'tall', tr: '[tɔːl]' },
+
+    { en: 'wall', tr: '[wɔːl]' },
+
+    { en: 'queen', tr: '[kwiːn]' },
+
+    { en: 'quick', tr: '[kwɪk]' },
+
+    { en: 'quit', tr: '[kwɪt]' },
+
+    { en: 'quite', tr: '[kwaɪt]' },
+
+    { en: 'quote', tr: '[kwəʊt]' },
+
+    { en: 'square', tr: '[skweə]' },
+
+    { en: 'squeeze', tr: '[skwiːz]' },
+
+    { en: 'scheme', tr: '[skiːm]' },
+
+    { en: 'school', tr: '[skuːl]' },
+
+    { en: 'booth', tr: '[buːð]' },
+
+    { en: 'breathe', tr: '[briːð]' },
+
+    { en: 'cloth', tr: '[klɒθ]' },
+
+    { en: 'smooth', tr: '[smuːð]' },
+
+    { en: 'thus', tr: '[ðʌs]' },
+
+    { en: 'with', tr: '[wɪð]' },
+
+    { en: 'breath', tr: '[breθ]' },
+
+    { en: 'depth', tr: '[depθ]' },
+
+    { en: 'fifth', tr: '[fɪfθ]' },
+
+    { en: 'forth', tr: '[fɔːθ]' },
+
+    { en: 'length', tr: '[leŋθ]' },
+
+    { en: 'ninth', tr: '[naɪnθ]' },
+
+    { en: 'north', tr: '[nɔːθ]' },
+
+    { en: 'seventh', tr: '[sevnθ]' },
+
+    { en: 'sixth', tr: '[sɪksθ]' },
+
+    { en: 'strength', tr: '[streŋθ]' },
+
+    { en: 'tenth', tr: '[tenθ]' },
+
+    { en: 'thank', tr: '[θæŋk]' },
+
+    { en: 'strengthen', tr: '[streŋθn]' },
+
+    { en: 'thanks', tr: '[θæŋks]' },
+
+    { en: 'theme', tr: '[θiːm]' },
+
+    { en: 'thick', tr: '[θɪk]' },
+
+    { en: 'thigh', tr: '[θaɪ]' },
+
+    { en: 'third', tr: '[θɜːd]' },
+
+    { en: 'thrive', tr: '[θraɪv]' },
+
+    { en: 'tooth', tr: '[tuːθ]' },
+
+    { en: 'warmth', tr: '[wɔːmθ]' },
+
+  ];
+
+  
+
+  console.log(TR_NEW_ONE_ARR.length);
+
+  
+  const TR_NEW_TWO_ARR = [
+    { en: 'duty', tr: '[ˈdjuːti]' },
+    { en: 'data', tr: '[ˈdeɪtə]' },
+    { en: 'baby', tr: '[ˈbeɪbi]' },
+    { en: 'Peter', tr: '[ˈpiːtə]' },
+    { en: 'pepper', tr: '[ˈpepə]' },
+    { en: 'reading', tr: '[ˈriːdɪŋ]' },
+    { en: 'meaning', tr: '[ˈmiːnɪŋ]' },
+    { en: 'teaching', tr: '[ˈtiːʧɪŋ]' },
+    { en: 'speaker', tr: '[ˈspiːkə]' },
+    { en: 'weakness', tr: '[ˈwiːknəs]' },
+    { en: 'teammate', tr: '[ˈtiːmmeɪt]' },
+    { en: 'knowledge', tr: '[ˈnɑːlɪdʒ]' },
+    { en: 'sugar', tr: '[ˈʃʊɡər]' },
+    { en: 'promise', tr: '[ˈprɑːmɪs]' },
+    { en: 'publish', tr: '[ˈpʌblɪʃ]' },
+    { en: 'Bible', tr: '[ˈbaɪbl]' },
+    { en: 'British', tr: '[ˈbrɪtɪʃ]' },
+    { en: 'finish', tr: '[ˈfɪnɪʃ]' },
+    { en: 'parish', tr: '[ˈpærɪʃ]' },
+    { en: 'publish', tr: '[ˈpʌblɪʃ]' },
+    { en: 'vanish', tr: '[ˈvænɪʃ]' },
+    { en: 'whisper', tr: '[ˈwɪspə]' },
+    { en: 'feeling', tr: '[ˈfiːlɪŋ]' },
+    { en: 'fifteen', tr: '[fɪfˈtiːn]' },
+    { en: 'indeed', tr: '[ɪnˈdiːd]' },
+    { en: 'meeting', tr: '[ˈmiːtɪŋ]' },
+    { en: 'needle', tr: '[ˈniːdl]' },
+    { en: 'nineteen', tr: '[naɪnˈtiːn]' },
+    { en: 'seventeen', tr: '[sevnˈtiːn]' },
+    { en: 'sixteen', tr: '[sɪkˈstiːn]' },
+    { en: 'thirteen', tr: '[θɜːˈtiːn]' },
+    { en: 'dealer', tr: '[ˈdiːlə]' },
+    { en: 'eager', tr: '[ˈiːɡə]' },
+    { en: 'meaning', tr: '[ˈmiːnɪŋ]' },
+    { en: 'reading', tr: '[ˈriːdɪŋ]' },
+    { en: 'teaching', tr: '[ˈtiːʧɪŋ]' },
+    { en: 'treatment', tr: '[ˈtriːtmənt]' },
+    { en: 'ready', tr: '[ˈredi]' },
+    { en: 'cooking', tr: '[ˈkʊkɪŋ]' },
+    { en: 'notebook', tr: '[ˈnəʊtbʊk]' },
+    { en: 'banking', tr: '[ˈbæŋkɪŋ]' },
+    { en: 'blessing', tr: '[ˈblesɪŋ]' },
+    { en: 'burning', tr: '[ˈbɜːnɪŋ]' },
+    { en: 'changing', tr: '[ˈʧeɪnʤɪŋ]' },
+    { en: 'cooking', tr: '[ˈkʊkɪŋ]' },
+    { en: 'dining', tr: '[ˈdaɪnɪŋ]' },
+    { en: 'drinking', tr: '[ˈdrɪŋkɪŋ]' },
+    { en: 'eating', tr: '[ˈiːtɪŋ]' },
+    { en: 'evening', tr: '[ˈiːvnɪŋ]' },
+    { en: 'feeling', tr: '[ˈfiːlɪŋ]' },
+    { en: 'fishing', tr: '[ˈfɪʃɪŋ]' },
+    { en: 'flying', tr: '[ˈflaɪɪŋ]' },
+    { en: 'funding', tr: '[ˈfʌndɪŋ]' },
+    { en: 'hunting', tr: '[ˈhʌntɪŋ]' },
+    { en: 'landing', tr: '[ˈlændɪŋ]' },
+    { en: 'leading', tr: '[ˈliːdɪŋ]' },
+    { en: 'living', tr: '[ˈlɪvɪŋ]' },
+    { en: 'meaning', tr: '[ˈmiːnɪŋ]' },
+    { en: 'meeting', tr: '[ˈmiːtɪŋ]' },
+    { en: 'missing', tr: '[ˈmɪsɪŋ]' },
+    { en: 'morning', tr: '[ˈmɔːnɪŋ]' },
+    { en: 'painting', tr: '[ˈpeɪntɪŋ]' },
+    { en: 'parking', tr: '[ˈpɑːkɪŋ]' },
+    { en: 'planning', tr: '[ˈplænɪŋ]' },
+    { en: 'rating', tr: '[ˈreɪtɪŋ]' },
+    { en: 'reading', tr: '[ˈriːdɪŋ]' },
+    { en: 'running', tr: '[ˈrʌnɪŋ]' },
+    { en: 'saving', tr: '[ˈseɪvɪŋ]' },
+    { en: 'shopping', tr: '[ˈʃɒpɪŋ]' },
+    { en: 'spending', tr: '[ˈspendɪŋ]' },
+    { en: 'standing', tr: '[ˈstændɪŋ]' },
+    { en: 'starting', tr: '[ˈstɑːtɪŋ]' },
+    { en: 'striking', tr: '[ˈstraɪkɪŋ]' },
+    { en: 'swimming', tr: '[ˈswɪmɪŋ]' },
+    { en: 'teaching', tr: '[ˈtiːʧɪŋ]' },
+    { en: 'testing', tr: '[ˈtestɪŋ]' },
+    { en: 'thinking', tr: '[ˈθɪŋkɪŋ]' },
+    { en: 'timing', tr: '[ˈtaɪmɪŋ]' },
+    { en: 'trading', tr: '[ˈtreɪdɪŋ]' },
+    { en: 'training', tr: '[ˈtreɪnɪŋ]' },
+    { en: 'voting', tr: '[ˈvəʊtɪŋ]' },
+    { en: 'wedding', tr: '[ˈwedɪŋ]' },
+    { en: 'writing', tr: '[ˈraɪtɪŋ]' },
+    { en: 'highlight', tr: '[ˈhaɪlaɪt]' },
+    { en: 'insight', tr: '[ˈɪnsaɪt]' },
+    { en: 'lighting', tr: '[ˈlaɪtɪŋ]' },
+    { en: 'lightly', tr: '[ˈlaɪtli]' },
+    { en: 'lightning', tr: '[ˈlaɪtnɪŋ]' },
+    { en: 'midnight', tr: '[ˈmɪdnaɪt]' },
+    { en: 'nightmare', tr: '[ˈnaɪtmeə]' },
+    { en: 'slightly', tr: '[ˈslaɪtli]' },
+    { en: 'sunlight', tr: '[ˈsʌnlaɪt]' },
+    { en: 'tighten', tr: '[ˈtaɪtn]' },
+    { en: 'fighter', tr: '[ˈfaɪtə]' },
+    { en: 'speaker', tr: '[ˈspiːkə]' },
+    { en: 'highly', tr: '[ˈhaɪlɪ]' },
+    { en: 'counter', tr: '[ˈkaʊntə]' },
+    { en: 'counter', tr: '[ˈkaʊntə]' },
+    { en: 'discount', tr: '[ˈdɪskaʊnt]' },
+    { en: 'outer', tr: '[ˈaʊtə]' },
+    { en: 'outfit', tr: '[ˈaʊtfɪt]' },
+    { en: 'outlet', tr: '[ˈaʊtlet]' },
+    { en: 'outline', tr: '[ˈaʊtlaɪn]' },
+    { en: 'output', tr: '[ˈaʊtpʊt]' },
+    { en: 'outside', tr: '[ˌaʊtˈsaɪd]' },
+    { en: 'toilet', tr: '[ˈtɔɪlɪt]' },
+    { en: 'birthday', tr: '[ˈbɜːθdeɪ]' },
+    { en: 'display', tr: '[dɪˈspleɪ]' },
+    { en: 'okay', tr: '[əʊˈkeɪ]' },
+    { en: 'payment', tr: '[ˈpeɪmənt]' },
+    { en: 'portray', tr: '[pɔːˈtreɪ]' },
+    { en: 'physical', tr: '[ˈfɪzɪkl]' },
+    { en: 'photo', tr: '[ˈfəʊtəʊ]' },
+    { en: 'physics', tr: '[ˈfɪzɪks]' },
+    { en: 'baseball', tr: '[ˈbeɪsbɔːl]' },
+    { en: 'football', tr: '[ˈfʊtbɔːl]' },
+    { en: 'hallway', tr: '[ˈhɔːlweɪ]' },
+    { en: 'install', tr: '[ɪnˈstɔːl]' },
+    { en: 'equal', tr: '[ˈiːkwəl]' },
+    { en: 'frequent', tr: '[ˈfriːkwənt]' },
+    { en: 'liquid', tr: '[ˈlɪkwɪd]' },
+    { en: 'question', tr: '[ˈkwesʧən]' },
+    { en: 'quickly', tr: '[ˈkwɪkli]' },
+    { en: 'request', tr: '[rɪˈkwest]' },
+    { en: 'scholar', tr: '[ˈskɒlə]' },
+    { en: 'clothing', tr: '[ˈkləʊðɪŋ]' },
+    { en: 'gather', tr: '[ˈɡæðə]' },
+    { en: 'gathering', tr: '[ˈɡæðərɪŋ]' },
+    { en: 'bother', tr: '[ˈbɒðə]' },
+    { en: 'thereby', tr: '[ˈðeəˈbaɪ]' },
+    { en: 'together', tr: '[təˈɡeðə]' },
+    { en: 'within', tr: '[wɪˈðɪn]' },
+    { en: 'ethical', tr: '[ˈeθɪkl]' },
+    { en: 'ethics', tr: '[ˈeθɪks]' },
+    { en: 'ethnic', tr: '[ˈeθnɪk]' },
+    { en: 'method', tr: '[ˈmeθəd]' },
+    { en: 'monthly', tr: '[ˈmʌnθli]' },
+    { en: 'northwest', tr: '[ˌnɔːθˈwest]' },
+    { en: 'southeast', tr: '[saʊθˈiːst]' },
+    { en: 'southwest', tr: '[saʊθˈwest]' },
+    { en: 'themselves', tr: '[ðəmˈselvz]' },
+    { en: 'thirty', tr: '[ˈθɜːti]' },
+    { en: 'thousand', tr: '[ˈθaʊzənd]' },
+    { en: 'warehouse', tr: '[ˈweəhaʊs]' },
+    { en: 'halo', tr: '[ˈheɪləʊ]' },
+    { en: 'hello', tr: '[həˈləʊ]' },
+  ];
+  
+  console.log(TR_NEW_TWO_ARR.length);
+  
+  const TR_NEW_THREE_ARR = [
+    { en: 'psychology', tr: '[saɪˈkɑːlədʒɪ]' },
+    { en: 'abandon', tr: '[əˈbændən]' },
+    { en: 'ambassador', tr: '[æmˈbæsədər]' },
+    { en: 'pronunciation', tr: '[prəˌnʌnsɪˈeɪʃn]' },
+    { en: 'excellent', tr: '[ˈeksələnt]' },
+    { en: 'interchangeably', tr: '[ˌɪntərˈʧeɪnʤəblɪ]' },
+    { en: 'interesting', tr: '[ˈɪntrestɪŋ]' },
+    { en: 'ongoing', tr: '[ˈɒŋɡəʊɪŋ]' },
+    { en: 'operating', tr: '[ˈɒpreɪtɪŋ]' },
+    { en: 'outsider', tr: '[ˌaʊtˈsaɪdə]' },
+    { en: 'outstanding', tr: '[aʊtˈstændɪŋ]' },
+    { en: 'biography', tr: '[baɪˈɒɡrəfi]' },
+    { en: 'demographic', tr: '[deməˈɡræfɪk]' },
+    { en: 'elephant', tr: '[ˈelɪfənt]' },
+    { en: 'phenomenon', tr: '[fəˈnɒmɪnən]' },
+    { en: 'philosophical', tr: '[ˌfɪləˈsɒfɪkl]' },
+    { en: 'philosophy', tr: '[fɪˈlɒsəfi]' },
+    { en: 'photograph', tr: '[ˈfəʊtəɡrɑːf]' },
+    { en: 'photographer', tr: '[fəˈtɒɡrəfə]' },
+    { en: 'photography', tr: '[fəˈtɒɡrəfi]' },
+    { en: 'physically', tr: '[ˈfɪzɪkli]' },
+    { en: 'telephone', tr: '[ˈtelɪfəʊn]' },
+    { en: 'basketball', tr: '[ˈbɑːskɪtbɔːl]' },
+    { en: 'footballer', tr: '[ˈfʊtbɔːlə]' },
+    { en: 'consequently', tr: '[ˈkɒnsɪkwəntli]' },
+    { en: 'equally', tr: '[ˈiːkwəli]' },
+    { en: 'equivalent', tr: '[ɪˈkwɪvələn]' },
+    { en: 'frequency', tr: '[ˈfriːkwənsi]' },
+    { en: 'scholarship', tr: '[ˈskɒləʃɪp]' },
+    { en: 'furthermore', tr: '[ˈfɜːðəˈmɔː]' },
+    { en: 'nevertheless', tr: '[nevəðəˈles]' },
+    { en: 'enthusiasm', tr: '[ɪnˈθjuːziæzm]' },
+    { en: 'everything', tr: '[ˈevriθɪŋ]' },
+    { en: 'theology', tr: '[θiˈɒləʤi]' },
+    { en: 'therapist', tr: '[ˈθerəpɪst]' },
+  ];
+  
+  console.log(TR_NEW_THREE_ARR.length);
+  
+
+  const fChoose = document.querySelector('.tr__choose');
+
+  
+
+  const fBtnStart = document.querySelector('#tr__start');
+
+  
+
+  const fContainerForContent = document.querySelector('.tr__content-container');
+
+  const fQuestion = fContainerForContent.querySelector('.tr__question');
+
+  const fRightAnswer = fContainerForContent.querySelector('.tr__right-answer');
+
+  const fResponseField = fContainerForContent.querySelector('.tr__responsefield');
+
+  const fAnswerArr = fContainerForContent.querySelector('.tr__answer-arr');
+
+  const fContainerBottomWrapper = fContainerForContent.querySelector('.content-container__bottom-wrapper');
+
+  
+
+  const fResults = document.querySelector('.tr__results');
+
+  const fBtnAgain = fResults.querySelector('#tr__btn-again');
+
+  
+
+  const fScore = document.querySelector('.tr__score');
+
+  const fScoreTotal = fScore.querySelector('#tr__score-total');
+
+  const fScoreValue = fScore.querySelector('#tr__score-value');
+
+  
+
+  const fBtnResult = fContainerForContent.querySelector('#tr__btn-check');
+
+  const fBtnNext = fContainerForContent.querySelector('#tr__btn-next');
+
+  
+
+  const fTemplate = document.querySelector('#template-transcription__new').content.querySelector('.tr__word');
+
+  
+  const renderWords = (word) => {
+    let currentElement = fTemplate.cloneNode(true);
+  
+    currentElement.textContent = word;
+    currentElement.id = word;
+  
+    return currentElement;
+  };
+  
+  const renderWordsStart = (valueOfLang, wordsArray, wordsArrayMistakes, arrForRender) => {
+    let fragment = document.createDocumentFragment();
+    console.log('render.js - renderWordsStart - valueOfLang: ' + valueOfLang);
+  
+    switch (valueOfLang) {
+      case 'en':
+        typeQuestion = 'en';
+        typeAnswer = 'tr';
+        break;
+      case 'tr':
+        typeQuestion = 'tr';
+        typeAnswer = 'en';
+        break;
+      default:
+        typeQuestion = 'en';
+        typeAnswer = 'tr';
+    }
+  
+    let words = arrForRender[wordsArray[renderСounters]][typeAnswer].replace(/[\[\]]/g, '').split('');
+  
+    fQuestion.textContent = arrForRender[wordsArray[renderСounters]][typeQuestion];
+    console.log('words ' + words);
+  
+    let mistakes = arrForRender[wordsArrayMistakes[renderMistakesCounter]][typeAnswer]
+      .replace(/[\[\]]/g, '')
+      .split('')
+      .concat(arrForRender[wordsArrayMistakes[renderMistakesCounter + 1]][typeAnswer].replace(/[\[\]]/g, '').split(''));
+  
+    console.log('mistakes ' + mistakes);
+    renderMistakesCounter += 2;
+    let arrwordsMistakes = words.concat(mistakes);
+    console.log('arrwordsMistakes ' + arrwordsMistakes);
+  
+    for (let i = arrwordsMistakes.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      let t = arrwordsMistakes[i];
+      arrwordsMistakes[i] = arrwordsMistakes[j];
+      arrwordsMistakes[j] = t;
+    }
+  
+    console.log(arrwordsMistakes);
+  
+    for (let i = 0; i < arrwordsMistakes.length; i++) {
+      fragment.append(renderWords(arrwordsMistakes[i]));
+    }
+  
+    fAnswerArr.textContent = '';
+    fResponseField.textContent = '';
+    fRightAnswer.textContent = '';
+  
+    fAnswerArr.append(fragment);
+  };
+  
+  const generateRandomNumbers = (count, arr) => {
+    let min = 0;
+    let max = arr.length - 1;
+    if (max - min + 1 < count) {
+      throw new Error('Невозможно сгенерировать указанное количество уникальных чисел');
+    }
+  
+    const numbers = [];
+    while (numbers.length < count) {
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      if (!numbers.includes(randomNumber)) {
+        numbers.push(randomNumber);
+      }
+    }
+    return numbers;
+  };
+  
+  const generateRandomMistakes = (count, arr, generatedArr) => {
+    count = count * 2;
+    let min = 0;
+    let max = arr.length - 1;
+    if (max - min + 1 < count) {
+      throw new Error('Невозможно сгенерировать указанное количество уникальных чисел');
+    }
+  
+    const numbers = [];
+    while (numbers.length < count) {
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      if (!numbers.includes(randomNumber) && !generatedArr.includes(randomNumber)) {
+        numbers.push(randomNumber);
+      }
+    }
+    return numbers;
+  };
+  
+
+  let valueOfQuestions = 0;
+
+  let valueOfQuestionsAll = 0;
+
+  let valueOfDifficult;
+
+  let valueOfLang;
+
+  let scoreValue = 0;
+
+  let valueArr = [];
+
+  let wordsArray;
+
+  let wordsArrayMistakes;
+
+  let renderСounters = 0;
+
+  let renderMistakesCounter = 0;
+
+  let typeQuestion;
+
+  let typeAnswer;
+
+  let difficult;
+
+  let arrForRender;
+
+  
+
+  fBtnStart.addEventListener('click', () => {
+
+    fResponseField.style.backgroundColor = '#fff';
+
+    const fValueOfQuestions = fChoose.querySelector('.tr__choice:checked');
+
+    const fValueOfLang = fChoose.querySelector('.tr__lang:checked');
+
+    const fValueOfDifficult = fChoose.querySelector('.tr__difficult:checked');
+
+  
+
+    console.log(fValueOfQuestions.value + ' ' + fValueOfLang.value + ' ' + fValueOfDifficult.value);
+
+    console.log(fValueOfQuestions.value + ' ' + fValueOfLang.value + ' ' + fValueOfDifficult.value);
+
+    fChoose.style.display = 'none';
+
+    fContainerForContent.style.display = 'block';
+
+    fContainerBottomWrapper.style.display = 'block';
+
+  
+
+    fBtnResult.classList.remove('visually-hidden');
+
+  
+
+    valueOfQuestions = fValueOfQuestions.value;
+
+    valueOfQuestionsAll = fValueOfQuestions.value;
+
+    valueOfDifficult = fValueOfDifficult.value;
+
+    valueOfLang = fValueOfLang.value;
+
+  
+
+    switch (valueOfDifficult) {
+
+      case 'easy':
+
+        arrForRender = TR_NEW_ONE_ARR;
+
+        break;
+
+      case 'middle':
+
+        arrForRender = TR_NEW_TWO_ARR;
+
+        break;
+
+      case 'hard':
+
+        arrForRender = TR_NEW_THREE_ARR;
+
+        break;
+
+      default:
+
+        arrForRender = TR_NEW_ONE_ARR;
+
+    }
+
+  
+
+    console.log(arrForRender);
+
+    wordsArray = generateRandomNumbers(fValueOfQuestions.value, arrForRender);
+
+    console.log('wordsArray ' + wordsArray);
+
+    wordsArrayMistakes = generateRandomMistakes(fValueOfQuestions.value, arrForRender, wordsArray);
+
+    console.log('wordsArrayMistakes ' + wordsArrayMistakes);
+
+    renderWordsStart(fValueOfLang.value, wordsArray, wordsArrayMistakes, arrForRender);
+
+  });
+
+  
+
+  fResponseField.addEventListener('click', (evt) => {
+
+    console.log(evt.target.id);
+
+    if (evt.target.id !== 'responsefield') {
+
+      fAnswerArr.append(evt.target);
+
+      const index = valueArr.indexOf(evt.target.textContent);
+
+      if (index > -1) {
+
+        valueArr.splice(index, 1);
+
+      }
+
+      console.log(valueArr);
+
+    }
+
+  });
+
+  
+
+  fAnswerArr.addEventListener('click', (evt) => {
+
+    console.log(evt.target.id);
+
+    if (evt.target.id !== 'answers') {
+
+      fResponseField.append(evt.target);
+
+      valueArr.push(evt.target.textContent);
+
+      console.log(valueArr);
+
+    }
+
+  });
+
+  
+
+  fBtnResult.addEventListener('click', (evt) => {
+
+    evt.preventDefault();
+
+    let result;
+
+  
+
+    switch (valueOfLang) {
+
+      case 'en':
+
+        result = '[' + valueArr.join('') + ']';
+
+        break;
+
+      case 'tr':
+
+        result = valueArr.join('');
+
+        break;
+
+      default:
+
+        result = '[' + valueArr.join('') + ']';
+
+    }
+
+  
+
+    valueArr = [];
+
+    console.log('handler - result: ' + result);
+
+  
+
+    if (result === arrForRender[wordsArray[renderСounters]][typeAnswer]) {
+
+      console.log('ДА');
+
+      fResponseField.style.backgroundColor = 'green';
+
+      scoreValue++;
+
+    } else {
+
+      console.log('НЕТ');
+
+      fResponseField.style.backgroundColor = 'red';
+
+      fRightAnswer.textContent = arrForRender[wordsArray[renderСounters]][typeAnswer];
+
+    }
+
+  
+
+    if (valueOfQuestions > 1) {
+
+      valueOfQuestions--;
+
+      fBtnResult.classList.add('visually-hidden');
+
+      fBtnNext.classList.remove('visually-hidden');
+
+    } else {
+
+      valueOfQuestions--;
+
+      fContainerBottomWrapper.style.display = 'none';
+
+      fResults.style.display = 'block';
+
+      fScoreTotal.textContent = valueOfQuestionsAll;
+
+      fScoreValue.textContent = scoreValue;
+
+    }
+
+  
+
+    renderСounters++;
+
+    console.log(valueOfQuestions);
+
+  });
+
+  
+
+  fBtnNext.addEventListener('click', (evt) => {
+
+    evt.preventDefault();
+
+  
+
+    renderWordsStart(valueOfLang, wordsArray, wordsArrayMistakes, arrForRender);
+
+  
+
+    fBtnResult.classList.remove('visually-hidden');
+
+    fBtnNext.classList.add('visually-hidden');
+
+  
+
+    fResponseField.style.backgroundColor = '#fff';
+
+  });
+
+  
+
+  fBtnAgain.addEventListener('click', () => {
+
+    fChoose.style.display = 'block';
+
+    fContainerForContent.style.display = 'none';
+
+    fResults.style.display = 'none';
+
+  
+
+    valueOfQuestions = 0;
+
+    scoreValue = 0;
+
+    renderСounters = 0;
+
+    renderMistakesCounter = 0;
+
+  });
+
+  
+}
+
 if (document.querySelector('#template-words') !== null) {
   try {
     document.querySelector('.menu__link[href="words.html"]').dataset.current = 'true';
