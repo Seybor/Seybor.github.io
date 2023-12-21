@@ -2748,28 +2748,1468 @@ if (document.querySelector('#template-offers__one') !== null) {
   console.log(OFFERS_A1_51_57.length);
 
   
+  const OFFERS_A1_58_62 = [
+    {
+      ru: 'Она не пьёт кофе по утрам',
+      en: "She doesn't drink coffee in the mornings",
+      tr: '[ʃiː] [dʌznt] [drɪŋk] [ˈkɒfi] [ɪn] [ðə] [ˈmɔːnɪŋz]',
+    },
+    {
+      ru: 'Он не пьёт чай утром',
+      en: "He doesn't drink tea in the morning",
+      tr: '[hiː] [dʌznt] [drɪŋk] [tiː] [ɪn] [ðə] [ˈmɔːnɪŋ]',
+    },
+    {
+      ru: 'Я не ем слишком много по вечерам',
+      en: "I don't eat too much in the evenings",
+      tr: '[aɪ] [dəʊnt] [iːt] [tuː] [mʌʧ] [ɪn] [ði] [ˈiːvnɪŋz]',
+    },
+    {
+      ru: 'Я не ем слишком много вечером',
+      en: "I don't eat too much in the evening",
+      tr: '[aɪ] [dəʊnt] [iːt] [tuː] [mʌʧ] [ɪn] [ði] [ˈiːvnɪŋ]',
+    },
+    {
+      ru: 'Я не понимаю, почему так много людей не ведут здоровый образ жизни',
+      en: "I don't understand why so many people don't lead a healthy lifestyle",
+      tr: '[aɪ] [dəʊnt] [ˌʌndəˈstænd] [waɪ] [səʊ] [ˈmeni] [ˈpiːpl] [dəʊnt] [liːd] [ə] [ˈhelθi] [ˈlaɪfˌstaɪl]',
+    },
+    {
+      ru: 'Я не езжу на велосипеде каждую неделю',
+      en: "I don't go cycling every week",
+      tr: '[aɪ] [dəʊnt] [ɡəʊ] [ˈsaɪklɪŋ] [ˈevri] [wiːk]',
+    },
+    {
+      ru: 'Он не работает вечером, потому что проводит время со своей семьёй',
+      en: "He doesn't work in the evening because he spends time with his family",
+      tr: '[hiː] [dʌznt] [wɜːk] [ɪn] [ði] [ˈiːvnɪŋ] [bɪˈkɒz] [hiː] [spendz] [taɪm] [wɪð] [hɪz] [ˈfæmɪli]',
+    },
+    {
+      ru: 'Мы не встречаемся на выходных',
+      en: "We don't meet at the weekends",
+      tr: '[wiː] [dəʊnt] [miːt] [æt] [ðə] [ˌwiːkˈendz]',
+    },
+    {
+      ru: 'Я больше не хочу платить за это',
+      en: "I don't want to pay for it anymore",
+      tr: '[aɪ] [dəʊnt] [wɒnt] [tuː] [peɪ] [fɔːr] [ɪt] [ˌeniˈmɔː]',
+    },
+    {
+      ru: 'Он больше не хочет это слышать',
+      en: "He doesn't want to hear it anymore",
+      tr: '[hiː] [dʌznt] [wɒnt] [tuː] [hɪər] [ɪt] [ˌeniˈmɔː]',
+    },
+    {
+      ru: 'Он не играет на скрипке, но он играет на гитаре',
+      en: "He doesn't play the violin but he plays the guitar",
+      tr: '[hiː] [dʌznt] [pleɪ] [ðə] [ˌvaɪəˈlɪn] [bʌt] [hiː] [pleɪz] [ðə] [ɡɪˈtɑː]',
+    },
+    {
+      ru: 'Он не пытается ничего изменить',
+      en: "He doesn't try to change anything",
+      tr: '[hiː] [dʌznt] [traɪ] [tuː] [ʧeɪnʤ] [ˈeniθɪŋ]',
+    },
+    {
+      ru: 'Он пытается ничего не изменить',
+      en: 'He tries to change nothing',
+      tr: '[hiː] [traɪz] [tuː] [ʧeɪnʤ] [ˈnʌθɪŋ]',
+    },
+    {
+      ru: 'Я не делаю покупки каждый день',
+      en: "I don't do the shopping every day",
+      tr: '[aɪ] [dəʊnt] [duː] [ðə] [ˈʃɒpɪŋ] [ˈevri] [deɪ]',
+    },
+    {
+      ru: 'Он не обедает на работе',
+      en: "He doesn't have lunch at work",
+      tr: '[hiː] [dʌznt] [hæv] [lʌnʧ] [æt] [wɜːk]',
+    },
+    {
+      ru: 'Я не вижу никакой разницы между этими двумя вещами',
+      en: "I don't see any difference between these two things",
+      tr: '[aɪ] [dəʊnt] [siː] [ˈeni] [ˈdɪfrns] [bɪˈtwiːn] [ðiːz] [tuː] [θɪŋz]',
+    },
+    {
+      ru: 'Я вижу некоторые различия между этими вещами',
+      en: 'I see some differences between these things',
+      tr: '[aɪ] [siː] [sʌm] [ˈdɪfrnsɪz] [bɪˈtwiːn] [ðiːz] [θɪŋz]',
+    },
+    {
+      ru: 'Он не катается на лыжах',
+      en: "He doesn't go skiing",
+      tr: '[hiː] [dʌznt] [ɡəʊ] [ˈskiːɪŋ]',
+    },
+    {
+      ru: 'Ей не нравится кататься на сноуборде',
+      en: "She doesn't like showboarding",
+      tr: '[ʃiː] [dʌznt] [laɪk] [ˈsnəʊˌbɔːdɪŋ]',
+    },
+    {
+      ru: 'Я не делаю покупки каждый день',
+      en: "I don't do the shopping every day",
+      tr: '[aɪ] [dəʊnt] [duː] [ðə] [ˈʃɒpɪŋ] [ˈevri] [deɪ]',
+    },
+    {
+      ru: 'Я не хожу за покупками каждый день',
+      en: "I don't go shopping so often",
+      tr: '[aɪ] [dəʊnt] [ɡəʊ] [ˈʃɒpɪŋ] [səʊ] [ˈɒfn]',
+    },
+    {
+      ru: 'Она не работает по выходным',
+      en: "She doesn't work at the weekends",
+      tr: '[ʃiː] [dʌznt] [wɜːk] [æt] [ðə] [ˌwiːkˈendz]',
+    },
+    {
+      ru: 'Он не ходит в спортзал дважды в неделю',
+      en: "He doesn't go to the gym twice a week",
+      tr: '[hiː] [dʌznt] [ɡəʊ] [tuː] [ðə] [ʤɪm] [twaɪs] [ə] [wiːk]',
+    },
+    {
+      ru: 'Я не пользуюсь общественным транспортом так часто',
+      en: "I don't use public transport so often",
+      tr: '[aɪ] [dəʊnt] [juːz] [ˈpʌblɪk] [ˈtrænspɔːt] [səʊ] [ˈɒfn]',
+    },
+    {
+      ru: 'Я не езжу на работу на автобусе',
+      en: "I don't go to work by bus",
+      tr: '[aɪ] [dəʊnt] [ɡəʊ] [tuː] [wɜːk] [baɪ] [bʌs]',
+    },
+    {
+      ru: 'Я не хожу плавать так часто',
+      en: "I don't go swimming so often",
+      tr: '[aɪ] [dəʊnt] [ɡəʊ] [ˈswɪmɪŋ] [səʊ] [ˈɒfn]',
+    },
+    {
+      ru: 'Я не интересуюсь этим',
+      en: 'I am not interested in it',
+      tr: '[aɪ] [æm] [nɒt] [ˈɪntrestɪd] [ɪn] [ɪt]',
+    },
+    {
+      ru: 'Я не в кафе сейчас',
+      en: 'I am not a cafe now',
+      tr: '[aɪ] [æm] [nɒt] [ə] [ˈkæfeɪ] [naʊ]',
+    },
+    {
+      ru: 'Он совсем не устал',
+      en: 'He is not tired at all',
+      tr: '[hiː] [ɪz] [nɒt] [taɪəd] [æt] [ɔːl]',
+    },
+    {
+      ru: 'Я не рад этому',
+      en: 'I am not happy about it',
+      tr: '[aɪ] [æm] [nɒt] [ˈhæpi] [əˈbaʊt] [ɪt]',
+    },
+    {
+      ru: 'Я не в отпуске сейчас',
+      en: 'I am not on holiday now',
+      tr: '[aɪ] [æm] [nɒt] [ɒn] [ˈhɒlədeɪ] [naʊ]',
+    },
+    {
+      ru: 'Это не распространённая ошибка среди студентов',
+      en: "It isn't a common mistake among students",
+      tr: '[ɪt] [ˈɪznt] [ə] [ˈkɒmən] [mɪˈsteɪk] [əˈmʌŋ] [ˈstjuːdnts]',
+    },
+    {
+      ru: 'Я думаю, это не лучшее решение этой проблемы',
+      en: "I think it isn't the best solution to this problem",
+      tr: '[aɪ] [θɪŋk] [ɪt] [ˈɪznt] [ðə] [best] [səˈluːʃn] [tuː] [ðɪs] [ˈprɒbləm]',
+    },
+    {
+      ru: 'Я думаю, это не лучшее решение',
+      en: "I think it isn't the best decision",
+      tr: '[aɪ] [θɪŋk] [ɪt] [ˈɪznt] [ðə] [best] [dɪˈsɪʒn]',
+    },
+    {
+      ru: 'Он не носитель языка',
+      en: "He isn't a native speaker",
+      tr: '[hiː] [ˈɪznt] [ə] [ˈneɪtɪv] [ˈspiːkə]',
+    },
+    {
+      ru: 'Я не думаю, что это лучший ответ на тот вопрос',
+      en: "I don't think that it the best answer to that question",
+      tr: '[aɪ] [dəʊnt] [θɪŋk] [ðæt] [ɪt] [ðə] [best] [ˈɑːnsə] [tuː] [ðæt] [ˈkwesʧən]',
+    },
+    {
+      ru: 'Это не кажется неэффективным',
+      en: "It doesn't seem ineffective",
+      tr: '[ɪt] [dʌznt] [siːm] [ˌɪnɪˈfektɪv]',
+    },
+    {
+      ru: 'Это совсем не эффективно',
+      en: 'It is not effective at all',
+      tr: '[ɪt] [ɪz] [nɒt] [ɪˈfektɪv] [æt] [ɔːl]',
+    },
+    {
+      ru: 'Она не хочет там учиться, потому что это не так дешево',
+      en: "She doesn't want to study there because it isn't so cheap",
+      tr: '[ʃiː] [dʌznt] [wɒnt] [tuː] [ˈstʌdi] [ðeə] [bɪˈkɒz] [ɪt] [ˈɪznt] [səʊ] [ʧiːp]',
+    },
+    {
+      ru: 'Это действительно странно, что он не сожалеет об этом',
+      en: "It's really strange that he isn't sorry about it",
+      tr: '[ɪts] [ˈrɪəli] [streɪnʤ] [ðæt] [hiː] [ˈɪznt] [ˈsɒri] [əˈbaʊt] [ɪt]',
+    },
+    {
+      ru: 'Она говорит, что они не хотят извиняться за это',
+      en: "She says that they don't want to apologize for it",
+      tr: '[ʃiː] [sez] [ðæt] [ðeɪ] [dəʊnt] [wɒnt] [tuː] [əˈpɒləʤaɪz] [fɔːr] [ɪt]',
+    },
+    {
+      ru: 'Он не пьёт алкоголь, потому что знает, что это не хорошо для его здоровья',
+      en: "He doesn't drink alcohol because he knows that it isn't good for his health",
+      tr: '[hiː] [dʌznt] [drɪŋk] [ˈælkəhɒl] [bɪˈkɒz] [hiː] [nəʊz] [ðæt] [ɪt] [ˈɪznt] [ɡʊd] [fɔː] [hɪz] [helθ]',
+    },
+    {
+      ru: 'Он не в бассейне сейчас',
+      en: "He isn't in the swimming pool now",
+      tr: '[hiː] [ˈɪznt] [ɪn] [ðə] [ˈswɪmɪŋ] [puːl] [naʊ]',
+    },
+    {
+      ru: 'Я думаю, это не лучшая клиника в области',
+      en: "I think it isn't the best clinic in the area",
+      tr: '[aɪ] [θɪŋk] [ɪt] [ˈɪznt] [ðə] [best] [ˈklɪnɪk] [ɪn] [ði] [ˈeəriə]',
+    },
+    {
+      ru: 'Он не хочет жить там, потому что это очень скучное место',
+      en: "He doesn't want to live there because it's a very boring place",
+      tr: '[hiː] [dʌznt] [wɒnt] [tuː] [lɪv] [ðeə] [bɪˈkɒz] [ɪts] [ə] [ˈveri] [ˈbɔːrɪŋ] [pleɪs]',
+    },
+    {
+      ru: 'Я не знаю, что делать с этим',
+      en: "I don't know what to do with it",
+      tr: '[aɪ] [dəʊnt] [nəʊ] [wɒt] [tuː] [duː] [wɪð] [ɪt]',
+    },
+    {
+      ru: 'Она не знает, как добраться до этого места',
+      en: "She doesn't know how to get to this place",
+      tr: '[ʃiː] [dʌznt] [nəʊ] [haʊ] [tuː] [ɡet] [tuː] [ðɪs] [pleɪs]',
+    },
+    {
+      ru: 'Я не знаю, куда идти',
+      en: "I don't know where to go",
+      tr: '[aɪ] [dəʊnt] [nəʊ] [weə] [tuː] [ɡəʊ]',
+    },
+    {
+      ru: 'Я не чувствую себя достаточно уверенно',
+      en: "I don't feel confident enough",
+      tr: '[aɪ] [dəʊnt] [fiːl] [ˈkɒnfɪdnt] [ɪˈnʌf]',
+    },
+    {
+      ru: 'Я не хочу читать эту книгу, потому что она такая скучная',
+      en: "I don't want to read this book because it's so boring",
+      tr: '[aɪ] [dəʊnt] [wɒnt] [tuː] [riːd] [ðɪs] [bʊk] [bɪˈkɒz] [ɪts] [səʊ] [ˈbɔːrɪŋ]',
+    },
+    {
+      ru: 'Я не хочу читать этот журнал, потому что он такой скучный',
+      en: "I don't want to read this magazine because it's so boring",
+      tr: '[aɪ] [dəʊnt] [wɒnt] [tuː] [riːd] [ðɪs] [ˌmæɡəˈziːn] [bɪˈkɒz] [ɪts] [səʊ] [ˈbɔːrɪŋ]',
+    },
+    {
+      ru: 'Я не хочу останавливаться, поэтому я делаю больше упражнений, чтобы чувствовать больше уверенности',
+      en: "I don't want to stop so I do more exercises to feel more confidence",
+      tr: '[aɪ] [dəʊnt] [wɒnt] [tuː] [stɒp] [səʊ] [aɪ] [duː] [mɔːr] [ˈeksəsaɪzɪz] [tuː] [fiːl] [mɔː] [ˈkɒnfɪdns]',
+    },
+    {
+      ru: 'Мой отец не ездит на работу на автобусе',
+      en: "My father doesn't go to work by bus",
+      tr: '[maɪ] [ˈfɑːðə] [dʌznt] [ɡəʊ] [tuː] [wɜːk] [baɪ] [bʌs]',
+    },
+    {
+      ru: 'Деньги интересуют её',
+      en: 'Money interests her',
+      tr: '[ˈmʌni] [ˈɪntrests] [hɜː]',
+    },
+    {
+      ru: 'Деньги интересны ей',
+      en: 'Money is interesting for her',
+      tr: '[ˈmʌni] [ɪz] [ˈɪntrestɪŋ] [fɔː] [hɜː]',
+    },
+    {
+      ru: 'Мой друг не хочет ничего менять в своей жизни',
+      en: "My friends doesn't want to change anything in his life",
+      tr: '[maɪ] [frendz] [dʌznt] [wɒnt] [tuː] [ʧeɪnʤ] [ˈeniθɪŋ] [ɪn] [hɪz] [laɪf]',
+    },
+    {
+      ru: 'Эта клиника не существует',
+      en: "This clinic doesn't exist",
+      tr: '[ðɪs] [ˈklɪnɪk] [dʌznt] [ɪɡˈzɪst]',
+    },
+    {
+      ru: 'Эта вещь не приносит ему удовлетворения',
+      en: "This thing doesn't bring him satisfaction",
+      tr: '[ðɪs] [θɪŋ] [dʌznt] [brɪŋ] [hɪm] [ˌsætɪsˈfækʃn]',
+    },
+    {
+      ru: 'Её одноклассник не разделяет её точку зрения',
+      en: "Her classmate doesn't share her point of view",
+      tr: '[hɜː] [ˈklɑːsmeɪt] [dʌznt] [ʃeə] [hɜː] [pɔɪnt] [ɒv] [vjuː]',
+    },
+    {
+      ru: 'Мой одногруппник не разделяет мою точку зрения',
+      en: "Your classmates doesn't share my point of view",
+      tr: '[jɔː] [ˈklɑːsmeɪt] [dʌznt] [ʃeə] [maɪ] [pɔɪnt] [ɒv] [vjuː]',
+    },
+    {
+      ru: 'Мои одноклассники не думают об этом серьёзно',
+      en: "My classmates don't think about it seriously",
+      tr: '[maɪ] [ˈklɑːsmeɪts] [dəʊnt] [θɪŋk] [əˈbaʊt] [ɪt] [ˈsɪəriəsli]',
+    },
+    {
+      ru: 'Наш директор не свободен в данный момент',
+      en: "Our director isn't free at the moment",
+      tr: '[ˈaʊə] [daɪˈrektər] [ˈɪznt] [friː] [æt] [ðə] [ˈməʊmənt]',
+    },
+    {
+      ru: 'Их поддержка не так велика',
+      en: "Their support isn't so big",
+      tr: '[ðeə] [səˈpɔːt] [ˈɪznt] [səʊ] [bɪɡ]',
+    },
+    {
+      ru: 'Это предложение работы не так интересно мне',
+      en: "This job offer isn't so interesting for me",
+      tr: '[ðɪs] [ʤɒb] [ˈɒfər] [ˈɪznt] [səʊ] [ˈɪntrestɪŋ] [fɔː] [miː]',
+    },
+    {
+      ru: 'Сообщество не очень большое в настоящее время',
+      en: "The community isn't very big at present",
+      tr: '[ðə] [kəˈmjuːnəti] [ˈɪznt] [ˈveri] [bɪɡ] [æt] [ˈpreznt]',
+    },
+    {
+      ru: 'Я чувствую, что у меня иногда недостаточно уверенности, когда я говорю по-английски, но я работаю над этим',
+      en: "I feel that sometimes I don't have enough confidence when I speak English but I work on it",
+      tr: '[aɪ] [fiːl] [ðæt] [ˈsʌmtaɪmz] [aɪ] [dəʊnt] [hæv] [ɪˈnʌf] [ˈkɒnfɪdᵊns] [wɛn] [aɪ] [spiːk] [ˈɪŋɡlɪʃ] [bʌt] [aɪ] [wɜːk] [ɒn] [ɪt]',
+    },
+    {
+      ru: 'Он не чувствует себя достаточно уверенно, когда он говорит по-английски',
+      en: "He doesn't feel confident enough when he speaks English",
+      tr: '[hiː] [dʌznt] [fiːl] [ˈkɒnfɪdᵊnt] [ɪˈnʌf] [wɛn] [hiː] [spiːks] [ˈɪŋɡlɪʃ]',
+    },
+    {
+      ru: 'Я знаю, что многие люди говорят, что время - это деньги, но я думаю, что время - это намного больше, чем деньги, потому что мы не можем вернуть его назад',
+      en: "I know that many people say that time is money but I think that time is much more than money because we can't turn it back",
+      tr: '[aɪ] [nəʊ] [ðæt] [ˈmɛni] [ˈpiːpᵊl] [seɪ] [ðæt] [taɪm] [ɪz] [ˈmʌni] [bʌt] [aɪ] [θɪŋk] [ðæt] [taɪm] [ɪz] [mʌʧ] [mɔː] [ðæn] [ˈmʌni] [bɪˈkɒz] [wiː] [kɑːnt] [tɜːn] [ɪt] [bæk]',
+    },
+    {
+      ru: 'У него хорошо оплачиваемая работа',
+      en: 'He has a well-paid job',
+      tr: '[hiː] [hæz] [ə] [wɛl]-[peɪd] [ʤɒb]',
+    },
+    {
+      ru: 'Его работа не такая хорошо оплачиваемая',
+      en: "His job isn't so well-paid",
+      tr: '[hɪz] [ʤɒb] [ˈɪznt] [səʊ] [wɛl]-[peɪd]',
+    },
+  ];
+  
+  console.log(OFFERS_A1_58_62.length);
+  
+  const OFFERS_A1_63_71 = [
+    {
+      ru: 'Это развивает наши профессиональные навыки?',
+      en: 'Does it develop our professional skills?',
+      tr: '[dʌz] [ɪt] [dɪˈveləp] [ˈaʊə] [prəˈfeʃᵊnᵊl] [skɪlz]',
+    },
+    {
+      ru: 'Он ведёт здоровый образ жизни?',
+      en: 'Does he lead a healthy lifestyle?',
+      tr: '[dʌz] [hiː] [liːd] [ə] [ˈhelθi] [ˈlaɪfˌstaɪl]',
+    },
+    {
+      ru: 'Ты зависишь от своих родителей финансово?',
+      en: 'Do you depend on your parents financially?',
+      tr: '[duː] [juː] [dɪˈpend] [ɒn] [jɔː] [ˈpeərᵊnts] [faɪˈnænʃᵊli]',
+    },
+    {
+      ru: 'Он финансово зависит от своих родителей?',
+      en: 'Does he depends on his parents financially?',
+      tr: '[dʌz] [hiː] [dɪˈpendz] [ɒn] [hɪz] [ˈpeərᵊnts] [faɪˈnænʃᵊli]',
+    },
+    {
+      ru: 'Это развивает наше воображение?',
+      en: 'Does it develop our imagination?',
+      tr: '[dʌz] [ɪt] [dɪˈveləp] [ˈaʊər] [ɪˌmæʤɪˈneɪʃᵊn]',
+    },
+    {
+      ru: 'Ты изучаешь английский самостоятельно?',
+      en: 'Do you learn english by yourself?',
+      tr: '[duː] [juː] [lɜːn] [ˈɪŋɡlɪʃ] [baɪ] [jɔːˈself]',
+    },
+    {
+      ru: 'Ты знаешь, что я изучаю английский самостоятельно?',
+      en: 'Do you know that I learn english by myself?',
+      tr: '[duː] [juː] [nəʊ] [ðæt] [aɪ] [lɜːn] [ˈɪŋɡlɪʃ] [baɪ] [maɪˈself]',
+    },
+    {
+      ru: 'Ты знаешь, что она учит английский самостоятельно?',
+      en: 'Do you know that she learns english on her own?',
+      tr: '[duː] [juː] [nəʊ] [ðæt] [ʃiː] [lɜːnz] [ˈɪŋɡlɪʃ] [ɒn] [hɜːr] [əʊn]',
+    },
+    {
+      ru: 'Она знает, что он изучает английский самостоятельно?',
+      en: 'Do you know that he learns english on his own?',
+      tr: '[duː] [juː] [nəʊ] [ðæt] [hiː] [lɜːnz] [ˈɪŋɡlɪʃ] [ɒn] [hɪz] [əʊn]',
+    },
+    {
+      ru: 'У тебя такие же результаты?',
+      en: 'Do you have the same results?',
+      tr: '[duː] [juː] [hæv] [ðə] [seɪm] [rɪˈzʌlts]',
+    },
+    {
+      ru: 'У нас разные результаты?',
+      en: 'Do we have different results?',
+      tr: '[duː] [wiː] [hæv] [ˈdɪfᵊrᵊnt] [rɪˈzʌlts]',
+    },
+    {
+      ru: 'Ты хочешь путешествовать по миру?',
+      en: 'Do you want to travel around the world?',
+      tr: '[duː] [juː] [wɒnt] [tuː] [ˈtrævᵊl] [əˈraʊnd] [ðə] [wɜːld]',
+    },
+    {
+      ru: 'Твой брат хочет путешествовать по миру?',
+      en: 'Does your brother want to travel around the world?',
+      tr: '[dʌz] [jɔː] [ˈbrʌðə] [wɒnt] [tuː] [ˈtrævᵊl] [əˈraʊnd] [ðə] [wɜːld]',
+    },
+    {
+      ru: 'Она хочет путешествовать по стране?',
+      en: 'Does she want to travel around the country?',
+      tr: '[dʌz] [ʃiː] [wɒnt] [tuː] [ˈtrævᵊl] [əˈraʊnd] [ðə] [ˈkʌntri]',
+    },
+    {
+      ru: 'Ты часто делаешь ошибки, когда говоришь на иностранном языке?',
+      en: 'Do you often make mistakes when you speak a foreign language?',
+      tr: '[duː] [juː] [ˈɒfᵊn] [meɪk] [mɪˈsteɪks] [wen] [juː] [spiːk] [ə] [ˈfɒrən] [ˈlæŋɡwɪʤ]',
+    },
+    {
+      ru: 'Она часто делает ошибки, когда она говорит по-испански?',
+      en: 'Does she often make mistakes when she speaks Spanish?',
+      tr: '[dʌz] [ʃiː] [ˈɒfᵊn] [meɪk] [mɪˈsteɪks] [wen] [ʃiː] [spiːks] [ˈspænɪʃ]',
+    },
+    {
+      ru: 'Ты знаешь как ответить на этот вопрос?',
+      en: 'Do you know how to answer this question?',
+      tr: '[duː] [juː] [nəʊ] [haʊ] [tuː] [ˈɑːnsə] [ðɪs] [ˈkwesʧən]',
+    },
+    {
+      ru: 'Ты знаешь как ответить на мой вопрос?',
+      en: 'Do you know how to answer my question?',
+      tr: '[duː] [juː] [nəʊ] [haʊ] [tuː] [ˈɑːnsə] [maɪ] [ˈkwesʧən]',
+    },
+    {
+      ru: 'У него в настоящий момент есть какие-либо вопросы?',
+      en: 'Does he have any questions at the moment?',
+      tr: '[dʌz] [hiː] [hæv] [ˈeni] [ˈkwesʧənz] [æt] [ðə] [ˈməʊmənt]',
+    },
+    {
+      ru: 'Тебя интересуют иностранные языки?',
+      en: 'Are you interested in foreign languages?',
+      tr: '[ɑː] [juː] [ˈɪntrestɪd] [ɪn] [ˈfɒrən] [ˈlæŋɡwɪʤɪz]',
+    },
+    {
+      ru: 'Иностранные языки интересуют тебя?',
+      en: 'Do foreign languages interest you?',
+      tr: '[duː] [ˈfɒrən] [ˈlæŋɡwɪʤɪz] [ˈɪntrest] [juː]',
+    },
+    {
+      ru: 'Иностранные языки интересны тебе?',
+      en: 'Are foreign languages interesting for you?',
+      tr: '[ɑː] [ˈfɒrən] [ˈlæŋɡwɪʤɪz] [ˈɪntrestɪŋ] [fɔː] [juː]',
+    },
+    { ru: 'Ты действительно шокирован?', en: 'Are you really shocked?', tr: '[ɑː] [juː] [ˈrɪəli] [ʃɒkt]' },
+    {
+      ru: 'Это для тебя большое достижение?',
+      en: 'Is it a big achievement for you?',
+      tr: '[ɪz] [ɪt] [ə] [bɪɡ] [əˈʧiːvmənt] [fɔː] [juː]',
+    },
+    {
+      ru: 'Ты действительно уверен в этом?',
+      en: 'Are you really sure about it?',
+      tr: '[ɑː] [juː] [ˈrɪəli] [ʃɔːr] [əˈbaʊt] [ɪt]',
+    },
+    { ru: 'Это далеко или близко?', en: 'Is it far or near?', tr: '[ɪz] [ɪt] [fɑːr] [ɔː] [nɪə]' },
+    { ru: 'Ты действительно удивлён?', en: 'Are you really surprised?', tr: '[ɑː] [juː] [ˈrɪəli] [səˈpraɪzd]' },
+    { ru: 'Это недорогие часы?', en: 'Is it an inexpensive watch?', tr: '[ɪz] [ɪt] [ən] [ˌɪnɪkˈspensɪv] [wɒʧ]' },
+    {
+      ru: 'Ты гордишься своими достижениями?',
+      en: 'Are you proud of your achievements?',
+      tr: '[ɑː] [juː] [praʊd] [ɒv] [jɔːr] [əˈʧiːvmənts]',
+    },
+    {
+      ru: 'Он гордится этим успехом?',
+      en: 'Is he proud of this success?',
+      tr: '[ɪz] [hiː] [praʊd] [ɒv] [ðɪs] [səkˈses]',
+    },
+    {
+      ru: 'Ты гордишься своими успехами?',
+      en: 'Are you proud of your successes?',
+      tr: '[ɑː] [juː] [praʊd] [ɒv] [jɔː] [səkˈsesɪz]',
+    },
+    {
+      ru: 'Это действительно необходимо сделать завтра?',
+      en: 'Is it really necessary to do it tomorrow?',
+      tr: '[ɪz] [ɪt] [ˈrɪəli] [ˈnesəsᵊri] [tuː] [duː] [ɪt] [təˈmɒrəʊ]',
+    },
+    {
+      ru: 'Ты действительно устал от этого?',
+      en: 'Are you really tired of it?',
+      tr: '[ɑː] [juː] [ˈrɪəli] [taɪəd] [ɒv] [ɪt]',
+    },
+    {
+      ru: 'Она действительно устала от этой рутины?',
+      en: 'Is she really tired of this routine?',
+      tr: '[ɪz] [ʃiː] [ˈrɪəli] [taɪəd] [ɒv] [ðɪs] [ruːˈtiːn]',
+    },
+    {
+      ru: 'Это полезное приложение?',
+      en: 'Is it a useful application?',
+      tr: '[ɪz] [ɪt] [ə] [ˈjuːsfᵊl] [ˌæplɪˈkeɪʃᵊn]',
+    },
+    { ru: 'Они рядом с этим местом?', en: 'Are they near this place?', tr: '[ɑː] [ðeɪ] [nɪə] [ðɪs] [pleɪs]' },
+    { ru: 'Это слева?', en: 'Is it on the left?', tr: '[ɪz] [ɪt] [ɒn] [ðə] [left]' },
+    { ru: 'Это справа?', en: 'Is it on the right?', tr: '[ɪz] [ɪt] [ɒn] [ðə] [raɪt]' },
+    {
+      ru: 'Это с левой стороны стола?',
+      en: 'Is it on the left side of the table?',
+      tr: '[ɪz] [ɪt] [ɒn] [ðə] [left] [saɪd] [ɒv] [ðə] [ˈteɪbᵊl]',
+    },
+    {
+      ru: 'Тебе нравятся такого рода шутки?',
+      en: 'Do you like this kind of jokes?',
+      tr: '[duː] [juː] [laɪk] [ðɪs] [kaɪnd] [ɒv] [ʤəʊks]',
+    },
+    {
+      ru: 'Ты уважаешь такого рода людей?',
+      en: 'Do you respect this kind of people?',
+      tr: '[duː] [juː] [rɪˈspekt] [ðɪs] [kaɪnd] [ɒv] [ˈpiːpᵊl]',
+    },
+    { ru: 'Ты часто опаздываешь?', en: 'Are you often late?', tr: '[ɑː] [juː] [ˈɒfᵊn] [leɪt]' },
+    { ru: 'Он очень усердно учится?', en: 'Does he study very hard?', tr: '[dʌz] [hiː] [ˈstʌdi] [ˈveri] [hɑːd]' },
+    { ru: 'Она очень хорошо танцует?', en: 'Does she dance very well?', tr: '[dʌz] [ʃiː] [dɑːns] [ˈveri] [wel]' },
+    {
+      ru: 'Это экономический кризис?',
+      en: 'Is it an economic crisis?',
+      tr: '[ɪz] [ɪt] [ən] [ˌiːkəˈnɒmɪk] [ˈkraɪsɪs]',
+    },
+    {
+      ru: 'Она зарабатывает достаточно денег, чтобы купить дом?',
+      en: 'Does she earn enough money to buy a house?',
+      tr: '[dʌz] [ʃiː] [ɜːn] [ɪˈnʌf] [ˈmʌni] [tuː] [baɪ] [ə] [haʊs]',
+    },
+    {
+      ru: 'У тебя есть более стабильный доход?',
+      en: 'Do you have a more stable income?',
+      tr: '[duː] [juː] [hæv] [ə] [mɔː] [ˈsteɪbᵊl] [ˈɪnkʌm]',
+    },
+    {
+      ru: 'Ты специально это делаешь?',
+      en: 'Do you do it on purpose?',
+      tr: '[duː] [juː] [duː] [ɪt] [ɒn] [ˈpɜːpəs]',
+    },
+    {
+      ru: 'Они специально всё портят?',
+      en: 'Do they spoil everything on purpose?',
+      tr: '[duː] [ðeɪ] [spɔːɪl] [ˈevriθɪŋ] [ɒn] [ˈpɜːpəs]',
+    },
+    {
+      ru: 'Ты понимаешь, почему это происходит с нами?',
+      en: 'Do you understand why it happens to us?',
+      tr: '[duː] [juː] [ˌʌndəˈstænd] [waɪ] [ɪt] [ˈhæpᵊnz] [tuː] [ʌs]',
+    },
+    {
+      ru: 'Ты показываешь более хороший результат?',
+      en: 'Do you show a better result?',
+      tr: '[duː] [juː] [ʃəʊ] [ə] [ˈbetə] [rɪˈzʌlt]',
+    },
+    {
+      ru: 'У тебя последняя модель?',
+      en: 'Do you have the latest model?',
+      tr: '[duː] [juː] [hæv] [ðə] [ˈleɪtɪst] [ˈmɒdᵊl]',
+    },
+    {
+      ru: 'Полиция контролирует это?',
+      en: 'Do the police control it?',
+      tr: '[duː] [ðə] [pəˈliːs] [kənˈtrəʊl] [ɪt]',
+    },
+    {
+      ru: 'То приложение кажется очень полезным?',
+      en: 'Does that application seem very useful?',
+      tr: '[dʌz] [ðæt] [ˌæplɪˈkeɪʃᵊn] [siːm] [ˈveri] [ˈjuːsfᵊl]',
+    },
+    {
+      ru: 'Твой брат всегда так рано встаёт?',
+      en: 'Does your brother always get up so early?',
+      tr: '[dʌz] [jɔː] [ˈbrʌðər] [ˈɔːlweɪz] [ɡet] [ʌp] [səʊ] [ˈɜːli]',
+    },
+    {
+      ru: 'Этот ребёнок кажется очень талантливым?',
+      en: 'Does the child seem very talented?',
+      tr: '[dʌz] [ðə] [ʧaɪld] [siːm] [ˈveri] [ˈtæləntɪd]',
+    },
+    {
+      ru: 'Курс кажется эффективным?',
+      en: 'Does the course seem effective?',
+      tr: '[dʌz] [ðə] [kɔːs] [siːm] [ɪˈfektɪv]',
+    },
+    {
+      ru: 'Эта история кажется очень смешной?',
+      en: 'Does this story seem very funny?',
+      tr: '[dʌz] [ðɪs] [ˈstɔːri] [siːm] [ˈveri] [ˈfʌni]',
+    },
+    {
+      ru: 'Тот университет предоставляет отличные условия для обучения?',
+      en: 'Does that university provide excellent conditions for education?',
+      tr: '[dʌz] [ðæt] [ˌjuːnɪˈvɜːsəti] [prəˈvaɪd] [ˈeksᵊlᵊnt] [kənˈdɪʃᵊnz] [fɔːr] [ˌeʤʊˈkeɪʃᵊn]',
+    },
+    {
+      ru: 'Тот мужчина работает водителем такси?',
+      en: 'Does that man work as a taxi driver?',
+      tr: '[dʌz] [ðæt] [mæn] [wɜːk] [æz] [ə] [ˈtæksi] [ˈdraɪvə]',
+    },
+    {
+      ru: 'Твой учитель указывает на твои ошибки?',
+      en: 'Does your teacher point out your mistakes?',
+      tr: '[dʌz] [jɔː] [ˈtiːʧə] [pɔɪnt] [aʊt] [jɔː] [mɪˈsteɪks]',
+    },
+    {
+      ru: 'Твой знакомый работает инструктором по фитнесу?',
+      en: 'Does your acquaintance work as a fitness instructor?',
+      tr: '[dʌz] [jɔːr] [əˈkweɪntᵊns] [wɜːk] [æz] [ə] [ˈfɪtnəs] [ɪnˈstrʌktə]',
+    },
+    {
+      ru: 'Твой знакомый рекомендует это?',
+      en: 'Does your acquaintance recommend it?',
+      tr: '[dʌz] [jɔːr] [əˈkweɪntᵊns] [ˌrekəˈmend] [ɪt]',
+    },
+    {
+      ru: 'Большинство иммигрантов адаптируются к этим условиям?',
+      en: 'Do most immigrants adapt to these conditions?',
+      tr: '[duː] [məʊst] [ˈɪmɪɡrənts] [əˈdæpt] [tuː] [ðiːz] [kənˈdɪʃᵊnz]',
+    },
+    {
+      ru: 'Эти иммигранты живут в Америке?',
+      en: 'Do these immigrants live in America?',
+      tr: '[duː] [ðiːz] [ˈɪmɪɡrənts] [lɪv] [ɪn] [əˈmerɪkə]',
+    },
+    {
+      ru: 'Твой лучший друг разделяет твою точку зрения?',
+      en: 'Does your best friend share your point of view?',
+      tr: '[dʌz] [jɔː] [best] [frend] [ʃeə] [jɔː] [pɔɪnt] [ɒv] [vjuː]',
+    },
+    {
+      ru: 'Твои друзья разделяют твоё мнение?',
+      en: 'Do your friends share your opinion?',
+      tr: '[duː] [jɔː] [frendz] [ʃeə] [jɔːr] [əˈpɪnjən]',
+    },
+    {
+      ru: 'Этот мужчина страдает от депрессии?',
+      en: 'Does this man suffer from depression?',
+      tr: '[dʌz] [ðɪs] [mæn] [ˈsʌfə] [frɒm] [dɪˈpreʃᵊn]',
+    },
+    {
+      ru: 'Эта компания испытывает очень серьёзные трудности?',
+      en: 'Does this company experience very serious difficulties?',
+      tr: '[dʌz] [ðɪs] [ˈkʌmpəni] [ɪkˈspɪəriəns] [ˈveri] [ˈsɪəriəs] [ˈdɪfɪkᵊltiz]',
+    },
+    {
+      ru: 'Это очень сёрьёзная проблема?',
+      en: 'Is it a very serious problem?',
+      tr: '[ɪz] [ɪt] [ə] [ˈveri] [ˈsɪəriəs] [ˈprɒbləm]',
+    },
+    {
+      ru: 'Это хороший знак для нас?',
+      en: 'Is it a good sign for us?',
+      tr: '[ɪz] [ɪt] [ə] [ɡʊd] [saɪn] [fɔːr] [ʌs]',
+    },
+    { ru: 'Это дорожный знак?', en: 'Is it a road sign?', tr: '[ɪz] [ɪt] [ə] [rəʊd] [saɪn]' },
+    { ru: 'Тот мужчина болен?', en: 'Is that man ill?', tr: '[ɪz] [ðæt] [mæn] [ɪl]' },
+    { ru: 'Этот путь довольно короткий?', en: 'Is this way quite short?', tr: '[ɪz] [ðɪs] [weɪ] [kwaɪt] [ʃɔːt]' },
+    {
+      ru: 'История очень интересная?',
+      en: 'Is the story very interesting?',
+      tr: '[ɪz] [ðə] [ˈstɔːri] [ˈveri] [ˈɪntrestɪŋ]',
+    },
+    {
+      ru: 'Твой начальник против этого решения?',
+      en: 'Is your boss against this decision?',
+      tr: '[ɪz] [jɔː] [bɒs] [əˈɡenst] [ðɪs] [dɪˈsɪʒᵊn]',
+    },
+    { ru: 'Уроки бесплатные?', en: 'Are the lessons free?', tr: '[ɑː] [ðə] [ˈlesᵊnz] [friː]' },
+    { ru: 'Эта машина надежная?', en: 'Is this car reliable?', tr: '[ɪz] [ðɪs] [kɑː] [rɪˈlaɪəbᵊl]' },
+    {
+      ru: 'Мальчики в этой группе очень ленивые?',
+      en: 'Are the boys in this group very lazy?',
+      tr: '[ɑː] [ðə] [bɔɪz] [ɪn] [ðɪs] [ɡruːp] [ˈveri] [ˈleɪzi]',
+    },
+    {
+      ru: 'Эти изменения очень неожиданные для них?',
+      en: 'Are these changes very unexpected for them?',
+      tr: '[ɑː] [ðiːz] [ˈʧeɪnʤɪz] [ˈveri] [ˌʌnɪkˈspektɪd] [fɔː] [ðem]',
+    },
+    {
+      ru: 'Дом просторный для твоей семьи?',
+      en: 'Is the house spacious for your family?',
+      tr: '[ɪz] [ðə] [haʊs] [ˈspeɪʃəs] [fɔː] [jɔː] [ˈfæmɪli]',
+    },
+    {
+      ru: 'Образование бесплатное в твоей стране?',
+      en: 'Is education free in your country?',
+      tr: '[ɪz] [ˌeʤʊˈkeɪʃᵊn] [friː] [ɪn] [jɔː] [ˈkʌntri]',
+    },
+    {
+      ru: 'Эти оценки очень хороши для вас?',
+      en: 'Are these grade very good for you?',
+      tr: '[ɑː] [ðiːz] [ɡreɪd] [ˈveri] [ɡʊd] [fɔː] [juː]',
+    },
+    {
+      ru: 'Те люди также заинтересованы в этом?',
+      en: 'Are those people also interested in it?',
+      tr: '[ɑː] [ðəʊz] [ˈpiːpᵊl] [ˈɔːlsəʊ] [ˈɪntrestɪd] [ɪn] [ɪt]',
+    },
+    {
+      ru: 'Эти новости очень удивительны для нас?',
+      en: 'Is this news very surprising for you?',
+      tr: '[ɪz] [ðɪs] [njuːz] [ˈveri] [səˈpraɪzɪŋ] [fɔː] [juː]',
+    },
+    {
+      ru: 'Та область переполнена туристами?',
+      en: 'Is that area overcrowded with tourists?',
+      tr: '[ɪz] [ðæt] [ˈeəriə] [ˌəʊvəˈkraʊdɪd] [wɪð] [ˈtʊərɪsts]',
+    },
+    {
+      ru: 'Второй урок тоже бесплатный?',
+      en: 'Is the second lesson also free?',
+      tr: '[ɪz] [ðə] [ˈsekənd] [ˈlesᵊn] [ˈɔːlsəʊ] [friː]',
+    },
+    {
+      ru: 'Эта оценка довольно высокая для тебя?',
+      en: 'Is this mark quite high for you?',
+      tr: '[ɪz] [ðɪs] [mɑːk] [kwaɪt] [haɪ] [fɔː] [juː]',
+    },
+    {
+      ru: 'Эта оценка достаточно высокая для тебя?',
+      en: 'Is this mark high enough for you?',
+      tr: '[ɪz] [ðɪs] [mɑːk] [haɪ] [ɪˈnʌf] [fɔː] [juː]',
+    },
+    {
+      ru: 'Полицейский в этом районе?',
+      en: 'Is the policeman in this district?',
+      tr: '[ɪz] [ðə] [pəˈliːsmən] [ɪn] [ðɪs] [ˈdɪstrɪkt]',
+    },
+    {
+      ru: 'Стоимость жизни в наши дни намного выше?',
+      en: 'Is the cost of living much higher nowadays?',
+      tr: '[ɪz] [ðə] [kɒst] [ɒv] [ˈlɪvɪŋ] [mʌʧ] [ˈhaɪə] [ˈnaʊədeɪz]',
+    },
+    { ru: 'Этот парень очень покладистый?', en: 'Is this guy very easy', tr: '[ɪz] [ðɪs] [ɡaɪ] [ˈveri] [ˈiːzi]' },
+    {
+      ru: 'Тебе подходит время нашей встречи?',
+      en: 'Does the time of our meeting* suit you?',
+      tr: '[dʌz] [ðə] [taɪm] [ɒv] [ˈaʊə] [ˈmiːtɪŋ]* [suːt] [juː]',
+    },
+    { ru: 'Этот костюм подходит тебе?', en: 'Does this suit suit you?', tr: '[dʌz] [ðɪs] [suːt] [suːt] [juː]' },
+    {
+      ru: 'Твой друг чувствует себя достаточно уверенно, когда говорит на иностранном языке?',
+      en: 'Does your friend feel confident enough when he speaks a foreign language?',
+      tr: '[dʌz] [jɔː] [frend] [fiːl] [ˈkɒnfɪdᵊnt] [ɪˈnʌf] [wen] [hiː] [spiːks] [ə] [ˈfɒrən] [ˈlæŋɡwɪʤ]',
+    },
+    {
+      ru: 'Этот дом стоит свыше двух миллионов долларов?',
+      en: 'Does this house cost over two million dollars?',
+      tr: '[dʌz] [ðɪs] [haʊs] [kɒst] [ˈəʊvə] [tuː] [ˈmɪljən] [ˈdɒləz]',
+    },
+    {
+      ru: 'Твоя жена часто делает покупки?',
+      en: 'Does your wife often do the shopping?',
+      tr: '[dʌz] [jɔː] [waɪf] [ˈɒfᵊn] [duː] [ðə] [ˈʃɒpɪŋ]',
+    },
+    {
+      ru: 'То время для них удобно?',
+      en: 'Is that time convenient for them?',
+      tr: '[ɪz] [ðæt] [taɪm] [kənˈviːniənt] [fɔː] [ðem]',
+    },
+    {
+      ru: 'Эта вещь зависит от меня?',
+      en: 'Does this thing depend on me?',
+      tr: '[dʌz] [ðɪs] [θɪŋ] [dɪˈpend] [ɒn] [miː]',
+    },
+    {
+      ru: 'Твой друг верен в этом?',
+      en: 'Is your friend sure about it?',
+      tr: '[ɪz] [jɔː] [frend] [ʃɔːr] [əˈbaʊt] [ɪt]',
+    },
+    {
+      ru: 'Его друзья действительно уверены в этом?',
+      en: 'Are his friends really sure about it?',
+      tr: '[ɑː] [hɪz] [frendz] [ˈrɪəli] [ʃɔːr] [əˈbaʊt] [ɪt]',
+    },
+    { ru: 'Этих знаний достаточно?', en: 'Is this knowledge enough?', tr: '[ɪz] [ðɪs] [ˈnɒlɪʤ] [ɪˈnʌf]' },
+    {
+      ru: 'У мальчика действительно выдающиеся результаты?',
+      en: 'Does the boy really have outstanding results?',
+      tr: '[dʌz] [ðə] [bɔɪ] [ˈrɪəli] [hæv] [aʊtˈstændɪŋ] [rɪˈzʌlts]',
+    },
+    {
+      ru: 'Девочка показывается выдающийся результат?',
+      en: 'Does the girl show an outstanding result?',
+      tr: '[dʌz] [ðə] [ɡɜːl] [ʃəʊ] [ən] [aʊtˈstændɪŋ] [rɪˈzʌlt]',
+    },
+    {
+      ru: 'Мальчик чувствует себя очень уставшим?',
+      en: 'Does the boy feel very tired?',
+      tr: '[dʌz] [ðə] [bɔɪ] [fiːl] [ˈveri] [taɪəd]',
+    },
+    {
+      ru: 'Тест чрезвыйчайно сложный?',
+      en: 'Is the test extremely difficult?',
+      tr: '[ɪz] [ðə] [test] [ɪkˈstriːmli] [ˈdɪfɪkᵊlt]',
+    },
+    {
+      ru: 'Твоя работа очень стрессовая?',
+      en: 'Is your job very stressful?',
+      tr: '[ɪz] [jɔː] [ʤɒb] [ˈveri] [ˈstresfᵊl]',
+    },
+    {
+      ru: 'Их работа действительно стрессовая?',
+      en: 'Is their job really stressful?',
+      tr: '[ɪz] [ðeə] [ʤɒb] [ˈrɪəli] [ˈstresfᵊl]',
+    },
+    {
+      ru: 'У твоей жены стрессовая работа?',
+      en: 'Does your wife have a stressful job?',
+      tr: '[dʌz] [jɔː] [waɪf] [hæv] [ə] [ˈstresfᵊl] [ʤɒb]',
+    },
+    {
+      ru: 'Почему тебе нужно гораздо больше времени, чтобы полностью это закончить?',
+      en: 'Why do you need much more time to finish it completely?',
+      tr: '[waɪ] [duː] [juː] [niːd] [mʌʧ] [mɔː] [taɪm] [tuː] [ˈfɪnɪʃ] [ɪt] [kəmˈpliːtli]',
+    },
+    {
+      ru: 'Почему тебе нужно сделать это как можно скорее?',
+      en: 'Why do you need to do it as soon as possible?',
+      tr: '[waɪ] [duː] [juː] [niːd] [tuː] [duː] [ɪt] [æz] [suːn] [æz] [ˈpɒsəbᵊl]',
+    },
+    {
+      ru: 'Как ты следишь за своим здоровьем?',
+      en: 'How do you look after your health?',
+      tr: '[haʊ] [duː] [juː] [lʊk] [ˈɑːftə] [jɔː] [helθ]',
+    },
+    {
+      ru: 'Как долго он добирается до школы?',
+      en: 'How long does he get to school?',
+      tr: '[haʊ] [lɒŋ] [dʌz] [hiː] [ɡet] [tuː] [skuːl]',
+    },
+    {
+      ru: 'Как долго она добирается домой?',
+      en: 'How long does she get home?',
+      tr: '[haʊ] [lɒŋ] [dʌz] [ʃiː] [ɡet] [həʊm]',
+    },
+    {
+      ru: 'Сколько раз в неделю ты ходишь в бассейн?',
+      en: 'How many times a week do you go to the swimming pool?',
+      tr: '[haʊ] [ˈmeni] [taɪmz] [ə] [wiːk] [duː] [juː] [ɡəʊ] [tuː] [ðə] [ˈswɪmɪŋ] [puːl]',
+    },
+    {
+      ru: 'Сколько раз в неделю он ходит на работу?',
+      en: 'How many times a week does he go to work?',
+      tr: '[haʊ] [ˈmeni] [taɪmz] [ə] [wiːk] [dʌz] [hiː] [ɡəʊ] [tuː] [wɜːk]',
+    },
+    {
+      ru: 'Почему он предпочитает изучать английский сам?',
+      en: 'Why does he prefer to learn English on his own?',
+      tr: '[waɪ] [dʌz] [hiː] [priˈfɜː] [tuː] [lɜːn] [ˈɪŋɡlɪʃ] [ɒn] [hɪz] [əʊn]',
+    },
+    {
+      ru: 'Какие интересы есть у девочки?',
+      en: 'What interests does girl have?',
+      tr: '[wɒt] [ˈɪntrests] [dʌz] [ɡɜːl] [hæv]',
+    },
+    {
+      ru: 'Какой твой уровень английского?',
+      en: 'What is your English level?',
+      tr: '[wɒt] [ɪz] [jɔːr] [ˈɪŋɡlɪʃ] [ˈlevᵊl]',
+    },
+    {
+      ru: 'Какой уровень английского у тебя?',
+      en: 'What English level do you have?',
+      tr: '[wɒt] [ˈɪŋɡlɪʃ] [ˈlevᵊl] [duː] [juː] [hæv]',
+    },
+    {
+      ru: 'Как часто ты читаешь этот журнал?',
+      en: 'How often do you read this magazine?',
+      tr: '[haʊ] [ˈɒfᵊn] [duː] [juː] [riːd] [ðɪs] [ˌmæɡəˈziːn]',
+    },
+    {
+      ru: 'Что тебя больше всего пугает?',
+      en: 'What frightens you most of all?',
+      tr: '[wɒt] [ˈfraɪtᵊnz] [juː] [məʊst] [ɒv] [ɔːl]',
+    },
+    { ru: 'Что пугает тебя?', en: 'What frightens you?', tr: '[wɒt] [ˈfraɪtᵊnz] [juː]' },
+    { ru: 'Кто ходит туда с тобой?', en: 'Who goes there with you?', tr: '[huː] [ɡəʊz] [ðeə] [wɪð] [juː]' },
+    {
+      ru: 'Что кажется таким удивительным?',
+      en: 'What seems so surprising?',
+      tr: '[wɒt] [siːmz] [səʊ] [səˈpraɪzɪŋ]',
+    },
+    { ru: 'Кто продаёт этот дом?', en: 'Who sells this house?', tr: '[huː] [selz] [ðɪs] [haʊs]' },
+    { ru: 'Кому это нравится?', en: 'Who likes it?', tr: '[huː] [laɪks] [ɪt]' },
+    { ru: 'Что так удивительно?', en: 'What is so surprising?', tr: '[wɒt] [ɪz] [səʊ] [səˈpraɪzɪŋ]' },
+    { ru: 'Что делает тебя счастливым', en: 'What makes happy you?', tr: '[wɒt] [meɪks] [ˈhæpi] [juː]' },
+    { ru: 'Что делает тебя злым?', en: 'What makes angry you?', tr: '[wɒt] [meɪks] [ˈæŋɡri] [juː]' },
+    { ru: 'Что делает людей счастливыми?', en: 'What makes people happy?', tr: '[wɒt] [meɪks] [ˈpiːpᵊl] [ˈhæpi]' },
+    { ru: 'Кто говорит это?', en: 'Who says it?', tr: '[huː] [sez] [ɪt]' },
+    { ru: 'Что ты слышишь?', en: 'What do you hear?', tr: '[wɒt] [duː] [juː] [hɪə]' },
+    { ru: 'Кто ещё знает это?', en: 'Who else knows it?', tr: '[huː] [els] [nəʊz] [ɪt]' },
+    { ru: 'Что ещё помогает тебе?', en: 'What else helps you?', tr: '[wɒt] [els] [helps] [juː]' },
+    { ru: 'Что интересует его больше?', en: 'What interests him more?', tr: '[wɒt] [ˈɪntrests] [hɪm] [mɔː]' },
+    { ru: 'Что интересует тебя?', en: 'What interests you?', tr: '[wɒt] [ˈɪntrests] [juː]' },
+    { ru: 'Что интересно тебе?', en: 'What is interesting for you?', tr: '[wɒt] [ɪz] [ˈɪntrestɪŋ] [fɔː] [juː]' },
+    {
+      ru: 'Что здесь такого удивительного?',
+      en: 'What is so surprising here?',
+      tr: '[wɒt] [ɪz] [səʊ] [səˈpraɪzɪŋ] [hɪə]',
+    },
+    {
+      ru: 'Что обычно привлекает твоё внимание?',
+      en: 'What usually attracts your attention?',
+      tr: '[wɒt] [ˈjuːʒʊəli] [əˈtrækts] [jɔːr] [əˈtenʃᵊn]',
+    },
+    {
+      ru: 'Какое место привлекает тебя больше?',
+      en: 'Which place attracts you more?',
+      tr: '[wɪʧ] [pleɪs] [əˈtrækts] [juː] [mɔː]',
+    },
+    {
+      ru: 'Какие места привлекают тебя больше?',
+      en: 'Which places attract you more?',
+      tr: '[wɪʧ] [ˈpleɪsɪz] [əˈtrækt] [juː] [mɔː]',
+    },
+    { ru: 'Что зависит от тебя?', en: 'What depends on you?', tr: '[wɒt] [dɪˈpendz] [ɒn] [juː]' },
+    {
+      ru: 'Ей нравится ходить по магазинам',
+      en: 'She likes going shopping',
+      tr: '[ʃiː] [laɪks] [ˈɡəʊɪŋ] [ˈʃɒpɪŋ]',
+    },
+    {
+      ru: 'Мне нравится играть в настольный теннис',
+      en: 'I like playing table tennis',
+      tr: '[aɪ] [laɪk] [ˈpleɪɪŋ] [ˈteɪbᵊl] [ˈtenɪs]',
+    },
+    {
+      ru: 'Она действительно обожает готовить',
+      en: 'She really enjoys cooking',
+      tr: '[ʃiː] [ˈrɪəli] [ɪnˈʤɔɪz] [ˈkʊkɪŋ]',
+    },
+    { ru: 'Ему нравится заниматься дзюдо', en: 'He likes doing judo', tr: '[hiː] [laɪks] [ˈduːɪŋ] [ˈʤuːdəʊ]' },
+    { ru: 'Ему нравится заниматься карате', en: 'He likes doing karate', tr: '[hiː] [laɪks] [ˈduːɪŋ] [kəˈrɑːti]' },
+    { ru: 'Ему нравится играть в гольф', en: 'He likes playing golf', tr: '[hiː] [laɪks] [ˈpleɪɪŋ] [ɡɒlf]' },
+    {
+      ru: 'Ей нравится играть на пианино',
+      en: 'She likes playing the piano',
+      tr: '[ʃiː] [laɪks] [ˈpleɪɪŋ] [ðə] [piˈænəʊ]',
+    },
+    {
+      ru: 'Ей нравится играть на скрипке',
+      en: 'She likes playing the violin',
+      tr: '[ʃiː] [laɪks] [ˈpleɪɪŋ] [ðə] [ˌvaɪəˈlɪn]',
+    },
+    {
+      ru: 'Ему нравится играть на гитаре',
+      en: 'He likes playing the guitar',
+      tr: '[hiː] [laɪks] [ˈpleɪɪŋ] [ðə] [ɡɪˈtɑː]',
+    },
+    {
+      ru: 'Мне нравится гулять в парке',
+      en: 'I like walking in the park',
+      tr: '[aɪ] [laɪk] [ˈwɔːkɪŋ] [ɪn] [ðə] [pɑːk]',
+    },
+    {
+      ru: 'Ей нравится читать в постели',
+      en: 'She likes reading in bed',
+      tr: '[ʃiː] [laɪks] [ˈriːdɪŋ] [ɪn] [bed]',
+    },
+    {
+      ru: 'Я ненавижу ничего не делать, потому что это настоящая пустая трата времени, и мы не можем вернуть его назад',
+      en: "I hate doing nothing because it's a real waste of time and we can't turn it back",
+      tr: '[aɪ] [heɪt] [ˈduːɪŋ] [ˈnʌθɪŋ] [bɪˈkɒz] [ɪts] [ə] [rɪəl] [weɪst] [ɒv] [taɪm] [ænd] [wiː] [kɑːnt] [tɜːn] [ɪt] [bæk]',
+    },
+    {
+      ru: 'Я обожаю заниматься спортом, потому что это очень хорошо для моего сдоровья',
+      en: 'I enjoy doing sport because it is very good for my health',
+      tr: '[aɪ] [ɪnˈʤɔɪ] [ˈduːɪŋ] [spɔːt] [bɪˈkɒz] [ɪt] [ɪz] [ˈveri] [ɡʊd] [fɔː] [maɪ] [helθ]',
+    },
+    {
+      ru: 'Я люблю делать те физические упражнения, потому что они очень хороши для моего тела',
+      en: "I'm fond of doing those physical exercises because they're very good for my body",
+      tr: '[aɪm] [fɒnd] [ɒv] [ˈduːɪŋ] [ðəʊz] [ˈfɪzɪkᵊl] [ˈeksəsaɪzɪz] [bɪˈkɒz] [ðeə] [ˈveri] [ɡʊd] [fɔː] [maɪ] [ˈbɒdi]',
+    },
+    {
+      ru: 'Я обожаю ходить кататься на велосипеде, потому что я могу потерять несколько калорий и дышать свежим воздухом в то же самое время',
+      en: 'I enjoy going cycling because I can lose some calories and breathe fresh air at the same time',
+      tr: '[aɪ] [ɪnˈʤɔɪ] [ˈɡəʊɪŋ] [ˈsaɪklɪŋ] [bɪˈkɒz] [aɪ] [kæn] [luːz] [sʌm] [ˈkælᵊriz] [ænd] [briːð] [freʃ] [eər] [æt] [ðə] [seɪm] [taɪm]',
+    },
+    {
+      ru: 'Я люблю делать эти упражнения, потому что это делает меня сильнее',
+      en: "I'm fond of doing these exercises because it makes me stronger",
+      tr: '[aɪm] [fɒnd] [ɒv] [ˈduːɪŋ] [ðiːz] [ˈeksəsaɪzɪz] [bɪˈkɒz] [ɪt] [meɪks] [miː] [ˈstrɒŋɡə]',
+    },
+    {
+      ru: 'Я обожаю делать эти упражнения, потому что они чрезвычайно полезны',
+      en: 'I enjoy doing these exercises because they are extremely useful',
+      tr: '[aɪ] [ɪnˈʤɔɪ] [ˈduːɪŋ] [ðiːz] [ˈeksəsaɪzɪz] [bɪˈkɒz] [ðeɪ] [ɑːr] [ɪkˈstriːmli] [ˈjuːsfᵊl]',
+    },
+  ];
+  
+  console.log(OFFERS_A1_63_71.length);
+  
+  const OFFERS_A1_72_76 = [
+    {
+      ru: 'Конечно, я понимаю, что все люди делают ошибки иногда, но мы учимся на них',
+      en: 'Of course, I understand that all people make mistakes sometimes but we learn from them',
+      tr: '[ɒv] [kɔːs] [aɪ] [ˌʌndəˈstænd] [ðæt] [ɔːl] [ˈpiːpᵊl] [meɪk] [mɪˈsteɪks] [ˈsʌmtaɪmz] [bʌt] [wiː] [lɜːn] [frɒm] [ðem]',
+    },
+    {
+      ru: 'Я должен тратить больше времени на это, если я действительно хочу иметь гораздо лучшие результаты',
+      en: 'I must spend more time on it if I really want to have much better results',
+      tr: '[aɪ] [mʌst] [spend] [mɔː] [taɪm] [ɒn] [ɪt] [ɪf] [aɪ] [ˈrɪəli] [wɒnt] [tuː] [hæv] [mʌʧ] [ˈbetə] [rɪˈzʌlts]',
+    },
+    {
+      ru: 'Не бросай эти бумаги',
+      en: "Don't throw these papers?",
+      tr: '[dəʊnt] [θrəʊ] [ðiːz] [ˈpeɪpəz]',
+    },
+    {
+      ru: 'Эта фабрика производит одежду',
+      en: 'This factory produces clothes',
+      tr: '[ðɪs] [ˈfæktᵊri] [ˈprɒdjuːsɪz] [kləʊðz]',
+    },
+    {
+      ru: 'Мне нравится гулять в парке',
+      en: 'I like walking in the park',
+      tr: '[aɪ] [laɪk] [ˈwɔːkɪŋ] [ɪn] [ðə] [pɑːk]',
+    },
+    {
+      ru: 'Уроки начинаются очень рано',
+      en: 'The lessons begin very early',
+      tr: '[ðə] [ˈlesᵊnz] [bɪˈɡɪn] [ˈveri] [ˈɜːli]',
+    },
+    {
+      ru: 'Ты можешь выбросить это',
+      en: 'You can throw it away',
+      tr: '[juː] [kæn] [θrəʊ] [ɪt] [əˈweɪ]',
+    },
+    {
+      ru: 'Я часто хожу на работу',
+      en: 'I often walk to work',
+      tr: '[aɪ] [ˈɒfᵊn] [wɔːk] [tuː] [wɜːk]',
+    },
+    {
+      ru: 'Я часто хожу на работу пешком',
+      en: 'I often go to work on foot',
+      tr: '[aɪ] [ˈɒfᵊn] [ɡəʊ] [tuː] [wɜːk] [ɒn] [fʊt]',
+    },
+    {
+      ru: 'Всё может измениться скоро',
+      en: 'Everything can change soon',
+      tr: '[ˈevriθɪŋ] [kæn] [ʧeɪnʤ] [suːn]',
+    },
+    {
+      ru: 'Ты можешь помочь нам?',
+      en: 'Can you help us?',
+      tr: "[kæn] [juː] [help] [ʌs]'",
+    },
+    {
+      ru: 'Он говорит, что они хотят пожениться в следующем месяце',
+      en: 'He says that they want to get married next month',
+      tr: '[hiː] [sez] [ðæt] [ðeɪ] [wɒnt] [tuː] [ɡet] [ˈmærɪd] [nekst] [mʌnθ]',
+    },
+    {
+      ru: 'Он старается не обращать внимания на эту критику',
+      en: 'He tries not to pay attention to this criticism',
+      tr: '[hiː] [traɪz] [nɒt] [tuː] [peɪ] [əˈtenʃᵊn] [tuː] [ðɪs] [ˈkrɪtɪsɪzᵊm]',
+    },
+    {
+      ru: 'Я стараюсь не обращать внимания на эти вещи',
+      en: 'I try not to pay attention to these things',
+      tr: '[aɪ] [traɪ] [nɒt] [tuː] [peɪ] [əˈtenʃᵊn] [tuː] [ðiːz] [θɪŋz]',
+    },
+    {
+      ru: 'Твой учитель всегда указывает на твои ошибки?',
+      en: 'Does your teacher always point out your mistakes?',
+      tr: '[dʌz] [jɔː] [ˈtiːʧər] [ˈɔːlweɪz] [pɔɪnt] [aʊt] [jɔː] [mɪˈsteɪks]',
+    },
+    {
+      ru: 'Я хочу достичь этой цели как можно скорее',
+      en: 'I want to achieve this aim as soon as possible',
+      tr: '[aɪ] [wɒnt] [tuː] [əˈʧiːv] [ðɪs] [eɪm] [æz] [suːn] [æz] [ˈpɒsəbᵊl]',
+    },
+    {
+      ru: 'Я знаю, что мне нужно контролировать себя',
+      en: 'I know that I need to control myself',
+      tr: '[aɪ] [nəʊ] [ðæt] [aɪ] [niːd] [tuː] [kənˈtrəʊl] [maɪˈself]',
+    },
+    {
+      ru: 'Я прекрасно осознаю, что могу найти работу получше',
+      en: 'I perfectly realise that I can find a better job',
+      tr: '[aɪ] [ˈpɜːfɪktli] [ˈrɪəlaɪz] [ðæt] [aɪ] [kæn] [faɪnd] [ə] [ˈbetə] [ʤɒb]',
+    },
+    {
+      ru: 'Он хочет разрезать эту верёвку ножом',
+      en: 'He wants to cut this rope with a knife',
+      tr: '[hiː] [wɒnts] [tuː] [kʌt] [ðɪs] [rəʊp] [wɪð] [ə] [naɪf]',
+    },
+    {
+      ru: 'Он никогда не пьёт алкоголь',
+      en: 'He never drinks alcohol',
+      tr: '[hiː] [ˈnevə] [drɪŋks] [ˈælkəhɒl]',
+    },
+    {
+      ru: 'Ты согласен, что только усердная работа может привести нас к настоящему успеху?',
+      en: 'Do you agree that only hard work can lead us to real success?',
+      tr: "[duː] [juː] [əˈɡriː] [ðæt] [ˈəʊnli] [hɑːd] [wɜːk] [kæn] [liːd] [ʌs] [tuː] [rɪəl] [səkˈses]'",
+    },
+    {
+      ru: 'Она носит тяжёлые сумки и это очень плохо для её здоровья',
+      en: "She carries very heavy bags and it's very bag for her health",
+      tr: '[ʃiː] [ˈkæriz] [ˈveri] [ˈhevi] [bæɡz] [ænd] [ɪts] [ˈveri] [bæɡ] [fɔː] [hɜː] [helθ]',
+    },
+    {
+      ru: 'Мне нужно закончить этот проект как можно скорее',
+      en: 'I need to finish this project as soon as possible',
+      tr: '[aɪ] [niːd] [tuː] [ˈfɪnɪʃ] [ðɪs] [ˈprɒʤekt] [æz] [suːn] [æz] [ˈpɒsəbᵊl]',
+    },
+    {
+      ru: 'Тебе нужно повернуть налево сейчас',
+      en: 'You need to turn left now',
+      tr: '[juː] [niːd] [tuː] [tɜːn] [left] [naʊ]',
+    },
+    {
+      ru: 'Я вижу очень красивую церковь перед этим зданием',
+      en: 'I see a very beautiful church in front of this building',
+      tr: '[aɪ] [siː] [ə] [ˈveri] [ˈbjuːtɪfᵊl] [ʧɜːʧ] [ɪn] [frʌnt] [ɒv] [ðɪs] [ˈbɪldɪŋ]',
+    },
+    {
+      ru: 'Что ты видишь перед собой?',
+      en: 'What do you see in front of you?',
+      tr: '[wɒt] [duː] [juː] [siː] [ɪn] [frʌnt] [ɒv] [juː]',
+    },
+    {
+      ru: 'Ты можешь рассчитывать на мою помощь',
+      en: 'You can count on my help',
+      tr: '[juː] [kæn] [kaʊnt] [ɒn] [maɪ] [help]',
+    },
+    {
+      ru: 'Что означает этот знак?',
+      en: 'What does this sign mean?',
+      tr: '[wɒt] [dʌz] [ðɪs] [saɪn] [miːn]',
+    },
+    {
+      ru: 'Уроки начинаются в 8 утра',
+      en: 'The lessons start at 8 a.m.',
+      tr: "[ðə] [ˈlesᵊnz] [stɑːt] [æt] 8 [eɪ].[em].'",
+    },
+    {
+      ru: 'Я знаю, что это не так лёгко сдать тот тест',
+      en: "I know that it isn't so easy to pass that test",
+      tr: '[aɪ] [nəʊ] [ðæt] [ɪt] [ˈɪznt] [səʊ] [ˈiːzi] [tuː] [pɑːs] [ðæt] [test]',
+    },
+    {
+      ru: 'Это его совсем не интересует',
+      en: "It doesn't interest him at all",
+      tr: '[ɪt] [dʌznt] [ˈɪntrest] [hɪm] [æt] [ɔːl]',
+    },
+    {
+      ru: 'Ты всегда можешь рассчитывать на меня',
+      en: 'You can always count on me',
+      tr: '[juː] [kæn] [ˈɔːlweɪz] [kaʊnt] [ɒn] [miː]',
+    },
+    {
+      ru: 'Что означает это предложение?',
+      en: 'What does this sentence mean?',
+      tr: "[wɒt] [dʌz] [ðɪs] [ˈsentəns] [miːn]'",
+    },
+    {
+      ru: 'Я бы очень хотел поблагодарить тебя за всю твою помощь',
+      en: "I'd really like to thank you for all your help",
+      tr: '[aɪd] [ˈrɪəli] [laɪk] [tuː] [θæŋk] [juː] [fɔːr] [ɔːl] [jɔː] [help]',
+    },
+    {
+      ru: 'Он пытается найти более хорошую работу, но безуспешно',
+      en: 'He tries to find a better job but no without success',
+      tr: '[hiː] [traɪz] [tuː] [faɪnd] [ə] [ˈbetə] [ʤɒb] [bʌt] [nəʊ] [wɪˈðaʊt] [səkˈses]',
+    },
+    {
+      ru: 'Что ты обычно носишь?',
+      en: 'What do you usually wear?',
+      tr: '[wɒt] [duː] [juː] [ˈjuːʒʊəli] [weə]',
+    },
+    {
+      ru: 'Она владеет этим домом',
+      en: 'She own this house',
+      tr: '[ʃiː] [əʊn] [ðɪs] [haʊs]',
+    },
+    {
+      ru: 'Другими словами этот дом принадлежит ей',
+      en: 'In other words, this house belongs to her',
+      tr: '[ɪn] [ˈʌðə] [wɜːdz] [ðɪs] [haʊs] [bɪˈlɒŋz] [tuː] [hɜː]',
+    },
+    {
+      ru: 'Я не могу представить свои жизнь без спорта',
+      en: "I can't imagine my life without sport",
+      tr: '[aɪ] [kɑːnt] [ɪˈmæʤɪn] [maɪ] [laɪf] [wɪˈðaʊt] [spɔːt]',
+    },
+    {
+      ru: 'Я стараюсь не тратить так много денег на это',
+      en: 'I try not to spend so much money on it',
+      tr: '[aɪ] [traɪ] [nɒt] [tuː] [spend] [səʊ] [mʌʧ] [ˈmʌni] [ɒn] [ɪt]',
+    },
+    {
+      ru: 'Я знаю, что что-то не так',
+      en: 'I know that something is wrong',
+      tr: '[aɪ] [nəʊ] [ðæt] [ˈsʌmθɪŋ] [ɪz] [rɒŋ]',
+    },
+    {
+      ru: 'Это должно привести меня к успеху',
+      en: 'It must lead me to success',
+      tr: '[ɪt] [mʌst] [liːd] [miː] [tuː] [səkˈses]',
+    },
+    {
+      ru: 'Сколько стоит новая модель?',
+      en: 'How much does a new model cost?',
+      tr: "[haʊ] [mʌʧ] [dʌz] [ə] [njuː] [ˈmɒdᵊl] [kɒst]'",
+    },
+    {
+      ru: 'Я хотел бы поблагодарить его за всё',
+      en: "I'd like to thank him for everything",
+      tr: '[aɪd] [laɪk] [tuː] [θæŋk] [hɪm] [fɔːr] [ˈevriθɪŋ]',
+    },
+    {
+      ru: 'Тебе нужно повернуть направо на перекрёстке',
+      en: 'You need to turn right at the crossroads',
+      tr: '[juː] [niːd] [tuː] [tɜːn] [raɪt] [æt] [ðə] [ˈkrɒsˌrəʊdz]',
+    },
+    {
+      ru: 'Тебе следует повернуть налево на перекрёстке',
+      en: 'You should turn left at the crossroads',
+      tr: '[juː] [ʃʊd] [tɜːn] [left] [æt] [ðə] [ˈkrɒsˌrəʊdz]',
+    },
+    {
+      ru: 'Не так легко сдать этот экзамен',
+      en: "It isn't so easy to pass this exam",
+      tr: '[ɪt] [ˈɪznt] [səʊ] [ˈiːzi] [tuː] [pɑːs] [ðɪs] [ɪɡˈzæm]',
+    },
+    {
+      ru: 'Кому принадлежит эта вилла?',
+      en: 'Who owns this villa?',
+      tr: "[huː] [əʊnz] [ðɪs] [ˈvɪlə]'",
+    },
+    {
+      ru: 'Я думаю, что тебе нужно слышать голос своего сердца, когда ты не уверен в чем-то, и тебе нужно решить, что делать дальше',
+      en: "I think that you need to listen to the voice of your heart when you aren't sure about something and you need to decide what to do next",
+      tr: '[aɪ] [θɪŋk] [ðæt] [juː] [niːd] [tuː] [ˈlɪsᵊn] [tuː] [ðə] [vɔɪs] [ɒv] [jɔː] [hɑːt] [wen] [juː] [ɑːnt] [ʃɔːr] [əˈbaʊt] [ˈsʌmθɪŋ] [ænd] [juː] [niːd] [tuː] [dɪˈsaɪd] [wɒt] [tuː] [duː] [nekst]',
+    },
+    {
+      ru: 'Когда ты слушаешь советы других людей, это не означает, что тебе нужно это сделать',
+      en: "When you listen to others people's advice, it doesn't mean that you need to do it",
+      tr: '[wen] [juː] [ˈlɪsᵊn] [tuː] [ˈʌðəz] [ˈpiːpᵊlz] [ədˈvaɪs] [ɪt] [dʌznt] [miːn] [ðæt] [juː] [niːd] [tuː] [duː] [ɪt]',
+    },
+    {
+      ru: 'Мне кажется, что ты можешь сравнить разные методы и выбрать то, что тебе лучше подходит',
+      en: 'It seems to me that you can compare different methods and choose what suits you better',
+      tr: '[ɪt] [siːmz] [tuː] [miː] [ðæt] [juː] [kæn] [kəmˈpeə] [ˈdɪfᵊrᵊnt] [ˈmeθədz] [ænd] [ʧuːz] [wɒt] [suːts] [juː] [ˈbetə]',
+    },
+    {
+      ru: 'Мне нужно заполнить эту форму',
+      en: 'I need to fill in this form',
+      tr: '[aɪ] [niːd] [tuː] [fɪl] [ɪn] [ðɪs] [fɔːm]',
+    },
+    {
+      ru: 'Я так сильно по тебе скучаю',
+      en: 'I miss you so much',
+      tr: '[aɪ] [mɪs] [juː] [səʊ] [mʌʧ]',
+    },
+    {
+      ru: 'Он носит очень стильный ремень',
+      en: 'He wears a very stylish belt',
+      tr: '[hiː] [weəz] [ə] [ˈveri] [ˈstaɪlɪʃ] [belt]',
+    },
+    {
+      ru: 'Я хотел бы пригласить тебя в ресторан',
+      en: "I'd like to invite you to the restaurant",
+      tr: '[aɪd] [laɪk] [tuː] [ɪnˈvaɪt] [juː] [tuː] [ðə] [ˈrestᵊrɒnt]',
+    },
+    {
+      ru: 'Кто поддерживает тебя больше всего?',
+      en: 'Who supports you most of all?',
+      tr: '[huː] [səˈpɔːts] [juː] [məʊst] [ɒv] [ɔːl]',
+    },
+    {
+      ru: 'Тебе нужно заполнить пробелы',
+      en: 'You need to fill in the gaps',
+      tr: '[juː] [niːd] [tuː] [fɪl] [ɪn] [ðə] [ɡæps]',
+    },
+    {
+      ru: 'Я хочу сказать, что это очень важно для всех нас',
+      en: "I want to say that it's very important for all of us",
+      tr: '[aɪ] [wɒnt] [tuː] [seɪ] [ðæt] [ɪts] [ˈveri] [ɪmˈpɔːtᵊnt] [fɔːr] [ɔːl] [ɒv] [ʌs]',
+    },
+    {
+      ru: 'Они информируют меня, когда что-то действительно важно',
+      en: 'They inform me when something is really important',
+      tr: '[ðeɪ] [ɪnˈfɔːm] [miː] [wen] [ˈsʌmθɪŋ] [ɪz] [ˈrɪəli] [ɪmˈpɔːtᵊnt]',
+    },
+    {
+      ru: 'Они не могут нарушить этот закон',
+      en: "They can't break this law",
+      tr: '[ðeɪ] [kɑːnt] [breɪk] [ðɪs] [lɔː]',
+    },
+    {
+      ru: 'Он поёт как один очень известный певец',
+      en: 'He sings like one very famous singer',
+      tr: '[hiː] [sɪŋz] [laɪk] [wʌn] [ˈveri] [ˈfeɪməs] [ˈsɪŋə]',
+    },
+    {
+      ru: 'Компания хочет сократить некоторых рабочих',
+      en: 'The company wants to reduce some workers',
+      tr: '[ðə] [ˈkʌmpəni] [wɒnts] [tuː] [rɪˈdjuːs] [sʌm] [ˈwɜːkəz]',
+    },
+    {
+      ru: 'Компании следует сократить некоторых рабочих',
+      en: 'The company should reduce some workers',
+      tr: '[ðə] [ˈkʌmpəni] [ʃʊd] [rɪˈdjuːs] [sʌm] [ˈwɜːkəz]',
+    },
+    {
+      ru: 'Они не могут сократить расходы в настоящее время',
+      en: "They can't reduce the costs at present",
+      tr: '[ðeɪ] [kɑːnt] [rɪˈdjuːs] [ðə] [kɒsts] [æt] [ˈprezᵊnt]',
+    },
+    {
+      ru: 'Я не хочу тратить впустую своё время, потому что оно действительно летит, и мне нужно сделать так много вещей в моей жизни',
+      en: "I don't want to west my time because it really flies and I need to do so many things in my life",
+      tr: '[aɪ] [dəʊnt] [wɒnt] [tuː] [west] [maɪ] [taɪm] [bɪˈkɒz] [ɪt] [ˈrɪəli] [flaɪz] [ænd] [aɪ] [niːd] [tuː] [duː] [səʊ] [ˈmeni] [θɪŋz] [ɪn] [maɪ] [laɪf]',
+    },
+    {
+      ru: 'Я хотел бы пожелать тебе крепкого здоровья, настоящего счастья, больших денег и успехов в жизни',
+      en: "I'd like to wish you strong health, real happiness, big money and success in life",
+      tr: '[aɪd] [laɪk] [tuː] [wɪʃ] [juː] [strɒŋ] [helθ] [rɪəl] [ˈhæpɪnəs] [bɪɡ] [ˈmʌni] [ænd] [səkˈses] [ɪn] [laɪf]',
+    },
+    {
+      ru: 'Она говорит, что ей действительно нравится путешествовать, и она также часто добавляет, что это расширяет её кругозор',
+      en: 'She says that she really like travelling and she also often adds that it broadens her horizons',
+      tr: '[ʃiː] [sez] [ðæt] [ʃiː] [ˈrɪəli] [laɪk] [ˈtrævᵊlɪŋ] [ænd] [ʃiː] [ˈɔːlsəʊ] [ˈɒfᵊn] [ædz] [ðæt] [ɪt] [ˈbrɔːdᵊnz] [hɜː] [həˈraɪzᵊnz]',
+    },
+    {
+      ru: 'Я не хочу быть неудачником в жизни, поэтому я стараюсь делать всё возможное, чтобы развивать свои таланты и делать что-то полезное для других',
+      en: "I don't want to be a loser in life, so I try to do my best to develop my talents and do something useful for others",
+      tr: '[aɪ] [dəʊnt] [wɒnt] [tuː] [biː] [ə] [ˈluːzər] [ɪn] [laɪf] [səʊ] [aɪ] [traɪ] [tuː] [duː] [maɪ] [best] [tuː] [dɪˈveləp] [maɪ] [ˈtælᵊnts] [ænd] [duː] [ˈsʌmθɪŋ] [ˈjuːsfᵊl] [fɔːr] [ˈʌðəz]',
+    },
+    {
+      ru: 'Я надеюсь на лучшее, но ожидаю худшего',
+      en: 'I hope for the best but expect the worst',
+      tr: '[aɪ] [həʊp] [fɔː] [ðə] [best] [bʌt] [ɪkˈspekt] [ðə] [wɜːst]',
+    },
+    {
+      ru: 'Почему это тебя так сильно пугает?',
+      en: 'Why does it frighten you so much?',
+      tr: '[waɪ] [dʌz] [ɪt] [ˈfraɪtᵊn] [juː] [səʊ] [mʌʧ]',
+    },
+    {
+      ru: 'Он может прибыть поздно, как всегда',
+      en: 'He can arrive late as always',
+      tr: '[hiː] [kæn] [əˈraɪv] [leɪt] [æz] [ˈɔːlweɪz]',
+    },
+    {
+      ru: 'Он хочет стать предпринимателем',
+      en: 'He wants to become an entrepreneur',
+      tr: '[hiː] [wɒnts] [tuː] [bɪˈkʌm] [ən] [ˌɒntrəprəˈnɜː]',
+    },
+    {
+      ru: 'Вы не могли бы мне помочь, пожалуйста?',
+      en: 'Could you help me, please?',
+      tr: "[kʊd] [juː] [help] [miː] [pliːz]'",
+    },
+    {
+      ru: 'Я обычно смотрю эти видео несколько раз',
+      en: 'I usually watch these videos several times',
+      tr: '[aɪ] [ˈjuːʒʊəli] [wɒʧ] [ðiːz] [ˈvɪdiəʊz] [ˈsevᵊrᵊl] [taɪmz]',
+    },
+    {
+      ru: 'Я думаю, людям следует быть более вежливыми',
+      en: 'I think people should be more polite',
+      tr: '[aɪ] [θɪŋk] [ˈpiːpᵊl] [ʃʊd] [biː] [mɔː] [pəˈlaɪt]',
+    },
+    {
+      ru: 'Конечно, я осознаю важность этих событий',
+      en: 'Certainly, I realise the importance of these events',
+      tr: '[ˈsɜːtnli] [aɪ] [ˈrɪəlaɪz] [ði] [ɪmˈpɔːtᵊns] [ɒv] [ðiːz] [ɪˈvents]',
+    },
+    {
+      ru: 'Мой будильник обычно меня будит',
+      en: 'My alarm clock usually wakes me up',
+      tr: '[maɪ] [əˈlɑːm] [klɒk] [ˈjuːʒʊəli] [weɪks] [miː] [ʌp]',
+    },
+    {
+      ru: 'Я поддерживаю связь со своими старыми друзьями',
+      en: 'I keep in touch with my old friends',
+      tr: '[aɪ] [kiːp] [ɪn] [tʌʧ] [wɪð] [maɪ] [əʊld] [frendz]',
+    },
+    {
+      ru: 'Давай разделим это на три части!',
+      en: "Let's divide it into three parts!",
+      tr: '[lets] [dɪˈvaɪd] [ɪt] [ˈɪntuː] [θriː] [pɑːts]',
+    },
+    {
+      ru: 'Наш учитель обычно делит нас на несколько групп',
+      en: 'Our teacher usually divides us into several groups',
+      tr: '[ˈaʊə] [ˈtiːʧə] [ˈjuːʒʊəli] [dɪˈvaɪdz] [ʌs] [ˈɪntuː] [ˈsevᵊrᵊl] [ɡruːps]',
+    },
+  ];
+  
+  console.log(OFFERS_A1_72_76.length);
+  
+
   const findChoose = document.querySelector('.offers1__choose');
+
   
+
   const findBtnStart = document.querySelector('#offers1__start');
+
   
+
   const findContainerForContent = document.querySelector('.offers1__content-container');
+
   const findQuestion = findContainerForContent.querySelector('.offers1__question');
+
   const findRightAnswer = findContainerForContent.querySelector('.offers1__right-answer');
+
   const findResponseField = findContainerForContent.querySelector('.offers1__responsefield');
+
   const findAnswerArr = findContainerForContent.querySelector('.offers1__answer-arr');
+
   const findContainerBottomWrapper = findContainerForContent.querySelector('.content-container__bottom-wrapper');
+
   
+
   const findResults = document.querySelector('.offers1__results');
+
   const findBtnAgain = findResults.querySelector('#offers1__btn-again');
+
   
+
   const findScore = document.querySelector('.offers1__score');
+
   const findScoreTotal = findScore.querySelector('#offers1__score-total');
+
   const findScoreValue = findScore.querySelector('#offers1__score-value');
+
   
+
   const findBtnResult = findContainerForContent.querySelector('#offers1__btn-check');
+
   const findBtnNext = findContainerForContent.querySelector('#offers1__btn-next');
+
   
+
   const findTemplate = document.querySelector('#template-offers__one').content.querySelector('.offers1__word');
+
   
   const renderOffer = (word) => {
     let currentElement = findTemplate.cloneNode(true);
@@ -2823,12 +4263,12 @@ if (document.querySelector('#template-offers__one') !== null) {
         languageAnswer = 'ru';
     }
   
-    let offer = OFFERS_A1_51_57[offersArray[renderСounters]][languageAnswer].split(' ');
-    findQuestion.textContent = OFFERS_A1_51_57[offersArray[renderСounters]][languageQuestion];
+    let offer = arrOfQuestions[offersArray[renderСounters]][languageAnswer].split(' ');
+    findQuestion.textContent = arrOfQuestions[offersArray[renderСounters]][languageQuestion];
     console.log('offer ' + offer);
-    let mistakes = OFFERS_A1_51_57[offersArrayMistakes[renderMistakesCounter]][languageAnswer]
+    let mistakes = arrOfQuestions[offersArrayMistakes[renderMistakesCounter]][languageAnswer]
       .split(' ')
-      .concat(OFFERS_A1_51_57[offersArrayMistakes[renderMistakesCounter + 1]][languageAnswer].split(' '));
+      .concat(arrOfQuestions[offersArrayMistakes[renderMistakesCounter + 1]][languageAnswer].split(' '));
     console.log('mistakes ' + mistakes);
     renderMistakesCounter += 2;
     let arrOfferMistakes = offer.concat(mistakes);
@@ -2900,13 +4340,35 @@ if (document.querySelector('#template-offers__one') !== null) {
   let renderMistakesCounter = 0;
   let languageQuestion;
   let languageAnswer;
+  let arrOfQuestions;
   
   findBtnStart.addEventListener('click', () => {
     findResponseField.style.backgroundColor = '#fff';
+    const findValueOfLessons = findChoose.querySelector('.offers1__lessons:checked');
     const findValueOfQuestions = findChoose.querySelector('.offers1__choice:checked');
     const findValueOfLanguage = findChoose.querySelector('.offers1__languages:checked');
   
-    console.log(findValueOfQuestions.value + ' ' + findValueOfLanguage.value);
+    console.log(findValueOfLessons.value + ' ' + findValueOfQuestions.value + ' ' + findValueOfLanguage.value);
+  
+    switch (findValueOfLessons.value) {
+      case '1':
+        arrOfQuestions = OFFERS_A1_51_57;
+        break;
+      case '2':
+        arrOfQuestions = OFFERS_A1_58_62;
+        break;
+      case '3':
+        arrOfQuestions = OFFERS_A1_63_71;
+        break;
+      case '4':
+        arrOfQuestions = OFFERS_A1_72_76;
+        break;
+      default:
+        arrOfQuestions = OFFERS_A1_51_57;
+    }
+  
+    console.log('arrOfQuestions' + ' ' + arrOfQuestions.length);
+  
     findChoose.style.display = 'none';
     findContainerForContent.style.display = 'block';
     findContainerBottomWrapper.style.display = 'block';
@@ -2917,9 +4379,9 @@ if (document.querySelector('#template-offers__one') !== null) {
     valueOfQuestionsAll = findValueOfQuestions.value;
     valueOfLanguage = findValueOfLanguage.value;
   
-    offersArray = generateRandomNumbers(findValueOfQuestions.value, OFFERS_A1_51_57);
+    offersArray = generateRandomNumbers(findValueOfQuestions.value, arrOfQuestions);
     console.log('offersArray ' + offersArray);
-    offersArrayMistakes = generateRandomMistakes(findValueOfQuestions.value, OFFERS_A1_51_57, offersArray);
+    offersArrayMistakes = generateRandomMistakes(findValueOfQuestions.value, arrOfQuestions, offersArray);
     console.log('offersArrayMistakes ' + offersArrayMistakes);
     renderOfferStart(findValueOfLanguage.value, offersArray, offersArrayMistakes);
   });
@@ -2952,14 +4414,14 @@ if (document.querySelector('#template-offers__one') !== null) {
     valueArr = [];
     console.log(result);
   
-    if (result === OFFERS_A1_51_57[offersArray[renderСounters]][languageAnswer]) {
+    if (result === arrOfQuestions[offersArray[renderСounters]][languageAnswer]) {
       console.log('ДА');
       findResponseField.style.backgroundColor = 'green';
       scoreValue++;
     } else {
       console.log('НЕТ');
       findResponseField.style.backgroundColor = 'red';
-      findRightAnswer.textContent = OFFERS_A1_51_57[offersArray[renderСounters]][languageAnswer];
+      findRightAnswer.textContent = arrOfQuestions[offersArray[renderСounters]][languageAnswer];
     }
   
     if (valueOfQuestions > 1) {
