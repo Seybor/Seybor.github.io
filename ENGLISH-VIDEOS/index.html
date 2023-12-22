@@ -6,21 +6,69 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<style>
+		.container {
+			max-width: 1200px;
+			width: 100%;
+			margin: 0 auto;
+		}
 		video {
 			display: block;
+			width: 100%;
+		}
+
+		@media (max-width: 1260px) {
+		.container {
+		max-width: 1020px;
+		}
+		}
+		@media (max-width: 1080px) {
+		.container {
+		max-width: 840px;
+		}
+		}
+		@media (max-width: 900px) {
+		.container {
+		max-width: 660px;
+		}
+		}
+		@media (max-width: 720px) {
+		.container {
+		max-width: 540px;
+		}
+		}
+		@media (max-width: 600px) {
+		.container {
+		max-width: 480px;
+		}
+		}
+		@media (max-width: 540px) {
+		.container {
+		padding: 0 15px;
+		}
+		}
+		@media (max-width: 480px) {
+		.container {
+		max-width: 100%;
+		min-width: 280px;
+		}
 		}
 	</style>
 </head>
 
 <body>
-	<video width="400" height="300" controls="controls">
-		<source src="videos/TaylorSwiftLoveStory.mp4" type="video/mp4">
-		<track kind="subtitles" src="subtitles/TaylorSwiftLoveStory.vtt" srclang="en" label="English" default>
-	</video>
-	<video width="400" height="300" controls="controls">
-		<source src="videos/BeyonceHalo.mp4" type="video/mp4">
-		<track kind="subtitles" src="subtitles/BeyonceHalo.vtt" srclang="en" label="English" default>
-	</video>
+	<div class="container">
+
+		<video width="400" height="300" controls="controls">
+			<source src="videos/TaylorSwiftLoveStory.mp4" type="video/mp4">
+			<track kind="subtitles" src="subtitles/TaylorSwiftLoveStory.vtt" srclang="en" label="English" default>
+		</video>
+
+		<video width="400" height="300" controls="controls">
+			<source src="videos/BeyonceHalo.mp4" type="video/mp4">
+			<track kind="subtitles" src="subtitles/BeyonceHalo.vtt" srclang="en" label="English" default>
+		</video>
+
+	</div>
 </body>
 
 </html>
