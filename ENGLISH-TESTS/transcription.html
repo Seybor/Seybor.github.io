@@ -31,10 +31,7 @@
                 <a class="menu__link" href="offers1.html" data-current>Offers(A1)</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="transcriptionNew.html" data-current>Transcription(new)</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="transcription.html" data-current>Transcription(old)</a>
+                <a class="menu__link" href="transcription.html" data-current>Transcription</a>
               </li>
               <li class="menu__item">
                 <a class="menu__link" href="words.html" data-current>Words</a>
@@ -44,64 +41,124 @@
         </div>
       </div>
     </header>
-<main class="main">
 
-	<section class="transcription">
+<main class="main">
+	<section class="tr">
 		<div class="container">
-			<div class="transcription__inner">
-				<h2 class="title transcription__title">Транскрипция слов А0 для самопроверки</h2>
+			<div class="tr__inner">
+				<h2 class="title tr__title">Тест на фонетику</h2>
 				<span class="result"></span>
-				<form class="transcription__form">
-					<div class="transcription__choose">
-						Количество<br />
-						<label class="transcription__choose-label" id="label-5">
-							<input class="transcription__choice visually-hidden" type="radio" name="choice" value="5" checked />
+				<form class="tr__form">
+					<div class="tr__choose">
+						Количество <br />
+						<label class="tr__choose-label" id="label-5">
+							<input class="tr__choice visually-hidden" type="radio" name="choice" value="5" checked />
 							<span>5</span>
 						</label>
-						<label class="transcription__choose-label" id="label-10">
-							<input class="transcription__choice visually-hidden" type="radio" name="choice" value="10" />
+						<label class="tr__choose-label" id="label-10">
+							<input class="tr__choice visually-hidden" type="radio" name="choice" value="10" />
 							<span>10</span>
 						</label>
-						<label class="transcription__choose-label" id="label-15">
-							<input class="transcription__choice visually-hidden" type="radio" name="choice" value="15" />
+						<label class="tr__choose-label" id="label-15">
+							<input class="tr__choice visually-hidden" type="radio" name="choice" value="15" />
 							<span>15</span>
 						</label>
-						<label class="transcription__choose-label" id="label-20">
-							<input class="transcription__choice visually-hidden" type="radio" name="choice" value="20" />
-							<span>20</span>
+
+						<br> Вариант перевода <br />
+						<label class="tr__choose-label" id="label-en">
+							<input class="tr__lang visually-hidden" type="radio" name="lang" value="en" checked />
+							<span>en</span>
 						</label>
-						<label class="transcription__choose-label" id="label-25">
-							<input class="transcription__choice visually-hidden" type="radio" name="choice" value="25" />
-							<span>25</span>
+						<label class="tr__choose-label" id="label-tr">
+							<input class="tr__lang visually-hidden" type="radio" name="lang" value="tr" />
+							<span>tr</span>
 						</label>
-						<button class="transcription__start" id="transcription__start" type="button">Начать</button>
+						<label class="tr__choose-label" id="label-tr">
+							<input class="tr__lang visually-hidden" type="radio" name="lang" value="random" />
+							<span>random</span>
+						</label>
+
+						<br> Сложность <br />
+						<label class="tr__choose-label" id="label-easy">
+							<input class="tr__difficult visually-hidden" type="radio" name="difficult" value="easy" checked />
+							<span>easy</span>
+						</label>
+						<label class="tr__choose-label" id="label-middle">
+							<input class="tr__difficult visually-hidden" type="radio" name="difficult" value="middle" />
+							<span>middle</span>
+						</label>
+						<label class="tr__choose-label" id="label-hard">
+							<input class="tr__difficult visually-hidden" type="radio" name="difficult" value="hard" />
+							<span>hard</span>
+						</label>
+						<label class="tr__choose-label" id="label-hard">
+							<input class="tr__difficult visually-hidden" type="radio" name="difficult" value="all" />
+							<span>all</span>
+						</label>
+						<button class="tr__start" id="tr__start" type="button">Начать</button>
 					</div>
 
-					<ol class="transcription__items">
-						<!-- - Сюда вставляются задания -->
-					</ol>
+					<div class="tr__content-container content-container" style="display: none;">
+						<div class="tr__question">
+							<!-- - Сюда вставляется вопрос -->
+							Вопрос
+						</div>
+						<div class="tr__right-answer">
+							<!-- - Текст правильного ответа в случае ошибки -->
+							Ответ в случае ошибки
+						</div>
+						<div class="tr__responsefield" id="responsefield">
+							<!-- - Поле для текста -->
+							Поле для текста
+						</div>
 
-					<button class="transcription__btn visually-hidden" id="transcription__btn" type="button">Проверить</button>
+						<div class="content-container__bottom-wrapper">
+							<div class="tr__answer-arr" id="answers">
+								<!-- - Слова для ответа -->
+								Слова для ответа
+							</div>
+
+							<button class="tr__btn tr__btn--check visually-hidden" id="tr__btn-check" type="button">Проверить</button>
+							<button class="tr__btn tr__btn--next visually-hidden" id="tr__btn-next" type="button">Дальше</button>
+						</div>
+
+					</div>
+
+					<div class="tr__results" style="display: none;">
+						<div class="tr__score">
+							<!-- - Баллы -->
+							Набранные баллы: <span id="tr__score-value">0</span> из <span id="tr__score-total">0</span>
+						</div>
+
+						<button class="tr__btn tr__btn--again" id="tr__btn-again" type="button">Попробовать
+							снова</button>
+					</div>
+
 				</form>
 			</div>
 		</div>
 	</section>
 
-	<template id="template-transcription">
-		<li class="transcription__item">
-			<span class="transcription__span"></span>
-			<span class="check"></span>
-			<input class="transcription__input" type="text" placeholder="ответ" data-result />
-		</li>
+	<template id="template-transcription__new">
+		<p class="tr__word" id="one">
+
+		</p>
 	</template>
 
 </main>
+
 <footer class="footer">
+
 	<div class="container">
+
 		<div class="footer__inner">
 
+
+
 		</div>
+
 	</div>
+
 </footer>
 </div>
 
