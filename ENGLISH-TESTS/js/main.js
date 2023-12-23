@@ -8956,6 +8956,426 @@ if (document.querySelector('#template-transcription__new') !== null) {
   
 }
 
+if (document.querySelector('#template-irregular__A0') !== null) {
+  try {
+    document.querySelector('.menu__link[href="irregularA0.html"]').dataset.current = 'true';
+  } catch {
+    console.log('.menu__link[href="irregularA0.html"] - не найдено');
+  }
+  const IRREGULAR_VERBS_A0 = [
+    { one: 'sit', two: 'sat', three: 'sat', ru: 'сидеть' },
+    { one: 'sleep', two: 'slept', three: 'slept', ru: 'спать' },
+    { one: 'keep', two: 'kept', three: 'kept', ru: 'держать, хранить' },
+    {
+      one: 'mean',
+      two: 'meant',
+      three: 'meant',
+      ru: 'означать, иметь в виду',
+    },
+    {
+      one: 'win',
+      two: 'won',
+      three: 'won',
+      ru: 'выиграть, одержать победу',
+    },
+    { one: 'teach', two: 'taught', three: 'taught', ru: 'преподавать' },
+    { one: 'think', two: 'thought', three: 'thought', ru: 'думать' },
+    {
+      one: 'understand',
+      two: 'understood',
+      three: 'understood',
+      ru: 'понимать, постигать',
+    },
+    {
+      one: 'leave',
+      two: 'left',
+      three: 'left',
+      ru: 'уходить(с), выходить(из), покидать, уезжать, оставлять',
+    },
+    { one: 'stand', two: 'stood', three: 'stood', ru: 'встать' },
+    { one: 'hear', two: 'heard', three: 'heard', ru: 'слышать' },
+    { one: 'have/has', two: 'had', three: 'had', ru: 'иметь' },
+    { one: 'do', two: 'did', three: 'done', ru: 'делать' },
+    { one: 'get', two: 'got', three: 'got', ru: 'получать, добираться' },
+    { one: 'make', two: 'made', three: 'made', ru: 'делать' },
+    { one: 'can', two: 'could', three: 'could', ru: 'мог' },
+    { one: 'say', two: 'said', three: 'said', ru: 'сказать' },
+    { one: 'find', two: 'found', three: 'found', ru: 'находить' },
+    { one: 'tell', two: 'told', three: 'told', ru: 'рассказывать' },
+    {
+      one: 'show',
+      two: 'showed',
+      three: 'shown/showed',
+      ru: 'показывать(шоу)',
+    },
+    { one: 'feel', two: 'felt', three: 'felt', ru: 'чувствовать' },
+    {
+      one: 'meet',
+      two: 'met',
+      three: 'met',
+      ru: 'встречать, встречаться',
+    },
+    { one: 'bring', two: 'brought', three: 'brought', ru: 'приносить' },
+    { one: 'buy', two: 'bought', three: 'bought', ru: 'купить' },
+    {
+      one: 'spend',
+      two: 'spent',
+      three: 'spent',
+      ru: 'проводить, тратить',
+    },
+    {
+      one: 'learn',
+      two: 'learnt/learned',
+      three: 'learnt/learned',
+      ru: 'учить',
+    },
+    {
+      one: 'lose',
+      two: 'lost',
+      three: 'lost',
+      ru: 'терять, проигрывать',
+    },
+    {
+      one: 'send',
+      two: 'sent',
+      three: 'sent',
+      ru: 'присылать, посылать, отправлять',
+    },
+    { one: 'sell', two: 'sold', three: 'sold', ru: 'продать' },
+    {
+      one: 'lend',
+      two: 'lent',
+      three: 'lent',
+      ru: 'одалживать, давать взаймы',
+    },
+    { one: 'pay', two: 'paid', three: 'paid', ru: 'платить' },
+    { one: 'ride', two: 'rode', three: 'ridden', ru: 'ездить' },
+    { one: 'drive', two: 'drove', three: 'driven', ru: 'водить' },
+    { one: 'swim', two: 'swam', three: 'swum', ru: 'плавать' },
+    { one: 'forget', two: 'forgot', three: 'forgotten', ru: 'забыть' },
+    { one: 'give', two: 'gave', three: 'given', ru: 'дать' },
+    {
+      one: 'break',
+      two: 'broke',
+      three: 'broken',
+      ru: 'ломать(перерыв)',
+    },
+    { one: 'fly', two: 'flew', three: 'flown', ru: 'летать(муха)' },
+    { one: 'wake', two: 'woke', three: 'woken', ru: 'просыпаться' },
+    { one: 'take', two: 'took', three: 'taken', ru: 'брать, принимать' },
+    { one: 'begin', two: 'began', three: 'begun', ru: 'начинать' },
+    { one: 'drink', two: 'drank', three: 'drunk', ru: 'пить' },
+    { one: 'write', two: 'wrote', three: 'written', ru: 'писать' },
+    { one: 'fall', two: 'fell', three: 'fallen', ru: 'упасть' },
+    { one: 'know', two: 'knew', three: 'known', ru: 'знать' },
+    { one: 'go', two: 'went', three: 'gone', ru: 'идти, ехать' },
+    { one: 'be', two: 'was/were', three: 'been', ru: 'быть' },
+    { one: 'see', two: 'saw', three: 'seen', ru: 'видеть' },
+    { one: 'speak', two: 'spoke', three: 'spoken', ru: 'говорить' },
+    { one: 'choose', two: 'chose', three: 'chosen', ru: 'выбирать' },
+    { one: 'eat', two: 'ate', three: 'eaten', ru: 'есть, кушать' },
+    { one: 'wear', two: 'wore', three: 'worn', ru: 'носить(одежду)' },
+    { one: 'sing', two: 'sang', three: 'sung', ru: 'петь' },
+    {
+      one: 'read [riːd]',
+      two: 'read [red]',
+      three: 'read [red]',
+      ru: 'читать',
+    },
+    { one: 'cut', two: 'cut', three: 'cut', ru: 'резать(разрез)' },
+    { one: 'put', two: 'put', three: 'put', ru: 'положить' },
+    { one: 'build', two: 'built', three: 'built', ru: 'строить' },
+    { one: 'cost', two: 'cost', three: 'cost', ru: 'стоить(стоимость)' },
+    { one: 'run', two: 'ran', three: 'run', ru: 'бежать' },
+    { one: 'come', two: 'came', three: 'come', ru: 'приходить' },
+    {
+      one: 'become',
+      two: 'became',
+      three: 'become',
+      ru: 'становиться, делаться',
+    },
+  ];
+  
+  console.log(IRREGULAR_VERBS_A0.length);
+  
+
+  let template = document.querySelector('#template-irregular__A0').content.querySelector('.field__element');
+
+  
+
+  let labels = document.querySelector('.labels');
+
+  
+
+  let field = document.querySelector('.field');
+
+  let questions = document.querySelector('.questions');
+
+  
+
+  let mark = document.querySelector('.mark');
+
+  let markMin = mark.querySelector('#mark__min');
+
+  let markMax = mark.querySelector('#mark__max');
+
+  
+
+  let start = document.querySelector('#start');
+
+  let result = document.querySelector('#result');
+
+  let fill = document.querySelector('#fill');
+
+  let again = document.querySelector('#again');
+
+  
+  const render = (word, type) => {
+    let currentElement = template.cloneNode(true);
+  
+    switch (type) {
+      case 'v1':
+        {
+          currentElement.id = word.one;
+          currentElement.querySelector('.field__question').textContent = word.one;
+          currentElement.querySelector('.field__input').placeholder = 'напишите V2';
+        }
+        break;
+      case 'v2':
+        {
+          currentElement.id = word.two;
+          currentElement.querySelector('.field__question').textContent = word.two;
+          currentElement.querySelector('.field__input').placeholder = 'напишите V1';
+        }
+        break;
+      default: {
+        currentElement.id = word.one;
+        currentElement.querySelector('.field__question').textContent = word.one;
+        currentElement.querySelector('.field__input').placeholder = 'напишите V2';
+      }
+    }
+  
+    return currentElement;
+  };
+  
+  const renderStart = (value, type) => {
+    let fragment = document.createDocumentFragment();
+  
+    for (let i = 0; i < value; i++) {
+      fragment.append(render(newArr[i], type));
+    }
+  
+    field.append(fragment);
+  };
+  
+
+  let newArr;
+
+  let fieldInput;
+
+  let fieldElement;
+
+  let scores;
+
+  let scoresStart;
+
+  
+
+  const shuffleArr = (arr) => {
+
+    for (let i = arr.length - 1; i > 0; i--) {
+
+      let j = Math.floor(Math.random() * (i + 1));
+
+      let t = arr[i];
+
+      arr[i] = arr[j];
+
+      arr[j] = t;
+
+    }
+
+  };
+
+  start.addEventListener('click', () => {
+
+    let inputChoice = document.querySelector('input[name="choice"]:checked');
+
+    let inputOption = document.querySelector('input[name="option"]:checked');
+
+  
+
+    newArr = IRREGULAR_VERBS_A0.slice();
+
+    shuffleArr(newArr);
+
+  
+
+    console.log(inputChoice.value);
+
+    console.log(inputOption.value);
+
+  
+
+    labels.style.display = 'none';
+
+    questions.style.display = 'block';
+
+    field.dataset.type = inputOption.value;
+
+    [scores, scoresStart] = [inputChoice.value, inputChoice.value];
+
+  
+
+    renderStart(inputChoice.value, inputOption.value);
+
+  });
+
+  
+
+  questions.addEventListener('submit', (evt) => {
+
+    evt.preventDefault();
+
+  
+
+    fieldElement = document.querySelectorAll('.field__element');
+
+    fieldInput = document.querySelectorAll('.field__input');
+
+  
+
+    switch (field.dataset.type) {
+
+      case 'v1':
+
+        {
+
+          fieldInput.forEach((el, id) => {
+
+            if (fieldInput[id].value === newArr[id].two) {
+
+              fieldInput[id].dataset.results = 'correctly';
+
+              console.log('да');
+
+            } else {
+
+              fieldInput[id].dataset.results = 'mistake';
+
+              fieldInput[id].value = newArr[id].two;
+
+              console.log('нет');
+
+              scores--;
+
+            }
+
+          });
+
+        }
+
+        break;
+
+      case 'v2':
+
+        {
+
+          fieldInput.forEach((el, id) => {
+
+            if (fieldInput[id].value === newArr[id].one) {
+
+              fieldInput[id].dataset.results = 'correctly';
+
+              console.log('да');
+
+            } else {
+
+              fieldInput[id].dataset.results = 'mistake';
+
+              fieldInput[id].value = newArr[id].one;
+
+              console.log('нет');
+
+              scores--;
+
+            }
+
+          });
+
+        }
+
+        break;
+
+      default:
+
+        alert('Что-то пошло не так');
+
+    }
+
+  
+
+    result.style.display = 'none';
+
+    fill.style.display = 'none';
+
+    mark.style.display = 'block';
+
+    markMin.textContent = scores;
+
+    markMax.textContent = scoresStart;
+
+  });
+
+  
+
+  fill.addEventListener('click', () => {
+
+    fieldInput = document.querySelectorAll('.field__input');
+
+  
+
+    fieldInput.forEach((el) => {
+
+      if (!el.value) {
+
+        el.value = 'Skip';
+
+      }
+
+    });
+
+  });
+
+  
+
+  again.addEventListener('click', () => {
+
+    scores = 0;
+
+    scoresStart = 0;
+
+  
+
+    questions.style.display = 'none';
+
+    mark.style.display = 'none';
+
+    labels.style.display = 'block';
+
+    result.style.display = 'inline-block';
+
+    fill.style.display = 'inline-block';
+
+    field.textContent = '';
+
+    field.dataset.type = '';
+
+  });
+
+  
+}
+
 if (document.querySelector('#template-words') !== null) {
   try {
     document.querySelector('.menu__link[href="words.html"]').dataset.current = 'true';
