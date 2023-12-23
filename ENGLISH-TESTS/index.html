@@ -43,67 +43,92 @@
     </header>
 
 <main class="main">
-  <section class="testing">
+  <section class="offers">
     <div class="container">
-      <div class="testing__inner">
-        <h2 class="title testing__title">Предложения А0 для самопроверки</h2>
+      <div class="offers__inner">
+        <h2 class="title offers__title">Предложения А0 для самопроверки</h2>
         <span class="result"></span>
-        <form class="testing__form">
-          <div class="testing__choose">
-            Количество <br />
-            <label class="testing__choose-label" id="label-5">
-              <input class="testing__choice visually-hidden" type="radio" name="choice" value="5" checked />
+        <form class="offers__form">
+          <div class="offers__choose">
+
+            <br>Количество <br />
+            <label class="offers__choose-label" id="label-5">
+              <input class="offers__choice visually-hidden" type="radio" name="choice" value="5" checked />
               <span>5</span>
             </label>
-            <label class="testing__choose-label" id="label-10">
-              <input class="testing__choice visually-hidden" type="radio" name="choice" value="10" />
+            <label class="offers__choose-label" id="label-10">
+              <input class="offers__choice visually-hidden" type="radio" name="choice" value="10" />
               <span>10</span>
             </label>
-            <label class="testing__choose-label" id="label-15">
-              <input class="testing__choice visually-hidden" type="radio" name="choice" value="15" />
+            <label class="offers__choose-label" id="label-15">
+              <input class="offers__choice visually-hidden" type="radio" name="choice" value="15" />
               <span>15</span>
-            </label>
-            <label class="testing__choose-label" id="label-20">
-              <input class="testing__choice visually-hidden" type="radio" name="choice" value="20" />
-              <span>20</span>
-            </label>
-            <label class="testing__choose-label" id="label-25">
-              <input class="testing__choice visually-hidden" type="radio" name="choice" value="25" />
-              <span>25</span>
             </label>
 
             <br> Вариант перевода <br />
-            <label class="testing__choose-label" id="label-en">
-              <input class="testing__languages visually-hidden" type="radio" name="languages" value="en" checked />
+            <label class="offers__choose-label" id="label-en">
+              <input class="offers__languages visually-hidden" type="radio" name="languages" value="en" checked />
               <span>en</span>
             </label>
-            <label class="testing__choose-label" id="label-ru">
-              <input class="testing__languages visually-hidden" type="radio" name="languages" value="ru" />
+            <label class="offers__choose-label" id="label-ru">
+              <input class="offers__languages visually-hidden" type="radio" name="languages" value="ru" />
               <span>ru</span>
             </label>
-            <label class="testing__choose-label" id="label-all">
-              <input class="testing__languages visually-hidden" type="radio" name="languages" value="all" />
+            <label class="offers__choose-label" id="label-all">
+              <input class="offers__languages visually-hidden" type="radio" name="languages" value="all" />
               <span>ru/en</span>
             </label>
-            <button class="testing__start" id="testing__start" type="button">Начать</button>
+            <button class="offers__start" id="offers__start" type="button">Начать</button>
           </div>
 
-          <ol class="testing__items">
-            <!-- - Сюда вставляются задания -->
-          </ol>
+          <div class="offers__content-container content-container" style="display: none;">
+            <div class="offers__question">
+              <!-- - Сюда вставляется вопрос -->
+              Вопрос
+            </div>
+            <div class="offers__right-answer">
+              <!-- - Текст правильного ответа в случае ошибки -->
+              Ответ в случае ошибки
+            </div>
+            <div class="offers__responsefield" id="responsefield">
+              <!-- - Поле для текста -->
+              Поле для текста
+            </div>
 
-          <button class="testing__btn visually-hidden" id="testing__btn" type="button">Проверить</button>
+            <div class="content-container__bottom-wrapper">
+              <div class="offers__answer-arr" id="answers">
+                <!-- - Слова для ответа -->
+                Слова для ответа
+              </div>
+
+              <button class="offers__btn offers__btn--check visually-hidden" id="offers__btn-check"
+                type="button">Проверить</button>
+              <button class="offers__btn offers__btn--next visually-hidden" id="offers__btn-next"
+                type="button">Дальше</button>
+            </div>
+
+          </div>
+
+          <div class="offers__results" style="display: none;">
+            <div class="offers__score">
+              <!-- - Баллы -->
+              Набранные баллы: <span id="offers__score-value">0</span> из <span id="offers__score-total">0</span>
+            </div>
+
+            <button class="offers__btn offers__btn--again" id="offers__btn-again" type="button">Попробовать
+              снова</button>
+          </div>
+
         </form>
       </div>
     </div>
   </section>
 
-  <template id="template-one">
-    <li class="testing__item">
-      <span class="testing__span"></span>
-      <span class="check"></span>
-      <input class="testing__input" type="text" placeholder="answer*" required data-result />
-    </li>
+
+  <template id="template-offers">
+    <p class="offers__word" id="one">
+
+    </p>
   </template>
 
 </main>

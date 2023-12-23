@@ -1,5 +1,5 @@
 'use strict';
-if (document.querySelector('#template-one') !== null) {
+if (document.querySelector('#template-offers') !== null) {
   try {
     document.querySelector('.menu__link[href="index.html"]').dataset.current = 'true';
   } catch {
@@ -420,7 +420,7 @@ if (document.querySelector('#template-one') !== null) {
     },
     {
       ru: 'Он сказал это очень тихо',
-      en: 'He said it very quently ',
+      en: 'He said it very quently',
     },
     {
       ru: 'Он говорил очень громко',
@@ -939,7 +939,7 @@ if (document.querySelector('#template-one') !== null) {
       en: 'I think I will follow your advice',
     },
     {
-      ru: 'Просто следую за мной!',
+      ru: 'Просто следуй за мной!',
       en: 'Just follow me!',
     },
     {
@@ -966,168 +966,264 @@ if (document.querySelector('#template-one') !== null) {
   
   console.log(MAIN_ARRAY.length);
   
-  const template = document.querySelector('#template-one').content.querySelector('.testing__item');
-  const questionContent = document.querySelector('.testing__items');
-  const btn = document.querySelector('#testing__btn');
-  const result = document.querySelector('.result');
-  const start = document.querySelector('#testing__start');
+
+  const findChoose = document.querySelector('.offers__choose');
+
   
-  const renderQuestions = function (question, length) {
-    var questionElement = template.cloneNode(true);
+
+  const findBtnStart = document.querySelector('#offers__start');
+
   
-    questionElement.querySelector('.testing__span').textContent = question;
-    questionElement.querySelector('.testing__input').setAttribute('maxlength', `${length}`);
-    return questionElement;
+
+  const findContainerForContent = document.querySelector('.offers__content-container');
+
+  const findQuestion = findContainerForContent.querySelector('.offers__question');
+
+  const findRightAnswer = findContainerForContent.querySelector('.offers__right-answer');
+
+  const findResponseField = findContainerForContent.querySelector('.offers__responsefield');
+
+  const findAnswerArr = findContainerForContent.querySelector('.offers__answer-arr');
+
+  const findContainerBottomWrapper = findContainerForContent.querySelector('.content-container__bottom-wrapper');
+
+  
+
+  const findResults = document.querySelector('.offers__results');
+
+  const findBtnAgain = findResults.querySelector('#offers__btn-again');
+
+  
+
+  const findScore = document.querySelector('.offers__score');
+
+  const findScoreTotal = findScore.querySelector('#offers__score-total');
+
+  const findScoreValue = findScore.querySelector('#offers__score-value');
+
+  
+
+  const findBtnResult = findContainerForContent.querySelector('#offers__btn-check');
+
+  const findBtnNext = findContainerForContent.querySelector('#offers__btn-next');
+
+  
+
+  const findTemplate = document.querySelector('#template-offers').content.querySelector('.offers__word');
+
+  
+  const renderOffer = (word) => {
+    let currentElement = findTemplate.cloneNode(true);
+  
+    currentElement.textContent = word;
+    currentElement.id = word;
+  
+    return currentElement;
   };
   
-  const renderStart = (value, lang) => {
-    var fragment = document.createDocumentFragment();
-    console.log(value);
-    console.log(lang);
-    if (lang === 'en') {
-      for (var i = 0; i < value; i++) {
-        fragment.appendChild(renderQuestions(MAIN_ARRAY[newArray[i]].en, MAIN_ARRAY[newArray[i]].ru.length));
-      }
-    }
-    if (lang === 'ru') {
-      for (var i = 0; i < value; i++) {
-        fragment.appendChild(renderQuestions(MAIN_ARRAY[newArray[i]].ru, MAIN_ARRAY[newArray[i]].en.length));
-      }
-    }
-    if (lang === 'all') {
-      for (var i = 0; i < value; i++) {
-        const randomNumber = (min = 1, max = 2) => {
-          return Math.floor(Math.random() * (max - min + 1) + min);
-        };
-        let number = randomNumber();
-        if (number === 1) {
-          fragment.appendChild(renderQuestions(MAIN_ARRAY[newArray[i]].ru, MAIN_ARRAY[newArray[i]].en.length));
+  const renderOfferStart = (valueOfLanguage, offersArray, offersArrayMistakes) => {
+    let fragment = document.createDocumentFragment();
+    console.log('render.js - renderOfferStart - valueOfLanguage: ' + valueOfLanguage);
+  
+    switch (valueOfLanguage) {
+      case 'en':
+        languageQuestion = 'en';
+        languageAnswer = 'ru';
+        break;
+      case 'ru':
+        languageQuestion = 'ru';
+        languageAnswer = 'en';
+        break;
+      case 'all':
+        if (valueOfQuestions % 2 != 0) {
+          languageQuestion = 'ru';
+          languageAnswer = 'en';
+        } else {
+          languageQuestion = 'en';
+          languageAnswer = 'ru';
         }
-        if (number === 2) {
-          fragment.appendChild(renderQuestions(MAIN_ARRAY[newArray[i]].en, MAIN_ARRAY[newArray[i]].ru.length));
-        }
-      }
+        break;
+      default:
+        languageQuestion = 'en';
+        languageAnswer = 'ru';
     }
   
-    questionContent.appendChild(fragment);
+    let offer = MAIN_ARRAY[offersArray[renderСounters]][languageAnswer].split(' ');
+    findQuestion.textContent = MAIN_ARRAY[offersArray[renderСounters]][languageQuestion];
+    console.log('offer ' + offer);
+    let mistakes = MAIN_ARRAY[offersArrayMistakes[renderMistakesCounter]][languageAnswer]
+      .split(' ')
+      .concat(MAIN_ARRAY[offersArrayMistakes[renderMistakesCounter + 1]][languageAnswer].split(' '));
+    console.log('mistakes ' + mistakes);
+    renderMistakesCounter += 2;
+    let arrOfferMistakes = offer.concat(mistakes);
+    console.log('arrOfferMistakes ' + arrOfferMistakes);
+  
+    for (let i = arrOfferMistakes.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      let t = arrOfferMistakes[i];
+      arrOfferMistakes[i] = arrOfferMistakes[j];
+      arrOfferMistakes[j] = t;
+    }
+  
+    console.log(arrOfferMistakes);
+  
+    for (let i = 0; i < arrOfferMistakes.length; i++) {
+      fragment.append(renderOffer(arrOfferMistakes[i]));
+    }
+  
+    findAnswerArr.textContent = '';
+    findResponseField.textContent = '';
+    findRightAnswer.textContent = '';
+  
+    findAnswerArr.append(fragment);
   };
   
-  function getResult(value) {
-    var check = questionContent.querySelectorAll('.check');
-    var str;
-    var re;
-    let j = 0;
-    let newCheck = [];
-    let resultNumber = choice.value;
-    for (let i = 0; i < choice.value; i++) {
-      str = input[i].value;
-      if (value === 1) {
-        re = MAIN_ARRAY[newArray[i]].ru;
-      }
-      if (value === 2) {
-        re = MAIN_ARRAY[newArray[i]].en;
-      }
-      if (str == null || str.length == 0) {
-        j++;
-        newCheck.push(i);
+  const generateRandomNumbers = (count, arr) => {
+    let min = 0;
+    let max = arr.length - 1;
+    if (max - min + 1 < count) {
+      throw new Error('Невозможно сгенерировать указанное количество уникальных чисел');
+    }
+  
+    const numbers = [];
+    while (numbers.length < count) {
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      if (!numbers.includes(randomNumber)) {
+        numbers.push(randomNumber);
       }
     }
-    if (j > 0) {
-      do {
-        j--;
-        input[newCheck[j]].dataset.result = 'empty';
-        input[newCheck[j]].placeholder = 'Поле пустое, введите значение';
-      } while (j);
-      return newCheck;
-    }
-    for (let i = 0; i < choice.value; i++) {
-      str = input[i].value;
-  
-      if (value === 1) {
-        re = MAIN_ARRAY[newArray[i]].en;
-      }
-      if (value === 2) {
-        re = MAIN_ARRAY[newArray[i]].ru;
-      }
-      if (value === 3) {
-        console.log(span[i].textContent);
-        if (span[i].textContent === MAIN_ARRAY[newArray[i]].ru) {
-          re = MAIN_ARRAY[newArray[i]].en;
-        }
-        if (span[i].textContent === MAIN_ARRAY[newArray[i]].en) {
-          re = MAIN_ARRAY[newArray[i]].ru;
-        }
-      }
-      if (re === str) {
-        input[i].dataset.result = 'correctly';
-        check[i].textContent = '+';
-      }
-      if (re !== str) {
-        input[i].dataset.result = 'mistake';
-        check[i].textContent = '- : ' + re;
-        resultNumber--;
-      }
-    }
-    result.textContent = 'Ваш результат: ' + resultNumber + ' из ' + choice.value;
-  }
-  
-  let newArray = [];
-  
-  var randomNumber = (bigArray, value) => {
-    var checkNumber = true;
-    do {
-      end: for (var i = 0; i < value; i++) {
-        newArray[i] = Math.floor(Math.random() * (bigArray.length - 1 - 0 + 1) + 0);
-  
-        if (i === value - 1) {
-          checkNumber = true;
-          for (var j = 0; j < value; j++) {
-            for (var k = j + 1; k < value; k++) {
-              if (newArray[j] === newArray[k]) {
-                checkNumber = false;
-                break end;
-              }
-            }
-          }
-        }
-      }
-    } while (checkNumber === false);
-    return console.log(newArray);
+    return numbers;
   };
   
-  let choice;
-  let span;
-  let input;
+  const generateRandomMistakes = (count, arr, generatedArr) => {
+    count = count * 2;
+    let min = 0;
+    let max = arr.length - 1;
+    if (max - min + 1 < count) {
+      throw new Error('Невозможно сгенерировать указанное количество уникальных чисел');
+    }
   
-  start.addEventListener('click', () => {
-    let testing = document.querySelector('.testing__choose');
-    let language = document.querySelector('.testing__languages:checked');
-    choice = document.querySelector('.testing__choice:checked');
+    const numbers = [];
+    while (numbers.length < count) {
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      if (!numbers.includes(randomNumber) && !generatedArr.includes(randomNumber)) {
+        numbers.push(randomNumber);
+      }
+    }
+    return numbers;
+  };
   
-    randomNumber(MAIN_ARRAY, choice.value);
-    renderStart(choice.value, language.value);
+  let valueOfQuestions = 0;
+  let valueOfQuestionsAll = 0;
+  let valueOfLanguage;
+  let scoreValue = 0;
+  let valueArr = [];
+  let offersArray;
+  let offersArrayMistakes;
+  let renderСounters = 0;
+  let renderMistakesCounter = 0;
+  let languageQuestion;
+  let languageAnswer;
   
-    testing.classList.add('visually-hidden');
-    btn.classList.remove('visually-hidden');
+  findBtnStart.addEventListener('click', () => {
+    findResponseField.style.backgroundColor = '#fff';
+    const findValueOfQuestions = findChoose.querySelector('.offers__choice:checked');
+    const findValueOfLanguage = findChoose.querySelector('.offers__languages:checked');
   
-    span = questionContent.querySelectorAll('.testing__span');
-    input = questionContent.querySelectorAll('.testing__input');
+    console.log(findValueOfQuestions.value + ' ' + findValueOfLanguage.value);
   
-    return choice;
+    findChoose.style.display = 'none';
+    findContainerForContent.style.display = 'block';
+    findContainerBottomWrapper.style.display = 'block';
+  
+    findBtnResult.classList.remove('visually-hidden');
+  
+    valueOfQuestions = findValueOfQuestions.value;
+    valueOfQuestionsAll = findValueOfQuestions.value;
+    valueOfLanguage = findValueOfLanguage.value;
+  
+    offersArray = generateRandomNumbers(findValueOfQuestions.value, MAIN_ARRAY);
+    console.log('offersArray ' + offersArray);
+    offersArrayMistakes = generateRandomMistakes(findValueOfQuestions.value, MAIN_ARRAY, offersArray);
+    console.log('offersArrayMistakes ' + offersArrayMistakes);
+    renderOfferStart(findValueOfLanguage.value, offersArray, offersArrayMistakes);
   });
   
-  btn.addEventListener('click', () => {
-    let language = document.querySelector('.testing__languages:checked');
+  findResponseField.addEventListener('click', (evt) => {
+    console.log(evt.target.id);
+    if (evt.target.id !== 'responsefield') {
+      findAnswerArr.append(evt.target);
+      const index = valueArr.indexOf(evt.target.textContent);
+      if (index > -1) {
+        valueArr.splice(index, 1);
+      }
+      console.log(valueArr);
+    }
+  });
   
-    if (language.value === 'ru') {
-      getResult(1);
+  findAnswerArr.addEventListener('click', (evt) => {
+    console.log(evt.target.id);
+    if (evt.target.id !== 'answers') {
+      findResponseField.append(evt.target);
+      valueArr.push(evt.target.textContent);
+      console.log(valueArr);
     }
-    if (language.value === 'en') {
-      getResult(2);
+  });
+  
+  findBtnResult.addEventListener('click', (evt) => {
+    evt.preventDefault();
+  
+    const result = valueArr.join(' ');
+    valueArr = [];
+    console.log(result);
+  
+    if (result === MAIN_ARRAY[offersArray[renderСounters]][languageAnswer]) {
+      console.log('ДА');
+      findResponseField.style.backgroundColor = 'green';
+      scoreValue++;
+    } else {
+      console.log('НЕТ');
+      findResponseField.style.backgroundColor = 'red';
+      findRightAnswer.textContent = MAIN_ARRAY[offersArray[renderСounters]][languageAnswer];
     }
-    if (language.value === 'all') {
-      getResult(3);
+  
+    if (valueOfQuestions > 1) {
+      valueOfQuestions--;
+      findBtnResult.classList.add('visually-hidden');
+      findBtnNext.classList.remove('visually-hidden');
+    } else {
+      valueOfQuestions--;
+      findContainerBottomWrapper.style.display = 'none';
+      findResults.style.display = 'block';
+      findScoreTotal.textContent = valueOfQuestionsAll;
+      findScoreValue.textContent = scoreValue;
     }
+  
+    renderСounters++;
+    console.log(valueOfQuestions);
+  });
+  
+  findBtnNext.addEventListener('click', (evt) => {
+    evt.preventDefault();
+  
+    renderOfferStart(valueOfLanguage, offersArray, offersArrayMistakes);
+  
+    findBtnResult.classList.remove('visually-hidden');
+    findBtnNext.classList.add('visually-hidden');
+  
+    findResponseField.style.backgroundColor = '#fff';
+  });
+  
+  findBtnAgain.addEventListener('click', () => {
+    findChoose.style.display = 'block';
+    findContainerForContent.style.display = 'none';
+    findResults.style.display = 'none';
+  
+    valueOfQuestions = 0;
+    scoreValue = 0;
+    renderСounters = 0;
+    renderMistakesCounter = 0;
   });
   
 }
