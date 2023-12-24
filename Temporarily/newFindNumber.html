@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+.container {
+			max-width: 1200px;
+			width: 100%;
+			margin: 0 auto;
+  border: 1px solid green;
+		}
+
+.inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#start {
+  display: block;
+  padding: 12px 24px;
+}
+.btn {
+  display: block;
+  font-size: 20px;
+  padding: 20px;
+  width: 100%;
+}
+.btn[data-result='<'] {
+  background-color: red;
+  pointer-events: none;
+}
+.btn[data-result='>'] {
+  background-color: blue;
+  pointer-events: none;
+}
+.btn[data-result='='] {
+   background-color: green;
+  pointer-events: none;
+}
+
+.items {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   gap: 10px;
+   min-height: 500px;
+}
+.item {
+  border: 1px solid red;
+}
+
+		@media (max-width: 1260px) {
+		.container {
+		max-width: 1020px;
+		}
+		}
+		@media (max-width: 1080px) {
+		.container {
+		max-width: 840px;
+		}
+		}
+		@media (max-width: 900px) {
+		.container {
+		max-width: 660px;
+		}
+		}
+		@media (max-width: 720px) {
+		.container {
+		max-width: 540px;
+		}
+		}
+		@media (max-width: 600px) {
+		.container {
+		max-width: 480px;
+		}
+		}
+		@media (max-width: 540px) {
+		.container {
+		padding: 0 15px;
+		}
+  .items {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+}
+		}
+		@media (max-width: 480px) {
+		.container {
+		max-width: 100%;
+		min-width: 280px;
+		}
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+  <div class="inner">
+    <button id='start'>Начать игру</button>
+    <div class="items" id='items'>
+      
+    </div>
+  </div>
+</div>
+
+<template id='template'>
+  <div class='item'>
+    <button class='btn' id='1'></button>
+  </div>
+</template>
+
+<script>
+	const content = template.content.querySelector('.item')
+
+let number;
+
+let attempts = 0;
+let min = 1;
+let max = 100;
+let count = 100;
+
+const render = (value) => {
+  let currentElement = content.cloneNode(true);
+  let btn = currentElement.querySelector('.btn');
+
+  btn.textContent = value;
+  btn.id = value;
+  
+  return currentElement;
+};
+
+const renderStart = (count) => {
+attempts = 0;
+  number = Math.floor(Math.random() * (100 - 1 + 1) + 1)
+  console.log(number)
+  let fragment = document.createDocumentFragment();
+  
+  for (let i = 1 ; i <= count; i++) {
+    fragment.append(render(i));
+  }
+
+  items.append(fragment);
+};
+
+let btns
+start.addEventListener('click', (evt) => {
+  start.style.display = 'none'
+  renderStart(count)
+  btns = document.querySelectorAll('.btn')
+  console.log(btns.length)
+})
+
+items.addEventListener('click', (evt) => {
+  if(evt.target.tagName === 'BUTTON') {
+    if(evt.target.id < number) {
+      evt.target.dataset.result = '<'
+      attempts++
+    }
+    if(evt.target.id > number) {
+      evt.target.dataset.result = '>'
+      attempts++
+    }
+    if(evt.target.id == number) {
+      evt.target.dataset.result = '='
+      attempts++
+      alert(`Число ${number}, попытка: ${attempts}`)
+      if(confirm('Ещё раз?')) {
+        items.textContent = '';
+        renderStart(count);
+      } else {
+        items.textContent = '';
+        start.style.display = 'block';
+      }
+    }
+  }
+})
+
+
+</script>
+</body>
+</html>
