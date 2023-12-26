@@ -1,3 +1,3 @@
-import { time } from './timer';
+import { time } from './timer.js';
 
 time();
