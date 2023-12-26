@@ -7,7 +7,7 @@ let v = [
   ['teach', 'taught', 'taught', 'преподавать'],
   ['think', 'thought', 'thought', 'думать'],
   ['understand', 'understood', 'understood', 'понимать, постигать'],
-  ['leave', 'left', 'left', 'уходить(с), выходить(из), покидать, уезжать, оставлять'],
+  ['leave', 'left', 'left', 'уходить(с), оставлять'],
   ['stand', 'stood', 'stood', 'встать'],
   ['hear', 'heard', 'heard', 'слышать'],
   ['have/has', 'had', 'had', 'иметь'],
@@ -75,7 +75,99 @@ v.forEach((el, id) => {
     
     tr.append(td)
   }
-  table.append(tr)
-  // p.textContent = `${id + 1}) ${el[0]} - ${el[1]} - ${el[2]} - ${el[3]}`;
+  tbody.append(tr)
+
   
 })
+
+// sort
+
+table.onclick = function(e) {
+      if (e.target.tagName != 'TH') return;
+
+      let th = e.target;
+      // если ячейка TH, тогда сортировать
+      // cellIndex - это номер ячейки th:
+      //   0 для первого столбца
+      //   1 для второго и т.д.
+      sortGrid(th.cellIndex, th.dataset.type);
+    };
+
+let counter = 0;
+
+function sortGrid(colNum, type) {
+      let rowsArray = Array.from(tbody.rows);
+
+      // console.log(...rowsArray)
+
+      // compare(a, b) сравнивает две строки, нужен для сортировки
+      let compare;
+
+
+      switch (type) {
+        case 'number': {
+           let value = rowsArray[0].querySelector('td').textContent < rowsArray[1].querySelector('td').textContent
+           console.log(value)
+           if (value) {
+            counter++
+           }
+
+           compare = function(rowA, rowB) {
+            let value = rowA.cells[colNum].innerHTML - rowB.cells[colNum].innerHTML
+            
+            return value;
+          };
+        }
+          break;
+        case 'v1': {
+          let value = rowsArray[0].querySelector('td:nth-of-type(2)').textContent < rowsArray[1].querySelector('td:nth-of-type(2)').textContent
+           console.log(value)
+           if (value) {
+            counter++
+           }
+           compare = function(rowA, rowB) {
+            return rowA.cells[colNum].innerHTML > rowB.cells[colNum].innerHTML ? 1 : -1;
+          };
+        }
+          case 'v2': {
+          let value = rowsArray[0].querySelector('td:nth-of-type(3)').textContent < rowsArray[1].querySelector('td:nth-of-type(3)').textContent
+           console.log(value)
+           if (value) {
+            counter++
+           }
+           compare = function(rowA, rowB) {
+            return rowA.cells[colNum].innerHTML > rowB.cells[colNum].innerHTML ? 1 : -1;
+          };
+        }
+         case 'v3': {
+          let value = rowsArray[0].querySelector('td:nth-of-type(4)').textContent < rowsArray[1].querySelector('td:nth-of-type(4)').textContent
+           console.log(value)
+           if (value) {
+            counter++
+           }
+           compare = function(rowA, rowB) {
+            return rowA.cells[colNum].innerHTML > rowB.cells[colNum].innerHTML ? 1 : -1;
+          };
+        }
+      case 'ru': {
+          let value = rowsArray[0].querySelector('td:nth-of-type(5)').textContent < rowsArray[1].querySelector('td:nth-of-type(5)').textContent
+           console.log(value)
+           if (value) {
+            counter++
+           }
+           compare = function(rowA, rowB) {
+            return rowA.cells[colNum].innerHTML > rowB.cells[colNum].innerHTML ? 1 : -1;
+          };
+        }
+       
+      }
+
+      // сортировка
+      rowsArray.sort(compare);
+      if (counter > 0) {
+        rowsArray.reverse()
+        counter = 0
+      } 
+
+      tbody.append(...rowsArray);
+    }
