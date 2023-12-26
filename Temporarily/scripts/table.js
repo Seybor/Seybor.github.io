@@ -77,8 +77,16 @@ v.forEach((el, id) => {
   }
   tbody.append(tr)
 
-  
 })
+
+
+// Преобразование массива в JSON-строку
+let jsonData = JSON.stringify(v);
+let blob = new Blob([jsonData], {type: 'application/json'});
+let url = URL.createObjectURL(blob);
+link.href = url;
+link.download = 'data.txt';
+
 
 // sort
 
@@ -170,4 +178,25 @@ function sortGrid(colNum, type) {
       } 
 
       tbody.append(...rowsArray);
+
+      let arr = []
+
+      rowsArray.forEach((el) => {
+        arr.push(el.innerHTML)
+      })
+
+      for (let i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].split('<td>').join('').split('</td>')
+        arr[i].shift()
+        arr[i].pop()
+        arr[i] = arr[i].join(' - ')
+      }
+
+      console.log(arr)
+
+      jsonData = JSON.stringify(arr);
+      blob = new Blob([jsonData], {type: 'application/json'});
+      url = URL.createObjectURL(blob);
+      link.href = url;
+      link.download = 'data.txt';
     }
