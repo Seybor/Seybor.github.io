@@ -1,0 +1,78 @@
+.wordpress-wrapper {
+  --fz: 24px;
+  --margin: 16px 0;
+  font-family: 'Arial', sans-serif;
+  font-size: var(--fz);
+  line-height: 1.2;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  color: #000;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+}
+.wordpress-wrapper p {
+  font: inherit;
+  color: inherit;
+  margin: var(--margin);
+}
+.wordpress-wrapper img {
+  display: inline-block;
+  max-width: 300px;
+  max-height: 300px;
+  min-width: 100px;
+  min-height: 100px;
+  height: auto;
+  width: auto;
+  margin: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+.wordpress-wrapper h1,
+.wordpress-wrapper h2,
+.wordpress-wrapper h3,
+.wordpress-wrapper h4,
+.wordpress-wrapper h5,
+.wordpress-wrapper h6 {
+  margin: var(--margin);
+}
+.wordpress-wrapper h1 {
+  font-size: calc(var(--fz) * 2);
+}
+.wordpress-wrapper h2 {
+  font-size: calc(var(--fz) * 1.5);
+}
+.wordpress-wrapper h3 {
+  font-size: calc(var(--fz) * 1.25);
+}
+.wordpress-wrapper h4 {
+  font-size: calc(var(--fz) / 1);
+}
+.wordpress-wrapper h5 {
+  font-size: calc(var(--fz) * 0.75);
+}
+.wordpress-wrapper h6 {
+  font-size: calc(var(--fz) / 2);
+}
+.wordpress-wrapper a {
+  display: inline-block;
+  margin: var(--margin);
+  color: blue;
+  text-decoration: underline;
+}
+.wordpress-wrapper strong {
+  font-size: calc(var(--fz) * 1.1);
+}
+.wordpress-wrapper blockquote {
+  font-size: var(--fz);
+  padding: var(--fz) calc(var(--fz) * 2);
+  margin: 0;
+  background-color: darkgrey;
+  border-left: 6px solid pink;
+}
+.wordpress-wrapper hr {
+  margin: var(--margin);
+}
+.wordpress-wrapper pre {
+  tab-size: var(--fz);
+}

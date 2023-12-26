@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JS</title>
+
+  <link rel="stylesheet" href="style/timer.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .wrapper {
+      margin: 0 auto;
+      height: 100vh;
+      width: 100%;
+      max-width: 1200px;
+      min-width: 280px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    span {
+      font-size: clamp(60px, 20vw, 320px);
+      font-weight: 900;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="items">
+      <span id="days">0</span>
+      <span>:</span>
+      <span id="hours">0</span>
+      <span>:</span>
+      <span id="minutes">0</span>
+      <span>:</span>
+      <span id="seconds">0</span>
+    </div>
+  </div>
+
+
+  <script type="module" src="timer/timer.js"></script>
+  <script type='module' src='timer/main.js'></script>
+</body>
+
+</html>
