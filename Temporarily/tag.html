@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  border: 1px solid blue;
+  max-width: 800px;
+  min-height: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.wrapper button {
+  display: block;
+  margin: 0 auto;
+  font-size: 20px;
+  padding: 12px 24px;
+}
+
+#field {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid red;
+  max-width: 600px;
+}
+
+.col, 
+.empty {
+  width: calc(25% - 4px);
+  aspect-ratio: 1/1;
+  border: 2px solid black;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+  
+  cursor: pointer;
+  user-select: none;
+}
+.col[data-value='focus'] {
+  background-color: green;
+  
+}
+
+.empty {
+  border: 2px solid red;
+  cursor: auto;
+}
+</style>
+<body>
+	<div class='wrapper'>
+  <button id='start'>Начать</button>
+  
+  <div id='field' style='display: none;'>
+  
+  </div>
+  
+   <button id='finish' style='display: none;'>Проверить</button>
+</div>
+
+
+
+<template id='template'>
+  <div class='col' id='' data-value>
+    <span></span>
+  </div>
+</template>
+
+<script>
+	let template = document.querySelector('#template').content.querySelector('.col')
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+const shuffleArr = (arr) => {
+		for (let i = arr.length - 1; i > 0; i--) {
+			let j = Math.floor(Math.random() * (i + 1));
+			let t = arr[i];
+			arr[i] = arr[j];
+			arr[j] = t;
+		}
+	};	
+
+const gameStart = () => {
+  
+  shuffleArr(arr)
+  
+  field.style.display = 'flex';
+  finish.style.display = 'block';
+  
+  
+  
+  for(let i = 0; i < arr.length; i++) {
+    let col = template.cloneNode(true)
+    col.textContent = arr[i];
+    col.id = arr[i]
+    
+    field.append(col)
+  }
+  
+  let empty = document.createElement('div')
+  empty.id = 16
+  empty.dataset.value = 'empty'
+  empty.classList.add('empty')
+  field.append(empty)
+  console.log(empty)
+}
+
+start.onclick = (evt) => {
+  start.style.display = 'none'
+  gameStart()
+}
+
+let currentEl = 0;
+field.addEventListener('click', (evt) => {
+  if(evt.target.id === 'field') {
+    return
+  }
+  if(evt.target.id == currentEl.id) {
+    return
+  }
+  
+  if ((currentEl != 0) && (currentEl.id != 16) && (evt.target.id == 16)) {
+    let elements = field.querySelectorAll('div')
+    let elEmpty = field.querySelector('.empty')
+    elements = [...elements]
+    
+    let temp = document.createElement('div');
+
+    elEmpty.replaceWith(temp);
+    currentEl.replaceWith(elEmpty);
+    temp.replaceWith(currentEl);
+    
+    console.log(elements.findIndex( el => el.id == 16  ))
+    
+    
+    elements.forEach((el) => {
+      console.log(el.id)
+    })
+    
+    return
+  }
+  
+  if(currentEl) {
+    currentEl.dataset.value = 'none'
+  }
+  currentEl = evt.target
+  currentEl.dataset.value = 'focus'
+})
+
+
+finish.addEventListener('click', (evt) => {
+   let elements = field.querySelectorAll('div')
+   elements = [...elements]
+  
+  
+  for (let i = 0; i < elements.length - 1; i++) {
+    if(elements[i].id - elements[i + 1].id != -1) {
+      alert('Неверно')
+      break
+    }
+    if(i == elements.length - 2) {
+      alert('Победа')
+    }
+  }
+})
+</script>
+</body>
+</html>
