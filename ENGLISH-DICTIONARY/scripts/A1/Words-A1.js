@@ -251,7 +251,7 @@ let v = [
   { en: 'wall', ru: 'стена', tr: '[wɔːl]' },
   { en: 'way', ru: 'путь', tr: '[weɪ]' },
   { en: 'weak', ru: 'слабый', tr: '[wiːk]' },
-  { en: 'well', ru: 'paid', tr: '[wel]' },
+  { en: 'well-paid', ru: 'хорошо оплачиваемый', tr: '[ˈwelˈpeɪd]' },
   { en: 'wide', ru: 'широкий', tr: '[waɪd]' },
   { en: 'windy', ru: 'ветреный', tr: '[ˈwɪndi]' },
 ];
