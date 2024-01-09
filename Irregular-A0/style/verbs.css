@@ -66,7 +66,7 @@ body {
 
 .front,
 .back {
-  font-size: clamp(18px, 5vw, 36px);
+  font-size: clamp(14px, 3vw, 36px);
   color: #fff;
 }
 
