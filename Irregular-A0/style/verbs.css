@@ -38,11 +38,13 @@ body {
 }
 
 .container:hover .film {
-  transform: rotateY(-180deg);
+  transform: rotateY(180deg);
 }
 
 .face {
   position: relative; 
+  top: 0;
+  left: 0;
   backface-visibility: hidden;
   width: 100%;
   background-color: red;
@@ -50,20 +52,21 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  padding: 20px;
+  padding: 6px;
 }
 
 .back {
   position: absolute;
   top: 0;
   left: 0;
-  transform: rotateY(-180deg);
   background-color: green;
+
+  transform: rotateY(-180deg);
 }
 
 .front,
 .back {
-  font-size: clamp(24px, 5vw, 36px);
+  font-size: clamp(18px, 5vw, 36px);
   color: #fff;
 }
 
@@ -81,4 +84,10 @@ body {
 }
 .back__content span {
   display: block;
+}
+
+@media(max-width: 600px) {
+  .container {
+    width: 100%;
+  }
 }
