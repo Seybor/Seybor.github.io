@@ -34,7 +34,6 @@ let v = [
     tr: '[baɪ] - [bɔːt] - [bɔːt]',
     ru: 'купить',
   },
-  { en: 'can - could - could', tr: '[kæn] - [kʊd] - [kʊd]', ru: 'мог' },
   {
     en: 'choose - chose - chosen',
     tr: '[ʧuːz] - [ʧəʊz] - [ˈʧəʊzᵊn]',
@@ -145,11 +144,6 @@ let v = [
     en: 'lend - lent - lent',
     tr: '[lend] - [lent] - [lent]',
     ru: 'одалживать, давать взаймы',
-  },
-  {
-    en: 'lie - lay - lain',
-    tr: '[laɪ] - [leɪ] - [leɪn]',
-    ru: 'лежать, врать(враньё)',
   },
   {
     en: 'lose - lost - lost',
