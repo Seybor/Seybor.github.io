@@ -19,12 +19,41 @@
 			max-width: 100%;
 			overflow-wrap: break-word;
 		}
+		.container {
+			max-width: 1200px;
+			padding: 10px;
+			margin: 0 auto;
+		}
 
-		table {
+		#test {
+			margin-bottom: 20px;
+			padding: 10px;
+			display: flex;
+			justify-content: center;
+			gap: 10px;
+
+			border: 1px solid red;
+
+
+		}
+		.btn {
+			display: inline-block;
+			padding: 6px 12px;
+			background-color: gray;
+			font-size: clamp(20px, 5vw, 28px);
+
+			cursor: pointer;
+			border: none;
+		}
+
+		#table {
 		margin: 0 auto;
+		width: 100%;
+
   	border-collapse: collapse;
+  	text-align: center;
 }
-td, th {
+	td, th {
   padding: 4px;
   border: 1px solid black;
   font-weight: 700;
@@ -40,19 +69,27 @@ th:hover {
 </head>
 
 <body>
+	<div class="container">
+		<div id='test'>
+			<button class='btn' id='blend'>Перемешать</button>
+			<button class='btn' id='check'>Начать проверку</button>
+		</div>
 	<table id='table'>
-  	<thead>
+  	<thead id='thead'>
       <tr>
         <th data-type="number">№</th>
         <th data-type="en">EN</th>
         <th data-type="tr">TR</th>
         <th data-type="ru">RU</th>
       </tr>
+    </thead>
 
       <tbody id='tbody'>
       	
       </tbody>
 	</table>
+	</div>
+
 
 
 

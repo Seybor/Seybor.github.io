@@ -1,4 +1,4 @@
-let v = [
+const v = [
   { en: 'able', ru: 'способный', tr: '[ˈeɪbᵊl]' },
   { en: 'accent', ru: 'акцент, ударение', tr: '[ˈæksᵊnt]' },
   { en: 'account', ru: 'аккаунт, счет', tr: '[əˈkaʊnt]' },
@@ -248,23 +248,281 @@ let v = [
   { en: 'windy', ru: 'ветреный', tr: '[ˈwɪndi]' },
 ];
 
-v.forEach((el, id) => {
-  const tr = document.createElement("tr");
-  
-  for (let i = 0; i < 4; i++) {
-    let td = document.createElement("td");
-    if (i === 0) {
-      td.textContent = id + 1
-    } else if (i === 1) {
-      td.textContent = el.en
-    } else if (i === 2) {
-      td.textContent = el.tr
-    } else if (i === 3) {
-      td.textContent = el.ru
-    }
+const arrRender = () => {
+
+    table.style.tableLayout = 'auto'
+    thead.style.display = 'table-header-group'
+    tbody.textContent = ''
+
+    v.forEach((el, id) => {
+    const tr = document.createElement("tr");
     
+    for (let i = 0; i < 4; i++) {
+      let td = document.createElement("td");
+      if (i === 0) {
+        td.textContent = id + 1
+      } else if (i === 1) {
+        td.textContent = el.en
+      } else if (i === 2) {
+        td.textContent = el.tr
+      } else if (i === 3) {
+        td.textContent = el.ru
+      }
+      
+      tr.append(td)
+    }
+    tbody.append(tr)
+  })
+
+}
+
+arrRender()
+
+
+const testArrRender = () => {
+
+  table.style.tableLayout = 'fixed'
+  tbody.textContent = ''
+  tbody.style.cursor = 'pointer'
+
+  thead.style.display = 'none'
+  let counter = 0
+  let validate = 0
+  let tr = document.createElement("tr");
+  let td = document.createElement("td");
+
+  for(let i = 0; i < 3; i++) {
+    td = document.createElement("td")
+
+    if(i === 0) {
+      td.textContent = 'lvl 1'
+      td.dataset.check = true
+      td.id = 'lvl1'
+    } else if(i === 1) {
+      td.textContent = 'lvl 2'
+      td.dataset.check = true
+      td.id = 'lvl2'
+    } else {
+      td.textContent = 'lvl 3'
+      td.dataset.check = true
+      td.id = 'lvl3'
+    }
+
+    td.style.backgroundColor = 'gray'
+
     tr.append(td)
   }
+
   tbody.append(tr)
 
+   v.forEach((el, id) => {
+    td = document.createElement("td");
+
+    if(counter % 3 === 0) {
+      tbody.append(tr)
+      tr = document.createElement("tr")
+    }
+
+    if(validate === 0) {
+      td.textContent = el.en
+      td.dataset.level = 'lvl1'
+      td.style.backgroundColor = 'green'
+
+    } else if (validate === 1) {
+      td.textContent = el.ru
+      td.dataset.level = 'lvl2'
+      td.style.backgroundColor = 'darkorange'
+
+    } else if (validate === 2) {
+      td.textContent = el.tr
+      td.dataset.level = 'lvl3'
+      
+      td.style.backgroundColor = 'red'
+
+      validate = -1
+    }
+
+    td.dataset.number = id
+    td.dataset.minCheck = true
+      
+    tr.append(td)
+
+    counter++
+    validate++
+    
+    
+  })
+
+   tbody.addEventListener('mouseover', function(evt) {
+
+    if(evt.target.dataset.number) {
+      evt.target.dataset.color = evt.target.style.backgroundColor
+      evt.target.style.backgroundColor = 'blue'
+    }
+
+   }) 
+
+   tbody.addEventListener('mouseout', function(evt) {
+
+    if(evt.target.dataset.number) {
+      evt.target.style.backgroundColor = evt.target.dataset.color
+    }
+
+   }) 
+
+   tbody.addEventListener('click', (evt) => {
+    let check;
+
+    if(evt.target.id === 'lvl1') {
+      let lang
+      let color
+      check = document.querySelectorAll('td[data-level="lvl1"]')
+
+      if(evt.target.dataset.check === 'true') {
+        lang = 'ru'
+        color = 'white'
+        evt.target.dataset.check = 'false'
+      } else {
+        lang = 'en'
+        color = 'black'
+        evt.target.dataset.check = 'true'
+      }
+
+      check.forEach((el) => {
+        el.textContent = v[el.dataset.number][lang]
+        el.style.color = color
+      })
+
+
+    } else if(evt.target.id === 'lvl2') {
+      let lang
+      let color
+      check = document.querySelectorAll('td[data-level="lvl2"]')
+
+       if(evt.target.dataset.check === 'true') {
+        lang = 'en'
+        color = 'white'
+        evt.target.dataset.check = 'false'
+      } else {
+        lang = 'ru'
+        color = 'black'
+        evt.target.dataset.check = 'true'
+      }
+
+      check.forEach((el) => {
+        el.textContent = v[el.dataset.number][lang]
+        el.style.color = color
+      })
+      
+    } else if(evt.target.id === 'lvl3') {
+      check = document.querySelectorAll('td[data-level="lvl3"]')
+
+
+      if(evt.target.dataset.check === 'true') {
+        check.forEach((el) => {
+        el.textContent = `${v[el.dataset.number].en} - ${v[el.dataset.number].ru}`
+        el.style.color = 'white'
+      })
+        evt.target.dataset.check = 'false'
+      } else {
+        check.forEach((el) => {
+        el.textContent = v[el.dataset.number].tr
+        el.style.color = 'black'
+      })
+        evt.target.dataset.check = 'true'
+      }
+
+    } else if(evt.target.dataset.number) {
+
+      if(evt.target.dataset.level === 'lvl1') {
+
+        if(evt.target.dataset.minCheck === 'true') {
+            evt.target.textContent = v[evt.target.dataset.number].ru
+            evt.target.style.color = 'white'
+            evt.target.dataset.minCheck = 'false'
+        } else {
+            evt.target.textContent = v[evt.target.dataset.number].en
+            evt.target.style.color = 'black'
+            evt.target.dataset.minCheck = 'true'
+        }
+      } else if(evt.target.dataset.level === 'lvl2') {
+         if(evt.target.dataset.minCheck === 'true') {
+            evt.target.textContent = v[evt.target.dataset.number].en
+            evt.target.style.color = 'white'
+            evt.target.dataset.minCheck = 'false'
+        } else {
+            evt.target.textContent = v[evt.target.dataset.number].ru
+            evt.target.style.color = 'black'
+            evt.target.dataset.minCheck = 'true'
+        }
+      } else if(evt.target.dataset.level === 'lvl3') {
+         if(evt.target.dataset.minCheck === 'true') {
+            evt.target.textContent = `${v[evt.target.dataset.number].en} - ${v[evt.target.dataset.number].ru}`
+            evt.target.style.color = 'white'
+            evt.target.dataset.minCheck = 'false'
+        } else {
+            evt.target.textContent = v[evt.target.dataset.number].tr
+            evt.target.style.color = 'black'
+            evt.target.dataset.minCheck = 'true'
+        }
+      }
+    }
+
+   })
+
+
+}
+
+
+let ruSort = false
+let enSort = true
+
+thead.addEventListener('click', (evt) => {
+  if(evt.target.dataset.type === 'en') {
+    ruSort = false
+
+    if(enSort) {
+      v.reverse()
+      arrRender()
+    } else {
+      v.sort((a, b) => a.en.localeCompare(b.en, 'en'));
+      arrRender()
+      enSort = true
+    }
+   
+  } 
+
+  if(evt.target.dataset.type === 'ru') {
+    enSort = false
+
+    if(ruSort) {
+      v.reverse()
+      arrRender()
+    } else {
+      v.sort((a, b) => a.ru.localeCompare(b.ru, 'ru'));
+      arrRender()
+      ruSort = true
+    }
+   
+  }
+})
+
+ const shuffleArr = (arr) => {
+    for (let i = arr.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      let t = arr[i];
+      arr[i] = arr[j];
+      arr[j] = t;
+    }
+  };  
+
+
+blend.addEventListener('click', () => {
+  shuffleArr(v)
+  arrRender()
+})
+
+check.addEventListener('click', () => {
+  shuffleArr(v)
+  testArrRender()
 })
