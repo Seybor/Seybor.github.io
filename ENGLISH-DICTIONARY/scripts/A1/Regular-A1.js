@@ -6,7 +6,7 @@ let v = [
   { en: 'attend', tr: '[əˈtend]', ru: 'посещать' },
   { en: 'attract', tr: '[əˈtrækt]', ru: 'привлекать' },
   { en: 'behave', tr: '[bɪˈheɪv]', ru: 'вести себя' },
-  { en: 'belong', tr: '[bɪˈlɒŋ]', ru: 'принадлежать' },
+  { en: 'belong(to)', tr: '[bɪˈlɒŋ]([tuː])', ru: 'принадлежать' },
   { en: 'breathe', tr: '[briːð]', ru: 'дышать' },
   { en: 'broaden', tr: '[ˈbrɔːdᵊn]', ru: 'расширять, расширяться' },
   { en: 'care', tr: '[keə]', ru: 'заботиться(забота)' },

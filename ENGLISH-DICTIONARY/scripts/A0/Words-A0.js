@@ -39,7 +39,6 @@ let v = [
   { en: 'clothes', ru: 'одежда(мн.число)', tr: '[kləʊðz]' },
   { en: 'coat', ru: 'пальто', tr: '[kəʊt]' },
   { en: 'competition', ru: 'соревнование', tr: '[ˌkɒmpəˈtɪʃᵊn]' },
-  { en: 'confidence', ru: 'уверенность', tr: '[ˈkɒnfɪdᵊns]' },
   { en: 'convenient', ru: 'удобный', tr: '[kənˈviːniənt]' },
   { en: 'corner', ru: 'угол', tr: '[ˈkɔːnə]' },
   { en: 'cousin', ru: 'двоюродный брат, двоюродная сестра', tr: '[ˈkʌzᵊn]' },

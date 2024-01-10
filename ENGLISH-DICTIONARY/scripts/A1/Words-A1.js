@@ -24,7 +24,6 @@ let v = [
   { en: 'bargain', ru: 'выгодная покупка/сделка', tr: '[ˈbɑːɡɪn]' },
   { en: 'bedroom', ru: 'спальня', tr: '[ˈbedruːm]' },
   { en: 'behaviour', ru: 'поведение', tr: '[bɪˈheɪvjə]' },
-  { en: 'behaviour', ru: 'поведение', tr: '[bɪˈheɪvjə]' },
   { en: 'belt', ru: 'ремень', tr: '[belt]' },
   { en: 'blonde', ru: 'светлый', tr: '[blɒnd]' },
   { en: 'bottle', ru: 'бутылка', tr: '[ˈbɒtᵊl]' },
