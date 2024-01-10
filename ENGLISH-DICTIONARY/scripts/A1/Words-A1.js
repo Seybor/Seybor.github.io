@@ -315,7 +315,7 @@ const testArrRender = () => {
 
   tbody.append(tr)
 
-   v.forEach((el, id) => {
+  v.forEach((el, id) => {
     td = document.createElement("td");
 
     if(counter % 3 === 0) {
@@ -352,6 +352,8 @@ const testArrRender = () => {
     
     
   })
+
+}
 
    tbody.addEventListener('mouseover', function(evt) {
 
@@ -469,9 +471,6 @@ const testArrRender = () => {
     }
 
    })
-
-
-}
 
 
 let ruSort = false
