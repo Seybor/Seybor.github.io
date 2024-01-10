@@ -54,6 +54,7 @@ let v = [
   { en: 'resolve', tr: '[rɪˈzɒlv]', ru: 'разрешить' },
   { en: 'respect', tr: '[rɪˈspekt]', ru: 'уважать(уважение)' },
   { en: 'risk', tr: '[rɪsk]', ru: 'рисковать(риск)' },
+  { en: 'sense', tr: '[sens]', ru: 'чувствовать(чувство)' },
   { en: 'shock', tr: '[ʃɒk]', ru: 'шокировать(шок)' },
   { en: 'smell', tr: '[smel]', ru: 'пахнуть(запах)' },
   { en: 'spoil', tr: '[spɔːɪl]', ru: 'портить' },
