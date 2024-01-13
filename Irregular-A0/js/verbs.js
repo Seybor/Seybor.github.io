@@ -56,7 +56,7 @@
     tr: '[kʌt] - [kʌt] - [kʌt]',
     ru: 'резать(разрез)',
   },
-  { en: 'do - did - done', tr: '[duː] - [dɪd] - [dʌn]', ru: 'делать' },
+  { en: 'do/does - did - done', tr: '[duː] - [dɪd] - [dʌn]', ru: 'делать' },
   {
     en: 'drink - drank - drunk',
     tr: '[drɪŋk] - [dræŋk] - [drʌŋk]',
