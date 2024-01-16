@@ -1,57 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<meta name="description" content="my site GULP v1.0.1 lite">
+	<meta name="keywords" content="test, hello">
+	<meta name="Author" content="Seybor">
+	<meta name="Copyright" content="Seybor">
+	<meta name="Address" content="Planet Earth">
+	<meta name="application-name" content="My Project">
 
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
+	<title>ENGLISH-DICTIONARY v1.0.0</title>
 
-			max-width: 100%;
-			overflow-wrap: break-word;
-		}
-		.wrapper {
-			max-width: 1200px;
-			margin: 0 auto;
-			padding: 60px;
-		}
+	<link rel="icon" href="favicon.ico">
 
-		a {
-			display: block;
-			padding: 6px;
-			margin-bottom: 12px;
-
-			border: 1px solid black;
-
-			text-align: center;
-			font-size: clamp(16px, 5vw, 48px);
-			text-decoration: none;
-		}
-		a:last-child {
-			margin-bottom: 0;
-		}
-
-	</style>
+	<link rel="stylesheet" href='/css/style.css'>
 </head>
-
 <body>
-<div class="wrapper">
-	<a href="words-A0.html">Слова A0</a>
-	<a href="regular-A0.html">Правильные глаголы А0</a>
-	<a href="irregular-A0.html">Неправильные глаголы A0</a>
-	<a href="phrases-verb-regular-A0.html">Фразовые глаголы(regular) - A0</a>
-	<a href="phrases-verb-irregular-A0.html">Фразовые глаголы(irregular) - A0</a>
-	<a href="words-A1.html">Слова A1</a>
-	<a href="regular-A1.html">Правильные глаголы A1</a>
-	
+	<div class="wrapper">
+
+		<header class="header" id="header">
+			<div class="container">
+				<div class="header__inner">
+					<nav class="menu header__menu">
+						<ul class="menu__items">
+							<li class="menu__item">
+								<a class="menu__link" href="/index.html">Index</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+<main class="main">
+
+	<!--include _section.html  -->
+
+	<div class="container index">
+		<a class="index__link" href="words-A0.html">Слова A0</a>
+		<a class="index__link" href="regular-A0.html">Правильные глаголы А0</a>
+		<a class="index__link" href="irregular-A0.html">Неправильные глаголы A0</a>
+		<a class="index__link" href="phrases-verb-regular-A0.html">Фразовые глаголы(regular) - A0</a>
+		<a class="index__link" href="phrases-verb-irregular-A0.html">Фразовые глаголы(irregular) - A0</a>
+		<a class="index__link" href="words-A1.html">Слова A1</a>
+		<a class="index__link" href="regular-A1.html">Правильные глаголы A1</a>
+	</div>
+
+</main>
+
+
+<footer class="footer">
+
+
+	<div class="container">
+
+
+		<div class="footer__inner">
+
+
+			11.01.24
+
+
+		</div>
+
+
+	</div>
+
+
+</footer>
 </div>
 
-
+<script src="/js/main.js"></script>
 
 </body>
 

@@ -1,100 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-	<title>Words A1</title>
+	<meta name="description" content="my site GULP v1.0.1 lite">
+	<meta name="keywords" content="test, hello">
+	<meta name="Author" content="Seybor">
+	<meta name="Copyright" content="Seybor">
+	<meta name="Address" content="Planet Earth">
+	<meta name="application-name" content="My Project">
 
-	<style>
-	body {
-			font-family: 'Ubuntu', sans-serif;
-		}
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
+	<title>ENGLISH-DICTIONARY v1.0.0</title>
 
-			max-width: 100%;
-			overflow-wrap: break-word;
-		}
-		.container {
-			max-width: 1200px;
-			padding: 10px;
-			margin: 0 auto;
-		}
+	<link rel="icon" href="favicon.ico">
 
-		#test {
-			margin-bottom: 20px;
-			padding: 10px;
-			display: flex;
-			justify-content: center;
-			gap: 10px;
-
-			border: 1px solid red;
-
-
-		}
-		.btn {
-			display: inline-block;
-			padding: 6px 12px;
-			background-color: gray;
-			font-size: clamp(20px, 5vw, 28px);
-
-			cursor: pointer;
-			border: none;
-		}
-
-		#table {
-		margin: 0 auto;
-		width: 100%;
-
-  	border-collapse: collapse;
-  	text-align: center;
-}
-	td, th {
-  padding: 4px;
-  border: 1px solid black;
-  font-weight: 700;
-  font-size: clamp(10px, 3vw, 24px);
-}
-th:hover {
-	background-color: green;
-
-	cursor: pointer;
-}
-
-	</style>
+	<link rel="stylesheet" href='/css/style.css'>
 </head>
-
 <body>
+	<div class="wrapper">
+
+		<header class="header" id="header">
+			<div class="container">
+				<div class="header__inner">
+					<nav class="menu header__menu">
+						<ul class="menu__items">
+							<li class="menu__item">
+								<a class="menu__link" href="/index.html">Index</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+<main class="main" data-current="words-A0" id="main">
 	<div class="container">
 		<div id='test'>
 			<button class='btn' id='blend'>Перемешать</button>
 			<button class='btn' id='check'>Начать проверку</button>
 		</div>
-	<table id='table'>
-  	<thead id='thead'>
-      <tr>
-        <th data-type="number">№</th>
-        <th data-type="en">EN</th>
-        <th data-type="tr">TR</th>
-        <th data-type="ru">RU</th>
-      </tr>
-    </thead>
-
-      <tbody id='tbody'>
-      	
-      </tbody>
-	</table>
+	
+		<table id='table'>
+			<thead id='thead'>
+				<tr>
+					<th data-type="number">№</th>
+					<th data-type="en">EN</th>
+					<th data-type="tr" id="transcription">TR</th>
+					<th data-type="ru">RU</th>
+				</tr>
+			</thead>
+	
+			<tbody id='tbody'>
+	
+			</tbody>
+		</table>
 	</div>
+</main>
+<footer class="footer">
+	<div class="container">
+		<div class="footer__inner">
+			11.01.24
+		</div>
+	</div>
+</footer>
+</div>
 
-
-
+<script src="/js/main.js"></script>
 
 </body>
-
-<script src="scripts/A1/Words-A1.js"></script>
 
 </html>
