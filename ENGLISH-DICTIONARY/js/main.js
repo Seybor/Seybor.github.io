@@ -429,7 +429,7 @@ const ARR_A0_IRREGULAR_VERBS = [
     tr: '[kʌt] - [kʌt] - [kʌt]',
     ru: 'резать (разрез)',
   },
-  { en: 'do - did - done', tr: '[duː] - [dɪd] - [dʌn]', ru: 'делать' },
+  { en: 'do/does - did - done', tr: '[duː] - [dɪd] - [dʌn]', ru: 'делать' },
   {
     en: 'drink - drank - drunk',
     tr: '[drɪŋk] - [dræŋk] - [drʌŋk]',
@@ -1746,13 +1746,13 @@ const ARR_A1_WORDS = [
 
   { en: 'separately', ru: 'отдельно', tr: '[ˈsepᵊrətli]' },
 
-  { en: 'series / TV series', ru: 'сериал', tr: '[ˈsɪəriːz] / [ˌtiːˈviː] [ˈsɪəriːz]' },
+  { en: 'series', ru: 'сериал', tr: '[ˈsɪəriːz] / [ˌtiːˈviː] [ˈsɪəriːz]' },
 
-  { en: 'shape', ru: 'форма', tr: '[ʃeɪp]' },
+  { en: 'shape', ru: ' форма, вид, фигура', tr: '[ʃeɪp]' },
 
   { en: 'shocked', ru: 'шокированный', tr: '[ʃɒkt]' },
 
-  { en: 'shocking', ru: 'шокируюищй', tr: '[ˈʃɒkɪŋ]' },
+  { en: 'shocking', ru: 'шокирующий', tr: '[ˈʃɒkɪŋ]' },
 
   { en: 'short', ru: 'короткий, низкий(о росте)', tr: '[ʃɔːt]' },
 
@@ -1903,7 +1903,7 @@ const ARR_A1_REGULAR_VERBS = [
   { en: 'invest', tr: '[ɪnˈvest]', ru: 'инвестировать, вкладывать' },
   { en: 'jogging', tr: '[ˈʤɒɡɪŋ]', ru: 'бегать трусцой' },
   { en: 'matter', tr: '[ˈmætə]', ru: 'иметь значение (материя)' },
-  { en: 'miss', tr: '[mɪs]', ru: 'скучать, пропускать (неудача)' },
+  { en: 'miss', tr: '[mɪs]', ru: 'скучать, пропускать, упускать (неудача)' },
   { en: 'overpay', tr: '[ˌəʊvəˈpeɪ]', ru: 'переплачивать' },
   { en: 'own', tr: '[əʊn]', ru: 'иметь, владеть, принадлежать (собственный)' },
   { en: 'participate', tr: '[pɑːˈtɪsɪpeɪt]', ru: 'участвовать' },
@@ -1914,7 +1914,7 @@ const ARR_A1_REGULAR_VERBS = [
   { en: 'record', tr: '[ˈrekɔːd]', ru: 'записывать (запись, рекорд)' },
   { en: 'reduce', tr: '[rɪˈdjuːs]', ru: 'сократить, уменьшить' },
   { en: 'repeat', tr: '[rɪˈpiːt]', ru: 'повторять (повторение)' },
-  { en: 'resolve', tr: '[rɪˈzɒlv]', ru: 'разрешить' },
+  { en: 'resolve', tr: '[rɪˈzɒlv]', ru: 'решать, разрешить (решимость, решение)' },
   { en: 'respect', tr: '[rɪˈspekt]', ru: 'уважать (уважение)' },
   { en: 'risk', tr: '[rɪsk]', ru: 'рисковать (риск)' },
   { en: 'sense', tr: '[sens]', ru: 'чувствовать (чувство)' },
