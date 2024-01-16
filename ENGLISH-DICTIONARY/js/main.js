@@ -1748,7 +1748,7 @@ const ARR_A1_WORDS = [
 
   { en: 'series', ru: 'сериал', tr: '[ˈsɪəriːz] / [ˌtiːˈviː] [ˈsɪəriːz]' },
 
-  { en: 'shape', ru: ' форма, вид, фигура', tr: '[ʃeɪp]' },
+  { en: 'shape', ru: 'форма, вид, фигура', tr: '[ʃeɪp]' },
 
   { en: 'shocked', ru: 'шокированный', tr: '[ʃɒkt]' },
 
