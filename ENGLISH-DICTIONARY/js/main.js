@@ -1746,7 +1746,7 @@ const ARR_A1_WORDS = [
 
   { en: 'separately', ru: 'отдельно', tr: '[ˈsepᵊrətli]' },
 
-  { en: 'series', ru: 'сериал', tr: '[ˈsɪəriːz] / [ˌtiːˈviː] [ˈsɪəriːz]' },
+  { en: 'series', ru: 'сериал', tr: '[ˈsɪəriːz]' },
 
   { en: 'shape', ru: 'форма, вид, фигура', tr: '[ʃeɪp]' },
 
