@@ -1865,6 +1865,7 @@ const ARR_A1_REGULAR_VERBS = [
   { en: 'accept', tr: '[əkˈsept]', ru: 'принимать' },
   { en: 'adapt', tr: '[əˈdæpt]', ru: 'адаптироваться' },
   { en: 'add', tr: '[æd]', ru: 'добавлять' },
+  { en: 'apologise', tr: '[əˈpɒləʤaɪz]', ru: 'извиняться' },
   { en: 'appreciate', tr: '[əˈpriːʃieɪt]', ru: 'ценить' },
   { en: 'attend', tr: '[əˈtend]', ru: 'посещать' },
   { en: 'attract', tr: '[əˈtrækt]', ru: 'привлекать' },
