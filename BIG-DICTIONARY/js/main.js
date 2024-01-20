@@ -224,10 +224,9 @@ $('#link').on('pointerdown', (evt) => {
 	// let blob = new Blob([jsonData], { type: 'application/json' });
 
 	let finalResult = ``
-	// arrForDownload.forEach((el) => {
-	// 	finalResult += `${el['en']} ${el['tr']} ${el['ru']}\n`
-	// })
-
+	arrForDownload.forEach((el) => {
+		finalResult += `${el['en']} ${el['tr']} ${el['ru']}\n`
+	})
 
 	for (const key in ALL_ARR) {
 
