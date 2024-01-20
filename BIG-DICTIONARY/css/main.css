@@ -123,10 +123,14 @@ body {
   position: relative;
   display: flex;
   min-height: 76px;
-  max-height: 76px;
   padding-right: 75px;
 
   text-align: center;
+
+
+
+    max-height: 76px;
+    overflow: hidden;
 }
 .s-theme {
   position: absolute;
