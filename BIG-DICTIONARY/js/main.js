@@ -2,6 +2,15 @@
 
 // $('body').hide()
 
+ window.onerror = function(message, url, line, col, error) {
+    alert(`${message}\n В ${line}:${col} на ${url}`);
+ };
+
+
+ gfgf = fffgf
+
+
+
 $('#theme').click(() => {
 	if ($('#html').attr('data-bs-theme') == 'dark') {
 		$('#html').attr('data-bs-theme', 'light')
