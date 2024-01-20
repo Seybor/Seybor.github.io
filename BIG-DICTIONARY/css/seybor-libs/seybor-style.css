@@ -1,0 +1,29 @@
+ul[data-list-reset],
+ol[data-list-reset],
+ul.list-reset,
+ol.list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+ul[data-list-return],
+ol[data-list-return],
+ul.list-return,
+ol.list-return {
+  padding-left: 40px;
+  margin: 16px 0;
+}
+ul[data-list-return],
+ul.list-return {
+  list-style: disc;
+}
+
+ol[data-list-return],
+ol.list-return {
+  list-style: decimal;
+}
+
+.no-resize {
+  resize: none;
+}
