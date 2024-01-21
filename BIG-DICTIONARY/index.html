@@ -23,7 +23,7 @@
 <body>
 
 	<div class="wrapper">
-		<header class="header bg-body-secondary" id="header">
+		<header class="header bg-body-secondary">
 			<div class="container">
 
 				<div class="header__inner">
@@ -36,30 +36,41 @@
 						<div class="col">
 							<a href="#" class="btn bg-danger" id="link" download>Download</a>
 						</div>
-						<div class="col">
-							<a href="#" class="btn" data-name="noun">Nouns</a>
+
+						<div class="dropdown col">
+							<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+								aria-expanded="false">
+								Words
+							</button>
+							<ul class="dropdown-menu" id="words">
+								<li><a class="dropdown-item" href="#" data-name="noun">Nouns</a></li>
+								<li><a class="dropdown-item" href="#" data-name="r-verb">Regular-Verbs</a></li>
+								<li><a class="dropdown-item" href="#" data-name="ir-verb">Irregular-Verbs</a></li>
+								<li><a class="dropdown-item" href="#" data-name="adjective">Adjectives</a></li>
+								<li><a href="#" class="dropdown-item" data-name="adverbs">Adverbs</a></li>
+							</ul>
 						</div>
-						<div class="col">
-							<a href="#" class="btn" data-name="r-verb">Regular-Verbs</a>
+
+						<div class="dropdown col" id="phrases">
+							<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+								aria-expanded="false">
+								Phrases
+							</button>
+							<ul class="dropdown-menu">
+								<li><a href="#" class="dropdown-item" data-name="phrases">Phrases</a></li>
+								<li><a href="#" class="dropdown-item" data-name="phases-verbs">Phrases-verbs</a></li>
+							</ul>
 						</div>
-						<div class="col">
-							<a href="#" class="btn" data-name="ir-verb">Irregular-Verbs</a>
-						</div>
-						<div class="col">
-							<a href="#" class="btn" data-name="adjective">Adjectives</a>
-						</div>
-						<div class="col">
-							<a href="#" class="btn" data-name="adverbs">Adverbs</a>
-						</div>
+
 					</div>
 
 					<img class='s-theme' src="img/theme.png" alt="theme" id="theme">
-
 				</div>
+
+
 
 			</div>
 		</header>
-
 
 		<div class="main" id="main" data-current-arr>
 			<div class="container text-center" id="field">
@@ -70,7 +81,7 @@
 		<footer class="footer bg-body-secondary">
 			<div class="container">
 				<div class="footer__inner">
-					<span>20.01.24</span>
+					<span>21.01.24</span>
 				</div>
 			</div>
 		</footer>
@@ -80,8 +91,7 @@
 	<script src="libs/jquery/jquery.com_jquery-3.7.1.min.js" defer></script>
 	<script src="libs/bootstrap/js/bootstrap.bundle.min.js" defer></script>
 
-	<script src="js/ARR/ALL-WORDS.js" defer></script>
-	<script src="js/main.js" defer></script>
+	<script type="module" src="js/main.js" defer></script>
 
 </body>
 

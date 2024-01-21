@@ -1,0 +1,982 @@
+to aim* [eɪm] целиться
+to sense* [sens] чувствовать
+to dress* [dres] одевать
+to believe [bɪˈliːv] верить
+to earn [ɜːn] зарабатывать
+to ignore [ɪɡˈnɔː] игнорировать
+to play [pleɪ] играть
+to use [juːz] использовать
+to seem [siːm] казаться
+to wash [wɒʃ] мыть
+to discover [dɪˈskʌvə] обнаружить
+to discuss [dɪˈskʌs] обсуждать
+to communicate [kəˈmjuːnɪkeɪt] общаться
+to explain [ɪkˈspleɪn] объяснять
+to stay [steɪ] оставаться
+to refuse [rɪˈfjuːz] отказываться
+to receive [rɪˈsiːv] получать
+to join [ʤɔɪn] присоединяться
+to follow [ˈfɒləʊ] следовать
+to happen [ˈhæpᵊn] случаться, происходить
+to move(to) [muːv]([tuː]) двигаться, переезжать
+to achieve [əˈʧiːv] достигать [какой-то цели]
+to wait(for) [weɪt]([fɔː]) ждать
+to marry [ˈmæri] жениться, выходить, за, муж
+to depend(on) [dɪˈpend]([ɒn]) зависеть
+to try [traɪ] пробовать, пытаться, стараться
+to continue [kənˈtɪnjuː] продолжить
+to look [lʊk] смотреть, выглядеть
+to agree [əˈɡriː] соглашаться
+to save [seɪv] сохранить, спасти, экономить
+to ask [ɑːsk] спросить
+to dance [dɑːns] танцевать
+to kill [kɪl] убить
+to improve [ɪmˈpruːv] улучшать
+to want [wɒnt] хотеть
+to prefer(for) [priˈfɜː](fɔː) предпочитать
+to arrive(in) [əˈraɪv]([ɪn]) прибывать
+to prepare [prɪˈpeə] подготовить, готовиться
+to remember [rɪˈmembə] помнить
+to book* [bʊk] бронировать
+to solve [sɒlv] решать, [какую-то проблему, задачу]
+to decide [dɪˈsaɪd] решать [что-то сделать]
+to include [ɪnˈkluːd] включать [в себя]
+to like [laɪk] нравиться, нравится, любить
+to celebrate [ˈselɪbreɪt] отмечать, праздновать
+to recommend [ˌrekəˈmend] рекомендовать
+to listen(to) [ˈlɪsᵊn]([tuː]) слушать
+to rent* [rent] арендовать
+to return* [rɪˈtɜːn] вернуться
+to worry* [ˈwʌri] волноваться, беспокоиться
+to talk* [tɔːk] говорить
+to cook* [kʊk] готовить
+to walk* [wɔːk] гулять
+to share* [ʃeə] делиться
+to live* [lɪv] жить
+to fail* [feɪl] завалить, провалить, потерпеть, неудачу
+to graduate* [ˈɡræʤuət] заканчивать
+to finish* [ˈfɪnɪʃ] закончить
+to close* [kləʊz] закрыть
+to call* [kɔːl] звонить
+to sound* [saʊnd] звучать
+to study* [ˈstʌdi] изучать, исследовать, заниматься
+to interest* [ˈɪntrest] интересовать
+to correct* [kəˈrekt] исправлять
+to control* [kənˈtrəʊl] контролировать, управлять
+to copy* [ˈkɒpi] копировать
+to smoke* [sməʊk] курить
+to love* [lʌv] любить
+to change* [ʧeɪnʤ] менять
+to motivate [ˈməʊtɪveɪt] мотивировать
+to hope* [həʊp] надеяться
+to start* [stɑːt] начать
+to hate* [heɪt] ненавидеть
+to need* [niːd] нуждаться
+to promise* [ˈprɒmɪs] обещать
+to stop* [stɒp] остановить, перестать
+to answer* [ˈɑːnsə] ответить [на что-то]
+to open* [ˈəʊpᵊn] открыть
+to cry* [kraɪ] плакать, кричать
+to turn* [tɜːn] поворачивать
+to support* [səˈpɔːt] поддеживать
+to sign* [saɪn] подписывать
+to help* [help] помогать
+to visit* [ˈvɪzɪt] посетить, навестить
+to practice* [ˈpræktɪs] практиковать
+to offer* [ˈɒfə] предлагать
+to invite(to)* [ɪnˈvaɪt]([tuː]) приглашать
+to sentence* [ˈsentəns] приговорить
+to check* [ʧek] проверять
+to produce* [ˈprɒdjuːs] производить
+to jump* [ʤʌmp] прыгать
+to travel* [ˈtrævᵊl] путешествовать
+to work* [wɜːk] работать
+to pass* [pɑːs] сдавать, пройти
+to download* [ˌdaʊnˈləʊd] скачать
+to laugh* [lɑːf] смеяться
+to watch* [wɒʧ] смотреть, наблюдать
+to compare* [kəmˈpeə] сравнивать
+to test* [test] тестировать, проверять, испытывать
+to train* [treɪn] тренироваться
+to surprise* [səˈpraɪz] удивлять
+to smile(at)* [smaɪl]([æt]) улыбаться
+to die* [daɪ] умирать
+to kiss* [kɪs] целовать
+to accept [əkˈsept] принимать
+to adapt [əˈdæpt] адаптироваться
+to add [æd] добавлять
+to apologise [əˈpɒləʤaɪz] извиняться
+to appreciate [əˈpriːʃieɪt] ценить
+to attend [əˈtend] посещать
+to attract [əˈtrækt] привлекать
+to behave [bɪˈheɪv] вести, себя
+to belong(to) [bɪˈlɒŋ]([tuː]) принадлежать
+to breathe [briːð] дышать
+to broaden [ˈbrɔːdᵊn] расширять, расширяться
+to deliver [dɪˈlɪvə] доставлять
+to develop [dɪˈveləp] развивать
+to divide [dɪˈvaɪd] делить
+to complain [kəmˈpleɪn] жаловаться
+to confirm [kənˈfɜːm] подтверждать
+to enjoy [ɪnˈʤɔɪ] наслаждаться, обожать
+to exist [ɪɡˈzɪst] существовать
+to expect [ɪkˈspekt] ожидать
+to frighten [ˈfraɪtᵊn] пугать
+to imagine [ɪˈmæʤɪn] вообразить, представить
+to inform [ɪnˈfɔːm] информировать, сообщить
+to inspire [ɪnˈspaɪə] вдохновлять, внушать
+to interrupt [ˌɪntəˈrʌpt] прерывать, перебивать
+to invest [ɪnˈvest] инвестировать, вкладывать
+to jogging [ˈʤɒɡɪŋ] бегать, трусцой
+to overpay [ˌəʊvəˈpeɪ] переплачивать
+to participate [pɑːˈtɪsɪpeɪt] участвовать
+to provide [prəˈvaɪd] предоставлять, обеспечивать
+to react [riˈækt] реагировать
+to realize [ˈrɪəlaɪz] осознавать, реализовать
+to reduce [rɪˈdjuːs] сократить, уменьшить
+to spoil [spɔːɪl] портить
+to suffer [ˈsʌfə] страдать
+to weigh [weɪ] взвешивать, весить
+to consider [kənˈsɪdə] рассматривать, считать [иметь мнение]
+to care* [keə] заботиться
+to carry* [ˈkæri] нести [что-то в руках]
+to clean* [kliːn] чистить
+to complete* [kəmˈpliːt] завершать
+to contact* [ˈkɒntækt] связываться
+to count* [kaʊnt] считать
+to divorce* [dɪˈvɔːs] разводиться
+to dream* [driːm] мечтать
+to experience* [ɪkˈspɪəriəns] испытывать
+to express* [ɪkˈspres] выражать, высказывать
+to fill* [fɪl] заполнять
+to guarantee* [ˌɡærᵊnˈtiː] гарантировать
+to guess* [ɡes] предполагать; угадывать
+to increase* [ˈɪnkriːs] увеличить
+to matter* [ˈmætə] иметь, значение
+to miss* [mɪs] скучать, пропускать, упускать
+to own* [əʊn] иметь, владеть, принадлежать
+to reach* [riːʧ] достигать [в значении добираться]
+to record* [ˈrekɔːd] записывать
+to repeat* [rɪˈpiːt] повторять
+to resolve* [rɪˈzɒlv] решать, разрешить
+to respect* [rɪˈspekt] уважать
+to risk* [rɪsk] рисковать
+to shock* [ʃɒk] шокировать
+to smell* [smel] пахнуть
+to suit* [suːt] подходить
+to suppose* [səˈpəʊz] предполагать
+to taste* [teɪst] пробовать
+to thank* [θæŋk] благодарить
+to touch* [tʌʧ] касаться [до чего-то, кого-то]
+to voice* [vɔɪs] озвучивать
+to warm* [wɔːm] согреть
+to waste* [weɪst] тратить, тратить впустую
+to wish* [wɪʃ] желать
+to place* [pleɪs] размещать; положить
+to order* [ˈɔːdə] заказывать
+to fine*  штрафовать
+to last* [lɑːst] длиться, продолжаться
+to present*  дарить, вручать
+to lock* [lɒk] запирать
+to trip* [trɪp] споткнуться
+to collect [kəˈlɛkt] собирать, собираться
+to require [rɪˈkwaɪə] требовать
+to relax [rɪˈlæks] расслабляться, отдыхать
+to translate [trænzˈleɪt] переводить
+to advance [ədˈvɑːns] продвигать
+to install [ɪnˈstɔːl] устанавливать
+to satisfy [ˈsætɪsfaɪ] удовлетворять
+to disappear [ˌdɪsəˈpɪə] исчезать
+to enter [ˈɛntə] войти [в], поступить [в]
+to advise [ədˈvaɪz] советовать
+to analyze [ˈænəlaɪz] анализировать
+to appear [əˈpɪə] появляться
+to disagree [ˌdɪsəˈɡriː] не соглашаться
+to concentrate [ˈkɒnsəntreɪt] сконцентрироваться, сосредоточиться
+to describe [dɪˈskraɪb] описывать
+to destroy [dɪˈstrɔɪ] уничтожать, разрушать
+to hurry [ˈhʌri] торопить, торопиться
+to introduce [ˌɪntrəˈʤuːs] представлять
+to create [kriˈeɪt] создавать
+to criticize [ˈkrɪtɪsaɪz] критиковать
+to manage [ˈmænɪʤ] управлять, суметь
+to impress* [ˈɪmprɛs] впечатлять
+to measure* [ˈmɛʒə] измерять
+to protest* [ˈprəʊtɛst] протестовать
+to rest* [rɛst] отдыхать
+to cancel* [ˈkænsᵊl] отменить
+to notice* [ˈnəʊtɪs] замечать
+to reserve* [rɪˈzɜːv] резервировать
+to seat* [siːt] усаживать
+to repair* [rɪˈpeə] ремонтировать
+to paint* [peɪnt] красить
+to release* [rɪˈliːs] выпускать
+to type* [taɪp] печатать
+to attack* [əˈtæk] атаковать
+to supply* [səˈplaɪ] поставлять
+to dislike* [dɪˈslaɪk] не любить
+to export* [ɛksˈpɔːt] экспортировать
+to mention* [ˈmɛnʃᵊn] упоминать
+to sort* [sɔːt] сортировать
+to arrest* [əˈrɛst] арестовывать
+ability [əˈbɪləti] способность
+anniversary [ˌænɪˈvɜːsᵊri] годовщина, юбилей
+accent [ˈæksᵊnt] акцент, ударение
+account [əˈkaʊnt] аккаунт, счет
+accountant [əˈkaʊntᵊnt] бухгалтер
+advice [ədˈvaɪs] совет
+agency [ˈeɪʤᵊnsi] агенство
+agreement [əˈɡriːmənt] соглашение
+air [eə] воздух
+alarm clock [əˈlɑːm] [klɒk] будильник
+apartment [əˈpɑːtmənt] квартира
+app / application [æp] / [ˌæplɪˈkeɪʃᵊn] приложение
+appearance [əˈpɪərᵊns] внешний вид; появление
+architect [ˈɑːkɪtekt] архитектор
+area [ˈeəriə] область
+arm [ɑːm] рука
+armchair [ˈɑːmˈʧeə] кресло
+article [ˈɑːtɪkᵊl] статья;артикль
+artist [ˈɑːtɪst] художник
+attention [əˈtenʃᵊn] внимание
+authority [ɔːˈθɒrəti] власть
+bag [bæɡ] сумка
+banana [bəˈnɑːnə] банан
+bargain [ˈbɑːɡɪn] выгодная покупка / сделка
+bathroom [ˈbɑːθruːm] ванная
+bed [bed] кровать,постель
+bedroom [ˈbedruːm] спальня
+bedroom [ˈbedruːm] спальня, спальная комната
+behaviour [bɪˈheɪvjə] поведение
+brilliant* [ˈbrɪljənt] брилиант
+bell [bɛl] звонок
+belt [belt] ремень
+bill [bɪl] счёт
+boots [buːts] ботинки
+bottle [ˈbɒtᵊl] бутылка
+bowling [ˈbəʊlɪŋ] боулинг
+bread [bred] хлеб
+breath [breθ] дыхание
+bridge [brɪʤ] мост
+building [ˈbɪldɪŋ] здание
+camel [ˈkæmᵊl] верблюд
+cap [ˈkæp] шапка;кепка;колпачок
+carrot [ˈkærət] морковь
+carton [ˈkɑːtᵊn] картон; пакет
+case [keɪs] случай
+cash [kæʃ] наличные [ед. число]
+cave [keɪv] пещера
+celebrity [səˈlɛbrəti] знаменитость
+chair [ʧeə] стул
+championship [ˈʧæmpiənʃɪp] чемпионат
+chance [ʧɑːns] шанс
+charity [ˈʧærəti] благотворительность
+cheek [ʧiːk] щека
+cheese [ʧiːz] сыр
+chemistry [ˈkemɪstri] химия
+chocolate [ˈʧɒkəlɪt] шоколад
+choice [ʧɔɪs] выбор
+church [ʧɜːʧ] церковь
+circus [ˈsɜːkəs] цирк
+citizen [ˈsɪtɪzᵊn] гражданин
+class [klɑːs] класс; занятие
+classmate [ˈklɑːsmeɪt] одноклассник, одногруппник
+clothes [kləʊðz] одежда [мн.число]
+coat [kəʊt] пальто
+coin [kɔɪn] монета
+community [kəˈmjuːnəti] сообщество
+competition [ˌkɒmpəˈtɪʃᵊn] соревнование
+complaint [kəmˈpleɪnt] жалоба
+composition [ˌkɒmpəˈzɪʃᵊn] сочинение; композиция
+condition [kənˈdɪʃᵊn] состояние; условие
+confidence [ˈkɒnfɪdᵊns] уверенность
+contest [ˈkɒntest] конкурс
+conversation [ˌkɒnvəˈseɪʃᵊn] разговор
+copybook [ˈkɒpɪbʊk] тетрадь
+corner [ˈkɔːnə] угол
+cousin [ˈkʌzᵊn] двоюродная сестра / двоюродный брат
+criminal [ˈkrɪmɪnᵊl] преступник
+criticism [ˈkrɪtɪsɪzᵊm] критика
+crossroads [ˈkrɒsˌrəʊdz] перекрёсток
+cup [kʌp] чашка;кубок;кружка
+curtains [ˈkɜːtᵊnz] шорты
+custom [ˈkʌstəm] обычай
+customer [ˈkʌstəmə] покупатель, клиент
+cycling [ˈsaɪklɪŋ] езда на велосипеде
+daughter [ˈdɔːtə] дочь
+decision [dɪˈsɪʒᵊn] решение[что-то сделать]
+delivery [dɪˈlɪvᵊri] доставка
+department [dɪˈpɑːtmənt] отдел
+depression [dɪˈpreʃᵊn] депрессия
+desk [desk] письменный стол
+device [dɪˈvaɪs] устройство
+difference [ˈdɪfᵊrᵊns] разница, различие
+difficulty [ˈdɪfɪkᵊlti] трудность
+discovery [dɪˈskʌvᵊri] открытие
+discussion [dɪˈskʌʃᵊn] обсуждение
+dish [dɪʃ] блюдо
+district [ˈdɪstrɪkt] район
+diving [ˈdaɪvɪŋ] дайвинг
+donkey [ˈdɒŋki] осёл
+drawing [ˈdrɔːɪŋ] рисование
+elephant [ˈɛlɪfənt] слон
+employee [ˌemplɔɪˈiː] работник, сотрудник
+employer [ɪmˈplɔɪə] работодатель
+enthusiasm [ɪnˈθjuːziæzᵊm] энтузиазм
+entrepreneur [ˌɒntrəprəˈnɜː] предприниматель
+essay [ˈeseɪ] эссе, сочинение
+event [ɪˈvent] событие
+exercise [ˈeksəsaɪz] упражнение
+explanation [ˌekspləˈneɪʃᵊn] объяснение
+expression [ɪkˈspreʃᵊn] выражение
+fame [feɪm] слава
+fear [fɪə] страх
+feeling / sense* [ˈfiːlɪŋ] / [sens] чувство
+fence [fens] забор
+field [fiːld] поле
+figure [ˈfɪɡə] цифра; фигура
+financially [faɪˈnænʃᵊli] финансово
+firm [fɜːm] фирма
+floor [flɔː] этаж;пол
+foreigner [ˈfɒrənə] иностранец
+fortune [ˈfɔːʧuːn] состояние
+freedom [ˈfriːdəm] свобода
+fridge [frɪʤ] холодильник
+gap [ɡæp] пробел, пропуск
+garden [ˈɡɑːdᵊn] сад
+gardening [ˈɡɑːdnɪŋ] садоводство
+gate [ɡeɪt] ворота
+girlfriend [ˈɡɜːlˌfrend] девушка,подруга
+glass [ɡlɑːs] стакан;
+goods [ɡʊdz] товар,товары
+government [ˈɡʌvᵊnmənt] правительство
+grade / mark [ɡreɪd] / [mɑːk] оценка
+granddaughter [ˈɡrænˌdɔːtə] внучка
+grandfather [ˈɡrændˌfɑːðə] дедушка
+grandmother [ˈɡrænˌmʌðə] бабушка
+grandparents [ˈɡrænˌpeərənts] бабушка с дедушкой
+grandson [ˈɡrænsʌn] внук
+granny [ˈɡræni] бабушка, бабуля
+ground [ɡraʊnd] земля [под ногами]
+guy [ɡaɪ] парень
+gym [ʤɪm] спортзал, тренажёрный зал
+hat [hæt] шляпа
+homework [ˈhəʊmˌwɜːk] домашнее задание, домашняя работа
+hook [hʊk] крючок
+horizon [həˈraɪzᵊn] горизонт; кругозор
+housework [ˈhaʊswɜːk] работа по дому
+husband [ˈhʌzbənd] муж
+ice cream [aɪs] [kriːm] мороженое
+illness [ˈɪlnəs] болезнь [не сильная]
+disease [dɪˈziːz] болезнь [тяжёлая]
+image [ˈɪmɪʤ] изображение; имидж; образ
+imagination [ɪˌmæʤɪˈneɪʃᵊn] воображение
+immigrant [ˈɪmɪɡrənt] иммигрант
+importance [ɪmˈpɔːtᵊns] важность
+income [ˈɪnkʌm] доход
+independence [ˌɪndɪˈpɛndəns] независимость
+invitation [ˌɪnvɪˈteɪʃᵊn] приглашение
+issue [ˈɪʃuː] вопрос
+jacket [ˈʤækɪt] пиджак,куртка
+jeans [ʤiːnz] джинсы [мн.число]
+joke [ʤəʊk] шутка
+juice [ʤuːs] сок
+justice [ˈʤʌstɪs] справедливость
+kindness [ˈkaɪndnəs] доброта
+kitchen [ˈkɪʧᵊn] кухня
+knee [niː] колено
+knowledge [ˈnɒlɪʤ] знания [ед. число]
+lake [leɪk] озеро
+law [lɔː] закон
+lawyer [ˈlɔɪə] юрист;адвокат
+learner [ˈlɜːnə] ученик, учащийся
+leg [lɛɡ] нога
+letter [ˈletə] письмо;буква
+lid [lɪd] крышка
+lifestyle [ˈlaɪfˌstaɪl] образ жизни
+light* [laɪt] свет
+lip [lɪp] губа
+listening [ˈlɪsnɪŋ] аудирование
+living room [ˈlɪvɪŋ] [ruːm] гостиная
+loss [lɒs] потеря
+magazine [ˌmæɡəˈziːn] журнал
+majority [məˈʤɒrəti] большинство
+marriage [ˈmærɪʤ] брак,бракосочетание
+masterpiece [ˈmɑːstəpiːs] шедевр
+meeting [ˈmiːtɪŋ] встреча
+membership [ˈmembəʃɪp] членство
+midday / noon [ˈmɪddeɪ] / [nuːn] полдень
+midnight [ˈmɪdnaɪt] полночь
+mind [maɪnd] ум
+miracle [ˈmɪrəkᵊl] чудо
+mirror [ˈmɪrə] зеркало
+mountain [ˈmaʊntn] гора
+necklace [ˈneklɪs] ожерелье
+neighbor [ˈneɪbə] сосед
+noise [nɔɪz] шум
+nurse [nɜːs] медсестра
+opinion [əˈpɪnjən] мнение
+opportunity [ˌɒpəˈʧuːnəti] возможность
+pair / couple [peə] / [ˈkʌpᵊl] пара [ед.число]
+palace [ˈpælɪs] дворец
+parcel [ˈpɑːsᵊl] посылка
+patience [ˈpeɪʃᵊns] терпение
+patient* [ˈpeɪʃnt] пациент, больной [сущ.]
+performance [pəˈfɔːməns] представление
+pet [pet] домашнее животное
+pie [paɪ] пирог
+piece [piːs] кусок
+pillow [ˈpɪləʊ] подушка
+plane [pleɪn] самолёт
+plate [pleɪt] тарелка
+pleasure [ˈpleʒə] удовольствие
+pocket [ˈpɒkɪt] карман
+policeman [pəˈliːsmən] полицеский
+pond [pɒnd] пруд
+pool [puːl] бассейн
+potato [pəˈteɪtəʊ] картофель
+pound [paʊnd] фунт
+poverty [ˈpɒvəti] бедность
+profit [ˈprɒfɪt] прибыль
+pronunciation [prəˌnʌnsiˈeɪʃᵊn] произношение
+purse [pɜːs] кошелёк
+quality [ˈkwɒləti] качество
+reason [ˈriːzᵊn] причина
+recognition [ˌrɛkəɡˈnɪʃᵊn] признание
+recording [rɪˈkɔːdɪŋ] запись
+recovery [rɪˈkʌvᵊri] восстановление
+relative [ˈrelətɪv] родственник
+remark [rɪˈmɑːk] замечание
+resort [rɪˈzɔːt] курорт
+road [rəʊd] дорога
+rock [rɒk] скала; рок [о музыке]
+roof [ruːf] крыша
+room [ruːm] комната,номер
+routine [ruːˈtiːn] рутина
+rudely [ˈruːdli] грубо
+salad [ˈsæləd] салат
+salary [ˈsæləri] зарплата
+sales [seɪlz] продажи
+salt [sɒlt] соль
+sandwich [ˈsænwɪʤ] сэндвич,бутерброд
+satisfaction [ˌsætɪsˈfækʃᵊn] удовлетворение
+schoolboy [ˈskuːlbɔɪ] школьник
+schoolgirl [ˈskuːlɡɜːl] школьница
+scientist [ˈsaɪəntɪst] учёный
+scissors [ˈsɪzəz] ножницы [мн. число]
+series [ˈsɪəriːz] сериал
+shape [ʃeɪp] форма, вид, фигура
+shelf [ʃɛlf] полка
+shirt [ʃɜːt] рубашка
+shoes [ʃuːz] (обувь, туфли) [мн.число]
+shorts [ʃɔːts] шорты[мн.число]
+shower [ˈʃaʊə] душ
+side [saɪd] сторона
+sight [saɪt] зрение
+singer [ˈsɪŋə] певец
+skiing [ˈskiːɪŋ] катание на лыжах
+skirt [skɜːt] юбка
+snowboarding [ˈsnəʊˌbɔːdɪŋ] катание на сноуборде
+society [səˈsaɪəti] общество
+sofa [ˈsəʊfə] диван
+solution [səˈluːʃᵊn] решение [какой-то проблемы, задачи]
+song [sɒŋ] песня
+speaking [ˈspiːkɪŋ]	 разговорная речь
+speech [spiːʧ] речь
+stamp [stæmp] печать; марка
+statement [ˈsteɪtmənt] утверждение
+step [step] шаг
+studies [ˈstʌdiz] учёба
+subject / topic [ˈsʌbʤɪkt] / [ˈtɒpɪk] тема, предмет
+success [səkˈses] успех [исчисляемое]
+sugar [ˈʃʊɡə] сахар
+supplier [səˈplaɪə] поставщик
+surgeon [ˈsɜːʤᵊn] хирург
+surname [ˈsɜːneɪm] фамилия
+sweater [ˈswetə] свитер
+t-shirt [ˈtiːʃɜːt] футболка
+table [ˈteɪbᵊl] стол; таблица
+tablet [ˈtæblət] планшет; таблетка
+tax [tæks] налог
+thief(thieves) [θiːf]([θiːvz]) вор(воры)
+thought* [θɔːt] мысль
+toilet [ˈtɔɪlɪt] туалет
+tongue [tʌŋ] язык [часть тела]
+towel [taʊəl] полотенце
+town [taʊn] (город, городок) [небольшой город]
+toy [tɔɪ] игрушка
+trainers [ˈtreɪnəz] кроссовки [мн.число]
+translator [trænzˈleɪtə] переводчик
+treasure [ˈtrɛʒə] сокровище
+tree [triː] дерево
+trousers [ˈtraʊzəz] брюки[мн.число]
+truth [truːθ] правда
+truth [truːθ] истина, правда
+understanding [ˌʌndəˈstændɪŋ] понимание
+vegetables [ˈveʤtəbᵊlz] овощи
+vegetarian [ˌveʤɪˈteəriən] вегетарианец
+verb [vɜːb] глагол
+vet [vet] ветеринар
+view [vjuː] вид,зрение
+village [ˈvɪlɪʤ] деревня
+violin [ˌvaɪəˈlɪn] скрипка
+vocabulary [vəˈkæbjəlᵊri] словарный запас
+wall [wɔːl] стена
+wallet [ˈwɒlɪt] бумажник
+way [weɪ] путь
+wife [waɪf] жена
+wind [wɪnd] ветер
+yard [jɑːd] двор
+forest* [ˈfɒrɪst] лес
+honey* [ˈhʌni] мёд
+a bit* [ə] [bɪt] бит
+accident [ˈæksɪdᵊnt] происшествие, авария, несчастный случай
+dress* [dres] платье
+graduate* [ˈɡræʤuət] выпускник
+finish* [ˈfɪnɪʃ] финиш
+close* [kləʊz] близкий
+call* [kɔːl] звонок
+sound* [saʊnd] звук
+study* [ˈstʌdi] исследование, изучение
+interest* [ˈɪntrest] интерес
+control* [kənˈtrəʊl] контроль, управление
+copy* [ˈkɒpi] копия
+smoke* [sməʊk] дым
+love* [lʌv] любовь
+change* [ʧeɪnʤ] изменение
+hope* [həʊp] надежда
+start* [stɑːt] начало
+hate* [heɪt] ненависть
+need* [niːd] потребность
+promise* [ˈprɒmɪs] обещание
+stop* [stɒp] остановка
+answer* [ˈɑːnsə] ответ
+cry* [kraɪ] плач, крик
+turn* [tɜːn] поворот
+support* [səˈpɔːt] поддержка
+sign* [saɪn] знак
+help* [help] помощь
+visit* [ˈvɪzɪt] визит, посещение
+practice* [ˈpræktɪs] практика
+offer* [ˈɒfə] предложение [в значении сделка]
+invite(to)* [ɪnˈvaɪt]([tuː]) приглашение
+sentence* [ˈsentəns] предложение [в тексте]
+check* [ʧek] проверка
+produce* [ˈprɒdjuːs] продукция
+jump* [ʤʌmp] прыжок
+travel* [ˈtrævᵊl] путешествие
+work* [wɜːk] работа
+pass* [pɑːs] пас
+download* [ˌdaʊnˈləʊd] скачивание
+laugh* [lɑːf] смех
+watch* [wɒʧ] наручные часы
+compare* [kəmˈpeə] сравнение
+test* [test] тест, проверка, контрольная, работа; испытание
+train* [treɪn] поезд
+surprise* [səˈpraɪz] сюрприз
+smile(at)* [smaɪl]([æt]) улыбка
+die* [daɪ] смерть
+kiss* [kɪs] поцелуй
+care* [keə] забота
+carry* [ˈkæri] переноска
+contact* [ˈkɒntækt] контакт
+count* [kaʊnt] счёт
+divorce* [dɪˈvɔːs] развод
+dream* [driːm] мечта
+experience* [ɪkˈspɪəriəns] опыт
+express* [ɪkˈspres] экспресс
+fill* [fɪl] заполнение
+guarantee* [ˌɡærᵊnˈtiː] гарантия
+guess* [ɡes] предположение
+increase* [ˈɪnkriːs] увеличение
+matter* [ˈmætə] материя
+miss* [mɪs] неудача
+reach* [riːʧ] досягаемость
+record* [ˈrekɔːd] запись, рекорд
+repeat* [rɪˈpiːt] повторение
+resolve* [rɪˈzɒlv] решимость, решение
+respect* [rɪˈspekt] уважение
+risk* [rɪsk] риск
+shock* [ʃɒk] шок
+smell* [smel] запах
+suit* [suːt] костюм
+suppose* [səˈpəʊz] предположение
+taste* [teɪst] вкус
+thank* [θæŋk] благодарность
+touch* [tʌʧ] прикосновение
+voice* [vɔɪs] голос
+waste* [weɪst] трата, отходы
+wish* [wɪʃ] желание
+break* [breɪk] перерыв
+cost* [kɒst] стоимость
+cut* [kʌt] разрез
+fly* [flaɪ] муха
+show* [ʃəʊ] шоу
+throw* [θrəʊ] бросок
+rise* [raɪz] подъём
+ring* [rɪŋ] кольцо; ринг
+feed* [fiːd] питание, кормление
+steal* [stiːl] кража
+deal* [diːl] сделка
+fight* [faɪt] борьба
+hurt* [hɜːt] боль, вред, ущерб
+set* [sɛt] набор, комплект, сет
+place* [pleɪs] место
+flat* [flæt] квартира
+order* [ˈɔːdə] заказ
+order* [ˈɔːdə] порядок
+fine* [faɪn] штраф
+present*  подарок; настоящее время
+lock* [lɒk] замок [ударение на о]
+trip* [trɪp] поездка, путешествие
+kind* [kaɪnd] вид, род
+impress* [ˈɪmprɛs] впечатление
+measure* [ˈmɛʒə] мера
+protest* [ˈprəʊtɛst] протест
+rest* [rɛst] отдых
+cancel* [ˈkænsᵊl] отмена
+notice* [ˈnəʊtɪs] уведомление
+reserve* [rɪˈzɜːv] резерв
+seat* [siːt] сиденье
+repair* [rɪˈpeə] ремонт
+paint* [peɪnt] краска
+release* [rɪˈliːs] релиз
+type* [taɪp] тип
+attack* [əˈtæk] атака
+supply* [səˈplaɪ] поставка, питание
+dislike* [dɪˈslaɪk] неприязнь, нелюбовь, дизлайк
+export* [ɛksˈpɔːt] экспорт
+mention* [ˈmɛnʃᵊn] упоминание
+sort* [sɔːt] род; сорт
+arrest* [əˈrɛst] арест
+be - was/were - been [biː] - [wɒz]/[wɜː] - [biːn] быть
+become - became - become [bɪˈkʌm] - [bɪˈkeɪm] - [bɪˈkʌm] становиться
+begin - began - begun [bɪˈɡɪn] - [bɪˈɡæn] - [bɪˈɡʌn] начинать
+break* - broke - broken [breɪk] - [brəʊk] - [ˈbrəʊkᵊn] ломать
+bring - brought - brought [brɪŋ] - [brɔːt] - [brɔːt] приносить
+build - built - built [bɪld] - [bɪlt] - [bɪlt] строить
+buy - bought - bought [baɪ] - [bɔːt] - [bɔːt] купить
+choose - chose - chosen [ʧuːz] - [ʧəʊz] - [ˈʧəʊzᵊn] выбирать
+come - came - come [kʌm] - [keɪm] - [kʌm] приходить
+cost - cost - cost [kɒst] - [kɒst] - [kɒst] стоить
+cut - cut - cut [kʌt] - [kʌt] - [kʌt] резать
+do/does - did - done [duː] - [dɪd] - [dʌn] делать [в значении выполнять]
+drink - drank - drunk [drɪŋk] - [dræŋk] - [drʌŋk] пить
+drive - drove - driven [draɪv] - [drəʊv] - [ˈdrɪvᵊn] водить
+eat - ate - eaten [iːt] - [eɪt] - [ˈiːtᵊn] есть, кушать
+fall - fell - fallen [fɔːl] - [fel] - [ˈfɔːlən] упасть
+feel - felt - felt [fiːl] - [felt] - [felt] чувствовать
+find - found - found [faɪnd] - [faʊnd] - [faʊnd] находить
+fly* - flew - flown [flaɪ] - [fluː] - [fləʊn] летать
+forget - forgot - forgotten [fəˈɡet] - [fəˈɡɒt] - [fəˈɡɒtᵊn] забыть
+get - got - got [ɡet] - [ɡɒt] - [ɡɒt] получать; добираться
+give - gave - given [ɡɪv] - [ɡeɪv] - [ˈɡɪvᵊn] дать
+go - went - gone [ɡəʊ] - [went] - [ɡɒn] идти, ехать
+have/has - had - had [hæv]/[hæz] - [hæd] - [hæd] иметь
+hear - heard - heard [hɪə] - [hɜːd] - [hɜːd] слышать
+keep - kept - kept [kiːp] - [kept] - [kept] держать, хранить
+know - knew - known [nəʊ] - [njuː] - [nəʊn] знать
+learn - learnt/learned - learnt/learned [lɜːn] - [lɜːnt]/[lɜːnt] - [lɜːnt]/[lɜːnt] учить
+leave - left* - left [liːv] - [left] - [left] уходить [с], выходить [из], покидать; уезжать [из]; оставлять; 
+lend - lent - lent [lend] - [lent] - [lent] одалживать, давать взаймы
+lose - lost - lost [luːz] - [lɒst] - [lɒst] терять, проигрывать
+make - made - made [meɪk] - [meɪd] - [meɪd] делать [в значении создавать что-то заново]
+mean* - meant - meant [miːn] - [ment] - [ment] означать, иметь в виду
+meet - met - met [miːt] - [met] - [met] встречать, встречаться
+pay - paid - paid [peɪ] - [peɪd] - [peɪd] платить
+put - put - put [pʊt] - [pʊt] - [pʊt] положить
+read - read - read [riːd] - [red] - [red] читать
+ride - rode - ridden [raɪd] - [rəʊd] - [ˈrɪdᵊn] ездить
+run - ran - run [rʌn] - [ræn] - [rʌn] бежать
+say - said - said [seɪ] - [sed] - [sed] сказать
+see - saw - seen [siː] - [sɔː] - [siːn] видеть
+sell - sold - sold [sel] - [səʊld] - [səʊld] продать
+send - sent - sent [send] - [sent] - [sent] присылать, посылать, отправлять
+show* - showed - shown/showed [ʃəʊ] - [ʃəʊd] - [ʃəʊn]/[ʃəʊd] показывать
+sing - sang - sung [sɪŋ] - [sæŋ] - [sʌŋ] петь
+sit - sat - sat [sɪt] - [sæt] - [sæt] сидеть [+ down если слово само по себе]
+sleep - slept - slept [sliːp] - [slept] - [slept] спать
+speak - spoke - spoken [spiːk] - [spəʊk] - [ˈspəʊkᵊn] говорить
+spend - spent - spent [spend] - [spent] - [spent] проводить [время], тратить [деньги]
+stand - stood - stood [stænd] - [stʊd] - [stʊd] встать
+swim - swam - swum [swɪm] - [swæm] - [swʌm] плавать
+take - took - taken [teɪk] - [tʊk] - [ˈteɪkᵊn] брать, принимать
+teach - taught - taught [tiːʧ] - [tɔːt] - [tɔːt] преподавать
+tell - told - told [tel] - [təʊld] - [təʊld] рассказывать
+think - thought - thought [θɪŋk] - [θɔːt] - [θɔːt] думать
+understand - understood - understood [ˌʌndəˈstænd] - [ˌʌndəˈstʊd] - [ˌʌndəˈstʊd] понимать, постигать
+wake - woke - woken [weɪk] - [wəʊk] - [ˈwəʊkᵊn] просыпаться
+wear - wore - worn [weə] - [wɔː] - [wɔːn] носить [на себе одежду]
+win - won - won [wɪn] - [wʌn] - [wʌn] выиграть, одержать победу
+write - wrote - written [raɪt] - [rəʊt] - [ˈrɪtᵊn] писать
+grow - grew - grown [ɡrəʊ] - [ɡruː] - [ɡrəʊn] расти
+draw - drew - drawn [drɔː] - [druː] - [drɔːn] рисовать
+hang - hung - hung [hæŋ] - [hʌŋ] - [hʌŋ] висеть, вешать
+lead - led - led [liːd] - [lɛd] - [lɛd] вести, возглавлять, лидировать
+let - let - let [lɛt] - [lɛt] - [lɛt] позволять
+blow - blew - blown [bləʊ] - [bluː] - [bləʊn] дуть
+catch - caught - caught [kæʧ] - [kɔːt] - [kɔːt] поймать
+hide - hid - hidden [haɪd] - [hɪd] - [ˈhɪdᵊn] прятать
+hit - hit - hit [hɪt] - [hɪt] - [hɪt] ударить 
+overcome - overcame - overcome [ˌəʊvəˈkʌm] - [ˌəʊvəˈkeɪm] - [ˌəʊvəˈkʌm] преодолеть
+forgive - forgave - forgiven [fəˈɡɪv] - [fəˈɡeɪv] - [fəˈɡɪvᵊn] прощать
+beat - beat - beaten [biːt] - [biːt] - [ˈbiːtᵊn] бить
+throw*  - threw - thrown [θrəʊ]* - [θruː] - [θrəʊn] бросать
+rise* - rose - risen [raɪz]* - [rəʊz] - [ˈrɪzᵊn] поднимать
+ring* - rang - rung [rɪŋ]* - [ræŋ] - [rʌŋ] звонить
+feed* - fed - fed [fiːd]* - [fɛd] - [fɛd] кормить
+fit - fitted/fit - fitted/fit [fɪt] - [ˈfɪtɪd]/[fɪt] - [ˈfɪtɪd]/[fɪt] подходить [по размеру]
+steal* - stole - stolen [stiːl]* - [stəʊl] - [ˈstəʊlᵊn] украсть
+deal* - dealt - dealt [diːl]* - [dɛlt] - [dɛlt] иметь дело
+fight* - fought - fought [faɪt]* - [fɔːt] - [fɔːt] бороться
+hurt* - hurt - hurt [hɜːt]* - [hɜːt] - [hɜːt] ранить, повредит
+set* - set - set [sɛt]* - [sɛt] - [sɛt] устанавливать
+withdraw - withdrew - withdrawn [wɪðˈdrɔː] - [wɪðˈdruː] - [wɪðˈdrɔːn] изымать, отзывать, снимать [например деньги со счёта]
+mean* [miːn] подлый
+daily* [ˈdeɪlɪ] ежедневный
+great [ɡreɪt] великий; (большой, огромный); (отличный, замечательный, прекрасный)
+pretty* [ˈprɪti] симпатичная [о женщине, ребёнке]
+light* [laɪt] светлый
+crazy / mad [ˈkreɪzi] / [mæd] сумасшедший, [неформально]
+insane [ɪnˈseɪn] сумасшедший, [формально - психически больной]
+poor [pɔː] бедный
+ill / sick [ɪl] / [sɪk] больной
+tasty [ˈteɪsti] вкусный
+delicious [dɪˈlɪʃəs] восхитительный, очень, вкусный
+loud [laʊd] громкий
+sad [sæd] грустный, печальный
+wrong [rɒŋ] неправильный, неверный, ложный
+cheap [ʧiːp] дешёвый
+homemade [ˌhəʊmˈmeɪd] домашний, домашнего, изготовления
+each [iːʧ] каждый
+which [wɪʧ] который, какой
+slow [sləʊ] медленный
+fashionable [ˈfæʃᵊnəbᵊl] модный
+motivating [ˈməʊtɪveɪtɪŋ] мотивирующий
+worst [wɜːst] наихудший
+immediate [ɪˈmiːdiət] немедленный
+unusual [ʌnˈjuːʒʊəl] необычный
+incorrect [ˌɪnkəˈrekt] неправильный, неточный
+unhappy [ʌnˈhæpi] несчатный
+informal [ɪnˈfɔːmᵊl] неформальный
+lonely [ˈləʊnli] одинокий
+careful [ˈkeəfᵊl] осторожный
+confident [ˈkɒnfɪdᵊnt] уверенный
+surprising [səˈpraɪzɪŋ] удивительный [в смысле неожиданный]
+amazing / wonderful [əˈmeɪzɪŋ] / [ˈwʌndəfᵊl] удивительный [в смыле прекрасный], изумительный, потрясающий
+upset [ʌpˈset] расстроенный
+sure [ʃɔː] уверенный, конечно, безусловно
+convenient [kənˈviːniənt] удобный, подходящий
+comfortable [ˈkʌmfᵊtəbᵊl] удобный, комфортный
+hard-working [ˌhɑːdˈwɜːkɪŋ] усердный
+fat [fæt] толстый, жирный
+such [sʌʧ] такой, [+ сущ., иначе so]
+quiet [ˈkwaɪət] тихий
+modern [ˈmɒdᵊn] современный
+urgent [ˈɜːʤᵊnt] срочный
+foreign [ˈfɒrən] иностранный
+intensive [ɪnˈtensɪv] интенсивный
+some* [sʌm] некоторые
+special [ˈspeʃᵊl] особый, специальный
+casual [ˈkæʒjuəl] повседневный
+useful [ˈjuːsfᵊl] полезный
+ambitious [æmˈbɪʃəs] амбициозный
+pregnant [ˈpreɡnənt] беременная
+polite [pəˈlaɪt] вежливый
+windy [ˈwɪndi] ветреный
+harmful [ˈhɑːmfᵊl] вредный
+outstanding [aʊtˈstændɪŋ] выдающийся
+main [meɪn] главный, основной
+deep* [diːp] глубокий
+silly [ˈsɪli] глупый
+proud [praʊd] гордый
+patient* [ˈpeɪʃnt] терпеливый
+hospitable [hɒˈspɪtəbᵊl] гостеприимный
+rainy [ˈreɪni] дождливый
+additional / extra [əˈdɪʃᵊnᵊl] / [ˈekstrə] дополнительный
+dependent [dɪˈpendənt] зависимый
+spare [speə] запасной, свободный [про время; про что-то неиспользуемое]
+acquaintance [əˈkweɪntᵊns] знакомый
+spoilt [spɔɪlt] испорченный
+round [raʊnd] круглый
+easygoing [ˌiːzɪˈɡəʊɪŋ] легкий в общении, беззаботный, спокойный, покладистый
+personal [ˈpɜːsᵊnᵊl] личный
+fond [fɒnd] любящий, нежный
+melodic [mɪˈlɒdɪk] мелодичный
+promising [ˈprɒmɪsɪŋ] многообещающий
+powerful [ˈpaʊəfᵊl] мощный
+short [ʃɔːt] (короткий, низкий) [о росте]
+low [ləʊ] (низкий, маленький), [о неодушевлённых вещах, иногда о росте]
+tall [tɔːl] высокий, [о росте]
+reliable [rɪˈlaɪəbᵊl] надёжный
+innocent [ˈɪnəsᵊnt] невиновный
+unforgettable [ˌʌnfəˈɡetəbᵊl] незабываемый
+independent [ˌɪndɪˈpendənt] независимый
+uninformative [ˌʌnɪnˈfɔːmətɪv] неинформативный
+unexpected [ˌʌnɪkˈspektɪd] неожиданный
+unofficial [ˌʌnəˈfɪʃᵊl] неофициальный
+irregular [ɪˈreɡjələ] нерегулярный, неправильный
+uncomfortable [ʌnˈkʌmfᵊtəbᵊl] неудобный
+ineffective [ˌɪnɪˈfektɪv] неэффективный
+public [ˈpʌblɪk] общественный, публичный
+huge [hjuːʤ] огромный
+tremendous [trɪˈmɛndəs] огромный; потрясающий
+experienced [ɪkˈspɪəriənst] опытный
+obvious [ˈɒbviəs] очевидный
+soft [sɒft] мягкий
+latest [ˈleɪtɪst] последний [самый новый]
+fresh [freʃ] свежий
+intermediate [ˌɪntəˈmiːdiət] средний, промежуточный
+narrow [ˈnærəʊ] узкий
+wide [waɪd] широкий
+shocking [ˈʃɒkɪŋ] шокирующий
+bright [braɪt] яркий
+nearest [ˈnɪərɪst] ближайший
+ancient [ˈeɪnʃᵊnt] древний
+nervous [ˈnɜːvəs] нервный
+excellent* [ˈeksᵊlᵊnt] отличный
+overcrowded [ˌəʊvəˈkraʊdɪd] переполненный
+lovely [ˈlʌvli] прекрасный
+prestigious [presˈtɪʤəs] престижный
+profitable [ˈprɒfɪtəbᵊl] прибыльный
+attractive [əˈtræktɪv] привлекательный
+pleasant [ˈplezᵊnt] приятный
+advanced [ədˈvɑːnst] продвинутый
+keen [kiːn] проницательный, увлечённый
+spacious [ˈspeɪʃəs] просторный
+empty [ˈempti] пустой
+glad [ɡlæd] довольный, радостный
+divorced [dɪˈvɔːst] разведённый
+disappointed [ˌdɪsəˈpɔɪntɪd] разочарованный
+depressed [dɪˈprest] подавленный
+common [ˈkɒmən] распространённый
+regular [ˈreɡjələ] регулярный;, правильный
+risky [ˈrɪski] рискованный
+blonde [blɒnd] светлый
+weak [wiːk] слабый
+able [ˈeɪbᵊl] способный
+stylish [ˈstaɪlɪʃ] стильный
+stressful [ˈstresfᵊl] стрессовый
+slim [slɪm] стройный
+talented [ˈtæləntɪd] талантливый
+accurate [ˈækjərət] точный
+heavy [ˈhevi] тяжелый
+inexpensive [ˌɪnɪkˈspensɪv] недорогой
+thin [θɪn] худой
+ridiculous [rɪˈdɪkjələs] смешной, нелепый
+alive [əˈlaɪv] живой
+unique [juːˈniːk] уникальный
+financial [faɪˈnænʃᵊl] финансовый
+shocked [ʃɒkt] шокированный
+noisy [ˈnɔɪzi] шумный
+generous [ˈʤenᵊrəs] щедрый
+brown [braʊn] коричневый
+satisfied [ˈsætɪsfaɪd] удовлетворённый
+unpleasant [ʌnˈplɛzᵊnt] неприятный
+wise [waɪz] мудрый
+true [truː] истинный, правдивый
+clear [klɪə] ясный
+colourful [ˈkʌləfᵊl] красочный
+predictable [prɪˈdɪktəbᵊl] предсказуемый
+tiring [ˈtaɪərɪŋ] утомительный
+splendid [ˈsplɛndɪd] великолепный, роскошный
+rude [ruːd] грубый
+speedy [ˈspiːdi] быстрый
+sudden [ˈsʌdᵊn] внезапный
+terrible / awful [ˈɔːfᵊl] ужасный
+well-paid [ˈwelˈpeɪd] хорошо оплачиваемый
+born [bɔːn] рожденный
+necessary* [ˈnesəsᵊri] необходимый
+just* [ʤʌst] справедливый
+forest* [ˈfɒrɪst] лесной
+honey* [ˈhʌni] милый, /, милая
+early* [ˈɜːli] ранний
+brilliant* [ˈbrɪljənt] блестящий
+single [ˈsɪŋɡᵊl] холостой [не женатый]; одиночный; единичный
+correct* [kəˈrekt] правильный [ответ], корректный
+clean* [kliːn] чистый
+complete* [kəmˈpliːt] полный
+own* [əʊn] собственный
+warm* [wɔːm] тёплый
+open* [ˈəʊpᵊn] открытый
+flat* [flæt] плоский
+little* [ˈlɪtᵊl] маленький
+last* [lɑːst] прошлый; последний
+any [ˈenɪ] любой [в утверждениях]; никакой [в отрицаниях], какой-нибудь [в вопросах]
+kind*[to] [kaɪnd] добрый
+low-quality [ləʊ]-[ˈkwɒləti] низкокачественный
+a bit* [ə] [bɪt] немного [чуть-чуть]
+absolutely [ˈæbsəluːtli] абсолютно, совершенно, совсем, полностью
+nowadays [ˈnaʊədeɪz] в наши дни, в наше время
+alright [ɔːlˈraɪt] в порядке
+suddenly [ˈsʌdnli] вдруг, внезапно
+daily* [ˈdeɪlɪ] ежедневно
+enough [ɪˈnʌf] достаточно
+abroad [əˈbrɔːd] за границей
+intense [ɪnˈtens] интенсивно
+between [bɪˈtwiːn] между
+less [les] меньше
+once [wʌns] однажды, один раз
+behind [bɪˈhaɪnd] позади, за
+because [bɪˈkɒz] потому что
+against [əˈɡenst] против
+away [əˈweɪ] прочь
+fluently [ˈfluːəntli] свободно, бегло
+tonight [təˈnaɪt] сегодня вечером
+sooner [ˈsuːnə] скорее
+only [ˈəʊnli] только, лишь
+worse [wɜːs] хуже
+deep* [diːp] глубоко
+extremely [ɪkˈstriːmli] чрезвычайно
+excellent* [ˈeksᵊlᵊnt] отлично
+anymore [ˌeniˈmɔː] больше не [только в отрицаниях]
+inside [ɪnˈsaɪd] внутри
+around [əˈraʊnd] вокруг
+unfortunately [ʌnˈfɔːʧᵊnətli] к несчастью, к сожалению
+of course [informal] / certainly [formal] [əv] [kɔːs] / [ˈsɜːtnli] конечно
+outdoors [ˌaʊtˈdɔːz] на открытом воздухе
+particularly [pəˈtɪkjələli] особенно
+separately [ˈsepᵊrətli] отдельно
+greatly [ˈɡreɪtli] очень сильно, значительно
+differently [ˈdɪfᵊrᵊntli] по-другому, иначе
+completely [kəmˈpliːtli] полностью
+outside [ˌaʊtˈsaɪd] снаружи
+among [əˈmʌŋ] среди
+thoroughly [ˈθʌrəli] тщательно
+partly [ˈpɑːtli] частично
+badly [ˈbædli] плохо
+although [ɔːlˈðəʊ] хотя
+during [ˈdjʊərɪŋ] в течение, во время
+peacefully [ˈpiːsfᵊli] мирно
+successfully [səkˈsɛsfᵊli] успешно
+automatically [ˌɔːtəˈmætɪkᵊli] автоматически
+professionally [prəˈfɛʃnəli] профессионально
+unprofessionally [ˌʌnprəˈfɛʃᵊnᵊli] непрофессионально
+accidentally [ˌæksɪˈdɛntəli] случайно
+across [əˈkrɒs] через
+heroically [hɪˈrəʊɪkᵊli] героически
+incredibly [ɪnˈkrɛdəbᵊli] невероятно
+somehow [ˈsʌmhaʊ] как-то
+unexpectedly [ˌʌnɪkˈspɛktɪdli] неожиданно
+finally [ˈfaɪnəli] в конце концов
+impolitely [ˌɪmpəˈlaɪtli] невежливо
+defintely defintely определённо
+instead [off] [ɪnˈstɛd] вместо [кого-то]
+still [stɪl] всё ещё
+necessary* [ˈnesəsᵊri] необходимо
+just* [ʤʌst] просто; лишь; только(что)
+early* [ˈɜːli] рано
+some* [sʌm] несколько, немного
+pretty* / quite / rather [ˈprɪti] / [kwaɪt] / [ˈrɑːðə] довольно
+mostly / mainly [ˈməʊstli] / [ˈmeɪnli] в основном
+no one / nobody [nəʊ] [wʌn] / [ˈnəʊbədi] никто
+rarely / seldom [ˈreəli] / [ˈseldəm] редко
+luckily / fortunately [ˈlʌkɪli] / [ˈfɔːʧᵊnətli] к счастью
+at last / finally  [ət] [lɑːst] / [ˈfaɪnəli] наконец
+bravely / courageously [ˈbreɪvli] / [kəˈreɪʤəsli] смело, отважно
+several [ˈsevᵊrᵊl] несколько
+warm* [wɔːm] тепло
+open* [ˈəʊpᵊn] открыто
+fine*  в порядке, хорошо
+little* [ˈlɪtᵊl] мало
+otherwise [ˈʌðəwaɪz] по-другому, иначе

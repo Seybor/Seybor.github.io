@@ -2,6 +2,11 @@
 
 // $('body').hide()
 
+import { ALL_ARR } from './ARR/ALL-WORDS.js';
+import { ALL_PHRASES_VERBS } from './ARR/ALL-PHRASES-VERBS.js';
+import { ALL_PHRASES } from './ARR/ALL-PHRASES.js';
+import { renderWords, renderPhrases, contents, currentArr } from './renderAll.js';
+
 $('#theme').click(() => {
 	if ($('#html').attr('data-bs-theme') == 'dark') {
 		$('#html').attr('data-bs-theme', 'light')
@@ -16,107 +21,19 @@ $('#theme').click(() => {
 	}
 })
 
-let more
-let counter = 0
-let max = 100
-let contents
-let currentArr
 
-const renderWords = (arr, fromfile = false) => {
-	let newElement
-	let target
-
-	if (!fromfile) {
-		target = arr
-		switch (arr) {
-			case 'noun': {
-				arr = ALL_ARR.NOUN
-			} break
-			case 'r-verb': {
-				arr = ALL_ARR.REGULAR_VERBS
-			} break
-			case 'ir-verb': {
-				arr = ALL_ARR.IRREGULAR_VERBS
-			} break
-			case 'adjective': {
-				arr = ALL_ARR.ADJECTIVE
-			} break
-			case 'adverbs': {
-				arr = ALL_ARR.ADVERBS
-			} break
-			default: {
-				alert(`Массив не найден`)
-				return
-			}
-		}
-
-		currentArr = arr
-	} else {
-		target = 'fromFile'
-		currentArr = contents
-	}
-
-
-	$('#main').attr('data-current-arr', `${target}`)
-
-	for (let i = 0; i < max; i++) {
-		if (counter < arr.length) {
-			newElement = $(`
-				<div class="row">
-					<div class="col-1">${counter + 1}</div>
-					<div class="col-4" data-word="id-${counter}">${arr[counter]['en']}</div>
-					<div class="col-3">${arr[counter]['tr']}</div>
-					<div class="col-4">${arr[counter]['ru']}</div>
-				</div>`);
-			$('#field').append(newElement);
-			counter++
-		} else {
-			break
-		}
-	}
-
-	if (counter < arr.length) {
-		newElement = $(`
-			<hr class='s-hr'>
-			<div class="row mt-5" id="more">
-				<div class="col-12">
-					<button class="btn bg-primary s-p" data-more='more' data-arr=${target}>ЕЩЁ</button>
-				</div>
-			</div>`
-		);
-		$('#field').append(newElement);
-
-
-		$('#more').on('pointerdown', (evt) => {
-			if (evt.target.dataset.more === 'more') {
-				$('#more').remove()
-				if (evt.target.dataset.arr !== 'fromFile') {
-					$('#header').trigger('pointerdown', [evt.target.dataset.arr])
-				} else {
-					$('#header').trigger('pointerdown', [contents])
-				}
-			}
-		})
-
-	} else {
-		$('#more').remove()
-	}
-
-}
-
-$('#header').on('pointerdown', (evt, value) => {
+$('#words').on('pointerdown', (evt, value) => {
 	evt.preventDefault()
 
 	if ((evt.target.dataset.name) || (value)) {
 
 		if (value) {
 			if (typeof value === 'string') {
-				renderWords(value)
+				renderWords(value, ALL_ARR)
 			} else {
-				renderWords(value, true)
+				renderWords(value, '', true, true)
 			}
 		} else {
-			counter = 0
 			$('#field').text('')
 			$('#field').append(`
 				<div class="row s-b">
@@ -126,13 +43,38 @@ $('#header').on('pointerdown', (evt, value) => {
 					<div class="col-4">RU</div>
 				</div>
 			`)
-			renderWords(evt.target.dataset.name)
+			renderWords(evt.target.dataset.name, ALL_ARR, true)
 		}
 
 
 	}
 })
 
+$('#phrases').on('pointerdown', (evt, value) => {
+	evt.preventDefault()
+
+	if ((evt.target.dataset.name) || (value)) {
+
+		if (value) {
+
+			renderPhrases(value, [ALL_PHRASES, ALL_PHRASES_VERBS])
+
+		} else {
+
+			$('#field').text('')
+			$('#field').append(`
+				<div class="row s-b">
+					<div class="col-1">№</div>
+					<div class="col-4">EN</div>
+					<div class="col-7">RU</div>
+				</div>
+			`)
+			renderPhrases(evt.target.dataset.name, [ALL_PHRASES, ALL_PHRASES_VERBS], true)
+		}
+
+
+	}
+})
 
 // @
 
@@ -171,7 +113,7 @@ $('#fileInput').on('change', function (evt) {
 
 		try {
 			contents = JSON.parse(evt.target.result);
-			counter = 0
+
 			$('#field').text('')
 			$('#field').append(`
 			<div class="row s-b">
@@ -181,7 +123,7 @@ $('#fileInput').on('change', function (evt) {
 				<div class="col-4">RU</div>
 			</div>
 		`)
-			$('#header').trigger('pointerdown', [contents])
+			$('#words').trigger('pointerdown', [contents])
 		} catch {
 			alert('Файл не был распознан как JSON')
 			try {
@@ -201,7 +143,7 @@ $('#fileInput').on('change', function (evt) {
 
 				contents = newElement.map(([en, tr, ru]) => ({ en, tr, ru }))
 
-				$('#header').trigger('pointerdown', [contents])
+				$('#words').trigger('pointerdown', [contents])
 
 			} catch (e) {
 				alert(`${e.message}`)
@@ -225,17 +167,23 @@ $('#link').on('pointerdown', (evt) => {
 
 	let finalResult = ``
 	arrForDownload.forEach((el) => {
-		finalResult += `${el['en']} ${el['tr']} ${el['ru']}\n`
+		if (el['tr']) {
+			finalResult += `${el['en']} ${el['tr']} ${el['ru']}\n`
+		} else {
+			finalResult += `${el['en']} ${el['ru']}\n`
+		}
+
 	})
 
-	for (const key in ALL_ARR) {
+	//! Скачать весь массив
+	// for (const key in ALL_ARR) {
 
-		const arr = ALL_ARR[key];
-		arr.forEach((el) => {
-			finalResult += `${el['en']} ${el['tr']} ${el['ru']}\n`
-		});
+	// 	const arr = ALL_ARR[key];
+	// 	arr.forEach((el) => {
+	// 		finalResult += `${el['en']} ${el['tr']} ${el['ru']}\n`
+	// 	});
 
-	}
+	// }
 
 	let blob = new Blob([finalResult], { type: 'text/plain' });
 

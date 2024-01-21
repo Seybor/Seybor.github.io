@@ -176,9 +176,9 @@ const ALL_ARR = {
     { en: 'to wish*', tr: '[wɪʃ]', ru: 'желать' },
     { en: 'to place*', tr: '[pleɪs]', ru: 'размещать; положить' },
     { en: 'to order*', tr: '[ˈɔːdə]', ru: 'заказывать' },
-    { en: 'to fine*', tr: '[faɪn]', ru: 'штрафовать' },
+    { en: 'to fine*', tr: '', ru: 'штрафовать' },
     { en: 'to last*', tr: '[lɑːst]', ru: 'длиться, продолжаться' },
-    { en: 'to present*', tr: '[ˈprɛzᵊnt]', ru: 'дарить, вручать' },
+    { en: 'to present*', tr: '', ru: 'дарить, вручать' },
     { en: 'to lock*', tr: '[lɒk]', ru: 'запирать' },
     { en: 'to trip*', tr: '[trɪp]', ru: 'споткнуться' },
     { en: 'to collect', tr: '[kəˈlɛkt]', ru: 'собирать, собираться' },
@@ -238,7 +238,7 @@ const ALL_ARR = {
     { en: 'air', tr: '[eə]', ru: 'воздух' },
     { en: 'alarm clock', tr: '[əˈlɑːm] [klɒk]', ru: 'будильник' },
     { en: 'apartment', tr: '[əˈpɑːtmənt]', ru: 'квартира' },
-    { en: 'app/application', tr: '[æp]/[ˌæplɪˈkeɪʃᵊn]', ru: 'приложение' },
+    { en: 'app / application', tr: '[æp] / [ˌæplɪˈkeɪʃᵊn]', ru: 'приложение' },
     { en: 'appearance', tr: '[əˈpɪərᵊns]', ru: 'внешний вид; появление' },
     { en: 'architect', tr: '[ˈɑːkɪtekt]', ru: 'архитектор' },
     { en: 'area', tr: '[ˈeəriə]', ru: 'область' },
@@ -250,7 +250,7 @@ const ALL_ARR = {
     { en: 'authority', tr: '[ɔːˈθɒrəti]', ru: 'власть' },
     { en: 'bag', tr: '[bæɡ]', ru: 'сумка' },
     { en: 'banana', tr: '[bəˈnɑːnə]', ru: 'банан' },
-    { en: 'bargain', tr: '[ˈbɑːɡɪn]', ru: 'выгодная покупка/сделка' },
+    { en: 'bargain', tr: '[ˈbɑːɡɪn]', ru: 'выгодная покупка / сделка' },
     { en: 'bathroom', tr: '[ˈbɑːθruːm]', ru: 'ванная' },
     { en: 'bed', tr: '[bed]', ru: 'кровать,постель' },
     { en: 'bedroom', tr: '[ˈbedruːm]', ru: 'спальня' },
@@ -495,7 +495,7 @@ const ALL_ARR = {
     { en: 'statement', tr: '[ˈsteɪtmənt]', ru: 'утверждение' },
     { en: 'step', tr: '[step]', ru: 'шаг' },
     { en: 'studies', tr: '[ˈstʌdiz]', ru: 'учёба' },
-    { en: 'subject/topic', tr: '[ˈsʌbʤɪkt]/[ˈtɒpɪk]', ru: 'тема,предмет' },
+    { en: 'subject / topic', tr: '[ˈsʌbʤɪkt] / [ˈtɒpɪk]', ru: 'тема, предмет' },
     { en: 'success', tr: '[səkˈses]', ru: 'успех [исчисляемое]' },
     { en: 'sugar', tr: '[ˈʃʊɡə]', ru: 'сахар' },
     { en: 'supplier', tr: '[səˈplaɪə]', ru: 'поставщик' },
@@ -503,7 +503,7 @@ const ALL_ARR = {
     { en: 'surname', tr: '[ˈsɜːneɪm]', ru: 'фамилия' },
     { en: 'sweater', tr: '[ˈswetə]', ru: 'свитер' },
     { en: 't-shirt', tr: '[ˈtiːʃɜːt]', ru: 'футболка' },
-    { en: 'table', tr: '[ˈteɪbᵊl]', ru: 'стол;таблица' },
+    { en: 'table', tr: '[ˈteɪbᵊl]', ru: 'стол; таблица' },
     { en: 'tablet', tr: '[ˈtæblət]', ru: 'планшет; таблетка' },
     { en: 'tax', tr: '[tæks]', ru: 'налог' },
     { en: 'thief(thieves)', tr: '[θiːf]([θiːvz])', ru: 'вор(воры)' },
@@ -694,7 +694,7 @@ const ALL_ARR = {
     { en: 'order*', tr: '[ˈɔːdə]', ru: 'заказ' },
     { en: 'order*', tr: '[ˈɔːdə]', ru: 'порядок' },
     { en: 'fine*', tr: '[faɪn]', ru: 'штраф' },
-    { en: 'present*', tr: '[ˈprɛzᵊnt]', ru: 'подарок; настоящее время' },
+    { en: 'present*', tr: '', ru: 'подарок; настоящее время' },
     { en: 'lock*', tr: '[lɒk]', ru: 'замок [ударение на о]' },
     { en: 'trip*', tr: '[trɪp]', ru: 'поездка, путешествие' },
     { en: 'kind*', tr: '[kaɪnd]', ru: 'вид, род' },
@@ -1129,6 +1129,7 @@ const ALL_ARR = {
       tr: '[miːn]',
       ru: 'подлый',
     },
+    { en: 'daily*', tr: '[ˈdeɪlɪ]', ru: 'ежедневный' },
     { en: 'great', tr: '[ɡreɪt]', ru: 'великий; (большой, огромный); (отличный, замечательный, прекрасный)' },
     { en: 'pretty*', tr: '[ˈprɪti]', ru: 'симпатичная [о женщине, ребёнке]' },
     { en: 'light*', tr: '[laɪt]', ru: 'светлый' },
@@ -1157,8 +1158,8 @@ const ALL_ARR = {
     { en: 'lonely', tr: '[ˈləʊnli]', ru: 'одинокий' },
     { en: 'careful', tr: '[ˈkeəfᵊl]', ru: 'осторожный' },
     { en: 'confident', tr: '[ˈkɒnfɪdᵊnt]', ru: 'уверенный' },
-    { en: 'surprising', tr: '[səˈpraɪzɪŋ]', ru: 'удивительный, неожиданный' },
-    { en: 'amazing/wonderful', tr: '[əˈmeɪzɪŋ]/[ˈwʌndəfᵊl]', ru: 'удивительный, изумительный, потрясающий' },
+    { en: 'surprising', tr: '[səˈpraɪzɪŋ]', ru: 'удивительный [в смысле неожиданный]' },
+    { en: 'amazing / wonderful', tr: '[əˈmeɪzɪŋ] / [ˈwʌndəfᵊl]', ru: 'удивительный [в смыле прекрасный], изумительный, потрясающий' },
     { en: 'upset', tr: '[ʌpˈset]', ru: 'расстроенный' },
     { en: 'sure', tr: '[ʃɔː]', ru: 'уверенный, конечно, безусловно' },
     { en: 'convenient', tr: '[kənˈviːniənt]', ru: 'удобный, подходящий' },
@@ -1307,6 +1308,7 @@ const ALL_ARR = {
     { en: 'nowadays', tr: '[ˈnaʊədeɪz]', ru: 'в наши дни, в наше время' },
     { en: 'alright', tr: '[ɔːlˈraɪt]', ru: 'в порядке' },
     { en: 'suddenly', tr: '[ˈsʌdnli]', ru: 'вдруг, внезапно' },
+    { en: 'daily*', tr: '[ˈdeɪlɪ]', ru: 'ежедневно' },
     { en: 'enough', tr: '[ɪˈnʌf]', ru: 'достаточно' },
     { en: 'abroad', tr: '[əˈbrɔːd]', ru: 'за границей' },
     { en: 'intense', tr: '[ɪnˈtens]', ru: 'интенсивно' },
@@ -1357,7 +1359,7 @@ const ALL_ARR = {
     { en: 'finally', tr: '[ˈfaɪnəli]', ru: 'в конце концов' },
     { en: 'impolitely', tr: '[ˌɪmpəˈlaɪtli]', ru: 'невежливо' },
     { en: 'defintely', tr: 'defintely', ru: 'определённо' },
-    { en: 'instead', tr: '[ɪnˈstɛd]', ru: 'вместо' },
+    { en: 'instead [off]', tr: '[ɪnˈstɛd]', ru: 'вместо [кого-то]' },
     { en: 'still', tr: '[stɪl]', ru: 'всё ещё' },
     { en: 'necessary*', tr: '[ˈnesəsᵊri]', ru: 'необходимо' },
     { en: 'just*', tr: '[ʤʌst]', ru: 'просто; лишь; только(что)' },
@@ -1373,8 +1375,18 @@ const ALL_ARR = {
     { en: 'several', tr: '[ˈsevᵊrᵊl]', ru: 'несколько' },
     { en: 'warm*', tr: '[wɔːm]', ru: 'тепло' },
     { en: 'open*', tr: '[ˈəʊpᵊn]', ru: 'открыто' },
-    { en: 'fine*', tr: '[faɪn]', ru: 'в порядке, хорошо' },
+    { en: 'fine*', tr: '', ru: 'в порядке, хорошо' },
     { en: 'little*', tr: '[ˈlɪtᵊl]', ru: 'мало' },
     { en: 'otherwise', tr: '[ˈʌðəwaɪz]', ru: 'по-другому, иначе' },
   ],
 };
+
+let counter = 0
+for (let key in ALL_ARR) {
+  console.log(ALL_ARR[key].length)
+  counter += ALL_ARR[key].length
+}
+
+console.log(counter)
+
+export { ALL_ARR }

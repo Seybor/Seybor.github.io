@@ -67,7 +67,7 @@ const ALL_PHRASES = [
 	{ en: 'in this photo', ru: 'на этой фотографии' },
 	{ en: 'at the moment', ru: 'в данный момент, в настоящий момент' },
 	{ en: 'right now', ru: 'прямо сейчас' },
-	{ en: 'this kind of', ru: 'такого рода' },
+	{ en: 'this kind of / this sort of', ru: 'такого рода' },
 	{ en: 'native speaker', ru: 'носитель языка' },
 	{ en: 'each other', ru: 'друг друга' },
 	{ en: 'casual wear', ru: 'повседневная одежда' },
@@ -366,6 +366,8 @@ const ALL_PHRASES = [
 	{ en: `the memory of someone`, ru: 'память о ком-то' },
 ]
 
+
 console.log(ALL_PHRASES.length)
 
+export { ALL_PHRASES }
 

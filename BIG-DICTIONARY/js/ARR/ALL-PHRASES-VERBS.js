@@ -776,3 +776,5 @@ const ALL_PHRASES_VERBS = [
 ]
 
 console.log(ALL_PHRASES_VERBS.length)
+
+export { ALL_PHRASES_VERBS }
