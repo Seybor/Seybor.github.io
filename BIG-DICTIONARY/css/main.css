@@ -123,7 +123,6 @@ body {
   padding-right: 75px;
 
   text-align: center;
-
 }
 .s-theme {
   position: absolute;
@@ -162,10 +161,14 @@ body {
   text-align: center;
 }
 
-.s-fixed  {
+.s-fixed {
   position: fixed;
   top: 100px;
   right: 0;
   left: 0;
   z-index: 1030;
+}
+
+.s-mw {
+  min-width: 160px;
 }

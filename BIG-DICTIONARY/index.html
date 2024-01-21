@@ -28,18 +28,18 @@
 
 				<div class="header__inner">
 
-					<div class="row align-items-center justify-content-evenly s-w-max">
-						<div class="col">
+					<div class="row row-cols-md-4row-cols-1 row-cols-sm-2 align-items-center justify-content-evenly s-w-max">
+						<div class="col p-3">
 							<label class="btn bg-success" for="fileInput">ChoiceFile</label>
 							<input class="visually-hidden" type="file" id="fileInput" data-file="download" accept=".txt, .json">
 						</div>
-						<div class="col">
+						<div class="col p-3 s-mw">
 							<a href="#" class="btn bg-danger disabled" id="link">
 								Download <span class="badge text-bg-secondary" id="link-count">0</span>
 							</a>
 						</div>
 
-						<div class="dropdown col">
+						<div class="dropdown col p-3">
 							<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
 								aria-expanded="false">
 								Words
@@ -63,7 +63,7 @@
 							</ul>
 						</div>
 
-						<div class="dropdown col">
+						<div class="dropdown col p-3">
 							<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
 								aria-expanded="false">
 								Phrases
@@ -87,7 +87,7 @@
 		</header>
 
 		<div class="main" id="main" data-current-arr>
-			<div class="container text-center" id="field">
+			<div class="container text-center overflow-auto" id="field">
 
 			</div>
 		</div>
