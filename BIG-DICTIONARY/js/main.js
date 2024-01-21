@@ -160,6 +160,7 @@ $('#fileInput').on('change', function (evt) {
 
 //-
 
+
 $('#link').on('pointerdown', (evt) => {
 	evt.preventDefault()
 	// let jsonData = JSON.stringify(arrForDownload);
@@ -168,9 +169,9 @@ $('#link').on('pointerdown', (evt) => {
 	let finalResult = ``
 	arrForDownload.forEach((el) => {
 		if (el['tr']) {
-			finalResult += `${el['en']} ${el['tr']} ${el['ru']}\n`
+			finalResult += `${el['en']} - ${el['tr']} - ${el['ru']}\n`
 		} else {
-			finalResult += `${el['en']} ${el['ru']}\n`
+			finalResult += `${el['en']} - ${el['ru']}\n`
 		}
 
 	})
