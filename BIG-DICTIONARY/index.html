@@ -34,7 +34,9 @@
 							<input class="visually-hidden" type="file" id="fileInput" data-file="download" accept=".txt, .json">
 						</div>
 						<div class="col">
-							<a href="#" class="btn bg-danger" id="link" download>Download</a>
+							<a href="#" class="btn bg-danger disabled" id="link">
+								Download <span class="badge text-bg-secondary" id="link-count">0</span>
+							</a>
 						</div>
 
 						<div class="dropdown col">
@@ -43,22 +45,34 @@
 								Words
 							</button>
 							<ul class="dropdown-menu" id="words">
-								<li><a class="dropdown-item" href="#" data-name="noun">Nouns</a></li>
-								<li><a class="dropdown-item" href="#" data-name="r-verb">Regular-Verbs</a></li>
-								<li><a class="dropdown-item" href="#" data-name="ir-verb">Irregular-Verbs</a></li>
-								<li><a class="dropdown-item" href="#" data-name="adjective">Adjectives</a></li>
-								<li><a href="#" class="dropdown-item" data-name="adverbs">Adverbs</a></li>
+								<li><a class="dropdown-item" href="#" data-name="noun">
+										Nouns <span class="badge text-bg-primary">0</span>
+									</a></li>
+								<li><a class="dropdown-item" href="#" data-name="r-verb">
+										Regular-Verbs <span class="badge text-bg-primary">0</span>
+									</a></li>
+								<li><a class="dropdown-item" href="#" data-name="ir-verb">
+										Irregular-Verbs <span class="badge text-bg-primary">0</span>
+									</a></li>
+								<li><a class="dropdown-item" href="#" data-name="adjective">
+										Adjectives <span class="badge text-bg-primary">0</span>
+									</a></li>
+								<li><a href="#" class="dropdown-item" data-name="adverbs">
+										Adverbs <span class="badge text-bg-primary">0</span>
+									</a></li>
 							</ul>
 						</div>
 
-						<div class="dropdown col" id="phrases">
+						<div class="dropdown col">
 							<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
 								aria-expanded="false">
 								Phrases
 							</button>
-							<ul class="dropdown-menu">
-								<li><a href="#" class="dropdown-item" data-name="phrases">Phrases</a></li>
-								<li><a href="#" class="dropdown-item" data-name="phases-verbs">Phrases-verbs</a></li>
+							<ul class="dropdown-menu" id="phrases">
+								<li><a href="#" class="dropdown-item" data-name="phrases">
+										Phrases <span class="badge text-bg-primary">0</span></a></li>
+								<li><a href="#" class="dropdown-item" data-name="phases-verbs">
+										Phrases-verbs <span class="badge text-bg-primary">0</span></a></li>
 							</ul>
 						</div>
 
