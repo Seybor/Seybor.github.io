@@ -3,8 +3,8 @@
 // $('body').hide()
 
 import { ALL_ARR } from './ARR/ALL-WORDS.js';
-import { ALL_PHRASES_VERBS } from './ARR/ALL-PHRASES-VERBS.js';
 import { ALL_PHRASES } from './ARR/ALL-PHRASES.js';
+import { ALL_PHRASES_VERBS } from './ARR/ALL-PHRASES-VERBS.js';
 import { renderWords, renderPhrases, contents, currentArr } from './renderAll.js';
 
 $('#theme').click(() => {
@@ -20,6 +20,20 @@ $('#theme').click(() => {
 		})
 	}
 })
+
+
+let lengthWords = $('#words .badge')
+let count = 0
+for (let key in ALL_ARR) {
+	lengthWords[count].textContent = ALL_ARR[key].length
+	count++
+}
+
+lengthWords = $('#phrases .badge')
+lengthWords[0].textContent = ALL_PHRASES.length
+lengthWords[1].textContent = ALL_PHRASES_VERBS.length
+
+
 
 
 $('#words').on('pointerdown', (evt, value) => {
@@ -86,6 +100,9 @@ $('#field').on('pointerdown', (evt) => {
 		console.log(el)
 		if (!arrForDownload.includes(currentArr[el])) {
 			arrForDownload.push(currentArr[el])
+			$('#link').removeClass('disabled')
+
+			$('#link-count').text(`${arrForDownload.length}`)
 		}
 		console.log(arrForDownload)
 	}
@@ -159,7 +176,6 @@ $('#fileInput').on('change', function (evt) {
 // !
 
 //-
-
 
 $('#link').on('pointerdown', (evt) => {
 	evt.preventDefault()
