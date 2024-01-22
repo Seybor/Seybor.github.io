@@ -1,10 +1,9 @@
 let max = 100
 
-export let contents
 export let currentArr
 export let counter = 0
 
-export const renderWords = (arr, arrWords, remove = false, fromfile = false) => {
+export const renderWords = (arr, arrWords, remove = false, fromfile = false, contents) => {
 	let newElement
 	let target
 
@@ -156,4 +155,50 @@ export const renderPhrases = (arr, arrPhrases, remove = false) => {
 		counter = 0
 	}
 
+}
+
+export const renderSearch = (word, arr) => {
+	let newElement
+	let arrFind = []
+	for (let key in arr) {
+		arr[key].forEach((el) => {
+			if ((el.en.indexOf(word) !== -1) || (el.tr.indexOf(word) !== -1) || (el.ru.indexOf(word) !== -1)) {
+				arrFind.push(el)
+			}
+		})
+	}
+
+	if (arrFind.length > 0) {
+		$('#field').text('')
+		$('#field').append(`
+			<div class="row s-b">
+				<div class="col-1">№</div>
+				<div class="col-4">EN</div>
+				<div class="col-3">TR</div>
+				<div class="col-4">RU</div>
+			</div>
+		`)
+		counter = 0
+
+		for (let i = 0; i < max; i++) {
+			if (counter < arrFind.length) {
+				newElement = $(`
+					<div class="row">
+						<div class="col-1">${counter + 1}</div>
+						<div class="col-4" data-word="id-${counter}">${arrFind[counter]['en']}</div>
+						<div class="col-3">${arrFind[counter]['tr']}</div>
+						<div class="col-4">${arrFind[counter]['ru']}</div>
+					</div>`);
+				$('#field').append(newElement);
+				counter++
+			} else {
+				break
+			}
+		}
+
+	} else {
+		alert('Не найдено')
+	}
+
+	return arrFind
 }

@@ -1,5 +1,5 @@
-const ALL_WORDS = {
-  NOUN: [
+[
+  [
     { "en": "a bit*", "tr": "[ə] [bɪt]", "ru": "бит" },
     { "en": "ability", "tr": "[əˈbɪləti]", "ru": "способность" },
     { "en": "accent", "tr": "[ˈæksᵊnt]", "ru": "акцент, ударение" },
@@ -431,7 +431,7 @@ const ALL_WORDS = {
     { "en": "work*", "tr": "[wɜːk]", "ru": "работа" },
     { "en": "yard", "tr": "[jɑːd]", "ru": "двор" }
   ],
-  REGULAR_VERBS: [
+  [
     { "en": "to accept", "tr": "[əkˈsept]", "ru": "принимать" },
     { "en": "to achieve", "tr": "[əˈʧiːv]", "ru": "достигать [какой-то цели]" },
     { "en": "to adapt", "tr": "[əˈdæpt]", "ru": "адаптироваться" },
@@ -654,7 +654,7 @@ const ALL_WORDS = {
     { "en": "to work*", "tr": "[wɜːk]", "ru": "работать" },
     { "en": "to worry*", "tr": "[ˈwʌri]", "ru": "волноваться, беспокоиться" }
   ],
-  IRREGULAR_VERBS: [
+  [
     { "en": "be - was/were - been", "tr": "[biː] - [wɒz]/[wɜː] - [biːn]", "ru": "быть" },
     { "en": "beat - beat - beaten", "tr": "[biːt] - [biːt] - [ˈbiːtᵊn]", "ru": "бить" },
     { "en": "become - became - become", "tr": "[bɪˈkʌm] - [bɪˈkeɪm] - [bɪˈkʌm]", "ru": "становиться" },
@@ -763,7 +763,7 @@ const ALL_WORDS = {
     },
     { "en": "write - wrote - written", "tr": "[raɪt] - [rəʊt] - [ˈrɪtᵊn]", "ru": "писать" }
   ],
-  ADJECTIVE: [
+  [
     { "en": "able", "tr": "[ˈeɪbᵊl]", "ru": "способный" },
     { "en": "accurate", "tr": "[ˈækjərət]", "ru": "точный" },
     { "en": "acquaintance", "tr": "[əˈkweɪntᵊns]", "ru": "знакомый" },
@@ -942,7 +942,7 @@ const ALL_WORDS = {
     { "en": "worst", "tr": "[wɜːst]", "ru": "наихудший" },
     { "en": "wrong", "tr": "[rɒŋ]", "ru": "неправильный, неверный, ложный" }
   ],
-  ADVERBS: [
+  [
     { "en": "a bit*", "tr": "[ə] [bɪt]", "ru": "немного [чуть-чуть]" },
     { "en": "abroad", "tr": "[əˈbrɔːd]", "ru": "за границей" },
     { "en": "absolutely", "tr": "[ˈæbsəluːtli]", "ru": "абсолютно, совершенно, совсем, полностью" },
@@ -1019,14 +1019,4 @@ const ALL_WORDS = {
     { "en": "warm*", "tr": "[wɔːm]", "ru": "тепло" },
     { "en": "worse", "tr": "[wɜːs]", "ru": "хуже" }
   ]
-};
-
-let counter = 0
-for (let key in ALL_WORDS) {
-  console.log(ALL_WORDS[key].length)
-  counter += ALL_WORDS[key].length
-}
-
-console.log(counter)
-
-export { ALL_WORDS }
+]

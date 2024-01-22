@@ -58,6 +58,18 @@
 
 /* GENERAL CSS SETTINGS */
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: blue;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+}
+
 ::placeholder {
   color: #666;
 }
@@ -124,6 +136,7 @@ body {
 
   text-align: center;
 }
+
 .s-theme {
   position: absolute;
   top: 13px;
@@ -171,4 +184,8 @@ body {
 
 .s-mw {
   min-width: 160px;
+}
+
+#field > .row {
+  min-width: 600px;
 }

@@ -2,10 +2,41 @@
 
 // $('body').hide()
 
-import { ALL_ARR } from './ARR/ALL-WORDS.js';
+import { ALL_WORDS } from './ARR/ALL-WORDS.js';
 import { ALL_PHRASES } from './ARR/ALL-PHRASES.js';
 import { ALL_PHRASES_VERBS } from './ARR/ALL-PHRASES-VERBS.js';
-import { renderWords, renderPhrases, contents, currentArr } from './renderAll.js';
+import { renderWords, renderPhrases, renderSearch, currentArr } from './renderAll.js';
+import { renderTest } from './renderTest.js';
+
+$('#test').click((evt) => {
+	if (evt.target.dataset.name) {
+		let arr
+		switch (evt.target.dataset.name) {
+			case 'noun': {
+				arr = ALL_WORDS['NOUN']
+			} break
+			case 'r-verb': {
+				arr = ALL_WORDS['REGULAR_VERBS']
+			} break
+			case 'ir-verb': {
+				arr = ALL_WORDS['IRREGULAR_VERBS']
+			} break
+			case 'adjective': {
+				arr = ALL_WORDS['ADJECTIVE']
+			} break
+			case 'adverbs': {
+				arr = ALL_WORDS['ADVERBS']
+			} break
+			default: {
+				alert(`Массив не найден`)
+				return
+			}
+		}
+
+		renderTest(arr)
+
+	}
+})
 
 $('#theme').click(() => {
 	if ($('#html').attr('data-bs-theme') == 'dark') {
@@ -24,16 +55,14 @@ $('#theme').click(() => {
 
 let lengthWords = $('#words .badge')
 let count = 0
-for (let key in ALL_ARR) {
-	lengthWords[count].textContent = ALL_ARR[key].length
+for (let key in ALL_WORDS) {
+	lengthWords[count].textContent = ALL_WORDS[key].length
 	count++
 }
 
 lengthWords = $('#phrases .badge')
 lengthWords[0].textContent = ALL_PHRASES.length
 lengthWords[1].textContent = ALL_PHRASES_VERBS.length
-
-
 
 
 $('#words').on('pointerdown', (evt, value) => {
@@ -43,9 +72,9 @@ $('#words').on('pointerdown', (evt, value) => {
 
 		if (value) {
 			if (typeof value === 'string') {
-				renderWords(value, ALL_ARR)
+				renderWords(value, ALL_WORDS)
 			} else {
-				renderWords(value, '', true, true)
+				renderWords(value, '', true, true, contents)
 			}
 		} else {
 			$('#field').text('')
@@ -57,7 +86,7 @@ $('#words').on('pointerdown', (evt, value) => {
 					<div class="col-4">RU</div>
 				</div>
 			`)
-			renderWords(evt.target.dataset.name, ALL_ARR, true)
+			renderWords(evt.target.dataset.name, ALL_WORDS, true)
 		}
 
 
@@ -90,6 +119,20 @@ $('#phrases').on('pointerdown', (evt, value) => {
 	}
 })
 
+
+$('#input-search').on('input', (evt) => {
+	let value = (evt.currentTarget.value).trim()
+	console.log(value)
+})
+
+$('#search').on('submit', (evt) => {
+	evt.preventDefault()
+	let value = $('#input-search').val()
+
+	console.log(renderSearch(value, ALL_WORDS))
+
+})
+
 // @
 
 let arrForDownload = []
@@ -113,6 +156,7 @@ $('#field').on('pointerdown', (evt) => {
 
 // !
 
+let contents
 $('#fileInput').on('change', function (evt) {
 	const file = evt.target.files[0];
 	const reader = new FileReader();
@@ -147,10 +191,6 @@ $('#fileInput').on('change', function (evt) {
 				let newElement = []
 				contents = (evt.target.result).split('\n')
 
-				if (contents[0].split(' ').length === 1) {
-					throw new Error('Мда')
-				}
-
 				contents = contents.filter(element => element.trim() !== "");
 
 				contents.forEach((el) => {
@@ -181,35 +221,39 @@ $('#link').on('pointerdown', (evt) => {
 	evt.preventDefault()
 	// let jsonData = JSON.stringify(arrForDownload);
 	// let blob = new Blob([jsonData], { type: 'application/json' });
-
 	let finalResult = ``
+
+	if (arrForDownload.length === 0) {
+		return
+	}
+
 	arrForDownload.forEach((el) => {
 		if (el['tr']) {
 			finalResult += `${el['en']} - ${el['tr']} - ${el['ru']}\n`
 		} else {
 			finalResult += `${el['en']} - ${el['ru']}\n`
 		}
-
 	})
 
-	//! Скачать весь массив
-	// for (const key in ALL_ARR) {
+	// ! Скачать весь массив
 
-	// 	const arr = ALL_ARR[key];
-	// 	arr.forEach((el) => {
+	// for (const key in ALL_WORDS) {
+	// 	ALL_WORDS[key].forEach((el, id) => {
+	// 		if (id === 0) {
+	// 			finalResult += `${key}\n`
+	// 		}
 	// 		finalResult += `${el['en']} ${el['tr']} ${el['ru']}\n`
 	// 	});
 
 	// }
 
 	let blob = new Blob([finalResult], { type: 'text/plain' });
-
-
 	let url = URL.createObjectURL(blob);
 	console.log(url)
-
 	$('#link').attr('href', `${url}`)
-	$('#link').attr('download', 'data.txt')
+	$('#link').attr('download', `LearningList.txt`)
+
 })
 
 //-
+
