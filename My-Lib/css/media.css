@@ -1,0 +1,90 @@
+/* === DESKTOP FIRST === */
+
+/* xl <= Extra extra large (xxl) */
+@media (max-width: 1400px) {
+}
+
+/* lg <= Extra large (xl) */
+@media (max-width: 1200px) {
+}
+
+/* md <= Large (lg) */
+@media (max-width: 992px) {
+}
+
+/* sm <= Medium (md) */
+@media (max-width: 768px) {
+}
+
+/* xs <= Small (sm) */
+@media (max-width: 576px) {
+}
+
+/* === MOBILE FIRST === */
+
+/* Custom (xs) */
+@media (min-width: 0) {
+}
+
+/* Small (sm) */
+@media (min-width: 576px) {
+}
+
+/* Medium (md) */
+@media (min-width: 768px) {
+}
+
+/* Large (lg) */
+@media (min-width: 992px) {
+}
+
+/* Extra large (xl) */
+@media (min-width: 1200px) {
+  .text {
+    font-size: 18px;
+  }
+}
+
+/* Extra extra large (xxl) */
+@media (min-width: 1400px) {
+  .text {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1260px) {
+  .container {
+    max-width: 1020px;
+  }
+}
+@media (max-width: 1080px) {
+  .container {
+    max-width: 840px;
+  }
+}
+@media (max-width: 900px) {
+  .container {
+    max-width: 660px;
+  }
+}
+@media (max-width: 720px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media (max-width: 540px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    max-width: 100%;
+    min-width: 280px;
+  }
+}
