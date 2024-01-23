@@ -9,8 +9,7 @@
 	<title>Simple Starter</title>
 	<meta name="description" content="Simple Starter Description">
 
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-	<meta name="viewport" content="width=1200">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="icon" href="img/favicon.png">
 	<meta property="og:image" content="img/preview.jpg">
@@ -29,14 +28,11 @@
 
 				<div class="header__inner">
 
-					<div class="row col-8 row-cols-md-4 row-cols-1 row-cols-sm-2 align-items-center justify-content-evenly">
-						<div class="col p-3 visually-hidden">
-							<label class="btn bg-success" for="fileInput">ChoiceFile</label>
-							<input class="visually-hidden" type="file" id="fileInput" data-file="download" accept=".txt, .json">
-						</div>
+					<div
+						class="row col-12 col-md-8 row-cols-md-4 row-cols-1 align-items-center justify-content-start justify-content-sm-evenly">
 
 						<div class="dropdown col p-3">
-							<button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown"
+							<button class="btn btn-success dropdown-toggle  s-w-100" type="button" data-bs-toggle="dropdown"
 								aria-expanded="false">
 								TEST
 							</button>
@@ -60,13 +56,13 @@
 						</div>
 
 						<div class="col p-3 s-mw">
-							<a href="#" class="btn bg-danger disabled" id="link">
+							<a href="#" class="btn bg-danger disabled s-w-100" id="link">
 								Download <span class="badge text-bg-secondary" id="link-count">0</span>
 							</a>
 						</div>
 
 						<div class="dropdown col p-3">
-							<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+							<button class="btn btn-secondary dropdown-toggle s-w-100" type="button" data-bs-toggle="dropdown"
 								aria-expanded="false">
 								Words
 							</button>
@@ -90,7 +86,7 @@
 						</div>
 
 						<div class="dropdown col p-3">
-							<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+							<button class="btn btn-secondary dropdown-toggle s-w-100" type="button" data-bs-toggle="dropdown"
 								aria-expanded="false">
 								Phrases
 							</button>
@@ -104,11 +100,11 @@
 
 					</div>
 
-					<div class="row col-4">
+					<div class="row col-12 col-md-4">
 
 						<form class="d-flex align-items-center" role="search" id="search">
 							<input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск" id="input-search"
-								minlength="3" required>
+								minlength="2" required>
 							<button class="btn btn-outline-success" type="submit" id="btn-search">Поиск</button>
 						</form>
 
@@ -117,13 +113,11 @@
 					<img class='s-theme' src="img/theme.png" alt="theme" id="theme">
 				</div>
 
-
-
 			</div>
 		</header>
 
 		<div class="main" id="main" data-current-arr>
-			<div class="container text-center overflow-auto" id="field">
+			<div class="container text-center" id="field">
 
 			</div>
 		</div>

@@ -10,6 +10,13 @@
 }
 [data-bs-theme='dark'] {
   --text: #f1f1f1;
+  --scroll-track: rgb(119, 119, 119);
+  --scroll-thumb: rgb(37, 36, 36);
+}
+[data-bs-theme='light'] {
+  --text: #000000;
+  --scroll-track: rgb(26, 25, 25);
+  --scroll-thumb: rgb(209, 190, 190);
 }
 
 /* BOOTSTRAP SETTINGS SECTION */
@@ -22,7 +29,7 @@
 .container-sm,
 .container-xl,
 .container-xxl {
-  --bs-gutter-x: 0.625rem;
+  --bs-gutter-x: 2rem;
 }
 .row,
 .row > * {
@@ -60,14 +67,15 @@
 
 ::-webkit-scrollbar {
   width: 5px;
+  height: 0px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: blue;
+  background-color: var(--scroll-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: black;
+  background-color: var(--scroll-thumb);
 }
 
 ::placeholder {
@@ -131,6 +139,7 @@ body {
 .header__inner {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   padding: 20px 0;
   padding-right: 75px;
 
@@ -187,5 +196,9 @@ body {
 }
 
 #field > .row {
-  min-width: 600px;
+  min-width: 800px;
+}
+
+#field {
+  overflow-x: auto;
 }

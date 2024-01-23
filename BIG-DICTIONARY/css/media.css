@@ -18,6 +18,12 @@
 
 /* xs <= Small (sm) */
 @media (max-width: 576px) {
+  .header__inner {
+    padding-right: 25px;
+  }
+  .s-w-100 {
+    width: 100%;
+  }
 }
 
 /* === MOBILE FIRST === */

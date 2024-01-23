@@ -20,9 +20,9 @@ export const renderTest = (arr) => {
 	for (let i = 0; i < testArr.length; i++) {
 
 		if (i % 2 === 0) {
-			newElement = $(`<div class="col-4" data-test="id-${i}">${testArr[i]['en']}</div>`);
+			newElement = $(`<div class="col-4" title="${testArr[i]['ru']}" data-test="id-${i}">${testArr[i]['en']}</div>`);
 		} else {
-			newElement = $(`<div class="col-4" data-test="id-${i}">${testArr[i]['ru']}</div>`);
+			newElement = $(`<div class="col-4" title="${testArr[i]['en']}" data-test="id-${i}">${testArr[i]['ru']}</div>`);
 		}
 
 		$('#for-test').append(newElement);

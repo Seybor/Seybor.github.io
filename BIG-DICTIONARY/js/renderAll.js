@@ -180,7 +180,7 @@ export const renderSearch = (word, arr) => {
 		`)
 		counter = 0
 
-		for (let i = 0; i < max; i++) {
+		for (let i = 0; i < 10; i++) {
 			if (counter < arrFind.length) {
 				newElement = $(`
 					<div class="row">

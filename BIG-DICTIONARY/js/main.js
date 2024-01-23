@@ -119,15 +119,13 @@ $('#phrases').on('pointerdown', (evt, value) => {
 	}
 })
 
-
-$('#input-search').on('input', (evt) => {
-	let value = (evt.currentTarget.value).trim()
-	console.log(value)
+$('#input-search').on('dblclick', () => {
+	$('#input-search').val('')
 })
 
 $('#search').on('submit', (evt) => {
 	evt.preventDefault()
-	let value = $('#input-search').val()
+	let value = $('#input-search').val().trim()
 
 	console.log(renderSearch(value, ALL_WORDS))
 
@@ -136,7 +134,7 @@ $('#search').on('submit', (evt) => {
 // @
 
 let arrForDownload = []
-$('#field').on('pointerdown', (evt) => {
+$('#field').on('pointerup', (evt) => {
 
 	if (evt.target.dataset.word) {
 		let el = evt.target.dataset.word.split('id-')[1]
