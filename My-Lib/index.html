@@ -16,36 +16,22 @@
 
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
 
+	<link rel="stylesheet" href="css/timer-theme.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
 
-	<div class="row" id="start">
-		<div class="canvas col-4" id="left">
-			<span class="span" data-start="true" data-width="10" data-height="10" data-color1="255" data-color2="0"
-				data-color3="0" data-radius1="50" data-radius2="50" data-radius3="50" data-radius4="50" data-shadow1="0"
-				data-shadow2="0" data-shadow3="0" data-shadow4="0" data-shadow5="255" data-shadow6="0" data-shadow7="0">0</span>
-		</div>
-		<div class="canvas col-4" id="middle">
-			<span class="span" data-start="true" data-width="10" data-height="10" data-color1="0" data-color2="255"
-				data-color3="0" data-radius1="50" data-radius2="0" data-radius3="50" data-radius4="0" data-shadow1="0"
-				data-shadow2="0" data-shadow3="0" data-shadow4="0" data-shadow5="0" data-shadow6="255" data-shadow7="0">0</span>
-		</div>
-		<div class="canvas col-4" id="right">
-			<span class="span" data-start="true" data-width="10" data-height="10" data-color1="0" data-color2="0"
-				data-color3="255" data-radius1="0" data-radius2="0" data-radius3="0" data-radius4="0" data-shadow1="0"
-				data-shadow2="0" data-shadow3="0" data-shadow4="0" data-shadow5="0" data-shadow6="0" data-shadow7="255">0</span>
-		</div>
-	</div>
 
-
-	<div class="row">
-		<h1 id="timer">00:00:00</h1>
-		<button id="startBtn">Старт</button>
-		<button id="pauseBtn" disabled>Пауза</button>
-		<button id="resetBtn" disabled>Сброс</button>
+	<div class="init-timer" id="init-timer">
+		<span id="init-drag"></span>
+		<h1 class="init-timer__time" id="timer">00:00:00</h1>
+		<div class="init-timer__wrapper">
+			<button class="init-timer__btn" id="startBtn">Старт</button>
+			<button class="init-timer__btn" id="pauseBtn" disabled>Пауза</button>
+			<button class="init-timer__btn" id="resetBtn" disabled>Сброс</button>
+		</div>
 	</div>
 
 	<script src="libs/jquery/jquery.com_jquery-3.7.1.min.js" defer></script>
