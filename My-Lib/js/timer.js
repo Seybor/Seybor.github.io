@@ -2,6 +2,7 @@ const timer = document.getElementById('timer');
 const startBtn = document.getElementById('startBtn');
 const pauseBtn = document.getElementById('pauseBtn');
 const resetBtn = document.getElementById('resetBtn');
+const continueBtn = document.getElementById('continueBtn')
 const title = document.getElementById('title');
 const initTimer = document.getElementById('init-timer');
 const initDrag = document.getElementById('init-drag');
@@ -82,7 +83,8 @@ startBtn.addEventListener('click', () => {
 
 pauseBtn.addEventListener('click', () => {
 	clearInterval(interval);
-	startBtn.disabled = false;
+	startBtn.classList.add('visually-hidden')
+	continueBtn.classList.remove('visually-hidden')
 	pauseBtn.disabled = true;
 	localStorage.setItem('pause', 'true')
 });
@@ -97,9 +99,16 @@ resetBtn.addEventListener('click', () => {
 	startBtn.disabled = false;
 	pauseBtn.disabled = true;
 	resetBtn.disabled = true;
+	continueBtn.classList.add('visually-hidden')
+	startBtn.classList.remove('visually-hidden')
 	localStorage.removeItem('time')
 });
 
+continueBtn.addEventListener('pointerdown', (evt) => {
+	interval = setInterval(updateTime, 1000);
+	continueBtn.disabled = true
+	pauseBtn.disabled = false;
+})
 
 initDrag.addEventListener('pointerdown', function (evt) {
 	evt.preventDefault();
