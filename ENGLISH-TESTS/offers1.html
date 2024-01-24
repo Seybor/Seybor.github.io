@@ -49,21 +49,25 @@
 					<div class="offers1__choose">
 
 						Уроки <br>
-						<label class="offers1__choose-label" id="lesson-1">
+						<label class="offers1__choose-label" id="lesson-1" data-lesson>
 							<input class="offers1__lessons visually-hidden" type="radio" name="lessons" value="1" checked />
 							<span>51-57</span>
 						</label>
-						<label class="offers1__choose-label" id="lesson-2">
+						<label class="offers1__choose-label" id="lesson-2" data-lesson>
 							<input class="offers1__lessons visually-hidden" type="radio" name="lessons" value="2" />
 							<span>58-62</span>
 						</label>
-						<label class="offers1__choose-label" id="lesson-3">
+						<label class="offers1__choose-label" id="lesson-3" data-lesson>
 							<input class="offers1__lessons visually-hidden" type="radio" name="lessons" value="3" />
 							<span>63-71</span>
 						</label>
-						<label class="offers1__choose-label" id="lesson-4">
+						<label class="offers1__choose-label" id="lesson-4" data-lesson>
 							<input class="offers1__lessons visually-hidden" type="radio" name="lessons" value="4" />
 							<span>72-76</span>
+						</label>
+						<label class="offers1__choose-label" id="lesson-5">
+							<input class="offers1__lessons visually-hidden" type="radio" name="lessons" value="5" />
+							<span>77-100</span>
 						</label>
 
 						<br>Количество <br />
@@ -80,6 +84,11 @@
 							<span>15</span>
 						</label>
 
+						<label class="offers1__choose-label visually-hidden" id="label-more">
+							<input class="offers1__choice visually-hidden" type="radio" name="choice" value="50" />
+							<span>50</span>
+						</label>
+
 						<br> Вариант перевода <br />
 						<label class="offers1__choose-label" id="label-en">
 							<input class="offers1__languages visually-hidden" type="radio" name="languages" value="en" checked />
@@ -93,19 +102,19 @@
 							<input class="offers1__languages visually-hidden" type="radio" name="languages" value="all" />
 							<span>ru/en</span>
 						</label>
-						<label class="offers1__choose-label" id="label-all">
+						<label class="offers1__choose-label" data-others>
 							<input class="offers1__languages visually-hidden" type="radio" name="languages" value="tr-en" />
 							<span>tr-en*</span>
 						</label>
-						<label class="offers1__choose-label" id="label-all">
+						<label class="offers1__choose-label" data-others>
 							<input class="offers1__languages visually-hidden" type="radio" name="languages" value="en-tr" />
 							<span>en-tr*</span>
 						</label>
-						<label class="offers1__choose-label" id="label-all">
+						<label class="offers1__choose-label" data-others>
 							<input class="offers1__languages visually-hidden" type="radio" name="languages" value="tr-ru" />
 							<span>tr-ru*</span>
 						</label>
-						<label class="offers1__choose-label" id="label-all">
+						<label class="offers1__choose-label" data-others>
 							<input class="offers1__languages visually-hidden" type="radio" name="languages" value="ru-tr" />
 							<span>ru-tr*</span>
 						</label>
@@ -151,6 +160,10 @@
 					</div>
 
 				</form>
+
+				<div class="visually-hidden" id="finish-field">
+					123
+				</div>
 			</div>
 		</div>
 	</section>

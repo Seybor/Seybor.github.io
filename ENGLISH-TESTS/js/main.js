@@ -4225,6 +4225,322 @@ if (document.querySelector('#template-offers__one') !== null) {
   
   console.log(OFFERS_A1_72_76.length);
   
+  const OFFERS_A1_77_100 = [
+  	{ en: "He'll go to the concert with her", ru: 'Он пойдёт на концерт вместе с ней' },
+  	{ en: "He'll miss the match", ru: 'Он пропустит матч' },
+  	{ en: 'I will call him a little later', ru: 'Я позвоню ему немного позже' },
+  	{ en: 'He will play at that field', ru: 'Он будет играть на том поле' },
+  	{
+  		en: 'Your mother will return home in about half an hour',
+  		ru: 'Твоя мама вернётся домой примерно через полчаса',
+  	},
+  	{ en: 'My friend will join us with great pleasure', ru: 'Мой друг присоединиться к нам с большим удовольствием' },
+  	{
+  		en: 'He expects that he will buy a tablet at the end of the month',
+  		ru: 'Он ожидает, что купит планшет в следующем месяце',
+  	},
+  	{ en: "I'll be able to get rid of this mistake", ru: 'Я смогу избавиться от этой ошибки' },
+  	{ en: 'He promises that he will do it one day', ru: 'Он обещает, что сделает это однажды' },
+  	{ en: 'I will finish reading this book soon', ru: 'Я скоро закончу читать эту книгу' },
+  	{ en: "My friend won't like this idea", ru: 'Моему другу не понравится эта идея' },
+  	{ en: "He won't like me", ru: 'Я не понравлюсь ему' },
+  	{ en: "He won't need this information", ru: 'Ему не понадобится эта информация' },
+  	{
+  		en: "She says she won't be able to come to us tonight",
+  		ru: 'Она говорит, не сможет прийти к нам сегодня вечером',
+  	},
+  	{ en: 'It seems to me that no one will do it', ru: 'Мне кажется, что никто этого не сделает' },
+  	{ en: "Perhaps, I'll find a much better job soon", ru: 'Возможно, я скоро найду гораздо лучшую работу' },
+  	{ en: "I think the man won't get this job", ru: 'Я думаю, мужчина не получит эту работу' },
+  	{ en: 'He will never go there again', ru: 'Он никогда не пойдёт туда снова' },
+  	{ en: "I'll try not to think about it anymore", ru: 'Я постараюсь не думать об этом больше' },
+  	{ en: 'Will I have a stable income?', ru: 'У меня будет стабильный доход' },
+  	{ en: 'Will it be a bargain?', ru: 'Это будет выгодная покупка?' },
+  	{ en: 'Will it be a complete bargain?', ru: 'Это будет очень выгодная сделка?' },
+  	{ en: 'Will you need extra practice?', ru: 'Тебе понадобится дополнительная практика?' },
+  	{ en: 'Will you have a well-paid job?', ru: 'У тебя будет хорошо оплачиваемая работа?' },
+  	{ en: 'Will you look for a better place?', ru: 'Ты будешь искать место лучше?' },
+  	{
+  		en: 'Will you go to the gym to try be in good shape?',
+  		ru: 'Ты пойдёшь в спортзал, чтобы попытаться быть в хорошей форме?',
+  	},
+  	{ en: 'Will you attend those courses?', ru: 'Ты будешь посещать те курсы?' },
+  	{ en: 'Will it be expensive to live in this hotel?', ru: 'Будет дорого жить в этом отеле?' },
+  	{ en: 'How will you work in these conditions?', ru: 'Как ты будешь работать в этих условиях?' },
+  	{ en: 'What will you do in this case?', ru: 'Что ты будешь делать в этом случае?' },
+  	{ en: 'Who will see you there?', ru: 'Кто тебя там увидит?' },
+  	{ en: 'When will you go to bed?', ru: 'Когда ты пойдёшь спать?' },
+  	{ en: 'Why will it be the best solution to this problem?', ru: 'Почему это будет лучшим решенем этой проблемы?' },
+  	{ en: 'Why will it be a complete waste of time?', ru: 'Почему это будет совершенно пустая трата времени?' },
+  	{ en: 'Who will you invite to your birthday party?', ru: 'Кого ты пригласишь на свой день рождения?' },
+  	{ en: 'When will it be possible to do it?', ru: 'Когда это будет возможно сделать?' },
+  	{ en: 'When will he get divorced?', ru: 'Когда он разведётся?' },
+  	{ en: 'Why will they get divorced?', ru: 'Почему они разведутся?' },
+  	{
+  		en: 'What will you do to improve your pronunciation?',
+  		ru: 'Что ты будешь делать, чтобы улучшить своё произношение?',
+  	},
+  	{ en: 'How will she be able to do it?', ru: 'Как она сможет это сделать?' },
+  	{ en: 'It was a very wise decision', ru: 'Это было очень мудрое решение' },
+  	{ en: 'Her decision was very wise', ru: 'Её решение было очень мудрым' },
+  	{ en: 'The crisis was very serious', ru: 'Кризис был очень серьёзный' },
+  	{ en: 'It was a very serious crisis', ru: 'Это был очень серьёзный кризис' },
+  	{
+  		en: 'His friend became an American citiez last year',
+  		ru: 'Его друг стал американским гражданином в прошлом году',
+  	},
+  	{ en: 'My father collected coins when he was young', ru: 'Мой отец собирал монеты, когда он был молодым' },
+  	{ en: 'I managed to pass this exam', ru: 'Мне удалось сдать этот экзамен' },
+  	{
+  		en: 'I can say that I was fully satisfied with the quality of these lessons',
+  		ru: 'Я могу сказать, что я был полностью удовлетворён качеством этих уроков',
+  	},
+  	{ en: "This company didn't belong to him", ru: 'Эта компания не принадлежала ему' },
+  	{ en: "It wasn't expensive at all", ru: 'Это было совсем не дорого' },
+  	{ en: "The trip wasn't tiring at all", ru: 'Поездка была совсем не утомительной' },
+  	{ en: "That time didn't seem enough", ru: 'Того времени казалось недостаточно' },
+  	{ en: "This practice wasn't enough for me", ru: 'Этой практики мне не было достаточно' },
+  	{ en: "It didn't matter", ru: 'Это не имело значение' },
+  	{ en: "It didn't attract people's attention in the beginning", ru: 'Это не привлекло внимание людей в начале' },
+  	{
+  		en: "The company wasn't satisfied with the quality of these products",
+  		ru: 'Компания не была удовлетворена качеством этих продуктов',
+  	},
+  	{
+  		en: "That knowledge wasn't enough to pass the exam",
+  		ru: 'Тех знаний было недостаточно для того, чтобы сдать экзамен',
+  	},
+  	{ en: "It wasn't so easy to pass these exams", ru: 'Было не так легко сдать эти экзамены' },
+  	{ en: "The results weren't predictable at all", ru: 'Результаты совсем не были предсказуемыми' },
+  	{ en: 'Were you satisfied with this result?', ru: 'Ты был удовлетворён этим результатом?' },
+  	{ en: 'Was he have a rest yesterday morning?', ru: 'Он отдыхал вчера утром?' },
+  	{ en: 'Did you book the hotel?', ru: 'Ты забронировал отель?' },
+  	{ en: 'Did you understand it in the end?', ru: 'Ты понял это в конце?' },
+  	{ en: 'Did you understand it at the end of the conversation?', ru: 'Ты понял это в конце разговора?' },
+  	{ en: 'Did it happen in the end?', ru: 'Это случилось в конце концов?' },
+  	{ en: 'Did it happen at the end of the meeting?', ru: 'Это случилось в конце встречи?' },
+  	{ en: 'Who called you?', ru: 'Кто тебе звонил?' },
+  	{ en: 'Who did they inform?', ru: 'Кого они проинформировали?' },
+  	{ en: 'Who informed you?', ru: 'Кто проинформировал тебя?' },
+  	{ en: 'When did this accident happen?', ru: 'Когда случилась эта авария?' },
+  	{ en: 'How interested was he?', ru: 'Насколько он был заинтересован?' },
+  	{ en: 'Did you think that it was really necessary to do it?', ru: 'Ты думал, что это действительно необходимо было сделать?' },
+  	{ en: 'That thing seemed absolutely ridiculous', ru: 'Та вещь казалась совершенно нелепой' },
+  	{ en: 'The programm suited most students', ru: 'Программа подходила большинству студентов' },
+  	{ en: 'The secretary checked all the papers', ru: 'Секретарь проверил все бумаги' },
+  	{ en: 'It motivated me but not so much', ru: 'Это мотивировало меня, но не так сильно' },
+  	{ en: 'This thing attracted my attention immediately', ru: 'Эта вещь немедленно привлекла моё внимание' },
+  	{ en: 'He danced very badly', ru: 'Он танцевал очень плохо' },
+  	{ en: 'I received a letter from him', ru: 'Я получил письмо от него' },
+  	{ en: 'How did you manage to save up so much money?', ru: 'Как тебе удалось накопить так много денег?' },
+  	{
+  		en: 'What did you do after you graduated from university?',
+  		ru: 'Что ты делал после того, как окончил университет?',
+  	},
+  	{ en: 'I booked a very good apartament', ru: 'Я забронировл очень хорошую квартиру' },
+  	{ en: 'This thing really mattered to me', ru: 'Эта вещь действительно имела значение для меня' },
+  	{ en: 'The war lasted for about two years', ru: 'Война длилась около двух лет' },
+  	{ en: 'I answered this question correctly', ru: 'Я правильно ответил на этот вопрос' },
+  	{ en: 'He returned to England', ru: 'Он вернулся в Англию' },
+  	{ en: "The majority of people didn't like this new law", ru: 'Большинству людей не понравился этот новый закон' },
+  	{ en: 'The future of the company depended on them', ru: 'Будущее компании зависело от них' },
+  	{
+  		en: "His English sounded very natural although he wasn't a native speaker",
+  		ru: 'Его английский звучал очень естественно, хотя он не был носителем языка',
+  	},
+  	{
+  		en: 'I compared those two computers and chose the second one',
+  		ru: 'Я сравнил те два компьютера и выбрал второй',
+  	},
+  	{ en: 'I compared these two hotels and chose the first one', ru: 'Я сравнил эти два отеля и выбрал первый' },
+  	{
+  		en: 'I compared several courses and decided to choose this one',
+  		ru: 'Я сравнил несколько курсов и решил выбрать этот',
+  	},
+  	{ en: 'She married at the age of eighteen', ru: 'Она вышла замуж в возрасте восемнадцати лет' },
+  	{ en: 'I decided to spend my money on it', ru: 'Я решил потратить на это свои деньги' },
+  	{ en: 'I called to wish him a speedy recovery', ru: 'Я позвонил пожелать ему скорейшего выздоровления' },
+  	{ en: 'I preferred not to tell him this thig', ru: 'Я предпочёл не рассказывать ему эту вещь' },
+  	{ en: 'The success of the project depended on us', ru: 'Успех проекта зависел от нас' },
+  	{ en: 'He kissed her lips', ru: 'Он поцеловал её в губы' },
+  	{
+  		en: 'The authorities promised to solve this problem as soon as possible',
+  		ru: 'Власти пообещали как можно скорее решить эту проблемы',
+  	},
+  	{
+  		en: 'He asked me a few questions during the interview',
+  		ru: 'Он задал мне несколько вопросов во время интервью',
+  	},
+  	{
+  		en: 'My life changed completely after it happened',
+  		ru: 'Моя жизнь полностью изменилась после того, как это произошло',
+  	},
+  	{ en: 'I looked it up in a dictionary', ru: 'Я посмотрел это в словаре' },
+  	{
+  		en: 'I downloaded this application for free and find it extremely useful',
+  		ru: 'Я скачал это приложение бесплатно и нахожу его чрезвычайно полезным',
+  	},
+  	{ en: 'I had to fill in the form', ru: 'Я должен был заполнить форму' },
+  	{ en: 'My friend recommend staying in this hotel', ru: 'Мой друг рекомендовал остановиться в этом отеле' },
+  	{ en: 'She recommended us to use this service', ru: 'Она рекомендовала нам использовать этот сервис' },
+  	{ en: 'I recommended reading that book', ru: 'Я рекомендовал прочитать ту книгу' },
+  	{ en: 'I just needed some information', ru: 'Мне просто нужна была некоторая информация' },
+  	{ en: 'I reached the next level very easily', ru: 'Я достиг следующего уровня очень легко' },
+  	{
+  		en: 'She never complained although it was very difficult for her',
+  		ru: 'Она никогда не жаловалась, хотя это было очень трудно для неё',
+  	},
+  	{
+  		en: 'I tried to do my best to achieve this aim',
+  		ru: 'Я пытался сделать всё возможное, чтобы достичь этой цели',
+  	},
+  	{ en: 'I analysed everything very thoroughly', ru: 'Я очень тщательно всё проанализировал' },
+  	{ en: "I couldn't believe my eyes", ru: 'Я не мог поверить своим глазам' },
+  	{ en: 'I decide to stop wasting time', ru: 'Я решил перестать тратить время впустую' },
+  	{ en: 'I tried very hard to achieve this aim', ru: 'Я очень усердно старался достичь этой цели' },
+  	{ en: 'I supposed that it was a lie', ru: 'Я предполагал, что это была ложь' },
+  	{ en: 'I started thinking about going to the United States', ru: 'Я начал думать о поездке в Соединённые Штаты' },
+  	{ en: 'I started thinking about moving to another city', ru: 'Я начал думать о переезде в другой город' },
+  	{ en: "I couldn't concentrate because of that noise", ru: 'Я не мог сосредоточиться из-за того шума' },
+  	{ en: "I couldn't concentrate because of him", ru: 'Я не мог сосредоточиться из-за него' },
+  	{ en: 'Our teacher explained everything to me', ru: 'Наш учитель всё объяснил мне' },
+  	{ en: 'My colleagues informed me of these difficulties', ru: 'Мои коллеги сообщили мне об этих трудностях' },
+  	{ en: 'I started thinking about it more often', ru: 'Я начал думать об этом чаще' },
+  	{ en: 'I started going outside less often', ru: 'Я начал реже ходить на улицу' },
+  	{ en: 'I hurried up to not to miss this bus', ru: 'Я поспешил, чтобы не опоздать на этот автобус' },
+  	{ en: 'I withdrew three dollar from my account', ru: 'Я снял три доллара со своего счёта' },
+  	{ en: 'I withdrew all the money', ru: 'Я снял все деньги' },
+  	{ en: 'I hung it on the wall', ru: 'Я повесил это на стену' },
+  	{ en: 'What time did you leave home?', ru: 'Во сколько ты ушёл из дома?' },
+  	{ en: 'The police caught those criminals', ru: 'Полиция поймала тех преступников' },
+  	{ en: 'I forgot to take my keys', ru: 'Я забыл взять свои ключи' },
+  	{ en: 'It led him to success', ru: 'Это привело его к успеху' },
+  	{ en: 'I heard a strange noise', ru: 'Я слышал странный шум' },
+  	{ en: 'The soldier fought very bravely and courageously', ru: 'Солдаты сражались очень смело и отважно' },
+  	{ en: 'The soldier fought really heroically', ru: 'Солдат сражался действительно героически' },
+  	{ en: 'Most native speakers spoke very fast', ru: 'Большинство носителей языка говорили очень быстро' },
+  	{ en: 'I rode a bike quite often', ru: 'Я довольно часто ездил на велосипеде' },
+  	{ en: 'I decided to throw it away', ru: 'Я решил выбросить это' },
+  	{ en: "His parrents didn't let him do it", ru: 'Его родители не позволили ему сделать это' },
+  	{ en: 'He let me do what I wanted', ru: 'Он позволял мне делать то, что я хотел' },
+  	{ en: 'The boys rode a pony', ru: 'Мальчики катались на пони' },
+  	{ en: 'I forgot the name of the street', ru: 'Я забыл название улицы' },
+  	{ en: "His parents didn't let him go out so late", ru: 'Его родители не позволяли ему выходить так поздно' },
+  	{ en: 'I saw her at the party', ru: 'Я видел её на вечеринке' },
+  	{ en: "I forgot your friend's name", ru: 'Я забыл имя твоего друга' },
+  	{ en: 'I sat on a chair', ru: 'Я сел на стул' },
+  	{ en: 'I sat in a armchair', ru: 'Я стел в кресло' },
+  	{ en: 'I swaw across the river', ru: 'Я переплыл реку' },
+  	{ en: 'He fell ill last week', ru: 'Он заболел на прошлой неделе' },
+  	{ en: 'I lost concentration suddenly', ru: 'Я внезапно потерял концентрацию' },
+  	{ en: 'I wore a school uniform', ru: 'Я носил школьную форму' },
+  	{ en: 'I could do these two things at the same time', ru: 'Я мог делать эти две вещи одновременно' },
+  	{ en: 'He lent him this sum of money', ru: 'Он одолжил ему эту сумму денег' },
+  	{ en: 'He lent her a very big sum of money', ru: 'Он одолжил ей очень большую сумму денег' },
+  	{ en: 'I could listen to it doing other things', ru: 'Я мог слушать это, делая другие вещи' },
+  	{
+  		en: 'I could learn English for hours without any breaks at all',
+  		ru: 'Я мог учить английский часами вовсе без каких-либо перерывов',
+  	},
+  	{ en: 'The shoes fit me perfectly', ru: 'Обувь идеально мне подошла' },
+  	{ en: 'Who beat him so badly?', ru: 'Кто избил его так сильно?' },
+  	{ en: 'They beat him very badly', ru: 'Они избили его очень сильно' },
+  	{ en: 'It was an outstanding achievement', ru: 'Это было вадающееся достижение' },
+  	{ en: 'He said that he was incredibly busy', ru: 'Он сказал, что он был невероятно занят' },
+  	{ en: 'The jeans fit her really well', ru: 'Джинсы ей действительно хорошо подошли' },
+  	{ en: 'They got married at the end of the year', ru: 'Они поженились в конце года' },
+  	{ en: 'What things interested you most?', ru: 'Какие вещи интересовали тебя больше?' },
+  	{ en: 'I use it for other purposes', ru: 'Я использую это для других целей' },
+  	{
+  		en: 'You need to download the latest version of this application',
+  		ru: 'Тебе нужно скачать последнюю версию этого приложения',
+  	},
+  	{ en: 'These things may happen soon', ru: 'Эти вещи возможно скоро произойдут' },
+  	{ en: 'They may resolve this conflict somehow', ru: 'Они возможно как-то разрешат этот конфликт' },
+  	{ en: 'It may happen soon', ru: 'Это возможно скоро произойдёт' },
+  	{ en: 'What thing interests you more?', ru: 'Какая вещь тебя больше интересует?' },
+  	{ en: 'He needs to do it by tomorrow', ru: 'Ему нужно сделать это к завтрашнему дню' },
+  	{ en: 'They beat this poor man', ru: 'Они избили этого бедного мужчину' },
+  	{ en: 'I saw him there for the first time', ru: 'Я увидел его в первый раз' },
+  	{ en: "It can attract other people's attention", ru: 'Это может привлечь внимание других людей' },
+  	{ en: 'How many hours a day did you train?', ru: 'Сколько часов в день ты тренировался?' },
+  	{ en: 'I usually train two times a week', ru: 'Я обычно тренируюсь два раза в неделю' },
+  	{ en: 'Let me express my point of view', ru: 'Позволь мне высказать свою точку зрения' },
+  	{ en: "I don't train intensively enough", ru: 'Я не тренируюсь достаточно интенсивно' },
+  	{ en: 'He felt relaxed', ru: 'Он чувствовал себя расслабленно' },
+  	{ en: 'It really costs a fortune', ru: 'Это действительно стоит целое состояние' },
+  	{ en: 'I hope that my dreams come true', ru: 'Я надеюсь, что мои мечты сбудутся' },
+  	{
+  		en: 'This bestseller brought her fame and public recognition',
+  		ru: 'Это бестселлер принёс ей известность и общественное признание',
+  	},
+  	{
+  		en: 'I managed to overcame all these difficulties in my way',
+  		ru: 'Мне удалось преодолеть все эти трудности на моём пути',
+  	},
+  	{
+  		en: 'I know that I must start looking for another job',
+  		ru: 'Я знаю, что я должен начать искать другую работу',
+  	},
+  	{ en: 'I love you with all my heart', ru: 'Я люблю тебя всем своим сердцем' },
+  	{
+  		en: 'I want to tell you that you can count on always on my help',
+  		ru: 'Я хочу сказать тебе, что ты всегда можешь рассчитывать на мою помощь',
+  	},
+  	{ en: "You can't count on his support", ru: 'Ты не можешь рассчитывать на его поддержку' },
+  	{ en: 'She cut in into two pieces', ru: 'Она разрезала это на два куска' },
+  	{ en: 'She cut it into several parts', ru: 'Она разрезала это на несколько частей' },
+  	{ en: "He'd like to enter that university", ru: 'Он хотел бы поступить в тот университет' },
+  	{ en: 'How did she enter the building?', ru: 'Как она вошла в здание?' },
+  	{ en: 'How did you manage to win?', ru: 'Как тебе удалось победить?' },
+  	{ en: 'This road leands to the nearest hotel', ru: 'Эта дорога ведёт к ближайшему отелю' },
+  	{ en: "I hope you'll be able to come to us", ru: 'Я надеюсь, ты сможешь прийти к нам' },
+  	{ en: ' I decided to stop wasting time', ru: 'Я решил прекратить тратить время впустую' },
+  	{
+  		en: 'He hopes to earn this sum of money be next year',
+  		ru: 'Он надеется заработать эту сумму денег к следующему году',
+  	},
+  	{
+  		en: 'They triend to hide it from the police but it was without success',
+  		ru: 'Они пытались скрыть это от полиции, но это было безуспешно',
+  	},
+  	{ en: 'I really enjoy playing sport', ru: 'Я действительно обожаю заниматься спортом' },
+  	{ en: 'Who cares about it?', ru: 'Кого это волнует?' },
+  	{ en: 'The company increased its sales', ru: 'Компания увеличила свои продажи' },
+  	{ en: "You don't need to interrupt others for no reason", ru: 'Тебе не нужно перебивать других без причины' },
+  	{ en: 'I fully understood your point of view', ru: 'Я полностью понял твою точку зрения' },
+  	{ en: 'She will take part in this competition', ru: 'Она примет участие в этом соревновании' },
+  	{ en: 'He created this channel about five years ago', ru: 'Он создал этот канал около пяти лет назад' },
+  	{ en: 'They could reduce the costs', ru: 'Они могли бы согратить расходы' },
+  	{
+  		en: 'This organisation fights for human rights and justice',
+  		ru: 'Эта организация борется за права человека и справедливость',
+  	},
+  	{ en: 'I need to fill in the gaps now', ru: 'Мне нужно заполнить пробелы сейчас' },
+  	{ en: 'Definitely, I recommend visiting this place', ru: 'Определённо, я рекомендую посетить это место' },
+  	{ en: 'This hospital provides the best medical care', ru: 'Эта больница предоставляет лучший медицинский уход' },
+  	{ en: 'The teacher asked the boys to stop talking', ru: 'Учитель попросил мальчиков перестать говорить' },
+  	{ en: 'It was difficult for her to forgive him', ru: 'Ей было трудно простить его' },
+  	{ en: 'He fell off a horse', ru: 'Он упал с лошади' },
+  	{ en: 'He fell to the ground', ru: 'Он упал на землю' },
+  	{ en: 'He hates getting up so early', ru: 'Она ненавидит вставать так рано' },
+  	{ en: 'I hate waking up so early', ru: 'Я ненавижу просыпаться так рано' },
+  	{ en: 'I think you should stop smoking', ru: 'Я думаю, тебе следует прекратить курить' },
+  	{ en: 'Our cours lasted more than three months', ru: 'Наш курс длился более трёх месяцев' },
+  	{ en: 'He jumped into the lake', ru: 'Он прыгнул в озеро' },
+  	{ ru: 'Письма внезапно исчезли The letters disappeared all of a sudden' },
+  	{ en: 'the food smells awful', ru: 'Еда пахнет ужасно' },
+  	{
+  		en: 'I will try to practise my English as much as I can because I really want to make good progress',
+  		ru: 'Я постараюсь практиковать свой английский столько, сколько я могу, потому что я действительно хочу добиться хорошего прогресса',
+  	},
+  	{ en: ' I decided to buy a house instead of a apartment', ru: 'Я решил купить дом вместо квартиры' },
+  	{ en: 'The performance really impressed me', ru: 'Представление действительно впечатлило меня' },
+  	{ en: 'She asked for help', ru: 'Она попросила помощи' },
+  	{ en: 'He learnt this text by heart', ru: 'Он выучил этот текст наизусть' },
+  ];
+  
+  console.log(OFFERS_A1_77_100.length)
 
   const findChoose = document.querySelector('.offers1__choose');
 
@@ -4354,6 +4670,61 @@ if (document.querySelector('#template-offers__one') !== null) {
     findAnswerArr.append(fragment);
   };
   
+  const renderFinish = (arr, count, language) => {
+    document.querySelector('.offers1__form').style.display = 'none'
+    let finishField = document.querySelector('#finish-field')
+    finishField.textContent = ''
+    finishField.classList.remove('visually-hidden')
+    let lang
+  
+    const shuffleArr = (arr) => {
+      for (let i = arr.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        let t = arr[i];
+        arr[i] = arr[j];
+        arr[j] = t;
+      }
+    };
+  
+    shuffleArr(arr)
+  
+    switch (language) {
+      case 'en': {
+        lang = 'en'
+      } break
+      case 'ru': {
+        lang = 'ru'
+      } break
+      case 'all': {
+        lang = 'all'
+      } break
+      default: {
+        lang = 'en'
+      }
+    }
+  
+  
+  
+    for (let i = 0; i < count; i++) {
+      let fragment = document.createElement('span')
+      fragment.classList.add('finish-sentence')
+  
+      if (lang === 'all') {
+        if (i % 2 === 0) {
+          fragment.append(document.createTextNode(arr[i]['en']))
+        } else {
+          fragment.append(document.createTextNode(arr[i]['ru']))
+        }
+      } else {
+        fragment.append(document.createTextNode(arr[i][lang]))
+      }
+  
+  
+      finishField.append(fragment)
+    }
+  
+  
+  }
   const generateRandomNumbers = (count, arr) => {
     let min = 0;
     let max = arr.length - 1;
@@ -4402,6 +4773,30 @@ if (document.querySelector('#template-offers__one') !== null) {
   let languageAnswer;
   let arrOfQuestions;
   
+  let finish = document.querySelector('#lesson-5')
+  
+  let others = document.querySelectorAll('.offers1__choose-label[data-others]')
+  let lessons = document.querySelectorAll('.offers1__choose-label[data-lesson]')
+  let levelMore = document.querySelector('#label-more')
+  
+  finish.addEventListener('click', () => {
+    others.forEach((el) => {
+      el.style.display = 'none'
+    })
+    levelMore.classList.remove('visually-hidden')
+  })
+  
+  lessons.forEach((el) => {
+    el.addEventListener('click', () => {
+      levelMore.classList.add('visually-hidden')
+      others.forEach((element) => {
+        element.style.display = 'inline-block'
+      })
+    })
+  })
+  
+  
+  
   findBtnStart.addEventListener('click', () => {
     findResponseField.style.backgroundColor = '#fff';
     const findValueOfLessons = findChoose.querySelector('.offers1__lessons:checked');
@@ -4423,6 +4818,10 @@ if (document.querySelector('#template-offers__one') !== null) {
       case '4':
         arrOfQuestions = OFFERS_A1_72_76;
         break;
+      case '5':
+        arrOfQuestions = OFFERS_A1_77_100;
+        renderFinish(arrOfQuestions, findValueOfQuestions.value, findValueOfLanguage.value)
+        return
       default:
         arrOfQuestions = OFFERS_A1_51_57;
     }
