@@ -16,11 +16,6 @@ timer.textContent = `00:00:00`
 
 const startTimer = () => {
 	if (localStorage.getItem('time')) {
-		title.textContent = localStorage.getItem('time')
-		timer.textContent = localStorage.getItem('time')
-		seconds = +(localStorage.getItem('sec'))
-		minutes = +(localStorage.getItem('min'))
-		hours = +(localStorage.getItem('hour'))
 		startBtn.disabled = true;
 		resetBtn.disabled = false;
 
@@ -33,14 +28,8 @@ const startTimer = () => {
 			let passedTime = Math.round((+(localStorage.getItem('passed')) - +(localStorage.getItem('start'))) / 1000)
 
 			seconds = passedTime % 60
-			minutes = Math.floor(passedTime / 60)
-
-			if (minutes >= 60) {
-				hours++;
-				minutes = minutes - 60;
-			}
-
-			console.log(passedTime)
+			minutes = Math.floor(passedTime / 60) % 60
+			hours = Math.floor(passedTime / 60 / 60)
 
 			interval = setInterval(updateTime, 1000);
 		}
@@ -63,10 +52,7 @@ export function updateTime() {
 		minutes = 0;
 	}
 	timer.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-	localStorage.setItem('time', timer.textContent)
-	localStorage.setItem('sec', seconds)
-	localStorage.setItem('min', minutes)
-	localStorage.setItem('hours', hours)
+
 	title.textContent = timer.textContent
 }
 
