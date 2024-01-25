@@ -15,7 +15,7 @@ let interval;
 timer.textContent = `00:00:00`
 
 const startTimer = () => {
-	if (localStorage.getItem('time')) {
+	if (localStorage.getItem('start')) {
 		startBtn.disabled = true;
 		resetBtn.disabled = false;
 
@@ -30,8 +30,9 @@ const startTimer = () => {
 			seconds = passedTime % 60
 			minutes = Math.floor(passedTime / 60) % 60
 			hours = Math.floor(passedTime / 60 / 60)
-
+			timer.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 			interval = setInterval(updateTime, 1000);
+
 		}
 	} else {
 		title.textContent = timer.textContent
@@ -39,7 +40,7 @@ const startTimer = () => {
 	}
 }
 
-setTimeout(startTimer, 500)
+setTimeout(startTimer, 200)
 
 export function updateTime() {
 	seconds++;
@@ -87,7 +88,7 @@ resetBtn.addEventListener('click', () => {
 	resetBtn.disabled = true;
 	continueBtn.classList.add('visually-hidden')
 	startBtn.classList.remove('visually-hidden')
-	localStorage.removeItem('time')
+	localStorage.removeItem('start')
 });
 
 continueBtn.addEventListener('pointerdown', (evt) => {

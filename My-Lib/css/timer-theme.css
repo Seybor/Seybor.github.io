@@ -34,9 +34,6 @@
   cursor: pointer;
   touch-action: none;
 }
-#init-drag:hover {
-  background-color: darkblue;
-}
 
 .init-timer__time {
   font-size: 48px;
