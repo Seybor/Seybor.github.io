@@ -1,4 +1,4 @@
-const ALL_PHRASES_VERBS = [
+const PHRASES_VERBS = [
 	{ en: 'be about', ru: 'собираться, быть на ногах, вставать, быть занятым чем-либо' },
 	{ en: 'be along', ru: 'приходить, приезжать' },
 	{ en: 'be around', ru: 'быть популярным, известным, быть опытным' },
@@ -775,6 +775,6 @@ const ALL_PHRASES_VERBS = [
 	{ en: 'point out', ru: 'указывать, показывать, обращать внимание' },
 ]
 
-console.log(ALL_PHRASES_VERBS.length)
+console.log(PHRASES_VERBS.length)
 
-export { ALL_PHRASES_VERBS }
+export { PHRASES_VERBS }
