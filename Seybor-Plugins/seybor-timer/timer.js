@@ -130,11 +130,8 @@ export const seyborStartTimer = () => {
 
 	startBtn.addEventListener('click', () => {
 
-		if (localStorage.getItem('pause')) {
-			localStorage.removeItem('pause')
-		} else {
-			localStorage.setItem('start', `${Date.now()}`)
-		}
+		localStorage.removeItem('pause')
+		localStorage.setItem('start', `${Date.now()}`)
 
 		startBtn.disabled = true;
 		pauseBtn.disabled = false;
@@ -143,7 +140,6 @@ export const seyborStartTimer = () => {
 		interval = setInterval(updateTime, 1000);
 
 	});
-
 
 
 	pauseBtn.addEventListener('click', () => {
