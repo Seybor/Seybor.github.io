@@ -63,7 +63,6 @@ export const seyborStartTimer = () => {
 	document.head.append(style);
 	document.body.append(start);
 
-
 	const timer = document.getElementById('timer');
 	const startBtn = document.getElementById('startBtn');
 	const pauseBtn = document.getElementById('pauseBtn');
@@ -77,27 +76,36 @@ export const seyborStartTimer = () => {
 	let hours = 0;
 	let interval;
 
+
 	timer.textContent = `00:00:00`
 
+
 	const startTimer = () => {
+		let passedTime
+		localStorage.setItem('correctTime', `${0}`)
 		if (localStorage.getItem('start')) {
+			console.log('start')
 			startBtn.disabled = true;
 			pauseBtn.disabled = false;
 			resetBtn.disabled = false;
+			localStorage.setItem('passed', `${Date.now()}`)
 
 			if (localStorage.getItem('pause')) {
+				console.log('start - pause')
 				startBtn.disabled = false;
 				pauseBtn.disabled = true;
 				resetBtn.disabled = false;
+
+				passedTime = Math.round((+(localStorage.getItem('pause')) - +(localStorage.getItem('start'))) / 1000)
 			} else {
+				console.log('start - !pause')
 				startBtn.disabled = true;
 				pauseBtn.disabled = false;
 				resetBtn.disabled = false;
-				localStorage.setItem('passed', `${Date.now()}`)
 				interval = setInterval(updateTime, 1000);
+				passedTime = Math.round((+(localStorage.getItem('passed')) - +(localStorage.getItem('start'))) / 1000)
 			}
 
-			let passedTime = Math.round((+(localStorage.getItem('passed')) - +(localStorage.getItem('start'))) / 1000)
 			seconds = passedTime % 60
 			minutes = Math.floor(passedTime / 60) % 60
 			hours = Math.floor(passedTime / 60 / 60)
@@ -130,8 +138,11 @@ export const seyborStartTimer = () => {
 
 	startBtn.addEventListener('click', () => {
 
-		localStorage.removeItem('pause')
-		localStorage.setItem('start', `${Date.now()}`)
+		if (localStorage.getItem('pause')) {
+			localStorage.removeItem('pause')
+		} else {
+			localStorage.setItem('start', `${Date.now()}`)
+		}
 
 		startBtn.disabled = true;
 		pauseBtn.disabled = false;
@@ -148,8 +159,9 @@ export const seyborStartTimer = () => {
 		startBtn.disabled = false;
 		pauseBtn.disabled = true;
 		resetBtn.disabled = false;
-		localStorage.setItem('pause', 'true')
-		localStorage.setItem('passed', `${Date.now()}`)
+
+		localStorage.setItem('pause', `${Date.now()}`)
+
 	});
 
 	resetBtn.addEventListener('click', () => {
@@ -164,6 +176,7 @@ export const seyborStartTimer = () => {
 		resetBtn.disabled = true;
 		localStorage.removeItem('start')
 		localStorage.removeItem('passed')
+		localStorage.removeItem('pause')
 	});
 
 
