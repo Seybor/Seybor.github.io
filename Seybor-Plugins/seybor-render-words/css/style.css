@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+  background-color: gray;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: black;
+}
+
+.seybor-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 400px;
+  width: 100%;
+  border: 1px solid red;
+}
+
+.wrap-input {
+  padding: 10px;
+  background-color: gray;
+}
+
+.content {
+  border: 1px solid black;
+  overflow: auto;
+  width: 100%;
+  max-width: 800px;
+  max-height: 400px;
+  display: flex;
+  scroll-snap-type: x mandatory;
+}
+
+.item {
+  padding: 20px 10px;
+  min-width: 100%;
+  background-color: green;
+  border: 1px solid blue;
+  width: 100%;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: column;
+  font-size: clamp(20px, 2vh, 40px);
+  font-weight: bold;
+  text-align: center;
+  overflow: auto;
+}
+
+.item span {
+  padding: 12px 4px;
+  font-size: inherit;
+}

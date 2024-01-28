@@ -1,76 +1,68 @@
-const seyborStartTimer = () => {
+export const seyborStartTimer = () => {
 
-	const createStyle = () => {
+	const style = document.createElement('style')
+	style.innerHTML = `
+	.init-timer {
+	  position: fixed;
+	  right: 0;
+	  top: 0;
 
-		const style = document.createElement('style')
-		style.innerHTML = `
-		.init-timer {
-			position: fixed;
-			right: 0;
-			top: 0;
-	
-			padding: 6px;
-			height: 150px;
-			width: 300px;
-	
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-	
-			border: 1px solid gray;
-			background-color: gray;
-			text-align: center;
-			opacity: 1;
-		}
-	
-		#init-drag {
-			position: absolute;
-			left: 5px;
-			top: 5px;
-	
-			width: 50px;
-			height: 50px;
-			background-color: green;
-	
-			cursor: pointer;
-			touch-action: none;
-		}
-	
-		.init-timer__time {
-			font-size: 48px;
-		}
-	
-		.init-timer__wrapper * {
-			font-size: 24px;
-		}
-	
-		.init-timer__btn {
-			border: none;
-			padding: 6px 12px;
-		}
-	`
-		document.head.append(style);
+	  padding: 6px;
+	  height: 150px;
+	  width: 300px;
+
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+
+	  border: 1px solid gray;
+	  background-color: gray;
+	  text-align: center;
+	  opacity: 1;
 	}
 
-	const createHtml = () => {
-		const start = document.createElement('div')
-		start.innerHTML = `
-		<div class="init-timer" id="init-timer">
-			<span id="init-drag"></span>
-			<h1 class="init-timer__time" id="timer">00:00:00</h1>
-			<div class="init-timer__wrapper">
-				<button class="init-timer__btn" id="startBtn">Старт</button>
-				<button class="init-timer__btn" id="pauseBtn" disabled>Пауза</button>
-				<button class="init-timer__btn" id="resetBtn" disabled>Сброс</button>
-			</div>
+	#init-drag {
+	  position: absolute;
+	  left: 5px;
+	  top: 5px;
+
+	  width: 50px;
+	  height: 50px;
+	  background-color: green;
+
+	  cursor: pointer;
+	  touch-action: none;
+	}
+
+	.init-timer__time {
+	  font-size: 48px;
+	}
+
+	.init-timer__wrapper * {
+	  font-size: 24px;
+	}
+
+	.init-timer__btn {
+	  border: none;
+	  padding: 6px 12px;
+	}
+`
+	const start = document.createElement('div')
+	start.innerHTML = `
+	<div class="init-timer" id="init-timer">
+		<span id="init-drag"></span>
+		<h1 class="init-timer__time" id="timer">00:00:00</h1>
+		<div class="init-timer__wrapper">
+			<button class="init-timer__btn" id="startBtn">Старт</button>
+			<button class="init-timer__btn" id="pauseBtn" disabled>Пауза</button>
+			<button class="init-timer__btn" id="resetBtn" disabled>Сброс</button>
 		</div>
-	`
-		document.body.append(start);
-	}
+	</div>
+`
+	document.head.append(style);
+	document.body.append(start);
 
-	createStyle()
-	createHtml()
 
 	const timer = document.getElementById('timer');
 	const startBtn = document.getElementById('startBtn');
@@ -88,45 +80,24 @@ const seyborStartTimer = () => {
 	timer.textContent = `00:00:00`
 
 	const startTimer = () => {
-		let passedTime
 		if (localStorage.getItem('start')) {
-			console.log('start')
 			startBtn.disabled = true;
 			pauseBtn.disabled = false;
 			resetBtn.disabled = false;
 
-			localStorage.setItem('passed', `${Date.now()}`)
-
 			if (localStorage.getItem('pause')) {
-				console.log('start - pause')
 				startBtn.disabled = false;
 				pauseBtn.disabled = true;
 				resetBtn.disabled = false;
-
-				passedTime = Math.round(+(localStorage.getItem('workTime')) / 1000)
-
 			} else {
-				console.log('start - !pause')
 				startBtn.disabled = true;
 				pauseBtn.disabled = false;
 				resetBtn.disabled = false;
 				localStorage.setItem('passed', `${Date.now()}`)
-				localStorage.setItem('pauseTimePassed', `${Date.now()}`)
-
-				let sumPauseTime
-				if (localStorage.getItem('pauseTime')) {
-					sumPauseTime = (+(localStorage.getItem('sumPauseTime')) + (+(localStorage.getItem('pauseTimePassed')) - +(localStorage.getItem('pauseTime'))))
-				} else {
-					sumPauseTime = (+(localStorage.getItem('sumPauseTime')))
-				}
-
-				localStorage.setItem('sumPauseTime', `${sumPauseTime}`)
-
-				passedTime = Math.round((+(localStorage.getItem('passed')) - +(localStorage.getItem('start')) - +(localStorage.getItem('sumPauseTime'))) / 1000)
-
 				interval = setInterval(updateTime, 1000);
 			}
 
+			let passedTime = Math.round((+(localStorage.getItem('passed')) - +(localStorage.getItem('start'))) / 1000)
 			seconds = passedTime % 60
 			minutes = Math.floor(passedTime / 60) % 60
 			hours = Math.floor(passedTime / 60 / 60)
@@ -163,7 +134,6 @@ const seyborStartTimer = () => {
 			localStorage.removeItem('pause')
 		} else {
 			localStorage.setItem('start', `${Date.now()}`)
-			localStorage.setItem('sumPauseTime', `0`)
 		}
 
 		startBtn.disabled = true;
@@ -175,26 +145,15 @@ const seyborStartTimer = () => {
 	});
 
 
+
 	pauseBtn.addEventListener('click', () => {
 		clearInterval(interval);
 
 		startBtn.disabled = false;
 		pauseBtn.disabled = true;
 		resetBtn.disabled = false;
-
-		localStorage.setItem('pause', `true`)
-		localStorage.setItem('pauseTime', `${Date.now()}`)
-
-		let workTime
-
-		if (localStorage.getItem('workTime')) {
-			workTime = Math.round(+(localStorage.getItem('workTime')) + (+(localStorage.getItem('passed')) - +(localStorage.getItem('start')) - +(localStorage.getItem('sumPauseTime'))))
-		} else {
-			workTime = Math.round(+(Date.now()) - +(localStorage.getItem('start')))
-		}
-
-		localStorage.setItem('workTime', `${workTime}`)
-
+		localStorage.setItem('pause', 'true')
+		localStorage.setItem('passed', `${Date.now()}`)
 	});
 
 	resetBtn.addEventListener('click', () => {
@@ -207,7 +166,8 @@ const seyborStartTimer = () => {
 		startBtn.disabled = false;
 		pauseBtn.disabled = true;
 		resetBtn.disabled = true;
-		localStorage.clear()
+		localStorage.removeItem('start')
+		localStorage.removeItem('passed')
 	});
 
 
@@ -293,4 +253,3 @@ const seyborStartTimer = () => {
 }
 
 
-export default seyborStartTimer
