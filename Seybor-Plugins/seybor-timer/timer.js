@@ -6,6 +6,7 @@ const seyborStartTimer = () => {
 	  position: fixed;
 	  right: 0;
 	  top: 0;
+	  z-index: 10000;
 
 	  padding: 6px;
 	  height: 150px;
