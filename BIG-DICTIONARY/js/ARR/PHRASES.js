@@ -130,7 +130,10 @@ const PHRASES = {
 		{ en: 'sit down', ru: 'присесть' },
 	],
 	FLY: [
+		{ en: 'fly away', ru: 'улетать' },
 		{ en: 'fly back', ru: 'лететь обратно' },
+		{ en: 'fly to', ru: 'летать куда-то' },
+		{ en: 'fly abroad / home / there / here', ru: 'исключения [без to]' },
 	],
 	STAND: [
 		{ en: 'stand up', ru: 'вставать(из положения сидя, лёжа)' },
@@ -176,8 +179,6 @@ const PHRASES = {
 		{ en: 'move to', ru: 'переехать в какую-то страну / город' },
 		{ en: 'move into', ru: 'переехать куда-то' },
 		{ en: 'move abroad / home / there / here', ru: 'исключения [без to]' },
-		{ en: 'fly to', ru: 'летать куда-то' },
-		{ en: 'fly abroad / home / there / here', ru: 'исключения [без to]' },
 		{ en: 'invite to', ru: 'приглашать куда-то / если приглашать кого-то, то без to' },
 		{ en: 'listen to', ru: 'слушать что-то или кого-то' },
 		{ en: 'it seems to + личное местоимение', ru: 'кому-то кажется; это кажется кому-то' },
