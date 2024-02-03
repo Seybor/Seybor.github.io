@@ -37,6 +37,8 @@ const seyborStartTimer = () => {
 	}
 
 	.init-timer__time {
+		margin: 0 12px;
+
 	  font-size: 48px;
 	}
 
