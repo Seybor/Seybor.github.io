@@ -8,8 +8,7 @@ const seyborStartTimer = () => {
 	  top: 0;
 	  z-index: 10000;
 
-	  padding: 6px;
-	  height: 150px;
+	  padding: 24px 6px;
 	  width: 300px;
 
 	  display: flex;
@@ -37,7 +36,8 @@ const seyborStartTimer = () => {
 	}
 
 	.init-timer__time {
-		margin: 0 12px;
+		margin: 0px;
+		padding: 12px 0;
 
 	  font-size: 48px;
 	}
