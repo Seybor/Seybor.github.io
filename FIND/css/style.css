@@ -52,11 +52,6 @@ body {
   background-color: var(--bgc);
 }
 
-.header__inner {
-}
-
-.search {
-}
 .search__inner {
   display: flex;
   flex-wrap: wrap;
@@ -108,14 +103,14 @@ body {
 }
 
 .footer {
-  padding: 40px 0;
+  padding: 20px 0;
 
   text-align: center;
 
   background-color: var(--bgc);
 }
 .footer__inner {
-  font-size: 4em;
+  font-size: 48px;
   font-weight: 900;
 }
 

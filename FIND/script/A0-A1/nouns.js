@@ -747,6 +747,13 @@ const NOUNS = [
 		ru: 'работа по дому',
 		ru_example: 'Она делала работу по дому?',
 		en_example: 'Did she do housework?'
+	},
+	{
+		en: 'purpose',
+		tr: '[ˈpɜːrpəs]',
+		ru: 'цель',
+		ru_example: 'Это была благородная цель',
+		en_example: 'It was a noble purpose'
 	}
 
 ]
