@@ -352,7 +352,7 @@ const PHRASES_VERBS = [
 		en_example: 'This thing belongs to me'
 	},
 	{
-		en: 'wakes + ponoun + up',
+		en: 'wakes + pronoun + up',
 		ru: 'будить кого-то',
 		ru_example: 'Не буди меня!',
 		en_example: "Don't wake me up!"
@@ -592,6 +592,31 @@ const PHRASES_VERBS = [
 		en_example: 'Wait a minute'
 	},
 
+	{
+		en: 'like/love/continue + doing / to do',
+		ru: 'после них может быть как глагол с ing, так и to',
+		ru_example: 'Я продолжу заниматься',
+		en_example: `I'll continue practicing`
+	},
+
+	{
+		en: 'stop/enjoy/hate/finish/start + doing',
+		ru: 'после них глагол + ing',
+		ru_example: 'Я ненавижу танцевать',
+		en_example: 'I hate dancing'
+	},
+	{
+		en: 'without + doing',
+		ru: 'не делая что-то',
+		ru_example: 'Он хотел добиться успеха, не делая ничего',
+		en_example: 'He wanted to succeed without doing anything'
+	},
+	{
+		en: 'recommend + doing something',
+		ru: 'рекомендовать что-то сделать',
+		ru_example: 'Я рекомендую сделать это',
+		en_example: 'I recommend doing this'
+	},
 ]
 
 export default PHRASES_VERBS
