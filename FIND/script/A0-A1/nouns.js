@@ -1,5 +1,13 @@
 const NOUNS = [
 
+
+	{
+		en: 'accident',
+		tr: '[ˈæksɪdənt]',
+		ru: 'авария, происшествие, несчастный случай',
+		ru_example: 'Все были шокированы той аварией',
+		en_example: "Everyone was shocked by that accident"
+	},
 	{
 		en: 'entrepreneur',
 		tr: '[ˌɒntrəprəˈnɜː]',
