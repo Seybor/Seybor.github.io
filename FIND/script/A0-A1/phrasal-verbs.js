@@ -127,9 +127,9 @@ const PHRASAL_VERBS = [
   },
   {
     en: 'point out',
-    ru: 'заметить',
-    ru_example: 'Стоит заметить, что она далека от обычного человека',
-    en_example: 'But, I point out, he is very far from an ordinary guy'
+    ru: 'заметить, отметить',
+    ru_example: 'Я хотел бы отметить, что эта чрезвычайно важная вещь',
+    en_example: `I'd like to point out that it's an extremely important thing`
   },
   {
     en: 'point at/to',

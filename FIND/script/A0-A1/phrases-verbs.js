@@ -448,10 +448,10 @@ const PHRASES_VERBS = [
 		en_example: "Don't pay attention to it"
 	},
 	{
-		en: 'perfectly realise/realize',
+		en: 'perfectly realize',
 		ru: 'прекрасно осознавать',
 		ru_example: 'Я прекрасно осознаю важность этих событий',
-		en_example: 'I perfectly recognize the importance of these events'
+		en_example: 'I perfectly realize the importance of these events'
 	},
 	{
 		en: 'arrive in / arrive at',
@@ -556,7 +556,7 @@ const PHRASES_VERBS = [
 		en_example: 'Let me do it'
 	},
 	{
-		en: 'without + глагол + ing',
+		en: 'without + doing',
 		ru: 'не делая что-то',
 		ru_example: 'Я буду это делать не глядя',
 		en_example: "I'll do it without looking"
@@ -574,7 +574,13 @@ const PHRASES_VERBS = [
 		en_example: 'I recommend this book to you'
 	},
 	{
-		en: 'ride a + существительное',
+		en: 'recommend + doing something',
+		ru: 'рекомендовать что-то сделать',
+		ru_example: 'Я рекомендую сделать это',
+		en_example: 'I recommend doing this'
+	},
+	{
+		en: 'ride a + noun',
 		ru: 'ездить на чём-то',
 		ru_example: 'Я умею ездить на велосипеде',
 		en_example: 'I can ride a bike'
@@ -605,18 +611,7 @@ const PHRASES_VERBS = [
 		ru_example: 'Я ненавижу танцевать',
 		en_example: 'I hate dancing'
 	},
-	{
-		en: 'without + doing',
-		ru: 'не делая что-то',
-		ru_example: 'Он хотел добиться успеха, не делая ничего',
-		en_example: 'He wanted to succeed without doing anything'
-	},
-	{
-		en: 'recommend + doing something',
-		ru: 'рекомендовать что-то сделать',
-		ru_example: 'Я рекомендую сделать это',
-		en_example: 'I recommend doing this'
-	},
+
 ]
 
 export default PHRASES_VERBS
