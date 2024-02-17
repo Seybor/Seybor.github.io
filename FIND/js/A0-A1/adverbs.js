@@ -47,7 +47,7 @@ const ADVERBS = [
 		tr: '[ˌʌnɪkˈspɛktɪdli]',
 		ru: 'неожиданно',
 		ru_example: 'Это случилось со мной так внезапно',
-		en_example: 'It happen to me so unexpectedly'
+		en_example: 'It happened to me so unexpectedly'
 	},
 	{
 		en: 'necessary*',

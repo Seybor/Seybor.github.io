@@ -1,14 +1,12 @@
-import ADJECTIVES from '../script/A0-A1/adjectives.js'
-import ADVERBS from '../script/A0-A1/adverbs.js'
-import REGULAR from '../script/A0-A1/regular.js'
-import IRREGULAR_VERBS from '../script/A0-A1/irregularAll.js'
-import NOUNS from '../script/A0-A1/nouns.js'
+// import ADJECTIVES from './A0-A1/adjectives.js'
+// import ADVERBS from './A0-A1/adverbs.js'
+// import REGULAR from './A0-A1/regular.js'
+// import IRREGULAR_VERBS from './A0-A1/irregularAll.js'
+// import NOUNS from './A0-A1/nouns.js'
 
-import PHRASAL_VERBS from '../script/A0-A1/phrasal-verbs.js'
-import PHRASES_NO_VERBS from '../script/A0-A1/phrases-no-verbs.js'
-import PHRASES_VERBS from '../script/A0-A1/phrases-verbs.js'
-
-
+// import PHRASAL_VERBS from './A0-A1/phrasal-verbs.js'
+// import PHRASES_NO_VERBS from './A0-A1/phrases-no-verbs.js'
+// import PHRASES_VERBS from './A0-A1/phrases-verbs.js'
 
 const s = (element) => {
 	return document.querySelector(element)
@@ -18,21 +16,38 @@ const all = (element) => {
 	return document.querySelectorAll(element)
 }
 
+// const ALL_WORDS = ADJECTIVES.concat(ADVERBS.concat(IRREGULAR_VERBS.concat(NOUNS.concat(REGULAR))))
+// const ALL_PHRASES = PHRASAL_VERBS.concat(PHRASES_NO_VERBS.concat(PHRASES_VERBS))
+// const ALL_ARRAY = ALL_WORDS.concat(ALL_PHRASES)
 
+// console.log(ALL_WORDS.length)
+// console.log(ALL_PHRASES.length)
+// console.log(ALL_ARRAY.length)
 
-const ALL_WORDS = ADJECTIVES.concat(ADVERBS.concat(IRREGULAR_VERBS.concat(NOUNS.concat(REGULAR))))
-const ALL_PHRASES = PHRASAL_VERBS.concat(PHRASES_NO_VERBS.concat(PHRASES_VERBS))
-const ALL_ARRAY = ALL_WORDS.concat(ALL_PHRASES)
+let ALL_ARRAY = []
 
+async function getData() {
+	const responseWords = await fetch('./json/a0-a1-all-words.json');
+	const responsePhrases = await fetch('./json/a0-a1-all-phrases.json')
 
+	console.log(responseWords)
+	console.log(responsePhrases)
 
-console.log(ALL_WORDS.length)
-console.log(ALL_PHRASES.length)
-console.log(ALL_ARRAY.length)
+	// Парсим данные из JSON формата в JS
+	const words = await responseWords.json();
+	const phrases = await responsePhrases.json()
 
+	console.log(words)
+	console.log(phrases)
 
+	ALL_ARRAY = words.concat(phrases)
 
-s('.search__input').placeholder = `elements: ${ALL_ARRAY.length}`
+	s('.search__input').placeholder = `elements: ${ALL_ARRAY.length}`
+
+	return ALL_ARRAY
+}
+
+getData()
 
 s('.search').addEventListener('submit', (evt) => {
 	evt.preventDefault()
@@ -76,10 +91,14 @@ s('.search').addEventListener('submit', (evt) => {
 	}
 
 	s('.search__input').placeholder = `finded: ${arr.length}`
-	console.log(arr.length)
 })
 
+let date = new Date()
+let currentYear = date.getFullYear().toString()
+let currentMonth = (date.getMonth() + 1).toString().padStart(2, 0)
+let currentDay = date.getDate().toString().padStart(2, 0)
 
+s('.footer__inner').textContent = `${currentDay}.${currentMonth}.${currentYear}`
 
 
 

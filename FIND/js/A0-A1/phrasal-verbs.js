@@ -254,8 +254,8 @@ const PHRASAL_VERBS = [
   {
     en: 'care about',
     ru: 'волноваться / заботиться об',
-    ru_example: 'Не надо будет заботиться об инфраструктурных вопросах',
-    en_example: 'You do not need to care about infrastructure things'
+    ru_example: 'Меня это не волнует',
+    en_example: 'I do not care about it'
   },
   {
     en: 'stay in',

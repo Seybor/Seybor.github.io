@@ -401,8 +401,8 @@ const REGULAR = [
     en: 'to satisfy',
     tr: '[ˈsætɪsfaɪ]',
     ru: 'удовлетворять',
-    ru_example: 'Ты был удовлетворён этим результатом?',
-    en_example: 'Were you satisfied with this result?'
+    ru_example: 'Эта работа удовлетворяет тебя?',
+    en_example: 'Does this job satisfy you?'
   },
   {
     en: 'to spoil',
