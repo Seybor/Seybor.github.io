@@ -1,4 +1,4 @@
-const WORDS_A2 = [
+const WORDS_A2_1_5 = [
 	{
 		en: 'addicted [to]',
 		ru: 'зависим [от чего-то]',
@@ -20,6 +20,7 @@ const WORDS_A2 = [
 	{ en: 'skyscraper', ru: 'небоскрёб', tr: '[ˈskaɪˌskreɪpə]' },
 	{ en: 'purchase*', ru: 'покупка', tr: '[ˈpɜːʧəs]' },
 	{ en: 'forward', ru: 'вперёд', tr: '[ˈfɔːwəd]' },
+	{ en: 'crime', ru: 'преступление', tr: '[kraɪm]' },
 	{ en: 'impatience', ru: 'нетерпение', tr: '[ɪmˈpeɪʃᵊns]' },
 	{ en: 'murder', ru: 'убийство', tr: '[ˈmɜːdə]' },
 	{ en: 'reply* [to]', ru: 'ответ [на что-то]', tr: '[rɪˈplaɪ]* [[tuː]]' },

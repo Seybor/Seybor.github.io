@@ -27,20 +27,14 @@ const all = (element) => {
 let ALL_ARRAY = []
 
 async function getData() {
-	const responseWords = await fetch('./json/a0-a1-all-words.json');
-	const responsePhrases = await fetch('./json/a0-a1-all-phrases.json')
-
-	console.log(responseWords)
-	console.log(responsePhrases)
+	const responseA0_A1 = await fetch('./json/a0-a1-all.json');
+	const responseA2 = await fetch('./json/a2-words-1-5.json');
 
 	// Парсим данные из JSON формата в JS
-	const words = await responseWords.json();
-	const phrases = await responsePhrases.json()
+	const ALL_A0_A1 = await responseA0_A1.json();
+	const ALL_A2 = await responseA2.json();
 
-	console.log(words)
-	console.log(phrases)
-
-	ALL_ARRAY = words.concat(phrases)
+	ALL_ARRAY = ALL_A0_A1.concat(ALL_A2)
 
 	s('.search__input').placeholder = `elements: ${ALL_ARRAY.length}`
 

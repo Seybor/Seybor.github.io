@@ -1,4 +1,19 @@
 const REGULAR = [
+    {
+    en: 'to earn',
+    tr: '[ɜːrn]',
+    ru: 'зарабатывать',
+    ru_example: 'Ему удалось заработать эту сумму денег',
+    en_example: 'He succeeded in earning that sum of money'
+  },
+
+    {
+    en: 'to worry',
+    tr: '[ˈwɜːrɪ]',
+    ru: 'волноваться, беспокоиться',
+    ru_example: 'Не беспокойся по этому поводу',
+    en_example: `Don't worry about it`
+  },
 
   {
     en: 'to accept',

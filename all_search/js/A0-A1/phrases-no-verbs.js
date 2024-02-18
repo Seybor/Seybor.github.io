@@ -1,6 +1,13 @@
 const PHRASES_NO_VERBS = [
 
 	{
+		en: 'by heart',
+		ru: 'наизусть',
+		ru_example: 'Ему удалось выучить этот текст наизусть',
+		en_example: 'He succeeded in learning this text by heart'
+	},
+
+	{
 		en: 'by accident',
 		ru: 'случайно',
 		ru_example: 'Она случайно порезала свой палец',
