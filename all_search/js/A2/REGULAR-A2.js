@@ -159,5 +159,13 @@ const REGULAR_A2_1_5 = [
 		ru: 'специализироваться [в чём-то]',
 		ru_example: 'Я специализируюсь в медицине',
 		en_example: 'I specialize in medicine'
-	}
+	},
+
+	{ 
+		en: 'influence*',
+	 	ru: 'влиять [на кого-то]',
+	 	tr: '[ˈɪnflʊəns]',
+	 	ru_example: 'Это событие повлияло на меня очень сильно',
+	 	en_example: 'This event influenced me greatly'
+	},
 ]

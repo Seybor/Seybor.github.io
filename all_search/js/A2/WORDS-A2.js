@@ -60,5 +60,7 @@ const WORDS_A2_1_5 = [
 	{ en: 'negative', ru: 'отрицательный', tr: '[ˈnɛɡətɪv]' },
 	{ en: 'refusal', ru: 'отказ', tr: '[rɪˈfjuːzᵊl]' },
 	{ en: 'temporary', ru: 'временный', tr: '[ˈtɛmpᵊrᵊri]' },
-	{ en: 'whiteboard', ru: 'доска', tr: '[ˈwaɪtbɔːd]' }
+	{ en: 'whiteboard', ru: 'доска', tr: '[ˈwaɪtbɔːd]' },
+
+	{ en: 'influence* [on]', ru: 'влияние [на кого-то]', tr: '[ˈɪnflʊəns]' },
 ]
