@@ -1,0 +1,200 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-clipboard-regular {
+  width: 0.75em;
+}
+
+.icon-clipboard-solid {
+  width: 0.75em;
+}
+
+.icon-copy-regular {
+  width: 0.875em;
+}
+
+.icon-copy-solid {
+  width: 0.875em;
+}
+
+.icon-amazon {
+  width: 0.875em;
+}
+
+.icon-angular {
+  width: 0.875em;
+}
+
+.icon-apple {
+  width: 0.75em;
+}
+
+.icon-apple-pay {
+  width: 1.25em;
+}
+
+.icon-arrow-down-1-9 {
+  width: 1.125em;
+}
+
+.icon-arrow-down-9-1 {
+  width: 1.125em;
+}
+
+.icon-arrow-down-a-z {
+  width: 1.125em;
+}
+
+.icon-arrow-down-z-a {
+  width: 1.125em;
+}
+
+.icon-basket-shopping-solid {
+  width: 1.125em;
+}
+
+.icon-bluetooth {
+  width: 0.875em;
+}
+
+.icon-bluetooth-b {
+  width: 0.625em;
+}
+
+.icon-bootstrap {
+  width: 1.125em;
+}
+
+.icon-calendar {
+  width: 0.875em;
+}
+
+.icon-calendar-check {
+  width: 0.875em;
+}
+
+.icon-calendar-days {
+  width: 0.875em;
+}
+
+.icon-calendar-days2 {
+  width: 0.875em;
+}
+
+.icon-cart-shopping-solid {
+  width: 1.125em;
+}
+
+.icon-chevron-left {
+  width: 0.625em;
+}
+
+.icon-chevron-right {
+  width: 0.625em;
+}
+
+.icon-docker {
+  width: 1.25em;
+}
+
+.icon-facebook-f {
+  width: 0.625em;
+}
+
+.icon-house {
+  width: 1.125em;
+}
+
+.icon-instagram {
+  width: 0.875em;
+}
+
+.icon-instagram-square {
+  width: 0.875em;
+}
+
+.icon-odnoklassniki {
+  width: 0.625em;
+}
+
+.icon-pinterest {
+  width: 0.96875em;
+}
+
+.icon-pinterest-p {
+  width: 0.75em;
+}
+
+.icon-pinterest-square {
+  width: 0.875em;
+}
+
+.icon-python {
+  width: 0.875em;
+}
+
+.icon-skype {
+  width: 0.875em;
+}
+
+.icon-square-odnoklassniki {
+  width: 0.875em;
+}
+
+.icon-steam {
+  width: 0.96875em;
+}
+
+.icon-telegram {
+  width: 0.96875em;
+}
+
+.icon-tiktok {
+  width: 0.875em;
+}
+
+.icon-trash-can {
+  width: 0.875em;
+}
+
+.icon-twitter-square {
+  width: 0.875em;
+}
+
+.icon-user {
+  width: 0.875em;
+}
+
+.icon-vk {
+  width: 0.875em;
+}
+
+.icon-whatsapp {
+  width: 0.875em;
+}
+
+.icon-whatsapp-square {
+  width: 0.875em;
+}
+
+.icon-youtube {
+  width: 1.125em;
+}
+
+.icon-youtube-square {
+  width: 0.875em;
+}
