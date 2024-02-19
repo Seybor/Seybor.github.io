@@ -54,7 +54,7 @@ const WORDS_A2_1_5 = [
 	{ en: 'cure*', ru: 'лечение', tr: '[kjʊə]*' },
 	{ en: 'disadvantage', ru: 'недостаток', tr: '[ˌdɪsədˈvɑːntɪʤ]' },
 	{ en: 'discipline', ru: 'дисциплина', tr: '[ˈdɪsəplɪn]' },
-	{ en: 'lack*', ru: 'нехватка', tr: '[læk]*' },
+	{ en: 'lack* [of]', ru: 'нехватка [чего-то]', tr: '[læk]*' },
 	{ en: 'linguistics', ru: 'лингвистика', tr: '[lɪŋˈɡwɪstɪks]' },
 	{ en: 'lung', ru: 'лёгкое', tr: '[lʌŋ]' },
 	{ en: 'negative', ru: 'отрицательный', tr: '[ˈnɛɡətɪv]' },
