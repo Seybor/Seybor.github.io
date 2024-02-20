@@ -19,7 +19,7 @@
 
 	<!-- <link rel="stylesheet" href="css/icomoon.css"> -->
 	<link rel="stylesheet" href="libs/nativeJS/Fancyapps/carousel/carousel.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -40,7 +40,7 @@
 
 						<div class="header-top__contacts">
 							<a class="header-top__phone" href="tel:+74999228974">+7 (499) 922-89-74</a>
-							<button class="btn header-top__btn">заказать звонок</button>
+							<button class="btn header-top__btn" data-modal="consultation">заказать звонок</button>
 						</div>
 					</div>
 
@@ -71,7 +71,7 @@
 							</div>
 						</div>
 
-						<button class="btn btn--main">заказать кОНСУЛЬТАЦИЮ</button>
+						<button class="btn btn--main" data-modal="consultation">заказать кОНСУЛЬТАЦИЮ</button>
 						<div class="header-bottom__link">
 							или <a class="header-bottom__link-start" href="#catalog">ПЕРЕЙТИ В КАТАЛоГ</a>
 						</div>
@@ -422,12 +422,12 @@
 		</footer>
 
 		<div class="overlay">
-			<div class="modal">
-				<div class="modal__close">
+			<div class="modal" id="consultation" tabindex="-1">
+				<div class="modal__close" tabindex="0">
 
 				</div>
-				<div class="modal__title"></div>
-				<div class="modal__subtitle"></div>
+				<div class="modal__title">Просто заполните форму заявки</div>
+				<div class="modal__subtitle">и мы перезвоним вам в течении 10 минут</div>
 
 				<form class="form" action="#">
 
@@ -437,6 +437,32 @@
 
 					<button class="btn btn--main" type="submit">заказать кОНСУЛЬТАЦИЮ</button>
 				</form>
+			</div>
+
+			<div class="modal" id="order" tabindex="-1">
+				<div class="modal__close" tabindex="0">
+
+				</div>
+				<div class="modal__title">Ваш заказ:</div>
+				<div class="modal__subtitle">Пульсометр Polar FT1</div>
+
+				<form class="form" action="#">
+
+					<input class="form__input" type="text" name="name" placeholder="Ваше имя" required>
+					<input class="form__input" type="number" name="phone" placeholder="Ваш телефон" required>
+					<input class="form__input" type="email" name="email" placeholder="Ваш E-mail" required>
+
+					<button class="btn btn--main" type="submit">Купить</button>
+				</form>
+			</div>
+
+			<div class="modal modal--mini" id="thanks" tabindex="-1">
+				<div class="modal__close" tabindex="0">
+
+				</div>
+				<div class="modal__title">Спасибо за вашу заявку!</div>
+				<div class="modal__subtitle">Наш менеджер свяжется с вами
+					в ближайшее время!</div>
 			</div>
 		</div>
 

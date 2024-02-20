@@ -61,7 +61,8 @@ const renderStart = () => {
 		for (let i = currentCounter; i < productsArray.length; i++) {
 			let item = productsArray[i]
 			if ((counter > 0) && (counter % 6 === 0)) {
-				setTimeout(insertShowWore, 1300)
+				productsFitness.insertAdjacentHTML('beforeend', showWore);
+				insertShowWore()
 
 				counter = 0
 				break
@@ -107,8 +108,6 @@ const renderStart = () => {
 			productsFitness.insertAdjacentHTML('beforeend', productHTML);
 
 			function insertShowWore() {
-				productsFitness.insertAdjacentHTML('beforeend', showWore);
-
 				if (s('.show-more')) {
 					s('.show-more').addEventListener('click', (evt) => {
 						s('.show-more').remove()
@@ -119,10 +118,22 @@ const renderStart = () => {
 
 		}
 
+		all('.catalog-item__btn').forEach((el, id) => {
+			el.addEventListener('click', (evt) => {
+				s('#order .modal__subtitle').textContent =
+					el.closest('.catalog-item__container')
+						.querySelector('.catalog-item__subtitle')
+						.textContent
+						.toString()
+						.trim()
 
-
-
+				s('.overlay').style.display = 'block'
+				s('#order').style.display = 'block'
+				s('#order').focus()
+			})
+		})
 	}
+
 
 
 }
@@ -168,15 +179,46 @@ s('.catalog__tabs').addEventListener('click', (evt) => {
 
 })
 
-s('.modal__close').addEventListener('click', (evt) => {
+// ! Модальные окна
+
+all('[data-modal="consultation"]').forEach((el, id) => {
+	el.addEventListener('click', (evt) => {
+		s('.overlay').style.display = 'block'
+		s('#consultation').style.display = 'block'
+		s('#consultation').focus()
+	})
+})
+
+const closeModal = (el) => {
 	s('.overlay').style.display = 'none'
+	el.style.display = 'none'
+}
+
+all('.modal__close').forEach((el, id) => {
+	el.addEventListener('click', (evt) => {
+		closeModal(el.closest('.modal'))
+	})
+	el.addEventListener('keydown', (evt) => {
+		if (evt.keyCode === 13 || evt.keyCode === 27) {
+			closeModal(el.closest('.modal'))
+		}
+	})
 })
 
 
+all('.modal').forEach((el) => {
+	el.addEventListener('keydown', (evt) => {
+		if (evt.keyCode === 27) {
+			closeModal(el)
+		}
+	})
+})
 
-
-
-
+window.addEventListener('resize', (evt) => {
+	if (window.innerHeight < 600) {
+		s('.overlay').style.position = 'absolute'
+	}
+})
 
 
 
