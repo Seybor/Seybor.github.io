@@ -53,7 +53,7 @@ textarea:required:valid {
 }
 
 .container {
-  max-width: 950px;
+  max-width: 1140px;
   min-width: 300px;
   width: 100%;
   margin: 0 auto;
@@ -80,6 +80,11 @@ a {
 a:hover {
   opacity: 0.5;
 }
+@media (max-width: 540px) {
+  a:hover {
+    opacity: 1;
+  }
+}
 
 .title {
   font-size: 30px;
@@ -88,6 +93,12 @@ a:hover {
   font-weight: 700;
   text-transform: uppercase;
   color: #0d0d0d;
+  @media (max-width: 540px) {
+    font-size: 24px;
+  }
+  @media (max-width: 420px) {
+    font-size: 22px;
+  }
 }
 
 .show-more {
@@ -112,6 +123,40 @@ a:hover {
 @media (max-width: 600px) {
   .title[class*='__title'] {
     margin-bottom: 40px;
+  }
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #c70101;
+  border-radius: 5px;
+
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  transition: all 0.2s linear;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 540px) {
+  .btn:hover {
+    opacity: 1;
+  }
+}
+
+.btn--main {
+  margin-bottom: 18px;
+  padding: 18px 42px;
+  font-size: 16px;
+}
+@media (max-width: 420px) {
+  .btn--main {
+    margin-bottom: 14px;
+    padding: 14px 36px;
   }
 }
 

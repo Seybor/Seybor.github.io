@@ -43,6 +43,8 @@ const renderStart = () => {
 		console.log(productsArray)
 
 		renderProducts(productsArray);
+		toggleCatalog(all('.catalog .catalog-item__link'))
+		toggleCatalog(all('.catalog .catalog-item__list-link'))
 
 	}
 
@@ -102,11 +104,8 @@ const renderStart = () => {
 		</div>`;
 
 
-			function insertProducts() {
-				productsFitness.insertAdjacentHTML('beforeend', productHTML);
-				toggleCatalog(all('.catalog .catalog-item__link'))
-				toggleCatalog(all('.catalog .catalog-item__list-link'))
-			}
+			productsFitness.insertAdjacentHTML('beforeend', productHTML);
+
 			function insertShowWore() {
 				productsFitness.insertAdjacentHTML('beforeend', showWore);
 
@@ -118,13 +117,13 @@ const renderStart = () => {
 				}
 			}
 
-			setTimeout(insertProducts, 200 * counter)
 		}
 
 
 
 
 	}
+
 
 }
 
