@@ -129,6 +129,26 @@ const renderStart = () => {
 
 renderStart()
 
+
+// ! Плавная прокрутка до каталога
+s('.header-bottom__link-start').addEventListener('click', (evt) => {
+	evt.preventDefault();
+
+	document.querySelector(s('.header-bottom__link-start').getAttribute('href')).scrollIntoView({
+		behavior: 'smooth'
+	});
+})
+
+// ! Слайдер
+const container = document.getElementById("slider-main");
+const options = {
+	infinite: true,
+};
+
+new Carousel(container, options);
+
+
+// ! Табы
 s('.catalog__tabs').addEventListener('click', (evt) => {
 	if ((evt.target.closest('li')) && (evt.target.closest('li').dataset.catalog)) {
 
@@ -148,6 +168,9 @@ s('.catalog__tabs').addEventListener('click', (evt) => {
 
 })
 
+s('.modal__close').addEventListener('click', (evt) => {
+	s('.overlay').style.display = 'none'
+})
 
 
 

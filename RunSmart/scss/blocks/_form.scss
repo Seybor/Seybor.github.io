@@ -1,0 +1,25 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 300px;
+  &__input {
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 300;
+    color: #4b4b4b;
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .form {
+    width: 100%;
+  }
+}

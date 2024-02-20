@@ -89,7 +89,6 @@ a:hover {
 .title {
   font-size: 30px;
   text-align: center;
-
   font-weight: 700;
   text-transform: uppercase;
   color: #0d0d0d;
@@ -99,12 +98,38 @@ a:hover {
   @media (max-width: 420px) {
     font-size: 22px;
   }
+  &--form {
+    font-size: 36px;
+    text-align: left;
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 600px) {
+  [class*='__title'] {
+    margin-bottom: 40px;
+  }
+  .title--form {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 540px) {
+  .title--form {
+    font-size: 28px;
+  }
+}
+@media (max-width: 420px) {
+  .title--form {
+    font-size: 24px;
+  }
 }
 
 .show-more {
   flex: 1 0 auto;
   padding: 20px 10px;
+
   text-align: center;
+  color: #fff;
   &__btn {
     display: inline-block;
     padding: 10px 20px;
@@ -117,12 +142,6 @@ a:hover {
 
     border: none;
     border-radius: 40px;
-  }
-}
-
-@media (max-width: 600px) {
-  .title[class*='__title'] {
-    margin-bottom: 40px;
   }
 }
 
@@ -150,7 +169,7 @@ a:hover {
 
 .btn--main {
   margin-bottom: 18px;
-  padding: 18px 42px;
+  padding: 18px 40px;
   font-size: 16px;
 }
 @media (max-width: 420px) {

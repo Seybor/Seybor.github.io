@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css"> -->
 
 	<!-- <link rel="stylesheet" href="css/icomoon.css"> -->
+	<link rel="stylesheet" href="libs/nativeJS/Fancyapps/carousel/carousel.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -72,7 +73,7 @@
 
 						<button class="btn btn--main">заказать кОНСУЛЬТАЦИЮ</button>
 						<div class="header-bottom__link">
-							или <a href="#">ПЕРЕЙТИ В КАТАЛоГ</a>
+							или <a class="header-bottom__link-start" href="#catalog">ПЕРЕЙТИ В КАТАЛоГ</a>
 						</div>
 					</div>
 				</div>
@@ -125,8 +126,55 @@
 				</div>
 			</section>
 
+			<section class="consultation" style="background-image: url('img/form.jpg')">
+				<div class="container">
+					<div class="consultation__inner">
+						<h2 class="title title--form consultation__title">
+							Получите бесплатную консультацию <br>
+							по подбору пульсометра
+						</h2>
+						<div class="consultation__desc">
+							Просто заполните форму заявки <br>
+							и мы перезвоним вам в течении 10 минут
+						</div>
+						<form class="form" action="#">
 
-			<section class="catalog">
+							<input class="form__input" type="text" name="name" placeholder="Ваше имя" required>
+							<input class="form__input" type="number" name="phone" placeholder="Ваш телефон" required>
+							<input class="form__input" type="email" name="email" placeholder="Ваш E-mail" required>
+
+							<button class="btn btn--main" type="submit">заказать кОНСУЛЬТАЦИЮ</button>
+						</form>
+					</div>
+				</div>
+			</section>
+
+			<section class="slider">
+				<div class="container">
+					<div class="slider__inner">
+						<h2 class="title slider__title visually-hidden">Слайдер</h2>
+						<div class="slider__items f-carousel" id="slider-main">
+							<div class="slider__item f-carousel__slide">
+								<img class="slider__img" src="img/slider/item1.png" alt="img" loading="lazy" width="750" height="527">
+							</div>
+							<div class="slider__item f-carousel__slide">
+								<img class="slider__img" src="img/slider/item2.jpg" alt="img" loading="lazy" width="750" height="527">
+							</div>
+							<div class="slider__item f-carousel__slide">
+								<img class="slider__img" src="img/slider/item3.jpg" alt="img" loading="lazy" width="750" height="527">
+							</div>
+							<div class="slider__item f-carousel__slide">
+								<img class="slider__img" src="img/slider/item4.jpg" alt="img" loading="lazy" width="750" height="580">
+							</div>
+							<div class="slider__item f-carousel__slide">
+								<img class="slider__img" src="img/slider/item5.jpg" alt="img" loading="lazy" width="750" height="422">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="catalog" id="catalog">
 				<div class="container">
 					<div class="catalog__inner">
 						<h2 class="title catalog__title">Каталог пульсометров</h2>
@@ -373,6 +421,25 @@
 			</div>
 		</footer>
 
+		<div class="overlay">
+			<div class="modal">
+				<div class="modal__close">
+
+				</div>
+				<div class="modal__title"></div>
+				<div class="modal__subtitle"></div>
+
+				<form class="form" action="#">
+
+					<input class="form__input" type="text" name="name" placeholder="Ваше имя" required>
+					<input class="form__input" type="number" name="phone" placeholder="Ваш телефон" required>
+					<input class="form__input" type="email" name="email" placeholder="Ваш E-mail" required>
+
+					<button class="btn btn--main" type="submit">заказать кОНСУЛЬТАЦИЮ</button>
+				</form>
+			</div>
+		</div>
+
 	</div> <!-- - wrapper end -->
 
 
@@ -381,6 +448,7 @@
 
 	<!-- <script src="libs/bootstrap/js/bootstrap.bundle.min.js" defer></script> -->
 
+	<script src="libs/nativeJS/Fancyapps/carousel/carousel.umd.js" defer></script>
 	<script src="js/main.js" type="module"></script>
 
 </body>
