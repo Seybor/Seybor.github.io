@@ -15,10 +15,10 @@ input:focus:required:invalid,
 textarea:focus:required:invalid {
   border-color: red;
 }
-input:required:valid,
-textarea:required:valid {
-  border-color: green;
-}
+// input:required:valid,
+// textarea:required:valid {
+//   border-color: green;
+// }
 
 .image {
   max-width: 100%;
@@ -83,6 +83,9 @@ a:hover {
 @media (max-width: 540px) {
   a:hover {
     opacity: 1;
+  }
+  a {
+    cursor: default;
   }
 }
 
@@ -164,6 +167,9 @@ a:hover {
 @media (max-width: 540px) {
   .btn:hover {
     opacity: 1;
+  }
+  .btn {
+    cursor: default;
   }
 }
 

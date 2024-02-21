@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'reset';
 @import 'global';
+@import 'animation';
 
 @import 'blocks/header';
 
@@ -15,3 +16,14 @@
 @import 'blocks/footer';
 
 @import 'blocks/modal';
+
+.page-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+
+  display: none;
+  svg {
+    fill: var(--accent);
+  }
+}

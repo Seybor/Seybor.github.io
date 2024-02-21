@@ -93,7 +93,7 @@ const renderStart = () => {
 							${item.oldPrice} руб.
 						</div>
 						<div class="catalog-item__new-price">
-						${item.newPrice}
+						${item.newPrice} руб.
 						</div>
 					</div>
 					<button class="catalog-item__btn btn">
@@ -220,6 +220,90 @@ window.addEventListener('resize', (evt) => {
 	}
 })
 
+// ! валидация формы
+
+function validateForm(form) {
+	$(form).validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 3
+			},
+			phone: 'required',
+			email: {
+				required: true,
+				email: true
+			}
+		},
+
+		messages: {
+			name: {
+				required: "Пожалуйста, введите своё имя",
+				minlength: jQuery.validator.format("Введите {0} символа!")
+			},
+			phone: "Пожалуйста, введите свой номер телефона",
+			email: {
+				required: "Пожалуйста, введите свою почту",
+				email: "Введите email в формате name@domain.com"
+			}
+		}
+	});
+}
+
+validateForm(('.consultation .form'))
+
+validateForm(('#consultation .form'))
+validateForm(('#order .form'))
+
+// - маска для телефона в форме
+// - У тегов input нужно убрать type='number' так как плагин не работает с ним
+$('input[name="phone"]').mask("+7 (999) 999-99-99")
+
+// - плагин с php mailer
+
+// $('.form').sumbit(function (evt) {
+// 	evt.preventDefault();
+
+// 	if (!$(this).valid()) {
+// 		return;
+// 	}
+
+// 	$.ajax({
+// 		type: "POST",
+// 		url: "libs/phpPlugins/mailer/smart.php",
+// 		data: $(this).serialize()
+// 	}).done(function () {
+// 		$(this).find("input").val('');
+
+
+// 		$('.form').trigger('reset');
+
+// 	});
+
+// 	return false;
+// })
 
 
 
+// ! Плавная прокрутка до начала страницы
+
+// window.getComputedStyle(s('.page-up')).getPropertyValue('opacity')
+
+window.addEventListener('scroll', (evt) => {
+	if (document.documentElement.scrollTop >= 1600) {
+		s('.page-up').style.display = 'block'
+	} else {
+		s('.page-up').style.display = 'none'
+
+	}
+})
+
+
+
+s('.page-up').addEventListener('click', (evt) => {
+	evt.preventDefault();
+
+	document.querySelector(s('.page-up').getAttribute('href')).scrollIntoView({
+		behavior: 'smooth'
+	});
+})

@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body id="body">
 
 	<div class="wrapper">
 		<header class="header" style="background-image: url('img/bg.jpg')">
@@ -99,8 +99,8 @@
 								</p>
 							</div>
 							<div class="advantages__item">
-								<img class="advantages__item-img" src="img/icon/heart.png" alt="img" loading="lazy" width="70"
-									height="70">
+								<img class="advantages__item-img animate__pulse" src="img/icon/heart.png" alt="img" loading="lazy"
+									width="70" height="70">
 								<p class="advantages__item-title">
 									Заботимся о здоровье
 								</p>
@@ -139,9 +139,9 @@
 						</div>
 						<form class="form" action="#">
 
-							<input class="form__input" type="text" name="name" placeholder="Ваше имя" required>
-							<input class="form__input" type="number" name="phone" placeholder="Ваш телефон" required>
-							<input class="form__input" type="email" name="email" placeholder="Ваш E-mail" required>
+							<input class="form__input" type="text" name="name" placeholder="Ваше имя">
+							<input class="form__input" name="phone" placeholder="Ваш телефон">
+							<input class="form__input" type="email" name="email" placeholder="Ваш E-mail">
 
 							<button class="btn btn--main" type="submit">заказать кОНСУЛЬТАЦИЮ</button>
 						</form>
@@ -392,7 +392,7 @@
 		<footer class="footer">
 			<iframe
 				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1122.2170580683724!2d37.64629453602141!3d55.76833184382628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCAxMDcwNzg!5e0!3m2!1sru!2sru!4v1708345836643!5m2!1sru!2sru"
-				width="100%" height="630" style="border:0;" allowfullscreen="" loading="lazy"
+				height="630" style="border:0; width:100%;" allowfullscreen="" loading="lazy"
 				referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 			<div class="footer__info">
@@ -432,7 +432,7 @@
 				<form class="form" action="#">
 
 					<input class="form__input" type="text" name="name" placeholder="Ваше имя" required>
-					<input class="form__input" type="number" name="phone" placeholder="Ваш телефон" required>
+					<input class="form__input" name="phone" placeholder="Ваш телефон" required>
 					<input class="form__input" type="email" name="email" placeholder="Ваш E-mail" required>
 
 					<button class="btn btn--main" type="submit">заказать кОНСУЛЬТАЦИЮ</button>
@@ -449,7 +449,7 @@
 				<form class="form" action="#">
 
 					<input class="form__input" type="text" name="name" placeholder="Ваше имя" required>
-					<input class="form__input" type="number" name="phone" placeholder="Ваш телефон" required>
+					<input class="form__input" name="phone" placeholder="Ваш телефон" required>
 					<input class="form__input" type="email" name="email" placeholder="Ваш E-mail" required>
 
 					<button class="btn btn--main" type="submit">Купить</button>
@@ -465,12 +465,18 @@
 					в ближайшее время!</div>
 			</div>
 		</div>
-
 	</div> <!-- - wrapper end -->
 
+	<a class="page-up" href="#body">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="50" height="50">
+			<path
+				d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM135.1 217.4l107.1-99.9c3.8-3.5 8.7-5.5 13.8-5.5s10.1 2 13.8 5.5l107.1 99.9c4.5 4.2 7.1 10.1 7.1 16.3c0 12.3-10 22.3-22.3 22.3H304v96c0 17.7-14.3 32-32 32H240c-17.7 0-32-14.3-32-32V256H150.3C138 256 128 246 128 233.7c0-6.2 2.6-12.1 7.1-16.3z" />
+		</svg>
+	</a>
 
-
-	<!-- <script src="libs/jquery/jquery.com_jquery-3.7.1.min.js" defer></script> -->
+	<script src="libs/jquery/jquery.com_jquery-3.7.1.min.js" defer></script>
+	<script src="libs/jquery/jquery-validation/jquery.validate.min.js" defer></script>
+	<script src="libs/jquery/jquery.maskedinput/jquery.maskedinput.min.js" defer></script>
 
 	<!-- <script src="libs/bootstrap/js/bootstrap.bundle.min.js" defer></script> -->
 

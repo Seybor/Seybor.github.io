@@ -16,6 +16,22 @@
       margin-bottom: 20px;
     }
   }
+  // Плагин для валидации формы
+  .error {
+    border: 1px solid red;
+  }
+  .valid {
+    border: 1px solid green;
+  }
+  label.error {
+    margin-bottom: 10px;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+    border: none;
+  }
 }
 
 @media (max-width: 420px) {
