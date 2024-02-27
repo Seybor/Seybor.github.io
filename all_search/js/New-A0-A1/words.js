@@ -22,8 +22,8 @@ const WORDS = [
 		en_example: "Of course, I'll be able to get rid of these silly mistakes",
 	},
 	{
-		en: 'unexpected',
-		tr: '[ˌʌnɪkˈspektɪd]',
+		en: 'sudden / unexpected',
+		tr: '[ˈsʌdn] / [ˌʌnɪkˈspektɪd]',
 		ru: 'неожиданный',
 		ru_example: 'Эти изменения очень неожиданные для них?',
 		en_example: 'Are these changes very unexpected for them?',
@@ -400,9 +400,9 @@ const WORDS = [
 		en_example: "I'm particularly keen on learning foreign languages"
 	},
 	{
-		en: 'unexpectedly',
-		tr: '[ˌʌnɪkˈspɛktɪdli]',
-		ru: 'неожиданно',
+		en: 'suddenly / unexpectedly',
+		tr: '[ˈsʌdənlɪ] / [ˌʌnɪkˈspɛktɪdli]',
+		ru: 'неожиданно, внезапно, вдруг',
 		ru_example: 'Это случилось со мной так внезапно',
 		en_example: 'It happened to me so unexpectedly'
 	},

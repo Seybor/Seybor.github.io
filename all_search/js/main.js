@@ -36,7 +36,7 @@ const ARR_A2 = PNV_A2.concat(PWV_A2.concat(REGULAR_A2.concat(WORDS_A2)))
 const ARR_ADD = ANIMALS.concat(BODY)
 
 for (let i = 0; i < ARR_A1.length; i++) {
-	ARR_A1[i].from = 'A1'
+	ARR_A1[i].from = 'A0-A1'
 }
 for (let i = 0; i < ARR_A2.length; i++) {
 	ARR_A2[i].from = 'A2'
@@ -105,7 +105,7 @@ const currentTime = () => {
 }
 currentTime()
 
-
+// ! для шрифта
 s('.change-font').addEventListener('click', (evt) => {
 
 	let fontSize = +((window.getComputedStyle(s('body')).getPropertyValue('font-size')).slice(0, -2))
