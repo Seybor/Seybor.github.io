@@ -1,4 +1,4 @@
-const REGULAR_A2 = [
+const REGULAR_A2_1_5 = [
 	{
 		en: 'ruin',
 		tr: '[ˈruːɪn]',
@@ -43,7 +43,7 @@ const REGULAR_A2 = [
 	},
 	{
 		en: 'reply* [to]',
-		tr: '[rɪˈplaɪ]* [[tuː]]',
+		tr: '[rɪˈplaɪ] [[tuː]]',
 		ru: 'ответить [на что-то]',
 		ru_example: 'Он ответил на моё письмо немедленно',
 		en_example: 'He reply to my letter immediately'
@@ -63,7 +63,7 @@ const REGULAR_A2 = [
 		en_example: 'I subscribed to this channel'
 	},
 	{
-		en: 'approve [off]',
+		en: 'approve [of]',
 		tr: '[əˈpruːv] [[ɒf]]',
 		ru: 'одобрять [что-то]',
 		ru_example: 'Мы одобряем твоё решение',
@@ -85,7 +85,7 @@ const REGULAR_A2 = [
 	},
 	{
 		en: 'escape* [from]',
-		tr: '[ɪˈskeɪp]* [[frɒm]]',
+		tr: '[ɪˈskeɪp] [[frɒm]]',
 		ru: 'скрыться [от] / сбежать [из]',
 		ru_example: 'Он попытался сбежать из тюрьмы',
 		en_example: 'He tried to escape from prison'
@@ -141,7 +141,7 @@ const REGULAR_A2 = [
 	},
 	{
 		en: 'lack*',
-		tr: '[læk]',
+		tr: '[læk]*',
 		ru: 'не хватать',
 		ru_example: 'Ей не хватает опыта',
 		en_example: 'She lacks experience'
@@ -160,13 +160,12 @@ const REGULAR_A2 = [
 		ru_example: 'Я специализируюсь в медицине',
 		en_example: 'I specialize in medicine'
 	},
-	{
-		en: 'influence*',
-		tr: '[ˈɪnflʊəns]',
-		ru: 'влиять [на кого-то]',
-		ru_example: 'Это событие повлияло на меня очень сильно',
-		en_example: 'This event influenced me greatly'
-	}
-]
 
-export default REGULAR_A2
+	{ 
+		en: 'influence*',
+	 	ru: 'влиять [на кого-то]',
+	 	tr: '[ˈɪnflʊəns]',
+	 	ru_example: 'Это событие повлияло на меня очень сильно',
+	 	en_example: 'This event influenced me greatly'
+	},
+]

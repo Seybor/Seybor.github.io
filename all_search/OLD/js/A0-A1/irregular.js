@@ -1,5 +1,6 @@
 const IRREGULAR = [
 
+
   {
     en: 'beat - beat - beaten',
     tr: '[biːt] - [biːt] - [ˈbiːtᵊn]',

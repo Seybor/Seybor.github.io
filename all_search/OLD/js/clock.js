@@ -22,4 +22,6 @@ const clockStart = () => {
 
 }
 
-export default clockStart
+if (document.querySelector('.clock-wrapper')) {
+	clockStart()
+} 
