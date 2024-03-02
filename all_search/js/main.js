@@ -1,18 +1,19 @@
-import IRREGULAR_VERBS from "./New-A0-A1/irregularAll.js"
-import WORDS from "./New-A0-A1/words.js"
-import PHRASAL_VERBS from "./New-A0-A1/phrasal-verbs.js"
-import PHRASES_NO_VERBS from "./New-A0-A1/phrases-no-verbs.js"
-import PHRASES_VERBS_ALL from "./New-A0-A1/phrases-with-verbs.js"
+import IRREGULAR_VERBS from "./DATA/New-A0-A1/irregularAll.js"
+import WORDS from "./DATA/New-A0-A1/words.js"
+import PHRASAL_VERBS from "./DATA/New-A0-A1/phrasal-verbs.js"
+import PHRASES_NO_VERBS from "./DATA/New-A0-A1/phrases-no-verbs.js"
+import PHRASES_VERBS_ALL from "./DATA/New-A0-A1/phrases-with-verbs.js"
 
-import PNV_A2 from "./A2/PNV-A2.js"
-import PWV_A2 from "./A2/PWV-A2.js"
-import REGULAR_A2 from "./A2/REGULAR-A2.js"
-import WORDS_A2 from "./A2/WORDS-A2.js"
+import PNV_A2 from "./DATA/A2/PNV-A2.js"
+import PWV_A2 from "./DATA/A2/PWV-A2.js"
+import REGULAR_A2 from "./DATA/A2/REGULAR-A2.js"
+import WORDS_A2 from "./DATA/A2/WORDS-A2.js"
 
-import ANIMALS from "./Additional/words/animals.js"
-import BODY from "./Additional/words/body.js"
+import ANIMALS from "./DATA/Additional/words-theme/animals.js"
+import BODY from "./DATA/Additional/words-theme/body.js"
+import NGSL_S from "./DATA/Additional/ngsl.js"
 
-import clockStart from "./clock.js"
+import clockStart from "./modules/clock.js"
 
 // - basic
 const s = (element) => {
@@ -44,8 +45,11 @@ for (let i = 0; i < ARR_A2.length; i++) {
 for (let i = 0; i < ARR_ADD.length; i++) {
 	ARR_ADD[i].from = 'add'
 }
+for (let i = 0; i < NGSL_S.length; i++) {
+	NGSL_S[i].from = 'ngsl'
+}
 
-const ALL_ARRAY = ARR_A1.concat(ARR_A2.concat(ARR_ADD))
+const ALL_ARRAY = ARR_A1.concat(ARR_A2.concat(ARR_ADD.concat(NGSL_S)))
 
 
 

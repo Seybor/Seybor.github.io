@@ -1,0 +1,104 @@
+const REGULAR = [
+	{ en: 'to force', tr: '[fɔːrs]', ru: 'заставлять', ru_example: 'Она заставила его найти работу в городе', en_example: "She forced him to take a job in the city" },
+	{ en: 'to remarry', tr: '[ˌriːˈmærɪ]', ru: 'вступить в повторный брак', ru_example: 'Его мама и отец сейчас снова вступили в брак', en_example: "His mom and dad are all remarried now" },
+	{ en: 'to investigate', tr: '[ɪnˈvestɪɡeɪt]', ru: 'расследовать', ru_example: 'Как долго полиция расследует это дело?', en_example: "How long have the police been investigating this case?" },
+	{ en: 'to blame*', tr: '[bleɪm]', ru: 'обвинять; обвинение', ru_example: 'Они обвинили её в случившемся', en_example: "They blamed her for the accident" },
+	{ en: 'to insult*', tr: '[ɪnˈsʌlt]*', ru: 'оскорблять; оскорбление', ru_example: 'Не оскорбляй меня', en_example: "Don't insult me" },
+	{ en: 'to intend', tr: '[ɪnˈtend]', ru: 'намереваться', ru_example: 'Я намерен сделать это', en_example: "I intend to do that" },
+	{
+		en: 'to argue', tr: '[ˈɑːɡjuː]', ru: 'спорить', ru_example: 'Хватит спорить!', en_example: "Stop arguing!",
+	},
+	{
+		en: 'to gather',
+		ru: 'собирать',
+		ru_example: 'Они собрали много подписей',
+		en_example: 'They gathered a lot of signatures',
+		tr: '[ˈɡæðər]'
+	},
+	{
+		en: 'to rejoice',
+		ru: 'радоваться',
+		ru_example: '',
+		en_example: '',
+		tr: '[rɪˈdʒɔɪs]'
+	},
+	{
+		en: 'to fascinate',
+		ru: 'очаровывать',
+		ru_example: '',
+		en_example: '',
+		tr: '[ˈfæsɪneɪt]'
+	},
+	{
+		en: 'to borrow',
+		ru: 'одолжить [у кого-то]',
+		ru_example: 'Я хотел одолжить лестницу Майка',
+		en_example: "I wanted to borrow Mike's ladder",
+		tr: '[ˈbɑːrəʊ]'
+	},
+	{
+		en: 'to despise',
+		ru: 'презирать',
+		ru_example: 'Он презирает людей, на которых вынужден работать',
+		en_example: 'He despises the people he has to work for',
+		tr: '[dɪˈspaɪz]'
+	},
+	{
+		en: 'to rule',
+		ru: 'властвовать',
+		ru_example: 'Александр Великий правил огромной империей',
+		en_example: 'Alexander the Great ruled over a huge empire',
+		tr: '[ruːl]'
+	},
+	{
+		en: 'to crawl ',
+		ru: 'ползать',
+		ru_example: 'ползающий муравей',
+		en_example: 'crawling ant',
+		tr: '[krɔːl]'
+	},
+	{
+		en: 'to leap',
+		ru: 'прыгать, скакать',
+		ru_example: 'скачущая антилопа',
+		en_example: 'leaping antelope',
+		tr: '[liːp]'
+	},
+	{
+		en: 'to bake',
+		ru: 'выпекать',
+		ru_example: 'Я выпекал торт, когда он вошёл',
+		en_example: 'I was baking a cake when he came in',
+		tr: '[beɪk]'
+	},
+	{
+		en: 'to pounce',
+		ru: 'набрасываться, внезапно атаковать',
+		ru_example: 'Кошка набросилась на мышь',
+		en_example: 'The cat pounced on the mouse',
+		tr: '[paʊns]'
+	},
+	{
+		en: 'to prosper',
+		ru: 'процветать, преуспевать',
+		ru_example: 'предприятие процветает',
+		en_example: 'the business prospers',
+		tr: '[ˈprɑːspər]'
+	},
+	{
+		en: 'to humiliate',
+		ru: 'унижать',
+		ru_example: 'он почувствовал себя оскорблённым',
+		en_example: 'he felt humiliated',
+		tr: '[hjuːˈmɪlɪeɪt]'
+	},
+	{
+		en: 'to chase',
+		ru: 'преследовать',
+		ru_example: '',
+		en_example: '',
+		tr: '[tʃeɪs]'
+	}
+]
+
+
