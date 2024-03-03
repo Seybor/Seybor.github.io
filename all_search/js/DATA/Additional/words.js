@@ -157,6 +157,90 @@ const ADJECTIVES = [
 		en_example: '',
 		tr: '[ˈɡʊdɪ]'
 	},
+	{
+		en: 'dump',
+		ru: 'свалка',
+		ru_example: '',
+		en_example: '',
+		tr: '[dʌmp]'
+	},
+	{
+		en: 'lively',
+		ru: 'живой',
+		ru_example: '',
+		en_example: '',
+		tr: '[ˈlaɪvli]'
+	},
+	{
+		en: 'ditch',
+		ru: 'канава',
+		ru_example: '',
+		en_example: '',
+		tr: '[dɪʧ]'
+	},
+	{
+		en: 'thrill',
+		ru: 'острые ощущения, трепет',
+		ru_example: '',
+		en_example: '',
+		tr: '[θrɪl]'
+	},
+	{
+		en: 'pathetic',
+		ru: 'жалкий',
+		ru_example: '',
+		en_example: '',
+		tr: '[pəˈθɛtɪk]'
+	},
+	{
+		en: 'indeed',
+		ru: 'действительно',
+		ru_example: '',
+		en_example: '',
+		tr: '[ɪnˈdiːd]'
+	},
+	{
+		en: 'fired',
+		ru: 'уволенный',
+		ru_example: '',
+		en_example: '',
+		tr: '[faɪəd]'
+	},
+	{
+		en: 'cruel',
+		ru: 'жестокий',
+		ru_example: '',
+		en_example: '',
+		tr: '[ˈkruːəl]'
+	},
+	{
+		en: 'mighty',
+		ru: 'могущественный',
+		ru_example: '',
+		en_example: '',
+		tr: '[ˈmaɪti]'
+	},
+	{
+		en: 'herd',
+		ru: 'стадо',
+		ru_example: '',
+		en_example: '',
+		tr: '[hɜːrd]'
+	},
+	{
+		en: 'spotlight',
+		ru: 'прожектор',
+		ru_example: '',
+		en_example: '',
+		tr: '[ˈspɑːtlaɪt]'
+	},
+	{
+		en: 'beast',
+		ru: 'зверь, животное, чудовище',
+		ru_example: '',
+		en_example: '',
+		tr: '[biːst]'
+	},
 ]
 
 

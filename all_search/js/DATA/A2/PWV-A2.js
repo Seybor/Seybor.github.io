@@ -98,7 +98,7 @@ const PWV_A2 = [
 		en_example: "He's very different from his brother"
 	},
 	{
-		en: 'arrive at the party / meeting / cenference / airport',
+		en: 'arrive at the party / meeting / conference / airport',
 		tr: '[əˈraɪv] [ət] [ðə] [ˈpɑːti] / [ˈmiːtɪŋ] / [ˈkɒnfᵊrᵊns] / [ˈeəpɔːt]',
 		ru: 'прибыть на вечеринку/на встречу/на конференцию/в аэропорт',
 		ru_example: 'Когда ты прибудешь в аэропорт?',
@@ -261,7 +261,7 @@ const PWV_A2 = [
 	{
 		en: 'explain it to someone',
 		tr: '[ɪkˈspleɪn] [ɪt] [tə] [ˈsʌmwʌn]',
-		ru: 'обяснить что-то кому-то',
+		ru: 'объяснить что-то кому-то',
 		ru_example: 'Ты мог бы объяснить мне это?',
 		en_example: 'Could you explain it to me?'
 	},

@@ -98,6 +98,55 @@ const REGULAR = [
 		ru_example: '',
 		en_example: '',
 		tr: '[tʃeɪs]'
+	},
+	{
+		en: 'to blossom',
+		ru: 'цвести',
+		ru_example: '',
+		en_example: '',
+		tr: '[ˈblɒsəm]'
+	},
+	{
+		en: 'to thrill',
+		ru: 'трепетать',
+		ru_example: '',
+		en_example: '',
+		tr: '[θrɪl]'
+	},
+	{
+		en: 'to dismiss',
+		ru: 'отклонить',
+		ru_example: '',
+		en_example: '',
+		tr: '[dɪˈsmɪs]'
+	},
+	{
+		en: 'to beware',
+		ru: 'остерегаться',
+		ru_example: '',
+		en_example: '',
+		tr: '[bɪˈweə]'
+	},
+	{
+		en: 'to reveal',
+		ru: ' раскрывать [напр. секрет]',
+		ru_example: 'Я попросил его не открывать мой секрет',
+		en_example: 'I asked him not reveal my secret',
+		tr: '[rɪˈviːl]'
+	},
+	{
+		en: 'to persuade',
+		ru: 'убеждать',
+		ru_example: 'Мы убедили его пойти с нами',
+		en_example: 'We persuaded him to come with us',
+		tr: '[pərˈsweɪd]'
+	},
+	{
+		en: 'to arrange',
+		ru: 'договориться, устраивать',
+		ru_example: '',
+		en_example: '',
+		tr: '[əˈreɪndʒ]'
 	}
 ]
 

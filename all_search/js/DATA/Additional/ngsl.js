@@ -397,7 +397,7 @@ const NGSL_S = [
 	{ en: 'rate', ru: 'ставка', ru_example: '', en_example: '', tr: '[reɪt]' },
 	{
 		en: 'rather',
-		ru: 'скорее',
+		ru: 'скорее, довольно',
 		ru_example: '',
 		en_example: '',
 		tr: '[ˈrɑːðə]'

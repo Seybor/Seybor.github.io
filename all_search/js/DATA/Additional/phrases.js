@@ -1,4 +1,4 @@
-const PNV = [
+const PHRASES = [
 	{
 		en: 'for sure', tr: '', ru: 'наверняка, точно', ru_example: 'Я не знаю точно', en_example: 'I don’t know for sure',
 	},
@@ -119,6 +119,69 @@ const PNV = [
 		ru: 'прыгать от радости',
 		ru_example: '',
 		en_example: '',
+		tr: ''
+	},
+	{
+		en: 'Never mind',
+		ru: 'неважно',
+		ru_example: '',
+		en_example: '',
+		tr: ''
+	},
+	{
+		en: "I don't mind",
+		ru: 'Я не против',
+		ru_example: '',
+		en_example: '',
+		tr: ''
+	},
+	{
+		en: "It's alright with me",
+		ru: 'Я не против',
+		ru_example: '',
+		en_example: '',
+		tr: ''
+	},
+	{
+		en: 'As long as',
+		ru: 'до тех пор, пока',
+		ru_example: '',
+		en_example: '',
+		tr: ''
+	},
+	{
+		en: "I'd hate",
+		ru: 'Я бы не хотел',
+		ru_example: '',
+		en_example: '',
+		tr: ''
+	},
+	{
+		en: "I'd love",
+		ru: 'Я бы с удовольствием',
+		ru_example: '',
+		en_example: '',
+		tr: ''
+	},
+	{
+		en: 'like this/that',
+		ru: 'так',
+		ru_example: 'Я не ожидал, что это будет так',
+		en_example: "I didn't expect it to be like that",
+		tr: ''
+	},
+	{
+		en: 'break up',
+		ru: 'разойтись, расстаться',
+		ru_example: 'расстанься с ним',
+		en_example: 'break up with him',
+		tr: ''
+	},
+	{
+		en: 'look down',
+		ru: 'смотреть свысока',
+		ru_example: 'Не смотри на меня свысока',
+		en_example: "Don't look down on me",
 		tr: ''
 	}
 ]

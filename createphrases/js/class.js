@@ -29,6 +29,8 @@ const createData = (data, separator = '	', anki = false) => {
 
 	if (!anki) {
 		console.log(arrObj)
+
+		return arrObj
 	} else {
 		let anki_en = ``
 		let anki_ru = ``
@@ -57,6 +59,7 @@ const createData = (data, separator = '	', anki = false) => {
 
 		console.log(anki_all)
 
+		return anki_all
 	}
 
 }

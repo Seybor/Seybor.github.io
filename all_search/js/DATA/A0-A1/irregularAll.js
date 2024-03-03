@@ -41,7 +41,7 @@ const IRREGULAR_VERBS = [
 	{ en: 'hear - heard - heard', tr: '[hɪə] - [hɜːd] - [hɜːd]', ru: 'слышать' },
 	{ en: 'hide - hid - hidden', tr: '[haɪd] - [hɪd] - [ˈhɪdᵊn]', ru: 'прятать' },
 	{ en: 'hit - hit - hit', tr: '[hɪt] - [hɪt] - [hɪt]', ru: 'ударить ' },
-	{ en: 'hurt* - hurt - hurt', tr: '[hɜːt]* - [hɜːt] - [hɜːt]', ru: 'ранить, повредит' },
+	{ en: 'hurt* - hurt - hurt', tr: '[hɜːt]* - [hɜːt] - [hɜːt]', ru: 'ранить, повредить' },
 	{ en: 'keep - kept - kept', tr: '[kiːp] - [kept] - [kept]', ru: 'держать, хранить' },
 	{ en: 'know - knew - known', tr: '[nəʊ] - [njuː] - [nəʊn]', ru: 'знать' },
 	{ en: 'lead - led - led', tr: '[liːd] - [lɛd] - [lɛd]', ru: 'вести, возглавлять, лидировать' },
