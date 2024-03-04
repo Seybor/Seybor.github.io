@@ -1015,11 +1015,11 @@ const WORDS = [
 		en_example: 'Understanding comes with experience'
 	},
 	{
-		en: 'midday / noon',
-		tr: '[ˈmɪddeɪ] / [nuːn]',
+		en: 'afternoon / midday / noon',
+		tr: '[ˌɑːftəˈnuːn] / [ˈmɪddeɪ] / [nuːn]',
 		ru: 'полдень',
 		ru_example: 'Она прибыла в Лондон в полдень',
-		en_example: 'She arrived in London at midday / noon'
+		en_example: 'She arrived in London at noon'
 	},
 	{
 		en: 'performance',
@@ -1782,7 +1782,41 @@ const WORDS = [
 		tr: ''
 	},
 	{ en: 'bright', ru: 'яркий', ru_example: '', en_example: '', tr: '' },
-
+	{
+		en: 'maybe / perhaps',
+		ru: 'возможно',
+		ru_example: 'Возможно, я ему позвоню',
+		en_example: "Maybe/Perhaps I'll call him",
+		tr: '[ˈmeɪbɪ] / [pəˈhæps]'
+	},
+	{
+		en: 'several',
+		ru: 'несколько',
+		ru_example: 'несколько раз',
+		en_example: 'several times',
+		tr: '[ˈsɛvᵊrᵊl]'
+	},
+	{
+		en: 'afternoon',
+		ru: 'полдень',
+		ru_example: '',
+		en_example: '',
+		tr: '[ˌɑːftəˈnuːn]'
+	},
+	{
+		en: 'church',
+		ru: 'церковь',
+		ru_example: 'Красивая церковь',
+		en_example: 'Beautiful church',
+		tr: '[ʧɜːʧ]'
+	},
+	{
+		en: 'to realize',
+		ru: 'понимать, осознавать',
+		ru_example: '',
+		en_example: '',
+		tr: '[ˈrɪəlaɪz]'
+	},
 ]
 
 export default WORDS

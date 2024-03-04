@@ -1,0 +1,45 @@
+.header {
+  padding: 10px 0;
+  background-color: var(--bgc);
+}
+
+.header__inner {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  padding-right: 110px;
+}
+
+.search {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__input {
+    padding: 10px 12px;
+    min-width: 100px;
+    border-radius: 10px;
+  }
+
+  &__btn {
+    padding: 10px 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #02d87f;
+  }
+}
+
+@media (max-width: 540px) {
+  .search {
+    padding: 0 10px;
+    width: 100%;
+  }
+}

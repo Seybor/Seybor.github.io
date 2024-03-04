@@ -1,0 +1,329 @@
+const POSITION_1_1000 = [
+	{
+		en: 'ahead',
+		ru: 'впереди',
+		ru_example: '',
+		en_example: '',
+		tr: '[əˈhɛd]'
+	},
+	{
+		en: 'amount',
+		ru: 'количество',
+		ru_example: '',
+		en_example: '',
+		tr: '[əˈmaʊnt]'
+	},
+	{
+		en: 'available',
+		ru: 'доступный',
+		ru_example: '',
+		en_example: '',
+		tr: '[əˈveɪləbᵊl]'
+	},
+	{ en: 'aware', ru: 'осведомленный', ru_example: '', en_example: '', tr: '[əˈweə]' },
+	{
+		en: 'basically',
+		ru: 'в основном',
+		ru_example: '',
+		en_example: '',
+		tr: '[ˈbeɪsɪkᵊli]'
+	},
+	{
+		en: 'benefit',
+		ru: 'выгода',
+		ru_example: '',
+		en_example: '',
+		tr: '[ˈbɛnɪfɪt]'
+	},
+	{
+		en: 'bloody',
+		ru: 'кровавый',
+		ru_example: '',
+		en_example: '',
+		tr: '[ˈblʌdi]'
+	},
+	{ en: 'board', ru: 'доска', ru_example: '', en_example: '', tr: '[bɔːd]' },
+	{ en: 'brief', ru: 'кратко', ru_example: '', en_example: '', tr: '[briːf]' },
+	{
+		en: 'certain',
+		ru: 'определённый',
+		ru_example: '',
+		en_example: '',
+		tr: '[ˈsɜːtᵊn]'
+	},
+
+	{
+		en: 'charge',
+		ru: 'заряд',
+		ru_example: '',
+		en_example: '',
+		tr: '[ʧɑːʤ]'
+	},
+	{ en: 'cough', ru: 'кашель', ru_example: '', en_example: '', tr: '[kɒf]' },
+	{
+		en: 'council',
+		ru: 'совет [напр. министров]',
+		ru_example: 'Всемирный Совет Мира',
+		en_example: 'World Peace Council',
+		tr: '[ˈkaʊnsᵊl]'
+	},
+	{
+		en: 'effort',
+		ru: 'усилия',
+		ru_example: '',
+		en_example: '',
+		tr: '[ˈɛfət]'
+	},
+	{
+		en: 'especially',
+		ru: 'особенно',
+		ru_example: '',
+		en_example: '',
+		tr: '[ɪˈspɛʃᵊli]'
+	},
+	{
+		en: 'exactly',
+		ru: 'точно',
+		ru_example: '',
+		en_example: '',
+		tr: '[ɪɡˈzæktli]'
+	},
+	{
+		en: 'fair',
+		ru: 'справедливо',
+		ru_example: '',
+		en_example: '',
+		tr: '[feə]'
+	},
+	{
+		en: 'fairly',
+		ru: 'довольно; справедливо',
+		ru_example: 'Это достаточно распространённое заболевание',
+		en_example: "It's a fairly common condition",
+		tr: '[ˈfeəli]'
+	},
+	{ en: 'force', ru: 'сила', ru_example: '', en_example: '', tr: '[fɔːs]' },
+	{
+		en: 'further',
+		ru: 'далее',
+		ru_example: 'Они прошли чуть дальше',
+		en_example: 'They walked a little further',
+		tr: '[ˈfɜːðə]'
+	},
+	{
+		en: 'laughter',
+		ru: 'смех',
+		ru_example: '',
+		en_example: '',
+		tr: '[ˈlɑːftə]'
+	},
+	{
+		en: 'least',
+		ru: 'наименее',
+		ru_example: '',
+		en_example: '',
+		tr: '[liːst]'
+	},
+	{
+		en: 'major',
+		ru: 'главная',
+		ru_example: '',
+		en_example: '',
+		tr: '[ˈmeɪʤə]'
+	},
+	{ en: 'market', ru: 'рынок', ru_example: '', en_example: '', tr: '[ˈmɑːkɪt]' },
+	{
+		en: 'within',
+		ru: 'в пределах',
+		ru_example: '',
+		en_example: '',
+		tr: '[wɪˈðɪn]'
+	},
+	{
+		en: 'worth',
+		ru: 'стоимость',
+		ru_example: '',
+		en_example: '',
+		tr: '[wɜːθ]'
+	},
+	{
+		en: 'various',
+		ru: 'различные',
+		ru_example: '',
+		en_example: '',
+		tr: '[ˈveəriəs]'
+	},
+	{
+		en: 'whatever',
+		ru: 'что угодно',
+		ru_example: '',
+		en_example: '',
+		tr: '[wɒtˈɛvə]'
+	},
+	{ en: 'ought', ru: 'долг, обязанность', ru_example: 'моральный долг', en_example: 'the moral oughts', tr: '[ɔːt]' },
+	{ en: 'quick', ru: 'быстро; быстро', ru_example: '', en_example: '', tr: '[kwɪk]' },
+
+	{
+		en: 'rather',
+		ru: 'скорее, довольно',
+		ru_example: '',
+		en_example: '',
+		tr: '[ˈrɑːðə]'
+	},
+	{
+		en: 'through',
+		ru: 'через',
+		ru_example: 'Я посмотрел через окно',
+		en_example: 'I looked through the window',
+		tr: '[θruː]'
+	},
+
+	{
+		en: 'trouble',
+		ru: 'проблема, неприятность, беда',
+		ru_example: 'Он знал, что у него будут неприятности',
+		en_example: 'He knew he was going to be in trouble',
+		tr: '[ˈtrʌbᵊl]'
+	},
+	{
+		en: 'tend',
+		ru: 'тенденция',
+		ru_example: '',
+		en_example: '',
+		tr: '[tɛnd]'
+	},
+	{ en: 'term', ru: 'срок', ru_example: '', en_example: '', tr: '[tɜːm]' },
+	{
+		en: 'therefore',
+		ru: 'поэтому',
+		ru_example: 'Their car was bigger and therefore more comfortable',
+		en_example: 'Их автомобиль был больше, и поэтому более комфортным',
+		tr: '[ˈðeəfɔː]'
+	},
+	{
+		en: 'unclear',
+		ru: 'неясно',
+		ru_example: '',
+		en_example: '',
+		tr: '[ʌnˈklɪə]'
+	},
+	{
+		en: 'unless',
+		ru: 'если не',
+		ru_example: 'Я не поеду, если не будет хорошей погоды',
+		en_example: "I won't go unless the weather's nice",
+		tr: '[ənˈlɛs]'
+	},
+
+	{
+		en: 'staff',
+		ru: 'персонал',
+		ru_example: '',
+		en_example: '',
+		tr: '[stɑːf]'
+	},
+	{ en: 'stage', ru: 'этап', ru_example: '', en_example: '', tr: '[steɪʤ]' },
+	{ en: 'stick', ru: 'палка', ru_example: '', en_example: '', tr: '[stɪk]' },
+	{ en: 'still', ru: 'ещё', ru_example: '', en_example: '', tr: '[stɪl]' },
+	{
+		en: 'straight',
+		ru: 'прямо',
+		ru_example: '',
+		en_example: '',
+		tr: '[streɪt]'
+	},
+	{ en: 'stuff', ru: 'вещи', ru_example: '', en_example: '', tr: '[stʌf]' },
+
+	{ en: 'tape', ru: 'лента', ru_example: '', en_example: '', tr: '[teɪp]' },
+	{
+		en: 'anybody',
+		ru: 'кто-нибудь [мн.ч]',
+		ru_example: '',
+		en_example: '',
+		tr: '[ˈɛniˌbɒdi]'
+	},
+	{
+		en: 'anyone',
+		ru: 'кто-нибудь [ед.ч]',
+		ru_example: '',
+		en_example: '',
+		tr: '[ˈɛniwʌn]'
+	},
+	{
+		en: 'relationship',
+		ru: 'отношения',
+		ru_example: '',
+		en_example: '',
+		tr: '[rɪˈleɪʃᵊnʃɪp]'
+	},
+	{
+		en: 'research',
+		ru: 'исследование',
+		ru_example: '',
+		en_example: '',
+		tr: '[rɪˈsɜːʧ]'
+	},
+	{
+		en: 'response',
+		ru: 'ответ',
+		ru_example: 'Он получил ответ на своё письмо',
+		en_example: 'He got a response to his letter',
+		tr: '[rɪˈspɒns]'
+	},
+	{ en: 'rest', ru: 'отдых', ru_example: '', en_example: '', tr: '[rɛst]' },
+	{ en: 'review', ru: 'обзор', ru_example: '', en_example: '', tr: '[rɪˈvjuː]' },
+
+]
+
+const POSITION_1001_3000 = [
+	{
+		en: 'dear',
+		ru: 'уважаемый',
+		ru_example: '',
+		en_example: '',
+		tr: '[dɪə]'
+	},
+	{ en: 'bet', ru: 'ставка', ru_example: '', en_example: '', tr: '[bɛt]' },
+	{
+		en: 'extra',
+		ru: 'дополнительно; дополнительный',
+		ru_example: '',
+		en_example: '',
+		tr: '[ˈɛkstrə]'
+	},
+	{
+		en: 'normally',
+		ru: 'обычно',
+		ru_example: '',
+		en_example: '',
+		tr: '[ˈnɔːmᵊli]'
+	},
+	{
+		en: 'crowd',
+		ru: 'толпа',
+		ru_example: 'Толпа молодых протестующих',
+		en_example: 'A crowd of young protesters',
+		tr: '[kraʊd]'
+	},
+
+
+]
+
+
+
+const POSITION_3001_5000 = [
+
+]
+
+const POSITION_MORE_5000 = [
+
+]
+
+export {
+	POSITION_1_1000,
+	POSITION_1001_3000,
+	POSITION_3001_5000,
+	POSITION_MORE_5000
+}
+
+

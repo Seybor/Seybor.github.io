@@ -1,0 +1,110 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.no-resize {
+  resize: none;
+}
+
+.none {
+  display: none;
+}
+
+::-moz-selection,
+::selection {
+  background-color: #0aee02;
+}
+
+::-moz-placeholder,
+::placeholder {
+  opacity: 0.5;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-width: 320px;
+
+  font-family: 'Ubuntu', sans-serif;
+  font-size: var(--regular-text);
+  line-height: var(--line-height);
+  font-weight: 400;
+
+  background-color: var(--body);
+  color: var(--text-color);
+
+  overflow-x: hidden;
+}
+
+@media (max-width: 1260px) {
+  .container {
+    max-width: 1020px;
+  }
+}
+@media (max-width: 1080px) {
+  .container {
+    max-width: 900px;
+  }
+}
+@media (max-width: 960px) {
+  .container {
+    max-width: 840px;
+  }
+}
+@media (max-width: 900px) {
+  .container {
+    max-width: 660px;
+  }
+}
+@media (max-width: 720px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media (max-width: 540px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    max-width: 100%;
+  }
+}
+@media (max-width: 360px) {
+  .container {
+    padding: 0 10px;
+  }
+}

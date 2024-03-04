@@ -1,2 +1,6 @@
 #separator:tab
 #html:true
+после них глагол с to либо -ing	like / love / start / prefer / hate / begin / continue + -ing or to
+после них всегда глагол с -ing	enjoy / stop / mind / finish / suggest + -ing
+
+

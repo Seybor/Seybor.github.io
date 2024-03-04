@@ -11,7 +11,7 @@ import WORDS_A2 from "./DATA/A2/WORDS-A2.js"
 
 import ANIMALS from "./DATA/Additional/words-theme/animals.js"
 import BODY from "./DATA/Additional/words-theme/body.js"
-import NGSL_S from "./DATA/Additional/ngsl.js"
+import PV from "./DATA/Additional/phrasal-verbs.js"
 
 import clockStart from "./modules/clock.js"
 
@@ -34,7 +34,7 @@ if (document.querySelector('.clock-wrapper')) {
 // ! concat all arr
 const ARR_A1 = IRREGULAR_VERBS.concat(WORDS.concat(PHRASAL_VERBS.concat(PHRASES_NO_VERBS.concat(PHRASES_VERBS_ALL))))
 const ARR_A2 = PNV_A2.concat(PWV_A2.concat(REGULAR_A2.concat(WORDS_A2)))
-const ARR_ADD = ANIMALS.concat(BODY)
+const ARR_ADD = ANIMALS.concat(BODY.concat(PV))
 
 for (let i = 0; i < ARR_A1.length; i++) {
 	ARR_A1[i].from = 'A0-A1'
@@ -45,13 +45,25 @@ for (let i = 0; i < ARR_A2.length; i++) {
 for (let i = 0; i < ARR_ADD.length; i++) {
 	ARR_ADD[i].from = 'add'
 }
-for (let i = 0; i < NGSL_S.length; i++) {
-	NGSL_S[i].from = 'ngsl'
-}
 
-const ALL_ARRAY = ARR_A1.concat(ARR_A2.concat(ARR_ADD.concat(NGSL_S)))
+const ALL_ARRAY = ARR_A1.concat(ARR_A2.concat(ARR_ADD))
+
+// !open
+s('#toggle').addEventListener('click', (evt) => {
+	let height = (window.getComputedStyle(s('.contents')).getPropertyValue('max-height'))
+	height = +height.slice(0, height.length - 2)
+
+	height <= 0 ? (
+		s('.contents').style.setProperty('max-height', `${s('.contents').scrollHeight}px`),
+		s('.contents').style.setProperty('padding', '12px 0')
+	) : (
+		s('.contents').style.setProperty('max-height', `0px`),
+		s('.contents').style.setProperty('padding', '0')
+	);
 
 
+
+})
 
 // ! search
 s('.search__input').placeholder = `elements: ${ALL_ARRAY.length}`
@@ -109,7 +121,7 @@ const currentTime = () => {
 }
 currentTime()
 
-// ! для шрифта
+// ! font-size
 s('.change-font').addEventListener('click', (evt) => {
 
 	let fontSize = +((window.getComputedStyle(s('body')).getPropertyValue('font-size')).slice(0, -2))

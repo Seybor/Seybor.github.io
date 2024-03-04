@@ -1,5 +1,5 @@
 const REGULAR = [
-    {
+  {
     en: 'to earn',
     tr: '[ɜːrn]',
     ru: 'зарабатывать',
@@ -7,7 +7,7 @@ const REGULAR = [
     en_example: 'He succeeded in earning that sum of money'
   },
 
-    {
+  {
     en: 'to worry',
     tr: '[ˈwɜːrɪ]',
     ru: 'волноваться, беспокоиться',
@@ -476,7 +476,13 @@ const REGULAR = [
     ru_example: 'Каждый год цены на проживание растут',
     en_example: 'Every year, accommodation prices increase'
   },
-
+  {
+    en: 'realize',
+    ru: 'понимать, осознавать',
+    ru_example: '',
+    en_example: '',
+    tr: '[ˈrɪəlaɪz]'
+  },
 
 ]
 

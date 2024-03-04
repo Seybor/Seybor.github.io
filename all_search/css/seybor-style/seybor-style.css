@@ -19,8 +19,8 @@
   overflow: hidden;
 }
 
-.clearfix:after {
-  content: '.';
+.clearfix::after {
+  content: ".";
   display: block;
   clear: both;
   visibility: hidden;
@@ -59,7 +59,7 @@ body {
 body {
   min-width: 300px;
 
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.4;
@@ -290,7 +290,7 @@ body {
   padding: 6px 12px;
 
   font-weight: 400;
-  color: #ff6600;
+  color: #050505;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
