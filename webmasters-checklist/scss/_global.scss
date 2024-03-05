@@ -1,0 +1,115 @@
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: #fff;
+}
+::placeholder {
+  opacity: var(--opacity);
+  color: #666;
+}
+
+input:focus:required:invalid,
+textarea:focus:required:invalid {
+  border-color: red;
+}
+input:required:valid,
+textarea:required:valid {
+  border-color: green;
+}
+
+.no-resize {
+  resize: none;
+}
+
+.accent {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 400;
+
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+
+  &__span {
+    display: block;
+
+    font-size: 24px;
+  }
+}
+@media (max-width: 540px) {
+  .title {
+    font-size: 32px;
+    &__span {
+      font-size: 22px;
+    }
+  }
+}
+@media (max-width: 360px) {
+  .title {
+    font-size: 30px;
+    &__span {
+      font-size: 20px;
+    }
+  }
+}
+
+.small {
+  display: block;
+
+  font-size: 10px;
+}
+
+.logo {
+  width: auto;
+  height: auto;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-width: 320px;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #2c2c2c;
+
+  overflow-x: hidden;
+}
