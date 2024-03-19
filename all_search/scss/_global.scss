@@ -13,9 +13,26 @@
 .no-resize {
   resize: none;
 }
+.resize {
+  resize: both;
+  overflow: auto;
+}
+.resize-y {
+  resize: vertical;
+}
+.resize-x {
+  resize: horizontal;
+}
 
-.none {
+.none.none {
   display: none;
+}
+
+button[class] {
+  transition: opacity 0.25s linear;
+  &:hover {
+    opacity: 0.75;
+  }
 }
 
 ::-moz-selection,

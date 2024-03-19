@@ -24,12 +24,12 @@
 				<div class="header__inner">
 					<form class="search" action="#">
 						<div class="search__inner">
-							<button class="search__btn" type="button" id="toggle">Toggle</button>
-							<input class="search__input" type="text" placeholder="search" required minlength="2">
-							<button class="search__btn" type="submit">Search</button>
+							<button class="search__btn" type="button" id="toggle" data-name="🔴">Toggle</button>
+							<input class="search__input" type="text" placeholder="search" required minlength="2" data-name="🟢">
+							<button class="search__btn" type="submit" data-name="🔵">Search</button>
 						</div>
 					</form>
-					<div class="clock-wrapper">
+					<div class="clock-wrapper none">
 						<div class="clock">
 							<div class="hour">
 								<div class="hours">
@@ -62,7 +62,7 @@
 						<textarea class="form-main__textarea no-resize" name="input" rows="10" placeholder="input"></textarea>
 
 						<div class="form-main__filter">
-							<div class="form-main__separators">
+							<div class="form-main__radio">
 								<label class="form-main__label">
 									Tab<input class="form-main__input" type="radio" name="separator" value="	" checked>
 								</label>
@@ -72,7 +72,7 @@
 								</label>
 							</div>
 
-							<div class="form-main__anki">
+							<div class="form-main__radio">
 								<label class="form-main__label">
 									no<input class="form-main__input" type="radio" name="anki" value="false" checked>
 								</label>
@@ -83,6 +83,7 @@
 							</div>
 
 							<button class="btn form-main__btn" type="submit">Отправить</button>
+							<a class="btn form-main__link" href="#" style="display: none;">Download</a>
 						</div>
 
 						<textarea class="form-main__textarea no-resize" name="output" rows="10" placeholder="output"
@@ -91,7 +92,7 @@
 				</div>
 			</div>
 
-			<div class="elemets">
+			<div class="elements">
 				<div class="container">
 					<div class="elements__inner">
 						<div class="elements__items">

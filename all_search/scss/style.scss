@@ -3,14 +3,16 @@
 @import 'global';
 @import 'blocks';
 
+@import 'clock';
+
 @import 'header';
 
 .contents {
-  max-height: 0;
+  height: 0;
   overflow: hidden;
   padding: 0;
 
-  transition: max-height 0.5s linear, padding 0.75s ease-out;
+  transition: all 0.5s linear;
 }
 
 .form-main {
@@ -31,14 +33,15 @@
     gap: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 12px 0;
   }
-  &__separators,
-  &__anki {
+  &__radio {
     display: inline-block;
     padding: 8px;
 
     border: 1px solid black;
+    border-radius: 4px;
   }
 
   &__label {
@@ -80,7 +83,7 @@
   }
 }
 
-.elemets {
+.elements {
   padding: 40px 0;
   &__items {
     display: flex;
@@ -109,127 +112,18 @@
 }
 
 @media (max-width: 960px) {
-  .elemets {
+  .elements {
     &__item {
       width: 50%;
     }
   }
 }
 @media (max-width: 540px) {
-  .elemets {
+  .elements {
     &__item {
       width: 100%;
     }
   }
-}
-
-/* ! clock */
-
-.clock-wrapper {
-  --width: 100px;
-  --height: 100px;
-
-  position: absolute;
-  top: 50%;
-  right: 0;
-
-  margin-top: calc(var(--height) / 2 * (-1));
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-}
-
-.clock {
-  position: relative;
-  width: var(--width);
-  height: var(--height);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url('../img/dial1.jpg');
-  background-size: cover;
-  background-position: center;
-  border: 1px solid darkgray;
-  border-radius: 50%;
-  box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05),
-    0 15px 15px rgba(0, 0, 0, 0.3), inset 0 15px 15px rgba(0, 0, 0, 0.3);
-}
-.clock::before {
-  content: '';
-  position: absolute;
-  z-index: 1000;
-  width: calc(var(--width) / 100 * 4);
-  height: calc(var(--height) / 100 * 4);
-  border-radius: 50%;
-  background-color: #fff;
-}
-
-.hour {
-  position: absolute;
-}
-.hour .hours {
-  position: relative;
-  width: calc(var(--width) / 2);
-  height: calc(var(--height) / 2);
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  border-radius: 50%;
-}
-.hour .hours::before {
-  content: '';
-  position: absolute;
-  z-index: 200;
-  width: calc(var(--width) / 100 * 3);
-  height: calc(var(--height) / 4);
-  border-radius: 6px 6px 0 0;
-  background-color: pink;
-}
-
-.minute {
-  position: absolute;
-}
-.minute .minutes {
-  position: relative;
-  width: calc(var(--width) / 100 * 55);
-  height: calc(var(--height) / 100 * 55);
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  border-radius: 50%;
-}
-.minute .minutes::before {
-  content: '';
-  position: absolute;
-  z-index: 300;
-  width: calc(var(--width) / 100 * 2);
-  height: calc(var(--height) / 4);
-  border-radius: 6px 6px 0 0;
-  background-color: #fff;
-}
-
-.second {
-  position: absolute;
-}
-.second .seconds {
-  position: relative;
-  width: calc(var(--width) / 100 * 65);
-  height: calc(var(--height) / 100 * 65);
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  border-radius: 50%;
-}
-.second .seconds::before {
-  content: '';
-  position: absolute;
-  z-index: 400;
-  width: calc(var(--width) / 100 * 1);
-  height: calc(var(--height) / 100 * 45);
-  border-radius: 6px 6px 0 0;
-  background-color: #fff;
 }
 
 @import 'footer';

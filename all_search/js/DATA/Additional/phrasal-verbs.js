@@ -141,6 +141,43 @@ const PV = [
 		en_example: 'Никогда не откладывай на завтра то, что можешь сделать сегодня',
 		tr: '',
 	},
+	{
+		en: 'come out',
+		ru: 'выходить [из как-то пространства]',
+		ru_example: 'Выйди из этого здания',
+		en_example: 'Come out of this building',
+		tr: '',
+	},
+
+	{
+		en: 'split up',
+		ru: 'дробиться',
+		ru_example: 'Мы разбились на команды',
+		en_example: 'We split up into teams',
+		tr: '',
+	},
+		{
+		en: 'break up',
+		ru: 'разойтись, расстаться',
+		ru_example: 'расстанься с ним',
+		en_example: 'break up with him',
+		tr: '',
+	},
+	{
+		en: 'look down',
+		ru: 'смотреть свысока',
+		ru_example: 'Не смотри на меня свысока',
+		en_example: "Don't look down on me",
+		tr: '',
+	},
+	{
+		en: 'start over',
+		ru: 'начать сначала',
+		ru_example: 'Он всё начал сначала',
+		en_example: "He started over",
+		tr: '',
+	},
+
 ];
 
 export default PV

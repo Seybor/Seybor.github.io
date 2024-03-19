@@ -3,12 +3,10 @@
   padding: 6px 12px;
 
   font-weight: 400;
-  color: #050505;
+  color: var(--accent);
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
-
-  cursor: pointer;
 
   background-color: transparent;
   border: 1px solid currentColor;
@@ -16,16 +14,6 @@
 
   transition: all 0.2s linear;
 
+  cursor: pointer;
   user-select: none;
-}
-
-.change-font {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-
-  font-size: 24px;
-  font-weight: 400;
-
-  transform: translateY(-50%);
 }
