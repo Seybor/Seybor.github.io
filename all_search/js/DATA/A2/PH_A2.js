@@ -602,6 +602,7 @@ const PH_A2 = [
 		en_example: 'The children were playing outside all day',
 		tr: '',
 	},
+	{"en":"My friends and I","ru":"Я со своими друзьями","ru_example":"Я со своими друзьями часто играем в эту игру","en_example":"My friends and I often play this game","tr":""},{"en":"to be late for","ru":"опаздывать куда-то","ru_example":"Она бежит, потому что опаздывает на урок","en_example":"She's running because she's late for the lesson","tr":""}
 ];
 
 export default PH_A2

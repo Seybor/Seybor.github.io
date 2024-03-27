@@ -198,4 +198,6 @@ const SENTENCE = [
 	},
 	{ en: 'Hold your size dress', ru: 'Держите платье вашего размера', ru_example: '', en_example: '', tr: '' },
 	{ en: "I'm on my way now", ru: 'Я уже в пути / Я уже еду / Я в пути', ru_example: '', en_example: '', tr: '' },
+	{ en: "I never went to that place when I lived there", ru: 'Я никогда не ходит в то место, когда жил там', ru_example: '', en_example: '', tr: '' },
+	{ en: "English is spoken all over the world", ru: 'На английском языке говорят во всём мире', ru_example: '', en_example: '', tr: '' },
 ];

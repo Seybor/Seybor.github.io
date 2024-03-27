@@ -45,6 +45,7 @@ const IR = [
 	{ en: 'keep - kept - kept', tr: '[kiːp] - [kept] - [kept]', ru: 'держать, хранить' },
 	{ en: 'know - knew - known', tr: '[nəʊ] - [njuː] - [nəʊn]', ru: 'знать' },
 	{ en: 'lead - led - led', tr: '[liːd] - [lɛd] - [lɛd]', ru: 'вести, возглавлять, лидировать' },
+	{ en: 'lie - lay - lain', tr: '[laɪ] - [leɪ] - [leɪn]', ru: 'лежать' },
 	{
 		en: 'learn - learnt/learned - learnt/learned',
 		tr: '[lɜːn] - [lɜːnt]/[lɜːnt] - [lɜːnt]/[lɜːnt]',

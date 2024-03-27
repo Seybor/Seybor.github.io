@@ -41,6 +41,63 @@ const IR_A2 = [
 		ru_example: 'Дом сгорел в прошлом году',
 		en_example: 'The house burned down last year'
 	},
+	{
+		en: 'quit - quit - quit',
+		ru: 'уволиться; бросать',
+		ru_example: 'Почему вы ушли с работы?',
+		en_example: 'Why did you quit your job?',
+		tr: '[kwɪt] - [kwɪt] - [kwɪt]',
+	},
+	{
+		en: 'dig - dug - dug',
+		ru: 'рыть',
+		ru_example: 'Яма была выкопана недавно',
+		en_example: 'The hole was freshly dug',
+		tr: '[dɪɡ] - [dʌɡ] - [dʌɡ]',
+	},
+	{
+		en: 'shave - shove - shaven',
+		ru: 'бриться',
+		ru_example: 'Он не брился несколько дней',
+		en_example: "He hadn't shaved for days",
+		tr: '[ʃeɪv] - [ʃʌv] - [ˈʃeɪvᵊn]',
+	},
+	{
+		en: 'mistake - mistook - mistaken',
+		ru: 'ошибаться',
+		ru_example: 'По-моему, ты серьёзно ошибаешься',
+		en_example: 'I think you are seriously mistaken',
+		tr: '[mɪˈsteɪk] - [mɪˈstʊk] - [mɪˈsteɪkᵊn]',
+	},
+	{
+		en: 'spell - spelt - spelt',
+		ru: 'произносить или писать по буквам',
+		ru_example: 'Как пишется ваше имя?',
+		en_example: 'How do you spell your name?',
+		tr: '[spɛl] - [spɛlt] - [spɛlt]',
+	},
+	{
+		en: 'redo - redid - redone',
+		ru: 'переделывать',
+		ru_example: 'Вам придётся переделать эту часть работы',
+		en_example: "You'll have to redo this piece of work",
+		tr: '[ˌriːˈduː] - [ˌriːˈdɪd] - [ˌriːˈdʌn]',
+	},
+	{
+		en: 'shut - shut - shut',
+		ru: 'закрывать',
+		ru_example: 'Он закрыл глаза и заснул',
+		en_example: 'He shut his eyes and went to sleep',
+		tr: '[ʃʌt] - [ʃʌt] - [ʃʌt]',
+	},
+	{
+		en: 'sweep - swept - swept',
+		ru: 'подметать',
+		ru_example: 'Мне нужно подмести кухню',
+		en_example: 'I need to sweep the kitchen',
+		tr: '[swiːp] - [swɛpt] - [swɛpt]',
+	},
+	{ en: 'forbid - forbade - forbidden', ru: 'запретить', ru_example: 'Я запрещаю тебе идти!', en_example: 'I forbid you to go!', tr: '[fəˈbɪd] - [fəˈbeɪd] - [fəˈbɪdᵊn]' },
 ]
 
 export default IR_A2

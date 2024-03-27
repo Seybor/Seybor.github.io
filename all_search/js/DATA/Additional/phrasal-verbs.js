@@ -156,7 +156,7 @@ const PV = [
 		en_example: 'We split up into teams',
 		tr: '',
 	},
-		{
+	{
 		en: 'break up',
 		ru: 'разойтись, расстаться',
 		ru_example: 'расстанься с ним',
@@ -180,4 +180,3 @@ const PV = [
 
 ];
 
-export default PV

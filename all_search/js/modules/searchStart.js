@@ -2,6 +2,7 @@ import { s, all } from "./basic.js"
 
 const searchStart = (ALL_ARRAY) => {
 	s('.search__input').placeholder = `elements: ${ALL_ARRAY.length}`
+
 	s('.search').addEventListener('submit', (evt) => {
 		evt.preventDefault()
 		const value = s('.search__input').value.trim().toLowerCase()

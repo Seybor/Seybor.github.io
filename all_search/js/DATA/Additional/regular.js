@@ -207,8 +207,14 @@ const REGULAR = [
 		ru: 'беспокоить',
 		ru_example: 'Не беспокойтесь, пожалуйста',
 		en_example: "Don't bother, please",
-		tr: '[ˈbɒðə]'
+		tr: '[ˈbɒðə]',
+	},
+	{
+		en: 'to welcome',
+		ru: 'приветствовать',
+		ru_example: 'Хозяин приветствовал гостей',
+		en_example: 'The host welcomed the guests',
+		tr: '[ˈwelkəm]',
 	},
 ];
-
 

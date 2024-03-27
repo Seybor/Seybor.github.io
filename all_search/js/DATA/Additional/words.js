@@ -1,4 +1,4 @@
-const ADJECTIVES = [
+const WORDS = [
 	{
 		en: 'amazing / astonishing',
 		tr: '[əˈmeɪzɪŋ] / [əˈstɑːnɪʃɪŋ]',

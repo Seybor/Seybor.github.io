@@ -1,3 +1,7 @@
+PV.forEach(e => {
+	console.log(`${e.en} - ${e.ru} - ${e.en_example} - ${e.ru_example} - ${e.tr}`)
+})
+
 shop assistant - продавец
 hairdresser - парикмахер
 traffic warden - регулировщик движения

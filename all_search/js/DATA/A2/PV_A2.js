@@ -100,6 +100,34 @@ const PV_A2 = [
 		tr: '',
 	},
 	{ en: 'slow down', ru: 'замедлить', ru_example: 'Не замедляй меня', en_example: "Don't slow me down", tr: '' },
+	{
+		en: 'shut up',
+		ru: 'заткнуться',
+		ru_example: 'Просто заткнись и слушай',
+		en_example: 'Just shut up and listen',
+		tr: '',
+	},
+	{
+		en: 'set up',
+		ru: 'устанавливать',
+		ru_example: 'Ты умеешь ставить палатку?',
+		en_example: 'Do you know how to set up a tent?',
+		tr: '',
+	},
+	{
+		en: 'breathe in',
+		ru: 'вдыхать',
+		ru_example: 'Утром я открываю настежь окно и делаю глубокий вдох',
+		en_example: 'In the morning I open the window wide and breathe in deeply',
+		tr: '',
+	},
+	{
+		en: 'breathe out',
+		ru: 'выдыхать',
+		ru_example: 'На вечеринках я не люблю находиться с людьми, которые выдыхают дым на меня',
+		en_example: "At parties, I don't like to be with people who breathe out smoke all over me",
+		tr: '',
+	},
 ];
 
-export default PV_A2
+export default PV_A2;
