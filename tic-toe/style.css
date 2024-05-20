@@ -1,0 +1,56 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	border: 1px solid red;
+}
+
+.field {
+	width: 300px;
+	height: 300px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	border: 1px solid black;
+
+	user-select: none;
+}
+.cell {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 50px;
+	flex: 0 0 33.333333%;
+	height: 100px;
+	border: 1px solid green;
+
+	transition: all 0.25s linear;
+}
+.cell:hover {
+	background-color: rgba(0, 138, 252, 0.75);
+	cursor: pointer;
+}
+
+.cell--active {
+	background-color: rgba(0, 138, 252, 0.25);
+}
+
+.cell--victory {
+	background-color: green;
+}
+.cell--defeat {
+	background-color: red;
+}
