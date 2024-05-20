@@ -7,7 +7,6 @@ const a = (els) => {
 
 let move = 0
 
-const arrCells = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 const winnerNumbers = [
 	[1, 2, 3],
 	[1, 4, 7],
@@ -31,6 +30,11 @@ const checkWinners = () => {
 			return
 		}
 
+		if (move >= 9) {
+			alert('Ничья')
+			return
+		}
+
 		if (move % 2 === 0) {
 			s('.field').style.pointerEvents = 'auto'
 		} else {
@@ -46,6 +50,8 @@ const checkWinners = () => {
 		a(`.cell[data-player="2"]`).forEach(el => {
 			arrBot.push(el.dataset.cell)
 		})
+
+		console.log(arrPlayer.length)
 
 		if (arrPlayer.length === 3) {
 			for (let i = 0; i < winnerNumbers.length; i++) {
@@ -67,6 +73,8 @@ const checkWinners = () => {
 						finalArr.push(winnerNumbers[i][j])
 					}
 				}
+
+				console.log(finalArr)
 
 				if (finalArr.length === 3) {
 					move = -1
@@ -115,12 +123,6 @@ const checkWinners = () => {
 
 			}
 		}
-
-	}
-
-	if (move >= 9) {
-		alert('Ничья')
-		return
 	}
 
 	if (move >= 5) {
@@ -129,7 +131,6 @@ const checkWinners = () => {
 	} else {
 		nextPlayer()
 	}
-
 
 }
 
