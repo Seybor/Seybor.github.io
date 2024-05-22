@@ -9,14 +9,26 @@ let move = 0
 
 const winnerNumbers = [
 	[1, 2, 3],
-	[1, 4, 7],
-	[1, 5, 9],
-	[2, 5, 8],
-	[3, 6, 9],
-	[3, 5, 7],
 	[4, 5, 6],
 	[7, 8, 9],
+	[1, 4, 7],
+	[2, 5, 8],
+	[3, 6, 9],
+	[1, 5, 9],
+	[3, 5, 7],
 ]
+
+let probablyWinnerNumbers = [
+	[1, 2, 3],
+	[4, 5, 6],
+	[7, 8, 9],
+	[1, 4, 7],
+	[2, 5, 8],
+	[3, 6, 9],
+	[1, 5, 9],
+	[3, 5, 7],
+]
+const corners = [1, 3, 7, 9]
 
 const checkWinners = () => {
 	const arrPlayer = []
@@ -134,13 +146,42 @@ const checkWinners = () => {
 
 const botPlayer = () => {
 	let cell
-	let arr = []
+	let arrFree = []
+	let arrPlayer = []
+	let arrBot = []
 
 	a(`.cell[data-player="0"]`).forEach(el => {
-		arr.push(el.dataset.cell)
+		arrFree.push(el.dataset.cell)
 	})
 
-	cell = s(`.cell[data-cell="${arr[Math.floor(Math.random() * arr.length)]}"]`)
+	a(`.cell[data-player="1"]`).forEach(el => {
+		arrPlayer.push(el.dataset.cell)
+	})
+
+	a(`.cell[data-player="2"]`).forEach(el => {
+		arrBot.push(el.dataset.cell)
+	})
+
+	switch (move) {
+		case 1: {
+			if (arrFree.includes('5')) {
+				cell = s(`.cell[data-cell="5"]`)
+			} else {
+				cell = s(`.cell[data-cell="${corners[Math.floor(Math.random() * corners.length)]}"]`)
+			}
+		} break
+		case 3: {
+			probablyWinnerNumbers = probablyWinnerNumbers.filter((arr) => !arr.includes(+arrBot[0]))
+
+			probablyWinnerNumbers.forEach(el => {
+
+				el.concat(arrPlayer)
+
+			})
+
+		}
+
+	}
 
 	cell.textContent = 'O'
 	cell.dataset.player = '2'
