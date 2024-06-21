@@ -1,0 +1,98 @@
+:root {
+  --root-text: 16px;
+
+  --gap: 0px;
+  --opacity: 0.75;
+}
+:root,
+[data-theme='light'] {
+  --accent: #ffa500;
+  --regular: #272727;
+}
+
+[data-theme='dark'] {
+}
+
+$blue: dodgerblue;
+
+%flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  & > * {
+    flex: 0 0 auto;
+  }
+}
+
+%flex-centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  & > * {
+    flex: 0 0 auto;
+  }
+}
+
+%background {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: scroll;
+  background-clip: border-box;
+}
+
+%position-centering {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+%position-stretch {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+}
+
+%scrollbar {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+
+    background-color: gray;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #5c5b5b;
+    border-radius: 4px;
+  }
+}
+
+%font {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+@mixin line-clamp($line: 3) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+}
+@mixin animation($duration: 1s, $count: 1, $delay: 0s) {
+  animation-duration: $duration;
+  animation-timing-function: linear;
+  animation-delay: $delay;
+  animation-iteration-count: $count;
+  animation-fill-mode: none;
+  animation-direction: normal;
+}

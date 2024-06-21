@@ -1,0 +1,62 @@
+.rope {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+
+  touch-action: none;
+
+  // transition: all 0.5s linear;
+  &__top {
+    background-color: red;
+    transform: translateY(-100%);
+  }
+
+  &__right {
+    transform: translateX(100%);
+  }
+
+  &__bottom {
+    transform: translateY(100%);
+  }
+
+  &__left {
+    transform: translateX(-100%);
+  }
+  &__content {
+    position: absolute;
+    z-index: 1000;
+    inset: 0;
+
+    background-color: green;
+  }
+  &__img {
+    position: absolute;
+    z-index: 100;
+
+    width: auto;
+    height: auto;
+    max-width: 200px;
+    max-height: 48px;
+
+    &--top {
+      bottom: 0;
+      left: 50%;
+      transform: rotateZ(90deg) translateY(250%);
+    }
+    &--right {
+      left: 0;
+      top: 50%;
+      transform: translateX(-50%);
+    }
+    &--bottom {
+      top: 0;
+      left: 50%;
+      transform: rotateZ(90deg) translateY(250%);
+    }
+    &--left {
+      right: 0;
+      top: 50%;
+      transform: translateX(50%);
+    }
+  }
+}
