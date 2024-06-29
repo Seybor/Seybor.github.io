@@ -1,0 +1,70 @@
+.header {
+  padding: 12px 24px;
+
+  background-color: var(--dark);
+}
+
+.nav {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    padding: 0 6px;
+  }
+
+  &__link {
+  }
+}
+
+.content {
+  &__inner {
+    padding: 20px 0;
+  }
+}
+
+.wrap {
+  padding: 20px 6px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.synonyms {
+  border: 1px solid $dark;
+  span {
+    display: block;
+    padding: 6px;
+
+    overflow-wrap: break-word;
+  }
+  &__number {
+    flex: 0 0 10%;
+    text-align: center;
+  }
+  &__ru {
+    flex: 0 0 30%;
+    text-align: center;
+  }
+  &__en {
+    flex: 0 0 60%;
+    text-align: center;
+  }
+  &__desc {
+    flex: 0 0 100%;
+  }
+  &__examples {
+    flex: 0 0 100%;
+  }
+}
+
+.footer {
+  padding: 12px 24px;
+
+  background-color: lighten($color: $dark, $amount: 10);
+  &__inner {
+    text-align: center;
+    font-size: 24px;
+  }
+}
