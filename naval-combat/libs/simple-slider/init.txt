@@ -1,0 +1,94 @@
+<div class="itc-slider">
+  <div class="itc-slider-wrapper">
+    <div class="itc-slider-items">
+      <div class="itc-slider-item">
+        <!-- Контент 1 слайда -->
+      </div>
+      <div class="itc-slider-item">
+        <!-- Контент 2 слайда -->
+      </div>
+      <div class="itc-slider-item">
+        <!-- Контент 3 слайда -->
+      </div>
+    </div>
+  </div>
+  <!-- Кнопки для перехода к предыдущему и следующему слайду -->
+  <button class="itc-slider-btn itc-slider-btn-prev"></button>
+  <button class="itc-slider-btn itc-slider-btn-next"></button>
+  <!-- dots - должно быть столько же, сколько слайдов -->
+  <ol class="itc-slider-indicators">
+    <!-- data-slide-to="0" – для перехода к 1 слайду -->
+    <li class="itc-slider-indicator" data-slide-to="0"></li>
+    <!-- data-slide-to="1" – для перехода к 2 слайду -->
+    <li class="itc-slider-indicator" data-slide-to="1"></li>
+    <!-- data-slide-to="2" – для перехода к 3 слайду -->
+    <li class="itc-slider-indicator" data-slide-to="2"></li>
+  </ol>
+</div>
+
+Инициализация 
+через js
+ItcSlider.getOrCreateInstance('.itc-slider', {
+  loop: false, // без зацикливания
+  swipe: false // без свайпа
+});
+
+Для нескольких слайдеров
+ document.querySelectorAll('.slider').forEach((el) => {
+    ItcSlider.getOrCreateInstance(el);
+  });
+
+через атрибуты
+<div class="itc-slider" data-slider="itc-slider" data-loop="true" data-autoplay="true" data-interval="7000">
+
+Параметры
+Настройка слайдера осуществляется с помощью следующих параметров:
+
+autoplay – включает автоматическую смену слайдов (по умолчанию false);
+interval – определяет интервал в миллисекундах между автоматической сменой слайдов (по умолчанию 5000);
+loop – указывает нужно ли зацикливать или нет показ слайдов (по умолчанию true);
+refresh – включает перерасчет размеров слайдера при изменении ширины HTML документа (по умолчанию true);
+swipe – разрешает листать слайды свайпом и перемещением курсора мыши при зажатой левой кнопки мыши (по умолчанию true).
+
+Количество слайдов через css
+.itc-slider-item {
+  flex: 0 0 100%;
+}
+Добавление отступов между слайдами осуществляется с помощью gap
+.itc-slider-items {
+  --gap: 1rem;
+  gap: var(--gap);
+}
+
+Если для показа два слайда
+.itc-slider-item {
+  flex: 0 0 calc(50% - var(--gap) / 2);
+
+Три слайда
+.itc-slider-item {
+  flex: 0 0 calc(33.3333333333% - var(--gap) * 2 / 3);
+}
+Четыре
+.itc-slider-item {
+  flex: 0 0 calc(25% - var(--gap) * 3 / 4);
+}
+
+Методы слайдера
+autoplay.start() – начать автопроизведение;
+autoplay.stop() – остановить автопроизведение;
+slideNext() – перейти к следующему слайду;
+slidePrev() – перейти к предыдущему слайду;
+slideTo(index) – перейти к слайду, порядковый номер которого соответствует index;
+reset() – сбросить состояние слайдера к изначальному;
+dispose() – удаляет обработчики событий и другие элементы слайдера, добавленные при его инициализации
+
+// получим DOM-элемент слайдера
+const sliderElem = document.querySelector('.slider');
+// получим экземпляр класса ItcSlider и сохраним его в переменную slider
+const slider = ItcSlider.getInstance(sliderElem);
+// остановим автоматическую смену слайдов
+slider.autoplay.stop();
+// перейдём к предыдущему слайду
+slider.prev();
+// сбросим состояние слайдера к первоначальному
+slider.reset();
