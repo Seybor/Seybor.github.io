@@ -4,6 +4,7 @@ import * as DOM from './modules/utilities-dom.js'
 import * as UTIL from './modules/utilities-others.js'
 
 import * as ARRAYS from './data/all.js'
+import PV from './data/pv.js'
 
 // $('body').hide()
 
@@ -22,6 +23,17 @@ import * as ARRAYS from './data/all.js'
 
 UI.burger()
 
+const getBigArray = () => {
+	let arr = []
+	for (let key in ARRAYS) {
+		arr = arr.concat(ARRAYS[key])
+	}
+	arr = arr.concat(PV)
+
+	return arr
+}
+const BIG_ARR = getBigArray()
+
 let arr = [
 	[],
 	[],
@@ -32,14 +44,11 @@ let arr = [
 	[],
 	[]
 ]
-
-let sum = 0
+let sum = BIG_ARR.length
 for (let key in ARRAYS) {
 	ARRAYS[key].sort((a, b) => {
 		return a.pos - b.pos
 	})
-
-	sum += ARRAYS[key].length
 
 	if (key === 'ir') {
 		continue
@@ -81,7 +90,7 @@ for (let key in ARRAYS) {
 
 }
 
-s('#arr').textContent = sum
+
 
 arr.forEach(e => {
 	e.sort((a, b) => a.pos - b.pos)
@@ -93,6 +102,9 @@ all('.nav__link span').forEach(e => {
 	switch (e.parentNode.dataset.id) {
 		case 'ir': {
 			e.textContent = ARRAYS.ir.length
+		} break
+		case 'pv': {
+			e.textContent = PV.length
 		} break
 		case '1': {
 			e.textContent = arr[0].length
@@ -139,6 +151,24 @@ all('.nav__link').forEach(e => {
 			case 'ir': {
 				ARRAYS.ir.forEach((e, id) => {
 					let string = `<p>${id + 1}) ${e.en} - ${e.tr} - ${e.ru} (${e.pos})</p>`
+
+					if ((id + 1) % 20 === 0) {
+						console.log(1)
+						string += '<hr class="divider">'
+					}
+
+					s('.wrap').insertAdjacentHTML('beforeend', string);
+				})
+				return
+			} break
+			case 'pv': {
+				PV.forEach((e, id) => {
+					let string = `<p>${id + 1}) ${e.en} - ${e.ru} (${e.pos})</p>`
+
+					if ((id + 1) % 20 === 0) {
+						console.log(1)
+						string += '<hr class="divider">'
+					}
 
 					s('.wrap').insertAdjacentHTML('beforeend', string);
 				})
@@ -193,7 +223,13 @@ all('.nav__link').forEach(e => {
 			// </tr>`
 			// s('#tbody').insertAdjacentHTML('beforeend', string);
 
+
 			let string = `<p>${id + 1}) ${e.en} - ${e.tr} - ${e.ru} (${e.pos})</p>`
+
+			if ((id + 1) % 20 === 0) {
+				console.log(1)
+				string += '<hr class="divider">'
+			}
 
 			s('.wrap').insertAdjacentHTML('beforeend', string);
 
@@ -202,16 +238,78 @@ all('.nav__link').forEach(e => {
 	})
 })
 
+s('#arr').textContent = sum
 s('#search').addEventListener('click', (evt) => {
 	s('.search').classList.toggle('search--active')
+	s('.search__input').focus()
 })
 
-s('.search').addEventListener('click', (evt) => {
 
+const searchStart = () => {
+
+
+	const renderStart = (result) => {
+		s('.wrap').textContent = ''
+		s('.search__input').value = ''
+		s('.search__input').placeholder = `${result.length} совпадений`
+
+		result.forEach((e, id) => {
+			let string = `<p>${id + 1}) ${e.en} - ${e.tr ? e.tr + ' - ' : ''} ${e.ru} (${e.pos})</p>`
+
+			s('.wrap').insertAdjacentHTML('beforeend', string);
+		})
+	}
+
+	let searchTerm = s('.search__input').value.trim()
+
+	if (searchTerm.length > 1) {
+
+		let result = BIG_ARR.filter(item => item.en.includes(searchTerm))
+
+		if (result.length === 0) {
+			result = BIG_ARR.filter(item => item.ru.includes(searchTerm))
+
+			if (result.length === 0) {
+				result = BIG_ARR.filter(item => {
+					item.pos = item.pos.toString()
+					return item.pos.includes(searchTerm)
+				})
+
+				if (result.length === 0) {
+					s('.wrap').textContent = 'Не найдено'
+					s('.search__input').value = ''
+					s('.search__input').placeholder = '0 совпадений'
+				} else {
+					renderStart(result)
+				}
+			} else {
+				renderStart(result)
+			}
+
+
+		} else {
+			renderStart(result)
+		}
+
+		console.log(result.length)
+
+	}
+}
+
+s('.search').addEventListener('click', (evt) => {
 	if (evt.target === evt.currentTarget) {
 		s('.search').classList.toggle('search--active')
 	}
+})
 
+s('.search__btn').addEventListener('click', (evt) => {
+	searchStart()
+})
+
+s('.search__input').addEventListener('keydown', (evt) => {
+	if (evt.key === 'Enter' || evt.keyCode === 13) {
+		s('.search__btn').click()
+	}
 })
 
 
