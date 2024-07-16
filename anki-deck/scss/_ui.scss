@@ -19,7 +19,9 @@
 }
 
 .burger {
-  display: block;
+  position: relative;
+  z-index: 200;
+  display: none;
   background-color: transparent;
   border: none;
   span {

@@ -20,6 +20,7 @@ import * as ARRAYS from './data/all.js'
 // UTIL.getRandomNumber()
 // UTIL.shuffleArr()
 
+UI.burger()
 
 let arr = [
 	[],
@@ -130,20 +131,16 @@ all('.nav__link').forEach(e => {
 		evt.preventDefault()
 		let index = 0
 
-		s('#tbody').textContent = ''
+		s('.should-hidden').classList.remove('should-hidden--active')
+
+		s('.wrap').textContent = ''
 
 		switch (e.dataset.id) {
 			case 'ir': {
 				ARRAYS.ir.forEach((e, id) => {
-					let string = `<tr>
-					<td class="td td-id">${id + 1}</td>
-					<td class="td td-en">${e.en}</td>
-					<td class="td td-tr">${e.tr}</td>
-					<td class="td td-ru">${e.ru}</td>
-					<td class="td td-pos">${e.pos}</td>
-					</tr>`
+					let string = `<p>${id + 1}) ${e.en} - ${e.tr} - ${e.ru} (${e.pos})</p>`
 
-					s('#tbody').insertAdjacentHTML('beforeend', string);
+					s('.wrap').insertAdjacentHTML('beforeend', string);
 				})
 				return
 			} break
@@ -187,15 +184,19 @@ all('.nav__link').forEach(e => {
 		}
 
 		arr[index].forEach((e, id) => {
-			let string = `<tr>
-			<td class="td td-id">${id + 1}</td>
-			<td class="td td-en">${e.en}</td>
-			<td class="td td-tr">${e.tr}</td>
-			<td class="td td-ru">${e.ru}</td>
-			<td class="td td-pos">${e.pos}</td>
-			</tr>`
+			// let string = `<tr>
+			// <td class="td td-id">${id + 1}</td>
+			// <td class="td td-en">${e.en}</td>
+			// <td class="td td-tr">${e.tr}</td>
+			// <td class="td td-ru">${e.ru}</td>
+			// <td class="td td-pos">${e.pos}</td>
+			// </tr>`
+			// s('#tbody').insertAdjacentHTML('beforeend', string);
 
-			s('#tbody').insertAdjacentHTML('beforeend', string);
+			let string = `<p>${id + 1}) ${e.en} - ${e.tr} - ${e.ru} (${e.pos})</p>`
+
+			s('.wrap').insertAdjacentHTML('beforeend', string);
+
 		})
 
 	})
