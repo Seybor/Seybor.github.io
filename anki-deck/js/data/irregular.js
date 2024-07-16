@@ -166,6 +166,7 @@ const IRREGULAR = [
 		pos: 10044,
 	},
 	{ en: 'retell - retold - retold', tr: '[ˌriːˈtɛl] - [ˌriːˈtəʊld] - [ˌriːˈtəʊld]', ru: 'пересказывать', pos: 12009 },
+	{ en: 'oversleep - overslept - overslept', tr: '|ˌəʊvərˈsliːp| - [ˌoʊvərˈslɛpt] - [ˌoʊvərˈslɛpt]', ru: 'проспать', pos: 20392 },
 ];
 
 export default IRREGULAR

@@ -235,6 +235,15 @@ const REGULAR = [
 	{ en: 'oblige', tr: '[əˈblaɪdʒ]', ru: 'обязывать', pos: 5530 },
 	{ en: 'betray', tr: '[bɪˈtreɪ]', ru: 'предавать, изменять', pos: 5131 },
 	{ en: 'dazzle', tr: '|ˈdæzl|', ru: 'ослеплять', pos: 7893 },
+	{ en: 'pounce', tr: '[paʊns]', ru: 'набрасываться, внезапно атаковать', pos: 11595 },
+	{ en: 'tiptoe', tr: '[ˈtɪptəʊ]', ru: 'ходить на цыпочках', pos: 13075 },
+	{ en: 'strangle', tr: '[ˈstræŋɡl]', ru: 'задушить', pos: 8044 },
+	{ en: 'unbutton', tr: '[tə ʌnˈbʌtn̩]', ru: 'расстегиваться (на кнопках)', pos: 22000 },
+	{ en: 'unzip', tr: '[tə ˌʌnˈzɪp]', ru: 'расстегивать (на молнии)', pos: '19345' },
+	{ en: 'untie', tr: '[tə ʌnˈtaɪ]', ru: 'развязывать', pos: 16369 },
+	{ en: 'lace', tr: '[tə leɪs]', ru: 'шнуровать, зашнуровывать', pos: 5637 },
+	{ en: 'unlace', tr: '[tə ʌnˈleɪs]', ru: 'расшнуровывать', pos: 22000 },
+	{ en: 'misbehave', tr: '[ˌmɪsbɪˈheɪv]', ru: 'дурно вести себя', pos: 11351 },
 ];
 
 export default REGULAR;
