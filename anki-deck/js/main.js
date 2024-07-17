@@ -150,7 +150,7 @@ const getRender = () => {
 
 			const renderOther = (arr) => {
 				arr.forEach((e, id) => {
-					let string = `<p>${id + 1}) ${e.en} - ${e.tr ? e.tr + ' - ' : ''}${e.ru} (${e.pos})</p>`
+					let string = `<p>${id + 1}) ${e.en} - ${e.tr ? e.tr + ' - ' : ''}${e.ru} - ${e.exp ? e.exp + ' - ' : ''}(${e.pos})</p>`
 
 					if ((id + 1) % 20 === 0) {
 
