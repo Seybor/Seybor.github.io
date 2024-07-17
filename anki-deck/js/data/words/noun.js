@@ -324,6 +324,12 @@ const NOUN = [
 	{ en: 'vehicle', tr: '|ˈviːəkl|', ru: 'автомобиль', pos: 1246 },
 	{ en: 'pharmacy / drugstore ', tr: '|ˈfɑːrməsɪ| / |ˈdrʌɡstɔːr|', ru: 'аптека', pos: 8116 },
 	{ en: 'vacation', tr: '|vəˈkeɪʃn|', ru: 'отпуск, каникулы', pos: 1778 },
+	{ en: 'opportunity / possibility', tr: '[ˌɒpəˈʧuːnəti] / [ˌpɒsəˈbɪləti]', ru: 'возможность', pos: 812 },
+	{ en: 'baggage / luggage', tr: '[ˈbæɡɪʤ] / [ˈlʌɡɪʤ]', ru: 'багаж', pos: 5358 },
+	{ en: 'catastrophe / disaster', tr: '[kəˈtæstrəfi] / [dɪˈzɑːstə]', ru: 'катастрофа', pos: 3218 },
+	{ en: 'cemetery / graveyard', tr: '[ˈseməterɪ] / [ˈɡreɪvjɑːd]', ru: 'кладбище', pos: 6700 },
+	{ en: 'grave', tr: '|ɡreɪv|', ru: 'могила', pos: 3030 },
+	{ en: 'carpet / rug', tr: '[ˈkɑːpɪt] / [rʌɡ]', ru: 'ковёр', pos: 4155 },
 ];
 
 

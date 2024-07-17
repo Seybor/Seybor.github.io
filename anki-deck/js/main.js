@@ -6,6 +6,7 @@ import * as UTIL from './modules/utilities-others.js'
 import * as ARRAYS from './data/all.js'
 import PV from './data/pv.js'
 import PH from './data/phrases.js'
+import EXPLANATION from './data/explanation/w.js'
 
 // $('body').hide()
 
@@ -27,16 +28,17 @@ const getBigArray = () => {
 	for (let key in ARRAYS) {
 		arr = arr.concat(ARRAYS[key])
 	}
-	arr = arr.concat(PV)
+	arr = arr.concat(PV.concat(PH.concat(EXPLANATION)))
 
 	return arr
 }
 const BIG_ARR = getBigArray()
 
-
-
-
 let arr = [
+	[],
+	[],
+	[],
+	[],
 	[],
 	[],
 	[],
@@ -80,15 +82,18 @@ for (let key in ARRAYS) {
 			arr[4].push(e)
 		}
 
-		if (e.pos > 5000 && e.pos <= 10000) {
+		if (e.pos > 5000 && e.pos <= 6000) {
 			arr[5].push(e)
 		}
 
-		if (e.pos > 10000 && e.pos < 22000) {
+		if (e.pos > 6000 && e.pos < 10000) {
 			arr[6].push(e)
 		}
-		if (e.pos === 22000) {
+		if (e.pos > 10000 && e.pos < 22000) {
 			arr[7].push(e)
+		}
+		if (e.pos === 22000) {
+			arr[8].push(e)
 		}
 	})
 
@@ -97,6 +102,8 @@ for (let key in ARRAYS) {
 arr.forEach(e => {
 	e.sort((a, b) => a.pos - b.pos)
 })
+
+console.log(arr)
 
 PH.sort((a, b) => a.pos - b.pos)
 PV.sort((a, b) => a.pos - b.pos)
@@ -108,41 +115,24 @@ const getNums = () => {
 		switch (e.parentNode.dataset.id) {
 			case 'ir': {
 				e.textContent = ARRAYS.ir.length
+				return
 			} break
 			case 'pv': {
 				e.textContent = PV.length
+				return
 			} break
 			case 'ph': {
 				e.textContent = PH.length
+				return
 			} break
-			case '1': {
-				e.textContent = arr[0].length
+			case 'exp-w': {
+				e.textContent = EXPLANATION.length
+				return
 			} break
-			case '2': {
-				e.textContent = arr[1].length
-			} break
-			case '3': {
-				e.textContent = arr[2].length
-			} break
-			case '4': {
-				e.textContent = arr[3].length
-			} break
-			case '5': {
-				e.textContent = arr[4].length
-			} break
-			case '6': {
-				e.textContent = arr[5].length
-			} break
-			case '7': {
-				e.textContent = arr[6].length
-			} break
-			case '8': {
-				e.textContent = arr[7].length
-			} break
-			default: {
-				e.textContent = ''
-			}
 		}
+
+		e.textContent = arr[e.parentNode.dataset.id - 1].length
+
 
 
 	})
@@ -157,45 +147,35 @@ const getRender = () => {
 
 			s('.wrap').textContent = ''
 
+
+			const renderOther = (arr) => {
+				arr.forEach((e, id) => {
+					let string = `<p>${id + 1}) ${e.en} - ${e.tr ? e.tr + ' - ' : ''}${e.ru} (${e.pos})</p>`
+
+					if ((id + 1) % 20 === 0) {
+
+						string += '<hr class="divider">'
+					}
+
+					s('.wrap').insertAdjacentHTML('beforeend', string);
+				})
+			}
+
 			switch (e.dataset.id) {
 				case 'ir': {
-					ARRAYS.ir.forEach((e, id) => {
-						let string = `<p>${id + 1}) ${e.en} - ${e.tr} - ${e.ru} (${e.pos})</p>`
-
-						if ((id + 1) % 20 === 0) {
-
-							string += '<hr class="divider">'
-						}
-
-						s('.wrap').insertAdjacentHTML('beforeend', string);
-					})
+					renderOther(ARRAYS.ir)
 					return
 				} break
 				case 'pv': {
-					PV.forEach((e, id) => {
-						let string = `<p>${id + 1}) ${e.en} - ${e.ru} (${e.pos})</p>`
-
-						if ((id + 1) % 20 === 0) {
-
-							string += '<hr class="divider">'
-						}
-
-						s('.wrap').insertAdjacentHTML('beforeend', string);
-					})
+					renderOther(PV)
 					return
 				} break
-
 				case 'ph': {
-					PH.forEach((e, id) => {
-						let string = `<p>${id + 1}) ${e.en} - ${e.ru} (${e.pos})</p>`
-
-						if ((id + 1) % 20 === 0) {
-
-							string += '<hr class="divider">'
-						}
-
-						s('.wrap').insertAdjacentHTML('beforeend', string);
-					})
+					renderOther(PH)
+					return
+				} break
+				case 'exp-w': {
+					renderOther(EXPLANATION)
 					return
 				} break
 				case '1': {

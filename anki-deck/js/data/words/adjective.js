@@ -92,7 +92,6 @@ const ADJECTIVE = [
 	{ en: 'decisive', tr: '[dɪˈsaɪsɪv]', ru: 'решающий', pos: 4871 },
 	{ en: 'internal', tr: '[ɪnˈtɜːnᵊl]', ru: 'внутренний', pos: 2091 },
 	{ en: 'homeless', tr: '[ˈhəʊmləs]', ru: 'бездомный', pos: 2682 },
-	{ en: 'severe', tr: '[sɪˈvɪə]', ru: 'суровый', pos: 1981 },
 	{ en: 'endless', tr: '[ˈɛndləs]', ru: 'бесконечный', pos: 4687 },
 	{ en: 'following', tr: '[ˈfɑːləʊɪŋ]', ru: 'следующий', pos: 419 },
 	{ en: 'intelligent', tr: '[ɪnˈtelɪdʒənt]', ru: 'умный', pos: 2945 },
@@ -196,6 +195,13 @@ const ADJECTIVE = [
 	{ en: 'miserable', tr: '|ˈmɪzrəbl|', ru: 'несчастный, жалкий, убогий', pos: 4153 },
 	{ en: 'nasty', tr: '|ˈnæstɪ|', ru: 'противный, неприятный, скверный', pos: 2638 },
 	{ en: 'versatile', tr: '|ˈvɜːrsətl|', ru: 'разносторонний, многогранный', pos: 8344 },
+	{ en: 'delicious', tr: '|dɪˈlɪʃəs|', ru: 'восхитительный, очень вкусный', pos: 4126 },
+	{ en: 'annoyed / irritated', tr: '[əˈnɔɪd] / [ˈɪrɪteɪtɪd]', ru: 'раздражённый', pos: 3525 },
+	{ en: 'amazing / astonishing', tr: '[əˈmeɪzɪŋ] / [əˈstɑːnɪʃɪŋ]', ru: 'удивительный, изумительный', pos: 2650 },
+	{ en: 'whole / entire', tr: '[həʊl] / [ɪnˈtaɪə]', ru: 'весь, целый', pos: 611 },
+	{ en: 'harsh', tr: '|hɑːrʃ|', ru: 'суровый, жесткий', pos: 3240 },
+	{ en: 'incapable [of] / unable', tr: '[ɪnˈkeɪpəbᵊl] / [ʌnˈeɪbᵊl]', ru: 'неспособный', pos: 5127 },
+
 ];
 
 export default ADJECTIVE;

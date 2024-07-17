@@ -122,7 +122,7 @@ const REGULAR = [
 		ru: 'одолжить [у кого-то]',
 		pos: 1799,
 	},
-	{ en: 'injure', tr: '', ru: 'ранить', pos: 1809 },
+	{ en: 'injure', tr: '|ˈɪndʒər|', ru: 'ранить', pos: 1809 },
 	{ en: 'deserve', tr: '[dɪˈzɜːv]', ru: 'заслуживать', pos: 1878 },
 	{
 		en: 'inspire',

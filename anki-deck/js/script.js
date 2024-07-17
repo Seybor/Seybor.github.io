@@ -45,10 +45,6 @@ function giveAnkiLists(string) {
 // console.log(JSON.stringify(arr2))
 
 
-console.log(Math.round((104 + 221) / 2))
-console.log(Math.round((104 + 129) / 2))
-console.log(Math.round((104 + 19) / 2))
-console.log(Math.round((104 + 48) / 2))
 
 
 

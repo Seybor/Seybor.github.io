@@ -18,7 +18,7 @@ const ADVERB = [
 	{
 		en: 'certainly',
 		tr: '|ˈsɜːrtnlɪ|',
-		ru: 'конечно, безусловно,',
+		ru: 'конечно, безусловно',
 		pos: 293,
 	},
 	{ en: 'concerning', tr: '[kənˈsɜːrnɪŋ]', ru: 'касательно', pos: 318 },
@@ -234,6 +234,19 @@ const ADVERB = [
 	{ en: 'across', tr: '|əˈkrɔːs|', ru: 'через (когда нет препятствий); поперёк', pos: 367 },
 	{ en: 'extremely', tr: '|ɪkˈstriːmlɪ|', ru: 'чрезвычайно', pos: 1194 },
 	{ en: 'immediately', tr: '|ɪˈmiːdɪətlɪ|', ru: 'немедленно', pos: 1249 },
+	{ en: 'mostly / mainly', tr: '[ˈməʊstli] / [ˈmeɪnli]', ru: 'главным образом, в основном', pos: 1476 },
+	{ en: 'while / whereas', tr: '[waɪl] / [weərˈæz]', ru: 'в то время как', pos: 940 },
+	{ en: 'till / until', tr: '[tɪl] / [ənˈtɪl]', ru: 'до тех пор пока', pos: 735 },
+	{ en: 'accidentally / by chance', tr: '[ˌæksɪˈdɛntəli] / [baɪ] [ʧɑːns]', ru: 'случайно', pos: 2940 },
+	{ en: 'although / though', tr: '[ɔːlˈðəʊ] / [ðəʊ]', ru: 'хотя', pos: 400 },
+	{ en: 'almost / nearly', tr: '[ˈɔːlməʊst] / [ˈnɪrlɪ]', ru: 'почти', pos: 550 },
+	{ en: 'suddenly / unexpectedly', tr: '[ˈsʌdənlɪ] / [ˌʌnɪkˈspɛktɪdli]', ru: 'неожиданно, внезапно, вдруг', pos: 4700 },
+	{ en: 'considerably / significantly', tr: '[kənˈsɪdᵊrəbᵊli] / [sɪɡˈnɪfɪkᵊntli]', ru: 'значительно', pos: 3582 },
+	{ en: 'due to / because of', tr: '[djuː] [tuː] / [bɪˈkɒz] [ɒv]', ru: 'из-за', pos: 604 },
+	{ en: 'sometime / someday', tr: '[ˈsʌmtaɪm] / [ˈsʌmˌdeɪ]', ru: 'когда-нибудь', pos: 3366 },
+	{ en: 'differently / otherwise', tr: '[ˈdɪfᵊrᵊntli] / [ˈʌðəwaɪz]', ru: 'по-другому, иначе', pos: 3121 },
+	{ en: 'despite / in spite of', tr: '[dɪˈspaɪt] / [ɪn] [spaɪt] [ɒv]', ru: 'несмотря на', pos: 2645 },
+	{ en: 'quite, pretty, rather, fairly', tr: '[kwaɪt], [ˈprɪti], [ˈrɑːðə], [ˈfeəli]', ru: 'довольно', pos: 448 },
 ];
 
 export default ADVERB;

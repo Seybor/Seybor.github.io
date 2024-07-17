@@ -102,7 +102,7 @@ const REGULAR = [
 		ru: 'содержать (что-то в себе)',
 		pos: 1706,
 	},
-	{ en: 'confuse', tr: '[kənˈfjuːz]', ru: 'смущай; путать', pos: 1714 },
+	{ en: 'confuse', tr: '[kənˈfjuːz]', ru: 'смущать; путать', pos: 1714 },
 	{
 		en: 'insist [on]',
 		tr: '[ɪnˈsɪst] [[ɒn]]',
@@ -240,6 +240,16 @@ const REGULAR = [
 	{ en: 'misbehave', tr: '[ˌmɪsbɪˈheɪv]', ru: 'дурно вести себя', pos: 11351 },
 	{ en: 'bewilder', tr: '|bɪˈwɪldər|', ru: 'сбивать с толку', pos: 9997 },
 	{ en: 'interrupt', tr: '|ˌɪntəˈrʌpt|', ru: 'перебивать', pos: 3062 },
+	{ en: 'clarify', tr: '|ˈklærəfaɪ|', ru: 'прояснить, вносить ясность', pos: 2839 },
+	{ en: 'waste', tr: '|weɪst|', ru: 'тратить впустую', pos: 1406 },
+	{ en: 'annoy / irritate', tr: '[əˈnɔɪ] / [ˈɪrɪteɪt]', ru: 'раздражать', pos: 3525 },
+	{ en: 'prosper / thrive', tr: '|ˈprɑːspər| / |θraɪv|', ru: 'процветать, преуспевать', pos: 5818 },
+	{ en: 'remember / recall / recollect', tr: '[rɪˈmembər] / [rɪˈkɔːl] / [ˌrekəˈlekt]', ru: 'помнить, вспомнить, напоминать', pos: 4544 },
+
+
 ];
 
 export default REGULAR;
+
+
+
