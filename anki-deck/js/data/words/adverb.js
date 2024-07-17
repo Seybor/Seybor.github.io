@@ -226,6 +226,14 @@ const ADVERB = [
 		pos: 19707,
 	},
 	{ en: 'distantly', tr: '[ˈdɪstᵊntli]', ru: 'отдалённо', pos: 22000 },
+	{ en: 'instantly', tr: '|ˈɪnstəntlɪ|', ru: 'мгновенно', pos: 4581 },
+	{ en: 'presently', tr: '|ˈprezntlɪ|', ru: 'вскоре', pos: 6328 },
+	{ en: 'promptly', tr: '|ˈprɑːmptlɪ|', ru: 'быстро, сразу', pos: 7280 },
+	{ en: 'regularly', tr: '|ˈreɡjələrlɪ|', ru: 'регулярно', pos: 2800 },
+	{ en: 'remarkably', tr: '|rəˈmɑːrkəblɪ|', ru: 'замечательно, удивительно, необыкновенно', pos: 4770 },
+	{ en: 'across', tr: '|əˈkrɔːs|', ru: 'через (когда нет препятствий); поперёк', pos: 367 },
+	{ en: 'extremely', tr: '|ɪkˈstriːmlɪ|', ru: 'чрезвычайно', pos: 1194 },
+	{ en: 'immediately', tr: '|ɪˈmiːdɪətlɪ|', ru: 'немедленно', pos: 1249 },
 ];
 
 export default ADVERB;

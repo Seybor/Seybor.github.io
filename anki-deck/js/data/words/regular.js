@@ -27,12 +27,6 @@ const REGULAR = [
 		ru: 'реагировать; отвечать',
 		pos: 858,
 	},
-	{
-		en: 'relate [to]',
-		tr: '|rɪˈleɪt|',
-		ru: 'относиться, связывать',
-		pos: 860,
-	},
 	{ en: 'commit', tr: '[kəˈmɪt]', ru: 'совершать', pos: 911 },
 	{ en: 'suffer', tr: '[ˈsʌfə]', ru: 'страдать', pos: 940 },
 	{ en: 'appreciate', tr: '[əˈpriːʃieɪt]', ru: 'ценить', pos: 948 },
@@ -244,6 +238,8 @@ const REGULAR = [
 	{ en: 'lace', tr: '[tə leɪs]', ru: 'шнуровать, зашнуровывать', pos: 5637 },
 	{ en: 'unlace', tr: '[tə ʌnˈleɪs]', ru: 'расшнуровывать', pos: 22000 },
 	{ en: 'misbehave', tr: '[ˌmɪsbɪˈheɪv]', ru: 'дурно вести себя', pos: 11351 },
+	{ en: 'bewilder', tr: '|bɪˈwɪldər|', ru: 'сбивать с толку', pos: 9997 },
+	{ en: 'interrupt', tr: '|ˌɪntəˈrʌpt|', ru: 'перебивать', pos: 3062 },
 ];
 
 export default REGULAR;

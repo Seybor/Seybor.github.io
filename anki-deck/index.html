@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='ru' data-theme="light">
+<html lang='ru' data-bs-theme="dark">
 
 <head>
 
@@ -15,6 +15,7 @@
 	<link rel="icon" href="favicon.ico">
 	<link rel="manifest" href="manifest.json">
 
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -24,46 +25,88 @@
 		<header class="header">
 			<div class="container">
 				<div class="header__inner">
-					<span id="arr"></span>
+					<span id="arr-sum"></span>
+					<nav class="nav navbar navbar-expand-lg">
+						<div class="container-fluid">
+							<button class="navbar-toggler m-auto" type="button" data-bs-toggle="collapse"
+								data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+								aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+							<div class="collapse navbar-collapse" id="navbarSupportedContent">
+								<div class="navbar-nav gap-3 justify-center w-full">
+									<div class="dropdown">
+										<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+											aria-expanded="false">
+											Words
+										</button>
+										<ul class="dropdown-menu">
+											<li>
+												<a class="nav__link dropdown-item position-relative d-inline-block" href="#" data-id="1">1к
+													<span class="badge rounded-pill bg-primary">0</span>
+												</a>
+											</li>
+											<li>
+												<a class="nav__link dropdown-item position-relative d-inline-block" href="#" data-id="2">2к
+													<span class="badge rounded-pill bg-primary">0</span>
+												</a>
+											</li>
+											<li>
+												<a class="nav__link dropdown-item position-relative d-inline-block" href="#" data-id="3">3к
+													<span class="badge rounded-pill bg-primary">0</span>
+												</a>
+											</li>
+											<li>
+												<a class="nav__link dropdown-item position-relative d-inline-block" href="#" data-id="4">4к
+													<span class="badge rounded-pill bg-primary">0</span>
+												</a>
+											</li>
+											<li>
+												<a class="nav__link dropdown-item position-relative d-inline-block" href="#" data-id="5">5к
+													<span class="badge rounded-pill bg-primary">0</span>
+												</a>
+											</li>
+											<li>
+												<a class="nav__link dropdown-item position-relative d-inline-block" href="#" data-id="6">2к
+													<span class="badge rounded-pill bg-primary">>5к</span>
+												</a>
+											</li>
+											<li>
+												<a class="nav__link dropdown-item position-relative d-inline-block" href="#" data-id="7">>10к
+													<span class="badge rounded-pill bg-primary">0</span>
+												</a>
+											</li>
+											<li>
+												<a class="nav__link dropdown-item position-relative d-inline-block" href="#" data-id="8">22к
+													<span class="badge rounded-pill bg-primary">0</span>
+												</a>
+											</li>
+											<li>
+												<a class="nav__link dropdown-item position-relative d-inline-block" href="#"
+													data-id="ir">IRREGULAR<span class="badge rounded-pill bg-primary">0</span></a>
+											</li>
+										</ul>
+									</div>
+									<div class="dropdown">
+										<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+											aria-expanded="false">
+											Phrases
+										</button>
+										<ul class="dropdown-menu">
+											<li>
+												<a class="nav__link dropdown-item" href="#" data-id="pv">PV<span
+														class="badge rounded-pill bg-primary">0</span></a>
 
-					<button class="burger" type="button">
-						<span></span>
-						<span></span>
-						<span></span>
-					</button>
-					<nav class="nav should-hidden">
-						<ul class="nav__list">
-							<li class="nav__item">
-								<a class="nav__link" href="#" data-id="1">1к<span></span></a>
-							</li>
-							<li class="nav__item">
-								<a class="nav__link" href="#" data-id="2">2к<span></span></a>
-							</li>
-							<li class="nav__item">
-								<a class="nav__link" href="#" data-id="3">3к<span></span></a>
-							</li>
-							<li class="nav__item">
-								<a class="nav__link" href="#" data-id="4">4к<span></span></a>
-							</li>
-							<li class="nav__item">
-								<a class="nav__link" href="#" data-id="5">5к<span></span></a>
-							</li>
-							<li class="nav__item">
-								<a class="nav__link" href="#" data-id="6">>5к<span></span></a>
-							</li>
-							<li class="nav__item">
-								<a class="nav__link" href="#" data-id="7">>10к<span></span></a>
-							</li>
-							<li class="nav__item">
-								<a class="nav__link" href="#" data-id="8">22к<span></span></a>
-							</li>
-							<li class="nav__item">
-								<a class="nav__link" href="#" data-id="ir">IRREGULAR<span></span></a>
-							</li>
-							<li class="nav__item">
-								<a class="nav__link" href="#" data-id="pv">PV<span></span></a>
-							</li>
-						</ul>
+											</li>
+											<li>
+												<a class="nav__link dropdown-item" href="#" data-id="ph">PH<span
+														class="badge rounded-pill bg-primary">0</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
 					</nav>
 					<span id="search">
 						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -119,6 +162,8 @@
 	</div>
 
 	<!-- <script src="libs/jquery.com_jquery-3.7.1.min.js" defer></script> -->
+
+	<script src="/libs/bootstrap/js/bootstrap.bundle.min.js" defer></script>
 
 	<script src="js/main.js" type='module'></script>
 

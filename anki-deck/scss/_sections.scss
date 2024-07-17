@@ -9,6 +9,7 @@
   }
 }
 .nav {
+  padding: 0 20px;
   &__list {
     display: flex;
     justify-content: space-between;
@@ -26,30 +27,30 @@
   &__link {
     position: relative;
     width: 100%;
-    span {
-      position: absolute;
-      top: -10px;
-      right: -10px;
+    // span {
+    //   position: absolute;
+    //   top: -10px;
+    //   right: -10px;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 2px;
-      width: 20px;
-      height: 20px;
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   padding: 2px;
+    //   width: 20px;
+    //   height: 20px;
 
-      font-size: 10px;
-      background-color: rgba($color: $blue, $alpha: 0.5);
-      border-radius: 50%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
+    //   font-size: 10px;
+    //   background-color: rgba($color: $blue, $alpha: 0.5);
+    //   border-radius: 50%;
+    //   overflow: hidden;
+    //   text-overflow: ellipsis;
+    // }
   }
 }
 
-#arr {
+#arr-sum {
   position: absolute;
-  top: 50%;
+  top: 10px;
   left: 10px;
 
   display: flex;
@@ -64,15 +65,11 @@
   border-radius: 50%;
   overflow: hidden;
   text-overflow: ellipsis;
-
-  transform: translateY(-50%);
 }
 #search {
   position: absolute;
-  top: 50%;
+  top: 10px;
   right: 10px;
-
-  transform: translateY(-50%);
 
   cursor: pointer;
 }
@@ -182,13 +179,14 @@
   }
   .should-hidden {
     display: none;
+    overflow-y: auto;
     &--active {
       position: fixed;
       inset: 0;
       z-index: 100;
 
       padding: 70px 20px;
-      display: block;
+      display: flex;
       & .nav__list {
         min-height: 100%;
         align-content: center;

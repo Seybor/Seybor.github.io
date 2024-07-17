@@ -47,7 +47,7 @@ const ADJECTIVE = [
 	{
 		en: 'related [to]',
 		tr: '|rɪˈleɪtɪd|',
-		ru: 'связанный',
+		ru: 'связанный, родственный',
 		pos: 860,
 	},
 	{ en: 'responsible', tr: '[rɪˈspɒnsəbᵊl]', ru: 'ответственный', pos: 1217 },
@@ -192,6 +192,10 @@ const ADJECTIVE = [
 	{ en: 'shimmering', tr: 'At dawn, the shimmering horizon is draped in red', ru: 'мерцающий', pos: 11366 },
 	{ en: 'overprotective', tr: '[ˌəʊvəprəˈtɛktɪv]', ru: 'чрезмерно заботливый', pos: 22000 },
 	{ en: 'imaginable', tr: '|ɪˈmædʒɪnəbl|', ru: 'вообразимый, воображаемый', pos: 10420 },
+	{ en: 'inaudible ', tr: '|ɪnˈɔːdəbl|', ru: 'неслышный, невнятный', pos: 1693 },
+	{ en: 'miserable', tr: '|ˈmɪzrəbl|', ru: 'несчастный, жалкий, убогий', pos: 4153 },
+	{ en: 'nasty', tr: '|ˈnæstɪ|', ru: 'противный, неприятный, скверный', pos: 2638 },
+	{ en: 'versatile', tr: '|ˈvɜːrsətl|', ru: 'разносторонний, многогранный', pos: 8344 },
 ];
 
 export default ADJECTIVE;

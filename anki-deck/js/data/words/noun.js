@@ -321,6 +321,17 @@ const NOUN = [
 	{ en: 'cowardice', tr: '[ˈkaʊərdɪs]', ru: 'трусость', pos: 14711 },
 	{ en: 'coward', tr: '|ˈkaʊərd|', ru: 'трус', pos: 10165 },
 	{ en: 'pretext', tr: '|ˈpriːtekst|', ru: 'предлог, отговорка', pos: 10727 },
+	{ en: 'vehicle', tr: '|ˈviːəkl|', ru: 'автомобиль', pos: 1246 },
+	{ en: 'pharmacy / drugstore ', tr: '|ˈfɑːrməsɪ| / |ˈdrʌɡstɔːr|', ru: 'аптека', pos: 8116 },
+	{ en: 'vacation', tr: '|vəˈkeɪʃn|', ru: 'отпуск, каникулы', pos: 1778 },
 ];
+
+
+
+
+
+
+
+
 
 export default NOUN;
