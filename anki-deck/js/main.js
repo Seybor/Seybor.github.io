@@ -6,7 +6,10 @@ import * as UTIL from './modules/utilities-others.js'
 import * as ARRAYS from './data/all.js'
 import PV from './data/pv.js'
 import PH from './data/phrases.js'
-import EXPLANATION from './data/explanation/w.js'
+import EXPLANATION from './data/words/explanation/w.js'
+import ADJ_CHAR from './data/words/topic/adj-char.js'
+import ADJ_HUMAN_OBJ from './data/words/topic/adj-human.js'
+import NEW from './data/words/new.js'
 
 // $('body').hide()
 
@@ -28,7 +31,7 @@ const getBigArray = () => {
 	for (let key in ARRAYS) {
 		arr = arr.concat(ARRAYS[key])
 	}
-	arr = arr.concat(PV.concat(PH.concat(EXPLANATION)))
+	arr = arr.concat(PV.concat(PH.concat(EXPLANATION.concat(ADJ_CHAR.concat(ADJ_HUMAN_OBJ)))))
 
 	return arr
 }
@@ -107,11 +110,12 @@ console.log(arr)
 
 PH.sort((a, b) => a.pos - b.pos)
 PV.sort((a, b) => a.pos - b.pos)
+ADJ_HUMAN_OBJ.sort((a, b) => a.pos - b.pos)
+ADJ_CHAR.sort((a, b) => a.pos - b.pos)
 
 
 const getNums = () => {
 	all('.nav__link span').forEach(e => {
-
 		switch (e.parentNode.dataset.id) {
 			case 'ir': {
 				e.textContent = ARRAYS.ir.length
@@ -127,6 +131,18 @@ const getNums = () => {
 			} break
 			case 'exp-w': {
 				e.textContent = EXPLANATION.length
+				return
+			} break
+			case 'adj-human': {
+				e.textContent = ADJ_HUMAN_OBJ.length
+				return
+			} break
+			case 'adj-char': {
+				e.textContent = ADJ_CHAR.length
+				return
+			} break
+			case 'new-w': {
+				e.textContent = NEW.length
 				return
 			} break
 		}
@@ -150,7 +166,7 @@ const getRender = () => {
 
 			const renderOther = (arr) => {
 				arr.forEach((e, id) => {
-					let string = `<p>${id + 1}) ${e.en} - ${e.tr ? e.tr + ' - ' : ''}${e.ru} - ${e.exp ? e.exp + ' - ' : ''}(${e.pos})</p>`
+					let string = `<p>${id + 1}) ${e.en} - ${e.tr ? e.tr + ' - ' : ''}${e.ru}${e.exp ? ' - ' + e.exp : ''}${e.pos ? ' (' + e.pos + ')' : ''}</p>`
 
 					if ((id + 1) % 20 === 0) {
 
@@ -176,6 +192,18 @@ const getRender = () => {
 				} break
 				case 'exp-w': {
 					renderOther(EXPLANATION)
+					return
+				} break
+				case 'adj-human': {
+					renderOther(ADJ_HUMAN_OBJ)
+					return
+				} break
+				case 'adj-char': {
+					renderOther(ADJ_CHAR)
+					return
+				} break
+				case 'new-w': {
+					renderOther(NEW)
 					return
 				} break
 				case '1': {
@@ -260,7 +288,13 @@ const getSearch = () => {
 
 				if (result.length === 0) {
 					result = BIG_ARR.filter(item => {
-						item.pos = item.pos.toString()
+
+						if (item.pos) {
+							item.pos = item.pos.toString()
+						} else {
+							return
+						}
+
 						return item.pos.includes(searchTerm)
 					})
 

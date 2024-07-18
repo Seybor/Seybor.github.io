@@ -123,7 +123,7 @@ const ADVERB = [
 	{
 		en: 'frequently',
 		tr: '[ˈfriːkwᵊntli]',
-		ru: 'часто, регулярно',
+		ru: 'часто, зачастую',
 		pos: 2610,
 	},
 	{ en: 'equally', tr: '[ˈiːkwəli]', ru: 'равно', pos: 2612 },
@@ -247,6 +247,7 @@ const ADVERB = [
 	{ en: 'differently / otherwise', tr: '[ˈdɪfᵊrᵊntli] / [ˈʌðəwaɪz]', ru: 'по-другому, иначе', pos: 3121 },
 	{ en: 'despite / in spite of', tr: '[dɪˈspaɪt] / [ɪn] [spaɪt] [ɒv]', ru: 'несмотря на', pos: 2645 },
 	{ en: 'quite, pretty, rather, fairly', tr: '[kwaɪt], [ˈprɪti], [ˈrɑːðə], [ˈfeəli]', ru: 'довольно', pos: 448 },
+	{ en: 'afterward', tr: '|ˈæftərwərd|', ru: 'позже, впоследствии', pos: 1807 },
 ];
 
 export default ADVERB;

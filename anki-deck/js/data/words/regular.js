@@ -8,7 +8,7 @@ const REGULAR = [
 		ru: 'предоставлять, обеспечивать',
 		pos: 452,
 	},
-	{ en: 'welcome', tr: '[ˈwelkəm]', ru: 'приветствовать', pos: 640 },
+	{ en: 'welcome / greet', tr: '[ˈwelkəm] / [ɡriːt]', ru: 'приветствовать', pos: 1890 },
 	{ en: 'appear', tr: '[əˈpɪə]', ru: 'появляться', pos: 685 },
 	{ en: 'receive', tr: '[rɪˈsiːv]', ru: 'получать', pos: 690 },
 	{ en: 'accept', tr: '[əkˈsept]', ru: 'принимать', pos: 704 },
@@ -179,7 +179,6 @@ const REGULAR = [
 	},
 	{ en: 'melt', tr: '[mɛlt]', ru: 'плавиться', pos: 2891 },
 	{ en: 'calculate', tr: '[ˈkælkjəleɪt]', ru: 'рассчитать', pos: 2919 },
-	{ en: 'greet', tr: '[ɡriːt]', ru: 'приветствовать', pos: 3127 },
 	{
 		en: 'insult',
 		tr: '[ɪnˈsʌlt] / [ˈɪnsʌlt]',
