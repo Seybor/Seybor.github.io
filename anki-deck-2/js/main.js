@@ -1,16 +1,13 @@
 import { s, all } from './modules/base.js'
-import * as UI from './modules/ui.js'
-import * as DOM from './modules/utilities-dom.js'
-import * as UTIL from './modules/utilities-others.js'
 
-import ALL from './data/words/all.js'
+import ALL from './data/all.js'
 
 let sum = 0
 
 Object.entries(ALL).forEach(e => {
 	sum += e[1].length
 
-	if (e[1][0].pos) {
+	if (e[1][0]?.pos) {
 		e[1].sort((a, b) => {
 			return a.pos - b.pos
 		})
