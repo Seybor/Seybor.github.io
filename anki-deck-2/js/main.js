@@ -181,57 +181,53 @@ const startScript = () => {
 
 	}
 
-	const getRender = (arr, wordsIntervalOne = 0, wordsIntervalTwo = 0) => {
-		s('.wrap').textContent = ''
+	all('.nav__link').forEach(e => {
+		const getRender = (arr, wordsIntervalOne = 0, wordsIntervalTwo = 0) => {
+			s('.wrap').textContent = ''
 
-		if (wordsIntervalOne != 0) {
+			if (wordsIntervalOne != 0) {
 
-			if (wordsIntervalOne > wordsIntervalTwo) {
-				alert('Ошибка в интервалах')
-				return
+				if (wordsIntervalOne > wordsIntervalTwo) {
+					alert('Ошибка в интервалах')
+					return
+				}
+
+				let i = arr.findIndex(num => num.pos > wordsIntervalOne)
+				let id = 1
+				do {
+
+					let string = `<p>${id}) ${arr[i].en} - ${arr[i].tr ? arr[i].tr + ' - ' : ''}${arr[i].ru}${arr[i].exp ? ' - ' + arr[i].exp : ''}${arr[i].pos ? ' (' + arr[i].pos + ')' : ''}</p>`
+
+					if ((id) % 20 === 0) {
+
+						string += '<hr class="divider">'
+					}
+
+					s('.wrap').insertAdjacentHTML('beforeend', string);
+					if (i >= arr.length - 1) {
+						break
+					}
+					id++
+					i++
+
+				} while (arr[i].pos >= wordsIntervalOne && arr[i].pos < wordsIntervalTwo)
+
+			} else {
+				arr.forEach((e, id) => {
+					let string = `<p>${id + 1}) ${e.en} - ${e.tr ? e.tr + ' - ' : ''}${e.ru}${e.exp ? ' - ' + e.exp : ''}${e.pos ? ' (' + e.pos + ')' : ''}</p>`
+
+					if ((id + 1) % 20 === 0) {
+
+						string += '<hr class="divider">'
+					}
+
+					s('.wrap').insertAdjacentHTML('beforeend', string);
+				})
 			}
 
-			let i = arr.findIndex(num => num.pos > wordsIntervalOne)
-			let id = 1
-			do {
 
-				let string = `<p>${id}) ${arr[i].en} - ${arr[i].tr ? arr[i].tr + ' - ' : ''}${arr[i].ru}${arr[i].exp ? ' - ' + arr[i].exp : ''}${arr[i].pos ? ' (' + arr[i].pos + ')' : ''}</p>`
 
-				if ((id + 1) % 20 === 0) {
-
-					string += '<hr class="divider">'
-				}
-
-				s('.wrap').insertAdjacentHTML('beforeend', string);
-				if (i >= arr.length - 1) {
-					break
-				}
-				id++
-				i++
-
-			} while (arr[i].pos >= wordsIntervalOne && arr[i].pos < wordsIntervalTwo)
-
-		} else {
-			arr.forEach((e, id) => {
-				let string = `<p>${id + 1}) ${e.en} - ${e.tr ? e.tr + ' - ' : ''}${e.ru}${e.exp ? ' - ' + e.exp : ''}${e.pos ? ' (' + e.pos + ')' : ''}</p>`
-
-				if ((id + 1) % 20 === 0) {
-
-					string += '<hr class="divider">'
-				}
-
-				s('.wrap').insertAdjacentHTML('beforeend', string);
-			})
 		}
-
-
-
-	}
-
-	getSearch()
-
-	all('.nav__link').forEach(e => {
-
 		e.addEventListener('click', (evt) => {
 			evt.preventDefault()
 
@@ -278,6 +274,7 @@ const startScript = () => {
 
 	})
 
+	getSearch()
 	getNum()
 
 
