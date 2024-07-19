@@ -67,13 +67,17 @@
 
   background-color: rgba($color: #000000, $alpha: 0.5);
 
-  display: none;
+  display: flex;
   align-items: center;
   align-content: center;
   justify-content: center;
   flex-wrap: wrap;
+
+  transform: scale(0);
+
+  transition: all 0.25s linear;
   &--active {
-    display: flex;
+    transform: scale(1);
   }
   gap: 10px;
   &__input {
