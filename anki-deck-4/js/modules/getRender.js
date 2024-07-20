@@ -4,6 +4,32 @@ import ALL from '../data/unity_arrays.js'
 
 const getRender = () => {
 
+	const highLight = () => {
+
+		all('.wrap .text').forEach(e => {
+
+			if (e.dataset.pos <= 0) {
+				e.dataset.difficult = '0'
+			}
+			else if (e.dataset.pos <= 3000) {
+				e.dataset.difficult = '1'
+			} else if (e.dataset.pos <= 6000) {
+				e.dataset.difficult = '2'
+			} else if (e.dataset.pos <= 10000) {
+				e.dataset.difficult = '3'
+			} else if (e.dataset.pos <= 15000) {
+				e.dataset.difficult = '4'
+			} else if (e.dataset.pos <= 21999) {
+				e.dataset.difficult = '5'
+			} else if (e.dataset.pos == 22000) {
+				e.dataset.difficult = '6'
+			}
+
+		})
+
+	}
+
+
 	all('.nav__link').forEach(e => {
 		const renderStart = (arr, wordsIntervalOne = 0, wordsIntervalTwo = 0) => {
 			s('.wrap').textContent = ''
@@ -19,7 +45,7 @@ const getRender = () => {
 				let id = 1
 				do {
 
-					let string = `<p>${id}) ${arr[i].en} - ${arr[i].tr ? arr[i].tr + ' - ' : ''}${arr[i].ru}${arr[i].exp ? ' - ' + arr[i].exp : ''}${arr[i].pos ? ' (' + arr[i].pos + ')' : ''}</p>`
+					let string = `<p class='text' data-pos="${arr[i].pos ? arr[i].pos : '0'}">${id}) ${arr[i].en} - ${arr[i].tr ? arr[i].tr + ' - ' : ''}${arr[i].ru}${arr[i].exp ? ' - ' + arr[i].exp : ''}${arr[i].pos ? ' (' + arr[i].pos + ')' : ''}</p>`
 
 					if ((id) % 20 === 0) {
 
@@ -37,7 +63,9 @@ const getRender = () => {
 
 			} else {
 				arr.forEach((e, id) => {
-					let string = `<p>${id + 1}) ${e.en} - ${e.tr ? e.tr + ' - ' : ''}${e.ru}${e.exp ? ' - ' + e.exp : ''}${e.pos ? ' (' + e.pos + ')' : ''}</p>`
+					let string = `<p  class='text' data-pos="${e.pos ? e.pos : '0'}">${id + 1}) ${e.en} - ${e.tr ? e.tr + ' - ' : ''}${e.ru}${e.exp ? ' - ' + e.exp : ''}${e.pos ? ' (' + e.pos + ')' : ''}</p>`
+
+					console.log(string)
 
 					if ((id + 1) % 20 === 0) {
 
@@ -48,13 +76,14 @@ const getRender = () => {
 				})
 			}
 
-
+			highLight()
 
 		}
 		e.addEventListener('click', (evt) => {
 			evt.preventDefault()
 
 			if (ALL[e.dataset.id]) {
+
 				renderStart(ALL[e.dataset.id])
 			} else {
 
@@ -93,6 +122,8 @@ const getRender = () => {
 		})
 
 	})
+
+
 
 }
 

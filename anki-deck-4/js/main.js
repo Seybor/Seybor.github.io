@@ -1,32 +1,28 @@
-import { s, all } from './modules/base.js'
+import { s, all } from './modules/base.js';
 
-import getSortArrAndGetSum from './modules/getSortArrAndGetSum.js'
-import getNum from './modules/getNum.js'
-import getSearch from './modules/getSearch.js'
-import getRender from './modules/getRender.js'
+import getSortArrAndGetSum from './modules/getSortArrAndGetSum.js';
+import getNum from './modules/getNum.js';
+import getSearch from './modules/getSearch.js';
+import getRender from './modules/getRender.js';
 
-import getTest from './modules/getTest.js'
+import getTest from './modules/getTest.js';
 
-import ALL from './data/unity_arrays.js'
+import ALL from './data/unity_arrays.js';
 
 const startScript = () => {
-
-	getSortArrAndGetSum()
-	getNum()
-	getSearch()
-	getRender()
+	getSortArrAndGetSum();
+	getNum();
+	getSearch();
+	getRender();
 
 	s('button[data-script="test"').addEventListener('click', (evt) => {
-		getTest()
-	})
+		getTest();
+	});
+};
 
-}
+startScript();
 
-startScript()
-
-const createWordsForArchive = () => {
-	let arr = [{ en: 'knock', tr: '[nɒk]', ru: 'стучать', pos: 1394 }];
-
+const createWordsForArchive = (arr) => {
 	let newArr = JSON.parse(JSON.stringify(ALL.w));
 
 	const finalArr = newArr.filter((item1) => !arr.some((item2) => item1.en === item2.en));
@@ -42,4 +38,7 @@ const createWordsForArchive = () => {
 	return finalArr;
 };
 
-createWordsForArchive();
+let arr = [
+
+];
+// createWordsForArchive(arr);

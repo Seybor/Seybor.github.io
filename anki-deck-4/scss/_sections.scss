@@ -105,6 +105,23 @@
   &__test {
     background-color: #fff;
   }
+  .text {
+    &[data-difficult='1'] {
+      color: green;
+    }
+    &[data-difficult='2'] {
+      color: rgb(90, 128, 0);
+    }
+    &[data-difficult='3'] {
+      color: rgb(128, 98, 0);
+    }
+    &[data-difficult='4'] {
+      color: rgb(124, 44, 20);
+    }
+    &[data-difficult='5'] {
+      color: rgb(180, 15, 15);
+    }
+  }
 }
 
 .test {
