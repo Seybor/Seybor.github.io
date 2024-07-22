@@ -14,7 +14,7 @@ import top_adj from "./arrays/top_adj.js";
 import top_ir from "./arrays/top_ir.js";
 import top_n from "./arrays/top_n.js";
 import top_v from "./arrays/top_v.js";
-import w from "./arrays/w.js";
+import w from "./arrays/words/w.js";
 
 const ALL = {
 	adj_char,

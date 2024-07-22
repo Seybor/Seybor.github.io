@@ -4,14 +4,45 @@ import { shuffleArr as utilities_shuffleArr } from './utilities-others.js'
 import ALL from '../data/unity_arrays.js'
 
 
-const getTest = () => {
+const getTest = (type) => {
+
+	console.log(type)
+
 	const ARR_W = JSON.parse(JSON.stringify(ALL.w))
 	const test_arr = []
+	let position = 0
 
 	utilities_shuffleArr(ARR_W)
 
+	switch (type) {
+		case 'test_3000': {
+			position = 3000
+		} break
+		case 'test_6000': {
+			position = 6000
+		} break
+
+		case 'test_10000': {
+			position = 10000
+		} break
+		case 'test_15000': {
+			position = 15000
+		} break
+		case 'test_21999': {
+			position = 21999
+		} break
+		case 'test_22000': {
+			position = 22000
+		} break
+		default: {
+			alert('Ошибка при рендере теста')
+			return
+		}
+	}
+
 	for (let i = 0; i < ARR_W.length; i++) {
-		if (ARR_W[i].pos < 5000) {
+
+		if (ARR_W[i].pos < position) {
 			test_arr.push(ARR_W[i])
 
 			if (test_arr.length >= 25) {

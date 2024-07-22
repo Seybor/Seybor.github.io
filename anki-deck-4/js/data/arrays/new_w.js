@@ -19,6 +19,11 @@ const new_w = [
 	{ en: 'tiredness', tr: '[ˈtaɪədnəs]', ru: 'усталость', pos: 17885 },
 	{ en: 'inattentive', tr: '[ˌɪnəˈtɛntɪv]', ru: 'невнимательность', pos: 19505 },
 	{ en: 'basics', tr: '[ˈbeɪsɪks]', ru: 'основы', pos: 22000 },
+		{ en: 'Leaflet', tr: '|ˈliːflət|', ru: 'листовка', pos: 4028 },
+{ en: 'Entry', tr: '|ˈentrɪ|', ru: 'вход, вступление, въезд', pos: 2887  },
+{ en: 'flee - fled - fled', tr: '[fliː] - [flɛd] - [flɛd]', ru: 'бежать, спасаться бегством', pos: 2463 },
+{ en: 'acquisition', tr: '|ˌækwɪˈzɪʃn|', ru: 'приобретение, сбор, овладение', pos: 4844 },
+{ en: 'outgoing', tr: '|ˈaʊtɡəʊɪŋ|', ru: 'уходящий; общительный', pos: 5325 },
 ]
 
 export default new_w

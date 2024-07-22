@@ -1,36 +1,11 @@
 import { s, all } from './base.js'
 
 import ALL from '../data/unity_arrays.js'
+import lighting from './lighting.js'
 
 const getRender = () => {
 
-	const highLight = () => {
-
-		all('.wrap .text').forEach(e => {
-
-			if (e.dataset.pos <= 0) {
-				e.dataset.difficult = '0'
-			}
-			else if (e.dataset.pos <= 3000) {
-				e.dataset.difficult = '1'
-			} else if (e.dataset.pos <= 6000) {
-				e.dataset.difficult = '2'
-			} else if (e.dataset.pos <= 10000) {
-				e.dataset.difficult = '3'
-			} else if (e.dataset.pos <= 15000) {
-				e.dataset.difficult = '4'
-			} else if (e.dataset.pos <= 21999) {
-				e.dataset.difficult = '5'
-			} else if (e.dataset.pos == 22000) {
-				e.dataset.difficult = '6'
-			}
-
-		})
-
-	}
-
-
-	all('.nav__link').forEach(e => {
+	all('.nav__link[data-id]').forEach(e => {
 		const renderStart = (arr, wordsIntervalOne = 0, wordsIntervalTwo = 0) => {
 			s('.wrap').textContent = ''
 
@@ -76,7 +51,7 @@ const getRender = () => {
 				})
 			}
 
-			highLight()
+			lighting()
 
 		}
 		e.addEventListener('click', (evt) => {
@@ -89,32 +64,26 @@ const getRender = () => {
 
 				switch (e.dataset.id) {
 					case 'w-1': {
-						renderStart(ALL.w, 1, 1000)
+						renderStart(ALL.w, 1, 3000)
 					} break
 					case 'w-2': {
-						renderStart(ALL.w, 1000, 2000)
+						renderStart(ALL.w, 3001, 6000)
 					} break
 					case 'w-3': {
-						renderStart(ALL.w, 2000, 3000)
-					} break
-					case 'w-4': {
-						renderStart(ALL.w, 3000, 4000)
-					} break
-					case 'w-5': {
-						renderStart(ALL.w, 4000, 5000)
-					} break
-					case 'w-6': {
-						renderStart(ALL.w, 5000, 6000)
-					} break
-					case 'w-7': {
 						renderStart(ALL.w, 6000, 10000)
 					} break
-					case 'w-8': {
-						renderStart(ALL.w, 10000, 22000)
+					case 'w-4': {
+						renderStart(ALL.w, 10001, 15000)
 					} break
-					case 'w-9': {
+					case 'w-5': {
+						renderStart(ALL.w, 15001, 22000)
+					} break
+					case 'w-6': {
 						renderStart(ALL.w, 21999, 22001)
 					} break
+					default: {
+						alert('Ошибка при рендере')
+					}
 				}
 
 

@@ -1,6 +1,7 @@
 import { s, all } from './base.js'
 
 import ALL from '../data/unity_arrays.js'
+import lighting from './lighting.js'
 
 const getSearch = () => {
 	s('.search').addEventListener('click', (evt) => {
@@ -81,10 +82,13 @@ const getSearch = () => {
 		s('.search__input').placeholder = `найдено: ${result.length} совпадений`
 
 		result.forEach((e, id) => {
-			let string = `<p>${id + 1}) ${e.en} - ${e.tr ? e.tr + ' - ' : ''} ${e.ru}${e.pos ? ' (' + e.pos + ')' : ''}</p>`
+			let string = `<p class='text' data-pos="${e.pos ? e.pos : '0'}">${id + 1}) ${e.en} - ${e.tr ? e.tr + ' - ' : ''} ${e.ru}${e.pos ? ' (' + e.pos + ')' : ''}</p>`
 
 			s('.wrap').insertAdjacentHTML('beforeend', string);
 		})
+
+		lighting()
+
 	}
 
 	function isFirstLetterEnglish(str) {

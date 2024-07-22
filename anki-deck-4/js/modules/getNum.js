@@ -22,39 +22,33 @@ const getNum = () => {
 		return sum
 	}
 
-	all('.nav__link span').forEach(e => {
+	all('.nav__link[data-id] span').forEach(e => {
 
 		if (ALL[e.parentElement.dataset.id]) {
 			e.textContent = ALL[e.parentElement.dataset.id].length
 		} else {
 			switch (e.parentElement.dataset.id) {
 				case 'w-1': {
-					e.textContent = startNum(ALL.w, 1, 1000)
+					e.textContent = startNum(ALL.w, 1, 3000)
 				} break
 				case 'w-2': {
-					e.textContent = startNum(ALL.w, 1000, 2000)
+					e.textContent = startNum(ALL.w, 3001, 6000)
 				} break
 				case 'w-3': {
-					e.textContent = startNum(ALL.w, 2000, 3000)
-				} break
-				case 'w-4': {
-					e.textContent = startNum(ALL.w, 3000, 4000)
-				} break
-				case 'w-5': {
-					e.textContent = startNum(ALL.w, 4000, 5000)
-				} break
-				case 'w-6': {
-					e.textContent = startNum(ALL.w, 5000, 6000)
-				} break
-				case 'w-7': {
 					e.textContent = startNum(ALL.w, 6000, 10000)
 				} break
-				case 'w-8': {
-					e.textContent = startNum(ALL.w, 10000, 22000)
+				case 'w-4': {
+					e.textContent = startNum(ALL.w, 10001, 15000)
 				} break
-				case 'w-9': {
+				case 'w-5': {
+					e.textContent = startNum(ALL.w, 15001, 22000)
+				} break
+				case 'w-6': {
 					e.textContent = startNum(ALL.w, 21999, 22001)
 				} break
+				default: {
+					alert('Ошибка при отображении кол-ва элементов')
+				}
 			}
 		}
 

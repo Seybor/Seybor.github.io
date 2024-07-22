@@ -8,6 +8,11 @@ import getRender from './modules/getRender.js';
 import getTest from './modules/getTest.js';
 
 import ALL from './data/unity_arrays.js';
+import w_3000 from './data/arrays/words/w-3000.js';
+import w_6000 from './data/arrays/words/w-6000.js';
+import w_10000 from './data/arrays/words/w-10000.js';
+import w_21999 from './data/arrays/words/w-21999.js';
+import w_22000 from './data/arrays/words/w-22000.js';
 
 const startScript = () => {
 	getSortArrAndGetSum();
@@ -15,15 +20,17 @@ const startScript = () => {
 	getSearch();
 	getRender();
 
-	s('button[data-script="test"').addEventListener('click', (evt) => {
-		getTest();
+	all('.nav__link[data-script]').forEach((e) => {
+		e.addEventListener('click', (evt) => {
+			getTest(e.dataset.script);
+		});
 	});
 };
 
 startScript();
 
 const createWordsForArchive = (arr) => {
-	let newArr = JSON.parse(JSON.stringify(ALL.w));
+	let newArr = JSON.parse(JSON.stringify(w_3000));
 
 	const finalArr = newArr.filter((item1) => !arr.some((item2) => item1.en === item2.en));
 
@@ -39,6 +46,7 @@ const createWordsForArchive = (arr) => {
 };
 
 let arr = [
+
 
 ];
 // createWordsForArchive(arr);

@@ -39,7 +39,7 @@ const adj_human = [
 	{ en: 'harsh', tr: '|hɑːrʃ|', ru: 'суровый, жесткий', pos: 3240 },
 	{ en: 'anxious [about]', tr: '[ˈæŋkʃəs]', ru: 'обеспокоенный', pos: 3371 },
 	{ en: 'pleasant', tr: '[ˈplezᵊnt]', ru: 'приятный', pos: 3374 },
-	{ en: 'sensible', tr: '[ˈsɛnsəbᵊl]', ru: 'разумный', pos: 3390 },
+	{ en: 'sensible', tr: '[ˈsɛnsəbᵊl]', ru: 'разумный, здравомыслящий', pos: 3390 },
 	{ en: 'unemployed', tr: '|ˌʌnɪmˈplɔɪd|', ru: 'безработный', pos: 3406 },
 	{ en: 'exhausted', tr: '[ɪɡˈzɔːstɪd]', ru: 'истощённый', pos: 3422 },
 	{ en: 'reliable', tr: '[rɪˈlaɪəbᵊl]', ru: 'надёжный', pos: 3479 },
