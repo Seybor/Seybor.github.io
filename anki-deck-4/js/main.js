@@ -47,6 +47,5 @@ const createWordsForArchive = (arr) => {
 
 let arr = [
 
-
 ];
 // createWordsForArchive(arr);

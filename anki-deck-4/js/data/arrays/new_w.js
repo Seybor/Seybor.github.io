@@ -1,4 +1,6 @@
 const new_w = [
+	{ en: 'sail', tr: '|seɪl|', ru: 'плыть (на чём-то); плавание', pos: 2980 },
+	{ en: 'sting - stung - stung', tr: '[stɪŋ] - [stʌŋ] - [stʌŋ]', ru: 'жалить, ужалить; жало', pos: 4782 },
 	{ en: 'forced', tr: '[fɔːst]', ru: 'принудительный', pos: 320 },
 	{ en: 'savings', tr: '[ˈseɪvɪŋz]', ru: 'сбережения', pos: 538 },
 	{ en: 'staff', tr: '|stæf|', ru: 'персонал, сотрудники', pos: 734 },
@@ -19,11 +21,13 @@ const new_w = [
 	{ en: 'tiredness', tr: '[ˈtaɪədnəs]', ru: 'усталость', pos: 17885 },
 	{ en: 'inattentive', tr: '[ˌɪnəˈtɛntɪv]', ru: 'невнимательность', pos: 19505 },
 	{ en: 'basics', tr: '[ˈbeɪsɪks]', ru: 'основы', pos: 22000 },
-		{ en: 'Leaflet', tr: '|ˈliːflət|', ru: 'листовка', pos: 4028 },
-{ en: 'Entry', tr: '|ˈentrɪ|', ru: 'вход, вступление, въезд', pos: 2887  },
-{ en: 'flee - fled - fled', tr: '[fliː] - [flɛd] - [flɛd]', ru: 'бежать, спасаться бегством', pos: 2463 },
-{ en: 'acquisition', tr: '|ˌækwɪˈzɪʃn|', ru: 'приобретение, сбор, овладение', pos: 4844 },
-{ en: 'outgoing', tr: '|ˈaʊtɡəʊɪŋ|', ru: 'уходящий; общительный', pos: 5325 },
+	{ en: 'Leaflet', tr: '|ˈliːflət|', ru: 'листовка', pos: 4028 },
+	{ en: 'Entry', tr: '|ˈentrɪ|', ru: 'вход, вступление, въезд', pos: 2887 },
+	{ en: 'flee - fled - fled', tr: '[fliː] - [flɛd] - [flɛd]', ru: 'бежать, спасаться бегством', pos: 2463 },
+	{ en: 'acquisition', tr: '|ˌækwɪˈzɪʃn|', ru: 'приобретение, сбор, овладение', pos: 4844 },
+	{ en: 'outgoing', tr: '|ˈaʊtɡəʊɪŋ|', ru: 'уходящий; общительный', pos: 5325 },
+	{ en: 'sneeze', tr: '|sniːz|', ru: 'чихать', pos: 4632 },
+	{ en: 'precisely', tr: '|prɪˈsaɪslɪ|', ru: 'именно', pos: 2616 },
 ]
 
 export default new_w
