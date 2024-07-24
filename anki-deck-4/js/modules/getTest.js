@@ -10,29 +10,37 @@ const getTest = (type) => {
 
 	const ARR_W = JSON.parse(JSON.stringify(ALL.w))
 	const test_arr = []
-	let position = 0
+	let positionOne = 0
+	let positionTwo = 0
 
 	utilities_shuffleArr(ARR_W)
 
+
 	switch (type) {
 		case 'test_3000': {
-			position = 3000
+			positionOne = 1
+			positionTwo = 3000
 		} break
 		case 'test_6000': {
-			position = 6000
+			positionOne = 3001
+			positionTwo = 6000
 		} break
 
 		case 'test_10000': {
-			position = 10000
+			positionOne = 6001
+			positionTwo = 10000
 		} break
 		case 'test_15000': {
-			position = 15000
+			positionOne = 10001
+			positionTwo = 15000
 		} break
 		case 'test_21999': {
-			position = 21999
+			positionOne = 15001
+			positionTwo = 21999
 		} break
 		case 'test_22000': {
-			position = 22000
+			positionOne = 22000
+			positionTwo = 22001
 		} break
 		default: {
 			alert('Ошибка при рендере теста')
@@ -42,7 +50,7 @@ const getTest = (type) => {
 
 	for (let i = 0; i < ARR_W.length; i++) {
 
-		if (ARR_W[i].pos < position) {
+		if (ARR_W[i].pos >= positionOne && ARR_W[i].pos <= positionTwo) {
 			test_arr.push(ARR_W[i])
 
 			if (test_arr.length >= 25) {

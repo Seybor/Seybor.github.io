@@ -1,4 +1,5 @@
 const arch_w = [
+	{ en: 'ironing', tr: '[ˈaɪənɪŋ]', ru: 'глажение, глажка', pos: 2604 },
 	{ en: 'pressure', tr: '[ˈprɛʃə]', ru: 'давление, напряжение', pos: 658 },
 	{ en: 'imagine', tr: '[ɪˈmæʤɪn]', ru: 'вообразить, представить', pos: 747 },
 	{ en: 'equally', tr: '[ˈiːkwəli]', ru: 'равно', pos: 2612 },

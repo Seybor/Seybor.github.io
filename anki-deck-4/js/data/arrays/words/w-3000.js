@@ -24,7 +24,7 @@ const w_3000 = [
 	{ en: 'concentrate [on]', tr: '[ˈkɒnsəntreɪt]', ru: 'сконцентрироваться [на чём-то]', pos: 2056 },
 	{ en: 'emphasize', tr: '[ˈemfəsaɪz]', ru: 'подчеркивать, акцентировать', pos: 2295 },
 	{ en: 'arrangement', tr: '[əˈreɪnʤmənt]', ru: 'договорённость', pos: 2372 },
-	{ en: 'ironing', tr: '[ˈaɪənɪŋ]', ru: 'глажение, глажка', pos: 2604 },
+
 	{ en: 'recognition', tr: '[ˌrɛkəɡˈnɪʃᵊn]', ru: 'признание', pos: 2605 },
 	{ en: 'clarify', tr: '|ˈklærəfaɪ|', ru: 'прояснить, вносить ясность', pos: 2839 },
 	{ en: 'distinguish', tr: '[dɪˈstɪŋɡwɪʃ]', ru: 'различать, отличать', pos: 2858 },
