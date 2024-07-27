@@ -31,7 +31,12 @@ const have = [
 	['have a vacation', 'отправиться в отпуск'],
 	['have a dream', 'мечтать, иметь мечту'],
 	['have a look', 'взглянуть'],
-	['have a swim', 'плавать']
+	['have a swim', 'плавать'],
+	[
+'has to do with him',
+'имеет отношение к нему',
+],
+
 ]
 
 export default have

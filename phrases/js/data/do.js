@@ -41,6 +41,13 @@ const DO = [
 		'do research on',
 		'проводить исследование',
 	],
+	[
+	'do your assignment',
+	'выполнить задание',
+	]
+
+	
+
 ]
 
 export default DO

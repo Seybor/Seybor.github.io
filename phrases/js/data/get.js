@@ -12,9 +12,22 @@ const get = [
 	['get married', 'пожениться'],
 	['get divorced', 'развестись'],
 	['get dressed', 'одеваться'],
-	['get lost', 'потеряться'],
+	['get lost', 'потеряться, заблудиться'],
 	['get changed', 'переодеться'],
-	['get the job done', 'выполнить работу']
+	['get the job done', 'выполнить работу'],
+	[
+'get acquainted with',
+'познакомиться с',
+],
+[
+'get full',
+'наедаться по полной',
+],
+[
+'get your way',
+'добиться своего'
+],
+
 ]
 
 export default get
