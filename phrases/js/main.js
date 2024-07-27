@@ -1,6 +1,13 @@
 import ALL_PH from "./data/ph-all.js"
 
 
+for (let key in ALL_PH) {
+	ALL_PH[key].sort((a, b) => {
+		return a > b ? 1 : -1
+	})
+}
+
+
 $.each($('.header-item'), function (id, el) {
 	$(el).click(function (evt) {
 

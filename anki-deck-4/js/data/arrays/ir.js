@@ -218,6 +218,9 @@ const ir = [
 		ru: 'проспать',
 		pos: 20392,
 	},
+	{ en: 'stick - stuck - stuck', tr: '[stɪk] - [stʌk] - [stʌk]', ru: 'придерживаться; палка', pos: 669 },
+	{ en: 'sting - stung - stung', tr: '[stɪŋ] - [stʌŋ] - [stʌŋ]', ru: 'жалить, ужалить; жало', pos: 4782 },
+	{ en: 'flee - fled - fled', tr: '[fliː] - [flɛd] - [flɛd]', ru: 'бежать, спасаться бегством', pos: 2463 },
 ]
 
 export default ir

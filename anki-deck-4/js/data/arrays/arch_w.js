@@ -1,4 +1,11 @@
 const arch_w = [
+	{ en: 'schoolwork', tr: '[ˈskuːlwɜːk]', ru: 'школьная работа', pos: 15264 },
+	{ en: 'basics', tr: '[ˈbeɪsɪks]', ru: 'основы', pos: 22000 },
+	{ en: 'staff', tr: '|stæf|', ru: 'персонал, сотрудники', pos: 734 },
+	{ en: 'investigation', tr: '[ɪnˌvɛstɪˈɡeɪʃᵊn]', ru: 'расследование', pos: 974 },
+	{ en: 'fuel', tr: '[ˈfjuːəl]', ru: 'топливо', pos: 1251 },
+	{ en: 'occasion', tr: '[əˈkeɪʒᵊn]', ru: 'случай', pos: 1838 },
+	{ en: 'fault', tr: '[fɔːlt]', ru: 'вина', pos: 1963 },
 	{ en: 'ironing', tr: '[ˈaɪənɪŋ]', ru: 'глажение, глажка', pos: 2604 },
 	{ en: 'pressure', tr: '[ˈprɛʃə]', ru: 'давление, напряжение', pos: 658 },
 	{ en: 'imagine', tr: '[ɪˈmæʤɪn]', ru: 'вообразить, представить', pos: 747 },
