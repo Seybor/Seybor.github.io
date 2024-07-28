@@ -1,9 +1,5 @@
 const w_3000 = [
 	{ en: 'certainly', tr: '|ˈsɜːrtnlɪ|', ru: 'конечно, безусловно', pos: 293 },
-	{ en: 'either', tr: '[ˈaɪðə]', ru: 'либо, любой', pos: 380 },
-	{ en: 'quite, pretty, rather, fairly', tr: '[kwaɪt], [ˈprɪti], [ˈrɑːðə], [ˈfeəli]', ru: 'довольно', pos: 448 },
-	{ en: 'response', tr: '[rɪˈspɑːns]', ru: 'ответ, реакция, отклик', pos: 617 },
-	{ en: 'insurance', tr: '[ɪnˈʃʊərᵊns]', ru: 'страхование', pos: 907 },
 	{ en: 'schedule', tr: '[ˈʃɛdjuːl]', ru: 'график', pos: 955 },
 	{ en: 'encourage', tr: '|ɪnˈkɜːrɪdʒ|', ru: 'одобрять, поощрать, подстрекать', pos: 966 },
 	{
@@ -12,24 +8,15 @@ const w_3000 = [
 		ru: 'определенный, решительный (связано с упорством, настойчивостью)',
 		pos: 1103,
 	},
-	{ en: 'bother', tr: '[ˈbɑːðər]', ru: 'беспокоить', pos: 1150 },
 	{ en: 'establish', tr: '[ɪˈstæblɪʃ]', ru: 'устанавливать (причину чего-то), создавать', pos: 1287 },
-	{ en: 'circumstance', tr: '[ˈsɜːkəmstɑːns]', ru: 'обстоятельство', pos: 1424 },
-	{ en: 'ultimately', tr: '|ˈʌltɪmətlɪ|', ru: 'в конце концов', pos: 1467 },
 	{ en: 'pursue', tr: ' |pərˈsuː|', ru: 'преследовать', pos: 1678 },
 	{ en: 'inaudible', tr: '|ɪnˈɔːdəbl|', ru: 'неслышный, невнятный', pos: 1693 },
-	{ en: 'surface', tr: '[ˈsɜːfɪs]', ru: 'поверхность', pos: 1757 },
 	{ en: 'afterward', tr: '|ˈæftərwərd|', ru: 'позже, впоследствии', pos: 1807 },
-	{ en: 'independence', tr: '[ˌɪndɪˈpɛndəns]', ru: 'независимость', pos: 2051 },
-	{ en: 'concentrate [on]', tr: '[ˈkɒnsəntreɪt]', ru: 'сконцентрироваться [на чём-то]', pos: 2056 },
 	{ en: 'emphasize', tr: '[ˈemfəsaɪz]', ru: 'подчеркивать, акцентировать', pos: 2295 },
 	{ en: 'arrangement', tr: '[əˈreɪnʤmənt]', ru: 'договорённость', pos: 2372 },
-
-	{ en: 'recognition', tr: '[ˌrɛkəɡˈnɪʃᵊn]', ru: 'признание', pos: 2605 },
 	{ en: 'clarify', tr: '|ˈklærəfaɪ|', ru: 'прояснить, вносить ясность', pos: 2839 },
 	{ en: 'distinguish', tr: '[dɪˈstɪŋɡwɪʃ]', ru: 'различать, отличать', pos: 2858 },
 	{ en: 'bankruptcy', tr: '[ˈbæŋkrəptsi]', ru: 'банкротство', pos: 2905 },
-	{ en: 'diverse', tr: '[daɪˈvɜːrs]', ru: 'разнообразный', pos: 2965 },
 ];
 
 export default w_3000;

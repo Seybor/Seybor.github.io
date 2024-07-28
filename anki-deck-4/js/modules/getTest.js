@@ -81,7 +81,7 @@ const getTest = (type) => {
 
 			all('.test__item input').forEach((e, id) => {
 
-				if (e.value.toLowerCase().trim() === test_arr[id].en) {
+				if (e.value.toLowerCase().trim() === test_arr[id].en.trim()) {
 
 					e.classList.add('test__input--right')
 
