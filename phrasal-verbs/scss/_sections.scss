@@ -1,11 +1,10 @@
 .header {
-  padding: 12px;
   border-top: 1px solid $blue;
   border-bottom: 1px solid $blue;
   &__inner {
     position: relative;
 
-    padding-left: 40px;
+    padding-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,13 +12,16 @@
 }
 .header__sum {
   position: absolute;
-  left: 0px;
+  left: 50%;
   top: 10px;
+  float: left;
   width: 30px;
   height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transform: translateX(-50%);
 
   border-radius: 50%;
   background-color: $blue;
