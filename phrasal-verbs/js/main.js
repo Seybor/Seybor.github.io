@@ -1,5 +1,13 @@
 import ALL from "./data/all.js"
 
+let sum = 0
+Object.entries(ALL).forEach(e =>
+	sum += e[1].length
+)
+console.log(sum)
+
+$('.header__sum').text(sum)
+
 
 $.each($('.header-item'), function (id, el) {
 	$(el).click(function (evt) {

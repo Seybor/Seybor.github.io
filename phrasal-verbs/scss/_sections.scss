@@ -3,10 +3,27 @@
   border-top: 1px solid $blue;
   border-bottom: 1px solid $blue;
   &__inner {
+    position: relative;
+
+    padding-left: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+}
+.header__sum {
+  position: absolute;
+  left: 0px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  background-color: $blue;
+  font-size: 12px;
 }
 .header-list {
   display: flex;
