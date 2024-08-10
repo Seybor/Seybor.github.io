@@ -8,6 +8,33 @@ import verb from './data/syn-verb.js'
 import adjective from './data/syn-adjective.js'
 import adverb from './data/syb-adverb.js'
 
+const ALL = {
+	noun,
+	verb,
+	adjective,
+	adverb
+}
+
+const log = {
+	style: 'color: #ffffff; padding: 5px; font-weight: bold; font-size: 12px;',
+	info: (text) => {
+		console.log(`%c${`info`}`, `background: blue; ${log.style}`, `${text}`);
+	},
+	warn: (text) => {
+		console.log(`%c${`warn`}`, `background: orange; ${log.style}`, `${text}`);
+	},
+	success: (text) => {
+		console.log(`%c${`success`}`, `background: green; ${log.style}`, `${text}`);
+	},
+	error: (text) => {
+		console.log(`%c${`error`}`, `background: red; ${log.style}`, `${text}`);
+	},
+}
+
+log.info(noun.length + verb.length + adjective.length + adverb.length)
+
+
+
 // $('body').hide()
 
 // UI.changeTheme()
@@ -29,21 +56,7 @@ all('nav a').forEach(e => {
 		let arr = []
 		s('.content .container').textContent = ''
 
-		switch (e.dataset.type) {
-			case 'n': {
-				arr = noun
-			} break
-			case 'v': {
-				arr = verb
-			} break
-			case 'a': {
-				arr = adjective
-			} break
-			case 'av': {
-				arr = adverb
-			} break
-		}
-		arr.forEach((el, id) => {
+		ALL[evt.target.dataset.type].forEach((el, id) => {
 			let content = `
 			<div class="wrap synonyms">
 			<hr class="divider">

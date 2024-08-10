@@ -23,7 +23,6 @@ const top_ir = [
 	{ en: 'slide (slid, slid)', tr: '[slaɪd]', ru: 'скользить' },
 	{ en: 'sink (sank, sunk)', tr: '[sɪŋk]', ru: 'тонуть' },
 	{ en: 'spread (spread, spread)', tr: '[sprɛd]', ru: 'распространять (-ся)' },
-	{ en: 'arrange (the books on the shelves)', tr: '[əˈreɪnʤ]', ru: 'приводить в порядок (расставлять)' },
 ]
 
 export default top_ir

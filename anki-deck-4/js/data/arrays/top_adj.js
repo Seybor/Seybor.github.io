@@ -145,6 +145,6 @@ const top_adj = [
 	{ en: 'violent', tr: '[ˈvaɪələnt]', ru: 'жестокий (насильственный)' },
 	{ en: 'vulnerable', tr: '[ˈvʌlnərəbl]', ru: 'уязвимый' },
 	{ en: 'western', tr: '[ˈwɛstən]', ru: 'западный' },
-]
+];
 
 export default top_adj

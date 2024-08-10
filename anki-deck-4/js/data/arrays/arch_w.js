@@ -30,7 +30,6 @@ const arch_w = [
 	{ en: 'exhibit', tr: '|ɪɡˈzɪbɪt|', ru: 'экспонат', pos: 2823 },
 	{ en: 'accidentally / by chance', tr: '[ˌæksɪˈdɛntəli] / [baɪ] [ʧɑːns]', ru: 'случайно', pos: 2940 },
 	{ en: 'neither', tr: '[ˈnaɪðə]', ru: 'ни, ни один, никто', pos: 1785 },
-	{ en: 'arrange', tr: '[əˈreɪndʒ]', ru: 'договориться, устраивать', pos: 2291 },
 	{ en: 'essential', tr: '[ɪˈsenʃl]', ru: 'самый необходимый', pos: 2328 },
 	{ en: 'none', tr: '[nʌn]', ru: 'ни один из', pos: 1114 },
 	{ en: 'nevertheless', tr: '[ˌnevərðəˈles|', ru: 'тем не менее', pos: 2632 },

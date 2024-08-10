@@ -592,7 +592,7 @@ let noun = [
 			'She is a real talent - Она — настоящий талант',
 			'She has a gift for making people laugh - У неё дар смешить людей',
 			'I have a very strong aptitude to memorising - Я имею исключительную способность к запоминанию',
-			'He has a knack for getting into trouble - Он мастер попадать в неприятные истории',
+			'He has a knack for getting into trouble - Он мастер попадать в неприятные истории'
 		]
 	},
 	{
@@ -611,7 +611,7 @@ let noun = [
 			'I love any sort of big show - Я люблю любые масштабные шоу',
 			'This category includes many diverse programs - Эта категория объединяет самые разные программы',
 			'Among these are some plankton species - Есть среди них и планктонные виды',
-			'This book is a classic of the mystery genre - Эта книга является классикой детективного жанра',
+			'This book is a classic of the mystery genre - Эта книга является классикой детективного жанра'
 		]
 	},
 	{
@@ -625,7 +625,7 @@ let noun = [
 		ex: [
 			'The real work took place underground - Основная работа была проделана под землей',
 			'She was in labour for five hours - Она рожала пять часов',
-			"It's drudgery going through terabytes of data - Это тяжелая работа, проходящая через терабайты данных",
+			"It's drudgery going through terabytes of data - Это тяжелая работа, проходящая через терабайты данных"
 		]
 	},
 	{
@@ -644,278 +644,12 @@ let noun = [
 		ru: 'дом',
 		en: ['house', 'home'],
 		desc: [
-			`House - в контектсе здания`,
-			`Home - эмоциональная привязанность к чему-то`,
+			'House - в контектсе здания',
+			'Home - эмоциональная привязанность к чему-то'
 		],
 		ex: [
 			'Our family lives in a large, bright house - Наша семья живет в большом, светлом доме',
-			`I'm at home - Я дома`,
-		],
-	},
-	{
-		ru: 'сайт',
-		en: ['site', 'website'],
-		desc: ['site - обычно относится к отдельной странице или разделу', 'website - относится к коллекции связанных страниц и функций'],
-		ex: ['I found an interesting site about cooking recipes - Я нашел интересный сайт о рецептах приготовления пищи', 'I visited a website that provides information about travel destinations - Я посетил веб-сайт, который предоставляет информацию о туристических направлениях'],
-	},
-	{
-		ru: 'город',
-		en: ['town', 'city'],
-		desc: ['town - небольшой город', 'city - просто город'],
-		ex: ['I live in a big city - Я живу в большом городе', 'I live in a small town - Я живу в маленьком городе'],
-	},
-	{
-		ru: 'экономика',
-		en: ['economics', 'economy'],
-		desc: ['economics - экономика, как наука', 'economy - экономика, в контексте стран, городов, регионов и т.д'],
-		ex: ['I studied economics - Я изучал экономику', 'The economy of this region leaves much to be desired - Экономика этого региона оставляет желать лучшего'],
-	},
-	{
-		ru: 'человек',
-		en: ['human', 'person', 'man'],
-		desc: ['human - подчеркивает биологический аспект', 'person - подчеркивает социальный и моральный аспект', 'man - может относиться к человеку мужского пола или к человеку вообще, часто с более неформальным оттенком'],
-		ex: ["Humans belong to the animal kingdom - Люди принадлежат к царству животных", `I don't like this person - Этот человек мне не нравится`, `It's a strange man - Это странный человек (мужчина)`],
-	},
-	{
-		ru: 'грабитель',
-		en: ['robber', 'burglar'],
-		desc: ['robber - чаще с применением насилия', 'burglar - как правило без насилия, взломщик'],
-		ex: ['Police have apprehended a robber who attacked a woman - Полиция задержала грабителя, напавшего на женщину.', 'Police detained a burglar of an apartment - Полиция задержала грабителя квартиры'],
-	},
-	{
-		ru: 'ошибка',
-		en: ['mistake', 'error', 'fault', 'slip', 'blunder'],
-		desc: [
-			'mistake - более неформальный и относится к ошибкам в утверждениях и действиях',
-			'error - более официальный и связан с техническими ошибками',
-			'fault - указывает на вину человека в совершении ошибки',
-			'slip - мелкая ошибка',
-			'blunder - грубая ошибка'
-		],
-		ex: [
-			'That move was a big mistake - Тот переезд был большой ошибкой',
-			'There was an error in their calculations - В их вычислениях была ошибка',
-			"It's not my fault - Я не виноват!",
-			'He made a few slips in his calculations - В своих расчетах он допустил несколько ошибок',
-			'He made a blunder - Он совершил большую ошибку'
-		]
-	},
-	{
-		ru: 'ребёнок',
-		en: [
-			'child',
-			'kid',
-			'baby',
-			'todder',
-			'teenager',
-			'youngster',
-			'youth'
-		],
-		desc: [
-			'Child - это общее слово для описания любого ребенка, который еще не перешел в категорию подростков (teenager). Это может быть ребенок любого возраста, от рождения до достижения 14 лет.',
-			'Kid - это слово для описания ребенка, который может быть любого возраста, от рождения до достижения 14 лет. Это может быть использовано как в формальной, так и в неформальной речи. Неформальный синоним child',
-			'Baby - это слово для описания совсем маленького ребенка, который еще не умеет ходить и говорить. Это обычно относится к детям до месяца или до года.',
-			'Toddler - это слово для описания ребенка, который учится ходить. Это обычно относится к детям от одного до двух лет.',
-			'Teenager - это слово для описания подростка, который находится в возрасте от 13 до 19 лет.',
-			'Youngster - это слово для описания молодого человека или девушки, который находится в возрасте от 16 до 25 лет.',
-			'Youth - это слово для описания молодого человека или девушки, который находится в возрасте от 16 до 25 лет.'
-		],
-		ex: [
-			'My child is at home now. - Мой ребёнок сейчас дома.',
-			'The baby is sleeping. - Младенец спит.',
-			'The toddler is learning to walk. - Ребенок учится ходить.',
-			'The teenager is going to the party. - Подросток идёт на вечеринку.',
-			'The youngster is playing soccer. - Молодой человек играет в футбол.',
-			'The youth is participating in the competition. - Молодой человек участвует в соревнованиях.',
-			'The kid is playing with toys. - Ребенок играет с игрушками.'
-		]
-	},
-	{
-		ru: 'предложение',
-		en: [
-			'offer',
-			'suggestion',
-			'proposal',
-			'recommendation',
-			'proposition',
-			'motion'
-		],
-		desc: [
-			'offer — предложение (того, что реально можно дать, предоставить, сделать)',
-			'suggestion — предложение (темы, предмета, действии, которые можно обсуждать)',
-			'proposal — предложение (для обсуждения, рассмотрения;вносится официально официальному лицу, организации или группе)',
-			'recommendation — предложение, рекомендация, совет(выдвинутые официальным вышестоящим лицом или группой; особенно предложения, заключенные в докладе)',
-			'proposition — план действий, предложение (в политике или бизнесе)',
-			'motion — предложение (выдвигаемое на собрании)'
-		],
-		ex: [
-			'He got an interesting offer of job abroad. — Он получил предложение интересной работы за границей.',
-			'That is an excellent suggestion. — Это отличное предложение',
-			'They will consider our proposal at their next meeting. — Они рассмотрят наше предложение на следующем заседании',
-			'We accept that recommendation and we shall act on it as quick as possible — Мы принимаем это предложение и начинаем действовать в соответствии с ним в ближайшем будущем',
-			'I have a proposition to move. — У меня есть предложение',
-			'The motion was carried unanimously. — Предложение было принято единогласно'
-		]
-	},
-	{
-		ru: 'соревнование',
-		en: ['competition', 'contest', 'match'],
-		desc: [
-			'competition - подчеркивает более широкую идею соперничества',
-			'contest - часто включает в себя приз и более формальный контекст',
-			'match - специально относится к соревнованию между двумя индивидуумами или командами'
-		],
-		ex: [
-			'The company is facing stiff competition in the market - Компания столкнулась с жёсткой конкурентной борьбой на рынке',
-			'The annual singing contest is a popular event in the town - Годовой конкурс пения — популярное событие в этом городе ',
-			'The tennis match was intense, with both players giving it their all - Теннисный матч был интенсивным, с обеими игроками, которые дали все свои силы'
-		]
-	},
-	{
-		ru: 'участник',
-		en: ['contenstant', 'candidate', 'contender', 'applicant', 'entrant'],
-		desc: [
-			'contenstant - это широкий термин для обозначения человека, участвующего в конкурсе',
-			'candidate - обычно используется для обозначения политических или официальных позиций',
-			'contender - подразумевает большие шансы на успех',
-			'applicant - используется для обозначения работы или возможности',
-			'entrant - кто принимает участие в чём-то'
-		],
-		ex: [
-			'The contestant on the TV show was a talented singer - Участник телешоу был талантливым певцом',
-			'The candidate for mayor is a well-known businessperson - Кандидат на должность мэра — известный бизнесмен',
-			'The team is a serious contender for the championship - Эта команда — серьёзный претендент на чемпионство',
-			'The applicant for the job had impressive qualifications - Претендент на эту должность обладал впечатляющей квалификацией',
-			'Each entrant had to agree to the contest rules - Каждому участнику пришлось согласиться с правилами конкурса.'
-		]
-	},
-	{
-		ru: 'смелость',
-		en: ['courage', 'bravery', 'nerve', 'guts'],
-		desc: [
-			'courage - это более общий термин, показывающий смелость в трудных ситуациях',
-			'bravery - более сильный термим, чем courage, храбрость.',
-			'nerve - подчеркивает уверенность, необходимую для принятия мер',
-			'guts - неформальный синоним courage'
-		],
-		ex: [
-			'You have shown great courage in coming to testify - Вы проявили большое мужество, придя для дачи показаний ',
-			'A policeman who chased a burglar despite a serious leg injury has received an award for bravery - Полицейский, который преследовал грабителя, несмотря на серьезную травму ноги, получил награду за храбрость',
-			"I didn't have the nerve to disagree with him - У меня не хватило смелости не согласиться с ним",
-			"I didn't have the guts to go on my own - У меня не хватило смелости пойти самому"
-		]
-	},
-	{
-		ru: 'умение, способность',
-		en: ['ability', 'skill', 'competence', 'talent', 'capability'],
-		desc: [
-			'ability - это природная способность делать что-то хорошо',
-			'skill - умение, что-либо сделать, но в результате тренировок или опыта',
-			'competence - склонность или личное качество, которое помогает хорошо выполнить работу, задание',
-			'talent - это необычная природная одарённость, особенно касающаяся каких-то творческих моментов',
-			'capability - это практическое умение что-то делать хорошо'
-		],
-		ex: [
-			'I admire his ability to stay calm in a difficult situations - Мне нравится его способность оставаться спокойным в трудных ситуациях',
-			'Portait paintig needs a lot of skill - Рисование портретов требует большого мастерства',
-			'Does she have the necessary competence in foreing languages? - Обладает ли она необходимой компетенцией в области иностранных языков?',
-			"She's done well in the theatre - we always knew she had talent - Она хорошо играла в театре - мы всегда знали, что у нее есть талант",
-			'We have the capability to produce a better machine than this - У нас есть возможность создать машину лучше, чем эта'
-		]
-	},
-	{
-		ru: 'гнев, злость, раздражительность',
-		en: [
-			'anger',
-			'annoyance',
-			'irritation',
-			'resentment',
-			'fury',
-			'rage'
-		],
-		desc: [
-			'anger - гнев, это чувство сильного раздражения',
-			'annoyance - раздражительность, это чувство, когда ты слегка расстроен или нетерпелив',
-			'irritation - легкое раздажение, это чувство недовольства или нетерпения',
-			'resentment - недовольство, это чувство, когда ты испытываешь злость и расстройство, из-за того, что кто-то что-то сделал',
-			'fury - ярость, это очень сильный гнев',
-			'rage - неожиданный сильный гнев'
-		],
-		ex: [
-			'He managed to control his anger - Он сумел контролировать своё гнев',
-			'There was a tone of annoyance in her voice - В её голосе звучала нотка раздражения',
-			'She wathed with irritation as he tired to fix the wheel again - Она смотрела с недовольством как он пытался починить снова колесо',
-			'The decision casued a lot of resentment among local people - Это решение вызвало много недовольства среди местных людей',
-			'He shouted at us in fury - Он в ярости кричал на нас',
-			'Her face was red with rage - Его лицо покраснело от гнева'
-		]
-	},
-
-	{
-		ru: 'ответ',
-		en: ['answer', 'reply', 'response', 'acknowledgment [ɪkˈnɑlɪdʒmənt]'],
-		desc: [
-			'answer - ответ, это что-то что вы говорите или пишите, когда кто-то задал вам вопрос',
-			'reply - ответ, как правило либо на письмо, либо на телефонный звонок',
-			'response - что-то что вы делаете или говорите как реакция на что-то',
-			'acknowledgment - письмо или записка, которую высылают, если что-то было получено'
-		],
-		ex: [
-			'The answer to your question is yes - Ответ на твой вопрос - да',
-			"We wrote last week, but haven't had a reply yet - Мы писали на прошлой недели, но до сих пор не получили ответ",
-			'There was no response to our call for help - Не было ответа на наш зов о помощи',
-			"We didn't even receive an from the acknowledgment council - Мы даже не получили никаго ответа от совета",
-			'a letter of acknowledgment - письмо с подтверждением'
-		]
-	},
-	{
-		ru: 'помощник, ассистент',
-		en: ['assistant', 'helper', 'deputy', 'auxiliary'],
-		desc: [
-			'assistant - ассистент, это человек, который помогает кому-то, потому что это часть его работы',
-			'helper - помощник, человек, который помогает кому-то выполнять часть работы или задачи, особенно без оплаты',
-			'deputy - человек, который принимает решения когда управляюший или начальник отсутствует, заместитель начальника',
-			'auxiliary - человек, который помогает другим работникам'
-		],
-		ex: [
-			'His assistant makes all the appointments - Его помощник назначает все встречи',
-			'The children can be my helpers for the day - Дети могут быть моими помощниками на этот день',
-			"She's acting as deputy while her department manager is in hospital - Она действует как заместитель начальника, пока её менеджер по департаменту находится в больнице",
-			'He works as a nursing auxiliary in the local hospital - Он работает как помощник медсестры в местной больнице',
-			'auxiliary verb - вспомогательный глагол'
-		]
-	},
-	{
-		ru: 'неприязнь',
-		en: ['dislike', 'hatred', 'hate', 'disgust'],
-		desc: [
-			'Dislike - легкое или умеренное негативное чувство',
-			'Hatred - ненависть к чему-то или кому-то',
-			'Hate - ненависть к кому-то',
-			'Disgust - интенсивное чувство отвращения или глубокого неодобрения'
-		],
-		ex: [
-			'I dislike the taste of olives - Мне не нравится вкус оливок',
-			'She has a deep hatred for her former boss - Она испытывает глубокую ненависть к своему бывшему боссу',
-			'Her eyes were full of hate - Её глаза были полны ненависти',
-			'The sight of the rotting food filled her with disgust - Вид гниющей еды вызвал у нее отвращение',
-			''
-		]
-	},
-	{
-		ru: 'бой',
-		en: ['fight', 'battle', 'war', 'conflict'],
-		desc: [
-			'Fight - это общий термин для обозначения физической или словесной перепалки',
-			'Battle - это конкретный случай официального сражения между группами',
-			'War - это длительный и организованный конфликт между нациями, государствами или группами',
-			'Conflict - общий термин для обозначения ситуации, в которой противоборствующие силы или интересы находятся в оппозиции'
-		],
-		ex: [
-			'The two friends got into a fight over a trivial matter - Два друга поссорились из-за пустяка',
-			'The battle between the two armies lasted for hours - Битва между двумя армиями длилась несколько часов',
-			'The war between the two nations lasted for decades - Война между двумя странами длилась десятилетиями',
-			'The conflict between the two parties has been ongoing for years - Конфликт между двумя сторонами продолжается уже много лет',
+			"I'm at home - Я дома"
 		]
 	},
 	{
@@ -959,21 +693,16 @@ let noun = [
 			'Frenzy - неистовство (описывает интенсивное, дикое или неконтролируемое состояние ума или эмоций, часто связанное с гневом или возбуждением)',
 			'Insanity - сумасшествие (юридический и медицинский термин для тяжелого психического расстройства или психоза)',
 			'Folly - безрассудство (относится к недостатку здравого смысла, мудрости или рассудительности)',
-			'Lunacy - устаревший термин помешательства',
-
+			'Lunacy - устаревший термин помешательства'
 		],
 		ex: [
 			'Her madness was evident in her erratic behavior and constant mood swings - Ее безумие проявлялось в неуравновешенном поведении и постоянных перепадах настроения',
 			'The frenzy of the crowd was overwhelming as they cheered for their favorite team - Неистовая толпа болела за свою любимую команду',
 			'The insanity of the war was evident in the destruction and chaos it left behind - Безумие войны проявилось в разрушениях и хаосе, которые она оставила после себя',
 			"The folly of the company's decision to invest in the failing industry was evident in their financial losses - Безрассудство решения компании инвестировать в провальную отрасль проявилось в финансовых потерях",
-			"The lunacy of the situation was evident in the absurdity of the characters' actions - Безумие ситуации проявилось в абсурдности действий персонажей",
+			"The lunacy of the situation was evident in the absurdity of the characters' actions - Безумие ситуации проявилось в абсурдности действий персонажей"
 		]
-	},
-
-
-
-
+	}
 ]
 
 export default noun

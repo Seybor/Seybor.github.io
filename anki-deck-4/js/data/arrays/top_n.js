@@ -106,7 +106,6 @@ const top_n = [
 	{ en: 'betrayal', tr: '[bɪˈtreɪəl]', ru: 'предательство, измена' },
 	{ en: 'argument', tr: '[ˈɑːgjʊmənt]', ru: 'спор, ссора (формально и логически)' },
 	{ en: 'quarrel', tr: '[ˈkwɒrəl]', ru: 'ссора (эмоционально)' },
-	{ en: 'divorce', tr: '[dɪˈvɔːs]', ru: '	развод' },
 	{ en: 'influence', tr: '[ˈɪnflʊəns]', ru: 'влияние' },
 	{ en: 'struggle', tr: '[ˈstrʌgl]', ru: 'борьба' },
 	{ en: 'participation', tr: '[pɑːˌtɪsɪˈpeɪʃən]', ru: 'участие' },

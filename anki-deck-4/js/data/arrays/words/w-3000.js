@@ -10,7 +10,7 @@ const w_3000 = [
 	},
 	{ en: 'establish', tr: '[ɪˈstæblɪʃ]', ru: 'устанавливать (причину чего-то), создавать', pos: 1287 },
 	{ en: 'pursue', tr: ' |pərˈsuː|', ru: 'преследовать', pos: 1678 },
-	{ en: 'inaudible', tr: '|ɪnˈɔːdəbl|', ru: 'неслышный, невнятный', pos: 1693 },
+	{ en: 'inaudible', tr: '|ɪnˈɔːdəbl|', ru: 'неслышный', pos: 1693 },
 	{ en: 'afterward', tr: '|ˈæftərwərd|', ru: 'позже, впоследствии', pos: 1807 },
 	{ en: 'emphasize', tr: '[ˈemfəsaɪz]', ru: 'подчеркивать, акцентировать', pos: 2295 },
 	{ en: 'arrangement', tr: '[əˈreɪnʤmənt]', ru: 'договорённость', pos: 2372 },

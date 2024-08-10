@@ -772,7 +772,7 @@ const ALL = {
 		],
 		[
 			'take out',
-			'вынимать, брать с собой',
+			'выносить, выкидывать; брать с собой',
 			'Can you take out the trash before you leave?',
 			'Можешь вынести мусор перед тем, как уйдешь?',
 		],
@@ -1674,17 +1674,3 @@ const ALL = {
 }
 
 export default ALL
-
-
-
-
-
-
-
-
-
-
-
-
-
-
