@@ -1,0 +1,45 @@
+@mixin scrollbar($color: rgb(43, 43, 43), $thumbColor: 'darken') {
+  $width: 8px;
+  $height: 8px;
+  $radius: 4px;
+  &::-webkit-scrollbar {
+    width: $width;
+    height: $height;
+
+    background-color: $color;
+  }
+  &::-webkit-scrollbar-thumb {
+    @if ($thumbColor == 'darken') {
+      background-color: darken($color: $color, $amount: 25%);
+    } @else if($thumbColor == 'lighten') {
+      background-color: lighten($color: $color, $amount: 25%);
+    } @else {
+      background-color: $thumbColor;
+    }
+
+    border-radius: $radius;
+  }
+}
+
+@mixin line-clamp($line: 3) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+}
+@mixin animation($duration: 1s, $count: 1, $delay: 0s) {
+  animation-duration: $duration;
+  animation-timing-function: linear;
+  animation-delay: $delay;
+  animation-iteration-count: $count;
+  animation-fill-mode: none;
+  animation-direction: normal;
+}
+
+%font {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
