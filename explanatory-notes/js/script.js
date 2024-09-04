@@ -2,6 +2,8 @@ import { s, all, css, attr, html, text, insert, evt } from './modules/base.js'
 
 import WORDS from '../data/words.js';
 
+WORDS.sort((a, b) => a.pos - b.pos)
+
 function progressBar() {
 	window.addEventListener("scroll", function () {
 		let scrollHeight = document.documentElement.scrollHeight;
