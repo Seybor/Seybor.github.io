@@ -1,51 +1,53 @@
 import { s, all, css, attr, html, text, insert, evt } from './modules/base.js'
 import { shuffleArr } from './modules/utils-others.js'
 
-// $('body').hide()
-
 let values = []
 
 evt('button[data-btn="start"]', 'click', () => {
 
-	s('button[data-btn="start"]').remove()
+	let quantity = s('input[name="quantity"]:checked').value
+	s('.btn-wrap').remove()
 
-	startGame()
+	startGame(quantity)
 
 })
 
-function startGame() {
+function startGame(quantity) {
 
-	css('.cards', {
-		'display': 'flex',
-	})
+	css('.cards', { 'display': 'flex' })
 
-	for (let i = 0; i < 5; i++) {
+	let attempts = 0
+	let points = quantity
+	console.log(points)
 
-		let string = `<div class="card" data-type="${i + 1}" data-checked="false">
-				<div class="card-inner">
-					<div class="card-front">
+	function renderCards(quantity) {
+		for (let i = 0; i < quantity; i++) {
+
+			let string = `<div class="card" data-type="${i + 1}" data-checked="false">
+					<div class="card-inner">
+						<div class="card-front">
+						</div>
+						<div class="card-back" style="background-image: url(img/${i + 1}.jpg);">
+						
+						</div>
 					</div>
-					<div class="card-back" style="background-image: url(img/${i + 1}.jpg);">
-					
-					</div>
-				</div>
-			</div>`
+				</div>`
 
-		for (let j = 0; j < 2; j++) {
 			insert('.cards', string)
+			insert('.cards', string)
+
 		}
 
+		const shuffledCards = shuffleArr([...all('.card')]);
 
+		html('.cards', '');
+		shuffledCards.forEach(card => {
 
+			s('.cards').append(card);
+		});
 	}
 
-	const shuffledCards = shuffleArr([...all('.card')]);
-
-	html('.cards', '');
-	shuffledCards.forEach(card => {
-
-		s('.cards').append(card);
-	});
+	renderCards(quantity)
 
 
 	all('.card').forEach(el => {
@@ -56,30 +58,37 @@ function startGame() {
 
 			values.push(el.dataset.type)
 
-			console.log(values)
-
 			if (values.length >= 2) {
 
 				s('.cards').style.setProperty('pointer-events', 'none')
 
 				if (values[0] === values[1]) {
 
-					console.log('равны')
-
 					setTimeout(() => {
 						all('.card[data-checked="true"]').forEach(element => {
 							element.querySelector('.card-back').style.setProperty('filter', 'saturate(100%)')
 							element.dataset.checked = 'false'
+							element.style.setProperty('pointer-events', 'none')
 						})
+
 						s('.cards').style.setProperty('pointer-events', 'auto')
+
+						points--
+						console.log(points)
+
+						if (points <= 0) {
+							alert('Congratulations! You won! Your attempts: ' + attempts)
+						}
+
 					}, 1500)
 
 				} else {
-					console.log('неравны')
+
+
 					setTimeout(() => {
 						all('.card[data-checked="true"]').forEach(element => {
 							element.querySelector('.card-inner').classList.remove('card-inner--active')
-							element.style.setProperty('pointer-events', 'auto')
+							element.style.cssText = ''
 							element.dataset.checked = 'false'
 						})
 						s('.cards').style.setProperty('pointer-events', 'auto')
@@ -87,6 +96,7 @@ function startGame() {
 				}
 
 				values = []
+				attempts++
 			}
 
 		})
