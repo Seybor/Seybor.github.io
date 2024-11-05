@@ -1,0 +1,53 @@
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 402px;
+  height: 402px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid black;
+}
+
+.cell {
+  border: 1px solid gray;
+  width: 20px;
+  height: 20px;
+}
+
+hr {
+  height: 1px;
+  background-color: black;
+  margin: 5px 0;
+}
+
+button {
+  padding: 10px 20px;
+  border: 1px solid orange;
+
+  cursor: pointer;
+}
+
+.cell[data-snake='head'] {
+  background-color: green;
+  border-width: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cell[data-snake='body'] {
+  background-color: blue;
+  border-width: 0px;
+}
+
+.cell[data-apple='true'] {
+  background-color: red;
+  border-width: 0px;
+}

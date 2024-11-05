@@ -1,0 +1,35 @@
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+
+  font-weight: 400;
+  color: var(--accent);
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+
+  background-color: transparent;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+
+  transition: all 0.25s linear;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.burger {
+  display: block;
+  background-color: transparent;
+  border: none;
+  span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    &:nth-child(2) {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
