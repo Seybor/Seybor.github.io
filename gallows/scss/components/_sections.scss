@@ -1,0 +1,47 @@
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content {
+  width: 402px;
+  height: 402px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  font-size: 28px;
+  border: 1px solid black;
+}
+
+.game {
+  padding: 10px 20px;
+  border: 1px solid orange;
+}
+
+.cell {
+  border: 1px solid gray;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  &--free {
+    background-color: lightgray;
+  }
+}
+
+.mistake {
+  padding: 10px 20px;
+  border: 1px solid gray;
+  display: flex;
+  gap: 10px;
+  font-size: 16px;
+}
