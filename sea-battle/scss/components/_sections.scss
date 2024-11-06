@@ -1,0 +1,79 @@
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content {
+  padding: 10px;
+  width: 660px;
+  height: 402px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  font-size: 28px;
+  border: 1px solid black;
+}
+
+.game {
+  padding: 10px 20px;
+  border: 1px solid orange;
+}
+
+.board {
+  width: 310px;
+  height: 310px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  border: 5px solid black;
+  &--bot {
+    border-color: red;
+    & .cell {
+      transition: all 0.2s linear;
+      &:hover {
+        background-color: rgba($color: red, $alpha: 0.75);
+        cursor: pointer;
+      }
+    }
+  }
+  &--player {
+    border-color: blue;
+  }
+}
+.cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+}
+.ship {
+  &[data-name='one'] {
+    background-color: green;
+  }
+  &[data-name='two'] {
+    background-color: orange;
+  }
+  &[data-name='three'] {
+    background-color: violet;
+  }
+  &[data-name='four'] {
+    background-color: rgb(0, 255, 255);
+  }
+}
+.cell.mistake {
+  background-color: gray;
+  pointer-events: none;
+}
+.cell.hit {
+  background-color: red;
+  pointer-events: none;
+}
