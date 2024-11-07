@@ -1,0 +1,38 @@
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content {
+  width: 402px;
+  height: 402px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  border: 1px solid black;
+}
+
+.game {
+  padding: 10px 20px;
+  border: 1px solid rgb(12, 54, 2);
+  background-color: lighten($color: #0ed807, $amount: 0.5);
+}
+
+.cell {
+  border: 1px solid gray;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  &--active {
+    background-color: gray;
+  }
+}
