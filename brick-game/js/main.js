@@ -26,7 +26,7 @@ let gameSpeed = 1 // Скорость игры
 let startGame = false // Переопределяет функции для кнопок при начале игры
 let intervalGame = 0// Интервал игры
 
-document.oncontextmenu = () => false // убираем вызов контекстного меню
+// document.oncontextmenu = () => false // убираем вызов контекстного меню
 
 // Список координат игр для превью и для начала самой игры
 const games = [
@@ -112,8 +112,8 @@ function getButtonsHandler() {
 
 			switch (gameCounter) {
 				case 0: {
-					direction = 'left'
-					moveSnake(direction)
+					snakeGame.direction = 'left'
+					snakeGame.moveSnake(snakeGame.direction)
 				}
 			}
 
@@ -128,7 +128,6 @@ function getButtonsHandler() {
 			renderPrevievGame(gameCounter)
 		}
 
-
 	})
 
 	evt('.btn--right', 'click', () => {
@@ -137,8 +136,8 @@ function getButtonsHandler() {
 
 			switch (gameCounter) {
 				case 0: {
-					direction = 'right'
-					moveSnake('direction')
+					snakeGame.direction = 'right'
+					snakeGame.moveSnake(snakeGame.direction)
 				}
 			}
 
@@ -162,15 +161,15 @@ function getButtonsHandler() {
 
 			switch (gameCounter) {
 				case 0: {
-					direction = 'up'
-					moveSnake('direction')
+					snakeGame.direction = 'up'
+					snakeGame.moveSnake(snakeGame.direction)
 				}
 			}
 
 		} else {
 			gameSpeed++
 
-			if (gameSpeed > 5) {
+			if (gameSpeed > 9) {
 				gameSpeed = 1
 			}
 
@@ -187,8 +186,8 @@ function getButtonsHandler() {
 
 			switch (gameCounter) {
 				case 0: {
-					direction = 'down'
-					moveSnake(direction)
+					snakeGame.direction = 'down'
+					snakeGame.moveSnake(snakeGame.direction)
 				}
 			}
 
@@ -196,7 +195,7 @@ function getButtonsHandler() {
 			gameSpeed--
 
 			if (gameSpeed < 1) {
-				gameSpeed = 5
+				gameSpeed = 9
 			}
 
 			text('.content-display__info-speed span:nth-child(2)', gameSpeed)
@@ -223,7 +222,7 @@ function startCurrentGame(value) {
 
 	switch (value) {
 		case 0:
-			startGameSnake()
+			snakeGame.init()
 			break;
 		case 1:
 
@@ -236,144 +235,160 @@ function startCurrentGame(value) {
 
 // Функции для разных игры
 // Игра змейка
+const snakeGame = {
+	init: function () {
+		clearDisplay()
+		clearInterval(intervalGame)
+		startGame = true
+		this.arrSnakeSegments.head = [6, 12]
+		this.arrSnakeSegments.body = [[5, 12], [4, 12],]
+		this.direction = 'right'
 
-// Сегменты змейки
-const arrSnakeSegments = {
-	head: [6, 12],
-	body: [
-		[5, 12],
-		[4, 12],
-	]
-}
-let applePosition = 0 // Позиция яблока
-let checkApplePosition = false // Проверка пересечения яблока с сегментами змейки
-let direction = 'right' // направление змейки
+		this.renderSnake()
+		this.renderApple()
 
-function renderApple(currentApple = true) {
+		intervalGame = setInterval(() => {
+			this.moveSnake(this.direction)
+		}, 1100 - gameSpeed * 100)
+	},
 
-	if (currentApple) {
-		// Цикл для генерации яблока
-		do {
-			applePosition = [Math.floor(getRandomNumber(1, 10)), getRandomNumber(1, 20)]
+	arrSnakeSegments: {
+		head: [6, 12],
+		body: [
+			[5, 12],
+			[4, 12],
+		]
+	},
 
-			if (applePosition[0] === arrSnakeSegments.head[0] && applePosition[1] === arrSnakeSegments.head[1]) {
-				checkApplePosition = true
+	applePosition: [1, 1], // Позиция яблока
+	checkApplePosition: false, // Проверка пересечения яблока с сегментами змейки
+	direction: 'right', // направление змейки
+	shift: [0, 0], // Координаты смещения в зависимости от кнопки
+
+	renderApple: function (currentApple = true) {
+
+		if (currentApple) {
+			// Цикл для генерации яблока
+			do {
+				this.applePosition = [Math.floor(getRandomNumber(1, 10)), getRandomNumber(1, 20)]
+
+				if (this.applePosition[0] === this.arrSnakeSegments.head[0] && this.applePosition[1] === this.arrSnakeSegments.head[1]) {
+					this.checkApplePosition = true
+				}
+
+				this.arrSnakeSegments.body.forEach(item => {
+					if (this.applePosition[0] === item[0] && this.applePosition[1] === item[1]) {
+						this.checkApplePosition = true
+					}
+				})
+
+			} while (this.checkApplePosition)
+		}
+
+		let el = s(`.content-display__field div[data-coord="${this.applePosition.join(',')}"]`)
+		el.classList.add('apple')
+	},
+
+	renderSnake: function () {
+
+		let el = s(`.content-display__field div[data-coord="${this.arrSnakeSegments.head.join(',')}"]`)
+		el.classList.add('snake-head')
+
+		this.arrSnakeSegments.body.forEach(item => {
+			let el = s(`.content-display__field div[data-coord="${item.join(',')}"]`)
+			el.classList.add('snake-body')
+		})
+	},
+
+	moveSnake: function (position) {
+
+		switch (position) {
+			case 'left': {
+				this.shift = [this.arrSnakeSegments.head[0] - 1, this.arrSnakeSegments.head[1]]
+				break;
+			}
+			case 'right': {
+				this.shift = [this.arrSnakeSegments.head[0] + 1, this.arrSnakeSegments.head[1]]
+				break;
+			}
+			case 'up': {
+				this.shift = [this.arrSnakeSegments.head[0], this.arrSnakeSegments.head[1] - 1]
+				break;
+			}
+			case 'down': {
+				this.shift = [this.arrSnakeSegments.head[0], this.arrSnakeSegments.head[1] + 1]
+				break;
+			}
+		}
+
+		if (this.shift[0] === this.arrSnakeSegments.body[0][0] && this.shift[1] === this.arrSnakeSegments.body[0][1]) {
+			return
+		} else {
+			this.arrSnakeSegments.body.unshift([this.arrSnakeSegments.head[0], this.arrSnakeSegments.head[1]])
+			this.arrSnakeSegments.head = this.shift
+			let appleControl = this.checkApple()
+
+			if (appleControl) {
+				this.arrSnakeSegments.body.pop()
 			}
 
-			arrSnakeSegments.body.forEach(item => {
-				if (applePosition[0] === item[0] && applePosition[1] === item[1]) {
-					checkApplePosition = true
-				}
-			})
+			let ifLoose = this.checkLoose(this.shift)
+			if (ifLoose) {
+				alert('Вы проиграли')
+				clearInterval(intervalGame)
 
-		} while (checkApplePosition)
-	}
+				setTimeout(() => {
+					this.init()
+				}, 1000)
 
-	let el = s(`.content-display__field div[data-coord="${applePosition.join(',')}"]`)
-	el.classList.add('apple')
-}
+				return
+			}
+			clearDisplay()
+			this.renderSnake()
+			this.renderApple(!appleControl)
 
-function renderSnake() {
-
-	let el = s(`.content-display__field div[data-coord="${arrSnakeSegments.head.join(',')}"]`)
-	el.classList.add('snake-head')
-
-	arrSnakeSegments.body.forEach(item => {
-		let el = s(`.content-display__field div[data-coord="${item.join(',')}"]`)
-		el.classList.add('snake-body')
-	})
-}
-
-let shift = [0, 0] // Координаты смещения в зависимости от кнопки
-
-function moveSnake(position) {
-
-	switch (position) {
-		case 'left': {
-			shift = [arrSnakeSegments.head[0] - 1, arrSnakeSegments.head[1]]
-			break;
 		}
-		case 'right': {
-			shift = [arrSnakeSegments.head[0] + 1, arrSnakeSegments.head[1]]
-			break;
-		}
-		case 'up': {
-			shift = [arrSnakeSegments.head[0], arrSnakeSegments.head[1] - 1]
-			break;
-		}
-		case 'down': {
-			shift = [arrSnakeSegments.head[0], arrSnakeSegments.head[1] + 1]
-			break;
-		}
-	}
+	},
 
-	if (shift[0] === arrSnakeSegments.body[0][0] && shift[1] === arrSnakeSegments.body[0][1]) {
-		return
-	} else {
-		arrSnakeSegments.body.unshift([arrSnakeSegments.head[0], arrSnakeSegments.head[1]])
-		arrSnakeSegments.head = shift
-		let appleControl = checkApple()
-
-		if (appleControl) {
-			arrSnakeSegments.body.pop()
-		}
-
-		let ifLoose = checkLoose(shift)
-		if (ifLoose) {
-			alert('Вы проиграли')
-			clearInterval(gameInterval)
-			return
-		}
-		clearDisplay()
-		renderSnake()
-		renderApple(!appleControl)
-
-	}
-}
-
-function checkApple() {
-	if (!(arrSnakeSegments.head[0] === applePosition[0] && arrSnakeSegments.head[1] === applePosition[1])) {
-		return true
-	}
-
-	return false
-}
-
-function checkLoose(headPosition) {
-
-	if (headPosition[0] > 10 || headPosition[0] < 1 || headPosition[1] > 20 || headPosition[1] < 1) {
-		return true
-	}
-
-	for (let i = 0; i < arrSnakeSegments.body.length; i++) {
-		if (headPosition[0] === arrSnakeSegments.body[i][0] && headPosition[1] === arrSnakeSegments.body[i][1]) {
+	checkApple: function () {
+		if (!(this.arrSnakeSegments.head[0] === this.applePosition[0] && this.arrSnakeSegments.head[1] === this.applePosition[1])) {
 			return true
 		}
-	}
 
-	return false
+		return false
+	},
+
+	checkLoose: function (headPosition) {
+
+		if (headPosition[0] > 10 || headPosition[0] < 1 || headPosition[1] > 20 || headPosition[1] < 1) {
+			return true
+		}
+
+		for (let i = 0; i < this.arrSnakeSegments.body.length; i++) {
+			if (headPosition[0] === this.arrSnakeSegments.body[i][0] && headPosition[1] === this.arrSnakeSegments.body[i][1]) {
+				return true
+			}
+		}
+
+		return false
+
+	},
+}
+
+// Игра гонки
+
+const gameRacing = {
 
 }
 
-function startGameSnake() {
-	clearDisplay()
+// Игра тетрис
 
-	startGame = true
-	direction = 'right'
+const gameTetris = {
 
-	arrSnakeSegments.head = [6, 12]
-	arrSnakeSegments.body = [
-		[5, 12],
-		[4, 12],
-	]
-
-	renderSnake()
-	renderApple()
-
-	intervalGame = setInterval(() => {
-		moveSnake(direction)
-	}, 500)
 }
 
+
+
+// Старт страницы
 renderPrevievGame(0)
 getButtonsHandler()
