@@ -59,6 +59,7 @@ function moveCell(direction, startGame = false) {
 
 	if (!startGame) {
 		attempt++
+		console.log(attempt)
 		checkWin()
 	}
 

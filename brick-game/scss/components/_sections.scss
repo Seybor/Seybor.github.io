@@ -155,6 +155,20 @@
   background-color: black;
 }
 
+// racing
+
+.car {
+  background-color: black;
+  opacity: 0.75;
+}
+.enemy-car {
+  background-color: black;
+}
+.wall {
+  background-color: black;
+  opacity: 0.9;
+}
+
 @keyframes blink {
   0% {
     opacity: 1;
