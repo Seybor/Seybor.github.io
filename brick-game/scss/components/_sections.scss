@@ -72,29 +72,8 @@
     }
   }
 
-  &__info-score {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__info-life {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: auto;
-    margin-bottom: auto;
-
-    & > div {
-      flex: 0 0 auto;
-      width: 25%;
-      height: auto;
-      aspect-ratio: 1/1;
-
-      border: 1px solid rgb(0, 0, 0);
-    }
-  }
-
+  &__info-score,
+  &__info-life,
   &__info-speed {
     display: flex;
     flex-direction: column;
