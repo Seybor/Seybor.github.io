@@ -379,6 +379,26 @@ const snakeGame = {
 			} else {
 				gameControler.score += 10
 				gameControler.updateScore()
+
+				let levelControl = this.checkNextLevel()
+
+				if (levelControl) {
+					gameControler.gameSpeed++
+					clearInterval(gameControler.intervalGame)
+
+					let winControl = this.checkWin()
+					gameControler.updateSpeed()
+					console.log(gameControler.gameSpeed)
+
+					if (winControl) {
+						alert('Вы победили')
+						return
+					}
+
+					gameControler.intervalGame = setInterval(() => {
+						this.moveSnake(this.direction)
+					}, 1100 - gameControler.gameSpeed * 100)
+				}
 			}
 
 			let ifLoose = this.checkLoose(this.shift)
@@ -391,6 +411,8 @@ const snakeGame = {
 					gameControler.life = 4
 					gameControler.updateLife()
 					gameControler.updateScore()
+					clearInterval(gameControler.intervalGame)
+
 				} else {
 					alert('Вы проиграли, у вас осталось ' + gameControler.life + ' жизней')
 					clearInterval(gameControler.intervalGame)
@@ -398,9 +420,6 @@ const snakeGame = {
 
 				this.init()
 
-
-
-				return
 			}
 			gameControler.clearDisplay()
 			this.renderSnake()
@@ -432,6 +451,22 @@ const snakeGame = {
 		return false
 
 	},
+
+	checkNextLevel: function () {
+		if (gameControler.score % 100 === 0) {
+			return true
+		}
+
+		return false
+	},
+
+	checkWin: function () {
+		if (gameControler.gameSpeed > 9) {
+			return true
+		}
+
+		return false
+	}
 }
 
 // Игра гонки
