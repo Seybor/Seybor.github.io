@@ -95,11 +95,6 @@
     }
   }
 
-  &__info-level {
-    display: flex;
-    flex-direction: column;
-  }
-
   &__info-speed {
     display: flex;
     flex-direction: column;
@@ -161,4 +156,31 @@
 
 .active {
   background-color: black;
+}
+
+// games
+
+// snake
+
+.apple {
+  background-color: black;
+
+  animation: blink 0.5s linear 0s infinite;
+}
+.snake-head {
+  background-color: black;
+
+  animation: blink 0.5s linear 0s infinite;
+}
+.snake-body {
+  background-color: black;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
 }

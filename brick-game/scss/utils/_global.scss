@@ -38,18 +38,6 @@ body {
   overflow: hidden;
 }
 
-.main {
-  flex-grow: 1;
-}
-
-button,
-a {
-  transition: all 0.25s linear;
-  &:hover {
-    opacity: 0.75;
-  }
-}
-
 .title {
   font-size: 2rem;
 }
