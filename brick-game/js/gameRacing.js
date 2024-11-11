@@ -10,15 +10,48 @@ const gameRacing = {
 		gameControler.updateScore()
 		gameControler.updateLife()
 
+		this.carSegments = [
+			[4, 17],
+			[4, 18],
+			[5, 18],
+			[3, 18],
+			[4, 19],
+			[3, 20],
+			[5, 20],
+		]
+
+		this.enemyCarSegments = {
+			right: [
+				[7, 1],
+				[7, 2],
+				[8, 2],
+				[6, 2],
+				[7, 3],
+				[6, 4],
+				[8, 4],
+			],
+			left: [
+				[4, 1],
+				[4, 2],
+				[5, 2],
+				[3, 2],
+				[4, 3],
+				[3, 4],
+				[5, 4],
+			],
+		}
+
+		this.renderWalls()
 		this.renderCar()
 		this.renderEnemyCar()
 
-		// gameControler.intervalGame = setInterval(() => {
-		// 	this.moveCar()
-		// }, 1100 - gameControler.gameSpeed * 100)
+		gameControler.intervalGame = setInterval(() => {
+			this.moveEnemyCar()
+		}, 1100 - gameControler.gameSpeed * 100)
 	},
 
 	direction: 'right',
+	directionEnemyCar: 'right',
 
 	carSegments: [
 		[4, 17],
@@ -27,7 +60,6 @@ const gameRacing = {
 		[3, 18],
 		[4, 19],
 		[3, 20],
-		[4, 20],
 		[5, 20],
 	],
 
@@ -39,7 +71,6 @@ const gameRacing = {
 			[6, 2],
 			[7, 3],
 			[6, 4],
-			[7, 4],
 			[8, 4],
 		],
 		left: [
@@ -49,10 +80,10 @@ const gameRacing = {
 			[3, 2],
 			[4, 3],
 			[3, 4],
-			[4, 4],
 			[5, 4],
 		],
 	},
+
 
 	walls: [
 		[1, 1],
@@ -146,17 +177,11 @@ const gameRacing = {
 
 	},
 
-	renderEnemyCar: function (direction) {
-		let dir = getRandomNumber(0, 1)
-		if (dir === 0) {
-			direction = 'right'
-		}
+	renderEnemyCar: function () {
 
-		if (dir === 1) {
-			direction = 'left'
-		}
+		all('.content-display__field .enemy-car').forEach(e => e.classList.remove('enemy-car'))
 
-		this.enemyCarSegments[direction].forEach(item => {
+		this.enemyCarSegments[this.directionEnemyCar].forEach(item => {
 			let el = s(`.content-display__field div[data-coord="${item.join(',')}"]`)
 			el.classList.add('enemy-car')
 		})
@@ -165,8 +190,7 @@ const gameRacing = {
 
 	renderCar: function () {
 
-		gameControler.clearDisplay()
-		this.renderWalls()
+		all('.content-display__field .car').forEach(e => e.classList.remove('car'))
 
 		this.carSegments.forEach(item => {
 			let el = s(`.content-display__field div[data-coord="${item.join(',')}"]`)
@@ -185,8 +209,18 @@ const gameRacing = {
 						this.carSegments[i][0] = this.carSegments[i][0] + 3
 					}
 
+					if (this.checkCrash()) {
+
+						gameControler.life--
+
+						if (gameControler.life <= 0) {
+							clearInterval(gameControler.intervalGame)
+							alert('Game Over')
+						}
+
+						gameRacing.init()
+					}
 					this.renderCar()
-					this.renderEnemyCar()
 
 				} else {
 					return
@@ -201,8 +235,19 @@ const gameRacing = {
 						this.carSegments[i][0] = this.carSegments[i][0] - 3
 					}
 
+					if (this.checkCrash()) {
+
+						gameControler.life--
+
+						if (gameControler.life <= 0) {
+							clearInterval(gameControler.intervalGame)
+							alert('Game Over')
+						}
+
+						gameRacing.init()
+					}
+
 					this.renderCar()
-					this.renderEnemyCar()
 
 				} else {
 					return
@@ -211,7 +256,113 @@ const gameRacing = {
 			} break;
 		}
 
+	},
+
+	moveEnemyCar: function () {
+
+		for (let i = 0; i < this.enemyCarSegments.right.length; i++) {
+			this.enemyCarSegments[this.directionEnemyCar][i][1] = this.enemyCarSegments[this.directionEnemyCar][i][1] + 1
+		}
+
+		if (this.checkCrash()) {
+
+			gameControler.life--
+
+			if (gameControler.life <= 0) {
+				clearInterval(gameControler.intervalGame)
+				alert('Game Over')
+			}
+
+			gameRacing.init()
+		}
+
+		if (this.checkEnemyCarBeyondField()) {
+			gameControler.score = gameControler.score + 10
+			gameControler.updateScore()
+
+			if (gameControler.score % 100 === 0) {
+				gameControler.gameSpeed++
+
+
+				if (gameControler.gameSpeed > 9) {
+					alert('You win')
+					clearInterval(gameControler.intervalGame)
+					gameControler.init()
+				}
+
+				gameControler.updateSpeed()
+				clearInterval(gameControler.intervalGame)
+				gameControler.intervalGame = setInterval(() => {
+					this.moveEnemyCar()
+				}, 1100 - gameControler.gameSpeed * 100)
+			}
+
+			this.getNewEnemyCar()
+		}
+
+		this.renderEnemyCar()
+
+	},
+
+	checkEnemyCarBeyondField: function () {
+		if (this.enemyCarSegments[this.directionEnemyCar][this.enemyCarSegments[this.directionEnemyCar].length - 1][1] > 20) {
+			return true
+		}
+
+		return false
+	},
+
+	checkCrash: function () {
+
+
+		for (let i = 0; i < this.carSegments.length; i++) {
+
+			for (let j = 0; j < this.enemyCarSegments[this.directionEnemyCar].length; j++) {
+
+				if (this.carSegments[i][0] === this.enemyCarSegments[this.directionEnemyCar][j][0] && this.carSegments[i][1] === this.enemyCarSegments[this.directionEnemyCar][j][1]) {
+					return true
+				}
+
+			}
+
+		}
+
+		return false
+	},
+
+	getNewEnemyCar: function () {
+		let dir = getRandomNumber(1, 2)
+
+		if (dir === 1) {
+			this.directionEnemyCar = 'right'
+		} else {
+			this.directionEnemyCar = 'left'
+		}
+
+		this.enemyCarSegments = {
+			right: [
+				[7, 1],
+				[7, 2],
+				[8, 2],
+				[6, 2],
+				[7, 3],
+				[6, 4],
+				[7, 4],
+				[8, 4],
+			],
+			left: [
+				[4, 1],
+				[4, 2],
+				[5, 2],
+				[3, 2],
+				[4, 3],
+				[3, 4],
+				[4, 4],
+				[5, 4],
+			],
+		}
 	}
+
 
 }
 

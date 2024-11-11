@@ -95,6 +95,17 @@ const snakeGame = {
 		}
 
 		if (this.shift[0] === this.arrSnakeSegments.body[0][0] && this.shift[1] === this.arrSnakeSegments.body[0][1]) {
+
+			if (this.direction === 'right') {
+				this.direction = 'left'
+			} else if (this.direction === 'left') {
+				this.direction = 'right'
+			} else if (this.direction === 'up') {
+				this.direction = 'down'
+			} else if (this.direction === 'down') {
+				this.direction = 'up'
+			}
+
 			return
 		} else {
 			this.arrSnakeSegments.body.unshift([this.arrSnakeSegments.head[0], this.arrSnakeSegments.head[1]])
@@ -119,7 +130,8 @@ const snakeGame = {
 
 					if (winControl) {
 						alert('Вы победили')
-						return
+						clearInterval(gameControler.intervalGame)
+						gameControler.init()
 					}
 
 					gameControler.intervalGame = setInterval(() => {

@@ -68,7 +68,6 @@ const gameControler = {
 				[4, 11],
 				[6, 11],
 				[5, 12],
-				[5, 13],
 				[4, 13],
 				[6, 13]
 			]
@@ -145,7 +144,7 @@ const gameControler = {
 					case 0: {
 						snakeGame.direction = 'right'
 						snakeGame.moveSnake(snakeGame.direction)
-					}
+					} break;
 					case 1: {
 						gameRacing.direction = 'right'
 						gameRacing.moveCar(gameRacing.direction)
@@ -174,7 +173,10 @@ const gameControler = {
 					case 0: {
 						snakeGame.direction = 'up'
 						snakeGame.moveSnake(snakeGame.direction)
-					}
+					} break
+					case 1: {
+						gameRacing.moveEnemyCar()
+					} break
 				}
 
 			} else {
@@ -224,6 +226,8 @@ const gameControler = {
 				this.score = 0
 				this.life = 4
 				this.updateLife()
+				this.updateScore()
+				this.updateSpeed()
 				this.startCurrentGame(this.gameCounter)
 			}
 

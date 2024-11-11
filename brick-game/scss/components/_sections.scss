@@ -85,7 +85,7 @@
   grid-template-columns: repeat(2, 1fr);
   flex: 0 0 auto;
   width: 100%;
-  padding: 20px 0;
+  padding: 20px 10px;
   &__reset {
     grid-column: span 2;
     display: flex;
@@ -106,7 +106,7 @@
   }
 }
 .btn--reset {
-  padding: calc(var(--padding) / 2);
+  padding: calc(var(--padding) / 3);
   background-color: red;
 }
 
@@ -130,7 +130,7 @@
 }
 
 .btn--fire {
-  padding: calc(var(--padding) * 2);
+  padding: calc(var(--padding) * 1.5);
 }
 
 .active {
