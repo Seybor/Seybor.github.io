@@ -1,0 +1,121 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+
+  border: none;
+}
+*::placeholder {
+  color: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+figcaption,
+blockquote,
+dl,
+dd,
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section,
+main,
+legend {
+  display: block;
+}
+
+img {
+  display: inline-block;
+
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+address {
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+
+  background-color: transparent;
+}
+
+button,
+input[type='submit'] {
+  display: inline-block;
+
+  box-shadow: none;
+
+  cursor: pointer;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+a {
+  display: inline-block;
+
+  font: inherit;
+  color: inherit;
+}
+
+label {
+  display: inline-block;
+
+  cursor: pointer;
+}
