@@ -47,7 +47,7 @@ const gameRacing = {
 
 		gameControler.intervalGame = setInterval(() => {
 			this.moveEnemyCar()
-		}, 1100 - gameControler.gameSpeed * 100)
+		}, this.gameSpeed[gameControler.gameSpeed - 1])
 	},
 
 	direction: 'right',
@@ -84,6 +84,7 @@ const gameRacing = {
 		],
 	},
 
+	gameSpeed: [250, 225, 200, 175, 150, 125, 100, 75, 50],
 
 	walls: [
 		[1, 1],
@@ -283,18 +284,19 @@ const gameRacing = {
 			if (gameControler.score % 100 === 0) {
 				gameControler.gameSpeed++
 
-
 				if (gameControler.gameSpeed > 9) {
 					alert('You win')
 					clearInterval(gameControler.intervalGame)
+					gameControler.clearDisplay()
 					gameControler.init()
+					return
 				}
 
 				gameControler.updateSpeed()
 				clearInterval(gameControler.intervalGame)
 				gameControler.intervalGame = setInterval(() => {
 					this.moveEnemyCar()
-				}, 1100 - gameControler.gameSpeed * 100)
+				}, this.gameSpeed[gameControler.gameSpeed - 1])
 			}
 
 			this.getNewEnemyCar()
@@ -347,7 +349,6 @@ const gameRacing = {
 				[6, 2],
 				[7, 3],
 				[6, 4],
-				[7, 4],
 				[8, 4],
 			],
 			left: [
@@ -357,10 +358,10 @@ const gameRacing = {
 				[3, 2],
 				[4, 3],
 				[3, 4],
-				[4, 4],
 				[5, 4],
 			],
 		}
+
 	}
 
 
