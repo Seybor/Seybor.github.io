@@ -1,6 +1,7 @@
 import { s, all, css, attr, html, text, insert, evt } from './modules/base.js'
 import snakeGame from './gameSnake.js'
 import gameRacing from './gameRacing.js'
+import threeGame from './gameThree.js'
 
 const gameControler = {
 
@@ -83,7 +84,13 @@ const gameControler = {
 				[4, 5],
 				[4, 6],
 				[5, 7],
-				[6, 7]
+				[6, 7],
+				[2, 10],
+				[2, 11],
+				[3, 11],
+				[5, 11],
+				[8, 10],
+				[8, 11],
 			]
 		}
 	],
@@ -121,6 +128,9 @@ const gameControler = {
 						gameRacing.direction = 'left'
 						gameRacing.moveCar(gameRacing.direction)
 					} break;
+					case 2: {
+						threeGame.moveCube('one')
+					} break;
 				}
 
 			} else {
@@ -149,6 +159,10 @@ const gameControler = {
 						gameRacing.direction = 'right'
 						gameRacing.moveCar(gameRacing.direction)
 					} break;
+					case 2: {
+						threeGame.moveCube('three')
+					} break;
+
 				}
 
 			} else {
@@ -177,6 +191,9 @@ const gameControler = {
 					case 1: {
 						gameRacing.moveEnemyCar()
 					} break
+					case 2: {
+						threeGame.moveCube('two')
+					} break;
 				}
 
 			} else {
@@ -219,6 +236,10 @@ const gameControler = {
 		evt('.btn--fire', 'click', () => {
 
 			if (this.startGame) {
+
+				if (this.gameCounter === 2) {
+					threeGame.fire()
+				}
 
 				return
 
@@ -269,7 +290,7 @@ const gameControler = {
 				gameRacing.init()
 				break;
 			case 2:
-
+				threeGame.init()
 				break;
 		}
 	}

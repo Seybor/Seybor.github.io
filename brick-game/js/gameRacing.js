@@ -9,6 +9,7 @@ const gameRacing = {
 		gameControler.startGame = true
 		gameControler.updateScore()
 		gameControler.updateLife()
+		gameControler.updateSpeed()
 
 		this.carSegments = [
 			[4, 17],
@@ -270,8 +271,14 @@ const gameRacing = {
 			gameControler.life--
 
 			if (gameControler.life <= 0) {
-				clearInterval(gameControler.intervalGame)
 				alert('Game Over')
+				clearInterval(gameControler.intervalGame)
+				gameControler.clearDisplay()
+				gameControler.init()
+				gameControler.updateLife()
+				gameControler.updateScore()
+				gameControler.updateSpeed()
+				return
 			}
 
 			gameRacing.init()
@@ -289,6 +296,9 @@ const gameRacing = {
 					clearInterval(gameControler.intervalGame)
 					gameControler.clearDisplay()
 					gameControler.init()
+					gameControler.updateLife()
+					gameControler.updateScore()
+					gameControler.updateSpeed()
 					return
 				}
 

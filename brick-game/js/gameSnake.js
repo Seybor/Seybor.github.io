@@ -49,7 +49,7 @@ const snakeGame = {
 				}
 
 				for (let i = 0; i < this.arrSnakeSegments.body.length; i++) {
-					if (this.applePosition[0] === this.arrSnakeSegments.body[0] && this.applePosition[1] === this.arrSnakeSegments.body[1]) {
+					if (this.applePosition[0] === this.arrSnakeSegments.body[i][0] && this.applePosition[1] === this.arrSnakeSegments.body[i][1]) {
 						this.checkApplePosition = true
 						break
 					}
@@ -126,12 +126,16 @@ const snakeGame = {
 
 					let winControl = this.checkWin()
 					gameControler.updateSpeed()
-					console.log(gameControler.gameSpeed)
 
 					if (winControl) {
 						alert('Вы победили')
 						clearInterval(gameControler.intervalGame)
+						gameControler.clearDisplay()
 						gameControler.init()
+						gameControler.updateLife()
+						gameControler.updateScore()
+						gameControler.updateSpeed()
+						return
 					}
 
 					gameControler.intervalGame = setInterval(() => {
@@ -146,11 +150,12 @@ const snakeGame = {
 
 				if (gameControler.life < 1) {
 					alert('game over')
-					gameControler.score = 0
-					gameControler.life = 4
+					clearInterval(gameControler.intervalGame)
+					gameControler.clearDisplay()
+					gameControler.init()
 					gameControler.updateLife()
 					gameControler.updateScore()
-					clearInterval(gameControler.intervalGame)
+					gameControler.updateSpeed()
 
 				} else {
 					alert('Вы проиграли, у вас осталось ' + gameControler.life + ' жизней')
