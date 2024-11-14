@@ -11,7 +11,7 @@ for (let y = 1; y <= 20; y++) {
 	}
 }
 
-// document.oncontextmenu = () => false // убираем вызов контекстного меню
+document.oncontextmenu = () => false // убираем вызов контекстного меню
 
 // Старт страницы
 
