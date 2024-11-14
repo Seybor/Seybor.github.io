@@ -265,6 +265,11 @@ const threeGame = {
 					if (gameControler.gameSpeed > 9) {
 						alert('You Win')
 						clearInterval(gameControler.intervalGame)
+						gameControler.clearDisplay()
+						gameControler.init()
+						gameControler.updateLife()
+						gameControler.updateScore()
+						gameControler.updateSpeed()
 						return
 					}
 				}
