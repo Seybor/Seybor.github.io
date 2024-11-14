@@ -26,12 +26,32 @@ const threeGame = {
 			],
 		}
 
-		this.renderElements()
+		this.enemyCubes = {
+			one: [
+				[2, 2],
+			],
+			two: [
+				[5, 2],
+				[5, 1]
 
-		// gameControler.intervalGame = setInterval(() => {
-		// 	this.moveEnemyCar()
-		// }, this.gameSpeed[gameControler.gameSpeed - 1])
+			],
+			three: [
+				[8, 2],
+				[8, 1],
+				[9, 2],
+				[9, 1],
+			],
+		}
+
+		this.renderElements()
+		this.renderEnemy()
+
+		gameControler.intervalGame = setInterval(() => {
+			this.moveEnemyCube()
+		}, this.gameSpeed[gameControler.gameSpeed - 1])
 	},
+
+	gameSpeed: [500, 400, 300, 250, 200, 175, 150, 125, 100],
 
 	elementsCubes: {
 		one: [
@@ -48,8 +68,23 @@ const threeGame = {
 		],
 	},
 
-	renderElements: function () {
+	enemyCubes: {
+		one: [
+			[2, 2],
+		],
+		two: [
+			[5, 2],
+			[5, 1]
+		],
+		three: [
+			[8, 2],
+			[8, 1],
+			[9, 2],
+			[9, 1],
+		],
+	},
 
+	renderElements: function () {
 		for (let key in this.elementsCubes) {
 			for (let i = 0; i < this.elementsCubes[key].length; i++) {
 				let x = this.elementsCubes[key][i][0]
@@ -59,6 +94,20 @@ const threeGame = {
 				attr('.content-display__field div[data-coord="' + x + ',' + y + '"]', { 'data-cube': key })
 			}
 		}
+	},
+
+	renderEnemy: function () {
+
+		for (let key in this.enemyCubes) {
+			for (let i = 0; i < this.enemyCubes[key].length; i++) {
+				let x = this.enemyCubes[key][i][0]
+				let y = this.enemyCubes[key][i][1]
+
+				s('.content-display__field div[data-coord="' + x + ',' + y + '"]').classList.add('block-enemy')
+				attr('.content-display__field div[data-coord="' + x + ',' + y + '"]', { 'data-cube': 'enemy' })
+			}
+		}
+
 	},
 
 	moveCube: function (cube) {
@@ -85,6 +134,31 @@ const threeGame = {
 
 		this.clearCube(cube)
 		this.renderElements(cube)
+
+	},
+
+	moveEnemyCube: function () {
+
+		all('.block-enemy[data-cube="' + 'enemy' + '"]').forEach((e) => {
+
+			e.classList.remove('block-enemy')
+			e.setAttribute('data-cube', '')
+
+		})
+
+		for (let key in this.enemyCubes) {
+			for (let i = 0; i < this.enemyCubes[key].length; i++) {
+				this.enemyCubes[key][i][1] = this.enemyCubes[key][i][1] + 1
+			}
+		}
+
+		this.renderEnemy()
+
+	},
+
+	checkCross: function () {
+
+
 
 	},
 

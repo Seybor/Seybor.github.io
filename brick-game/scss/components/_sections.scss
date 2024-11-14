@@ -39,6 +39,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
+    gap: 2px;
 
     border-right-color: rgb(150, 140, 1);
     border-bottom-color: rgb(150, 140, 1);
@@ -48,11 +49,15 @@
     border-bottom-width: 5px;
     & > div {
       flex: 0 0 auto;
-      width: 10%;
+      width: calc(10% - (18px / 10));
       height: auto;
       aspect-ratio: 1/1;
 
-      border: 1px solid rgb(0, 0, 0);
+      padding: 4px;
+      background-color: rgba(0, 0, 0, 0.5);
+      background-clip: content-box;
+
+      border: 2px solid rgba(0, 0, 0, 0.5);
     }
   }
 
@@ -133,40 +138,70 @@
   padding: calc(var(--padding) * 1.5);
 }
 
-.active {
+div.active {
+  padding: 4px;
+
   background-color: black;
+  background-clip: content-box;
+  border-color: black;
 }
 
 // games
 
 // snake
 
-.apple {
+div.apple {
+  padding: 4px;
+
   background-color: black;
+  background-clip: content-box;
+  border-color: black;
 
   animation: blink 0.5s linear 0s infinite;
 }
-.snake-head {
+div.snake-head {
+  padding: 4px;
+
   background-color: black;
+  background-clip: content-box;
+  border-color: black;
 
   animation: blink 0.5s linear 0s infinite;
 }
-.snake-body {
+div.snake-body {
+  padding: 4px;
+
   background-color: black;
+  background-clip: content-box;
+
+  border-color: black;
 }
 
 // racing
 
-.car {
-  background-color: black;
-  opacity: 0.75;
+div.car {
+  padding: 4px;
+
+  background-color: rgba(0, 0, 0, 0.75);
+  background-clip: content-box;
+
+  border-color: black;
 }
-.enemy-car {
+div.enemy-car {
+  padding: 4px;
+
   background-color: black;
+  background-clip: content-box;
+
+  border-color: black;
 }
-.wall {
-  background-color: black;
-  opacity: 0.9;
+div.wall {
+  padding: 4px;
+
+  background-color: rgba(0, 0, 0, 0.9);
+  background-clip: content-box;
+
+  border-color: black;
 }
 
 @keyframes blink {
@@ -180,6 +215,19 @@
 
 // three
 
-.block {
+div.block {
+  padding: 4px;
+
   background-color: black;
+  background-clip: content-box;
+
+  border-color: black;
+}
+div.block-enemy {
+  padding: 4px;
+
+  background-color: black;
+  background-clip: content-box;
+
+  border-color: black;
 }
