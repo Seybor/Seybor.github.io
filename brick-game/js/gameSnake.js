@@ -149,18 +149,15 @@ const snakeGame = {
 				gameControler.life--
 
 				if (gameControler.life < 1) {
-					alert('game over')
+					alert('Game Over')
 					clearInterval(gameControler.intervalGame)
 					gameControler.clearDisplay()
 					gameControler.init()
 					gameControler.updateLife()
 					gameControler.updateScore()
 					gameControler.updateSpeed()
-
-				} else {
-					alert('Вы проиграли, у вас осталось ' + gameControler.life + ' жизней')
-					clearInterval(gameControler.intervalGame)
-				}
+					return
+				} 
 
 				this.init()
 

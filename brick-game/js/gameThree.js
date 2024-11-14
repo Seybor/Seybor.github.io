@@ -282,6 +282,11 @@ const threeGame = {
 				if (gameControler.life <= 0) {
 					alert('Game Over')
 					clearInterval(gameControler.intervalGame)
+					gameControler.clearDisplay()
+					gameControler.init()
+					gameControler.updateLife()
+					gameControler.updateScore()
+					gameControler.updateSpeed()
 					return
 				}
 			}
