@@ -53,11 +53,11 @@
       height: auto;
       aspect-ratio: 1/1;
 
-      padding: 4px;
-      background-color: rgba(0, 0, 0, 0.5);
+      padding: 3px;
+      background-color: rgba(0, 0, 0, 0.1);
       background-clip: content-box;
 
-      border: 2px solid rgba(0, 0, 0, 0.5);
+      border: 2px solid rgba(0, 0, 0, 0.1);
     }
   }
 
@@ -139,7 +139,7 @@
 }
 
 div.active {
-  padding: 4px;
+  padding: 3px;
 
   background-color: black;
   background-clip: content-box;
@@ -150,17 +150,9 @@ div.active {
 
 // snake
 
-div.apple {
-  padding: 4px;
-
-  background-color: black;
-  background-clip: content-box;
-  border-color: black;
-
-  animation: blink 0.5s linear 0s infinite;
-}
+div.apple,
 div.snake-head {
-  padding: 4px;
+  padding: 3px;
 
   background-color: black;
   background-clip: content-box;
@@ -168,19 +160,19 @@ div.snake-head {
 
   animation: blink 0.5s linear 0s infinite;
 }
+
 div.snake-body {
-  padding: 4px;
+  padding: 3px;
 
   background-color: black;
   background-clip: content-box;
-
   border-color: black;
 }
 
 // racing
 
 div.car {
-  padding: 4px;
+  padding: 3px;
 
   background-color: rgba(0, 0, 0, 0.75);
   background-clip: content-box;
@@ -188,7 +180,7 @@ div.car {
   border-color: black;
 }
 div.enemy-car {
-  padding: 4px;
+  padding: 3px;
 
   background-color: black;
   background-clip: content-box;
@@ -196,7 +188,7 @@ div.enemy-car {
   border-color: black;
 }
 div.wall {
-  padding: 4px;
+  padding: 3px;
 
   background-color: rgba(0, 0, 0, 0.9);
   background-clip: content-box;
@@ -215,16 +207,9 @@ div.wall {
 
 // three
 
-div.block {
-  padding: 4px;
-
-  background-color: black;
-  background-clip: content-box;
-
-  border-color: black;
-}
+div.block,
 div.block-enemy {
-  padding: 4px;
+  padding: 3px;
 
   background-color: black;
   background-clip: content-box;

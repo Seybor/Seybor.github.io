@@ -139,17 +139,45 @@ const threeGame = {
 
 	moveEnemyCube: function () {
 
-		all('.block-enemy[data-cube="' + 'enemy' + '"]').forEach((e) => {
-
-			e.classList.remove('block-enemy')
-			e.setAttribute('data-cube', '')
-
-		})
+		this.clearEnemy()
 
 		for (let key in this.enemyCubes) {
 			for (let i = 0; i < this.enemyCubes[key].length; i++) {
 				this.enemyCubes[key][i][1] = this.enemyCubes[key][i][1] + 1
 			}
+		}
+
+		if (this.checkCross()) {
+
+			if (this.checkWin()) {
+
+				gameControler.score = gameControler.score + 10
+
+				if (gameControler.score % 100 === 0) {
+
+					gameControler.gameSpeed++
+
+					if (gameControler.gameSpeed > 9) {
+						alert('You Win')
+						clearInterval(gameControler.intervalGame)
+						return
+					}
+				}
+
+
+
+			} else {
+				gameControler.life--
+
+				if (gameControler.life <= 0) {
+					alert('Game Over')
+					clearInterval(gameControler.intervalGame)
+					return
+				}
+			}
+
+			this.init()
+			return
 		}
 
 		this.renderEnemy()
@@ -158,8 +186,38 @@ const threeGame = {
 
 	checkCross: function () {
 
+		for (let key in this.enemyCubes) {
+			for (let i = 0; i < this.enemyCubes[key].length; i++) {
+				if (this.enemyCubes[key][i][1] > 18) {
+					return true
+				}
+			}
+		}
 
+		return false
 
+	},
+
+	checkWin: function () {
+
+		if (
+			this.elementsCubes['one'].length === this.enemyCubes['one'].length &&
+			this.elementsCubes['two'].length === this.enemyCubes['two'].length &&
+			this.elementsCubes['three'].length === this.enemyCubes['three'].length
+		) {
+			return true
+		}
+
+		return false
+	},
+
+	clearEnemy: function () {
+		all('.block-enemy[data-cube="' + 'enemy' + '"]').forEach((e) => {
+
+			e.classList.remove('block-enemy')
+			e.setAttribute('data-cube', '')
+
+		})
 	},
 
 	clearCube: function (cube) {
