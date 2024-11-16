@@ -354,9 +354,7 @@ const threeGame = {
 
 	},
 
-	fire: function () {
-		console.log('fire')
-	}
+
 
 }
 export default threeGame

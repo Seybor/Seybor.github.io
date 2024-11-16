@@ -238,7 +238,7 @@ const gameControler = {
 			if (this.startGame) {
 
 				if (this.gameCounter === 2) {
-					threeGame.fire()
+					threeGame.moveEnemyCube()
 				}
 
 				return
