@@ -163,4 +163,5 @@ const socialStudies = [
 	}
 ]
 
-export default socialStudies
+// export default socialStudies
+
