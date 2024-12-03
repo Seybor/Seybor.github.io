@@ -1,5 +1,5 @@
 // import { s, all, css, attr, html, text, insert, evt } from './modules/base.js'
-import { S, $ } from './modules/class.js'
+import { S, $ } from './modules/seybor-class.js'
 
 import socialStudies from './data/socialStudies.js'
 
@@ -23,7 +23,7 @@ $('li[data-subject] a[data-theme]').evt('click', (evt) => {
 
 	})
 
-	$('.content div').forEach((el, id) => {
+	$('.content div').each((el, id) => {
 		el.dataset.id = id
 	})
 
@@ -37,6 +37,21 @@ $('li[data-subject] a[data-theme]').evt('click', (evt) => {
 		$('.content').insert(subTheme)
 		$('.content').insert('<br>')
 		$('.content').insert(content)
+
+	})
+})
+
+OBJ.socialStudies.forEach(theme => {
+	theme.cards.forEach(card => {
+
+		let str = card.content
+
+		// Удаляем HTML-теги и считаем количество символов, исключая пробелы и специальные символы
+		let count = str.replace(/<[^>]*>/g, '') // Удаляем HTML-теги
+			.replace(/\s*\(.*?\)\s*/g, '') // Удаляем текст в круглых скобках
+			.replace(/[^а-яА-ЯёЁa-zA-Z0-9]/g, '') // Удаляем все не буквенно-цифровые символы
+			.length; // Подсчитываем оставшиеся символы
+		console.log(card.subtheme.replace(/<div style='text-align:\s*left;\s*font-size:\s*1rem;\s*'>/g, '').replace(/<\/div>/g, '') + ' : ' + count)
 
 	})
 })
