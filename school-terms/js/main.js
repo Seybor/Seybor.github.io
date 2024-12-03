@@ -41,17 +41,17 @@ $('li[data-subject] a[data-theme]').evt('click', (evt) => {
 	})
 })
 
-OBJ.socialStudies.forEach(theme => {
-	theme.cards.forEach(card => {
+OBJ.socialStudies[3].cards.forEach(card => {
 
-		let str = card.content
+	let str = card.content
 
-		// Удаляем HTML-теги и считаем количество символов, исключая пробелы и специальные символы
-		let count = str.replace(/<[^>]*>/g, '') // Удаляем HTML-теги
-			.replace(/\s*\(.*?\)\s*/g, '') // Удаляем текст в круглых скобках
-			.replace(/[^а-яА-ЯёЁa-zA-Z0-9]/g, '') // Удаляем все не буквенно-цифровые символы
-			.length; // Подсчитываем оставшиеся символы
-		console.log(card.subtheme.replace(/<div style='text-align:\s*left;\s*font-size:\s*1rem;\s*'>/g, '').replace(/<\/div>/g, '') + ' : ' + count)
+	// Удаляем HTML-теги и считаем количество символов, исключая пробелы и специальные символы
+	let count = str.replace(/<[^>]*>/g, '') // Удаляем HTML-теги
+		.replace(/\s*\(.*?\)\s*/g, '') // Удаляем текст в круглых скобках
+		.replace(/[^а-яА-ЯёЁa-zA-Z0-9]/g, '') // Удаляем все не буквенно-цифровые символы
+		.length; // Подсчитываем оставшиеся символы
+	console.log(card.subtheme.replace(/<div style='text-align:\s*left;\s*font-size:\s*1rem;\s*'>/g, '').replace(/<\/div>/g, '') + ' : ' + count)
 
-	})
 })
+
+
