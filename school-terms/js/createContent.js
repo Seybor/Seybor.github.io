@@ -14,7 +14,10 @@ fs.readFile('js/data.txt', 'utf8', (err, data) => {
 		return;
 	}
 
-	let result = data.replace(/^# (.+)/gm, '$1 <br><br>').replaceAll('+', '<ul>').replaceAll('*', '</ul>').replace(/^- (.+)/gm, '<li>$1</li>')
+	let result =
+		data.replace(/^# (.+)/gm, '$1 <br><br>')
+			.replace(/^- (.+)/gm, '<li>$1</li>')
+			.replace(/(<li>.*?<\/li>\s*)+/gm, '<ul>\n$&\n</ul>')
 
 	fs.writeFileSync('js/output.txt', result);
 });
