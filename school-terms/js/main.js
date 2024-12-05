@@ -41,6 +41,7 @@ $('li[data-subject] a[data-theme]').evt('click', (evt) => {
 	})
 })
 
+let charCount = 0
 OBJ.socialStudies.forEach(subject => {
 
 	subject.cards.forEach(card => {
@@ -53,10 +54,10 @@ OBJ.socialStudies.forEach(subject => {
 			.replace(/[^а-яА-ЯёЁa-zA-Z0-9]/g, '') // Удаляем все не буквенно-цифровые символы
 			.length; // Подсчитываем оставшиеся символы
 		console.log(card.subtheme.replace(/<div style='text-align:\s*left;\s*font-size:\s*1rem;\s*'>/g, '').replace(/<\/div>/g, '') + ' : ' + count)
-
+		charCount += count
 	})
 
 
 })
-
+console.log('Всего символов: ' + charCount)
 
