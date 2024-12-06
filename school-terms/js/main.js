@@ -1,10 +1,11 @@
 // import { s, all, css, attr, html, text, insert, evt } from './modules/base.js'
 import { S, $ } from './modules/seybor-class.js'
 
-import socialStudies from './data/socialStudies.js'
+import { socialStudies, informatics } from './data/all-arr.js'
 
 const OBJ = {
-	socialStudies
+	socialStudies,
+	informatics
 }
 
 $('li[data-subject] a[data-theme]').evt('click', (evt) => {

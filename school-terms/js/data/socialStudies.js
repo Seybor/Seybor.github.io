@@ -2809,4 +2809,4 @@ const socialStudies = [
 
 ];
 
-export default socialStudies;
+export { socialStudies };
