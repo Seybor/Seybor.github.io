@@ -7,7 +7,6 @@ const OBJ = {
 	socialStudies
 }
 
-
 $('li[data-subject] a[data-theme]').evt('click', (evt) => {
 	evt.preventDefault()
 
@@ -16,18 +15,17 @@ $('li[data-subject] a[data-theme]').evt('click', (evt) => {
 
 	$('.content').text(' ')
 
-	OBJ[nameArr][nameTheme].cards.forEach(el => {
-
-		let subtheme = el.subtheme
-		$('.content').insert(subtheme)
-
+	let fragment = document.createDocumentFragment()
+	OBJ[nameArr][nameTheme].cards.forEach((el, id) => {
+		let newEl = document.createElement('div')
+		newEl.innerHTML = el.subtheme
+		newEl.classList.add('subtheme')
+		newEl.dataset.id = id
+		fragment.append(newEl)
 	})
+	document.querySelector('.content').append(fragment)
 
-	$('.content div').each((el, id) => {
-		el.dataset.id = id
-	})
-
-	$('.content div').evt('click', (evt) => {
+	$('.subtheme').evt('click', (evt) => {
 
 		$('.content').text(' ')
 
@@ -35,7 +33,7 @@ $('li[data-subject] a[data-theme]').evt('click', (evt) => {
 		let content = OBJ[nameArr][nameTheme].cards[evt.target.dataset.id].content
 
 		$('.content').insert(subTheme)
-		$('.content').insert('<br>')
+		$('.content').insert('<br><br>')
 		$('.content').insert(content)
 
 	})
@@ -53,7 +51,7 @@ OBJ.socialStudies.forEach(subject => {
 			.replace(/\s*\(.*?\)\s*/g, '') // Удаляем текст в круглых скобках
 			.replace(/[^а-яА-ЯёЁa-zA-Z0-9]/g, '') // Удаляем все не буквенно-цифровые символы
 			.length; // Подсчитываем оставшиеся символы
-		console.log(card.subtheme.replace(/<div style='text-align:\s*left;\s*font-size:\s*1rem;\s*'>/g, '').replace(/<\/div>/g, '') + ' : ' + count)
+		console.log(card.subtheme.replace(/<div class='subtheme'>/g, '').replace(/<\/div>/g, '') + ' : ' + count)
 		charCount += count
 	})
 
