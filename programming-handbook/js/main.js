@@ -1,11 +1,13 @@
 // import { s, all, css, attr, html, text, insert, evt } from './modules/base.js'
 import { S, $ } from './modules/seybor-class.js'
 
-import { javaScript } from './data/all-arr.js'
+import { javaScript, terms } from './data/all-arr.js'
 
 const OBJ = {
-	javaScript
+	javaScript,
+	terms
 }
+console.log(OBJ.terms)
 
 $('li[data-subject] a[data-theme]').evt('click', (evt) => {
 	evt.preventDefault()
