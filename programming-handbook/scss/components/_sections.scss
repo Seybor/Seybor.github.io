@@ -1,0 +1,26 @@
+.content {
+  padding: 1rem 0;
+}
+
+li[data-subject] {
+  .dropdown-menu[data-bs-popper] {
+    max-width: 150%;
+    left: -50%;
+    a.dropdown-item {
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  li[data-subject] {
+    a.dropdown-toggle {
+      width: 100px;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
