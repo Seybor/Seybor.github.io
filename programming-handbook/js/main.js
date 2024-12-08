@@ -1,11 +1,12 @@
 // import { s, all, css, attr, html, text, insert, evt } from './modules/base.js'
 import { S, $ } from './modules/seybor-class.js'
 
-import { javaScript, terms } from './data/all-arr.js'
+import { javaScript, terms, others } from './data/all-arr.js'
 
 const OBJ = {
 	javaScript,
-	terms
+	terms,
+	others
 }
 console.log(OBJ.terms)
 

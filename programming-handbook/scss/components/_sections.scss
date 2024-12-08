@@ -5,7 +5,6 @@
 li[data-subject] {
   .dropdown-menu[data-bs-popper] {
     max-width: 150%;
-    left: -50%;
     a.dropdown-item {
       overflow-x: hidden;
       text-overflow: ellipsis;
