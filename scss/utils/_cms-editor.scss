@@ -1,0 +1,95 @@
+.cms-editor.cms-editor {
+  --fz: 24px;
+  --margin: 24px;
+  --padding: 24px;
+  padding: var(--padding) calc(var(--padding) * 0.5);
+  font-family: 'Arial', sans-serif;
+  font-size: var(--fz);
+  line-height: 1.2;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  color: #000;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+}
+.cms-editor > *:last-child {
+  margin: 0;
+}
+.cms-editor ul,
+.cms-editor ol {
+  padding-left: 40px;
+  margin: 16px 0;
+}
+.cms-editor ul {
+  list-style: disc;
+}
+.cms-editor ol {
+  list-style: decimal;
+}
+.cms-editor p,
+.cms-editor div {
+  font: inherit;
+  color: inherit;
+  margin: 0;
+  margin-bottom: var(--margin);
+}
+.cms-editor img {
+  display: inline-block;
+  max-width: 300px;
+  max-height: 300px;
+  margin: calc(var(--margin) / 2);
+  margin-bottom: calc(var(--margin) / 2 - 4px);
+}
+.cms-editor h1,
+.cms-editor h2,
+.cms-editor h3,
+.cms-editor h4,
+.cms-editor h5,
+.cms-editor h6 {
+  margin: 0;
+  margin-bottom: var(--margin);
+}
+.cms-editor h1 {
+  font-size: calc(var(--fz) * 2);
+}
+.cms-editor h2 {
+  font-size: calc(var(--fz) * 1.5);
+}
+.cms-editor h3 {
+  font-size: calc(var(--fz) * 1.25);
+}
+.cms-editor h4 {
+  font-size: var(--fz);
+}
+.cms-editor h5 {
+  font-size: calc(var(--fz) * 0.75);
+}
+.cms-editor h6 {
+  font-size: calc(var(--fz) * 0.5);
+}
+.cms-editor a {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: var(--margin);
+  color: blue;
+  text-decoration: underline;
+}
+.cms-editor strong {
+  font-size: calc(var(--fz) * 1.1);
+}
+.cms-editor blockquote {
+  padding: var(--padding) calc(var(--padding) * 1.5);
+  margin: 0;
+  margin-bottom: var(--margin);
+  font-size: var(--fz);
+  background-color: darkgrey;
+  border-left: 6px solid pink;
+}
+.cms-editor hr {
+  margin: 0;
+  margin-bottom: var(--margin);
+}
+.cms-editor pre {
+  tab-size: var(--fz);
+}
