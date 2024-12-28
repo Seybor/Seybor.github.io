@@ -1,0 +1,32 @@
+div {
+	transition: background-color 2s ease;
+}
+.one {
+	width: 500px;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: green;
+}
+:is(.two, .three, .four, .five) {
+	width: 80%;
+	height: 80%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.two {
+	background-color: red;
+}
+
+.three {
+	background-color: blue;
+}
+.four {
+	background-color: #00f829;
+}
+.five {
+	background-color: #6f01ff;
+}
