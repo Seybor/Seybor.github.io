@@ -12,3 +12,11 @@ if ('serviceWorker' in navigator) {
 } else {
   console.log('Service Worker не поддерживается');
 }
+
+if (navigator.onLine) {
+    console.log("Пользователь в сети");
+    document.querySelector('#info').textContent('Вы в сети')
+} else {
+    console.log("Пользователь офлайн");
+    document.querySelector('#info').textContent('У вас нет интернета')
+}
