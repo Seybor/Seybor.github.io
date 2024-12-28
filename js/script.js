@@ -15,8 +15,8 @@ if ('serviceWorker' in navigator) {
 
 if (navigator.onLine) {
     console.log("Пользователь в сети");
-    document.querySelector('#info').textContent('Вы в сети')
+    document.querySelector('#info').textContent = "Вы в сети"
 } else {
     console.log("Пользователь офлайн");
-    document.querySelector('#info').textContent('У вас нет интернета')
+    document.querySelector('#info').textContent = "У вас нет интернета"
 }
