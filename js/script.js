@@ -15,7 +15,7 @@ if ('serviceWorker' in navigator) {
 
 document.querySelectorAll('img').forEach(el => {
   el.addEventListener('click', (evt) => {
-    evt.target.style.display = none
+    evt.target.style.display = 'none'
   })
 })
 
