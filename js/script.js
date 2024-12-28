@@ -13,6 +13,12 @@ if ('serviceWorker' in navigator) {
   console.log('Service Worker не поддерживается');
 }
 
+document.querySelectorAll('img').forEach(el => {
+  el.addEventListener('click', (evt) => {
+    evt.target.style.display = none
+  })
+})
+
 if (navigator.onLine) {
     console.log("Пользователь в сети");
     document.querySelector('#info').textContent = "Вы в сети"
