@@ -1,14 +1,5 @@
 const CACHE_NAME = 'my-cache-v1';
-const urlsToCache = ['/', '/index.html', '/css/style.css', '/js/script.js', '/img/onerror.jpg'];
-
-// self.addEventListener('install', (event) => {
-//   event.waitUntil(
-//     caches.open(CACHE_NAME).then((cache) => {
-//       console.log('Caching app shell');
-//       return cache.addAll(urlsToCache);
-//     })
-//   );
-// });
+const urlsToCache = ['/', '/index.html', '/css/style.css', '/js/script.js'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(
