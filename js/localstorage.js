@@ -1,5 +1,6 @@
 // ключ для localStorage
 const SAVE_KEY = 'idle_game_save';
+const SAVE_ACHIEVEMENTS = 'achievements';
 
 // Сохранить прогресс
 function saveGame() {
@@ -35,5 +36,18 @@ function loadGame() {
     Object.assign(game, data);
   }
 }
+
+// Сохранение достижений
+function loadAchievements() {
+  const saved = localStorage.getItem(SAVE_ACHIEVEMENTS);
+  if (saved) {
+    Object.assign(achievements, JSON.parse(saved));
+  }
+}
+
+function saveAchievements() {
+  localStorage.setItem(SAVE_ACHIEVEMENTS, JSON.stringify(achievements));
+}
+
 // авто‑сохранение каждые 3 секунды
 let autosaveInterval = setInterval(saveGame, 1000);

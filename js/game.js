@@ -1,8 +1,13 @@
+const s = (el) => {
+  return document.querySelector(el);
+};
+
 // Игровое состояние
 const game = {
-  gold: 1, // текущее золото
+  gold: 0, // текущее золото
   goldPerSecond: 1, // золото в секунду от автокликов
   autoClicker: 1, // сколько золота даёт один автоклик
+  autoClickerQuantity: 0, // количество улучшений автокликера
   autoClickerCost: 10, // стоимость покупки автоклика
   autoClickerImproveCost: 30, // стоимость усовершенствования автоклика
   storagePower: 300, // сколько времени будет накапливаться счётчик с закрытой вкладкой (секунды)
@@ -26,6 +31,17 @@ const game = {
   goldBarGoldPerSecond: 500_000, // кол-во золота от одного золотого слитка
   platinumGoldPerSecond: 750_000, // платина в секунду
   diamondGoldPerSecond: 1_000_000, // алмазы в секунду
+};
+
+// Система достижений
+const achievements = {
+  clicks1000: false,
+  whores100: false, // куплено 100 шлюх
+  cars100: false,
+  houses100: false,
+  goldBars100: false,
+  platinums100: false,
+  diamonds100: false,
 };
 
 // DOM‑элементы
@@ -115,6 +131,7 @@ function updateUI() {
   elGoldBars.textContent = formatNumber(game.goldBar);
   elPlatinum.textContent = formatNumber(game.platinum);
   elDiamond.textContent = formatNumber(game.diamond);
+  s('#autoClickerQuantity').textContent = formatNumber(game.autoClickerQuantity);
 
   elWhoreCost.textContent = formatNumber(game.whoreCost);
   elCarCost.textContent = formatNumber(game.carsCost);
@@ -129,6 +146,15 @@ function updateUI() {
   elStatGold.textContent = formatNumber(game.goldBar * game.goldBarGoldPerSecond);
   elStatPlatinum.textContent = formatNumber(game.platinum * game.platinumGoldPerSecond);
   elStatDiamond.textContent = formatNumber(game.diamond * game.diamondGoldPerSecond);
+
+  // достижения
+  s('#clicks1000-status').textContent = achievements.clicks1000 ? '✅' : '❌';
+  s('#whores100-status').textContent = achievements.whores100 ? '✅' : '❌';
+  s('#cars100-status').textContent = achievements.cars100 ? '✅' : '❌';
+  s('#houses100-status').textContent = achievements.houses100 ? '✅' : '❌';
+  s('#goldBars100-status').textContent = achievements.goldBars100 ? '✅' : '❌';
+  s('#platinums100-status').textContent = achievements.platinums100 ? '✅' : '❌';
+  s('#diamonds100-status').textContent = achievements.diamonds100 ? '✅' : '❌';
 }
 
 // проигрывание звука когда не достаточно денег
@@ -145,7 +171,7 @@ function playSoundNotEnoughMoney(type) {
 }
 
 // проигрывание звука при покупке или улучшение
-function playSoundImrpoveOrBuy(music) {
+function playSound(music) {
   const coinSound = new Audio(music);
   coinSound.play().catch((err) => {
     console.warn('Звук не проигрался (например, нет взаимодействия пользователя):', err);
@@ -159,6 +185,18 @@ function improveGold(improveCost, whatImprove, powerImprove = 1.01, howManyImpro
   game[whatImprove] += howManyImprove;
 }
 
+// Проверка достижений
+function getAchievements(achievementQuantity, achievementType, quantity) {
+  if (achievementQuantity === quantity && !achievements[achievementType]) {
+    achievements[achievementType] = true;
+    playSound('mp3/achievements-1.mp3');
+    alert('Достижение получено: Ваша награда: 100м');
+    // дать бонус
+    game.gold += 100_000_000;
+    saveAchievements();
+  }
+}
+
 // Покупка одного «автокликера»
 function buyAutoClicker() {
   // Плеер когда не достаточно денег
@@ -167,12 +205,15 @@ function buyAutoClicker() {
   }
 
   improveGold('autoClickerCost', 'goldPerSecond', 1.01, game.autoClicker);
+  game.autoClickerQuantity += 1;
+
+  getAchievements(game.autoClickerQuantity, 'clicks1000', 1000);
 
   updateUI();
-  animateClickEffect(); // ← анимация при клике
+  // animateClickEffect(); // ← анимация при клике
 
   // Плеер звука
-  playSoundImrpoveOrBuy('mp3/money-1.mp3');
+  playSound('mp3/money-1.mp3');
 }
 
 // Апгрейд автокликера
@@ -184,10 +225,10 @@ function buyAutoClickerUpgrade() {
 
   improveGold('autoClickerImproveCost', 'autoClicker');
   updateUI();
-  animateClickEffect();
+  // animateClickEffect();
 
   // Плеер звука
-  playSoundImrpoveOrBuy('mp3/yes-my-lord.mp3');
+  playSound('mp3/yes-my-lord.mp3');
 }
 
 // Апгрейд хранилища
@@ -197,44 +238,13 @@ function buyStoragePowerUpgrade() {
     return;
   }
 
-  improveGold('storagePowerImproveCost', 'storagePower', 1.01, 300);
+  improveGold('storagePowerImproveCost', 'storagePower', 1.05, 300);
 
   updateUI();
-  animateClickEffect();
+  // animateClickEffect();
 
   // Плеер звука
-  playSoundImrpoveOrBuy('mp3/improve-level.mp3');
-}
-
-// покупка дома
-function buyHouse() {
-  // Плеер когда не достаточно денег
-  if (!playSoundNotEnoughMoney(game.houseCost)) {
-    return;
-  }
-
-  improveGold('houseCost', 'houses');
-  updateUI();
-  animateClickEffect();
-
-  // Плеер звука
-  playSoundImrpoveOrBuy('mp3/all-done.mp3');
-}
-
-// покупка машины
-function buyCar() {
-  // Плеер когда не достаточно денег
-  if (!playSoundNotEnoughMoney(game.carsCost)) {
-    return;
-  }
-
-  improveGold('carsCost', 'cars');
-
-  updateUI();
-  animateClickEffect();
-
-  // Плеер звука
-  playSoundImrpoveOrBuy('mp3/shop-car.mp3');
+  playSound('mp3/improve-level.mp3');
 }
 
 // купить шлюху
@@ -244,13 +254,48 @@ function buyWhore() {
     return;
   }
 
-  improveGold('whoreCost', 'whores');
+  improveGold('whoreCost', 'whores', 1.025);
+  getAchievements(game.whores, 'whores100', 100);
 
   updateUI();
-  animateClickEffect();
+  // animateClickEffect();
 
   // Плеер звука
-  playSoundImrpoveOrBuy('mp3/shop-whore.mp3');
+  playSound('mp3/shop-whore.mp3');
+}
+
+// покупка машины
+function buyCar() {
+  // Плеер когда не достаточно денег
+  if (!playSoundNotEnoughMoney(game.carsCost)) {
+    return;
+  }
+
+  improveGold('carsCost', 'cars', 1.05);
+  getAchievements(game.cars, 'cars100', 100);
+
+  updateUI();
+  // animateClickEffect();
+
+  // Плеер звука
+  playSound('mp3/shop-car.mp3');
+}
+
+// покупка дома
+function buyHouse() {
+  // Плеер когда не достаточно денег
+  if (!playSoundNotEnoughMoney(game.houseCost)) {
+    return;
+  }
+
+  improveGold('houseCost', 'houses', 1.06);
+  getAchievements(game.houses, 'houses100', 100);
+
+  updateUI();
+  // animateClickEffect();
+
+  // Плеер звука
+  playSound('mp3/all-done.mp3');
 }
 
 // купить золотой злиток
@@ -260,13 +305,14 @@ function buyGoldBar() {
     return;
   }
 
-  improveGold('goldBarCost', 'goldBar');
+  improveGold('goldBarCost', 'goldBar', 1.07);
+  getAchievements(game.goldBar, 'goldBars100', 100);
 
   updateUI();
-  animateClickEffect();
+  // animateClickEffect();
 
   // Плеер звука
-  playSoundImrpoveOrBuy('mp3/cash.mp3');
+  playSound('mp3/cash.mp3');
 }
 
 // купить платину
@@ -276,13 +322,14 @@ function buyPlatinum() {
     return;
   }
 
-  improveGold('platinumCost', 'platinum');
+  improveGold('platinumCost', 'platinum', 1.085);
+  getAchievements(game.platinum, 'platinums100', 100);
 
   updateUI();
-  animateClickEffect();
+  // animateClickEffect();
 
   // Плеер звука
-  playSoundImrpoveOrBuy('mp3/shop-platinum.mp3');
+  playSound('mp3/shop-platinum.mp3');
 }
 
 // купить алмаз
@@ -292,13 +339,14 @@ function buyDiamond() {
     return;
   }
 
-  improveGold('diamondCost', 'diamond');
+  improveGold('diamondCost', 'diamond', 1.1);
+  getAchievements(game.diamond, 'diamonds100', 100);
 
   updateUI();
-  animateClickEffect();
+  // animateClickEffect();
 
   // Плеер звука
-  playSoundImrpoveOrBuy('mp3/shop-diamond.mp3');
+  playSound('mp3/shop-diamond.mp3');
 }
 
 // reset
@@ -319,5 +367,6 @@ function resetGame() {
   }
 }
 loadGame(); // загрузить сохранённый прогресс при старте
+loadAchievements(); // загрузить прогресс достижений
 updateUI(); // пересчитать goldPerSecond
-drawBackground(); // обновить канвас
+// drawBackground(); // обновить канвас
