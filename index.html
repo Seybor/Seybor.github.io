@@ -22,6 +22,7 @@
 				<div class="game-stat__item">Золото в секунду: <span id="gpm">0</span></div>
 				<div class="game-stat__item">Сила автоклика: <span id="autoClicker">1</span></div>
 				<div class="game-stat__item">Сила хранилища оффлайн (мин.): <span id="storagePower">1</span></div>
+				<div class="game-stat__item">Кол-во кликов по автоклику: <span id="autoClickerQuantity">0</span></div>
 			</div>
 
 
@@ -56,14 +57,25 @@
 			<button class="btn shop-btn" onclick="buyPlatinum()">Слиток платины (<span id="platinumCost">1</span>)</button>
 			<button class="btn shop-btn" onclick="buyDiamond()">Алмаз (<span id="diamondCost">1</span>)</button>
 		</div>
+
+		<div id="achievements">
+			<h3>Достижения</h3>
+			<div id="ach_clicks1000">1000 кликов по автокликеру: <span class="ach-status" id="clicks1000-status">❌</span></div>
+			<div id="ach_whores100">100 шлюх: <span class="ach-status" id="whores100-status">❌</span></div>
+			<div id="ach_cars100">100 машин: <span class="ach-status" id="cars100-status">❌</span></div>
+			<div id="ach_houses100">100 домов: <span class="ach-status" id="houses100-status">❌</span></div>
+			<div id="ach_goldBars100">100 слитков золота: <span class="ach-status" id="goldBars100-status">❌</span></div>
+			<div id="ach_platinums100">100 платины: <span class="ach-status" id="platinums100-status">❌</span></div>
+			<div id="ach_diamonds100">100 алмазов: <span class="ach-status" id="diamonds100-status">❌</span></div>
+		</div>
 	</div>
 
-	<canvas id="canvas" width="280" height="140"></canvas>
+	<!-- <canvas id="canvas" width="280" height="140"></canvas> -->
 
 
 
 	<script src="js/localstorage.js"></script>
-	<script src="js/canvas.js"></script>
+	<!-- <script src="js/canvas.js"></script> -->
 	<script src="js/game.js"></script>
 </body>
 
