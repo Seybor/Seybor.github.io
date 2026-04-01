@@ -69,7 +69,7 @@ body {
 .game-stat__item,
 .game-shop__item,
 .shop-stat__item {
-	margin: 5px 0;
+	margin-bottom: 5px;
 }
 
 .game-buttons {
