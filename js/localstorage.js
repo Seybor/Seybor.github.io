@@ -20,7 +20,9 @@ function loadGame() {
           data.houses * data.houseGoldPerSecond +
           game.cars * data.carGoldPerSecond +
           data.whores * data.whoreGoldPerSecond +
-          data.goldBar * data.goldBarGoldPerSecond,
+          data.goldBar * data.goldBarGoldPerSecond +
+          data.platinum * data.platinumGoldPerSecond +
+          data.diamond * data.diamondGoldPerSecond,
       );
     }
 
@@ -34,4 +36,4 @@ function loadGame() {
   }
 }
 // авто‑сохранение каждые 3 секунды
-setInterval(saveGame, 3000);
+let autosaveInterval = setInterval(saveGame, 1000);

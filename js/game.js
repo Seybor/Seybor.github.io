@@ -1,6 +1,6 @@
 // Игровое состояние
 const game = {
-  gold: 0, // текущее золото
+  gold: 1, // текущее золото
   goldPerSecond: 1, // золото в секунду от автокликов
   autoClicker: 1, // сколько золота даёт один автоклик
   autoClickerCost: 10, // стоимость покупки автоклика
@@ -27,17 +27,6 @@ const game = {
   platinumGoldPerSecond: 250_000, // платина в секунду
   diamondGoldPerSecond: 300_000, // алмазы в секунду
 };
-
-// количество золота в секунду от всех источников
-function getAllGoldPerSecond() {
-  return Math.floor(
-    game.goldPerSecond +
-      game.houses * game.houseGoldPerSecond +
-      game.cars * game.carGoldPerSecond +
-      game.whores * game.whoreGoldPerSecond +
-      game.goldBar * game.goldBarGoldPerSecond,
-  );
-}
 
 // DOM‑элементы
 const elGold = document.getElementById('gold');
@@ -69,13 +58,26 @@ const elStatGold = document.getElementById('statGoldBar');
 const elStatPlatinum = document.getElementById('statPlatinum');
 const elStatDiamond = document.getElementById('statDiamond');
 
-const elButton = document.querySelector('button');
+const elButtonReset = document.querySelector('btn-reset');
 
 // Секундный тик (пассивный доход)
 setInterval(() => {
   game.gold += getAllGoldPerSecond();
   updateUI();
 }, 1000);
+
+// количество золота в секунду от всех источников
+function getAllGoldPerSecond() {
+  return Math.floor(
+    game.goldPerSecond +
+      game.houses * game.houseGoldPerSecond +
+      game.cars * game.carGoldPerSecond +
+      game.whores * game.whoreGoldPerSecond +
+      game.goldBar * game.goldBarGoldPerSecond +
+      game.platinum * game.platinumGoldPerSecond +
+      game.diamond * game.diamondGoldPerSecond,
+  );
+}
 
 // обновленный вид золота и стоимости улучшений
 function formatNumber(num) {
@@ -90,8 +92,8 @@ function formatNumber(num) {
   const divisor = 10 ** (degree * 3);
   const shortened = num / divisor;
 
-  // если >= 10 — не показываем знаки после запятой, иначе — 1 знак
-  const decimals = shortened >= 10 ? 0 : 1;
+  // если >= 10 — не показываем знаки после запятой, иначе — 3 знака
+  const decimals = shortened >= 10 ? 3 : 3;
 
   return shortened.toFixed(decimals) + suffix;
 }
@@ -127,7 +129,6 @@ function updateUI() {
   elStatGold.textContent = formatNumber(game.goldBar * game.goldBarGoldPerSecond);
   elStatPlatinum.textContent = formatNumber(game.platinum * game.platinumGoldPerSecond);
   elStatDiamond.textContent = formatNumber(game.diamond * game.diamondGoldPerSecond);
-  // elButton.disabled = game.gold < 10;
 }
 
 // проигрывание звука когда не достаточно денег
@@ -154,7 +155,6 @@ function playSoundImrpoveOrBuy(music) {
 // обновление денег (кроме автокликов, там другая механика)
 function improveGold(improveCost, whatImprove, powerImprove = 1.01, howManyImprove = 1) {
   game.gold -= game[improveCost];
-  // game[improveCost] = Math.floor(game[improveCost] * powerImprove);
   game[improveCost] = Number((game[improveCost] * powerImprove).toFixed(2));
   game[whatImprove] += howManyImprove;
 }
@@ -265,9 +265,8 @@ function buyGoldBar() {
   updateUI();
   animateClickEffect();
 
-  // звук улучшения
-  const upgradeSound = new Audio('mp3/cash.mp3'); // можно другой файл
-  upgradeSound.play().catch(() => {});
+  // Плеер звука
+  playSoundImrpoveOrBuy('mp3/cash.mp3');
 }
 
 // купить платину
@@ -282,9 +281,8 @@ function buyPlatinum() {
   updateUI();
   animateClickEffect();
 
-  // звук улучшения
-  const upgradeSound = new Audio('mp3/shop-platinum.mp3'); // можно другой файл
-  upgradeSound.play().catch(() => {});
+  // Плеер звука
+  playSoundImrpoveOrBuy('mp3/shop-platinum.mp3');
 }
 
 // купить алмаз
@@ -299,11 +297,27 @@ function buyDiamond() {
   updateUI();
   animateClickEffect();
 
-  // звук улучшения
-  const upgradeSound = new Audio('mp3/shop-diamond.mp3'); // можно другой файл
-  upgradeSound.play().catch(() => {});
+  // Плеер звука
+  playSoundImrpoveOrBuy('mp3/shop-diamond.mp3');
 }
 
+// reset
+function resetGame() {
+  const answer = prompt('Для сброса прогресса введите: рестарт');
+
+  if (answer?.trim().toLowerCase() === 'рестарт') {
+    // 1) остановить автосохранение
+    clearInterval(autosaveInterval);
+
+    // 2) очистить localStorage
+    localStorage.clear();
+
+    // 3) перезагрузить страницу
+    location.reload();
+  } else {
+    alert('Слово введено неверно или отменено. Прогресс не сброшен.');
+  }
+}
 loadGame(); // загрузить сохранённый прогресс при старте
 updateUI(); // пересчитать goldPerSecond
 drawBackground(); // обновить канвас
