@@ -38,6 +38,10 @@ body {
 	background: linear-gradient(150deg, #ff2828, #ff0000);
 }
 .btn-reset {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 100;
 	background: linear-gradient(150deg, #440000, #ff0000);
 }
 
@@ -104,9 +108,14 @@ body {
 		flex: 1 0 100%;
 	}
 
+	.game-stat {
+		padding-top: 32px;
+	}
+
 	.game-stat__item:first-child,
 	.game-stat__item:nth-child(2) {
 		position: fixed;
+		z-index: 10;
 		top: 0px;
 		left: 0;
 		right: 0;
