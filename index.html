@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple Idle Game</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="game" id="game">
+
+		<div class="wrap">
+
+			<div class="game-stat">
+				<div class="game-stat__item">Золото: <span id="gold">0</span></div>
+				<div class="game-stat__item">Золото в секунду: <span id="gpm">0</span></div>
+				<div class="game-stat__item">Сила автоклика: <span id="autoClicker">1</span></div>
+				<div class="game-stat__item">Сила хранилища оффлайн (мин.): <span id="storagePower">1</span></div>
+			</div>
+
+
+			<div class="game-shop">
+				<div class="game-shop__item">Шлюх: <span id="shop-whores">0</span></div>
+				<div class="game-shop__item">Машин: <span id="shop-cars">0</span></div>
+				<div class="game-shop__item">Домов: <span id="shop-houses">0</span></div>
+				<div class="game-shop__item">Золотых слитков: <span id="shop-goldBar">0</span></div>
+				<div class="game-shop__item">Слитки из платины: <span id="shop-platinum">0</span></div>
+				<div class="game-shop__item">Алмазы: <span id="shop-diamond">0</span></div>
+			</div>
+
+			<div class="shop-stat">
+				<div class="shop-stat__item">Золото от шлюх: <span id="statWhore">0</span></div>
+				<div class="shop-stat__item">Золото от машин: <span id="statCar">0</span></div>
+				<div class="shop-stat__item">Золото от домов: <span id="statHouse">0</span></div>
+				<div class="shop-stat__item">Золото от слитков: <span id="statGoldBar">0</span></div>
+				<div class="shop-stat__item">Золото от платины: <span id="statPlatinum">0</span></div>
+				<div class="shop-stat__item">Золото от алмазов: <span id="statDiamond">0</span></div>
+			</div>
+		</div>
+		<div class="game-buttons">
+			<button class="btn" onclick="buyAutoClicker()">Автоклик (<span id="autoClickerCost">10</span>)</button>
+			<button class="btn" onclick="buyAutoClickerUpgrade()">Повысить клик (<span id="autoClickerImproveCost">30</span>)</button>
+			<button class="btn" onclick="buyStoragePowerUpgrade()">Улучшить хранилище (<span id="storagePowerImproveCost">100</span>)</button>
+
+
+			<button class="btn shop-btn" onclick="buyWhore()">Шлюха (<span id="whoreCost">1</span>)</button>
+			<button class="btn shop-btn" onclick="buyCar()">Машина (<span id="carCost">1</span>)</button>
+			<button class="btn shop-btn" onclick="buyHouse()">Дом (<span id="houseCost">1</span>)</button>
+			<button class="btn shop-btn" onclick="buyGoldBar()">Золотой слиток (<span id="goldBarCost">1</span>)</button>
+			<button class="btn shop-btn" onclick="buyPlatinum()">Слиток платины (<span id="platinumCost">1</span>)</button>
+			<button class="btn shop-btn" onclick="buyDiamond()">Алмаз (<span id="diamondCost">1</span>)</button>
+		</div>
+	</div>
+
+	<canvas id="canvas" width="280" height="140"></canvas>
+
+
+
+	<script src="js/localstorage.js"></script>
+	<script src="js/canvas.js"></script>
+	<script src="js/game.js"></script>
+</body>
+
+</html>
