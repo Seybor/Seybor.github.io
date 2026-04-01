@@ -103,4 +103,17 @@ body {
 	.game-buttons {
 		flex: 1 0 100%;
 	}
+
+	.game-stat__item:first-child,
+	.game-stat__item:nth-child(2) {
+		position: fixed;
+		top: 0px;
+		left: 0;
+		right: 0;
+		padding: 6px 12px;
+		background-color: rgba(11, 180, 5, 0.9);
+	}
+	.game-stat__item:nth-child(2) {
+		top: 30px;
+	}
 }
