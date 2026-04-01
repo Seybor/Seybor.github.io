@@ -14,18 +14,18 @@ const game = {
   goldBar: 0, // кол-во золотых слитков
   platinum: 0, // кол-во платины
   diamond: 0, // кол-во алмазов
-  whoreCost: 100_000, // цена шлюхи
-  carsCost: 2_500_000, // цена машины
-  houseCost: 10_000_000, // цена дома,
-  goldBarCost: 20_000_000, // цена золотого слитка
-  platinumCost: 25_000_000, // цена платины
-  diamondCost: 30_000_000, // цена алмаза
-  whoreGoldPerSecond: 1_000, // количество золота от одной шлюхи
-  carGoldPerSecond: 25_000, // количество золота с одной машины
-  houseGoldPerSecond: 100_000, // количество золота с одного дома
-  goldBarGoldPerSecond: 200_000, // кол-во золота от одного золотого слитка
-  platinumGoldPerSecond: 250_000, // платина в секунду
-  diamondGoldPerSecond: 300_000, // алмазы в секунду
+  whoreCost: 1000_000, // цена шлюхи
+  carsCost: 5_000_000, // цена машины
+  houseCost: 25_000_000, // цена дома,
+  goldBarCost: 50_000_000, // цена золотого слитка
+  platinumCost: 75_000_000, // цена платины
+  diamondCost: 100_000_000, // цена алмаза
+  whoreGoldPerSecond: 10_000, // количество золота от одной шлюхи
+  carGoldPerSecond: 50_000, // количество золота с одной машины
+  houseGoldPerSecond: 250_000, // количество золота с одного дома
+  goldBarGoldPerSecond: 500_000, // кол-во золота от одного золотого слитка
+  platinumGoldPerSecond: 750_000, // платина в секунду
+  diamondGoldPerSecond: 1_000_000, // алмазы в секунду
 };
 
 // DOM‑элементы
