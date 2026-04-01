@@ -80,10 +80,16 @@ body {
 	justify-content: center;
 }
 
-#canvas {
+/* #canvas {
 	border: 1px solid #ccc;
 	margin: 10px auto;
 	display: block;
+} */
+
+#achievements {
+	padding: 8px;
+	text-align: left;
+	background: linear-gradient(150deg, #0029448c, #028cb677);
 }
 
 @media (max-width: 768px) {
