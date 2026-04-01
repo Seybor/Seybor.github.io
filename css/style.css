@@ -37,6 +37,9 @@ body {
 .shop-btn {
 	background: linear-gradient(150deg, #ff2828, #ff0000);
 }
+.btn-reset {
+	background: linear-gradient(150deg, #440000, #ff0000);
+}
 
 #game {
 	margin: 20px auto;
