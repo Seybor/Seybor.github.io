@@ -1,0 +1,22 @@
+@media (max-width: 768px) {
+	#game {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.wrap,
+	.game-buttons {
+		flex: 1 0 50%;
+	}
+	.wrap {
+		text-align: left;
+		flex-direction: column;
+	}
+}
+@media (max-width: 576px) {
+	.wrap,
+	.game-buttons {
+		flex: 1 0 100%;
+	}
+}

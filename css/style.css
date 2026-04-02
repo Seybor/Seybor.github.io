@@ -34,26 +34,31 @@ body {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-.shop-btn {
-	background: linear-gradient(150deg, #ff2828, #ff0000);
+.shop-btn1 {
+	background: linear-gradient(150deg, #06a50e, #06e406);
 }
+.shop-btn2 {
+	background: linear-gradient(150deg, #a3940a, #f6fa03);
+}
+.shop-btn3 {
+	background: linear-gradient(150deg, #ad120c, #fa1303);
+}
+
 .btn-reset {
 	position: absolute;
 	top: 10px;
 	right: 10px;
 	z-index: 100;
-	background: linear-gradient(150deg, #440000, #ff0000);
+	background: linear-gradient(150deg, #530442, #d606d6);
+}
+
+.btn-storage {
+	background: linear-gradient(150deg, #0a0044, #0084ff);
 }
 
 #game {
 	margin: 20px auto;
 	max-width: 1200px;
-}
-
-.wrap {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
 }
 
 .game-stat,
@@ -64,6 +69,9 @@ body {
 	flex-wrap: wrap;
 	gap: 6px;
 	align-items: flex-start;
+}
+.game-stat {
+	margin-bottom: 50px;
 }
 
 .game-stat__item,
@@ -80,55 +88,66 @@ body {
 	justify-content: center;
 }
 
-/* #canvas {
-	border: 1px solid #ccc;
-	margin: 10px auto;
-	display: block;
-} */
+.game-stat__item:first-child,
+.game-stat__item:nth-child(2),
+.game-stat__item:nth-child(3) {
+	position: fixed;
+	z-index: 10;
+	top: 0px;
+	left: 0;
+	right: 0;
+	padding: 6px 12px;
+	background-color: rgba(11, 180, 5, 0.9);
+}
+.game-stat__item:nth-child(2) {
+	top: 30px;
+}
+.game-stat__item:nth-child(3) {
+	top: 60px;
+}
 
-#achievements {
+#achievements-1,
+#achievements-2,
+#achievements-3 {
 	padding: 8px;
 	text-align: left;
 	background: linear-gradient(150deg, #0029448c, #028cb677);
 }
 
-@media (max-width: 768px) {
-	#game {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		flex-wrap: wrap;
-	}
-	.wrap,
-	.game-buttons {
-		flex: 1 0 50%;
-	}
-	.wrap {
-		text-align: left;
-		flex-direction: column;
-	}
+/* табы */
+.tabs {
+	display: flex;
+	padding-top: 24px;
+	margin-bottom: 10px;
 }
-@media (max-width: 576px) {
-	.wrap,
-	.game-buttons {
-		flex: 1 0 100%;
-	}
+.tab-btn {
+	position: relative;
+	z-index: 1000;
+	padding: 10px 20px;
+	border: 2px solid #ccc;
+	border-bottom: none;
+	background: #eee;
+	cursor: pointer;
+}
+.tab-btn[disabled] {
+	background: #c0c0c0;
+	cursor: not-allowed;
+}
 
-	.game-stat {
-		padding-top: 32px;
-	}
+.tab-btn.active {
+	background: #fff;
+	font-weight: bold;
+}
 
-	.game-stat__item:first-child,
-	.game-stat__item:nth-child(2) {
-		position: fixed;
-		z-index: 10;
-		top: 0px;
-		left: 0;
-		right: 0;
-		padding: 6px 12px;
-		background-color: rgba(11, 180, 5, 0.9);
-	}
-	.game-stat__item:nth-child(2) {
-		top: 30px;
-	}
+.tab-content {
+	border: 2px solid #ccc;
+	padding: 10px;
+	border-radius: 4px;
+}
+
+.tab-pane {
+	display: none;
+}
+.tab-pane.active {
+	display: block;
 }
