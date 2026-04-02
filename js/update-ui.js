@@ -22,6 +22,9 @@ function updateUI() {
   s('#storagePower').textContent = game.storagePower / 60;
   s('#storagePowerImproveCost').textContent = formatNumber(game.storagePowerImproveCost);
 
+  s('.btn-work__impruvement').textContent = `${game.strengthOfImpruvement * 100}%`;
+  s('#work-stat').textContent = formatNumber(game.goldsOnButtonWork);
+
   s('#shop-whores').textContent = formatNumber(game.whores);
   s('#shop-cars').textContent = formatNumber(game.cars);
   s('#shop-houses').textContent = formatNumber(game.houses);

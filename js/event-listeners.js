@@ -11,8 +11,9 @@ import {
 } from './buy-improvement-1.js';
 
 import { buyKaliforniy, buyOsmiy, buyRodiy, buyPluto, buyIridiy } from './buy-improvement-2.js';
-
 import { buyNucklear, buyMoon, buyMars, buyAntimater, buyAntimaterbomb } from './buy-improvment-3.js';
+import { game } from './game-obj.js';
+import { updateUI } from './update-ui.js';
 
 import {
   resetGame,
@@ -27,6 +28,21 @@ import {
 
 function getListenters() {
   s('.btn-reset').addEventListener('click', resetGame);
+
+  // обработчик кнопки "работать"
+  s('.btn-work').addEventListener('click', () => {
+    const workedGold = Math.ceil(getAllGoldPerSecond() * game.strengthOfImpruvement); // заработок с одного нажатия
+    game.goldsOnButtonWork += workedGold;
+
+    game.quantityClicksOnButtonWork += 1;
+    if (game.quantityClicksOnButtonWork % 100 === 0) {
+      game.strengthOfImpruvement += 0.01;
+    }
+
+    game.gold += workedGold;
+
+    updateUI();
+  });
 
   s('.btn-storage').addEventListener('click', buyStoragePowerUpgrade);
   s('.btn-autoclick').addEventListener('click', buyAutoClicker);

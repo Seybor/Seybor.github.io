@@ -3,6 +3,7 @@ import { saveGame, loadGame, saveAchievements, loadAchievements, autosaveInterva
 import { game } from './game-obj.js';
 import { achievements } from './achievements-obj.js';
 import { updateUI } from './update-ui.js';
+import { drag } from './modules/drag-drop.js';
 import {
   buyAutoClicker,
   buyAutoClickerUpgrade,
@@ -62,3 +63,5 @@ if (achievements.lvl1 === true) {
 if (achievements.lvl2 === true) {
   s('.tab-btn[data-tab="level3"]').disabled = false;
 }
+
+drag(s('.btn-work'));
