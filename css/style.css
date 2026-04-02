@@ -34,14 +34,21 @@ body {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-.shop-btn1 {
-	background: linear-gradient(150deg, #06a50e, #06e406);
+.btn-work {
+	position: fixed;
+	z-index: 1000;
+	bottom: 0;
+	left: 50%;
+	height: 50px;
 }
-.shop-btn2 {
-	background: linear-gradient(150deg, #a3940a, #f6fa03);
-}
-.shop-btn3 {
-	background: linear-gradient(150deg, #ad120c, #fa1303);
+.btn-work__impruvement {
+	position: absolute;
+	top: -6px;
+	right: -6px;
+	padding: 4px;
+	border-radius: 50%;
+	background-color: #06e406;
+	font-size: 0.75rem;
 }
 
 .btn-reset {
@@ -50,6 +57,16 @@ body {
 	right: 10px;
 	z-index: 100;
 	background: linear-gradient(150deg, #530442, #d606d6);
+}
+
+.shop-btn1 {
+	background: linear-gradient(150deg, #06a50e, #06e406);
+}
+.shop-btn2 {
+	background: linear-gradient(150deg, #a3940a, #f6fa03);
+}
+.shop-btn3 {
+	background: linear-gradient(150deg, #ad120c, #fa1303);
 }
 
 .btn-storage {
@@ -71,7 +88,7 @@ body {
 	align-items: flex-start;
 }
 .game-stat {
-	margin-bottom: 50px;
+	margin-bottom: 80px;
 }
 
 .game-stat__item,
@@ -90,7 +107,8 @@ body {
 
 .game-stat__item:first-child,
 .game-stat__item:nth-child(2),
-.game-stat__item:nth-child(3) {
+.game-stat__item:nth-child(3),
+.game-stat__item:nth-child(4) {
 	position: fixed;
 	z-index: 10;
 	top: 0px;
@@ -104,6 +122,9 @@ body {
 }
 .game-stat__item:nth-child(3) {
 	top: 60px;
+}
+.game-stat__item:nth-child(4) {
+	top: 90px;
 }
 
 #achievements-1,
