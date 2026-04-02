@@ -1,3 +1,6 @@
+import { game } from './game-obj.js';
+import { achievements } from './achievements-obj.js';
+
 // ключ для localStorage
 const SAVE_KEY = 'idle_game_save';
 const SAVE_ACHIEVEMENTS = 'achievements';
@@ -19,11 +22,21 @@ function loadGame() {
       return Math.floor(
         data.goldPerSecond +
           data.houses * data.houseGoldPerSecond +
-          game.cars * data.carGoldPerSecond +
+          data.cars * data.carGoldPerSecond +
           data.whores * data.whoreGoldPerSecond +
           data.goldBar * data.goldBarGoldPerSecond +
           data.platinum * data.platinumGoldPerSecond +
-          data.diamond * data.diamondGoldPerSecond,
+          data.diamond * data.diamondGoldPerSecond +
+          data.kaliforniy * data.kaliforniyPerSecond +
+          data.osmiy * data.osmiyPerSecond +
+          data.rodiy * data.rodiyPerSecond +
+          data.pluto * data.plutoPerSecond +
+          data.iridiy * data.iridiyPerSecond +
+          data.nucklear * data.nucklearPerSecond +
+          data.moon * data.moonPerSecond +
+          data.mars * data.marsPerSecond +
+          data.antimater * data.antimaterPerSecond +
+          data.antimaterbomb * data.antimaterbombPerSecond,
       );
     }
 
@@ -38,6 +51,11 @@ function loadGame() {
 }
 
 // Сохранение достижений
+function saveAchievements() {
+  localStorage.setItem(SAVE_ACHIEVEMENTS, JSON.stringify(achievements));
+}
+
+// Загрузить прогресс достижений
 function loadAchievements() {
   const saved = localStorage.getItem(SAVE_ACHIEVEMENTS);
   if (saved) {
@@ -45,9 +63,7 @@ function loadAchievements() {
   }
 }
 
-function saveAchievements() {
-  localStorage.setItem(SAVE_ACHIEVEMENTS, JSON.stringify(achievements));
-}
-
 // авто‑сохранение каждые 3 секунды
 let autosaveInterval = setInterval(saveGame, 1000);
+
+export { saveGame, loadGame, saveAchievements, loadAchievements, autosaveInterval };
