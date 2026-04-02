@@ -11,7 +11,7 @@ import {
   buyStoragePowerUpgrade,
 } from './game.js';
 
-const achive = 1;
+const achive = 100;
 const reward_1 = 50_000_000;
 
 // Покупка одного «автокликера»
