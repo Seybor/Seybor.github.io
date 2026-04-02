@@ -42,6 +42,9 @@ function getListenters() {
     game.gold += workedGold;
 
     updateUI();
+
+    // Плеер звука
+    playSound('mp3/click-1.mp3');
   });
 
   s('.btn-storage').addEventListener('click', buyStoragePowerUpgrade);
